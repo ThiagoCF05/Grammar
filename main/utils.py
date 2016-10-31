@@ -9,14 +9,15 @@ def parse_aligned_corpus(fname):
     instances = doc.split('\n\n')[1:]
 
     amrs = []
-    for instance in instances[:10]:
+    for instance in instances:
         try:
             instance = instance.split('\n')
+            sentence_id = instance[0].split()[2]
             sentence = ' '.join(instance[1].split()[2:])
             alignments = instance[2].split()[2:]
             amr = '\n'.join(instance[3:])
 
-            amrs.append({'sentence': sentence, 'alignments': alignments, 'amr': amr})
+            amrs.append({'id':sentence_id, 'file':fname, 'sentence': sentence, 'alignments': alignments, 'amr': amr})
         except:
             pass
     return amrs

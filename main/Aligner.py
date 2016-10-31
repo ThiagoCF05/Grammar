@@ -1,11 +1,11 @@
 __author__ = 'thiagocastroferreira'
 
 import copy
-import utils
+# import utils
 
-from sys import path
-path.append('/home/tcastrof/amr/scp_repo')
-from stanford_corenlp_pywrapper import CoreNLP
+# from sys import path
+# path.append('/home/tcastrof/amr/scp_repo')
+# from stanford_corenlp_pywrapper import CoreNLP
 from nltk.stem.porter import *
 # from nltk.corpus import verbnet as vn
 # from nltk.corpus import wordnet as wn
@@ -426,32 +426,32 @@ class Aligner(object):
 
         return alignments
 
-if __name__ == '__main__':
-    proc = CoreNLP("coref")
-    verb2noun, noun2verb, verb2actor, actor2verb = utils.noun_verb('data/morph-verbalization-v1.01.txt')
-    sub2word = utils.subgraph_word('data/verbalization-list-v1.06.txt')
-
-    amrs = utils.parse_aligned_corpus('data/aligned.txt')
-    # for amr in amrs[:2]:
-    aligner = Aligner(verb2noun, noun2verb, verb2actor, actor2verb, sub2word, proc)
-    # aligner.run(amrs[1]['amr'], amrs[1]['sentence'])
-    text = 'The Tokyo Stock Exchange said that this company will officially be listed on the stock exchange on August 8.'
-    amr = """(s / say-01
-                  :ARG0 (o / organization :wiki "Tokyo_Stock_Exchange"
-                        :name (n / name :op1 "Tokyo" :op2 "Stock" :op3 "Exchange"))
-                  :ARG1 (l / list-01
-                        :ARG1 (c / company
-                              :mod (t / this))
-                        :ARG2 (e / exchange-01
-                              :ARG1 (s2 / stock-01))
-                        :mod (o2 / official)
-                        :time (d / date-entity :month 8 :day 8)))"""
-    alignments = aligner.run(amr, text)
-
-    for alignment in alignments:
-        print alignment
-        string = map(lambda x: '/'.join(x), alignment['edges'])
-        string = '~'.join(string)
-        print string
-        print ','.join(map(lambda x: str(x), alignment['tokens']))
-        print '\n'
+# if __name__ == '__main__':
+#     proc = CoreNLP("coref")
+#     verb2noun, noun2verb, verb2actor, actor2verb = utils.noun_verb('data/morph-verbalization-v1.01.txt')
+#     sub2word = utils.subgraph_word('data/verbalization-list-v1.06.txt')
+#
+#     amrs = utils.parse_aligned_corpus('data/aligned.txt')
+#     # for amr in amrs[:2]:
+#     aligner = Aligner(verb2noun, noun2verb, verb2actor, actor2verb, sub2word, proc)
+#     # aligner.run(amrs[1]['amr'], amrs[1]['sentence'])
+#     text = 'The Tokyo Stock Exchange said that this company will officially be listed on the stock exchange on August 8.'
+#     amr = """(s / say-01
+#                   :ARG0 (o / organization :wiki "Tokyo_Stock_Exchange"
+#                         :name (n / name :op1 "Tokyo" :op2 "Stock" :op3 "Exchange"))
+#                   :ARG1 (l / list-01
+#                         :ARG1 (c / company
+#                               :mod (t / this))
+#                         :ARG2 (e / exchange-01
+#                               :ARG1 (s2 / stock-01))
+#                         :mod (o2 / official)
+#                         :time (d / date-entity :month 8 :day 8)))"""
+#     alignments = aligner.run(amr, text)
+#
+#     for alignment in alignments:
+#         print alignment
+#         string = map(lambda x: '/'.join(x), alignment['edges'])
+#         string = '~'.join(string)
+#         print string
+#         print ','.join(map(lambda x: str(x), alignment['tokens']))
+#         print '\n'
