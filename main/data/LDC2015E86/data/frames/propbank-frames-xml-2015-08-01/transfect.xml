@@ -1,0 +1,56 @@
+<!DOCTYPE frameset SYSTEM "frameset.dtd">
+<frameset>
+  <predicate lemma="transfect">
+    <roleset framnet="" id="transfect.01" name="introduce nucleic acids into a recipient cell" vncls="">
+      <aliases>
+        <alias framenet="" pos="v" verbnet="">transfect</alias>
+        <alias framenet="" pos="n" verbnet="">transfection</alias>
+      </aliases>
+      <roles>
+        <role descr="intentional agent of transfection (e.g. scientist)" f="" n="0" />
+        <role descr="recipient of transfection (e.g. cell)" f="" n="1" />
+        <role descr="entity inserted into the cell (e.g. nucleid acid)" f="" n="2" />
+        <note>For Bio-AMR annotations.</note>
+      </roles>
+      <example name="example with agent" src="" type="">
+        <text>To establish that the cloned protein displays serine racemase activity, we transfected HEK293 cells that do not possess endogenous D-serine.</text>
+        <arg f="" n="0">we</arg>
+	<rel f="">transfected</rel>
+        <arg f="" n="1">HEK293 cells that do not possess endogenous D-serine</arg>
+      </example>
+      <example name="example with instrument" src="" type="">
+        <text>In cells transfected with wild-type EGFR, MEK inhibition led to feedback activation of phospho-ERBB3 and phosho-EGFR, recapitulating the results we had observed in our panel of cancer cell lines (Figure 6A).</text>
+        <arg f="" n="1">cells</arg>
+	<rel f="">transfected</rel>
+        <arg f="" n="2">wild-type EGFR</arg>
+      </example>
+    </roleset>
+  </predicate>
+  <predicate lemma="cotransfect">
+    <roleset framnet="" id="cotransfect.01" name="simultaneously transfect with two, unrelated nucleic acids, one of which carries a marker gene" vncls="">
+      <aliases>
+        <alias framenet="" pos="v" verbnet="">cotransfect</alias>
+        <alias framenet="" pos="n" verbnet="">cotransfection</alias>
+      </aliases>
+      <roles>
+        <role descr="intentional agent of cotransfection (e.g. scientist)" f="" n="0" />
+        <role descr="recipient of cotransfection (e.g. cell)" f="" n="1" />
+        <role descr="nucleic acid(s) inserted into the cell" f="" n="2" />
+        <note>For Bio-AMR annotations.</note>
+      </roles>
+      <example name="all ARGs" src="" type="">
+        <text>To confirm this model, we cotransfected HNF-4 expression vector with PPARa expression vector into HeLa cells.</text>
+        <arg f="" n="0">we</arg>
+	<rel f="">cotransfected</rel>
+        <arg f="" n="1">HeLa cells</arg>
+        <arg f="" n="2">HNF-4 expression vector with PPARa expression vector</arg>
+      </example>
+      <example name="ARG2 with list " src="" type="">
+        <text>Tumor cells cotransfected with interleukin-7 and B7.1 genes induce CD25 and CD28 on tumor-infiltrating T lymphocytes and are strong vaccines.</text>
+        <arg f="" n="1">Tumor cells</arg>
+	<rel f="">cotransfected</rel>
+        <arg f="" n="2">with interleukin-7 and B7.1 genes</arg>
+      </example>
+    </roleset>
+  </predicate>
+</frameset>
