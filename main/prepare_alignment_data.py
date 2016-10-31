@@ -1,6 +1,9 @@
 __author__ = 'thiagocastroferreira'
 
 from Aligner import Aligner
+
+from sys import path
+path.append('/home/tcastrof/amr/scp_repo')
 from stanford_corenlp_pywrapper import CoreNLP
 
 import os

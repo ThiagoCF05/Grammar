@@ -1,9 +1,11 @@
 __author__ = 'thiagocastroferreira'
 
 import copy
-from stanford_corenlp_pywrapper import CoreNLP
 import utils
 
+from sys import path
+path.append('/home/tcastrof/amr/scp_repo')
+from stanford_corenlp_pywrapper import CoreNLP
 from nltk.stem.porter import *
 # from nltk.corpus import verbnet as vn
 # from nltk.corpus import wordnet as wn
@@ -453,4 +455,3 @@ if __name__ == '__main__':
         print string
         print ','.join(map(lambda x: str(x), alignment['tokens']))
         print '\n'
-
