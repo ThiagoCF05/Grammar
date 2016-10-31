@@ -1,0 +1,100 @@
+:root/braawwk
+:root/braawwkkk
+:ARG0/it :ARG1/it :polarity/- :root/take-10 :ARG1/long-03
+:ARG1/highway~:name/name~:op1/Route~:op2/288 :part-of/country-region~:name/name~:op1/Richmond~:op2/New~:op3/Urban~:op4/Region :op1/date-entity~:year/2004 :direction/around :ARG1-of/run-04 :time/late :root/open-01 :op1/quadrant :mod/southwest :mod/circumference
+:mod/develop-02 :root/and :ARG0/it :op1/change-01 :poss/it :op1/exit :ARG1/pattern :ARG0/it :ARG1/pattern :time/already :ARG1/around :ARG1-of/localize-01 :ARG2/traffic :ARG0/worsen-01 :ARG1/congest-01 :op2/cause-01 :ARG1-of/cause-01
+:ARG0/newspaper~:name/name~:op1/Richmond~:op2/Times-Dispatch :ARG1/road~:name/name~:op1/Huguenot~:op2/Trail :location/county~:name/name~:op1/Powhatan~:op2/County :topic/impact-01 :ARG1/tale :time/today :root/tell-01
+:ARG0/person~:name/name~:op1/Will~:op2/Jones :part-of/road~:name/name~:op1/Huguenot~:op2/Trail :ARG1/road~:name/name~:op1/288 :quant/1 :ARG1/double-01 :root/report-01 :mod/more-than :op1/open-01 :location/section :ARG1/traffic :time/since
+:ARG1/and :op1/speed-01 :root/surge-01 :op2/accident :mod/as-well
+:ARG0/road~:name/name~:op1/Winterfield~:op2/Road :time/date-entity~:year/2004~:mod/all :ARG1/accident :quant/12 :quant/17 :time/so-far :ARG2/intersect-01 :ARG1-of/near-02 :ARG3/accident :root/report-01 :ARG4-of/up-02 :mod/this :op1/year
+:ARG0/person~:name/name~:op1/Dale~:op2/Totten :ARG1/government-organization~:name/name~:op1/Virginia~:op2/Department~:op3/of~:op4/Transportation :mod/person~:ARG0-of/reside-01 :ARG0-of/have-org-role-91~:ARG2/person :op1/monetary-quantity~:quant/13000000~:unit/dollar :ARG1/road :quant/4 :mod/more :ARG1/money :ARG0/government-organization :ARG0/government-organization :ARG2/about :ARG0-of/engineer-01 :ARG1-of/cost-01 :condition/have-03 :root/note-01 :ARG1/lane-01
+:ARG0/government-organization~:name/name~:op1/VDOT :purpose/construct-01 :part/city~:name/name~:op1/Richmond :ARG1/road :root/have-03 :location/region :polarity/- :ARG1/money :mod/of-course
+:ARG0/government-organization~:name/name~:op1/VDOT :ARG1/road~:name/name~:op1/288 :op2/person~:ARG0-of/boost-01 :mod/all :root/cause-01 :mod/frigging :ARG3/money :ARG1-of/local-02 :op1/politician :ARG0/spend-01 :ARG1-of/cause-01 :poss/government-organization :ARG0/and
+:ARG1/person~:name/name~:op1/Homer~:op2/Simpson :ARG2/amr-unknown :root/be-located-at-91 :ARG1/person :time/need-01 :ARG0/you
+:mod/doh :root/moment :domain/this :ARG1-of/major-02
+:ARG0/road~:name/name~:op1/Route~:op2/288 :ARG1/develop-02 :location/area :ARG1-of/populate-01 :op1/exit :root/generate-01 :ARG1/residence :part-of/road :ARG0-of/overtax-01 :ARG1-of/local-02 :mod/scarce :mod/all :ARG2/country :ARG0/we :ARG1-of/predict-01 :ARG2/road :location/around
+:op1/county~:name/name~:op1/Chesterfield~:op2/County :op2/county~:name/name~:op1/Goochland~:op2/County :ARG0/person :ARG0/person :op1/back :ARG1/traffic :ARG2/person :direction/and :ARG1-of/access-01 :ARG1/choose-01 :root/contrast-01 :ARG0-of/drive-01 :ARG1/and :location/between :ARG2/possible-01 :ARG1/relieve-01 :op2/forth :ARG0/highway :op1/location :mod/other :ARG0/person :op2/location :location-of/live-01 :ARG1-of/limit-01 :location-of/work-01
+:root/and :op2/create-01 :ARG2/traffic :ARG1-of/new-01 :location/place :ARG0/they :ARG1/congest-01
+:ARG1/i :root/surprise-01 :ARG0/rapid :manner-of/this :mod/only
+:op1/temporal-quantity~:quant/3~:unit/year :op2/temporal-quantity~:quant/4~:unit/year :mod/even :ARG0/i :root/think-01 :ARG1/lag-01 :ARG1/possible-01 :ARG2/or
+:ARG0/road~:name/name~:op1/Route~:op2/288 :ARG1/construct-01 :ARG2/monetary-quantity~:quant/13000000~:unit/dollar :poss/road :quant/1 :ARG1-of/cost-01 :time/already :ARG0/create-01 :ARG1-of/cause-01 :location/exit :mod/all :ARG1-of/create-01 :ARG3/exit :ARG1/road :mod/just :mod/this :ARG1/liable-01 :root/think-01 :ARG0/you
+:mod/another :ARG1-of/predict-01 :root/thing
+:op1/develop-02 :op2/approve-01 :ARG0/road~:name/name~:op1/288 :op1/temporal-quantity~:quant/1~:unit/year :duration/few :ARG1-of/scatter-01 :ARG1/subdivision :ARG1-of/major-02 :mod/mega :location/intersect-01 :op1/and :time/after :mod/commerce :ARG1/road :ARG1/improve-01 :mod/more :ARG1/need-01 :ARG1/project :root/soar-01 :ARG1/road :ARG1-of/new-01
+:op1/monetary-quantity~:quant/400000000~:unit/dollar~:ARG1-of/take-10~:mod/original :ARG4/past :mod/original :time/before :op1/end-01 :ARG1-of/fund-01 :polarity/- :ARG1/liability :ARG0/build-01 :root/possible-01 :ARG1/see-01 :degree/well :ARG0/we :ARG1/highway :ARG1/zoom-01 :ARG1/decade :mod/well
+:domain/road~:name/name~:op1/Route~:op2/288 :ARG2/brainiac :mod/great :ARG1/idea :mod/such :root/say-01 :ARG0-of/think-01
+:ARG0/i :ARG1/you :root/thank-01 :ARG2/nothing
+:ARG3/monetary-quantity~:quant/400000000~:unit/dollar :ARG1/elsewhere :manner/good-02 :ARG0/i :ARG1/possible-01 :ARG1/spend-01 :root/think-01 :ARG0/we :degree/more
+:ARG1/road~:name/name~:op1/288 :ARG2/create-01 :ARG1/blame-01 :ARG1/person :ARG0/i :mod/that :polarity/- :ARG1/recommend-01 :root/think-01 :ARG0/you :ARG2/you
+:root/alternative :ARG0-of/create-01 :ARG0/they :condition/enough :ARG2/traffic :quant-of/they :ARG1-of/new-01 :location/place :domain/amr-unknown :ARG1/congest-01 :ARG1-of/new-01
+:location/place :root/congest-01 :mod/additional :ARG2/traffic :mod/old
+:example/person~:name/name~:op1/TMT :location/city~:name/name~:op1/Fairfax :ARG0/person :ARG1-of/feel-01 :ARG1/thing :time/now :root/understand-01 :ARG0/you
+:ARG2/favor-01 :ARG0/i :ARG0/i :ARG1/position-02 :ARG1/road :mod/usual :root/take-01
+:domain/road~:name/name~:op1/288 :root/contrast-01 :ARG2/excess :mod/definite :mod/glaring :mod/other :prep-with/need-01 :part-of/state :location/thing
+:ARG0/city~:name/name~:op1/Richmond :ARG1-of/have-polarity-91 :root/have-03 :ARG2/- :ARG1/traffic :degree/virtual
+:ARG2/temporal-quantity~:quant/30~:unit/minute :ARG1/hour :root/last-01 :time-of/rush-01
+:root/and :ARG1/beltway :op2/give-01 :degree/large :path/area :ARG2/they :ARG0/you :mod/rural
+:root/road :destination/nowhere
+:ARG1/river~:name/name~:op1/Potomac :location/country-region~:name/name~:op1/NOVA :ARG1/possible-01 :mod/another :op1/facility :ARG1-of/desperate-02 :ARG1/road :mod/this :mod/just :ARG3/money :location-of/cross-02 :ARG1/or :op2/improve-01 :ARG1/spend-01 :root/think-01 :ARG0/you :ARG1-of/need-01
+:ARG3/road~:name/name~:op1/288 :ARG2/person~:name/name~:op1/Virginia~:op2/Centrist :ARG1/debt :ARG0/rest :root/say-01 :ARG0/pay-01 :ARG0-of/add-02 :ARG2/injure-01 :ARG1/pay-01 :ARG1/cause-01 :ARG2/budget :time/deal-01 :ARG1/insult-01 :ARG0/help-01 :mod/last :part-of/state :ARG0/rest :ARG1/wipe-out-02 :time/year
+:ARG0/you-all :degree/very :ARG1/we :ARG1/oblige-01 :root/nice-01
+:root/have-concession-91 :ARG1/sense-02 :polarity/- :degree/much
+:ARG2/it :root/problem :ARG1-of/same-01 :mod/old
+:root/accuse-01 :ARG2/cause-01 :condition/get-05 :ARG0/you :ARG1/sprawl-01 :ARG1/you :ARG1/you :op1/need-01 :ARG2/ahead
+:ARG1/pave-02 :location/place :root/claim-01 :condition/build-01 :polarity/- :ARG2/out-06 :location-of/need-01 :poss/you :ARG1/possible-01 :ARG0/you :mod/acute :ARG1/way :ARG0/you :ARG2/congest-01 :time/already
+:root/person~:name/name~:op1/Anonymous
+:root/point :domain/that :ARG1-of/fair-01
+:ARG0/person~:name/name~:op1/5:26 :ARG1/point :ARG1-of/good-02 :root/make-01
+:ARG0-of/have-org-role-91 :op1/government-organization~:name/name~:op1/CTB :op2/government-organization~:name/name~:op1/VDOT :ARG1/fund-01 :ARG2/base-02 :ARG0/person :destination/home :ARG0-of/lobby-01 :ARG1-of/base-02 :ARG4/state :ARG1/state :ARG1/fund-01 :ARG1/project :manner/good-02 :degree/most :ARG1/valid-02 :ARG0/and :root/contrast-01 :manner/comprehensive :ARG3/audit-01 :ARG2/plan-01 :ARG2/person :ARG0-of/find-02 :ARG1-of/instead-of-91 :ARG2/hammer-02 :ARG1/transport-01 :ARG1/thing :mod/transport-01 :ARG0/person :ARG0/situation :ARG1-of/report-01 :mod/this
+:ARG0-of/disgrace-01 :ARG0/i :ARG1/situation :polarity/- :domain/this :root/submit-01 :ARG1-of/recommend-01 :ARG1-of/tolerate-01
+:op1/person~:name/name~:op1/Chichester :ARG0-of/have-org-role-91~:ARG2/senator :root/and :op2/pour-01 :ARG0-of/cause-01 :ARG1/worsen-01 :poss/person :ARG3/institution :ARG1/this :ARG1-of/flaw-01 :mod/this :ARG0/and :op2/toady :mod/more :ARG1/money
+:ARG1/thing~:ARG1-of/expend-01 :ARG2/amr-unknown :root/have-purpose-91 :ARG2/transport-01
+:location/state~:name/name~:op1/Virginia :root/and :ARG1-of/private-03 :ARG2/benefit-01 :ARG1/it :poss/public :ARG1/it :op1/have-purpose-91 :ARG1/interest :polarity/- :op2/have-purpose-91 :ARG1/plan :mod/business :ARG2/serve-01
+:ARG1/you-all :degree/dead :root/wrong-04
+:ARG0/person~:name/name~:op1/Walter~:op2/Stoch :purpose/develop-02 :ARG3/road~:name/name~:op1/288 :ARG1/pay-01 :ARG1/economy :ARG1/intend-01 :polarity/- :mod/less :root/state-01 :ARG1/money
+:root/come-on-25 :ARG1/folk
+:ARG2/person~:name/name~:op1/TMT :ARG1/point :ARG0/i :ARG0/i :polarity/- :root/say-01 :ARG1/understand-01
+:time/amr-unknown :ARG2/business :mod/some :mod/sort :polarity/- :ARG2/business :time-of/or :ARG1/you :root/stick-01 :ARG1/you :mod/last :ARG2/traffic :op1/be-destined-for-91 :op2/be-from-91 :ARG1/you
+:ARG2/and :ARG1-of/private-03 :ARG2/business :ARG0/public :op2/get-05 :op1/get-05 :ARG2/facilitate-01 :ARG2/i :ARG1/have-purpose-91 :ARG1/interest-01 :ARG0/public :source/business :ARG1/public :root/seem-01 :ARG1/road :mod/whole :ARG0/road
+:time/date-entity~:weekday/sunday :poss/person~:ARG0-of/have-rel-role-91~:ARG2/grandmother :concession/and :ARG1/business :op1/drive-01 :ARG1/support-01 :ARG1/location :ARG0-of/overwhelm-01 :root/need-01 :op2/trip-03 :mod/soccer :mod/of-course :op3/game
+:ARG1/thing~:ARG1-of/expend-01 :polarity/- :op2/product :topic/congest-01 :op1/business :ARG2-of/increase-01 :ARG0/match-01 :ARG0/we :polarity/- :mod/domestic :ARG1/problem :ARG1/suffer-01 :ARG2/road :root/wonder-02 :ARG0/we :mod/state :ARG1-of/cause-01 :ARG2/thing :ARG1/or
+:ARG1/benefit-01 :ARG1/do-02 :root/recommend-01 :ARG0/road :ARG1/business :mod/primary :condition/recognize-02 :ARG1/thing :ARG0/we :quant/2
+:ARG1/thing :ARG1-of/bill-01 :location/stress-02 :ARG0/business :ARG0/business :ARG1/business :ARG0/business :mod/more :op1/mean-01 :mod/of-course :degree/least :ARG1/locate-01 :root/and :ARG1-of/pass-05 :ARG0/business :concession/even-if :op2/incentivize-01 :ARG3/thing :mod/more :ARG2/travel-01 :mod/overall :op1/pay-01 :ARG1/business :ARG2/locate-01 :ARG3/transport-01 :ARG2/we :ARG1/system :ARG0/we
+:ARG0/amr-unknown :ARG1-of/cause-01 :ARG1/it :root/hard-02 :degree/so :ARG1/understand-01
+:ARG2/and :ARG1-of/function-01 :op2/balance-01 :ARG2/demand-01 :ARG1-of/generate-01 :poss/system :mod/settle-03 :ARG1/travel-01 :ARG1/capacity :root/solve-01 :op1/pattern :ARG0/use-01 :purpose/transport-01 :ARG1/human :ARG1/land
+:ARG1/all :root/spin-03 :mod/else
+:root/person~:name/name~:op1/EMR
+:ARG0/person~:name/name~:op1/TMT :location/state~:name/name~:op1/Virginia :ARG1/and :ARG2/benefit-01 :ARG1-of/private-03 :ARG1/plan :ARG1/it :root/say-01 :ARG1/interest :polarity/- :poss/public :op2/have-purpose-91 :ARG2/serve-01 :mod/business :op1/have-purpose-91 :ARG1/it
+:ARG1-of/state-01 :polarity/- :ARG0/thing :ARG1/plan :ARG0/thing :ARG1/interest :ARG2/above :ARG1/and :op1/all :mod/else :ARG0/appear-02 :ARG1-of/private-03 :ARG1-of/cause-01 :mod/business :op1/demonize-01 :op2/put-01 :poss/public :ARG0/i :mod/this :ARG1/point :root/see-01 :poss/thing
+:ARG1/they :ARG0-of/cause-01 :ARG0/i :ARG1/intertwine-01 :ARG1/they :ARG0-of/tight-05 :ARG1/same-01 :root/think-01 :mod/virtual
+:ARG1-of/cause-01 :domain/dough :ARG1-of/local-02 :root/obvious-01 :ARG1/problem :ARG0/lumpy :mod/this :mod/cookie
+:mod/all :root/contrast-01 :ARG1/business :time/eventual :ARG2/devil :ARG2/find-01 :ARG0/we :ARG1-of/long-03 :prep-in/aggregate :ARG0/we :ARG1/work-01 :ARG0/we :condition/demonize-01 :degree/enough
+:ARG1/claim-01 :ARG2/balance :time/ever :mod/dynamic :root/see-01 :ARG1/have-purpose-91 :polarity/- :poss-of/nature :ARG0/i :ARG1/solve-01 :ARG1-of/change-01
+:destination/airport~:name/name~:op1/Dulles :ARG0-of/promote-02 :ARG1-of/cause-01 :mod/bidirectional :mod/even :ARG1/rail :mod/job :ARG2/positive :root/see-01 :ARG1/rail :domain/airport :ARG0/you :ARG0/center :ARG1/demand-01
+:root/agree-01 :ARG0/i
+:ARG1/suffice-01 :degree/all :mod/build-01 :ARG1/it :mod/in-fact :domain/that :root/possible-01 :ARG0/reason :mod/by-oneself
+:ARG1/apply-02 :mod/exact :ARG2/road :ARG0/i :ARG1-of/same-01 :ARG1/logic :root/say-01 :ARG1/recommend-01 :mod/all
+:mod/both :location/end :ARG1/destination :ARG2-of/invest-01 :ARG1/have-03 :ARG0/we :ARG1/thing :degree/maximum :root/recommend-01 :purpose/use-01 :ARG0/they :ARG0/we
+:ARG2/close-10 :ARG2/balance :purpose/get-03 :ARG0/we :ARG1/we :ARG1/we :mod/more :root/need-01 :ARG1/place :ARG1-of/say-01 :ARG0/we :degree/more :ARG0/you :ARG1-of/need-01
+:location/here :root/check-01 :ARG2/reality
+:op1/facility~:name/name~:op1/Watkins~:op2/Landing :op1/date-entity~:dayperiod/morning :op2/date-entity~:dayperiod/evening :ARG4/and :root/drive-01 :ARG0/i :path/past :frequency/rate-entity-91
+:path/road~:name/name~:op1/Huguenot~:op2/Trail :ARG0/i :direction/and :root/commute-01 :op1/back :ARG0/i :ARG2/location :op2/forth :location-of/work-01
+:ARG1/anything :time/ever :degree/remote :ARG2/flood-01 :ARG0/i :ARG2/traffic :polarity/- :root/see-01 :ARG1-of/resemble-01
+:ARG2/speed-quantity~:quant/55~:unit/mile-per-hour :duration/amr-unknown :location-of/car :ARG1/between :ARG1/it :op1/75 :frequency/rate-entity-91 :ARG2/morning :op2/100 :root/zone-01
+:ARG1/road~:name/name~:op1/Huguenot~:op2/Trail :ARG0/develop-02 :mod/county~:name/name~:op1/Chesterfield :ARG1-of/develop-02 :op1/temporal-quantity~:quant/1~:unit/year :path/road~:name/name~:op1/Robious~:op2/Road :degree/heavy :mod/whole :time/before :op2/school :time/before :ARG0/and :ARG1-of/cause-01 :time/already :quant/bunch :ARG1-of/exist-01 :op1/demand-01 :ARG1-of/funnel-01 :quant/multiple :root/plan-01 :location/side :op3/thing :ARG1/widen-01 :ARG1-of/new-01 :ARG1-of/zone-01 :op1/now
+:ARG1/road~:name/name~:op1/288 :op1/county~:name/name~:op1/Powhatan :part-of/county~:name/name~:op1/Chesterfield :op2/west :ARG2/we :root/wonderful-03 :ARG1/road :ARG1/and :ARG1-of/include-91 :ARG1-of/actual-02 :ARG2/person :ARG2/bottleneck-01 :ARG1/road :ARG1-of/instead-of-91 :ARG0/lack-01 :ARG0-of/use-01 :mod/that
+:ARG1/develop-02 :root/and :op2/possible-01 :mod/commerce :ARG0/we :ARG0/we :degree/more :ARG2/live-01 :op1/possible-01 :ARG3/we :ARG1/work-01 :location/close-10
+:polarity/- :ARG1/land :root/possible-01 :manner/rational :ARG1/use-01 :domain/that :ARG1/think-01 :ARG0/you
+:ARG0/i :mod/any :location/city :root/desire-01 :ARG0/i :polarity/- :ARG1/live-01
+:ARG0/i :location/area :root/refuse-01 :mod/downtown :ARG1/work-01
+:polarity/- :ARG0-of/commute-01 :root/refuse-01 :ARG1/female :ARG0/i :polarity/- :ARG1/work-01 :mod/mass :ARG1-of/long-03 :ARG0-of/safe-01 :ARG2-of/regular-02 :ARG1/use-01 :ARG1/transit :ARG0-of/work-01 :time/hour
+:ARG1/develop-02 :root/and :ARG0/i :op2/happen-02 :ARG1/like-01 :ARG1/lot :mod/large
+:mod/area-quantity~:quant/14~:unit/acre :ARG1/i :mod/exact :ARG0/i :ARG1/horse :manner-of/keep-01 :polarity/- :location/lot :ARG2-of/suppose-02 :root/understand-01 :ARG1/thing
+:quant/volume-quantity~:quant/1~:unit/gallon :ARG3/monetary-quantity~:quant/10~:unit/dollar :ARG1/gas :ARG1/go-07 :root/possible-01
+:root/and :ARG0/i :location/country :ARG0/i :ARG3/live-01 :op2/pay-01 :mod/still
+:ARG0/person :ARG1/and :mod/certain :op4/business :op3/garden-01 :op2/hunt-01 :op1/horse :polarity/- :quant/many :ARG1-of/legitimate-02 :ARG0/person :root/prefer-01 :mod/small :ARG1/live-01 :mod/type :ARG1/want-01 :ARG0-of/make-02 :location/core :mod/urban :ARG0/person
+:location/city :root/baffle-01 :ARG0/infatuation :ARG1/i :degree/truly :topic/live-01 :mod/this
+:ARG2/person~:name/name~:op1/Anonymous~:op2/6:37 :location/country :ARG0/person :ARG0/person :ARG2/live-01 :root/say-01 :ARG1/right-05 :condition/wish-01 :ARG1/live-01 :mod/every
+:ARG1/construct-01 :ARG2/monetary-quantity~:quant/400000000~:unit/dollar :ARG1/and :purpose/easy-05 :ARG0/rest :ARG1/highway :degree/more :polarity/- :ARG1-of/cost-01 :part-of/state :ARG2/right-05 :ARG2/underwrite-01 :ARG2/work-01 :op1/shop-01 :ARG1/you :root/contrast-01 :op2/get-05
+:ARG3/monetary-quantity~:quant/400000000~:unit/dollar :ARG1/road~:name/name~:op1/288 :ARG1-of/consistent-02 :mod/else :ARG1-of/spend-01 :root/overlook-01 :subevent-of/debate-01 :ARG1-of/possible-01 :ARG1/thing
+:ARG1/alleviate-01 :op1/project :ARG1/congest-01 :mod/even :mod/road :op2/project :ARG2-of/press-01 :polarity/- :ARG1-of/forbid-01 :ARG1/money :ARG2/or :root/possible-01 :condition/apply-02 :mod/road :ARG0/god :ARG2/traffic :quant/much :mod/other
+:op1/person~:ARG0-of/invest-01 :ARG2/person~:name/name~:op1/Ray~:op2/Hyde :ARG1/thing :polarity/- :ARG0-of/lobby-01 :ARG1-of/request-01 :ARG1/road :root/say-01 :ARG0/person :ARG1-of/regardless-91 :ARG2/or :op2/lack-01 :ARG2/plan-01 :ARG1/link-01 :ARG0/i :mod/master :ARG1-of/competent-01 :ARG2/and :ARG1/place-01 :ARG1-of/comment-01 :ARG1/direct-01 :ARG1/property :ARG0-of/fund-01 :ARG1/thing :ARG1/transport-01 :ARG1/thing :ARG2/own-01 :op2/system :ARG1/road :op1/link-01 :mod/this :ARG2/near-02
