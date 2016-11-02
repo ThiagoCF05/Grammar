@@ -47,11 +47,14 @@ def main(aligner):
         amrs = utils.parse_corpus(os.path.join(dir, fname))
 
         for amr in amrs:
-            alignments, info = aligner.run(amr['amr'], amr['sentence'])
+            try:
+                alignments, info = aligner.run(amr['amr'], amr['sentence'])
 
-            inducer = RuleInducer(amr['sentence'], amr['amr'], info['parse'], alignments)
-            id2subtrees, id2rule = inducer.run()
-            tag, ltag = inducer.prettify(id2subtrees, id2rule, tag, ltag)
+                inducer = RuleInducer(amr['sentence'], amr['amr'], info['parse'], alignments)
+                id2subtrees, id2rule = inducer.run()
+                tag, ltag = inducer.prettify(id2subtrees, id2rule, tag, ltag)
+            except:
+                print 'ERROR'
     return tag, ltag
 
 

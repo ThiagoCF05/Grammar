@@ -23,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Aligner.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Aligner.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/Aligner.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.05586592" vertical-offset="0" max-vertical-offset="5475">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5475">
               <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
               <folding>
                 <element signature="e#11433#15265#0" expanded="false" />
@@ -40,7 +40,7 @@
       <file leaf-file-name="RuleInducer.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/RuleInducer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3105">
+            <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="3105">
               <caret line="196" column="54" selection-start-line="196" selection-start-column="54" selection-end-line="196" selection-end-column="54" />
               <folding>
                 <element signature="e#463#981#0" expanded="false" />
@@ -50,12 +50,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="run.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1095">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="42" />
-              <folding />
+            <state vertical-scroll-proportion="0.57272726" vertical-offset="390" max-vertical-offset="1140">
+              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+              <folding>
+                <element signature="e#37#52#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -104,8 +106,8 @@
         <option value="$PROJECT_DIR$/test/AlignerTest.py" />
         <option value="$PROJECT_DIR$/main/RuleInducer.py" />
         <option value="$PROJECT_DIR$/main/utils.py" />
-        <option value="$PROJECT_DIR$/main/run.py" />
         <option value="$PROJECT_DIR$/main/Aligner.py" />
+        <option value="$PROJECT_DIR$/main/run.py" />
       </list>
     </option>
   </component>
@@ -1236,6 +1238,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main/Aligner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5475">
+          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+          <folding>
+            <element signature="e#11433#15265#0" expanded="false" />
+            <element signature="e#15323#16340#0" expanded="false" />
+            <element signature="e#16382#17221#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main/prepare_alignment_data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1440">
@@ -1248,20 +1262,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1095">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/Aligner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05586592" vertical-offset="0" max-vertical-offset="5475">
-          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.57272726" vertical-offset="390" max-vertical-offset="1140">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding>
-            <element signature="e#11433#15265#0" expanded="false" />
-            <element signature="e#15323#16340#0" expanded="false" />
-            <element signature="e#16382#17221#0" expanded="false" />
+            <element signature="e#37#52#0" expanded="true" />
           </folding>
         </state>
       </provider>
