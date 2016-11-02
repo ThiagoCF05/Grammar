@@ -7,6 +7,9 @@ import utils
 
 from Aligner import Aligner
 from RuleInducer import RuleInducer
+
+from sys import path
+path.append('/home/tcastrof/amr/scp_repo')
 from stanford_corenlp_pywrapper import CoreNLP
 
 def write(fname, tag):
