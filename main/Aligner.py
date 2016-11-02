@@ -1,11 +1,10 @@
 __author__ = 'thiagocastroferreira'
 
 import copy
-import utils
 
 # from sys import path
 # path.append('/home/tcastrof/amr/scp_repo')
-from stanford_corenlp_pywrapper import CoreNLP
+# from stanford_corenlp_pywrapper import CoreNLP
 from nltk.stem.porter import *
 
 class Aligner(object):
@@ -431,56 +430,56 @@ class Aligner(object):
 
         return alignments, self.info
 
-if __name__ == '__main__':
-    proc = CoreNLP("coref")
-    verb2noun, noun2verb, verb2actor, actor2verb = utils.noun_verb('data/morph-verbalization-v1.01.txt')
-    sub2word = utils.subgraph_word('data/verbalization-list-v1.06.txt')
-
-    aligner = Aligner(verb2noun, noun2verb, verb2actor, actor2verb, sub2word, proc)
-    text = 'The most terrible thing is not the government officials, but the power that lies in the hands of these officials.'
-    amr = """(c / contrast-01
-                      :ARG1 (t2 / terrible-01 :polarity -
-                            :ARG1 (p2 / person
-                                  :ARG0-of (h2 / have-org-role-91
-                                        :ARG1 (g / government-organization
-                                              :ARG0-of (g2 / govern-01))
-                                        :ARG2 (o2 / official)))
-                            :degree (m / most))
-                      :ARG2 (t3 / terrible-01
-                            :ARG1 (p / power
-                                  :ARG1-of (l / lie-07
-                                        :ARG2 (h / hand
-                                              :part-of p2)))
-                            :degree (m2 / most)))"""
-    alignments, info = aligner.run(amr, text)
-
-    for alignment in alignments:
-        print alignment
-
-    text = 'I headed straight for the center of activities, but in actual fact traffic was being controlled as early as 4 o\'clock, and they had already started limiting the crowds entering the sports center.'
-    amr = """(c / contrast-01
-                      :ARG1 (h / head-02
-                            :ARG0 (i / i)
-                            :ARG1 (c6 / center
-                                  :mod (a2 / activity-06))
-                            :ARG1-of (s2 / straight-04))
-                      :ARG2 (a / and
-                            :op1 (c2 / control-01
-                                  :ARG1 (t / traffic)
-                                  :prep-in (f / fact
-                                        :ARG1-of (a3 / actual-02))
-                                  :time (d / date-entity :time "4:00"
-                                        :mod (e / early)))
-                            :op2 (s / start-01
-                                  :ARG0 (t2 / they)
-                                  :ARG1 (l2 / limit-01
-                                        :ARG1 (c4 / crowd
-                                              :ARG0-of (e2 / enter-01
-                                                    :ARG1 (c5 / center
-                                                          :mod (s3 / sport)))))
-                                  :time (a4 / already))))"""
-    alignments, info = aligner.run(amr, text)
-
-    print '\n'
-    for alignment in alignments:
-        print alignment
+# if __name__ == '__main__':
+#     proc = CoreNLP("coref")
+#     verb2noun, noun2verb, verb2actor, actor2verb = utils.noun_verb('data/morph-verbalization-v1.01.txt')
+#     sub2word = utils.subgraph_word('data/verbalization-list-v1.06.txt')
+#
+#     aligner = Aligner(verb2noun, noun2verb, verb2actor, actor2verb, sub2word, proc)
+#     text = 'The most terrible thing is not the government officials, but the power that lies in the hands of these officials.'
+#     amr = """(c / contrast-01
+#                       :ARG1 (t2 / terrible-01 :polarity -
+#                             :ARG1 (p2 / person
+#                                   :ARG0-of (h2 / have-org-role-91
+#                                         :ARG1 (g / government-organization
+#                                               :ARG0-of (g2 / govern-01))
+#                                         :ARG2 (o2 / official)))
+#                             :degree (m / most))
+#                       :ARG2 (t3 / terrible-01
+#                             :ARG1 (p / power
+#                                   :ARG1-of (l / lie-07
+#                                         :ARG2 (h / hand
+#                                               :part-of p2)))
+#                             :degree (m2 / most)))"""
+#     alignments, info = aligner.run(amr, text)
+#
+#     for alignment in alignments:
+#         print alignment
+#
+#     text = 'I headed straight for the center of activities, but in actual fact traffic was being controlled as early as 4 o\'clock, and they had already started limiting the crowds entering the sports center.'
+#     amr = """(c / contrast-01
+#                       :ARG1 (h / head-02
+#                             :ARG0 (i / i)
+#                             :ARG1 (c6 / center
+#                                   :mod (a2 / activity-06))
+#                             :ARG1-of (s2 / straight-04))
+#                       :ARG2 (a / and
+#                             :op1 (c2 / control-01
+#                                   :ARG1 (t / traffic)
+#                                   :prep-in (f / fact
+#                                         :ARG1-of (a3 / actual-02))
+#                                   :time (d / date-entity :time "4:00"
+#                                         :mod (e / early)))
+#                             :op2 (s / start-01
+#                                   :ARG0 (t2 / they)
+#                                   :ARG1 (l2 / limit-01
+#                                         :ARG1 (c4 / crowd
+#                                               :ARG0-of (e2 / enter-01
+#                                                     :ARG1 (c5 / center
+#                                                           :mod (s3 / sport)))))
+#                                   :time (a4 / already))))"""
+#     alignments, info = aligner.run(amr, text)
+#
+#     print '\n'
+#     for alignment in alignments:
+#         print alignment
