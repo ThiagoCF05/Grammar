@@ -54,7 +54,7 @@ def main(aligner):
                 id2subtrees, id2rule = inducer.run()
                 tag, ltag = inducer.prettify(id2subtrees, id2rule, tag, ltag)
             except:
-                print 'ERROR'
+                print 'ERROR', amr['file'], amr['id']
     return tag, ltag
 
 
