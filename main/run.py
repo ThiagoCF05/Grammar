@@ -20,9 +20,9 @@ def write(fname, tag):
 
     for item in rule_freq:
         rule, freq = item
-        f.write(rule)
+        f.write(str(rule))
         f.write('\t')
-        f.write(freq)
+        f.write(str(freq))
         f.write('\n')
 
         tree_freq = sorted(nltk.FreqDist(tag[rule]).items(), key=operator.itemgetter(1))
@@ -30,9 +30,9 @@ def write(fname, tag):
 
         for item2 in tree_freq:
             tree, freq = item2
-            f.write(tree)
+            f.write(str(tree))
             f.write('\t')
-            f.write(freq)
+            f.write(str(freq))
             f.write('\n')
         f.write('\n\n')
     f.close()
