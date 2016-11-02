@@ -1,14 +1,12 @@
 __author__ = 'thiagocastroferreira'
 
 import copy
-# import utils
+import utils
 
 # from sys import path
 # path.append('/home/tcastrof/amr/scp_repo')
-# from stanford_corenlp_pywrapper import CoreNLP
+from stanford_corenlp_pywrapper import CoreNLP
 from nltk.stem.porter import *
-# from nltk.corpus import verbnet as vn
-# from nltk.corpus import wordnet as wn
 
 class Aligner(object):
     def __init__(self, verb2noun, noun2verb, verb2actor, actor2verb, sub2word, proc):
@@ -102,13 +100,13 @@ class Aligner(object):
                         indexes.append(isSet)
         # MATCH VERB2NOUN
         if isSet < 0:
-            if concept in verb2noun:
-                _concept = verb2noun[concept]
+            if concept in self.verb2noun:
+                _concept = self.verb2noun[concept]
                 isSet = set_label(_concept)
         # MATCH VERB2ACTOR
         if isSet < 0:
-            if concept in verb2actor:
-                _concept = verb2actor[concept]
+            if concept in self.verb2actor:
+                _concept = self.verb2actor[concept]
                 isSet = set_label(_concept)
         # MATCH contrast
         if isSet < 0 and concept == 'contrast':
@@ -345,10 +343,10 @@ class Aligner(object):
 
         return lemmas, alignments
 
-    def align_coreferences(self, root):
+    def align_coreferences(self, root, tokens):
         alignments = []
 
-        tokens = self.nodes[root]['tokens']
+        # tokens = self.nodes[root]['tokens']
         for entity in self.coref:
             if len(entity['mentions']) > 1:
                 first_mention =  entity['mentions'][0]
@@ -418,40 +416,71 @@ class Aligner(object):
         coreferences = filter(lambda node: '-coref' in node and self.nodes[node] != 'labeled', self.nodes)
         entities = set(map(lambda ref: ref.split('-')[0], coreferences))
         for entity in entities:
-            alignments.extend(self.align_coreferences(entity))
+            tokens = []
+            for alignment in alignments:
+                if len(filter(lambda edge: edge[1] == entity, alignment['edges'])) > 0:
+                    tokens = alignment['tokens']
+                    break
+            if len(tokens) == 0:
+                tokens = self.nodes[entity]['tokens']
+            alignments.extend(self.align_coreferences(entity, tokens))
 
         for alignment in alignments:
             alignment['ids'] = map(lambda edge: self.nodes[edge[1]]['id'], alignment['edges'])
             alignment['edges'] = map(lambda edge: (edge[0], self.nodes[edge[1]]['name']), alignment['edges'])
 
-        return alignments
+        return alignments, self.info
 
-# if __name__ == '__main__':
-#     proc = CoreNLP("coref")
-#     verb2noun, noun2verb, verb2actor, actor2verb = utils.noun_verb('data/morph-verbalization-v1.01.txt')
-#     sub2word = utils.subgraph_word('data/verbalization-list-v1.06.txt')
-#
-#     amrs = utils.parse_aligned_corpus('data/aligned.txt')
-#     # for amr in amrs[:2]:
-#     aligner = Aligner(verb2noun, noun2verb, verb2actor, actor2verb, sub2word, proc)
-#     # aligner.run(amrs[1]['amr'], amrs[1]['sentence'])
-#     text = 'The Tokyo Stock Exchange said that this company will officially be listed on the stock exchange on August 8.'
-#     amr = """(s / say-01
-#                   :ARG0 (o / organization :wiki "Tokyo_Stock_Exchange"
-#                         :name (n / name :op1 "Tokyo" :op2 "Stock" :op3 "Exchange"))
-#                   :ARG1 (l / list-01
-#                         :ARG1 (c / company
-#                               :mod (t / this))
-#                         :ARG2 (e / exchange-01
-#                               :ARG1 (s2 / stock-01))
-#                         :mod (o2 / official)
-#                         :time (d / date-entity :month 8 :day 8)))"""
-#     alignments = aligner.run(amr, text)
-#
-#     for alignment in alignments:
-#         print alignment
-#         string = map(lambda x: '/'.join(x), alignment['edges'])
-#         string = '~'.join(string)
-#         print string
-#         print ','.join(map(lambda x: str(x), alignment['tokens']))
-#         print '\n'
+if __name__ == '__main__':
+    proc = CoreNLP("coref")
+    verb2noun, noun2verb, verb2actor, actor2verb = utils.noun_verb('data/morph-verbalization-v1.01.txt')
+    sub2word = utils.subgraph_word('data/verbalization-list-v1.06.txt')
+
+    aligner = Aligner(verb2noun, noun2verb, verb2actor, actor2verb, sub2word, proc)
+    text = 'The most terrible thing is not the government officials, but the power that lies in the hands of these officials.'
+    amr = """(c / contrast-01
+                      :ARG1 (t2 / terrible-01 :polarity -
+                            :ARG1 (p2 / person
+                                  :ARG0-of (h2 / have-org-role-91
+                                        :ARG1 (g / government-organization
+                                              :ARG0-of (g2 / govern-01))
+                                        :ARG2 (o2 / official)))
+                            :degree (m / most))
+                      :ARG2 (t3 / terrible-01
+                            :ARG1 (p / power
+                                  :ARG1-of (l / lie-07
+                                        :ARG2 (h / hand
+                                              :part-of p2)))
+                            :degree (m2 / most)))"""
+    alignments, info = aligner.run(amr, text)
+
+    for alignment in alignments:
+        print alignment
+
+    text = 'I headed straight for the center of activities, but in actual fact traffic was being controlled as early as 4 o\'clock, and they had already started limiting the crowds entering the sports center.'
+    amr = """(c / contrast-01
+                      :ARG1 (h / head-02
+                            :ARG0 (i / i)
+                            :ARG1 (c6 / center
+                                  :mod (a2 / activity-06))
+                            :ARG1-of (s2 / straight-04))
+                      :ARG2 (a / and
+                            :op1 (c2 / control-01
+                                  :ARG1 (t / traffic)
+                                  :prep-in (f / fact
+                                        :ARG1-of (a3 / actual-02))
+                                  :time (d / date-entity :time "4:00"
+                                        :mod (e / early)))
+                            :op2 (s / start-01
+                                  :ARG0 (t2 / they)
+                                  :ARG1 (l2 / limit-01
+                                        :ARG1 (c4 / crowd
+                                              :ARG0-of (e2 / enter-01
+                                                    :ARG1 (c5 / center
+                                                          :mod (s3 / sport)))))
+                                  :time (a4 / already))))"""
+    alignments, info = aligner.run(amr, text)
+
+    print '\n'
+    for alignment in alignments:
+        print alignment

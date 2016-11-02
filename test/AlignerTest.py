@@ -128,3 +128,22 @@ class AlignerTest(unittest.TestCase):
         self.aligner.run(amr, text)
 
         self.assertDictEqual({}, {1:1})
+
+    def test_7(self):
+        text = 'Pledge to fight to the death defending the Diaoyu Islands and the related islands.'
+        amr = """(p / pledge-01 :mode imperative
+                      :ARG0 (y / you)
+                      :ARG2 (f / fight-01
+                            :ARG0 y
+                            :ARG2 (d2 / defend-01
+                                  :ARG0 y
+                                  :ARG1 (a / and
+                                        :op1 (i / island :wiki "Senkaku_Islands" :name (n / name :op1 "Diaoyu" :op2 "Islands"))
+                                        :op2 (i2 / island
+                                              :ARG1-of (r / relate-01
+                                                    :ARG2 i))))
+                            :manner (d / die-01
+                                  :ARG1 y)))"""
+        self.aligner.run(amr, text)
+
+        self.assertDictEqual({}, {1:1})

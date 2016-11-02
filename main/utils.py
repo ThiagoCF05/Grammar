@@ -22,6 +22,25 @@ def parse_aligned_corpus(fname):
             pass
     return amrs
 
+def parse_corpus(fname):
+    with open(fname) as f:
+        doc = f.read()
+
+    instances = doc.split('\n\n')[1:]
+
+    amrs = []
+    for instance in instances:
+        try:
+            instance = instance.split('\n')
+            sentence_id = instance[0].split()[2]
+            sentence = ' '.join(instance[1].split()[2:])
+            amr = '\n'.join(instance[3:])
+
+            amrs.append({'id':sentence_id, 'file':fname, 'sentence': sentence, 'amr': amr})
+        except:
+            pass
+    return amrs
+
 def noun_verb(fname):
     verb2noun, noun2verb = {}, {}
     verb2actor, actor2verb = {}, {}
