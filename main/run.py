@@ -80,7 +80,7 @@ def main(aligner):
 
     for fname in os.listdir(dir):
         print fname, '\r',
-        amrs = utils.parse_aligned_corpus(os.path.join(dir, fname))
+        amrs = utils.parse_corpus(os.path.join(dir, fname))
 
         for amr in amrs:
             try:
