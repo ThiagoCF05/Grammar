@@ -90,7 +90,6 @@ def main(aligner):
                 tag, ltag = inducer.prettify(id2subtrees, id2rule, tag, ltag)
             except:
                 print 'ERROR', amr['file'], amr['id']
-            break
     return tag, ltag
 
 
