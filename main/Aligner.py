@@ -318,6 +318,7 @@ class Aligner(object):
                         alignment['tokens'].extend(self.nodes[root]['tokens'])
                         alignment['edges'].insert(0, n_e)
                         break
+
             # MATCH reification
             elif self.nodes[edge[1]]['name'] in ['have-rel-role-91', 'have-org-role-91'] and self.nodes[root]['status'] != 'labeled' and len(self.nodes[root]['tokens']) == 0:
                 self.nodes[root]['status'] = 'labeled'
@@ -423,6 +424,12 @@ class Aligner(object):
             if len(tokens) == 0:
                 tokens = self.nodes[entity]['tokens']
             alignments.extend(self.align_coreferences(entity, tokens))
+
+        # TO DO: create probability list for the unlabeled nodes
+        for node in self.nodes:
+            if self.nodes[node]['status'] != 'labeled':
+                alignment = self._create_alignment(node)
+                alignments.append(alignment)
 
         for alignment in alignments:
             alignment['ids'] = map(lambda edge: self.nodes[edge[1]]['id'], alignment['edges'])

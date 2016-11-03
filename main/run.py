@@ -37,6 +37,42 @@ def write(fname, tag):
         f.write('\n\n')
     f.close()
 
+def evaluate(aligner):
+    aligned_dir = 'data/LDC2016E25/data/alignments/unsplit'
+    _dir = 'data/LDC2016E25/data/amrs/unsplit'
+
+    tag, ltag = {}, {}
+
+    for fname in filter(lambda  f: f != '.DS_Store', os.listdir(aligned_dir)):
+        print fname, '\r',
+        aligned_amrs = utils.parse_aligned_corpus(os.path.join(aligned_dir, fname))
+
+        fname = fname.split('-')
+        fname[4] = 'amrs'
+        fname = '-'.join(fname)
+        amrs = utils.parse_corpus(os.path.join(_dir, fname))
+
+        for i, amr in enumerate(amrs):
+            try:
+                gold_alignments = aligner.train(aligned_amrs[i]['amr'], aligned_amrs[i]['sentence'])
+                alignments, info = aligner.run(amr['amr'], amr['sentence'])
+
+                print amr['sentence']
+                for alignment in gold_alignments:
+                    print alignment
+                print '\n'
+                for alignment in alignments:
+                    print alignment
+                print '\n'
+                break
+                # inducer = RuleInducer(amr['sentence'], amr['amr'], info['parse'], alignments)
+                # id2subtrees, id2rule = inducer.run()
+                # tag, ltag = inducer.prettify(id2subtrees, id2rule, tag, ltag)
+            except:
+                print 'ERROR', amr['file'], amr['id']
+            break
+    return tag, ltag
+
 def main(aligner):
     dir = 'data/LDC2016E25/data/amrs/unsplit'
 
@@ -44,17 +80,17 @@ def main(aligner):
 
     for fname in os.listdir(dir):
         print fname, '\r',
-        amrs = utils.parse_corpus(os.path.join(dir, fname))
+        amrs = utils.parse_aligned_corpus(os.path.join(dir, fname))
 
         for amr in amrs:
             try:
                 alignments, info = aligner.run(amr['amr'], amr['sentence'])
-
                 inducer = RuleInducer(amr['sentence'], amr['amr'], info['parse'], alignments)
                 id2subtrees, id2rule = inducer.run()
                 tag, ltag = inducer.prettify(id2subtrees, id2rule, tag, ltag)
             except:
                 print 'ERROR', amr['file'], amr['id']
+            break
     return tag, ltag
 
 
