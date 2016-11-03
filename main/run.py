@@ -85,11 +85,17 @@ def main(aligner):
         for amr in amrs:
             try:
                 alignments, info = aligner.run(amr['amr'], amr['sentence'])
-                inducer = RuleInducer(amr['sentence'], amr['amr'], info['parse'], alignments)
-                id2subtrees, id2rule = inducer.run()
-                tag, ltag = inducer.prettify(id2subtrees, id2rule, tag, ltag)
             except:
-                print 'ERROR', amr['file'], amr['id']
+                print 'ALIGNER ERROR', amr['file'], amr['id']
+                alignments, info = None, None
+
+            if alignments != None:
+                try:
+                    inducer = RuleInducer(amr['sentence'], amr['amr'], info['parse'], alignments)
+                    id2subtrees, id2rule = inducer.run()
+                    tag, ltag = inducer.prettify(id2subtrees, id2rule, tag, ltag)
+                except:
+                    print 'INDUCER ERROR', amr['file'], amr['id']
     return tag, ltag
 
 
