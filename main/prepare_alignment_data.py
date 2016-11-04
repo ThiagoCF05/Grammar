@@ -24,7 +24,7 @@ def create_table(fname, aligner):
             info = info['sentences'][0]
 
             nodes, edges = aligner.parse(amr['amr'])
-            for node in nodes:
+            for id, node in nodes.iteritems():
                 concept = node['name']
                 if concept not in table:
                     table[concept] = {}
