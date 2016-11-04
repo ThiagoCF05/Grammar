@@ -115,7 +115,7 @@ class Aligner(object):
                 break
         # MATCH COMPARATIVE AND SUPERLATIVE
         if isSet < 0:
-            _indexes = filter(lambda x: lemmas[x][1] == 'unlabeled' and self.info['pos'] == 'JJR', xrange(len(lemmas)))
+            _indexes = filter(lambda x: lemmas[x][1] == 'unlabeled' and self.info['pos'] in ['JJR', 'JJS'], xrange(len(lemmas)))
             for index in _indexes:
                 if lemmas[index][0][:-2] == concept or (lemmas[index] == 'better' and concept == 'good') or (lemmas[index] == 'worse' and concept == 'bad'):
                     isSet = set_label_given(index)
@@ -254,7 +254,8 @@ class Aligner(object):
 
         edge = (self.nodes[root]['parent']['edge'], root)
         indexes = self.nodes[root]['tokens']
-        alignment = {'edges':[edge], 'tokens':indexes, 'ids':[]}
+        lemmas = map(lambda x: self.info['lemmas'][x], indexes)
+        alignment = {'edges':[edge], 'tokens':indexes, 'ids':[], 'lemmas':lemmas}
         return alignment
 
     def align(self, root, visited, lemmas, alignments, id, isAligned = False):
