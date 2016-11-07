@@ -20,8 +20,11 @@ def create_table(fname, aligner):
     for file in files:
         amrs = utils.parse_aligned_corpus(os.path.join(training, file))
         for amr in amrs:
+            print file, amr['id']
             info = aligner.proc.parse_doc(amr['sentence'])
-            info = info['sentences'][0]
+            all_lemmas = []
+            for sent in info['sentences']:
+                all_lemmas.extend(sent['lemmas'])
 
             nodes, edges = aligner.parse(amr['amr'])
             for id, node in nodes.iteritems():
@@ -29,7 +32,7 @@ def create_table(fname, aligner):
                 if concept not in table:
                     table[concept] = {}
 
-                lemmas = map(lambda x: info['lemmas'][x].lower(), node['tokens'])
+                lemmas = map(lambda x: all_lemmas[x].lower(), node['tokens'])
                 if len(lemmas) == 0:
                     if 'NULL' not in table[concept]:
                         table[concept]['NULL'] = 1
