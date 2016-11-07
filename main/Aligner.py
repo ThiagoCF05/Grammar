@@ -8,13 +8,43 @@ import copy
 from nltk.stem.porter import *
 
 class Aligner(object):
-    def __init__(self, verb2noun, noun2verb, verb2actor, actor2verb, sub2word, proc):
+    def __init__(self, verb2noun, noun2verb, verb2actor, actor2verb, sub2word, freq_table, proc):
         self.verb2noun = verb2noun
         self.noun2verb = noun2verb
         self.verb2actor = verb2actor
         self.actor2verb = actor2verb
         self.sub2word = sub2word
+        self.freq_table = freq_table
         self.proc = proc
+
+    # display the result not splitted by sentence
+    def get_corenlp_result(self, text):
+        info = self.proc.parse_doc(text)
+        coref = info['entities']
+
+        all_lemmas, all_pos, entitymentions, parse = [], [], [], ''
+        sent2size = [0]
+        for i, sent in enumerate(info['sentences']):
+            all_lemmas.extend(sent['lemmas'])
+            all_pos.extend(sent['pos'])
+
+            for j, entity in enumerate(sent['entitymentions']):
+                sent['entitymentions'][j]['tokspan'][0] += sent2size[-1]
+                sent['entitymentions'][j]['tokspan'][1] += sent2size[-1]
+            entitymentions.extend(sent['entitymentions'])
+
+            parse = sent['parse'] + ' '
+
+            sent2size.append(sent2size[-1]+len(info['lemmas']))
+
+        for entity in coref:
+            for mention in coref[entity]:
+                mention['tokspan_in_sentence'][0] += sent2size[mention['sentence']]
+                mention['tokspan_in_sentence'][1] += sent2size[mention['sentence']]
+
+        parse = parse.strip()
+        info = {'lemmas':all_lemmas, 'entitymentions':entitymentions, 'pos':all_pos, 'parse':parse}
+        return info, coref
 
     def parse(self, amr):
         nodes, edges = {}, {'root':[]}
@@ -115,7 +145,7 @@ class Aligner(object):
                 break
         # MATCH COMPARATIVE AND SUPERLATIVE
         if isSet < 0:
-            _indexes = filter(lambda x: lemmas[x][1] == 'unlabeled' and self.info['pos'] in ['JJR', 'JJS'], xrange(len(lemmas)))
+            _indexes = filter(lambda x: lemmas[x][1] == 'unlabeled' and self.info['pos'][x] in ['JJR', 'JJS'], xrange(len(lemmas)))
             for index in _indexes:
                 if lemmas[index][0][:-2] == concept or (lemmas[index] == 'better' and concept == 'good') or (lemmas[index] == 'worse' and concept == 'bad'):
                     isSet = set_label_given(index)
@@ -125,7 +155,7 @@ class Aligner(object):
                     break
         # QUESTIONS
         if isSet < 0 and concept == 'amr-unknown':
-            _indexes = filter(lambda x: lemmas[x][1] == 'unlabeled' and self.info['pos'] in ['WDT', 'WP', 'WP$', 'WRB'], xrange(len(lemmas)))
+            _indexes = filter(lambda x: lemmas[x][1] == 'unlabeled' and self.info['pos'][x] in ['WDT', 'WP', 'WP$', 'WRB'], xrange(len(lemmas)))
             for index in _indexes:
                 isSet = set_label_given(index)
                 break
@@ -145,7 +175,7 @@ class Aligner(object):
                     break
         # MODALS
         if isSet < 0 and self.nodes[root]['name'] in ['possible-01', 'obligate-01', 'permit-01', 'recommend-01', 'likely-01', 'prefer-01']:
-            _indexes = filter(lambda x: lemmas[x][1] == 'unlabeled' and self.info['pos'] == 'MD', xrange(len(lemmas)))
+            _indexes = filter(lambda x: lemmas[x][1] == 'unlabeled' and self.info['pos'][x] == 'MD', xrange(len(lemmas)))
             for index in _indexes:
                 isSet = set_label_given(index)
                 break
@@ -214,6 +244,30 @@ class Aligner(object):
             indexes = [isSet]
         return indexes
 
+    def match_frequency_patterns(self, root, lemmas):
+        try:
+            concept2freq = self.freq_table[root]
+            max_freq = ('NULL', concept2freq['NULL'])
+
+            for lemma in filter(lambda x: x[1] == 'unlabeled', lemmas):
+                try:
+                    freq = concept2freq[lemma[0]]
+                except:
+                    freq = 0
+
+                if freq > max_freq[1]:
+                    max_freq = (lemma[0], freq)
+
+            if max_freq[0] != 'NULL':
+                for i, lemma in enumerate(lemmas):
+                    if lemma[1] == 'unlabeled' and lemma[0] == max_freq[0]:
+                        self.nodes[root]['tokens'].append(i)
+                        lemmas[i][1] = 'labeled'
+                        break
+            return self._create_alignment(root), lemmas
+        except:
+            return self._create_alignment(root), lemmas
+
     def match_subgraph_patterns(self, root, lemmas):
         # filter subgraphs with the root given as a parameter which the word related is in the sentence
         f = filter(lambda iter: iter[0][0] == self.nodes[root]['name'], self.sub2word.iteritems())
@@ -248,6 +302,33 @@ class Aligner(object):
             if matched:
                 return self.info['lemmas'].index(lemma), filtered_subgraph
         return -1, -1
+
+    def match_coreferences_patterns(self, root, tokens, lemmas):
+        alignments = []
+
+        for entity in self.coref:
+            if len(entity['mentions']) > 1:
+                first_mention =  entity['mentions'][0]
+                s, e = first_mention['tokspan_in_sentence']
+                interval = range(s, e)
+                if len(filter(lambda x: x in interval, tokens)) > 0:
+                    match = root + '-coref'
+                    for i in range(len(filter(lambda node: match in node, self.nodes))):
+                        try:
+                            node = match + str(i+1)
+                            s,e = entity['mentions'][i+1]['tokspan_in_sentence']
+                            indexes = range(s, e)
+                            self.nodes[node]['tokens'] = indexes
+
+                            for index in indexes:
+                                lemmas[index] = (lemmas[index][0], 'labeled')
+
+                            alignment = self._create_alignment(node)
+                            alignments.append(alignment)
+                        except:
+                            pass
+                    break
+        return alignments, lemmas
 
     def _create_alignment(self, root):
         self.nodes[root]['status'] = 'labeled'
@@ -344,35 +425,9 @@ class Aligner(object):
 
         return lemmas, alignments
 
-    def align_coreferences(self, root, tokens):
-        alignments = []
-
-        # tokens = self.nodes[root]['tokens']
-        for entity in self.coref:
-            if len(entity['mentions']) > 1:
-                first_mention =  entity['mentions'][0]
-                s, e = first_mention['tokspan_in_sentence']
-                interval = range(s, e)
-                if len(filter(lambda x: x in interval, tokens)) > 0:
-                    match = root + '-coref'
-                    for i in range(len(filter(lambda node: match in node, self.nodes))):
-                        try:
-                            node = match + str(i+1)
-                            s,e = entity['mentions'][i+1]['tokspan_in_sentence']
-                            indexes = range(s, e)
-                            self.nodes[node]['tokens'] = indexes
-
-                            alignment = self._create_alignment(node)
-                            alignments.append(alignment)
-                        except:
-                            pass
-                    break
-        return alignments
-
     def train(self, amr, text):
-        self.info = self.proc.parse_doc(text)
-        self.coref = self.info['entities']
-        self.info = self.info['sentences'][0]
+        self.info, self.coref = self.get_corenlp_result(text)
+
         self.nodes, self.edges = self.parse(amr)
 
         lemmas = map(lambda x: (x, 'unlabeled'), self.info['lemmas'])
@@ -391,9 +446,7 @@ class Aligner(object):
         return alignments
 
     def run(self, amr, text):
-        self.info = self.proc.parse_doc(text)
-        self.coref = self.info['entities']
-        self.info = self.info['sentences'][0]
+        self.info, self.coref = self.get_corenlp_result(text)
 
         self.nodes, self.edges = self.parse(amr)
 
@@ -424,12 +477,12 @@ class Aligner(object):
                     break
             if len(tokens) == 0:
                 tokens = self.nodes[entity]['tokens']
-            alignments.extend(self.align_coreferences(entity, tokens))
+            _alignments, lemmas = self.match_coreferences_patterns(entity, tokens, lemmas)
+            alignments.extend(_alignments)
 
-        # TO DO: create probability list for the unlabeled nodes
         for node in self.nodes:
             if self.nodes[node]['status'] != 'labeled':
-                alignment = self._create_alignment(node)
+                alignment, lemmas = self.match_frequency_patterns(node, lemmas)
                 alignments.append(alignment)
 
         for alignment in alignments:

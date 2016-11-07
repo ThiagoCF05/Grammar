@@ -218,7 +218,6 @@ class RuleInducer(object):
                 ltag[(rule, head)].append(tree)
         return tag, ltag
 
-
     def run(self):
         self.nodes, self.tree, self._id = self.parse_tree()
 
