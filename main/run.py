@@ -1,5 +1,6 @@
 __author__ = 'thiagocastroferreira'
 
+import json
 import operator
 import os
 import nltk
@@ -39,11 +40,25 @@ def write(fname, tag):
         f.write('\n\n')
     f.close()
 
+def accuracy(gold_align, pred_alig):
+    ids = map(lambda x: x['ids'][0], gold_align)
+
+    for _id in ids:
+        gold = filter(lambda x: x['ids'][0] == _id, gold_align)[0]
+        pred = filter(lambda x: x['ids'][0] == _id, pred_alig)[0]
+
+        dem,num = 0, 0
+        for token in gold['tokens']:
+            dem += 1
+            if token in pred['tokens']:
+                num += 1
+    return num, dem
+
 def evaluate(aligner):
     aligned_dir = 'data/LDC2016E25/data/alignments/unsplit'
     _dir = 'data/LDC2016E25/data/amrs/unsplit'
 
-    tag, ltag = {}, {}
+    num, dem = 0, 0
 
     for fname in filter(lambda  f: f != '.DS_Store', os.listdir(aligned_dir)):
         print fname, '\r',
@@ -59,21 +74,13 @@ def evaluate(aligner):
                 gold_alignments = aligner.train(aligned_amrs[i]['amr'], aligned_amrs[i]['sentence'])
                 alignments, info = aligner.run(amr['amr'], amr['sentence'])
 
-                print amr['sentence']
-                for alignment in gold_alignments:
-                    print alignment
-                print '\n'
-                for alignment in alignments:
-                    print alignment
-                print '\n'
-                break
-                # inducer = RuleInducer(amr['sentence'], amr['amr'], info['parse'], alignments)
-                # id2subtrees, id2rule = inducer.run()
-                # tag, ltag = inducer.prettify(id2subtrees, id2rule, tag, ltag)
+                _num, _dem = accuracy(gold_alignments, alignments)
+                num += _num
+                dem += _dem
             except:
                 print 'ERROR', amr['file'], amr['id']
-            break
-    return tag, ltag
+
+    print 'ACCURACY: ', float(num)/dem
 
 def main(aligner):
     dir = 'data/LDC2016E25/data/amrs/unsplit'
@@ -103,11 +110,13 @@ def main(aligner):
 
 if __name__ == '__main__':
     proc = CoreNLP("coref")
+    freq_table = json.load(open('data/alignments/table.json'))
     verb2noun, noun2verb, verb2actor, actor2verb = utils.noun_verb('data/morph-verbalization-v1.01.txt')
     sub2word = utils.subgraph_word('data/verbalization-list-v1.06.txt')
 
-    aligner = Aligner(verb2noun, noun2verb, verb2actor, actor2verb, sub2word, proc)
-    tag, ltag = main(aligner)
-
-    write('tag.txt', tag)
-    write('ltag.txt', ltag)
+    aligner = Aligner(verb2noun, noun2verb, verb2actor, actor2verb, sub2word, freq_table, proc)
+    evaluate(aligner)
+    # tag, ltag = main(aligner)
+    #
+    # write('tag.txt', tag)
+    # write('ltag.txt', ltag)

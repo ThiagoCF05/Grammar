@@ -23,34 +23,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Aligner.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Aligner.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/Aligner.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.90415335" vertical-offset="2766" max-vertical-offset="3705">
-              <caret line="545" column="25" selection-start-line="493" selection-start-column="2" selection-end-line="545" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1897" max-vertical-offset="2910">
+              <caret line="427" column="0" selection-start-line="427" selection-start-column="0" selection-end-line="427" selection-end-column="0" />
               <folding>
-                <element signature="e#3893#10866#0" expanded="false" />
-                <element signature="e#3928#4225#0" expanded="false" />
-                <element signature="e#4274#4339#0" expanded="false" />
-                <element signature="e#11819#13190#0" expanded="false" />
-                <element signature="e#13265#14373#0" expanded="false" />
-                <element signature="e#14824#18657#0" expanded="false" />
-                <element signature="e#18699#19466#0" expanded="false" />
+                <element signature="e#1770#3840#0" expanded="false" />
+                <element signature="e#3899#10872#0" expanded="false" />
+                <element signature="e#11782#13153#0" expanded="false" />
+                <element signature="e#13228#14336#0" expanded="false" />
+                <element signature="e#14385#14698#0" expanded="false" />
+                <element signature="e#19469#21438#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="prepare_alignment_data.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/prepare_alignment_data.py">
+      <file leaf-file-name="test.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1020">
-              <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="915">
+              <caret line="11" column="62" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="62" />
               <folding>
-                <element signature="e#37#64#0" expanded="true" />
-                <element signature="e#1726#2972#0" expanded="false" />
-                <element signature="e#3002#3524#0" expanded="false" />
-                <element signature="e#3542#4301#0" expanded="false" />
+                <element signature="e#37#48#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -75,28 +71,20 @@
       <file leaf-file-name="run.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="713" max-vertical-offset="1665">
-              <caret line="78" column="26" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="26" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="845" max-vertical-offset="1920">
+              <caret line="80" column="43" selection-start-line="80" selection-start-column="43" selection-end-line="80" selection-end-column="43" />
+              <folding>
+                <element signature="e#37#48#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="utils.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="utils.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1695">
+            <state vertical-scroll-proportion="0.8454546" vertical-offset="0" max-vertical-offset="1695">
               <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AlignerTest.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/AlignerTest.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2250">
-              <caret line="54" column="8" selection-start-line="54" selection-start-column="8" selection-end-line="75" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -122,10 +110,11 @@
         <option value="$PROJECT_DIR$/main/main_run.py" />
         <option value="$PROJECT_DIR$/test/AlignerTest.py" />
         <option value="$PROJECT_DIR$/main/utils.py" />
-        <option value="$PROJECT_DIR$/main/run.py" />
         <option value="$PROJECT_DIR$/main/prepare_alignment_data.py" />
         <option value="$PROJECT_DIR$/main/RuleInducer.py" />
+        <option value="$PROJECT_DIR$/main/test.py" />
         <option value="$PROJECT_DIR$/main/Aligner.py" />
+        <option value="$PROJECT_DIR$/main/run.py" />
       </list>
     </option>
   </component>
@@ -207,6 +196,24 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Models" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -239,30 +246,12 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/main/scripts" />
+      <recent name="$PROJECT_DIR$/main/data/tag" />
       <recent name="$PROJECT_DIR$/main" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.prepare_alignment_data">
-    <configuration default="false" name="main_run" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="$USER_HOME$/anaconda/bin/python.app" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Models" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/main_run.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PyDebugRunner" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PyDebugRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.run">
     <configuration default="false" name="Aligner" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -283,24 +272,6 @@
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="utils" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/main" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Models" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/utils.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
     <configuration default="false" name="prepare_alignment_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -313,7 +284,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Models" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/prepare_alignment_data.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/scripts/prepare_alignment_data.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
@@ -338,6 +309,44 @@
       <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/main" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Models" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/scripts/test.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/main" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Models" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/test.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
@@ -631,19 +640,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.main_run" />
-      <item index="1" class="java.lang.String" itemvalue="Python.Aligner" />
-      <item index="2" class="java.lang.String" itemvalue="Python.utils" />
-      <item index="3" class="java.lang.String" itemvalue="Python.prepare_alignment_data" />
-      <item index="4" class="java.lang.String" itemvalue="Python.run" />
+      <item index="0" class="java.lang.String" itemvalue="Python.Aligner" />
+      <item index="1" class="java.lang.String" itemvalue="Python.prepare_alignment_data" />
+      <item index="2" class="java.lang.String" itemvalue="Python.run" />
+      <item index="3" class="java.lang.String" itemvalue="Python.test" />
+      <item index="4" class="java.lang.String" itemvalue="Python.test (1)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.prepare_alignment_data" />
-        <item index="1" class="java.lang.String" itemvalue="Python.run" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Aligner" />
-        <item index="3" class="java.lang.String" itemvalue="Python.main_run" />
-        <item index="4" class="java.lang.String" itemvalue="Python.utils" />
+        <item index="0" class="java.lang.String" itemvalue="Python.run" />
+        <item index="1" class="java.lang.String" itemvalue="Python.test (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Python.test" />
+        <item index="3" class="java.lang.String" itemvalue="Python.prepare_alignment_data" />
+        <item index="4" class="java.lang.String" itemvalue="Python.Aligner" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -675,16 +684,16 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17643468" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41020408" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41020408" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
@@ -728,11 +737,26 @@
           <line>94</line>
           <option name="timeStamp" value="103" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/main/Aligner.py</url>
+          <line>448</line>
+          <option name="timeStamp" value="105" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/main/Aligner.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="106" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/main/Aligner.py</url>
+          <line>484</line>
+          <option name="timeStamp" value="109" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="104" />
+      <option name="time" value="113" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -740,79 +764,17 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/main/RuleInducer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1575" max-vertical-offset="2025">
-          <caret line="105" column="8" selection-start-line="105" selection-start-column="8" selection-end-line="105" selection-end-column="8" />
-          <folding>
-            <element signature="e#463#981#0" expanded="false" />
-            <element signature="e#2026#6905#0" expanded="false" />
-            <element signature="e#6969#7573#0" expanded="false" />
-            <element signature="e#7639#8415#0" expanded="false" />
-            <element signature="e#8444#9137#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1410">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="600" max-vertical-offset="1185">
-          <caret line="40" column="33" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/data/morph-verbalization-v1.01.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="33936" max-vertical-offset="37590">
-          <caret line="2499" column="0" selection-start-line="2499" selection-start-column="0" selection-end-line="2499" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/Aligner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4089" max-vertical-offset="4725">
-          <caret line="289" column="37" selection-start-line="289" selection-start-column="0" selection-end-line="290" selection-end-column="0" />
-          <folding>
-            <element signature="e#3893#10866#0" expanded="false" />
-            <element signature="e#3928#4225#0" expanded="false" />
-            <element signature="e#4274#4339#0" expanded="false" />
-            <element signature="e#11819#13190#0" expanded="false" />
-            <element signature="e#13265#14373#0" expanded="false" />
-            <element signature="e#14824#18657#0" expanded="false" />
-            <element signature="e#18699#19466#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="825">
-          <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/Aligner.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2618" max-vertical-offset="3825">
           <caret line="190" column="40" selection-start-line="190" selection-start-column="24" selection-end-line="190" selection-end-column="40" />
           <folding>
-            <element signature="e#3893#10866#0" expanded="false" />
-            <element signature="e#3928#4225#0" expanded="false" />
-            <element signature="e#4274#4339#0" expanded="false" />
-            <element signature="e#11819#13190#0" expanded="false" />
-            <element signature="e#13265#14373#0" expanded="false" />
-            <element signature="e#14824#18657#0" expanded="false" />
-            <element signature="e#18699#19466#0" expanded="false" />
+            <element signature="e#1770#3840#0" expanded="false" />
+            <element signature="e#3899#10872#0" expanded="false" />
+            <element signature="e#11782#13153#0" expanded="false" />
+            <element signature="e#13228#14336#0" expanded="false" />
+            <element signature="e#14385#14698#0" expanded="false" />
+            <element signature="e#19469#21438#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -844,13 +806,12 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="449" max-vertical-offset="1635">
           <caret line="111" column="64" selection-start-line="111" selection-start-column="64" selection-end-line="111" selection-end-column="64" />
           <folding>
-            <element signature="e#3893#10866#0" expanded="false" />
-            <element signature="e#3928#4225#0" expanded="false" />
-            <element signature="e#4274#4339#0" expanded="false" />
-            <element signature="e#11819#13190#0" expanded="false" />
-            <element signature="e#13265#14373#0" expanded="false" />
-            <element signature="e#14824#18657#0" expanded="false" />
-            <element signature="e#18699#19466#0" expanded="false" />
+            <element signature="e#1770#3840#0" expanded="false" />
+            <element signature="e#3899#10872#0" expanded="false" />
+            <element signature="e#11782#13153#0" expanded="false" />
+            <element signature="e#13228#14336#0" expanded="false" />
+            <element signature="e#14385#14698#0" expanded="false" />
+            <element signature="e#19469#21438#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -882,13 +843,12 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="739" max-vertical-offset="1350">
           <caret line="109" column="37" selection-start-line="109" selection-start-column="37" selection-end-line="109" selection-end-column="37" />
           <folding>
-            <element signature="e#3893#10866#0" expanded="false" />
-            <element signature="e#3928#4225#0" expanded="false" />
-            <element signature="e#4274#4339#0" expanded="false" />
-            <element signature="e#11819#13190#0" expanded="false" />
-            <element signature="e#13265#14373#0" expanded="false" />
-            <element signature="e#14824#18657#0" expanded="false" />
-            <element signature="e#18699#19466#0" expanded="false" />
+            <element signature="e#1770#3840#0" expanded="false" />
+            <element signature="e#3899#10872#0" expanded="false" />
+            <element signature="e#11782#13153#0" expanded="false" />
+            <element signature="e#13228#14336#0" expanded="false" />
+            <element signature="e#14385#14698#0" expanded="false" />
+            <element signature="e#19469#21438#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -920,13 +880,12 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="1380">
           <caret line="74" column="61" selection-start-line="74" selection-start-column="61" selection-end-line="74" selection-end-column="61" />
           <folding>
-            <element signature="e#3893#10866#0" expanded="false" />
-            <element signature="e#3928#4225#0" expanded="false" />
-            <element signature="e#4274#4339#0" expanded="false" />
-            <element signature="e#11819#13190#0" expanded="false" />
-            <element signature="e#13265#14373#0" expanded="false" />
-            <element signature="e#14824#18657#0" expanded="false" />
-            <element signature="e#18699#19466#0" expanded="false" />
+            <element signature="e#1770#3840#0" expanded="false" />
+            <element signature="e#3899#10872#0" expanded="false" />
+            <element signature="e#11782#13153#0" expanded="false" />
+            <element signature="e#13228#14336#0" expanded="false" />
+            <element signature="e#14385#14698#0" expanded="false" />
+            <element signature="e#19469#21438#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -958,13 +917,12 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="1380">
           <caret line="74" column="61" selection-start-line="74" selection-start-column="61" selection-end-line="74" selection-end-column="61" />
           <folding>
-            <element signature="e#3893#10866#0" expanded="false" />
-            <element signature="e#3928#4225#0" expanded="false" />
-            <element signature="e#4274#4339#0" expanded="false" />
-            <element signature="e#11819#13190#0" expanded="false" />
-            <element signature="e#13265#14373#0" expanded="false" />
-            <element signature="e#14824#18657#0" expanded="false" />
-            <element signature="e#18699#19466#0" expanded="false" />
+            <element signature="e#1770#3840#0" expanded="false" />
+            <element signature="e#3899#10872#0" expanded="false" />
+            <element signature="e#11782#13153#0" expanded="false" />
+            <element signature="e#13228#14336#0" expanded="false" />
+            <element signature="e#14385#14698#0" expanded="false" />
+            <element signature="e#19469#21438#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -996,13 +954,12 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="990">
           <caret line="44" column="134" selection-start-line="44" selection-start-column="11" selection-end-line="44" selection-end-column="134" />
           <folding>
-            <element signature="e#3893#10866#0" expanded="false" />
-            <element signature="e#3928#4225#0" expanded="false" />
-            <element signature="e#4274#4339#0" expanded="false" />
-            <element signature="e#11819#13190#0" expanded="false" />
-            <element signature="e#13265#14373#0" expanded="false" />
-            <element signature="e#14824#18657#0" expanded="false" />
-            <element signature="e#18699#19466#0" expanded="false" />
+            <element signature="e#1770#3840#0" expanded="false" />
+            <element signature="e#3899#10872#0" expanded="false" />
+            <element signature="e#11782#13153#0" expanded="false" />
+            <element signature="e#13228#14336#0" expanded="false" />
+            <element signature="e#14385#14698#0" expanded="false" />
+            <element signature="e#19469#21438#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1133,27 +1090,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/run.py">
+    <entry file="file://$PROJECT_DIR$/main/data/alignments/table.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1071" max-vertical-offset="1785">
-          <caret line="78" column="26" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="26" />
+        <state vertical-scroll-proportion="-1275.0602" vertical-offset="1165405" max-vertical-offset="1860645">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/utils.py">
+    <entry file="file://$PROJECT_DIR$/main/data/tag/tag.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="215" max-vertical-offset="1695">
-          <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="318495">
+          <caret line="2180" column="32" selection-start-line="2180" selection-start-column="0" selection-end-line="2181" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/data/tag/ltag.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-145.19914" vertical-offset="136342" max-vertical-offset="4010130">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python2.7/json/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33274338" vertical-offset="4087" max-vertical-offset="5355">
+          <caret line="286" column="0" selection-start-line="286" selection-start-column="0" selection-end-line="286" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/scripts/prepare_alignment_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3067227" vertical-offset="68" max-vertical-offset="1020">
+          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+          <folding>
+            <element signature="e#37#64#0" expanded="true" />
+            <element signature="e#1726#2972#0" expanded="false" />
+            <element signature="e#3002#3524#0" expanded="false" />
+            <element signature="e#3542#4301#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/AlignerTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="2250">
+        <state vertical-scroll-proportion="-0.5974441" vertical-offset="1311" max-vertical-offset="2250">
           <caret line="54" column="8" selection-start-line="54" selection-start-column="8" selection-end-line="75" selection-end-column="60" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="915">
+          <caret line="11" column="62" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="62" />
+          <folding>
+            <element signature="e#37#48#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1171,32 +1167,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/prepare_alignment_data.py">
+    <entry file="file://$PROJECT_DIR$/main/Aligner.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="1020">
-          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1897" max-vertical-offset="2910">
+          <caret line="427" column="0" selection-start-line="427" selection-start-column="0" selection-end-line="427" selection-end-column="0" />
           <folding>
-            <element signature="e#37#64#0" expanded="true" />
-            <element signature="e#1726#2972#0" expanded="false" />
-            <element signature="e#3002#3524#0" expanded="false" />
-            <element signature="e#3542#4301#0" expanded="false" />
+            <element signature="e#1770#3840#0" expanded="false" />
+            <element signature="e#3899#10872#0" expanded="false" />
+            <element signature="e#11782#13153#0" expanded="false" />
+            <element signature="e#13228#14336#0" expanded="false" />
+            <element signature="e#14385#14698#0" expanded="false" />
+            <element signature="e#19469#21438#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/Aligner.py">
+    <entry file="file://$PROJECT_DIR$/main/run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.90415335" vertical-offset="2766" max-vertical-offset="3705">
-          <caret line="545" column="25" selection-start-line="493" selection-start-column="2" selection-end-line="545" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="845" max-vertical-offset="1920">
+          <caret line="80" column="43" selection-start-line="80" selection-start-column="43" selection-end-line="80" selection-end-column="43" />
           <folding>
-            <element signature="e#3893#10866#0" expanded="false" />
-            <element signature="e#3928#4225#0" expanded="false" />
-            <element signature="e#4274#4339#0" expanded="false" />
-            <element signature="e#11819#13190#0" expanded="false" />
-            <element signature="e#13265#14373#0" expanded="false" />
-            <element signature="e#14824#18657#0" expanded="false" />
-            <element signature="e#18699#19466#0" expanded="false" />
+            <element signature="e#37#48#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8454546" vertical-offset="0" max-vertical-offset="1695">
+          <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
