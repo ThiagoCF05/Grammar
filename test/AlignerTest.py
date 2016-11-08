@@ -147,3 +147,33 @@ class AlignerTest(unittest.TestCase):
         self.aligner.run(amr, text)
 
         self.assertDictEqual({}, {1:1})
+
+    def test_8(self):
+            text = 'It continues to explore ; it continues to open new worlds .'
+            amr = """(m / multi-sentence
+                          :snt1 (c / continue-01
+                                :ARG0 (i / it)
+                                :ARG1 (e / explore-01
+                                      :ARG0 i))
+                          :snt2 (c2 / continue-01
+                                :ARG0 (i2 / it)
+                                :ARG1 (o / open-01
+                                      :ARG0 i2
+                                      :ARG1 (w / world
+                                            :ARG1-of (n / new-02)))))"""
+            self.aligner.run(amr, text)
+
+            self.assertDictEqual({}, {1:1})
+
+    def test_9(self):
+        text = 'What determined the position of Hong Kong as a shopping paradise ?'
+        amr = """(d / determine-01
+                      :ARG0 (a / amr-unknown)
+                      :ARG1 (p / position-01
+                            :ARG1 (c / city :wiki "Hong_Kong"
+                                  :name (n / name :op1 "Hong" :op2 "Kong"))
+                            :ARG2 (p2 / paradise
+                                  :topic (s / shop-01))))"""
+        self.aligner.run(amr, text)
+
+        self.assertDictEqual({}, {1:1})

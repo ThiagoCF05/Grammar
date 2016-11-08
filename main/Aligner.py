@@ -174,7 +174,12 @@ class Aligner(object):
                 if isSet > -1:
                     break
         # MODALS
-        if isSet < 0 and self.nodes[root]['name'] in ['possible-01', 'obligate-01', 'permit-01', 'recommend-01', 'likely-01', 'prefer-01']:
+        m = regex_propbank.match(self.nodes[root]['name'])
+        if m != None:
+            concept = m.groups()[0]
+        else:
+            concept = self.nodes[root]['name']
+        if isSet < 0 and concept in ['possible', 'obligate', 'permit', 'recommend', 'likely', 'prefer']:
             _indexes = filter(lambda x: lemmas[x][1] == 'unlabeled' and self.info['pos'][x] == 'MD', xrange(len(lemmas)))
             for index in _indexes:
                 isSet = set_label_given(index)
@@ -269,7 +274,7 @@ class Aligner(object):
         return self._create_alignment(root), lemmas
 
     def match_subgraph_patterns(self, root, lemmas):
-        # filter subgraphs with the root given as a parameter which the word related is in the sentence
+        # filter subgraphs with the root given as a parameter which the related word is in the sentence
         f = filter(lambda iter: iter[0][0] == self.nodes[root]['name'], self.sub2word.iteritems())
 
         subgraphs, lemma = [], ''
@@ -431,21 +436,34 @@ class Aligner(object):
         self.nodes, self.edges = self.parse(amr)
 
         lemmas = map(lambda x: (x, 'unlabeled'), self.info['lemmas'])
-
         root = self.edges['root'][0][1]
         lemmas, alignments = self.align(root, [], lemmas, [], '0', True)
 
         for node in self.nodes:
-            if self.nodes[node]['status'] != 'labeled':
-                alignment = self._create_alignment(node)
-                alignments.append(alignment)
+            alignment = self._create_alignment(node)
+            alignments.append(alignment)
 
         for alignment in alignments:
             alignment['ids'] = map(lambda edge: self.nodes[edge[1]]['id'], alignment['edges'])
             alignment['edges'] = map(lambda edge: (edge[0], self.nodes[edge[1].split('-coref')[0]]['name']), alignment['edges'])
-        return alignments
+        return alignments, self.info
 
     def run(self, amr, text):
+        def match_coreferences(alignments, lemmas):
+            coreferences = filter(lambda node: '-coref' in node and self.nodes[node] != 'labeled', self.nodes)
+            entities = set(map(lambda ref: ref.split('-')[0], coreferences))
+            for entity in entities:
+                tokens = []
+                for alignment in alignments:
+                    if len(filter(lambda edge: edge[1] == entity, alignment['edges'])) > 0:
+                        tokens = alignment['tokens']
+                        break
+                if len(tokens) == 0:
+                    tokens = self.nodes[entity]['tokens']
+                _alignments, lemmas = self.match_coreferences_patterns(entity, tokens, lemmas)
+                alignments.extend(_alignments)
+            return alignments, lemmas
+
         self.info, self.coref = self.get_corenlp_result(text)
 
         self.nodes, self.edges = self.parse(amr)
@@ -460,6 +478,7 @@ class Aligner(object):
         root = self.edges['root'][0][1]
         lemmas, alignments = self.align(root, [], lemmas, [], '0')
 
+        # Label nodes that have at least one token attached
         for node in self.nodes:
             if self.nodes[node]['status'] != 'labeled':
                 if len(self.nodes[node]['tokens']) > 0:
@@ -467,19 +486,9 @@ class Aligner(object):
                     alignments.append(alignment)
 
         # Label coreferences
-        coreferences = filter(lambda node: '-coref' in node and self.nodes[node] != 'labeled', self.nodes)
-        entities = set(map(lambda ref: ref.split('-')[0], coreferences))
-        for entity in entities:
-            tokens = []
-            for alignment in alignments:
-                if len(filter(lambda edge: edge[1] == entity, alignment['edges'])) > 0:
-                    tokens = alignment['tokens']
-                    break
-            if len(tokens) == 0:
-                tokens = self.nodes[entity]['tokens']
-            _alignments, lemmas = self.match_coreferences_patterns(entity, tokens, lemmas)
-            alignments.extend(_alignments)
+        alignments, lemmas = match_coreferences(alignments, lemmas)
 
+        # Classify unlabeled nodes by frequency in the training alignments
         for node in self.nodes:
             if self.nodes[node]['status'] != 'labeled':
                 alignment, lemmas = self.match_frequency_patterns(node, lemmas)

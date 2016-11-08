@@ -68,9 +68,19 @@ class RuleInducer(object):
                     labels.append(self.nodes[edge]['label'])
             return labels
 
+        def isConnected(root, subtree):
+            connected = False
+            if root in subtree['nodes'].keys():
+                connected = True
+            else:
+                for edge in self.tree[root]:
+                    connected = isConnected(edge, subtree)
+                    if connected:
+                        break
+            return connected
+
         # CREATE A NON-LEXICALIZED RULE
         def create_rule(root, label, new_label, should_label=True):
-
             if should_label:
                 self.nodes[root]['label'] = label
 
@@ -126,7 +136,15 @@ class RuleInducer(object):
             # Get children labels (except non-label nodes: -1)
             labels = get_children_labels()
 
-            if len(set(labels)) == 1 and labels[0] not in [-1, head_label]:
+            # If the node is the root of the tree
+            if root == 1:
+                if isConnected(root, id2subtrees[head_label]):
+                    update_rule(root, head_label)
+                else:
+                    new_label = max(id2subtrees.keys()) + 1
+                    id2subtrees[new_label] = {'tree':{}, 'nodes':{}, 'head':[], 'root':''}
+                    create_rule(root, head_label, new_label)
+            elif len(set(labels)) == 1 and labels[0] > -1:
                 label = labels[0]
                 update_rule(root, label)
             elif len(set(labels)) > 1:
@@ -139,9 +157,12 @@ class RuleInducer(object):
 
                 # Find the head of the subtree (the most right element from a specific type)
                 head = -1
-                for edge in self.tree[root]:
-                    if self.nodes[edge]['name'][0] == preference:
-                        head = self.nodes[edge]['label']
+                if head_label in set(labels):
+                    head = head_label
+                else:
+                    for edge in self.tree[root]:
+                        if self.nodes[edge]['name'][0] == preference:
+                            head = self.nodes[edge]['label']
 
                 for edge in self.tree[root]:
                     if self.nodes[edge]['label'] not in [-1, head]:
@@ -157,21 +178,10 @@ class RuleInducer(object):
 
                 if head > -1:
                     update_rule(root, head)
-                else:
-                    new_label = max(id2subtrees.keys()) + 1
-                    id2subtrees[new_label] = {'tree':{}, 'nodes':{}, 'head':[], 'root':''}
-                    create_rule(root, head_label, new_label)
-
-        # If root node is the head of the sentence, extract initial tree
-        # if root == 1:
-        #     self.nodes[root]['label'] = head_label
-        #
-        #     rule_name = id2alignment[head_label]['edges'][0][0]+'/'+self.nodes[root]['name']
-        #     id2rule[head_label] = rule_name
-        #
-        #     id2subtrees[head_label]['root'] = root
-        #     id2subtrees[head_label]['nodes'] = self.nodes
-        #     id2subtrees[head_label]['tree'] = self.tree[root]
+                # else:
+                #     new_label = max(id2subtrees.keys()) + 1
+                #     id2subtrees[new_label] = {'tree':{}, 'nodes':{}, 'head':[], 'root':''}
+                #     create_rule(root, head_label, new_label)
 
         return id2subtrees, id2rule
 
@@ -202,7 +212,9 @@ class RuleInducer(object):
             head = '['
             for h in id2subtree[_id]['head']:
                 head = head + h + ', '
-            head = head[:-2] + ']'
+            head = head[:-2]
+            if head != '':
+                head = head + ']'
 
             if (rule, head) not in ltag:
                 ltag[(rule, head)] = []
