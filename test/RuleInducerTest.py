@@ -1037,8 +1037,5 @@ class RuleInducerTest(unittest.TestCase):
 
         self.assertDictEqual(original, {'tag':tag, 'ltag':ltag})
 
-    def test_spec7(self):
-        self.assertEqual('a', 'b')
-
 if __name__ == '__main__':
     unittest.main()
