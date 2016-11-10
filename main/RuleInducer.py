@@ -60,7 +60,7 @@ class RuleInducer(object):
                     prev_id = nodes[prev_id]['parent']
         return nodes, tree, _id
 
-    def induce(self, root, head_label, id2alignment, id2subtrees, id2rule):
+    def induce(self, root, head_label, id2alignment, id2subtree, id2rule, id2adjtree={}):
         def get_children_labels():
             labels = []
             for edge in self.tree[root]:
@@ -68,45 +68,14 @@ class RuleInducer(object):
                     labels.append(self.nodes[edge]['label'])
             return labels
 
-        def isConnected(root, subtree):
-            connected = False
-            if root in subtree['nodes'].keys():
-                connected = True
-            else:
-                for edge in self.tree[root]:
-                    connected = isConnected(edge, subtree)
-                    if connected:
-                        break
-            return connected
-
-        # CREATE A NON-LEXICALIZED RULE
-        def create_rule(root, label, new_label, should_label=True):
-            if should_label:
-                self.nodes[root]['label'] = label
-
-            if root not in id2subtrees[label]['nodes']:
-                id2subtrees[new_label]['nodes'][root] = copy.copy(self.nodes[root])
-                id2subtrees[new_label]['tree'][root] = copy.copy(self.tree[root])
-
-            for edge in self.tree[root]:
-                create_rule(edge, label, new_label, False)
-                del self.nodes[edge]
-                del self.tree[edge]
-            self.tree[root] = []
-
-            if should_label:
-                id2subtrees[new_label]['root'] = root
-                rule_name = id2alignment[label]['edges'][0][0]+'/'+self.nodes[root]['name']
-                id2rule[new_label] = rule_name
-
         # TO DO: refactor this function
         def update_rule(root, label, should_label=True):
             if should_label:
                 self.nodes[root]['label'] = label
 
-            if root not in id2subtrees[label]['nodes']:
-                id2subtrees[label]['nodes'][root] = copy.copy(self.nodes[root])
-                id2subtrees[label]['tree'][root] = copy.copy(self.tree[root])
+            if root not in id2subtree[label]['nodes']:
+                id2subtree[label]['nodes'][root] = copy.copy(self.nodes[root])
+                id2subtree[label]['tree'][root] = copy.copy(self.tree[root])
 
             for edge in self.tree[root]:
                 update_rule(edge, label, False)
@@ -115,9 +84,24 @@ class RuleInducer(object):
             self.tree[root] = []
 
             if should_label:
-                id2subtrees[label]['root'] = root
+                id2subtree[label]['root'] = root
                 rule_name = id2alignment[self.nodes[root]['label']]['edges'][0][0]+'/'+self.nodes[root]['name']
                 id2rule[self.nodes[root]['label']] = rule_name
+
+        def create_adjoining(root, adj_edge, adjtree):
+            adjtree['nodes'][root] = copy.copy(self.nodes[root])
+            adjtree['tree'][root] = []
+            for edge in self.tree[root]:
+                adjtree['tree'][root].append(edge)
+                if edge != adj_edge:
+                    adjtree = create_adjoining(edge, adj_edge, adjtree)
+                else:
+                    adjtree['nodes'][edge] = copy.copy(self.nodes[edge])
+                    adjtree['nodes'][edge]['name'] += '*'
+                    adjtree['tree'][edge] = []
+            del self.nodes[root]
+            del self.tree[root]
+            return adjtree
 
         self.nodes[root]['label'] = -1
         if self.nodes[root]['type'] == 'terminal':
@@ -127,26 +111,35 @@ class RuleInducer(object):
                     break
         else:
             for edge in self.tree[root]:
-                id2subtrees, id2rule = self.induce(edge, head_label, id2alignment, id2subtrees, id2rule)
-
-                # ADJOINING RULE
-                if self.nodes[root]['name'] == self.nodes[edge]['name']:
-                    pass
+                id2subtree, id2rule, id2adjtree = self.induce(edge, head_label, id2alignment, id2subtree, id2rule, id2adjtree)
 
             # Get children labels (except non-label nodes: -1)
             labels = get_children_labels()
 
             # If the node is the root of the tree
             if root == 1:
-                if isConnected(root, id2subtrees[head_label]):
-                    update_rule(root, head_label)
-                else:
-                    new_label = max(id2subtrees.keys()) + 1
-                    id2subtrees[new_label] = {'tree':{}, 'nodes':{}, 'head':[], 'root':''}
-                    create_rule(root, head_label, new_label)
+                update_rule(root, head_label)
             elif len(set(labels)) == 1 and labels[0] > -1:
-                label = labels[0]
-                update_rule(root, label)
+                # Extract adjoining rules
+                isAdjoined = False
+                for edge in self.tree[root]:
+                    if self.nodes[root]['name'] == self.nodes[edge]['name']:
+                        parent = self.nodes[root]['parent']
+
+                        adjtree = {'nodes':{}, 'tree':{}, 'root':root}
+                        adjtree = create_adjoining(root, edge, adjtree)
+
+                        if labels[0] not in id2adjtree:
+                            id2adjtree[labels[0]] = []
+                        id2adjtree[labels[0]].append(adjtree)
+
+                        self.tree[parent][self.tree[parent].index(root)] = edge
+                        isAdjoined = True
+                        break
+
+                if not isAdjoined:
+                    label = labels[0]
+                    update_rule(root, label)
             elif len(set(labels)) > 1:
                 # preference for root_label: always get the head of the sentence
                 preference = self.nodes[root]['name'][0]
@@ -177,17 +170,31 @@ class RuleInducer(object):
                         self._id = self._id + 1
 
                 if head > -1:
-                    update_rule(root, head)
-                # else:
-                #     new_label = max(id2subtrees.keys()) + 1
-                #     id2subtrees[new_label] = {'tree':{}, 'nodes':{}, 'head':[], 'root':''}
-                #     create_rule(root, head_label, new_label)
+                    # Extract adjoining rules
+                    isAdjoined = False
+                    for edge in self.tree[root]:
+                        if self.nodes[root]['name'] == self.nodes[edge]['name']:
+                            parent = self.nodes[root]['parent']
 
-        return id2subtrees, id2rule
+                            adjtree = {'nodes':{}, 'tree':{}, 'root':root}
+                            adjtree = create_adjoining(root, edge, adjtree)
+
+                            if head not in id2adjtree:
+                                id2adjtree[head] = []
+                            id2adjtree[head].append(adjtree)
+
+                            self.tree[parent][self.tree[parent].index(root)] = edge
+                            isAdjoined = True
+                            break
+
+                    if not isAdjoined:
+                        update_rule(root, head)
+
+        return id2subtree, id2rule, id2adjtree
 
     def print_tree(self, root, nodes, tree, printed):
         if nodes[root]['type'] == 'nonterminal':
-            printed = printed + '(' + nodes[root]['name'] + ' '
+            printed = printed + ' (' + nodes[root]['name']
 
             for node in tree[root]:
                 printed = self.print_tree(node, nodes, tree, printed)
@@ -196,38 +203,63 @@ class RuleInducer(object):
                 lexicon = 'XXX'
             else:
                 lexicon = nodes[root]['lexicon']
-            printed = printed + '(' + nodes[root]['name'] + ' ' + lexicon
+            printed = printed + ' (' + nodes[root]['name'] + ' ' + lexicon
         else:
-            printed = printed + '(' + nodes[root]['name']
+            printed = printed + ' (' + nodes[root]['name']
 
+        printed = printed + ')'
+        return printed.strip()
 
-        printed = printed + ') '
-        return printed
-
-    def prettify(self, id2subtree, id2rule, tag, ltag):
-        # lexicalized and delexicalized tag
-        for _id in id2subtree:
-            rule = id2rule[_id]
-
+    def prettify(self, id2subtree, id2rule, id2adjtree, tag={'initial':{}, 'substitution':{}, 'adjoining':{}}, ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}):
+        def get_head():
             head = '['
             for h in id2subtree[_id]['head']:
                 head = head + h + ', '
             head = head[:-2]
             if head != '':
                 head = head + ']'
+            return head
 
-            if (rule, head) not in ltag:
-                ltag[(rule, head)] = []
-            if rule not in tag:
-                tag[rule] = []
+        # lexicalized and delexicalized tag
+        # Initial and substitution rules
+        for _id in id2subtree:
+            rule = id2rule[_id]
+
+            _type = 'substitution'
+            if rule == ':root/ROOT':
+                _type = 'initial'
+
+            head = get_head()
+
+            if (rule, head) not in ltag[_type]:
+                ltag[_type][(rule, head)] = []
+            if rule not in tag[_type]:
+                tag[_type][rule] = []
 
             if id2subtree[_id]['root'] == '':
-                tag[rule].append('empty')
-                ltag[(rule, head)].append('empty')
+                tag[_type][rule].append('empty')
+                ltag[_type][(rule, head)].append('empty')
             else:
                 tree = self.print_tree(id2subtree[_id]['root'], id2subtree[_id]['nodes'], id2subtree[_id]['tree'], '')
-                tag[rule].append(tree)
-                ltag[(rule, head)].append(tree)
+                tag[_type][rule].append(tree)
+                ltag[_type][(rule, head)].append(tree)
+
+        # Adjoining rules
+        for _id in id2adjtree:
+            head = get_head()
+
+            rule = id2rule[_id]
+
+            if (rule, head) not in ltag['adjoining']:
+                ltag['adjoining'][(rule, head)] = []
+            if rule not in tag['adjoining']:
+                tag['adjoining'][rule] = []
+
+            for tree in id2adjtree[_id]:
+                pretty_tree = self.print_tree(tree['root'], tree['nodes'], tree['tree'], '')
+                tag['adjoining'][rule].append(pretty_tree)
+                ltag['adjoining'][(rule, head)].append(pretty_tree)
+
         return tag, ltag
 
     def run(self):
@@ -242,11 +274,11 @@ class RuleInducer(object):
                 head_label = _id
                 break
 
-        id2subtrees, id2rule = self.induce(root, head_label, id2alignment, id2subtrees, {})
+        id2subtrees, id2rule, adjtrees = self.induce(root, head_label, id2alignment, id2subtrees, {}, {})
 
         for _id in id2subtrees:
             if _id not in id2rule:
                 rule_name = id2alignment[_id]['edges'][0][0]+'/'+'E'
                 id2rule[_id] = rule_name
 
-        return id2subtrees, id2rule
+        return id2subtrees, id2rule, adjtrees

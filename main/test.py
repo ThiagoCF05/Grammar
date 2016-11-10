@@ -47,12 +47,8 @@ if __name__ == '__main__':
         print alignment
 
     inducer = RuleInducer(text, amr, info['parse'], alignments)
-    id2subtrees, id2rule = inducer.run()
-    tag, ltag = inducer.prettify(id2subtrees, id2rule, {}, {})
+    id2subtrees, id2rule, adjtrees = inducer.run()
+    tag, ltag = inducer.prettify(id2subtrees, id2rule, adjtrees)
 
     print '\n'
-    for rule in ltag:
-        print rule
-        for right in set(ltag[rule]):
-            print right
-        print '\n'
+    print {'tag':tag, 'ltag':ltag}

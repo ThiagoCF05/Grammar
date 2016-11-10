@@ -180,7 +180,7 @@ class Aligner(object):
         else:
             concept = self.nodes[root]['name']
         if isSet < 0 and concept in ['possible', 'obligate', 'permit', 'recommend', 'likely', 'prefer']:
-            _indexes = filter(lambda x: lemmas[x][1] == 'unlabeled' and self.info['pos'][x] == 'MD', xrange(len(lemmas)))
+            _indexes = filter(lambda x: lemmas[x][1] == 'unlabeled' and lemmas[x][0].lower() != 'will' and self.info['pos'][x] == 'MD', xrange(len(lemmas)))
             for index in _indexes:
                 isSet = set_label_given(index)
                 break

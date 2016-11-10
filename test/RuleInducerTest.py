@@ -1,361 +1,543 @@
 __author__ = 'thiagocastroferreira'
 
 import unittest
+import main.utils as utils
+import json
 
+from main.Aligner import Aligner
 from main.RuleInducer import RuleInducer
+from stanford_corenlp_pywrapper import CoreNLP
 
 class RuleInducerTest(unittest.TestCase):
+    proc = CoreNLP("coref")
+    freq_table = json.load(open('../main/data/alignments/table.json'))
+    verb2noun, noun2verb, verb2actor, actor2verb = utils.noun_verb('../main/data/morph-verbalization-v1.01.txt')
+    sub2word = utils.subgraph_word('../main/data/verbalization-list-v1.06.txt')
+
+    aligner = Aligner(verb2noun, noun2verb, verb2actor, actor2verb, sub2word, freq_table, proc)
+
     def test_proper_np(self):
         text = 'Barack Obama'
-
-        alignment = '0-2|0.0.0+0.0.1+0.0+0'
-
-        tree = """(ROOT
-                    (NP (NNP Barack) (NNP Obama)))"""
 
         amr = """(p / person
                       :name (n / name
                             :op1 \"Barack\"
                             :op2 \"Obama\"))"""
 
-        inducer = RuleInducer(text, amr, tree, alignment)
-        subtrees = inducer.run()
+        alignments, info = self.aligner.run(amr, text)
+        inducer = RuleInducer(text, amr, info['parse'], alignments)
+        id2subtrees, id2rule, adjtrees = inducer.run()
 
-        original_subtrees = {1: {'nodes':{}, 'tree':{}}}
-        original_subtrees[1]['nodes'] = {1: {'type': 'nonterminal', 'name': 'ROOT', 'parent': 0, 'label': 1},
-                                         2: {'type': 'nonterminal', 'name': 'NP', 'parent': 1, 'label': 1},
-                                         3: {'parent': 2, 'type': 'terminal', 'name': 'NNP', 'value': 'Barack', 'label': 1},
-                                         4: {'parent': 2, 'type': 'terminal', 'name': 'NNP', 'value': 'Obama', 'label': 1}}
-        original_subtrees[1]['tree'] = {1: [2], 2: [3, 4], 3: [], 4: []}
+        tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        tag, ltag = inducer.prettify(id2subtrees, id2rule, adjtrees, tag, ltag)
 
-        self.assertDictEqual(original_subtrees, subtrees)
+        original = {
+            'ltag': {
+                'initial': {
+                    (u':root/ROOT', '[person, :name, :op1, :op2]'): [u'(ROOT (NP (NNP XXX) (NNP XXX)))']
+                },
+                'substitution':{},
+                'adjoining':{}
+            },
+            'tag': {
+                'initial': {u':root/ROOT': [u'(ROOT (NP (NNP XXX) (NNP XXX)))']},
+                'substitution':{},
+                'adjoining':{}
+            }}
+
+        self.assertDictEqual(original, {'tag':tag, 'ltag':ltag})
 
     def test_np(self):
         text = 'The cat'
 
-        alignment = '1-2|0'
-
-        tree = """(ROOT
-                        (NP (DT The) (NN cat) (. .)))"""
-
         amr = """(c / cat)"""
 
-        inducer = RuleInducer(text, amr, tree, alignment)
-        subtrees = inducer.run()
+        alignments, info = self.aligner.run(amr, text)
+        inducer = RuleInducer(text, amr, info['parse'], alignments)
+        id2subtrees, id2rule, adjtrees = inducer.run()
 
-        original_subtrees = {1: {'nodes':{}, 'tree':{}}}
-        original_subtrees[1]['nodes'] = {1: {'type': 'nonterminal', 'name': 'ROOT', 'parent': 0, 'label': 1},
-                                         2: {'type': 'nonterminal', 'name': 'NP', 'parent': 1, 'label': 1},
-                                         3: {'parent': 2, 'type': 'terminal', 'name': 'DT', 'value': 'The', 'label': -1},
-                                         4: {'parent': 2, 'type': 'terminal', 'name': 'NN', 'value': 'cat', 'label': 1},
-                                         5: {'parent': 2, 'type': 'terminal', 'name': '.', 'value': '.', 'label': -1}}
-        original_subtrees[1]['tree'] = {1: [2], 2: [3, 4, 5], 3: [], 4: [], 5: []}
+        tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        tag, ltag = inducer.prettify(id2subtrees, id2rule, adjtrees, tag, ltag)
 
-        self.assertDictEqual(original_subtrees, subtrees)
+        original = {
+            'ltag': {
+                'initial': {
+                    (u':root/ROOT', '[cat]'): [u'(ROOT (FRAG (NP (DT The) (NN XXX))))']
+                },
+                'substitution':{},
+                'adjoining':{}
+            },
+            'tag':
+                {
+                    'initial': {
+                        u':root/ROOT': [u'(ROOT (FRAG (NP (DT The) (NN XXX))))']
+                    },
+                    'substitution':{},
+                    'adjoining':{}
+                }}
+
+        self.assertDictEqual(original, {'tag':tag, 'ltag':ltag})
 
     def test_subj_verb_obj(self):
         text = 'The girl adjusted the machine .'
-
-        alignment = '4-5|0.1 2-3|0 1-2|0.0'
-
-        tree = """(ROOT
-                      (S
-                        (NP (DT The) (NN girl))
-                        (VP (VBD adjusted)
-                          (NP (DT the) (NN machine)))
-                        (. .)))"""
 
         amr = """(a / adjust-01
                       :ARG0 (g / girl)
                       :ARG1 (m / machine))"""
 
-        inducer = RuleInducer(text, amr, tree, alignment)
-        subtrees = inducer.run()
+        alignments, info = self.aligner.run(amr, text)
+        inducer = RuleInducer(text, amr, info['parse'], alignments)
+        id2subtrees, id2rule, adjtrees = inducer.run()
 
-        original_subtrees = {1: {'nodes':{}, 'tree':{}}, 2: {'nodes':{}, 'tree':{}}, 3: {'nodes':{}, 'tree':{}}}
-        original_subtrees[1]['nodes'] = {8: {'type': 'nonterminal', 'name': 'NP', 'parent': 6, 'label': 1},
-                                         9: {'parent': 8, 'type': 'terminal', 'name': 'DT', 'value': 'the', 'label': -1},
-                                         10: {'parent': 8, 'type': 'terminal', 'name': 'NN', 'value': 'machine', 'label': 1}}
-        original_subtrees[1]['tree'] = {8: [9, 10], 9: [], 10: []}
+        tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        tag, ltag = inducer.prettify(id2subtrees, id2rule, adjtrees, tag, ltag)
 
-        original_subtrees[2]['nodes'] = {1: {'type': 'nonterminal', 'name': 'ROOT', 'parent': 0, 'label': 2},
-                                         2: {'type': 'nonterminal', 'name': 'S', 'parent': 1, 'label': 2},
-                                         6: {'type': 'nonterminal', 'name': 'VP', 'parent': 2, 'label': 2},
-                                         7: {'parent': 6, 'type': 'terminal', 'name': 'VBD', 'value': 'adjusted', 'label': 2},
-                                         11: {'parent': 2, 'type': 'terminal', 'name': '.', 'value': '.', 'label': -1},
-                                         12: {'type': 'rule', 'name': '1/NP', 'parent': 6, 'label': -1},
-                                         13: {'type': 'rule', 'name': '3/NP', 'parent': 2, 'label': -1}}
-        original_subtrees[2]['tree'] = {1: [2], 2: [13, 6, 11], 6: [7, 12], 7: [], 11: [], 12: [], 13: []}
+        original = {
+            'ltag':
+                {
+                    'initial': {
+                        (u':root/ROOT', '[adjust-01]'): [u'(ROOT (S (:ARG0/NP) (VP (VBN XXX) (:ARG1/NP)) (. .)))']
+                    },
+                    'substitution':{
+                        (u':ARG1/NP', '[machine]'): [u'(NP (DT the) (NN XXX))'],
+                        (u':ARG0/NP', '[girl]'): [u'(NP (DT The) (NN XXX))']
+                    },
+                    'adjoining':{}
+                },
+            'tag':
+                {
+                    'initial': {
+                        u':root/ROOT': [u'(ROOT (S (:ARG0/NP) (VP (VBN XXX) (:ARG1/NP)) (. .)))']
+                    },
+                    'substitution':{
+                        u':ARG1/NP': [u'(NP (DT the) (NN XXX))'],
+                        u':ARG0/NP': [u'(NP (DT The) (NN XXX))']
+                    },
+                    'adjoining':{}
+                }}
 
-        original_subtrees[3]['nodes'] = {3: {'type': 'nonterminal', 'name': 'NP', 'parent': 2, 'label': 3},
-                                         4: {'parent': 3, 'type': 'terminal', 'name': 'DT', 'value': 'The', 'label': -1},
-                                         5: {'parent': 3, 'type': 'terminal', 'name': 'NN', 'value': 'girl', 'label': 3}}
-        original_subtrees[3]['tree'] = {3: [4, 5], 4: [], 5: []}
-
-        self.assertDictEqual(original_subtrees, subtrees, 'They are not equal')
+        self.assertDictEqual(original, {'tag':tag, 'ltag':ltag})
 
     def test_subj_verb_obj_mod(self):
         text = 'The man described the mission as a disaster .'
-
-        alignment = '7-8|0.2 4-5|0.1 2-3|0 1-2|0.0'
-
-        tree = """(ROOT
-                      (S
-                        (NP (DT The) (NN man))
-                        (VP (VBD described)
-                          (NP (DT the) (NN mission))
-                          (PP (IN as)
-                            (NP (DT a) (NN disaster))))
-                        (. .)))"""
 
         amr = """(d2 / describe-01
                       :ARG0 (m2 / man)
                       :ARG1 (m / mission)
                       :ARG2 (d / disaster))"""
 
-        inducer = RuleInducer(text, amr, tree, alignment)
-        subtrees = inducer.run()
+        alignments, info = self.aligner.run(amr, text)
+        inducer = RuleInducer(text, amr, info['parse'], alignments)
+        id2subtrees, id2rule, adjtrees = inducer.run()
 
-        original_subtrees = {1: {'nodes':{}, 'tree':{}}, 2: {'nodes':{}, 'tree':{}}, 3: {'nodes':{}, 'tree':{}}, 4: {'nodes':{}, 'tree':{}}}
-        original_subtrees[1]['nodes'] = {11: {'type': 'nonterminal', 'name': 'PP', 'parent': 6, 'label': 1},
-                                         12: {'parent': 11, 'type': 'terminal', 'name': 'IN', 'value': 'as', 'label': -1},
-                                         13: {'type': 'nonterminal', 'name': 'NP', 'parent': 11, 'label': 1},
-                                         14: {'parent': 13, 'type': 'terminal', 'name': 'DT', 'value': 'a', 'label': -1},
-                                         15: {'parent': 13, 'type': 'terminal', 'name': 'NN', 'value': 'disaster', 'label': 1}}
-        original_subtrees[1]['tree'] = {11: [12, 13], 12: [], 13: [14, 15], 14: [], 15: []}
+        tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        tag, ltag = inducer.prettify(id2subtrees, id2rule, adjtrees, tag, ltag)
 
-        original_subtrees[2]['nodes'] = {8: {'type': 'nonterminal', 'name': 'NP', 'parent': 6, 'label': 2},
-                                         9: {'parent': 8, 'type': 'terminal', 'name': 'DT', 'value': 'the', 'label': -1},
-                                         10: {'parent': 8, 'type': 'terminal', 'name': 'NN', 'value': 'mission', 'label': 2}}
-        original_subtrees[2]['tree'] = {8: [9, 10], 9: [], 10: []}
+        original = {
+            'ltag':
+                {
+                    'initial': {
+                        (u':root/ROOT', '[describe-01]'): [u'(ROOT (S (:ARG0/NP) (VP (VBD XXX) (:ARG1/NP) (:ARG2/PP)) (. .)))']
+                    },
+                    'substitution':{
+                        (u':ARG1/NP', '[mission]'): [u'(NP (DT the) (NN XXX))'],
+                        (u':ARG0/NP', '[man]'): [u'(NP (DT The) (NN XXX))'],
+                        (u':ARG2/PP', '[disaster]'): [u'(PP (IN as) (NP (DT a) (NN XXX)))']
+                    },
+                    'adjoining':{}
+                },
+            'tag':
+                {
+                    'initial': {
+                        u':root/ROOT': [u'(ROOT (S (:ARG0/NP) (VP (VBD XXX) (:ARG1/NP) (:ARG2/PP)) (. .)))']
+                    },
+                    'substitution':{
+                        u':ARG1/NP': [u'(NP (DT the) (NN XXX))'],
+                        u':ARG0/NP': [u'(NP (DT The) (NN XXX))'],
+                        u':ARG2/PP': [u'(PP (IN as) (NP (DT a) (NN XXX)))']
+                    },
+                    'adjoining':{}
+                }}
 
-        original_subtrees[3]['nodes'] = {1: {'type': 'nonterminal', 'name': 'ROOT', 'parent': 0, 'label': 3},
-                                         2: {'type': 'nonterminal', 'name': 'S', 'parent': 1, 'label': 3},
-                                         6: {'type': 'nonterminal', 'name': 'VP', 'parent': 2, 'label': 3},
-                                         7: {'parent': 6, 'type': 'terminal', 'name': 'VBD', 'value': 'described', 'label': 3},
-                                         16: {'parent': 2, 'type': 'terminal', 'name': '.', 'value': '.', 'label': -1},
-                                         17: {'type': 'rule', 'name': '2/NP', 'parent': 6, 'label': -1},
-                                         18: {'type': 'rule', 'name': '1/PP', 'parent': 6, 'label': -1},
-                                         19: {'type': 'rule', 'name': '4/NP', 'parent': 2, 'label': -1}}
-        original_subtrees[3]['tree'] = {1: [2], 2: [19, 6, 16], 6: [7, 17, 18], 7: [], 16: [], 17: [], 18: [], 19: []}
-
-        original_subtrees[4]['nodes'] = {3: {'type': 'nonterminal', 'name': 'NP', 'parent': 2, 'label': 4},
-                                         4: {'parent': 3, 'type': 'terminal', 'name': 'DT', 'value': 'The', 'label': -1},
-                                         5: {'parent': 3, 'type': 'terminal', 'name': 'NN', 'value': 'man', 'label': 4}}
-        original_subtrees[4]['tree'] = {3: [4, 5], 4: [], 5: []}
-
-        self.assertDictEqual(original_subtrees, subtrees, 'They are not equal')
+        self.assertDictEqual(original, {'tag':tag, 'ltag':ltag})
 
     def test_subj_verb_obj_loc(self):
         text = 'The man married the girl at the house .'
 
-        alignment = '7-8|0.1.0 4-5|0.1 2-3|0 1-2|0.0'
-
-        tree = """(ROOT
-                      (S
-                        (NP (DT The) (NN man))
-                        (VP (VBD married)
-                          (NP (DT the) (NN girl))
-                          (PP (IN at)
-                            (NP (DT the) (NN house))))
-                        (. .)))"""
-
         amr = """(m / marry-01
                       :ARG0 (m2 / man)
                       :ARG1 (g / girl
                             :location (h / house)))"""
 
-        inducer = RuleInducer(text, amr, tree, alignment)
-        subtrees = inducer.run()
+        alignments, info = self.aligner.run(amr, text)
+        inducer = RuleInducer(text, amr, info['parse'], alignments)
+        id2subtrees, id2rule, adjtrees = inducer.run()
 
-        original_subtrees = {1: {'nodes':{}, 'tree':{}}, 2: {'nodes':{}, 'tree':{}}, 3: {'nodes':{}, 'tree':{}}, 4: {'nodes':{}, 'tree':{}}}
-        original_subtrees[1]['nodes'] = {11: {'type': 'nonterminal', 'name': 'PP', 'parent': 6, 'label': 1},
-                                         12: {'parent': 11, 'type': 'terminal', 'name': 'IN', 'value': 'at', 'label': -1},
-                                         13: {'type': 'nonterminal', 'name': 'NP', 'parent': 11, 'label': 1},
-                                         14: {'parent': 13, 'type': 'terminal', 'name': 'DT', 'value': 'the', 'label': -1},
-                                         15: {'parent': 13, 'type': 'terminal', 'name': 'NN', 'value': 'house', 'label': 1}}
-        original_subtrees[1]['tree'] = {11: [12, 13], 12: [], 13: [14, 15], 14: [], 15: []}
+        tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        tag, ltag = inducer.prettify(id2subtrees, id2rule, adjtrees, tag, ltag)
 
-        original_subtrees[2]['nodes'] = {8: {'type': 'nonterminal', 'name': 'NP', 'parent': 6, 'label': 2},
-                                         9: {'parent': 8, 'type': 'terminal', 'name': 'DT', 'value': 'the', 'label': -1},
-                                         10: {'parent': 8, 'type': 'terminal', 'name': 'NN', 'value': 'girl', 'label': 2}}
-        original_subtrees[2]['tree'] = {8: [9, 10], 9: [], 10: []}
+        original = {
+            'ltag':
+                {
+                    'initial': {
+                        (u':root/ROOT', '[marry-01]'): [u'(ROOT (S (:ARG0/NP) (VP (VBN XXX) (:ARG1/NP)) (. .)))']
+                    },
+                    'substitution':{
+                        (u':ARG1/NP', '[girl]'): [u'(NP (DT the) (NN XXX))'],
+                        (u':ARG0/NP', '[man]'): [u'(NP (DT The) (NN XXX))'],
+                        (u':location/PP', '[house]'): [u'(PP (IN at) (NP (DT the) (NN XXX)))']
+                    },
+                    'adjoining':{
+                        (u':ARG1/NP', '[girl]'): [u'(NP (NP*) (:location/PP))']
+                    }
+                },
+            'tag':
+                {
+                    'initial': {
+                        u':root/ROOT': [u'(ROOT (S (:ARG0/NP) (VP (VBN XXX) (:ARG1/NP)) (. .)))']
+                    },
+                    'substitution':{
+                        u':ARG1/NP': [u'(NP (DT the) (NN XXX))'],
+                        u':ARG0/NP': [u'(NP (DT The) (NN XXX))'],
+                        u':location/PP': [u'(PP (IN at) (NP (DT the) (NN XXX)))']
+                    },
+                    'adjoining':{
+                        u':ARG1/NP': [u'(NP (NP*) (:location/PP))']
+                    }
+                }}
 
-        original_subtrees[3]['nodes'] = {1: {'type': 'nonterminal', 'name': 'ROOT', 'parent': 0, 'label': 3},
-                                         2: {'type': 'nonterminal', 'name': 'S', 'parent': 1, 'label': 3},
-                                         6: {'type': 'nonterminal', 'name': 'VP', 'parent': 2, 'label': 3},
-                                         7: {'parent': 6, 'type': 'terminal', 'name': 'VBD', 'value': 'married', 'label': 3},
-                                         16: {'parent': 2, 'type': 'terminal', 'name': '.', 'value': '.', 'label': -1},
-                                         17: {'type': 'rule', 'name': '2/NP', 'parent': 6, 'label': -1},
-                                         18: {'type': 'rule', 'name': '1/PP', 'parent': 6, 'label': -1},
-                                         19: {'type': 'rule', 'name': '4/NP', 'parent': 2, 'label': -1}}
-        original_subtrees[3]['tree'] = {1: [2], 2: [19, 6, 16], 6: [7, 17, 18], 7: [], 16: [], 17: [], 18: [], 19: []}
-
-        original_subtrees[4]['nodes'] = {3: {'type': 'nonterminal', 'name': 'NP', 'parent': 2, 'label': 4},
-                                         4: {'parent': 3, 'type': 'terminal', 'name': 'DT', 'value': 'The', 'label': -1},
-                                         5: {'parent': 3, 'type': 'terminal', 'name': 'NN', 'value': 'man', 'label': 4}}
-        original_subtrees[4]['tree'] = {3: [4, 5], 4: [], 5: []}
-
-        self.assertDictEqual(original_subtrees, subtrees, 'They are not equal')
+        self.assertDictEqual(original, {'tag':tag, 'ltag':ltag})
 
     def test_loc_subj_verb_obj(self):
         text = 'At the house , the man married the girl .'
 
-        alignment = '8-9|0.1 6-7|0 5-6|0.0 2-3|0.1.0'
-
-        tree = """(ROOT
-                      (S
-                        (PP (IN At)
-                          (NP (DT the) (NN house)))
-                        (, ,)
-                        (NP (DT the) (NN man))
-                        (VP (VBD married)
-                          (NP (DT the) (NN girl)))
-                        (. .)))"""
-
         amr = """(m / marry-01
                       :ARG0 (m2 / man)
                       :ARG1 (g / girl
                             :location (h / house)))"""
 
-        inducer = RuleInducer(text, amr, tree, alignment)
-        subtrees = inducer.run()
+        alignments, info = self.aligner.run(amr, text)
+        inducer = RuleInducer(text, amr, info['parse'], alignments)
+        id2subtrees, id2rule, adjtrees = inducer.run()
 
-        original_subtrees = {1: {'nodes':{}, 'tree':{}}, 2: {'nodes':{}, 'tree':{}}, 3: {'nodes':{}, 'tree':{}}, 4: {'nodes':{}, 'tree':{}}}
-        original_subtrees[1]['nodes'] = {16: {'parent': 14, 'type': 'terminal', 'name': 'NN', 'value': 'girl', 'label': 1},
-                                         14: {'type': 'nonterminal', 'name': 'NP', 'parent': 12, 'label': 1},
-                                         15: {'parent': 14, 'type': 'terminal', 'name': 'DT', 'value': 'the', 'label': -1}}
-        original_subtrees[1]['tree'] = {16: [], 14: [15, 16], 15: []}
+        tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        tag, ltag = inducer.prettify(id2subtrees, id2rule, adjtrees, tag, ltag)
 
-        original_subtrees[2]['nodes'] = {1: {'type': 'nonterminal', 'name': 'ROOT', 'parent': 0, 'label': 2},
-                                         2: {'type': 'nonterminal', 'name': 'S', 'parent': 1, 'label': 2},
-                                         8: {'parent': 2, 'type': 'terminal', 'name': ',', 'value': ',', 'label': -1},
-                                         12: {'type': 'nonterminal', 'name': 'VP', 'parent': 2, 'label': 2},
-                                         13: {'parent': 12, 'type': 'terminal', 'name': 'VBD', 'value': 'married', 'label': 2},
-                                         17: {'parent': 2, 'type': 'terminal', 'name': '.', 'value': '.', 'label': -1},
-                                         18: {'type': 'rule', 'name': '1/NP', 'parent': 12, 'label': -1},
-                                         19: {'type': 'rule', 'name': '4/PP', 'parent': 2, 'label': -1},
-                                         20: {'type': 'rule', 'name': '3/NP', 'parent': 2, 'label': -1}}
-        original_subtrees[2]['tree'] = {1: [2], 2: [19, 8, 20, 12, 17], 8: [], 12: [13, 18], 13: [], 17: [], 18: [], 19: [], 20: []}
+        original = {
+            'ltag':
+                {
+                    'initial': {
+                        (u':root/ROOT', '[marry-01]'): [u'(ROOT (S (:location/PP) (, ,) (:ARG0/NP) (VP (VBN XXX) (:ARG1/NP)) (. .)))']
+                    },
+                    'substitution':{
+                        (u':ARG1/NP', '[girl]'): [u'(NP (DT the) (NN XXX))'],
+                        (u':ARG0/NP', '[man]'): [u'(NP (DT the) (NN XXX))'],
+                        (u':location/PP', '[house]'): [u'(PP (IN At) (NP (DT the) (NN XXX)))']
+                    },
+                    'adjoining':{}
+                },
+            'tag':
+                {
+                    'initial': {
+                        u':root/ROOT': [u'(ROOT (S (:location/PP) (, ,) (:ARG0/NP) (VP (VBN XXX) (:ARG1/NP)) (. .)))']
+                    },
+                    'substitution':{
+                        u':ARG1/NP': [u'(NP (DT the) (NN XXX))'],
+                        u':ARG0/NP': [u'(NP (DT the) (NN XXX))'],
+                        u':location/PP': [u'(PP (IN At) (NP (DT the) (NN XXX)))']
+                    },
+                    'adjoining':{}
+                }}
 
-        original_subtrees[3]['nodes'] = {9: {'type': 'nonterminal', 'name': 'NP', 'parent': 2, 'label': 3},
-                                         10: {'parent': 9, 'type': 'terminal', 'name': 'DT', 'value': 'the', 'label': -1},
-                                         11: {'parent': 9, 'type': 'terminal', 'name': 'NN', 'value': 'man', 'label': 3}}
-        original_subtrees[3]['tree'] = {9: [10, 11], 10: [], 11: []}
-
-        original_subtrees[4]['nodes'] = {3: {'type': 'nonterminal', 'name': 'PP', 'parent': 2, 'label': 4},
-                                         4: {'parent': 3, 'type': 'terminal', 'name': 'IN', 'value': 'At', 'label': -1},
-                                         5: {'type': 'nonterminal', 'name': 'NP', 'parent': 3, 'label': 4},
-                                         6: {'parent': 5, 'type': 'terminal', 'name': 'DT', 'value': 'the', 'label': -1},
-                                         7: {'parent': 5, 'type': 'terminal', 'name': 'NN', 'value': 'house', 'label': 4}}
-        original_subtrees[4]['tree'] = {3: [4, 5], 4: [], 5: [6, 7], 6: [], 7: []}
-
-        self.assertDictEqual(original_subtrees, subtrees, 'They are not equal')
+        self.assertDictEqual(original, {'tag':tag, 'ltag':ltag})
 
     def test_modal(self):
         text = 'You can leave .'
-
-        alignment = '2-3|0.0 1-2|0 0-1|0.0.0'
-
-        tree = """(ROOT
-                      (S
-                        (NP (PRP You))
-                        (VP (MD can)
-                          (VP (VB leave)))
-                        (. .)))"""
 
         amr = """(p / possible
                       :domain (l / leave-01
                             :ARG0 (y / you)))"""
 
-        inducer = RuleInducer(text, amr, tree, alignment)
-        subtrees = inducer.run()
+        alignments, info = self.aligner.run(amr, text)
+        inducer = RuleInducer(text, amr, info['parse'], alignments)
+        id2subtrees, id2rule, adjtrees = inducer.run()
 
-        original_subtrees = {1: {'nodes':{}, 'tree':{}}, 2: {'nodes':{}, 'tree':{}}, 3: {'nodes':{}, 'tree':{}}}
-        original_subtrees[1]['nodes'] = {1: {'type': 'nonterminal', 'name': 'ROOT', 'parent': 0, 'label': 1},
-                                         2: {'type': 'nonterminal', 'name': 'S', 'parent': 1, 'label': 1},
-                                         5: {'type': 'nonterminal', 'name': 'VP', 'parent': 2, 'label': 1},
-                                         7: {'type': 'nonterminal', 'name': 'VP', 'parent': 5, 'label': 1},
-                                         8: {'parent': 7, 'type': 'terminal', 'name': 'VB', 'value': 'leave', 'label': 1},
-                                         9: {'parent': 2, 'type': 'terminal', 'name': '.', 'value': '.', 'label': -1},
-                                         10: {'type': 'rule', 'name': '2/MD', 'parent': 5, 'label': -1},
-                                         11: {'type': 'rule', 'name': '3/NP', 'parent': 2, 'label': -1}}
-        original_subtrees[1]['tree'] = {1: [2], 2: [11, 5, 9], 5: [10, 7], 7: [8], 8: [], 9: [], 10: [], 11: []}
+        tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        tag, ltag = inducer.prettify(id2subtrees, id2rule, adjtrees, tag, ltag)
 
-        original_subtrees[2]['nodes'] = {6: {'parent': 5, 'type': 'terminal', 'name': 'MD', 'value': 'can', 'label': 2}}
-        original_subtrees[2]['tree'] = {6: []}
+        original = {
+            'ltag':
+                {
+                    'initial': {
+                        (u':root/ROOT', '[possible]'): [u'(ROOT (S (:ARG0/NP) (VP (MD XXX) (:domain/VP)) (. .)))']
+                    },
+                    'substitution':{
+                        (u':ARG0/NP', '[you]'): [u'(NP (PRP XXX))'],
+                        (u':domain/VP', '[leave-01]'): [u'(VP (VB XXX))']
+                    },
+                    'adjoining':{}
+                },
+            'tag':
+                {
+                    'initial': {
+                        u':root/ROOT': [u'(ROOT (S (:ARG0/NP) (VP (MD XXX) (:domain/VP)) (. .)))']
+                    },
+                    'substitution':{
+                        u':domain/VP': [u'(VP (VB XXX))'],
+                        u':ARG0/NP': [u'(NP (PRP XXX))']
+                    },
+                    'adjoining':{}
+                }}
 
-        original_subtrees[3]['nodes'] = {3: {'type': 'nonterminal', 'name': 'NP', 'parent': 2, 'label': 3},
-                                         4: {'parent': 3, 'type': 'terminal', 'name': 'PRP', 'value': 'You', 'label': 3}}
-        original_subtrees[3]['tree'] = {3: [4], 4: []}
-
-        self.assertDictEqual(original_subtrees, subtrees, 'They are not equal')
+        self.assertDictEqual(original, {'tag':tag, 'ltag':ltag})
 
     def test_passive(self):
         text = 'The machine was adjusted by the girl .'
-
-        alignment = '6-7|0.0 3-4|0 1-2|0.1'
-
-        tree = """(ROOT
-                      (S
-                        (NP (DT The) (NN machine))
-                        (VP (VBD was)
-                          (VP (VBN adjusted)
-                            (PP (IN by)
-                              (NP (DT the) (NN girl)))))
-                        (. .)))"""
 
         amr = """(a / adjust-01
                       :ARG0 (g / girl)
                       :ARG1 (m / machine))"""
 
-        inducer = RuleInducer(text, amr, tree, alignment)
-        subtrees = inducer.run()
+        alignments, info = self.aligner.run(amr, text)
+        inducer = RuleInducer(text, amr, info['parse'], alignments)
+        id2subtrees, id2rule, adjtrees = inducer.run()
 
-        original_subtrees = {1: {'nodes':{}, 'tree':{}}, 2: {'nodes':{}, 'tree':{}}, 3: {'nodes':{}, 'tree':{}}}
-        original_subtrees[1]['nodes'] = {
-            10: {'type': 'nonterminal', 'name': 'PP', 'parent': 8, 'label': 1},
-            11: {'parent': 10, 'type': 'terminal', 'name': 'IN', 'value': 'by', 'label': -1},
-            12: {'type': 'nonterminal', 'name': 'NP', 'parent': 10, 'label': 1},
-            13: {'parent': 12, 'type': 'terminal', 'name': 'DT', 'value': 'the', 'label': -1},
-            14: {'parent': 12, 'type': 'terminal', 'name': 'NN', 'value': 'girl', 'label': 1}}
-        original_subtrees[1]['tree'] = {10: [11, 12], 11: [], 12: [13, 14], 13: [], 14: []}
+        tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        tag, ltag = inducer.prettify(id2subtrees, id2rule, adjtrees, tag, ltag)
 
-        original_subtrees[2]['nodes'] = {1: {'type': 'nonterminal', 'name': 'ROOT', 'parent': 0, 'label': 2},
-                                         2: {'type': 'nonterminal', 'name': 'S', 'parent': 1, 'label': 2},
-                                         6: {'type': 'nonterminal', 'name': 'VP', 'parent': 2, 'label': 2},
-                                         7: {'parent': 6, 'type': 'terminal', 'name': 'VBD', 'value': 'was', 'label': -1},
-                                         8: {'type': 'nonterminal', 'name': 'VP', 'parent': 6, 'label': 2},
-                                         9: {'parent': 8, 'type': 'terminal', 'name': 'VBN', 'value': 'adjusted', 'label': 2},
-                                         15: {'parent': 2, 'type': 'terminal', 'name': '.', 'value': '.', 'label': -1},
-                                         16: {'type': 'rule', 'name': '1/PP', 'parent': 8, 'label': -1},
-                                         17: {'type': 'rule', 'name': '3/NP', 'parent': 2, 'label': -1}}
-        original_subtrees[2]['tree'] = {1: [2], 2: [17, 6, 15], 6: [7, 8], 7: [], 8: [9, 16], 9: [], 15: [], 16: [], 17: []}
+        original = {
+            'ltag':
+                {
+                    'initial': {
+                        (u':root/ROOT', '[adjust-01]'): [u'(ROOT (S (:ARG1/NP) (VP (VBN XXX) (:ARG0/PP)) (. .)))']
+                    },
+                    'substitution':{
+                        (u':ARG1/NP', '[machine]'): [u'(NP (DT The) (NN XXX))'],
+                        (u':ARG0/PP', '[girl]'): [u'(PP (IN by) (NP (DT the) (NN XXX)))']
+                    },
+                    'adjoining':{
+                        (u':root/ROOT', '[adjust-01]'): [u'(VP (VBD was) (VP*))']
+                    }
+                },
+            'tag':
+                {
+                    'initial': {
+                        u':root/ROOT': [u'(ROOT (S (:ARG1/NP) (VP (VBN XXX) (:ARG0/PP)) (. .)))']
+                    },
+                    'substitution':{
+                        u':ARG1/NP': [u'(NP (DT The) (NN XXX))'],
+                        u':ARG0/PP': [u'(PP (IN by) (NP (DT the) (NN XXX)))']
+                    },
+                    'adjoining':{
+                        u':root/ROOT': [u'(VP (VBD was) (VP*))']
+                    }
+                }}
 
-        original_subtrees[3]['nodes'] = {3: {'type': 'nonterminal', 'name': 'NP', 'parent': 2, 'label': 3},
-                                         4: {'parent': 3, 'type': 'terminal', 'name': 'DT', 'value': 'The', 'label': -1},
-                                         5: {'parent': 3, 'type': 'terminal', 'name': 'NN', 'value': 'machine', 'label': 3}}
-        original_subtrees[3]['tree'] = {3: [4, 5], 4: [], 5: []}
-
-        self.assertDictEqual(original_subtrees, subtrees, 'They are not equal')
+        self.assertDictEqual(original, {'tag':tag, 'ltag':ltag})
 
     def test_relative_pronoun(self):
-        self.assertEqual(1, 2, 'The aligner should be fixed.')
+        text = 'the car that is not black.'
+
+        amr = """(c / car
+                   :ARG1-of (b / black-04
+                              :polarity -))"""
+
+        alignments, info = self.aligner.run(amr, text)
+        inducer = RuleInducer(text, amr, info['parse'], alignments)
+        id2subtrees, id2rule, adjtrees = inducer.run()
+
+        tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        tag, ltag = inducer.prettify(id2subtrees, id2rule, adjtrees, tag, ltag)
+
+        original = {
+            'ltag': {
+                'initial': {
+                    (u':root/ROOT', '[car]'): [u'(ROOT (NP (DT the) (NN XXX) (SBAR (WHNP (WDT that)) (S (VP (VBZ is) (:polarity/RB) (:ARG1-of/ADJP)))) (. .)))']
+                },
+                'substitution':{
+                    (u':polarity/RB', '[-]'): [u'(RB XXX)'],
+                    (u':ARG1-of/ADJP', '[black-04]'): [u'(ADJP (JJ XXX))']
+                },
+                'adjoining':{}
+            },
+            'tag': {
+                'initial': {
+                    u':root/ROOT': [u'(ROOT (NP (DT the) (NN XXX) (SBAR (WHNP (WDT that)) (S (VP (VBZ is) (:polarity/RB) (:ARG1-of/ADJP)))) (. .)))']
+                },
+                'substitution':{
+                    u':ARG1-of/ADJP': [u'(ADJP (JJ XXX))'],
+                    u':polarity/RB': [u'(RB XXX)']
+                },
+                'adjoining':{}
+            }}
+
+        self.assertDictEqual(original, {'tag':tag, 'ltag':ltag})
+
+    def test_reflexive(self):
+        text= 'He cut himself'
+        amr = """(c / cut-01
+                      :ARG0 (h / he)
+                      :ARG1 h)"""
+
+        alignments, info = self.aligner.run(amr, text)
+        inducer = RuleInducer(text, amr, info['parse'], alignments)
+        id2subtrees, id2rule, adjtrees = inducer.run()
+
+        tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        tag, ltag = inducer.prettify(id2subtrees, id2rule, adjtrees, tag, ltag)
+
+        original = {
+            'ltag': {
+                'initial': {
+                    (u':root/ROOT', '[cut-01]'): [u'(ROOT (S (:ARG0/NP) (VP (VBD XXX) (:ARG1/NP))))']
+                },
+                'substitution':{
+                    (u':ARG1/NP', '[h]'): [u'(NP (PRP XXX))'],
+                    (u':ARG0/NP', '[he]'): [u'(NP (PRP XXX))']
+                },
+                'adjoining':{}
+            },
+            'tag': {
+                'initial': {
+                    u':root/ROOT': [u'(ROOT (S (:ARG0/NP) (VP (VBD XXX) (:ARG1/NP))))']
+                },
+                'substitution':{
+                    u':ARG1/NP': [u'(NP (PRP XXX))'],
+                    u':ARG0/NP': [u'(NP (PRP XXX))']
+                },
+                'adjoining':{}
+            }}
+
+        self.assertDictEqual(original, {'tag':tag, 'ltag':ltag})
+
+    def test_question(self):
+        text = 'What determined the position of Hong Kong as a shopping paradise ?'
+        amr = """(d / determine-01
+                      :ARG0 (a / amr-unknown)
+                      :ARG1 (p / position-01
+                            :ARG1 (c / city :wiki "Hong_Kong"
+                                  :name (n / name :op1 "Hong" :op2 "Kong"))
+                            :ARG2 (p2 / paradise
+                                  :topic (s / shop-01))))"""
+
+        alignments, info = self.aligner.run(amr, text)
+        inducer = RuleInducer(text, amr, info['parse'], alignments)
+        id2subtrees, id2rule, adjtrees = inducer.run()
+
+        tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        tag, ltag = inducer.prettify(id2subtrees, id2rule, adjtrees, tag, ltag)
+
+        original = {
+            'ltag': {
+                'initial': {
+                    (u':root/ROOT', '[determine-01]'): [u'(ROOT (SBARQ (:ARG0/WHNP) (SQ (VP (VBD XXX) (:ARG1/NP) (:ARG2/PP))) (. ?)))']
+                },
+                'substitution':{
+                    (u':ARG2/PP', '[paradise]'): [u'(PP (IN as) (NP (DT a) (:topic/NN) (NN XXX)))'],
+                    (u':ARG0/WHNP', '[amr-unknown]'): [u'(WHNP (WDT XXX))'],
+                    (u':ARG1/NP', '[position-01]'): [u'(NP (DT the) (NN XXX))'],
+                    (u':topic/NN', '[shop-01]'): [u'(NN XXX)'],
+                    (u':ARG1/PP', '[city, :name, :op1, :op2]'): [u'(PP (IN of) (NP (NNP XXX) (NNP XXX)))']
+                },
+                'adjoining':{
+                    (u':ARG1/NP', '[position-01]'): [u'(NP (NP*) (:ARG1/PP))']
+                }
+            },
+            'tag': {
+                'initial': {
+                    u':root/ROOT': [u'(ROOT (SBARQ (:ARG0/WHNP) (SQ (VP (VBD XXX) (:ARG1/NP) (:ARG2/PP))) (. ?)))']
+                },
+                'substitution':{
+                    u':ARG0/WHNP': [u'(WHNP (WDT XXX))'],
+                    u':topic/NN': [u'(NN XXX)'],
+                    u':ARG1/PP': [u'(PP (IN of) (NP (NNP XXX) (NNP XXX)))'],
+                    u':ARG1/NP': [u'(NP (DT the) (NN XXX))'],
+                    u':ARG2/PP': [u'(PP (IN as) (NP (DT a) (:topic/NN) (NN XXX)))']
+                },
+                'adjoining':{
+                    u':ARG1/NP': [u'(NP (NP*) (:ARG1/PP))']
+                }
+            }}
+
+        self.assertDictEqual(original, {'tag':tag, 'ltag':ltag})
+
+    def test_two_sentences(self):
+        text = 'It continues to explore ; it continues to open new worlds .'
+        amr = """(m / multi-sentence
+                          :snt1 (c / continue-01
+                                :ARG0 (i / it)
+                                :ARG1 (e / explore-01
+                                      :ARG0 i))
+                          :snt2 (c2 / continue-01
+                                :ARG0 (i2 / it)
+                                :ARG1 (o / open-01
+                                      :ARG0 i2
+                                      :ARG1 (w / world
+                                            :ARG1-of (n / new-02)))))"""
+
+        alignments, info = self.aligner.run(amr, text)
+        inducer = RuleInducer(text, amr, info['parse'], alignments)
+        id2subtrees, id2rule, adjtrees = inducer.run()
+
+        tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        tag, ltag = inducer.prettify(id2subtrees, id2rule, adjtrees, tag, ltag)
+
+        original = {
+            'ltag': {
+                'initial': {
+                    (u':root/ROOT', '[multi-sentence]'): [u'(ROOT (S (:snt1/S) (: ;) (:snt2/S) (. .)))']
+                },
+                'adjoining': {
+                    (u':ARG1/S', '[open-01]'): [u'(VP (TO to) (VP*))'],
+                    (u':ARG1/S', '[explore-01]'): [u'(VP (TO to) (VP*))'],
+                },
+                'substitution': {
+                    (u':ARG1/S', '[open-01]'): [u'(S (VP (VB XXX) (:ARG1/NP)))'],
+                    (u':ARG1/S', '[explore-01]'): [u'(S (VP (VB XXX)))'],
+                    (u':snt1/S', '[continue-01]'): [u'(S (:ARG0/NP) (VP (VBZ XXX) (:ARG1/S)))'],
+                    (u':ARG1/NP', '[world]'): [u'(NP (:ARG1-of/JJ) (NNS XXX))'],
+                    (':ARG0/E', '[i]'): ['empty'],
+                    (':ARG0/E', '[i2]'): ['empty'],
+                    (u':ARG1-of/JJ', '[new-02]'): [u'(JJ XXX)'],
+                    (u':snt2/S', '[continue-01]'): [u'(S (:ARG0/NP) (VP (VBZ XXX) (:ARG1/S)))'],
+                    (u':ARG0/NP', '[it]'): [u'(NP (PRP XXX))', u'(NP (PRP XXX))']
+                }
+            },
+            'tag': {
+                'initial': {
+                    u':root/ROOT': [u'(ROOT (S (:snt1/S) (: ;) (:snt2/S) (. .)))']
+                },
+                'adjoining': {
+                    u':ARG1/S': [u'(VP (TO to) (VP*))',
+                                 u'(VP (TO to) (VP*))'],
+                },
+                'substitution': {
+                    u':ARG1/S': [u'(S (VP (VB XXX)))',
+                                 u'(S (VP (VB XXX) (:ARG1/NP)))'],
+                    u':ARG0/NP': [u'(NP (PRP XXX))', u'(NP (PRP XXX))'],
+                    u':ARG1/NP': [u'(NP (:ARG1-of/JJ) (NNS XXX))'],
+                    u':ARG1-of/JJ': [u'(JJ XXX)'],
+                    u':snt2/S': [u'(S (:ARG0/NP) (VP (VBZ XXX) (:ARG1/S)))'],
+                    u':snt1/S': [u'(S (:ARG0/NP) (VP (VBZ XXX) (:ARG1/S)))'],
+                    ':ARG0/E': ['empty', 'empty']}
+            }}
+
+        self.assertDictEqual(original, {'tag':tag, 'ltag':ltag})
 
     def test_two_clauses(self):
         text = 'The boy wants to ride the red bicycle .'
-
-        alignment = '7-8|0.1.0 6-7|0.1.0.0 4-5|0.1 2-3|0 1-2|0.0'
-
-        tree = """(ROOT
-                      (S
-                        (NP (DT The) (NN boy))
-                        (VP (VBZ wants)
-                          (S
-                            (VP (TO to)
-                              (VP (VB ride)
-                                (NP (DT the) (JJ red) (NN bicycle))))))
-                        (. .)))"""
 
         amr = """(w / want-01
                       :ARG0 (b2 / boy)
@@ -363,46 +545,497 @@ class RuleInducerTest(unittest.TestCase):
                             :ARG1 (b / bicycle
                                   :mod (r / red))))"""
 
-        inducer = RuleInducer(text, amr, tree, alignment)
-        subtrees = inducer.run()
+        alignments, info = self.aligner.run(amr, text)
+        inducer = RuleInducer(text, amr, info['parse'], alignments)
+        id2subtrees, id2rule, adjtrees = inducer.run()
 
-        original_subtrees = {1: {'nodes':{}, 'tree':{}},
-                             2: {'nodes':{}, 'tree':{}},
-                             3: {'nodes':{}, 'tree':{}},
-                             4: {'nodes':{}, 'tree':{}},
-                             5: {'nodes':{}, 'tree':{}}}
-        original_subtrees[1]['nodes'] = {16: {'parent': 13, 'type': 'terminal', 'name': 'NN', 'value': 'bicycle', 'label': 1},
-                                         18: {'type': 'rule', 'name': '2/JJ', 'parent': 13, 'label': -1},
-                                         13: {'type': 'nonterminal', 'name': 'NP', 'parent': 11, 'label': 1},
-                                         14: {'parent': 13, 'type': 'terminal', 'name': 'DT', 'value': 'the', 'label': -1}}
-        original_subtrees[1]['tree'] = {16: [], 18: [], 13: [14, 18, 16], 14: []}
+        tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        tag, ltag = inducer.prettify(id2subtrees, id2rule, adjtrees, tag, ltag)
 
-        original_subtrees[2]['nodes'] = {15: {'parent': 13, 'type': 'terminal', 'name': 'JJ', 'value': 'red', 'label': 2}}
-        original_subtrees[2]['tree'] = {15: []}
+        original = {
+            'ltag':
+                {
+                    'initial': {
+                        (u':root/ROOT', '[want-01]'): [u'(ROOT (S (:ARG0/NP) (VP (VBZ XXX) (:ARG1/S)) (. .)))']
+                    },
+                    'substitution':{
+                        (u':mod/JJ', '[red]'): [u'(JJ XXX)'],
+                        (u':ARG0/NP', '[boy]'): [u'(NP (DT The) (NN XXX))'],
+                        (u':ARG1/NP', '[bicycle]'): [u'(NP (DT the) (:mod/JJ) (NN XXX))'],
+                        (u':ARG1/S', '[ride-01]'): [u'(S (VP (VB XXX) (:ARG1/NP)))']
+                    },
+                    'adjoining':{
+                        (u':ARG1/S', '[ride-01]'): [u'(VP (TO to) (VP*))']
+                    }
+                },
+            'tag':
+                {
+                    'initial': {
+                        u':root/ROOT': [u'(ROOT (S (:ARG0/NP) (VP (VBZ XXX) (:ARG1/S)) (. .)))']
+                    },
+                    'substitution':{
+                        u':ARG1/NP': [u'(NP (DT the) (:mod/JJ) (NN XXX))'],
+                        u':ARG1/S': [u'(S (VP (VB XXX) (:ARG1/NP)))'],
+                        u':ARG0/NP': [u'(NP (DT The) (NN XXX))'],
+                        u':mod/JJ': [u'(JJ XXX)']
+                    },
+                    'adjoining':{
+                        u':ARG1/S': [u'(VP (TO to) (VP*))']
+                    }
+                }}
 
-        original_subtrees[3]['nodes'] = {8: {'type': 'nonterminal', 'name': 'S', 'parent': 6, 'label': 3},
-                                         9: {'type': 'nonterminal', 'name': 'VP', 'parent': 8, 'label': 3},
-                                         10: {'parent': 9, 'type': 'terminal', 'name': 'TO', 'value': 'to', 'label': -1},
-                                         11: {'type': 'nonterminal', 'name': 'VP', 'parent': 9, 'label': 3},
-                                         12: {'parent': 11, 'type': 'terminal', 'name': 'VB', 'value': 'ride', 'label': 3},
-                                         19: {'type': 'rule', 'name': '1/NP', 'parent': 11, 'label': -1}}
-        original_subtrees[3]['tree'] = {8: [9], 9: [10, 11], 10: [], 11: [12, 19], 12: [], 19: []}
+        self.assertDictEqual(original, {'tag':tag, 'ltag':ltag})
 
-        original_subtrees[4]['nodes'] = {1: {'type': 'nonterminal', 'name': 'ROOT', 'parent': 0, 'label': 4},
-                                         2: {'type': 'nonterminal', 'name': 'S', 'parent': 1, 'label': 4},
-                                         6: {'type': 'nonterminal', 'name': 'VP', 'parent': 2, 'label': 4},
-                                         7: {'parent': 6, 'type': 'terminal', 'name': 'VBZ', 'value': 'wants', 'label': 4},
-                                         17: {'parent': 2, 'type': 'terminal', 'name': '.', 'value': '.', 'label': -1},
-                                         20: {'type': 'rule', 'name': '3/S', 'parent': 6, 'label': -1},
-                                         21: {'type': 'rule', 'name': '5/NP', 'parent': 2, 'label': -1}}
-        original_subtrees[4]['tree'] = {1: [2], 2: [21, 6, 17], 6: [7, 20], 7: [], 17: [], 20: [], 21: []}
+    def test_spec1(self):
+        text = 'The London emergency services said that altogether eleven people had been sent to hospital for treatment due to minor wounds.'
+        amr = """(s / say-01
+                      :ARG0 (s2 / service
+                            :mod (e / emergency)
+                            :location (c / city :wiki 'London'
+                                  :name (n / name :op1 'London')))
+                      :ARG1 (s3 / send-01
+                            :ARG1 (p / person :quant 11)
+                            :ARG2 (h / hospital)
+                            :mod (a / altogether)
+                            :purpose (t / treat-03
+                                  :ARG1 p
+                                  :ARG2 (w / wound-01
+                                        :ARG1 p
+                                        :mod (m / minor)))))"""
 
-        original_subtrees[5]['nodes'] = {3: {'type': 'nonterminal', 'name': 'NP', 'parent': 2, 'label': 5},
-                                         4: {'parent': 3, 'type': 'terminal', 'name': 'DT', 'value': 'The', 'label': -1},
-                                         5: {'parent': 3, 'type': 'terminal', 'name': 'NN', 'value': 'boy', 'label': 5}}
-        original_subtrees[5]['tree'] = {3: [4, 5], 4: [], 5: []}
+        alignments, info = self.aligner.run(amr, text)
+        inducer = RuleInducer(text, amr, info['parse'], alignments)
+        id2subtrees, id2rule, adjtrees = inducer.run()
 
-        self.assertDictEqual(original_subtrees, subtrees, 'They are not equal')
+        tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        tag, ltag = inducer.prettify(id2subtrees, id2rule, adjtrees, tag, ltag)
+
+        original = {
+            'ltag': {
+                'initial': {
+                    (u':root/ROOT', '[say-01]'): [u'(ROOT (S (:ARG0/NP) (VP (VBD XXX) (:ARG1/SBAR)) (. .)))']
+                },
+                'substitution':{
+                    (u':ARG1/NP', '[person]'): [u'(NP (:quant/NNS) (NNS XXX))'],
+                    (u':ARG2/PP', '[hospital]'): [u'(PP (TO to) (NP (NN XXX)))'],
+                    (u':location/NNP', '[city, :name, :op1]'): [u'(NNP XXX)'],
+                    (u':ARG1/SBAR', '[send-01]'): [u'(SBAR (IN that) (S (:mod/ADVP) (:ARG1/NP) (VP (VBN XXX) (:ARG2/PP) (:purpose/PP))))'],
+                    (':ARG1/E', '[p]'): ['empty', 'empty'],
+                    (u':mod/NN', '[emergency]'): [u'(NN XXX)'],
+                    (u':purpose/PP', '[treat-03]'): [u'(PP (IN for) (NP (NN XXX)))'],
+                    (u':ARG0/NP', '[service]'): [u'(NP (DT The) (:location/NNP) (:mod/NN) (NNS XXX))'],
+                    (u':quant/NNS', '[11]'): [u'(NNS XXX)'],
+                    (u':ARG2/ADJP', '[wound-01]'): [u'(ADJP (JJ due) (PP (TO to) (NP (:mod/JJ) (NNS XXX))))'],
+                    (u':mod/JJ', '[minor]'): [u'(JJ XXX)'],
+                    (u':mod/ADVP', '[altogether]'): [u'(ADVP (RB XXX))']
+                },
+                'adjoining':{
+                    (u':ARG1/SBAR', '[send-01]'): [u'(VP (VBN been) (VP*))',
+                                                   u'(VP (VBD had) (VP*))'],
+                    (u':purpose/PP', '[treat-03]'): [u'(NP (NP*) (:ARG2/ADJP))']
+                }
+            },
+            'tag': {
+                'initial': {
+                    u':root/ROOT': [u'(ROOT (S (:ARG0/NP) (VP (VBD XXX) (:ARG1/SBAR)) (. .)))']
+                },
+                'substitution':{
+                    u':purpose/PP': [u'(PP (IN for) (NP (NN XXX)))'],
+                    u':mod/ADVP': [u'(ADVP (RB XXX))'],
+                    u':ARG1/SBAR': [u'(SBAR (IN that) (S (:mod/ADVP) (:ARG1/NP) (VP (VBN XXX) (:ARG2/PP) (:purpose/PP))))'],
+                    u':ARG0/NP': [u'(NP (DT The) (:location/NNP) (:mod/NN) (NNS XXX))'],
+                    u':quant/NNS': [u'(NNS XXX)'], u':ARG1/NP': [u'(NP (:quant/NNS) (NNS XXX))'],
+                    u':mod/NN': [u'(NN XXX)'],
+                    ':ARG1/E': ['empty', 'empty'],
+                    u':location/NNP': [u'(NNP XXX)'],
+                    u':ARG2/ADJP': [u'(ADJP (JJ due) (PP (TO to) (NP (:mod/JJ) (NNS XXX))))'],
+                    u':ARG2/PP': [u'(PP (TO to) (NP (NN XXX)))'],
+                    u':mod/JJ': [u'(JJ XXX)']
+                },
+                'adjoining':{
+                    u':ARG1/SBAR': [u'(VP (VBN been) (VP*))',
+                                    u'(VP (VBD had) (VP*))'],
+                    u':purpose/PP': [u'(NP (NP*) (:ARG2/ADJP))']
+                }
+            }}
+
+        self.assertDictEqual(original, {'tag':tag, 'ltag':ltag})
+
+    def test_spec2(self):
+        text = 'The Tokyo Stock Exchange said that this company will officially be listed on the stock exchange on August 8.'
+        amr = """(s / say-01
+                  :ARG0 (o / organization :wiki "Tokyo_Stock_Exchange"
+                        :name (n / name :op1 "Tokyo" :op2 "Stock" :op3 "Exchange"))
+                  :ARG1 (l / list-01
+                        :ARG1 (c / company
+                              :mod (t / this))
+                        :ARG2 (e / exchange-01
+                              :ARG1 (s2 / stock-01))
+                        :mod (o2 / official)
+                        :time (d / date-entity :month 8 :day 8)))"""
+
+        alignments, info = self.aligner.run(amr, text)
+        inducer = RuleInducer(text, amr, info['parse'], alignments)
+        id2subtrees, id2rule, adjtrees = inducer.run()
+
+        tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        tag, ltag = inducer.prettify(id2subtrees, id2rule, adjtrees, tag, ltag)
+
+        original = {
+            'ltag': {
+                'initial': {
+                    (u':root/ROOT', '[say-01]'): [u'(ROOT (S (:ARG0/NP) (VP (VBD XXX) (:ARG1/SBAR)) (. .)))']
+                },
+                'substitution':{
+                    (u':mod/DT', '[this]'): [u'(DT XXX)'],
+                    (u':time/PP', '[date-entity, :month, :day]'): [u'(PP (IN on) (NP (NNP XXX) (CD XXX)))'],
+                    (u':ARG0/NP', '[organization, :name, :op1, :op2, :op3]'): [u'(NP (DT The) (NNP XXX) (NNP XXX) (NNP XXX))'],
+                    (u':ARG1/SBAR', '[list-01]'): [u'(SBAR (IN that) (S (:ARG1/NP) (VP (VBN XXX) (:ARG2/PP))))'],
+                    (u':mod/ADVP', '[official]'): [u'(ADVP (RB XXX))'],
+                    (u':ARG2/PP', '[exchange-01]'): [u'(PP (IN on) (NP (DT the) (:ARG1/NN) (NN XXX)))'],
+                    (u':ARG1/NN', '[stock-01]'): [u'(NN XXX)'],
+                    (u':ARG1/NP', '[company]'): [u'(NP (:mod/DT) (NN XXX))']
+                },
+                'adjoining':{
+                    (u':ARG1/SBAR', '[list-01]'): [u'(VP (VB be) (VP*))',
+                                                   u'(VP (MD will) (:mod/ADVP) (VP*))'],
+                    (u':ARG2/PP', '[exchange-01]'): [u'(NP (NP*) (:time/PP))']
+                }
+            },
+            'tag': {
+                'initial': {
+                    u':root/ROOT': [u'(ROOT (S (:ARG0/NP) (VP (VBD XXX) (:ARG1/SBAR)) (. .)))']
+                },
+                'substitution':{
+                    u':time/PP': [u'(PP (IN on) (NP (NNP XXX) (CD XXX)))'],
+                    u':mod/ADVP': [u'(ADVP (RB XXX))'],
+                    u':ARG1/SBAR': [u'(SBAR (IN that) (S (:ARG1/NP) (VP (VBN XXX) (:ARG2/PP))))'],
+                    u':ARG0/NP': [u'(NP (DT The) (NNP XXX) (NNP XXX) (NNP XXX))'],
+                    u':ARG1/NN': [u'(NN XXX)'], u':ARG1/NP': [u'(NP (:mod/DT) (NN XXX))'],
+                    u':mod/DT': [u'(DT XXX)'],
+                    u':ARG2/PP': [u'(PP (IN on) (NP (DT the) (:ARG1/NN) (NN XXX)))']
+                },
+                'adjoining':{
+                    u':ARG1/SBAR': [u'(VP (VB be) (VP*))',
+                                    u'(VP (MD will) (:mod/ADVP) (VP*))'],
+                    u':ARG2/PP': [u'(NP (NP*) (:time/PP))']
+                }
+            }}
+
+        self.assertDictEqual(original, {'tag':tag, 'ltag':ltag})
+
+    def test_spec3(self):
+        text = 'I headed straight for the center of activities, but in actual fact traffic was being controlled as early as 4 o\'clock, and they had already started limiting the crowds entering the sports center.'
+        amr = """(c / contrast-01
+                      :ARG1 (h / head-02
+                            :ARG0 (i / i)
+                            :ARG1 (c6 / center
+                                  :mod (a2 / activity-06))
+                            :ARG1-of (s2 / straight-04))
+                      :ARG2 (a / and
+                            :op1 (c2 / control-01
+                                  :ARG1 (t / traffic)
+                                  :prep-in (f / fact
+                                        :ARG1-of (a3 / actual-02))
+                                  :time (d / date-entity :time "4:00"
+                                        :mod (e / early)))
+                            :op2 (s / start-01
+                                  :ARG0 (t2 / they)
+                                  :ARG1 (l2 / limit-01
+                                        :ARG1 (c4 / crowd
+                                              :ARG0-of (e2 / enter-01
+                                                    :ARG1 (c5 / center
+                                                          :mod (s3 / sport)))))
+                                  :time (a4 / already))))"""
+
+        alignments, info = self.aligner.run(amr, text)
+        inducer = RuleInducer(text, amr, info['parse'], alignments)
+        id2subtrees, id2rule, adjtrees = inducer.run()
+
+        tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        tag, ltag = inducer.prettify(id2subtrees, id2rule, adjtrees, tag, ltag)
+
+        original = {
+            'ltag': {
+                'initial': {
+                    (u':root/ROOT', '[contrast-01]'): [u'(ROOT (S (S (:ARG0/NP) (VP (:ARG1/VP) (, ,) (CC XXX) (:op1/VP))) (, ,) (:ARG2/CC) (:op2/S) (. .)))']
+                },
+                'substitution':{
+                    (u':ARG0/NP', '[they]'): [u'(NP (PRP XXX))'],
+                    (u':time/PP', '[date-entity, :time, :mod]'): [u"(PP (IN as) (NP (NP (JJ XXX)) (PP (IN as) (NP (CD XXX) (RB o'clock)))))"],
+                    (u':ARG1/PP', '[traffic]'): [u'(PP (IN in) (NP (:ARG1-of/JJ) (:prep-in/NN) (NN XXX)))'],
+                    (u':ARG1/NP', '[center]'): [u'(NP (DT the) (:mod/NNS) (NN XXX))'],
+                    (u':mod/PP', '[activity-06]'): [u'(PP (IN of) (NP (NNS XXX)))'],
+                    (u':ARG1-of/ADVP', '[straight-04]'): [u'(ADVP (RB XXX))'],
+                    (u':ARG0-of/S', '[enter-01]'): [u'(S (VP (VBG XXX) (:ARG1/NP)))'],
+                    (u':ARG1/PP', '[center]'): [u'(PP (IN for) (NP (NP (DT the) (NN XXX)) (:mod/PP)))'],
+                    (u':op2/S', '[start-01]'): [u'(S (:ARG0/NP) (VP (VBN XXX) (:ARG1/S)))'],
+                    (u':ARG1/VP', '[head-02]'): [u'(VP (VBD XXX) (:ARG1-of/ADVP) (:ARG1/PP))'],
+                    (u':op1/VP', '[control-01]'): [u'(VP (VBN XXX) (:time/PP))'],
+                    (u':time/ADVP', '[already]'): [u'(ADVP (RB XXX))'],
+                    (u':ARG1/NP', '[crowd]'): [u'(NP (DT the) (NNS XXX))'],
+                    (u':ARG2/CC', '[and]'): [u'(CC XXX)'],
+                    (u':mod/NNS', '[sport]'): [u'(NNS XXX)'],
+                    (u':ARG1-of/JJ', '[actual-02]'): [u'(JJ XXX)'],
+                    (u':prep-in/NN', '[fact]'): [u'(NN XXX)'],
+                    (u':ARG1/S', '[limit-01]'): [u'(S (VP (VBG XXX) (:ARG1/NP) (:ARG0-of/S)))'],
+                    (u':ARG0/NP', '[i]'): [u'(NP (PRP XXX))']
+                },
+                'adjoining':{
+                    (u':op2/S', '[start-01]'): [u'(VP (VBD had) (:time/ADVP) (VP*))'],
+                    (u':op1/VP', '[control-01]'): [u'(VP (VBG being) (VP*))',
+                                                   u'(VP (:ARG1/PP) (VBD was) (VP*))'],
+                    (u':time/PP', '[date-entity, :time, :mod]'): []
+                }
+            },
+            'tag': {
+                'initial': {
+                    u':root/ROOT': [u'(ROOT (S (S (:ARG0/NP) (VP (:ARG1/VP) (, ,) (CC XXX) (:op1/VP))) (, ,) (:ARG2/CC) (:op2/S) (. .)))']
+                },
+                'substitution':{
+                    u':time/PP': [u"(PP (IN as) (NP (NP (JJ XXX)) (PP (IN as) (NP (CD XXX) (RB o'clock)))))"],
+                    u':ARG1/S': [u'(S (VP (VBG XXX) (:ARG1/NP) (:ARG0-of/S)))'],
+                    u':mod/NNS': [u'(NNS XXX)'],
+                    u':ARG1-of/ADVP': [u'(ADVP (RB XXX))'],
+                    u':prep-in/NN': [u'(NN XXX)'],
+                    u':ARG1/PP': [u'(PP (IN for) (NP (NP (DT the) (NN XXX)) (:mod/PP)))',
+                                  u'(PP (IN in) (NP (:ARG1-of/JJ) (:prep-in/NN) (NN XXX)))'],
+                    u':time/ADVP': [u'(ADVP (RB XXX))'],
+                    u':ARG0-of/S': [u'(S (VP (VBG XXX) (:ARG1/NP)))'],
+                    u':op1/VP': [u'(VP (VBN XXX) (:time/PP))'],
+                    u':ARG1/NP': [u'(NP (DT the) (NNS XXX))',
+                                  u'(NP (DT the) (:mod/NNS) (NN XXX))'],
+                    u':ARG1-of/JJ': [u'(JJ XXX)'],
+                    u':mod/PP': [u'(PP (IN of) (NP (NNS XXX)))'],
+                    u':ARG0/NP': [u'(NP (PRP XXX))', u'(NP (PRP XXX))'],
+                    u':ARG1/VP': [u'(VP (VBD XXX) (:ARG1-of/ADVP) (:ARG1/PP))'],
+                    u':ARG2/CC': [u'(CC XXX)'],
+                    u':op2/S': [u'(S (:ARG0/NP) (VP (VBN XXX) (:ARG1/S)))']
+                },
+                'adjoining':{
+                    u':op2/S': [u'(VP (VBD had) (:time/ADVP) (VP*))'],
+                    u':op1/VP': [u'(VP (VBG being) (VP*))',
+                                 u'(VP (:ARG1/PP) (VBD was) (VP*))']
+                }
+            }}
+
+        self.assertDictEqual(original, {'tag':tag, 'ltag':ltag})
+
+    def test_spec4(self):
+        text= 'The family planning policy is extremely stupid, brings disasters to both the country and the people, and is totally void of conscience!'
+        amr = """(a3 / and
+                      :op1 (s / stupid
+                            :degree (e / extreme)
+                            :domain (p / policy
+                                  :topic (p2 / plan-01
+                                        :ARG1 (f / family))))
+                      :op2 (b2 / bring-01
+                            :ARG0 p
+                            :ARG1 (d / disaster)
+                            :ARG2 (a2 / and
+                                  :op1 (c2 / country)
+                                  :op2 (p3 / person)))
+                      :op3 (v / void-03
+                            :ARG1 p
+                            :ARG2 (c / conscience)
+                            :degree (t / total)))"""
+
+        alignments, info = self.aligner.run(amr, text)
+        inducer = RuleInducer(text, amr, info['parse'], alignments)
+        id2subtrees, id2rule, adjtrees = inducer.run()
+
+        tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        tag, ltag = inducer.prettify(id2subtrees, id2rule, adjtrees, tag, ltag)
+
+        original = {
+            'ltag': {
+                'initial': {(u':root/ROOT', '[and]'): [
+                    u'(ROOT (S (:domain/NP) (VP (:op1/VP) (, ,) (VP (:op2/VBZ) (:ARG1/NP) (PP (TO to) (NP (CC both) (:op1/NP) (CC XXX) (:op2/NP)))) (, ,) (:ARG2/CC) (:ARG2/VP)) (. !)))']
+                },
+                'substitution':{
+                    (u':degree/RB', '[extreme]'): [u'(RB XXX)'],
+                    (':ARG0/E', '[p]'): ['empty'],
+                    (u':op1/VP', '[stupid]'): [u'(VP (VBZ is) (ADJP (:degree/RB) (JJ XXX)))'],
+                    (u':domain/NP', '[policy]'): [u'(NP (DT The) (:ARG1/NN) (:topic/NN) (NN XXX))'],
+                    (u':topic/NN', '[plan-01]'): [u'(NN XXX)'],
+                    (u':ARG1/NP', '[disaster]'): [u'(NP (NNS XXX))'],
+                    (u':ARG1/NN', '[family]'): [u'(NN XXX)'],
+                    (':ARG1/E', '[p]'): ['empty'],
+                    (u':op2/NP', '[person]'): [u'(NP (DT the) (NNS XXX))'],
+                    (u':ARG2/CC', '[and]'): [u'(CC XXX)'],
+                    (u':degree/RB', '[total]'): [u'(RB XXX)'],
+                    (u':op3/NN', '[void-03]'): [u'(NN XXX)'],
+                    (u':op2/VBZ', '[bring-01]'): [u'(VBZ XXX)'],
+                    (u':op1/NP', '[country]'): [u'(NP (DT the) (NN XXX))'],
+                    (u':ARG2/VP', '[conscience]'): [u'(VP (VBZ is) (ADJP (:degree/RB) (:op3/NN)) (PP (IN of) (NP (NN XXX))))']
+                },
+                'adjoining':{}
+            },
+            'tag': {
+                'initial': {
+                    u':root/ROOT': [u'(ROOT (S (:domain/NP) (VP (:op1/VP) (, ,) (VP (:op2/VBZ) (:ARG1/NP) (PP (TO to) (NP (CC both) (:op1/NP) (CC XXX) (:op2/NP)))) (, ,) (:ARG2/CC) (:ARG2/VP)) (. !)))']
+                },
+                'substitution':{
+                    u':op2/VBZ': [u'(VBZ XXX)'],
+                    u':topic/NN': [u'(NN XXX)'],
+                    u':op2/NP': [u'(NP (DT the) (NNS XXX))'],
+                    u':ARG2/VP': [u'(VP (VBZ is) (ADJP (:degree/RB) (:op3/NN)) (PP (IN of) (NP (NN XXX))))'],
+                    u':ARG1/NN': [u'(NN XXX)'],
+                    ':ARG0/E': ['empty'],
+                    u':ARG1/NP': [u'(NP (NNS XXX))'],
+                    u':domain/NP': [u'(NP (DT The) (:ARG1/NN) (:topic/NN) (NN XXX))'],
+                    ':ARG1/E': ['empty'],
+                    u':op1/VP': [u'(VP (VBZ is) (ADJP (:degree/RB) (JJ XXX)))'],
+                    u':op1/NP': [u'(NP (DT the) (NN XXX))'],
+                    u':degree/RB': [u'(RB XXX)', u'(RB XXX)'],
+                    u':ARG2/CC': [u'(CC XXX)'],
+                    u':op3/NN': [u'(NN XXX)']
+                },
+                'adjoining':{}
+            }}
+
+        self.assertDictEqual(original, {'tag':tag, 'ltag':ltag})
+
+    def test_spec5(self):
+        text = 'The most terrible thing is not the government officials, but the power that lies in the hands of these officials.'
+        amr = """(c / contrast-01
+                      :ARG1 (t2 / terrible-01 :polarity -
+                            :ARG1 (p2 / person
+                                  :ARG0-of (h2 / have-org-role-91
+                                        :ARG1 (g / government-organization
+                                              :ARG0-of (g2 / govern-01))
+                                        :ARG2 (o2 / official)))
+                            :degree (m / most))
+                      :ARG2 (t3 / terrible-01
+                            :ARG1 (p / power
+                                  :ARG1-of (l / lie-07
+                                        :ARG2 (h / hand
+                                              :part-of p2)))
+                            :degree (m2 / most)))"""
+
+        alignments, info = self.aligner.run(amr, text)
+        inducer = RuleInducer(text, amr, info['parse'], alignments)
+        id2subtrees, id2rule, adjtrees = inducer.run()
+
+        tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        tag, ltag = inducer.prettify(id2subtrees, id2rule, adjtrees, tag, ltag)
+
+        original = {
+            'ltag': {
+                'initial': {
+                    (u':root/ROOT', '[contrast-01]'): [u'(ROOT (S (:ARG1/NP) (VP (VBZ is) (NP (:polarity/RB) (:ARG1/NP) (, ,) (CC XXX) (:ARG1/NP))) (. .)))']
+                },
+                'substitution':{
+                    (u':part-of/PP', '[p2]'): [u'(PP (IN of) (NP (DT XXX) (NNS XXX)))'],
+                    (u':ARG1/NN', '[government-organization, :ARG0-of]'): [u'(NN XXX)'],
+                    (u':ARG1-of/SBAR', '[lie-07]'): [u'(SBAR (WHNP (WDT that)) (S (VP (VBZ XXX) (:ARG2/PP))))'],
+                    (u':ARG1/NP', '[power]'): [u'(NP (DT the) (NN XXX))'],
+                    (u':polarity/RB', '[-]'): [u'(RB XXX)'],
+                    (u':ARG2/PP', '[hand]'): [u'(PP (IN in) (NP (DT the) (NNS XXX)))'],
+                    (':ARG2/E', '[terrible-01, :degree]'): ['empty'],
+                    (u':ARG1/NP', '[person, :ARG0-of, :ARG2]'): [u'(NP (DT the) (:ARG1/NN) (NNS XXX))'],
+                    (u':ARG1/NP', '[terrible-01]'): [u'(NP (DT The) (ADJP (:degree/RBS) (JJ XXX)) (NN thing))'],
+                    (u':degree/RBS', '[most]'): [u'(RBS XXX)']
+                },
+                'adjoining':{
+                    (u':ARG1/NP', '[power]'): [u'(NP (NP*) (:ARG1-of/SBAR))'],
+                    (u':ARG2/PP', '[hand]'): [u'(NP (NP*) (:part-of/PP))']
+                }
+            },
+            'tag': {
+                'initial': {
+                    u':root/ROOT': [u'(ROOT (S (:ARG1/NP) (VP (VBZ is) (NP (:polarity/RB) (:ARG1/NP) (, ,) (CC XXX) (:ARG1/NP))) (. .)))']
+                },
+                'substitution':{
+                    u':ARG1-of/SBAR': [u'(SBAR (WHNP (WDT that)) (S (VP (VBZ XXX) (:ARG2/PP))))'],
+                    u':degree/RBS': [u'(RBS XXX)'],
+                    u':ARG1/NN': [u'(NN XXX)'],
+                    u':ARG1/NP': [u'(NP (DT the) (:ARG1/NN) (NNS XXX))',
+                                  u'(NP (DT The) (ADJP (:degree/RBS) (JJ XXX)) (NN thing))',
+                                  u'(NP (DT the) (NN XXX))'],
+                    u':part-of/PP': [u'(PP (IN of) (NP (DT XXX) (NNS XXX)))'],
+                    ':ARG2/E': ['empty'],
+                    u':ARG2/PP': [u'(PP (IN in) (NP (DT the) (NNS XXX)))'],
+                    u':polarity/RB': [u'(RB XXX)']
+                },
+                'adjoining':{
+                    u':ARG1/NP': [u'(NP (NP*) (:ARG1-of/SBAR))'],
+                    u':ARG2/PP': [u'(NP (NP*) (:part-of/PP))']
+                }
+            }}
+
+        self.assertDictEqual(original, {'tag':tag, 'ltag':ltag})
+
+    def test_spec6(self):
+        text = 'Pledge to fight to the death defending the Diaoyu Islands and the related islands.'
+        amr = """(p / pledge-01 :mode imperative
+                      :ARG0 (y / you)
+                      :ARG2 (f / fight-01
+                            :ARG0 y
+                            :ARG2 (d2 / defend-01
+                                  :ARG0 y
+                                  :ARG1 (a / and
+                                        :op1 (i / island :wiki "Senkaku_Islands" :name (n / name :op1 "Diaoyu" :op2 "Islands"))
+                                        :op2 (i2 / island
+                                              :ARG1-of (r / relate-01
+                                                    :ARG2 i))))
+                            :manner (d / die-01
+                                  :ARG1 y)))"""
+
+        alignments, info = self.aligner.run(amr, text)
+        inducer = RuleInducer(text, amr, info['parse'], alignments)
+        id2subtrees, id2rule, adjtrees = inducer.run()
+
+        tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        tag, ltag = inducer.prettify(id2subtrees, id2rule, adjtrees, tag, ltag)
+
+        original = {
+            'ltag': {
+                'initial': {
+                    (u':root/ROOT', '[pledge-01]'): [u'(ROOT (FRAG (NP (NN XXX)) (:ARG2/S) (. .)))']
+                },
+                'substitution':{
+                    (u':ARG1-of/JJ', '[relate-01]'): [u'(JJ XXX)'],
+                    (':ARG0/E', '[y]'): ['empty', 'empty'],
+                    (':ARG0/E', '[you]'): ['empty'],
+                    (u':ARG1/CC', '[and]'): [u'(CC XXX)'],
+                    (u':ARG2/S', '[fight-01]'): [u'(S (VP (TO to) (VP (VB XXX) (:manner/PP))))'],
+                    (':op2/E', '[island]'): ['empty'],
+                    (':ARG1/E', '[y]'): ['empty'],
+                    (':ARG2/E', '[i]'): ['empty'],
+                    (u':op1/NP', '[island, :name, :op1, :op2]'): [u'(NP (NP (DT the) (NNP XXX) (NNPS XXX)) (:ARG1/CC) (NP (DT the) (:ARG1-of/JJ) (NNS XXX)))'],
+                    (u':ARG2/VP', '[defend-01]'): [u'(VP (VBG XXX) (:op1/NP))'],
+                    (u':manner/PP', '[die-01]'): [u'(PP (TO to) (NP (NP (DT the) (NN XXX)) (:ARG2/VP)))']
+                },
+                'adjoining':{}
+            },
+            'tag': {
+                'initial': {
+                    u':root/ROOT': [u'(ROOT (FRAG (NP (NN XXX)) (:ARG2/S) (. .)))']
+                },
+                'substitution':{
+                    u':op1/NP': [u'(NP (NP (DT the) (NNP XXX) (NNPS XXX)) (:ARG1/CC) (NP (DT the) (:ARG1-of/JJ) (NNS XXX)))'],
+                    ':op2/E': ['empty'],
+                    u':ARG2/VP': [u'(VP (VBG XXX) (:op1/NP))'],
+                    u':ARG1-of/JJ': [u'(JJ XXX)'],
+                    ':ARG2/E': ['empty'],
+                    u':ARG1/CC': [u'(CC XXX)'],
+                    u':manner/PP': [u'(PP (TO to) (NP (NP (DT the) (NN XXX)) (:ARG2/VP)))'],
+                    ':ARG1/E': ['empty'],
+                    ':ARG0/E': ['empty', 'empty', 'empty'],
+                    u':ARG2/S': [u'(S (VP (TO to) (VP (VB XXX) (:manner/PP))))']
+                },
+                'adjoining':{}
+            }}
+
+        self.assertDictEqual(original, {'tag':tag, 'ltag':ltag})
 
 if __name__ == '__main__':
     unittest.main()
