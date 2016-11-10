@@ -50,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RuleInducerTest.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="RuleInducerTest.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/RuleInducerTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1853" max-vertical-offset="6825">
-              <caret line="759" column="79" selection-start-line="759" selection-start-column="79" selection-end-line="759" selection-end-column="79" />
+            <state vertical-scroll-proportion="0.8897059" vertical-offset="1343" max-vertical-offset="2340">
+              <caret line="1040" column="33" selection-start-line="1040" selection-start-column="33" selection-end-line="1040" selection-end-column="33" />
               <folding>
                 <element signature="e#37#52#0" expanded="true" />
                 <element signature="e#685#1779#0" expanded="false" />
@@ -70,15 +70,19 @@
                 <element signature="e#22144#24258#0" expanded="false" />
                 <element signature="e#24294#28405#0" expanded="false" />
                 <element signature="e#28441#31831#0" expanded="false" />
+                <element signature="e#31867#37745#0" expanded="false" />
+                <element signature="e#37781#41819#0" expanded="false" />
+                <element signature="e#41855#45721#0" expanded="false" />
+                <element signature="e#45757#49054#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RuleInducer.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="RuleInducer.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/RuleInducer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.086134456" vertical-offset="458" max-vertical-offset="3165">
+            <state vertical-scroll-proportion="0.0" vertical-offset="458" max-vertical-offset="3165">
               <caret line="68" column="25" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
               <folding>
                 <element signature="e#1017#1940#0" expanded="false" />
@@ -134,8 +138,8 @@
         <option value="$PROJECT_DIR$/test/AlignerTest.py" />
         <option value="$PROJECT_DIR$/main/Aligner.py" />
         <option value="$PROJECT_DIR$/main/test.py" />
-        <option value="$PROJECT_DIR$/test/RuleInducerTest.py" />
         <option value="$PROJECT_DIR$/main/RuleInducer.py" />
+        <option value="$PROJECT_DIR$/test/RuleInducerTest.py" />
       </list>
     </option>
   </component>
@@ -1217,10 +1221,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main/RuleInducer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="458" max-vertical-offset="3165">
+          <caret line="68" column="25" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
+          <folding>
+            <element signature="e#1017#1940#0" expanded="false" />
+            <element signature="e#2079#2269#0" expanded="false" />
+            <element signature="e#2380#3108#0" expanded="false" />
+            <element signature="e#3177#3761#0" expanded="false" />
+            <element signature="e#7776#8383#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/RuleInducerTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1853" max-vertical-offset="6825">
-          <caret line="759" column="79" selection-start-line="759" selection-start-column="79" selection-end-line="759" selection-end-column="79" />
+        <state vertical-scroll-proportion="0.8897059" vertical-offset="1343" max-vertical-offset="2340">
+          <caret line="1040" column="33" selection-start-line="1040" selection-start-column="33" selection-end-line="1040" selection-end-column="33" />
           <folding>
             <element signature="e#37#52#0" expanded="true" />
             <element signature="e#685#1779#0" expanded="false" />
@@ -1236,20 +1254,10 @@
             <element signature="e#22144#24258#0" expanded="false" />
             <element signature="e#24294#28405#0" expanded="false" />
             <element signature="e#28441#31831#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/RuleInducer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.086134456" vertical-offset="458" max-vertical-offset="3165">
-          <caret line="68" column="25" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
-          <folding>
-            <element signature="e#1017#1940#0" expanded="false" />
-            <element signature="e#2079#2269#0" expanded="false" />
-            <element signature="e#2380#3108#0" expanded="false" />
-            <element signature="e#3177#3761#0" expanded="false" />
-            <element signature="e#7776#8383#0" expanded="false" />
+            <element signature="e#31867#37745#0" expanded="false" />
+            <element signature="e#37781#41819#0" expanded="false" />
+            <element signature="e#41855#45721#0" expanded="false" />
+            <element signature="e#45757#49054#0" expanded="false" />
           </folding>
         </state>
       </provider>
