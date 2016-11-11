@@ -10,12 +10,13 @@ Description:
 import copy
 
 class RuleInducer(object):
-    def __init__(self, text, amr, tree, alignments):
+    def __init__(self, text, amr, info, alignments):
         self.text = text
         self.tokens = text.split()
         self.amr = amr
-        self.tree = tree
+        self.tree = info['parse']
         self.alignments = alignments
+        self.info = info
 
     def get_rules(self):
         rule_id = 1
@@ -24,7 +25,7 @@ class RuleInducer(object):
             id2alignment[rule_id] = align
 
             # Initializing subtrees with their heads
-            id2subtrees[rule_id] = {'tree':{}, 'nodes':{}, 'head':[], 'root':'', 'info':{}}
+            id2subtrees[rule_id] = {'tree':{}, 'nodes':{}, 'head':[], 'root':'', 'info':{'type':'verb', 'pos':[], 'tokens':[]}}
             id2subtrees[rule_id]['head'].append(align['edges'][0][1])
             id2subtrees[rule_id]['head'].extend(map(lambda x: x[0], align['edges'][1:]))
 
@@ -137,10 +138,28 @@ class RuleInducer(object):
                         head = self.nodes[edge]['label']
             return head
 
+        def get_verb_info(root, label):
+            # Extract verb information
+            id2subtree[label]['info']['type'] = 'verb'
+            id2subtree[label]['info']['pos'].insert(0, self.nodes[root]['name'])
+            try:
+                id2subtree[label]['info']['tokens'].insert(0, self.nodes[root]['lexicon'])
+            except:
+                print self.nodes[root]
+
+            if len(self.nodes[root]['name']) == 3:
+                self.nodes[root]['name'] = self.nodes[root]['name'][:-1]
+            self.nodes[root]['lexicon'] = self.info['lemmas'][self.info['tokens'].index(self.nodes[root]['lexicon'])]
+
+            return id2subtree[label]['info']
+
         self.nodes[root]['label'] = -1
         if self.nodes[root]['type'] == 'terminal':
             for label in id2alignment:
                 if self.nodes[root]['value'] in id2alignment[label]['tokens']:
+                    if 'VB' in self.nodes[root]['name']:
+                        id2subtree[label]['info'] = get_verb_info(root, label)
+
                     update_rule(root, label)
                     break
         else:
@@ -154,6 +173,13 @@ class RuleInducer(object):
             if root == 1:
                 update_rule(root, head_label)
             elif len(set(labels)) == 1 and labels[0] > -1:
+                # Extract tense of the verb in case of a verb phrase
+                if self.nodes[root]['name'] == 'VP':
+                    for edge in self.tree[root]:
+                        if 'VB' in self.nodes[edge]['name'] and self.nodes[edge]['type'] == 'terminal' and self.nodes[edge]['label'] == -1:
+                            id2subtree[labels[0]]['info'] = get_verb_info(edge, labels[0])
+                            break
+
                 # Extract adjoining rules
                 id2adjtree, isAdjoined = create_adjoining(labels[0], id2adjtree)
 
@@ -177,6 +203,13 @@ class RuleInducer(object):
                         self._id = self._id + 1
 
                 if head > -1:
+                    # Extract tense of the verb in case of a verb phrase
+                    if self.nodes[root]['name'] == 'VP':
+                        for edge in self.tree[root]:
+                            if 'VB' in self.nodes[edge]['name'] and self.nodes[edge]['type'] == 'terminal' and self.nodes[edge]['label'] == -1:
+                                id2subtree[head]['info'] = get_verb_info(edge, head)
+                                break
+
                     # Extract adjoining rules
                     id2adjtree, isAdjoined = create_adjoining(head, id2adjtree)
 
