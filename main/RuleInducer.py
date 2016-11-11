@@ -24,7 +24,7 @@ class RuleInducer(object):
             id2alignment[rule_id] = align
 
             # Initializing subtrees with their heads
-            id2subtrees[rule_id] = {'tree':{}, 'nodes':{}, 'head':[], 'root':''}
+            id2subtrees[rule_id] = {'tree':{}, 'nodes':{}, 'head':[], 'root':'', 'info':{}}
             id2subtrees[rule_id]['head'].append(align['edges'][0][1])
             id2subtrees[rule_id]['head'].extend(map(lambda x: x[0], align['edges'][1:]))
 
@@ -121,6 +121,13 @@ class RuleInducer(object):
             return id2adjtree, isAdjoined
 
         def get_head(root, labels):
+            # preference for root_label: always get the head of the sentence
+            preference = self.nodes[root]['name'][0]
+            if preference == 'S':
+                preference = 'V'
+            elif preference == 'A':
+                preference = 'J'
+
             head = -1
             if head_label in set(labels):
                 head = head_label
@@ -154,13 +161,6 @@ class RuleInducer(object):
                     label = labels[0]
                     update_rule(root, label)
             elif len(set(labels)) > 1:
-                # preference for root_label: always get the head of the sentence
-                preference = self.nodes[root]['name'][0]
-                if preference == 'S':
-                    preference = 'V'
-                elif preference == 'A':
-                    preference = 'J'
-
                 # Find the head of the subtree (the most right element from a specific type)
                 head = get_head(root, labels)
 
