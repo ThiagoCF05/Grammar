@@ -24,7 +24,7 @@ class RuleInducer(object):
             id2alignment[rule_id] = align
 
             # Initializing subtrees with their heads
-            id2subtrees[rule_id] = {'tree':{}, 'nodes':{}, 'head':[], 'root':''}
+            id2subtrees[rule_id] = {'tree':{}, 'nodes':{}, 'head':[], 'root':'', 'info':{}}
             id2subtrees[rule_id]['head'].append(align['edges'][0][1])
             id2subtrees[rule_id]['head'].extend(map(lambda x: x[0], align['edges'][1:]))
 
@@ -73,6 +73,10 @@ class RuleInducer(object):
             if should_label:
                 self.nodes[root]['label'] = label
 
+                id2subtree[label]['root'] = root
+                rule_name = id2alignment[self.nodes[root]['label']]['edges'][0][0]+'/'+self.nodes[root]['name']
+                id2rule[self.nodes[root]['label']] = rule_name
+
             if root not in id2subtree[label]['nodes']:
                 id2subtree[label]['nodes'][root] = copy.copy(self.nodes[root])
                 id2subtree[label]['tree'][root] = copy.copy(self.tree[root])
@@ -83,25 +87,55 @@ class RuleInducer(object):
                 del self.tree[edge]
             self.tree[root] = []
 
-            if should_label:
-                id2subtree[label]['root'] = root
-                rule_name = id2alignment[self.nodes[root]['label']]['edges'][0][0]+'/'+self.nodes[root]['name']
-                id2rule[self.nodes[root]['label']] = rule_name
+        def create_adjoining(head, id2adjtree):
+            def create(root, adj_edge, adjtree):
+                adjtree['nodes'][root] = copy.copy(self.nodes[root])
+                adjtree['tree'][root] = []
+                for edge in self.tree[root]:
+                    adjtree['tree'][root].append(edge)
+                    if edge != adj_edge:
+                        adjtree = create(edge, adj_edge, adjtree)
+                    else:
+                        adjtree['nodes'][edge] = copy.copy(self.nodes[edge])
+                        adjtree['nodes'][edge]['name'] += '*'
+                        adjtree['tree'][edge] = []
+                del self.nodes[root]
+                del self.tree[root]
+                return adjtree
 
-        def create_adjoining(root, adj_edge, adjtree):
-            adjtree['nodes'][root] = copy.copy(self.nodes[root])
-            adjtree['tree'][root] = []
+            isAdjoined = False
             for edge in self.tree[root]:
-                adjtree['tree'][root].append(edge)
-                if edge != adj_edge:
-                    adjtree = create_adjoining(edge, adj_edge, adjtree)
-                else:
-                    adjtree['nodes'][edge] = copy.copy(self.nodes[edge])
-                    adjtree['nodes'][edge]['name'] += '*'
-                    adjtree['tree'][edge] = []
-            del self.nodes[root]
-            del self.tree[root]
-            return adjtree
+                if self.nodes[root]['name'] == self.nodes[edge]['name']:
+                    parent = self.nodes[root]['parent']
+
+                    adjtree = {'nodes':{}, 'tree':{}, 'root':root}
+                    adjtree = create(root, edge, adjtree)
+
+                    if head not in id2adjtree:
+                        id2adjtree[head] = []
+                    id2adjtree[head].append(adjtree)
+
+                    self.tree[parent][self.tree[parent].index(root)] = edge
+                    isAdjoined = True
+                    break
+            return id2adjtree, isAdjoined
+
+        def get_head(root, labels):
+            # preference for root_label: always get the head of the sentence
+            preference = self.nodes[root]['name'][0]
+            if preference == 'S':
+                preference = 'V'
+            elif preference == 'A':
+                preference = 'J'
+
+            head = -1
+            if head_label in set(labels):
+                head = head_label
+            else:
+                for edge in self.tree[root]:
+                    if self.nodes[edge]['name'][0] == preference:
+                        head = self.nodes[edge]['label']
+            return head
 
         self.nodes[root]['label'] = -1
         if self.nodes[root]['type'] == 'terminal':
@@ -121,41 +155,14 @@ class RuleInducer(object):
                 update_rule(root, head_label)
             elif len(set(labels)) == 1 and labels[0] > -1:
                 # Extract adjoining rules
-                isAdjoined = False
-                for edge in self.tree[root]:
-                    if self.nodes[root]['name'] == self.nodes[edge]['name']:
-                        parent = self.nodes[root]['parent']
-
-                        adjtree = {'nodes':{}, 'tree':{}, 'root':root}
-                        adjtree = create_adjoining(root, edge, adjtree)
-
-                        if labels[0] not in id2adjtree:
-                            id2adjtree[labels[0]] = []
-                        id2adjtree[labels[0]].append(adjtree)
-
-                        self.tree[parent][self.tree[parent].index(root)] = edge
-                        isAdjoined = True
-                        break
+                id2adjtree, isAdjoined = create_adjoining(labels[0], id2adjtree)
 
                 if not isAdjoined:
                     label = labels[0]
                     update_rule(root, label)
             elif len(set(labels)) > 1:
-                # preference for root_label: always get the head of the sentence
-                preference = self.nodes[root]['name'][0]
-                if preference == 'S':
-                    preference = 'V'
-                elif preference == 'A':
-                    preference = 'J'
-
                 # Find the head of the subtree (the most right element from a specific type)
-                head = -1
-                if head_label in set(labels):
-                    head = head_label
-                else:
-                    for edge in self.tree[root]:
-                        if self.nodes[edge]['name'][0] == preference:
-                            head = self.nodes[edge]['label']
+                head = get_head(root, labels)
 
                 for edge in self.tree[root]:
                     if self.nodes[edge]['label'] not in [-1, head]:
@@ -171,21 +178,7 @@ class RuleInducer(object):
 
                 if head > -1:
                     # Extract adjoining rules
-                    isAdjoined = False
-                    for edge in self.tree[root]:
-                        if self.nodes[root]['name'] == self.nodes[edge]['name']:
-                            parent = self.nodes[root]['parent']
-
-                            adjtree = {'nodes':{}, 'tree':{}, 'root':root}
-                            adjtree = create_adjoining(root, edge, adjtree)
-
-                            if head not in id2adjtree:
-                                id2adjtree[head] = []
-                            id2adjtree[head].append(adjtree)
-
-                            self.tree[parent][self.tree[parent].index(root)] = edge
-                            isAdjoined = True
-                            break
+                    id2adjtree, isAdjoined = create_adjoining(head, id2adjtree)
 
                     if not isAdjoined:
                         update_rule(root, head)
