@@ -1,0 +1,7259 @@
+:root/ROOT	12608
+(VP (VB be) (VP*))	2123
+(VP (VB have) (VP*))	877
+(VP (VB do) (:polarity/RB) (VP*))	535
+(VP (MD will) (VP*))	444
+(VP (MD would) (VP*))	384
+(VP (TO to) (VP*))	360
+(NP (NP*) (:ARG1/PP))	294
+(NP (NP*) (SBAR))	130
+(NP (NP*) (:ARG2/PP))	109
+(VP (VB be) (:mod/ADVP) (VP*))	103
+(VP (VB be) (:polarity/RB) (VP*))	102
+(VP (VP*) (:ARG1/CC) (:op2/VP))	84
+(NP (NP*) (PP))	79
+(NP (NP*) (:ARG0-of/SBAR))	75
+(NP (NP*) (: ...))	73
+(NP (NP*) (:ARG0/PP))	72
+(VP (VB do) (VP*))	70
+(NP (NP*) (:location/PP))	67
+(VP (MD XXX) (VP*))	57
+(NP (NP*) (:ARG1-of/SBAR))	57
+(VP (VB be) (:time/ADVP) (VP*))	54
+(VP (VB have) (:polarity/RB) (VP*))	54
+(NP (NP*) (NP))	52
+(NP (NP*) (:op2/PP))	51
+(VP (VB have) (:time/ADVP) (VP*))	50
+(VP (MD 'll) (VP*))	48
+(NP (NP*) (:ARG1/SBAR))	47
+(NP (NP*) (:mod/PP))	46
+(VP (:ARG0-of/VB) (VP*))	43
+(NP (NP*) (VP))	41
+(VP (:ARG0/VB) (VP*))	41
+(VP (MD will) (:polarity/RB) (VP*))	39
+(VP (MD would) (:polarity/RB) (VP*))	38
+(NP (NP*) (:topic/PP))	38
+(VP (VP*) (CC XXX) (:op2/VP))	37
+(VP (:ARG1/VB) (VP*))	36
+(VP (:ARG1/MD) (VP*))	34
+(VP (:op1/VP) (CC XXX) (VP*))	34
+(NP (NP*) (:ARG1-of/PP))	33
+(VP (:polite/VB) (VP*))	33
+(VP (TO XXX) (VP*))	32
+(NP (NP*) (:ARG1-of/VP))	31
+(NP (NP*) (:op1/PP))	31
+(S (S*) (:ARG1/CC) (:op2/S) (. .))	30
+(NP (NP*) (. .))	30
+(NP (NP*) (:poss/PP))	28
+(VP (VB have) (:mod/ADVP) (VP*))	28
+(NP (NP*) (: --))	26
+(VP (MD will) (:mod/ADVP) (VP*))	26
+(S (S*) (. .))	25
+(VP (VB have) (ADVP (RB never)) (VP*))	24
+(VP (VP*) (:ARG2/CC) (:op2/VP))	24
+(VP (VB XXX) (VP*))	23
+(NP (NP*) (: :))	21
+(NP (NP*) (:ARG2/PP) (. .))	21
+(S (S*) (, ,) (:ARG0/NP) (:ARG1/VP) (. .))	21
+(NP (NP*) (:ARG1/NP) (. .))	21
+(VP (MD would) (:mod/ADVP) (VP*))	21
+(NP (:op1/NP) (: ;) (NP*))	21
+(S (S*) (:ARG0/NP) (:ARG1-of/VP) (. .))	21
+(VP (:ARG1-of/MD) (VP*))	20
+(VP (VB dont) (VP*))	19
+(VP (VB be) (:degree/ADVP) (VP*))	19
+(S (S*) (:ARG1/VP) (. .))	19
+(NP (NP*) (:ARG1/PP) (. .))	19
+(NP (NP*) (:ARG1/NP))	19
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NN RU)) (-RRB- -RRB-)))	18
+(NP (NP*) (NP) (. .))	18
+(NP (NP*) (:time/PP))	18
+(NP (NP*) (:part-of/PP))	18
+(NP (:op1/NP) (CC XXX) (NP*))	17
+(NP (NP*) (:mod/NP))	17
+(VP (MD will) (:time/ADVP) (VP*))	16
+(S (:ARG1/S) (, ,) (CC XXX) (S*) (. .))	15
+(VP (VB have) (:ARG1-of/ADVP) (VP*))	15
+(NP (NP*) (:beneficiary/PP))	15
+(VP (VB be) (:ARG1-of/ADVP) (VP*))	14
+(NP (NP*) (:source/PP))	14
+(NP (:mod/NP) (NP*))	14
+(S (S*) (, ,) (IN so) (:ARG1/S) (. .))	14
+(NP (NP*) (:compared-to/PP))	14
+(VP (:op1/VB) (VP*))	14
+(S (S*) (, ,) (CC but) (:concession-of/S) (. .))	14
+(VP (TO na) (VP*))	13
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP IR)) (-RRB- -RRB-)))	13
+(S (S*) (:ARG1/CC) (:ARG2/S) (. .))	13
+(S (S*) (, ,) (CC XXX) (:ARG2/S) (. .))	13
+(S (S*) (CC but) (:concession-of/S) (. .))	13
+(VP (:op2/MD) (VP*))	12
+(NP (NP*) (:ARG0-of/VP))	12
+(VP (VB be) (:manner/ADVP) (VP*))	12
+(NP (NP*) (:purpose/PP))	12
+(NP (NP*) (:ARG2/SBAR))	12
+(VP (:op1/VP) (:ARG1/CC) (VP*))	12
+(VP (TO To) (VP*))	12
+(VP (:op2/VB) (VP*))	12
+(NP (NP*) (:ARG3/PP))	12
+(S (S*) (, ,) (CC but) (:concession/S) (. .))	11
+(VP (:ARG2/MD) (VP*))	11
+(NP (:mod/INTJ) (NP*))	11
+(VP (MD will) (ADVP (RB never)) (VP*))	11
+(NP (NP*) (, ,) (NP))	11
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP AF)) (-RRB- -RRB-)))	11
+(NP (:ARG1/NP) (CC XXX) (NP*))	11
+(NP (NP*) (:ARG1/VP))	11
+(VP (VB get) (VP*))	11
+(NP (:mod/NP) (NP*) (. .))	11
+(NP (NP*) (:domain/PP))	10
+(NP (NP*) (:ARG0/SBAR))	10
+(VP (:ARG2/VB) (VP*))	10
+(S (:op1/S) (, ,) (CC XXX) (S*) (. .))	10
+(NP (NP*) (:ARG2-of/PP))	10
+(VP (VP*) (:ARG1/CC) (:ARG1-of/VP))	10
+(NP (NP*) (, ,) (NP) (. .))	10
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP GB)) (-RRB- -RRB-)))	10
+(NP (:op2/NP) (: ;) (NP*))	10
+(NP (NP*) (CC XXX) (:op2/NP))	10
+(S (S*) (, ,) (:ARG1/CC) (:op2/S) (. .))	10
+(S (:ARG1/S) (CC XXX) (S*) (. .))	10
+(NP (NP*) (VP) (. .))	9
+(S (S*) (:ARG1/CC) (:ARG1/S) (. .))	9
+(NP (:domain/NP) (NP*))	9
+(S (:op1/S) (CC XXX) (S*) (. .))	9
+(VP (:ARG0/LS) (VP*))	9
+(NP (NP*) (:consist-of/PP))	9
+(NP (:time/NP) (NP*) (: --))	9
+(VP (VP*) (CC and) (:ARG1/VP))	9
+(VP (VB be) (ADVP (RB simply)) (VP*))	9
+(S (S*) (, ,) (:ARG0/NP) (:ARG1-of/VP) (. .))	9
+(S (S*) (, ,) (:ARG0/CC) (:op2/S) (. .))	9
+(VP (VB do) (RB n't) (VP*))	9
+(S (S*) (, ,) (:ARG0/NP) (:ARG2/VP) (. .))	9
+(S (S*) (CC but) (:concession/S) (. .))	9
+(X (X*) (NP))	9
+(VP (VP*) (CC and) (:op2/VP))	9
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NN CN)) (-RRB- -RRB-)))	9
+(NP (NP*) (:op2/NP) (. .))	9
+(NP (:ARG1-of/NP) (NP*) (. .))	9
+(VP (:op1/MD) (VP*))	9
+(VP (VB do) (:polarity/RB) (ADVP (RB really)) (VP*))	9
+(NP (NP*) (:op2/SBAR))	9
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP VN)) (-RRB- -RRB-)))	8
+(VP (VB have) (:manner/ADVP) (VP*))	8
+(S (S*) (: :) (:ARG1/S) (. .))	8
+(S (S*) (:ARG1-of/CC) (:ARG2/S) (. .))	8
+(VP (VB do) (:polarity/RB) (:mod/ADVP) (VP*))	8
+(S (S*) (: -) (:ARG1/S) (. .))	8
+(NP (:ARG1/NP) (NP*) (. .))	8
+(NP (:ARG0/NP) (NP*) (. .))	8
+(NP (NP*) (:mod/ADJP))	8
+(NP (NP*) (PRN (-LRB- -LRB-) (PP (IN IN)) (-RRB- -RRB-)))	8
+(S (S*) (CC but) (:ARG1/S) (. .))	8
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP JP)) (-RRB- -RRB-)))	8
+(S (S*) (, ,) (:ARG1/NP) (:ARG1/VP) (. .))	8
+(S (S*) (:ARG2/CC) (:op2/S) (. .))	8
+(NP (NP*) (:time/SBAR))	8
+(VP (:ARG1/VB) (:polarity/RB) (VP*))	8
+(VP (VP*) (, ,) (CC XXX) (:op2/VP))	8
+(VP (:ARG1-of/VB) (:polarity/RB) (VP*))	8
+(VP (:ARG1-of/VB) (VP*))	8
+(VP (:ARG1-of/MD) (:polarity/RB) (VP*))	7
+(S (S*) (, ,) (:ARG1/NP) (:ARG2/VP) (. .))	7
+(VP (MD XXX) (:polarity/RB) (VP*))	7
+(NP (NP*) (ADJP))	7
+(S (S*) (, ,) (:ARG2/CC) (:op2/S) (. .))	7
+(NP (:ARG1/NP) (, ,) (NP*))	7
+(NP (NP*) (PP) (. .))	7
+(VP (VP*) (CC but) (:concession-of/VP))	7
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NN IR)) (-RRB- -RRB-)))	7
+(S (S*) (:ARG0/NP) (:ARG1/VP) (. .))	7
+(S (S*) (:ARG1/CC) (:ARG1-of/S) (. .))	7
+(NP (NP*) (:ARG0-of/PP))	7
+(NP (:ARG1/NP) (NP*))	7
+(VP (VP*) (:purpose/CC) (:op2/VP))	7
+(VP (VP*) (CC and) (:ARG1-of/VP))	7
+(VP (:ARG1/VP) (, ,) (CC XXX) (VP*))	7
+(PP (IN As) (PP*))	6
+(S (S*) (, ,) (CC but) (:ARG1/S) (. .))	6
+(NP (NP*) (:op2/NP))	6
+(NP (NP*) (:op3/PP))	6
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP SA)) (-RRB- -RRB-)))	6
+(VP (VP*) (CC but) (:ARG1/VP))	6
+(VP (VP*) (, ,) (:ARG1/CC) (:op2/VP))	6
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NN KP)) (-RRB- -RRB-)))	6
+(VP (VP*) (:ARG1/CC) (:ARG1/VP))	6
+(VP (VP*) (:op1/CC) (:op2/VP))	6
+(S (S*) (, ,) (:ARG1-of/CC) (:ARG2/S) (. .))	6
+(NP (NP*) (PP (:time/IN) (:op1/NP)))	6
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP BR)) (-RRB- -RRB-)))	6
+(VP (VB XXX) (:polarity/RB) (VP*))	6
+(S (S*) (, ,) (:ARG1/CC) (:ARG1/S) (. .))	6
+(NP (:quant/NP) (NP*) (. .))	6
+(NP (:op1/NP) (, ,) (NP*))	6
+(PP (VBG According) (PP*))	6
+(VP (:ARG1/VP) (CC XXX) (VP*))	6
+(NP (NP*) (:ARG1/CC) (:op2/NP))	6
+(S (S*) (:ARG0/NP) (:ARG2/VP) (. .))	6
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NN AU)) (-RRB- -RRB-)))	6
+(S (S*) (VP) (. .))	6
+(VP (VP*) (CC and) (:ARG0-of/VP))	6
+(VP (:condition/MD) (VP*))	6
+(VP (VB have) (ADVP (RB previously)) (VP*))	6
+(NP (NP*) (:quant/PP))	6
+(VP (:op1/VP) (, ,) (CC XXX) (VP*))	6
+(NP (NP*) (:op1/NP))	5
+(NP (NP*) (:domain/SBAR))	5
+(NP (NP*) (:ARG2-of/SBAR))	5
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NN MM)) (-RRB- -RRB-)))	5
+(VP (VB let) (VP*))	5
+(NP (NP*) (NP) (. ?))	5
+(NP (NP*) (UCP))	5
+(NP (NP*) (:topic/PP) (. .))	5
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP TW)) (-RRB- -RRB-)))	5
+(VP (MD will) (:ARG1-of/ADVP) (VP*))	5
+(VP (MD would) (ADVP (RB never)) (VP*))	5
+(S (S*) (: :) ('' '') (:ARG1/S) (. .) ('' ''))	5
+(S (S*) (:ARG1/VP) (. ?))	5
+(S (S*) (:ARG0/CC) (:op2/S) (. .))	5
+(NP (NP*) (:ARG2/NP))	5
+(VP (VP*) (:ARG1/CC) (:op3/VP))	5
+(NP (: -) (NP*) (. .))	5
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NN FR)) (-RRB- -RRB-)))	5
+(NP (NP*) (:duration/PP))	5
+(NP (NP*) (: ;) (:op5/NP))	5
+(S (S*) (, ,) (:ARG0/NP) (VP) (. .))	5
+(NP (NP*) (:manner-of/SBAR))	5
+(NP (NP*) (:ARG0/VP))	5
+(VP (:ARG1/MD) (:polarity/RB) (VP*))	5
+(NP (NP*) (:ARG0/PP) (. .))	5
+(VP (MD would) (:time/ADVP) (VP*))	5
+(NP (NP*) (: ;) (:mod/NP) (-RRB- -RSB-))	5
+(PP (VB XXX) (PP*))	5
+(S (S*) (, ,) (CC and) (:ARG1/S) (. .))	5
+(VP (:op1/VP) (:ARG2/CC) (VP*))	5
+(VP (VB be) (ADVP (RB never)) (VP*))	5
+(NP (NP*) (:medium/PP))	5
+(S (S*) (CC and) (:ARG1/S) (. .))	5
+(VP (MD would) (:manner/ADVP) (VP*))	5
+(VP (VB do) (RB not) (VP*))	5
+(S (S*) (:ARG1-of/VP) (. .))	5
+(NP (NP*) (:mod/PP) (. .))	5
+(S (S*) (, ,) (CC but) (:ARG2/S) (. .))	5
+(S (S*) (, ,) (NP (PRP you)) (:ARG1/VP) (. .))	5
+(NP (NP*) (:time-of/SBAR))	5
+(S (S*) (:ARG1/NP) (:ARG1/VP) (. .))	5
+(NP (NP*) (:time/NP-TMP))	5
+(NP (NP*) (, ,) (SBAR))	5
+(NP (:op1/NP) (NP*) (. .))	5
+(NP (:poss/NP) (NP*))	5
+(VP (VP*) (:ARG0/CC) (:op2/VP))	5
+(NP (NP*) (:prep-against/PP))	5
+(NP (NP*) (:prep-for/PP))	4
+(NP (PRP$ its) (NP*))	4
+(S (S*) (CC and) (:ARG0-of/S) (. .))	4
+(S (S*) (CC and) (:op2/S) (. .))	4
+(NP (NP*) (:ARG0-of/VP) (. .))	4
+(NP (NP*) (, ,) (:ARG2/NP) (. .))	4
+(S (S*) (, ,) (NP (EX there)) (:ARG1/VP) (. .))	4
+(VP (VP*) (:ARG1/CC) (:ARG2/VP))	4
+(VP (VB be) (ADVP (RB really)) (VP*))	4
+(VP (VB be) (:frequency/ADVP) (VP*))	4
+(NP (:op1/NP) (:ARG1/CC) (NP*))	4
+(NP (NP*) (:ARG0/CC) (:op2/NP))	4
+(S (S*) (: -) (:op2/S) (. .))	4
+(NP (NP*) (CC XXX) (:ARG1/NP))	4
+(NP (NP*) (:ARG1/NP) (. !))	4
+(NP (NP*) (:ARG1/PP) (: ...))	4
+(NP (NP*) (, ,) (:ARG1/NP))	4
+(S (S*) (VP) (. ?))	4
+(VP (:ARG0-of/VB) (:polarity/RB) (VP*))	4
+(NP (NP*) (:ARG0/NP))	4
+(NP (:ARG1/NP) (: :) (NP*))	4
+(S (S*) (:ARG0/NP) (:ARG1/VP) (. ?))	4
+(NP (NP*) (:prep-in/PP))	4
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP SG)) (-RRB- -RRB-)))	4
+(VP (:time/VB) (VP*))	4
+(S (S*) (:op2/VP) (. .))	4
+(S (S*) (, ,) (:ARG0/NP) (:op2/VP) (. .))	4
+(NP (NP*) (:ARG2/PRN))	4
+(NP (NP*) (:mod/SBAR))	4
+(VP (MD would) (:ARG1-of/ADVP) (VP*))	4
+(S (S*) (, ,) (:ARG1/CC) (:op2/S))	4
+(VP (:ARG0/MD) (VP*))	4
+(NP (:ARG0-of/NP) (NP*))	4
+(NP (NP*) (:ARG2/NP) (. .))	4
+(S (:ARG2/S) (, ,) (CC but) (S*) (. .))	4
+(NP (NP*) (NP) (. !))	4
+(S (S*) (: ;) (:ARG1/S) (. .))	4
+(NP (:mod/NP) (, ,) (NP*) (. .))	4
+(NP (NP*) (. ?))	4
+(S (S*) (:ARG1/VP))	4
+(VP (VP*) (:ARG3/CC) (:op2/VP))	4
+(NP (NP*) (ADVP))	4
+(S (S*) (, ,) (:ARG0/NP) (:ARG0/VP) (. .))	4
+(NP (NP*) (:op1/SBAR))	4
+(NP (NP*) (:location/SBAR))	4
+(NP (NP*) (:location/PP) (. .))	4
+(VP (VP*) (CC and) (:op3/VP))	4
+(NP (NP*) (:poss/PP) (. .))	4
+(S (S*) (. !))	4
+(S (S*) (, ,) (:ARG1/CC) (:ARG2/S) (. .))	4
+(NP (:domain/NP) (NP*) (. .))	4
+(S (S*) (, ,) (NP (PRP they)) (:ARG1/VP) (. .))	4
+(S (S*) (: ...) (: ...) (. .))	4
+(NP (NP*) (: ;) (:op3/NP))	4
+(S (S*) (CC and) (:ARG1-of/S) (. .))	4
+(NP (:ARG0-of/NP) (NP*) (. .))	3
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP KR)) (-RRB- -RRB-)))	3
+(NP (NP*) (:purpose/PP) (. .))	3
+(S (S*) (, ,) (NP (PRP it)) (:ARG1/VP) (. .))	3
+(VP (:ARG2-of/VB) (VP*))	3
+(VP (:condition/VB) (VP*))	3
+(VP (VP*) (:ARG1/CC) (:ARG0/VP))	3
+(VP (VB have) (:polarity/RB) (:mod/ADVP) (VP*))	3
+(S (:ARG2/S) (, ,) (CC XXX) (S*) (. .))	3
+(S (S*) (, ,) (CC XXX) (:ARG1/S) (. .))	3
+(NP (NP*) (: :) (:ARG2/NP))	3
+(NP (NP*) (:ARG2/PP) (. !))	3
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP MY)) (-RRB- -RRB-)))	3
+(NP (NP*) (SBAR) (. .))	3
+(VP (:op1/MD) (:polarity/RB) (VP*))	3
+(VP (VP*) (:location/CC) (:op2/VP))	3
+(S (S*) (, ,) (CC but) (:mod/S) (. .))	3
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP NP)) (-RRB- -RRB-)))	3
+(NP (NP*) (:ARG2/CC) (:op2/NP))	3
+(NP (NP*) (NNS XXX))	3
+(S (S*) (: :) (:op2/S) (. .))	3
+(NP (NP*) (: -) (NP))	3
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP MX)) (-RRB- -RRB-)))	3
+(VP (:op1/VB) (:polarity/RB) (VP*))	3
+(NP (:quant/NP) (NP*))	3
+(S (S*) (, ,) (CC and) (:op3/S) (. .))	3
+(NP (:mod/NP) (, ,) (NP*))	3
+(S (S*) (:ARG1/CC) (:op3/S) (. .))	3
+(S (S*) (:ARG1/NP) (:topic/VP) (. .))	3
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP BG)) (-RRB- -RRB-)))	3
+(S (S*) (:ARG0/NP) (VP) (. ?))	3
+(VP (VB didnt) (VP*))	3
+(S (:ARG1/S) (:polarity/:) (S*) (. .))	3
+(NP (NP*) (:ARG2-of/VP))	3
+(S (S*) (:ARG0/NP) (:ARG1-of/VP))	3
+(ADJP (ADJP*) (:ARG0/PP))	3
+(S (S*) (, ,) (CC and) (:op2/S) (. .))	3
+(S (S*) (CC XXX) (:op2/S) (. .))	3
+(NP (NP*) (:location/PP) (. ?))	3
+(ADJP (ADJP*) (:ARG1/SBAR))	3
+(S (S*) (:ARG2/CC) (:op2/S))	3
+(VP (VB wont) (VP*))	3
+(NP (NP*) (:ARG1/PP) (:ARG0-of/SBAR))	3
+(S (:op1/S) (:ARG1/CC) (S*))	3
+(NP (NP*) (:ARG0/NP) (. .))	3
+(SBAR (SBAR*) (, ,) (CC XXX) (:ARG2/SBAR))	3
+(NP (NP*) (:prep-with/PP))	3
+(NP (:time/NP) (NP*))	3
+(VP (MD can) (:polarity/RB) (VP*))	3
+(S (S*) (: ;) (S) (. .))	3
+(ADVP (ADVP*) (SBAR))	3
+(NP (NP*) (, ,) (:ARG1/SBAR))	3
+(S (S*) (:ARG1-of/VP))	3
+(NP (NP*) (:purpose/SBAR))	3
+(S (S*) (:ARG2/VP) (. .))	3
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP IQ)) (-RRB- -RRB-)))	3
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP PH)) (-RRB- -RRB-)))	3
+(NP (NP*) (:mod/VP))	3
+(NP (:time/NP) (, ,) (NP*))	3
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP EE)) (-RRB- -RRB-)))	3
+(NP (:op4/NP) (: ;) (NP*))	3
+(NP (NP*) (:ARG3/NP))	3
+(NP (NP*) (:ARG1/PP) (. ?))	3
+(NP (NP*) (: ;))	3
+(NP (NP*) (NN XXX))	3
+(VP (VP*) (CC and) (:ARG2-of/VP))	3
+(NP (NP*) (:location/ADVP))	3
+(S (S*) (:domain/CC) (:op2/S) (. .))	3
+(NP (NP*) (:mod/NP) (. .))	3
+(VP (MD shall) (VP*))	3
+(SQ (S) (, ,) (SQ*) (. ?))	3
+(VP (MD will) (:manner/ADVP) (VP*))	3
+(VP (:beneficiary/VB) (VP*))	3
+(NP (:time/NP) (: --) (NP*) (. .))	3
+(S (:ARG1/S) (: -) (S*) (. .))	3
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP IT)) (-RRB- -RRB-)))	3
+(S (S*) (:ARG0/NP) (:ARG0/VP) (. .))	3
+(NP (NP*) (:ARG1-of/SBAR) (. .))	3
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP PK)) (-RRB- -RRB-)))	3
+(NP (NP*) (:ARG1-of/PP) (. .))	3
+(VP (VP*) (, ,) (:ARG1-of/VP))	3
+(S (S*) (:ARG1/NP) (:ARG1-of/VP) (. .))	3
+(NP (:domain/PRP$) (NP*))	3
+(S (:op1/S) (CC XXX) (S*))	3
+(NP (NP*) (:manner-of/PP))	3
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NN DE)) (-RRB- -RRB-)))	3
+(NP (NP*) (NP (CD !!!)))	3
+(NP (:ARG2/NP) (NP*) (. .))	3
+(VP (VP*) (, ,) (CC but) (:ARG1/VP))	3
+(VP (VP*) (:op2/CC) (:op2/VP))	3
+(S (S*) (: -) (:ARG1-of/S) (. .))	3
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP US)) (-RRB- -RRB-)))	3
+(NP (:ARG2/NP) (: :) (NP*))	3
+(S (:op2/S) (, ,) (CC XXX) (S*))	3
+(S (S*) (, ,) (:domain/NP) (:ARG1/VP) (. .))	3
+(NP (NP*) (CC XXX) (:ARG0/NP))	3
+(NP (NP*) (:example/PP))	3
+(NP (:op3/NP) (: ;) (NP*) (: ;) (:op6/NP))	3
+(VP (VB be) (ADVP (RB later)) (VP*))	3
+(S (S*) (:polarity/:) (:ARG2/S) (. .))	3
+(ADJP (ADJP*) (:ARG1-of/SBAR))	3
+(NP (NP*) (PRN) (NP (-LRB- -LRB-) (NN IR) (-RRB- -RRB-)))	3
+(S (:ARG1/S) (CC XXX) (S*))	3
+(WHNP (WHNP*) (:topic/PP))	3
+(S (S*) (CC but) (:ARG2/S) (. .))	3
+(VP (VP*) (, ,) (CC but) (:concession-of/VP))	3
+(NP (NP*) (PP (:location/IN) (:op2/NP)))	3
+(S (S*) (: ;) (:concession-of/S) (. .))	3
+(NP (:op1/NP) (NP*))	3
+(VP (VB be) (:polarity/RB) (:mod/ADVP) (VP*))	3
+(NP (:ARG2/NP) (NP*))	3
+(NP (:mod/NP) (, ,) (NP*) (. !))	3
+(S (S*) (:ARG2/VP))	3
+(VP (:ARG2-of/MD) (VP*))	2
+(NP (NP*) (NP) (NP (NN </a>)))	2
+(VP (VB be) (ADVP (RB strongly)) (VP*))	2
+(S (S*) (CC and) (:op3/S) (. .))	2
+(NP (NP*) (, ,) (:ARG1-of/NP))	2
+(VP (VP*) (, ,) (:ARG1/VP))	2
+(S (:ARG1/S) (:ARG1/CC) (S*))	2
+(NP (NP*) (, ,) (:ARG2/NP))	2
+(NP (:ARG1/NP) (NP*) (. ?))	2
+(NP (NP*) (:prep-to/PP))	2
+(S (S*) (, ,) (:location/CC) (:op2/S) (. .))	2
+(SBARQ (:mod/FRAG) (, ,) (SBARQ*) (. ?))	2
+(VP (:ARG4/VB) (VP*))	2
+(S (S*) (, ,) (:ARG0/NP) (:mod/VP) (. .))	2
+(VP (VP*) (:ARG0/CC) (:ARG1/VP))	2
+(S (:mod/ADVP) (, ,) (S*) (. .))	2
+(VP (:location-of/MD) (VP*))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP PE)) (-RRB- -RRB-)))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP LY)) (-RRB- -RRB-)))	2
+(S (:condition/S) (CC and) (S*) (. .))	2
+(VP (VB do) (:ARG0/NP) (VP*))	2
+(NP (NP*) (:ARG1/PP) (:ARG0/PP) (. .))	2
+(VP (VP*) (, ,) (:ARG1/CC) (:op3/VP))	2
+(S (S*) (, ,) (CC XXX) (:op2/S) (. .))	2
+(S (S*) (, ,) (ADVP (RB however)) (:concession-of/S) (. .))	2
+(NP (NP*) (:quant/NP))	2
+(S (S*) (, ,) (RB yet) (:concession/S) (. .))	2
+(S (S*) (, ,) (NP (PRP they)) (:mod/VP) (. .))	2
+(VP (VP*) (: :) (:ARG1/NP))	2
+(NP (NP*) (PRN))	2
+(NP (NP*) (:topic/VP))	2
+(NP (NP*) (:op5/PP))	2
+(SBAR (SBAR*) (:ARG1/CC) (:op2/SBAR))	2
+(NP (NP*) (CC and) (NP))	2
+(NP (NP*) (SBAR (:ARG1/WHNP) (:time/S)))	2
+(VP (VP*) (CC XXX) (:op1/VP))	2
+(VP (VB be) (:ARG3/ADVP) (VP*))	2
+(NP (NP*) (:ARG3/SBAR))	2
+(NP (NP*) (:ARG1-of/NP))	2
+(NP (NP*) (:source/PP) (. .))	2
+(NP (NP*) (:mod/ADVP))	2
+(NP (NP*) (PP (:location/IN) (:op1/NP)) (:ARG1-of/SBAR))	2
+(NP (NP*) (:ARG2/VP) (. .))	2
+(VP (VB be) (`` ``) (VP*))	2
+(VP (VP*) (, ,) (:ARG2/CC) (:op2/VP))	2
+(S (:polarity/RB) (S*) (:ARG1/VP) (. .))	2
+(NP (:op3/NP) (: ;) (NP*))	2
+(S (S*) (CC and) (:op2/S))	2
+(NP (DT the) (NP*))	2
+(S (S*) (, ,) (NP (PRP it)) (:op2/VP) (. .))	2
+(VP (VB be) (:mod/ADVP) (:polarity/RB) (VP*))	2
+(VP (VP*) (:consist-of/CC) (:op2/VP))	2
+(NP (NP*) (:ARG0-of/PRN))	2
+(NP (NP*) (: ;) (:ARG1/NP) (-RRB- -RSB-))	2
+(NP (NP*) (:prep-on/PP))	2
+(NP (:li/NP) (NP*))	2
+(S (:ARG1-of/S) (CC and) (S*))	2
+(S (S*) (, ,) (:ARG2/CC) (:op2/S))	2
+(S (S*) (: ...) (:ARG0-of/S) (. .))	2
+(NP (NP*) (PP (:mod/IN) (:op1/NP)))	2
+(NP (NP*) (:topic/SBAR))	2
+(NP (:op3/NP) (: ;) (:op5/NP) (: ;) (NP*))	2
+(VP (VP*) (CC XXX) (:ARG2/VP))	2
+(NP (NP*) (, ,) (ADVP (RB really)))	2
+(ADJP (ADJP*) (:ARG1/PP))	2
+(NP (NP*) (:manner/PP))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NP (NNP Islamic) (NNP Republic)) (PP (IN of))) (-RRB- -RRB-)) (NP (-LRB- -LRB-) (NN IR) (-RRB- -RRB-)))	2
+(VP (VB be) (ADVP (RB formerly)) (VP*))	2
+(NP (:ARG0/NP) (, ,) (NP*))	2
+(VP (VP*) (CONJP (RB rather) (IN than)) (:ARG2/VP))	2
+(NP (NP*) (:medium/:) (NP (NNP YouTube) (NN </a>)))	2
+(S (S*) (: :) (:ARG0/S) (. .))	2
+(ADJP (ADJP*) (:ARG2/PRN))	2
+(S (S*) (: :) (:ARG2/S) (. .))	2
+(ADJP (ADJP*) (, ,) (:ARG1/SBAR))	2
+(NP (NP*) (NP (CD !!!!!)))	2
+(VP (VP*) (CC but) (:concession/VP))	2
+(S (:op1/S) (: ;) (S*) (. .))	2
+(NP (:ARG0/NP) (NP*))	2
+(S (S*) (, ,) (:ARG1-of/CC) (:ARG1/S) (. .))	2
+(VP (:ARG0/TO) (VP*))	2
+(VP (VB have) (:degree/RB) (VP*))	2
+(NP (:op1/NP) (, ,) (NP*) (. .))	2
+(NP (NP*) (PP (IN on) (NP (NN behalf))) (PP (IN of) (NP (DT the))) (. .))	2
+(ADJP (ADJP*) (:ARG0/SBAR))	2
+(S (S*) (, ,) (NP (PRP you)) (:ARG0/VP) (. .))	2
+(VP (VP*) (, ,) (:ARG1/SBAR))	2
+(NP (NP*) (, ,) (NP (CD 2012)))	2
+(S (:op2/S) (, ,) (CC XXX) (S*) (. .))	2
+(VP (VP*) (CC but) (:ARG2/VP))	2
+(VP (VP*) (:manner/CC) (:op2/VP))	2
+(VP (:op2/VP) (CC XXX) (VP*))	2
+(NP (:ARG0/NP) (:ARG0/CC) (NP*))	2
+(ADJP (ADJP*) (:op2/PP))	2
+(S (S*) (, ,) (RB so) (:ARG1/S) (. .))	2
+(VP (MD should) (VP*))	2
+(VP (VP*) (CC XXX) (:ARG0-of/VP))	2
+(VP (VB be) (ADVP (RB rapidly)) (VP*))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP KZ)) (-RRB- -RRB-)))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NN SE)) (-RRB- -RRB-)))	2
+(VP (MD would) (ADVP (RB certainly)) (VP*))	2
+(NP (NP*) (:op2/PP) (. .))	2
+(S (S*) (NP (PRP you)) (:ARG1-of/VP) (. .))	2
+(NP (NP*) (:beneficiary/PP) (. .))	2
+(NP (NP*) (NP (-LRB- -LRB-) (NN KR) (-RRB- -RRB-)))	2
+(NP (NP*) (: :) (:mod/NP))	2
+(NP (NP*) (, ,) (CC XXX) (:op2/NP))	2
+(NP (NP*) (SBAR (:ARG0/WHNP) (:ARG0-of/S)))	2
+(S (S*) (RB so) (:ARG1/S) (. .))	2
+(S (S*) (, ,) (:ARG0/NP) (:mod/ADVP) (:ARG1/VP) (. .))	2
+(VP (:ARG1-of/VP) (:op1/CC) (VP*))	2
+(NP (NP*) (, ,) (:ARG1-of/VP))	2
+(S (S*) (NP (PRP they)) (:ARG1/VP) (. .))	2
+(S (S*) (, ,) (:ARG0/NP) (:ARG1/VP))	2
+(VP (:ARG1-of/VP) (, ,) (CC XXX) (VP*))	2
+(NP (NP*) (:location/VP))	2
+(NP (:mod/NP) (CC XXX) (NP*))	2
+(S (S*) (CC XXX) (:op2/S) (. ?))	2
+(NP (NP*) (:ARG2/ADJP) (. .))	2
+(VP (VB be) (ADVP (RB fully)) (VP*))	2
+(S (S*) (, ,) (IN so) (:op2/S) (. .))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP EG)) (-RRB- -RRB-)))	2
+(NP (NP*) (:ARG1-of/PP) (:ARG1/SBAR))	2
+(NP (NP*) (CC and) (:op2/NP))	2
+(VP (VB be) (ADVP (RB clearly)) (VP*))	2
+(NP (:li/NP) (NP*) (. !))	2
+(NP (NP*) (:ARG4/PP))	2
+(NP (NP*) (:ARG1-of/ADJP))	2
+(VP (MD 'll) (:mod/ADVP) (VP*))	2
+(NP (:ARG1/NP) (: -) (NP*) (. .))	2
+(NP (INTJ (UH Oh)) (NP*))	2
+(VP (:ARG1/VP) (:ARG1/CC) (VP*))	2
+(S (S*) (NP (PRP we)) (:ARG1-of/VP) (. .))	2
+(S (S*) (, ,) (:ARG1/NP) (:op2/VP) (. .))	2
+(NP (NP*) (, ,) (CC and) (:ARG1-of/NP))	2
+(VP (VB have) (ADVP (RB obviously)) (VP*))	2
+(S (S*) (, ,) (:domain/CC) (:ARG2/S) (. .))	2
+(NP (NP*) (CC XXX) (:op3/NP))	2
+(VP (:ARG0/VB) (ADVP (RB previously)) (VP*))	2
+(PP (:op1/PP) (CC XXX) (PP*))	2
+(NP (NP*) (: :) (:time/NP) (, ,) (:mod/NP) (, ,) (NP (NNP Records)) (, ,) (:mod/NP) (, ,) (:mod/NP) (. .))	2
+(S (S*) (, ,) (RB so) (:ARG1/S))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP CO)) (-RRB- -RRB-)))	2
+(NP (NP*) (:accompanier/PP))	2
+(S (:ARG1-of/S) (:ARG0/CC) (S*) (. .))	2
+(S (S*) (, ,) (:op1/CC) (:op2/S) (. .))	2
+(VP (:ARG1/MD) (:mod/ADVP) (VP*))	2
+(NP (NP*) (VP) (: --))	2
+(VP (VB have) (:ARG2-of/ADVP) (VP*))	2
+(S (S*) (:ARG2/CC) (:time/S))	2
+(NP (NP*) (PP (:poss/IN) (:ARG2/NP)))	2
+(NP (NP*) (X (NN etc.)))	2
+(VP (VB be) (ADVP (RB temporarily)) (VP*))	2
+(S (S*) (:ARG0/CC) (:ARG0/S) (. .))	2
+(VP (VB do) (:polarity/RB) (:degree/ADVP) (VP*))	2
+(NP (:time/NP) (:ARG0/CC) (NP*))	2
+(VP (VP*) (:purpose/CC) (:op3/VP))	2
+(NP (NP*) (: :) (:op1/NP))	2
+(ADJP (:op1/ADJP) (CC XXX) (ADJP*))	2
+(NP (NP-TMP) (:source/:) (NP*))	2
+(VP (VB have) (ADVP (RB so) (RB far)) (VP*))	2
+(NP (:topic/NP) (NP*))	2
+(SBAR (IN that) (SBAR*))	2
+(S (S*) (, ,) (CC but) (:op2/S) (. .))	2
+(NP (:ARG1/NP) (:ARG0/CC) (NP*))	2
+(NP (:ARG3/NP) (:topic/CC) (NP*))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP ID)) (-RRB- -RRB-)))	2
+(NP (NP*) (:medium/:) (NP (NP (NNP Wikipedia)) (, ,) (NP (:ARG1-of/DT) (:mod/JJ) (NN encyclopedia) (NN </a>))))	2
+(VP (VP*) (, ,) (VP))	2
+(NP (NP*) (:time/PP) (. ?))	2
+(NP (:ARG1/NP) (, ,) (CC XXX) (NP*))	2
+(S (S*) (:location/CC) (:op2/S) (. .))	2
+(S (S*) (, ,) (:op2/CC) (:ARG2/S) (. .))	2
+(VP (VB have) (ADVP (RB publicly)) (VP*))	2
+(S (S*) (: -) (:ARG0/S) (. .))	2
+(ADJP (ADJP*) (:ARG1-of/PP))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP al)) (-RRB- -RRB-)))	2
+(NP (NP*) (:ARG1/PP) (:ARG1/PP))	2
+(VP (VP*) (:poss/CC) (:op2/VP))	2
+(S (S*) (:mod/NP) (:ARG1/VP) (. .))	2
+(NP (NP*) (: ;) (:op6/NP))	2
+(S (S*) (: ;) (:ARG0-of/S) (. .))	2
+(NP (NP*) (PP (:location/IN) (:op1/NP)))	2
+(VP (:ARG0/VB) (:polarity/RB) (VP*))	2
+(VP (:ARG3/VB) (VP*))	2
+(S (S*) (: ;) (:ARG1-of/S) (. .))	2
+(VP (VP*) (CC and) (:ARG0/VP))	2
+(NP (:mod/NP) (: :) (NP*) (. .))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP CA)) (-RRB- -RRB-)))	2
+(VP (VP*) (:ARG1-of/CC) (:ARG2/VP))	2
+(NP (:op2/NP) (: :) (NP*))	2
+(NP (:op1/NP) (:ARG2/CC) (NP*))	2
+(ADJP (ADJP*) (:topic/SBAR))	2
+(NP (NP*) (:ARG1/VP) (. .))	2
+(S (S*) (: ;) (:op2/S) (. .))	2
+(S (S*) (, ,) (NP (PRP it)) (:ARG1-of/VP) (. .))	2
+(VP (VB be) (:polarity/ADVP) (VP*))	2
+(NP (:ARG0/NP) (, ,) (CC XXX) (NP*))	2
+(S (S*) (, ,) (:ARG2/CC) (:ARG2/S) (. .))	2
+(S (S*) (, ,) (:domain/NP) (:op2/VP) (. .))	2
+(S (S*) (:polarity/:) (:domain/S) (. .))	2
+(S (S*) (, ,) (IN so) (:ARG0/S) (. .))	2
+(S (S*) (, ,) (VP (VBZ does) (RB n't)) (NP (PRP it)) (. ?))	2
+(VP (VP*) (, ,) (:op1/CC) (:op2/VP))	2
+(S (:ARG1/S) (CC but) (S*) (. .))	2
+(S (S*) (:ARG0-of/VP) (. .))	2
+(ADJP (ADJP*) (:ARG2/PP))	2
+(NP (:location/NP) (NP*))	2
+(S (S*) (:ARG1/CC) (:op1/S) (. .))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NN TH)) (-RRB- -RRB-)))	2
+(NP (NP*) (:time/PP) (:ARG1/SBAR) (. .))	2
+(NP (NP*) (:location/NP) (. .))	2
+(VP (VB be) (ADVP (RB jointly)) (VP*))	2
+(INTJ (:mod/INTJ) (, ,) (INTJ*))	2
+(S (S*) (, ,) (:ARG0/NP) (:ARG1/VP) (. ?))	2
+(ADJP (ADJP*) (:compared-to/SBAR))	2
+(S (S*) (, ,) (:op2/NP) (:ARG1/VP) (. .))	2
+(S (S*) (VP))	2
+(VP (:ARG0-of/VB) (:time/ADVP) (VP*))	2
+(VP (VP*) (:ARG1/CC) (:mod/VP))	2
+(NP (NP*) (PP) (:ARG1/S) (. .))	2
+(S (S*) (: ;) (:ARG0/S) (. .))	2
+(NP (NP*) (:location-of/SBAR))	2
+(S (S*) (, ,) (IN so) (:ARG1/S) (. !))	2
+(NP (NP*) (:ARG1/NP) (. ?))	2
+(ADVP (ADVP*) (:ARG1/PP))	2
+(NP (NP*) (:purpose/SBAR) (. .))	2
+(NP (NP*) (:ARG1/PP) (:ARG1-of/SBAR))	2
+(S (S*) (: :) (:ARG0-of/S) (. .))	2
+(S (S*) (: :) (:domain/S) (. .))	2
+(NP (NP*) (, ,) (:ARG0/NP))	2
+(S (S*) (CC and) (:ARG0/S) (. .))	2
+(NP (NP*) ('' '') (SBAR))	2
+(NP (NP*) (:ARG1-of/VP) (. .))	2
+(S (S*) (:op2/NP) (VP) (. ?))	2
+(VP (MD will) (ADVP (RB really)) (VP*))	2
+(S (:op1/S) (, ,) (:ARG1/CC) (S*) (. .))	2
+(VP (:op1/VP) (, ,) (:op2/VP) (, ,) (VP*))	2
+(NP (NP*) (, ,) (:ARG0-of/NP))	2
+(VP (VB be) (`` `) (VP*))	2
+(S (:ARG1/S) (, ,) (CC but) (S*) (. .))	2
+(NP (NP*) (:location/PP) (:ARG0-of/SBAR))	2
+(S (S*) (: -) (:ARG2/S) (. .))	2
+(NP (NP*) (CC XXX) (:mod/NP))	2
+(VP (VB be) (ADVP (RB allegedly)) (VP*))	2
+(VP (:mod/VB) (VP*))	2
+(NP (NP*) (:ARG1/NN))	2
+(SBAR (:ARG1/IN) (SBAR*))	2
+(VP (VP*) (CC XXX) (:mod/VP))	2
+(S (S*) (:op1/VP))	2
+(S (:op1/S) (: :) (S*) (. .))	2
+(NP (NP*) (:ARG0/:) (NP))	2
+(VP (:op1/VP) (:condition/CC) (VP*))	2
+(VP (VP*) (:ARG1/NP))	2
+(NP (NP*) (CC XXX) (:ARG2/NP))	2
+(VP (:mod/VB) (:mod/ADVP) (VP*))	2
+(S (:op1/S) (, ,) (:op2/S) (, ,) (S*) (. .))	2
+(SBAR (:op1/SBAR) (CC XXX) (SBAR*))	2
+(NP (:poss/NP) (NP*) (. .))	2
+(NP (NP*) (:ARG1/PP) (:time/SBAR))	2
+(NP (:ARG1/NP) (: -) (NP*))	2
+(NP (NP*) (:time-of/PP))	2
+(S (S*) (:ARG1/CC) (:op2/S))	2
+(S (S*) (NP (EX there)) (:ARG2/VP) (. .))	2
+(VP (VP*) (:polarity/RB) (VP))	2
+(S (S*) (: :) (:topic/S) (. .))	2
+(S (S*) (, ,) (:ARG0/NP) (:ARG1/VP) (: ...))	2
+(VP (VB be) (ADVP (RB mostly)) (VP*))	2
+(VP (MD XXX) (:mod/ADVP) (VP*))	2
+(NP (NP*) (, ,) (:ARG1/CC) (:op2/NP))	2
+(NP (NP*) (:polarity/SBAR))	2
+(S (S*) (:ARG0/CC) (:ARG1/S) (. .))	2
+(NP (NP*) (PP (:ARG0/IN) (:ARG0/NP)))	2
+(VP (:purpose/VB) (VP*))	2
+(VP (:ARG1-of/VP) (CC XXX) (VP*))	2
+(S (S*) (, ,) (NP (PRP it)) (:ARG0-of/VP) (. .))	2
+(S (S*) (, ,) (:ARG1/CC) (:op3/S) (. .))	2
+(S (S*) (CC and) (:ARG2/S) (. .))	2
+(NP (NP*) (:ARG1/PP) (:ARG1/SBAR))	2
+(ADVP (ADVP*) (:ARG0-of/SBAR))	2
+(S (S*) (, ,) ('' '') (:ARG0/NP) (VP) (. .))	2
+(VP (VP*) (:ARG1/VP))	2
+(S (S*) (:ARG1/NP) (:ARG2/VP) (. .))	2
+(S (S*) (, ,) (:ARG1/CC) (:mod/S) (. .))	2
+(S (:ARG1/S) (, ,) (CC XXX) (S*))	2
+(S (S*) (, ,) (NP (PRP you)) (:op2/VP) (. .))	2
+
+
+:ARG1/NP	7149
+(NP (NP*) (:ARG1/PP))	891
+(NP (NP*) (:ARG2/PP))	439
+(NP (NP*) (:location/PP))	292
+(NP (NP*) (:mod/PP))	271
+(NP (NP*) (:ARG0/PP))	244
+(NP (NP*) (:ARG1-of/SBAR))	239
+(NP (NP*) (:ARG0-of/SBAR))	236
+(NP (NP*) (:ARG1-of/VP))	176
+(NP (NP*) (:poss/PP))	175
+(NP (NP*) (:topic/PP))	159
+(NP (NP*) (:op1/PP))	131
+(NP (NP*) (:op2/PP))	119
+(NP (NP*) (:time/PP))	96
+(NP (NP*) (:ARG0-of/VP))	92
+(NP (NP*) (:ARG1-of/PP))	91
+(NP (NP*) (PP))	78
+(NP (NP*) (:part-of/PP))	77
+(NP (NP*) (:ARG1/SBAR))	75
+(NP (NP*) (:ARG1/VP))	73
+(NP (NP*) (:ARG2-of/PP))	62
+(NP (NP*) (:ARG3/PP))	60
+(NP (NP*) (NP))	59
+(NP (NP*) (:purpose/PP))	55
+(NP (NP*) (:consist-of/PP))	55
+(NP (NP*) (:quant-of/PP))	49
+(NP (NP*) (:ARG2/SBAR))	43
+(NP (NP*) (:ARG0-of/PP))	43
+(NP (NP*) (:source/PP))	35
+(NP (NP*) (:ARG0/SBAR))	32
+(NP (NP*) (:op3/PP))	27
+(NP (NP*) (:beneficiary/PP))	27
+(NP (:mod/NP) (NP*))	26
+(NP (NP*) (:ARG2-of/SBAR))	24
+(NP (NP*) (:manner/PP))	24
+(NP (NP*) (:op2/SBAR))	23
+(NP (NP*) (:time/SBAR))	22
+(NP (NP*) (:duration/PP))	21
+(NP (NP*) (, ,) (NP))	21
+(NP (NP*) (:domain/PP))	20
+(NP (NP*) (PP (:location/IN) (:op1/NP)))	20
+(NP (NP*) (:ARG2/VP))	20
+(NP (NP*) (:compared-to/PP))	19
+(NP (:ARG1/NP) (NP*))	19
+(NP (NP*) (:quant/PP))	19
+(NP (NP*) (:op1/SBAR))	18
+(NP (NP*) (:op2/VP))	17
+(NP (NP*) (:prep-in/PP))	17
+(NP (NP*) (, ,) (:ARG0-of/SBAR))	15
+(NP (NP*) (, ,) (:ARG1-of/SBAR))	14
+(NP (NP*) (:ARG1-of/ADJP))	14
+(NP (NP*) (:ARG0/VP))	13
+(NP (NP*) (:prep-with/PP))	13
+(NP (NP*) (:mod/SBAR))	12
+(NP (NP*) (:ARG4/PP))	11
+(NP (NP*) (:example/PP))	11
+(NP (:op2/NP) (NP*))	10
+(NP (:ARG1/NP) (, ,) (NP*))	10
+(NP (NP*) (:ARG2/PRN))	10
+(NP (NP*) (:medium/PP))	10
+(NP (NP*) (:prep-for/PP))	9
+(NP (NP*) (:prep-on/PP))	9
+(NP (NP*) (:op1/VP))	9
+(NP (NP*) (:topic/SBAR))	9
+(NP (NP*) (:ARG2-of/VP))	9
+(NP (:op1/NP) (:ARG0/CC) (NP*))	9
+(NP (NP*) (:ARG1/PP) (:ARG1-of/SBAR))	9
+(NP (NP*) (PP (:ARG1-of/IN) (:ARG2/NP)))	8
+(NP (NP*) (:time/ADVP))	8
+(NP (:ARG0/NP) (NP*))	8
+(NP (NP*) (:mod/ADJP))	8
+(NP (NP*) (PP (:time/IN) (:op1/NP)))	8
+(NP (NP*) (NNP XXX))	8
+(NP (NP*) (PP (IN of) (NP (DT those))))	8
+(NP (:ARG1/NP) (:ARG1/CC) (NP*))	7
+(NP (NP*) (: -) (NP))	7
+(NP (:mod/NP) (, ,) (NP*))	7
+(NP (NP*) (, ,) (:mod/SBAR))	7
+(NP (NP*) (, ,) (:ARG1/SBAR))	7
+(NP (NP*) (PP (:ARG2-of/VB) (:ARG1/NP)))	7
+(NP (NP*) (:mod/PRN))	7
+(NP (NP*) (:accompanier/PP))	7
+(NP (NP*) (:domain/SBAR))	6
+(NP (:op1/NP) (:ARG1/CC) (NP*))	6
+(NP (NP*) (NP) (. .))	6
+(VP (TO to) (VP*))	6
+(NP (NP*) (:mod/ADVP))	6
+(NP (NP*) (VP))	6
+(NP (:time/NP) (NP*))	6
+(NP (NP*) (:purpose/SBAR))	6
+(NP (:op1/NP) (NP*))	6
+(NP (NP*) (:destination/PP))	6
+(NP (NP*) (: ...))	6
+(NP (NP*) (:instrument-of/PP))	6
+(NP (:op1/NP) (, ,) (NP*))	6
+(NP (NP*) (:manner-of/PP))	6
+(NP (NP*) (PP (:ARG2-of/VB) (:op2/NP)))	6
+(NP (NP*) (:time-of/PP))	6
+(NP (NP*) (, ,) (NP) (, ,))	5
+(NP (NP*) (, ,) (:ARG2/SBAR))	5
+(NP (NP*) (PP (IN of) (NP (DT the))))	5
+(NP (:ARG1/NP) (CC and) (NP*))	5
+(NP (:quant/NP) (NP*))	5
+(NP (NP*) (PP (:mod/IN) (:op1/NP)))	5
+(NP (NP*) (:condition/SBAR))	5
+(NP (NP*) (SBAR))	5
+(NP (NP*) (:ARG1/ADJP))	5
+(NP (NP*) (, ,) (:ARG1-of/VP))	5
+(NP (NP*) (:manner-of/SBAR))	5
+(NP (NP*) (:degree/PP))	5
+(NP (:op1/NP) (:ARG2/CC) (NP*))	5
+(NP (NP*) (:location/SBAR))	5
+(NP (:ARG2/NP) (NP*))	5
+(NP (NP*) (:poss/PP) (:ARG0-of/SBAR))	4
+(NP (NP*) (PP (:ARG1/IN) (:ARG1/NP)))	4
+(NP (NP*) (PP (IN of) (NP (PRP it))))	4
+(NP (NP*) (:ARG2/ADJP))	4
+(NP (NP*) (CC and) (NP))	4
+(NP (NP*) (:ARG2/PP) (:ARG0-of/SBAR))	4
+(NP (:ARG0/NP) (, ,) (NP*))	4
+(NP (NP*) (PP (:ARG1-of/IN) (:mod/NP)))	4
+(NP (NP*) (:direction/PP))	4
+(NP (NP*) (:ARG0/PRN))	4
+(NP (NP*) (PP (IN for) (NP (PRP it))))	4
+(NP (NP*) (, ,) (:ARG1-of/VP) (, ,))	4
+(NP (NP*) (:instrument/PP))	4
+(NP (:ARG1/NP) (, ,) (:polarity/RB) (NP*))	4
+(NP (NP*) (, ,) (:ARG1-of/SBAR) (, ,))	4
+(NP (NP*) (:mod/VP))	4
+(NP (NP*) (:ARG2/CC) (NP))	4
+(NP (NP*) (PP (:ARG2/IN) (:op1/NP)))	4
+(NP (NP*) (:mod/PP) (:ARG0-of/SBAR))	4
+(NP (NP*) (PP (IN in) (NP (NNS terms))))	4
+(NP (:duration/NP) (: -) (NP*))	4
+(NP (NP*) (:ARG1/PRN))	4
+(NP (NP*) (:degree-of/PP))	4
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP CFE)) (-RRB- -RRB-)))	4
+(NP (NP*) (:ARG3-of/SBAR))	4
+(NP (NP*) (PP (:ARG1/IN) (:op1/NP)))	4
+(NP (NP*) (. .))	4
+(NP (:ARG2/NP) (, ,) (NP*))	4
+(NP (NP*) (:location-of/SBAR))	4
+(NP (:ARG0/NP) (CC and) (NP*))	4
+(NP (:mod/NP) (: -) (NP*))	4
+(NP (:ARG0/NP) (, ,) (NP*) (, ,))	4
+(NP (NP*) (:time-of/SBAR))	4
+(NP (:ARG1/NP) (:ARG2/CC) (NP*))	4
+(NP (NP*) (:polarity/SBAR))	4
+(NP (NP*) (:purpose/VP))	4
+(NP (NP*) (PP (:ARG1/IN) (:ARG2/NP)))	4
+(NP (:polarity/NP) (NP*))	3
+(NP (NP*) (:ARG2/PP) (. .))	3
+(NP (NP*) (:topic-of/PP))	3
+(NP (NP*) (:topic/VP))	3
+(NP (NP*) (PP (:ARG0/IN) (:ARG1/NP)))	3
+(NP (NP*) (:compared-to/SBAR))	3
+(NP (`` ``) (NP*) (:ARG1/PP) ('' ''))	3
+(NP (NP*) (:mod/PP) (:ARG1-of/SBAR))	3
+(NP (NP*) (PP (IN of) (S (VP (VBG being) (:ARG1-of/NP) (:ARG2/PP)))))	3
+(NP (NP*) (, ,) (:ARG0-of/SBAR) (, ,))	3
+(NP (NP*) (PP (IN in) (NP (CD 070000))))	3
+(NP (NP*) (:location/ADJP))	3
+(NP (NP*) (PP (:ARG0-of/VB) (:ARG1/NP)))	3
+(NP (:ARG1/NP) (, ,) (:mod/RB) (NP*))	3
+(NP (NP*) (: :) (NP))	3
+(NP (NP*) (:ARG1/PP) (:ARG0-of/SBAR))	3
+(NP (NP*) (:ord/PP))	3
+(NP (NP*) (:ARG0/PP) (:ARG1/SBAR))	3
+(NP (:ARG1/NP) (, ,) (NP*) (, ,))	3
+(NP (NP*) (:snt1/SBAR))	3
+(NP (NP*) (:ARG1-of/PRN))	3
+(NP (NP*) (PP (:ARG1-of/VB) (:ARG2/NP)))	3
+(NP (NP*) (PP (:ARG1/IN) (:ARG0/NP)))	3
+(NP (NP*) (:ARG0/CC) (NP))	3
+(NP (NP*) (PP (IN in) (NP (NN order))))	3
+(NP (NP*) (:ARG1/S))	3
+(NP (NP*) (:op2/PP) (:ARG0-of/SBAR))	3
+(NP (:ARG0/NP) (:ARG0/CC) (NP*))	3
+(NP (:ARG0-of/NP) (NP*))	3
+(X (X*) (NP))	3
+(NP (NP*) (PP (IN for) (NP (NN example))))	3
+(NP (NP*) (:location-of/PP))	3
+(NP (NP*) (ADVP (PRP itself)))	3
+(NP (NP*) (:time/PRN))	3
+(NP (NP*) (, ,) (NP (NN right)))	3
+(NP (NP*) (`` ``) (NP) ('' ''))	3
+(NP (NP*) (PP (IN for) (NP (DT the) (NN sake))))	3
+(NP (NP*) (PP (IN of) (NP (PRP them))))	3
+(NP (:op1/NP) (, ,) (:op2/NP) (:ARG1/CC) (NP*))	3
+(NP (NP*) (:location/PP) (:ARG1-of/SBAR))	3
+(NP (NP*) (CC XXX) (NP))	2
+(NP (NP*) (, ,) (:ARG1-of/ADJP))	2
+(NP (NP*) (:ARG0/PP) (:ARG0/VP))	2
+(NP (NP*) (:op2/PP) (:ARG1-of/SBAR))	2
+(NP (NP*) (PP (IN on) (NP (PRP it))))	2
+(NP (NP*) (:topic/PP) (:ARG0-of/SBAR))	2
+(NP (NP*) (: -) (NP (NNP Herzegovina)))	2
+(NP (NP*) (PP (TO to) (NP (PRP it))))	2
+(NP (NP*) (:op1/PP) (:ARG1/PP))	2
+(NP (NP*) (JJ opposition-controlled) (JJ upper) (NN house))	2
+(NP (NP*) (:ARG3-of/VP))	2
+(NP (NP*) (PP (IN in) (NP (NN place))))	2
+(NP (NP*) (:ARG1/PP) (, ,) (:ARG1-of/SBAR) (, ,))	2
+(NP (:domain/NP) (NP*))	2
+(NP (NP*) (SBAR (:time/IN) (:op1/S)))	2
+(NP (NP*) (PP (IN as) (NP (NN part))))	2
+(NP (NP*) (: :))	2
+(NP (:ARG1/NP) (: -) (NP*))	2
+(NP (:ARG2/NP) (, ,) (NP*) (. .))	2
+(NP (NP*) (NP-TMP (CD million) (NNS times)))	2
+(NP (:li/NP) (NP*))	2
+(NP (NP*) (NP) (. ?))	2
+(NP (NP*) (:ARG1/PP) (:compared-to/SBAR))	2
+(NP (NP*) (:quant/PRN))	2
+(NP (NP*) (:subevent-of/PP))	2
+(NP (NP*) (:ARG2/PP) (:ARG2/SBAR))	2
+(NP (:ARG0/NP) (: :) (NP*) (. ?))	2
+(NP (:mod/NP) (:ARG1/CC) (NP*))	2
+(PP (NP) (PP*))	2
+(NP (:topic/NP) (NP*))	2
+(NP (NP*) (:ARG2/NP) (NP))	2
+(NP (NP*) (SBAR (:manner/WHNP) (:ARG1-of/S)))	2
+(NP (NP*) (, XXX) (SBAR))	2
+(NP (:condition/NP) (NP*))	2
+(NP (NP*) (PP (IN of) (NP (JJ Iranian) (:ARG1-of/JJ) (:ARG0-of/NN) (NN group))))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (ADJP (JJ unforced)) (-RRB- -RRB-)))	2
+(NP (:quant/NP) (: -) (NP*))	2
+(NP (NP*) (, ,) (NP (FW etc.)))	2
+(NP (NP*) (:quant/ADJP))	2
+(NP (NP*) (PP (IN for) (NP (DT those))))	2
+(NP (NP*) (NP (PRP you)))	2
+(NP (NP*) (ADJP))	2
+(NP (NP*) (SBAR (:mod/WHNP) (:ARG1-of/S)))	2
+(NP (NP*) (:ARG1/PP) (:ARG2-of/SBAR))	2
+(NP (NP*) (PP (:ARG1-of/IN) (:ARG0/NP)))	2
+(NP (NP*) (, ,) (:ARG2/S))	2
+(NP (NP*) (PP (IN besides) (NP (NN Allâh))))	2
+(NP (NP*) (PP (IN in) (NP (CD 990000))))	2
+(NP (NP*) (PP (IN of) (NP (NNS legistlatures))))	2
+(NP (NP*) (PP (IN in) (NP (PRP it))))	2
+(NP (:ARG0-of/NP) (, ,) (NP*))	2
+(VP (VP*) (NP))	2
+(NP (NP*) (PP (:ARG1/IN) (:ARG0-of/NP)))	2
+(NP (NP*) (NN ability))	2
+(NP (NP*) (NN presence))	2
+(NP (NP*) (PP (IN for) (NP (CD one))))	2
+(NP (`` ``) (NP*) ('' '') (:time/PP))	2
+(NP (:snt1/NP) (, ,) (NP*) (. .))	2
+(NP (NP*) (:path/PP))	2
+(NP (NP*) (, ,) (:ARG0-of/PP) (, ,))	2
+(NP (:ARG1-of/NP) (, ,) (NP*))	2
+(NP (NP*) (X (NN etc.)))	2
+(VP (:ARG1-of/MD) (VP*))	2
+(NP (NP*) (, ,) (:op2/SBAR))	2
+(NP (NP*) (:example/PRN))	2
+(NP (NP*) (:purpose-of/SBAR))	2
+(NP (NP*) (VP (VBG happening)))	2
+(NP (NP*) (NN XXX))	2
+(NP (NP*) (:ARG1-of/VP) (:ARG0-of/SBAR))	2
+(NP (:snt1/NP) (: ;) (NP*))	2
+(NP (NP*) (:op1/PP) (:ARG1-of/SBAR))	2
+(NP (NP*) (:manner/VP))	2
+(NP (:mod/NP) (`` ``) (NP*) ('' ''))	2
+(NP (CC both) (NP*) (:ARG0/CC) (NP))	2
+(NP (NP*) (, ,) (:op1/SBAR) (, ,))	2
+(NP (NP*) (PP (IN between) (NP (:ARG0/NNP) (:ARG0/CC) (:mod/NNP) (NNPS States))))	2
+(NP (NP*) (, ,) (:op2/VP))	2
+(NP (NP*) (, ,) (:op1/PP))	2
+(NP (NP*) (PP (IN of) (NP (NP (NNS warships)) (PP (:ARG2-of/VB) (:ARG1/NP)))))	2
+(NP (NP*) (SBAR (:mod/WHNP) (:ARG1/S)))	2
+(NP (NP*) (PP (:ARG1/IN) (:op2/NP)))	2
+(NP (NP*) (SBAR (WHNP (WDT that)) (S (VP (VBZ is) (:polarity/RB) (:mod/NP)))))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NNS s) (-RRB- -RRB-)))	2
+(NP (NP*) (:consist-of/SBAR))	2
+(NP (NP*) (:purpose/PRN))	2
+(NP (NP*) (PP (:ARG1-of/RB) (:ARG1-of/IN) (:ARG1/NP)))	2
+(NP (NP*) (X (SYM *)))	2
+(NP (NP*) (SBAR (WHNP (WP who))))	2
+(NP (NP*) (:polarity/PP))	2
+(NP (NP*) (:degree/SBAR))	2
+(NP (:op1/NP) (CC and) (NP*))	2
+(NP (NP*) (:domain/VP))	2
+(NP (NP*) (PP (IN of)))	2
+(NP (NP*) (, ,) (:mod/ADVP))	2
+(NP (NP*) (:op4/PP))	2
+(VP (VB be) (VP*))	2
+(NP (NP*) (:op5/PP))	2
+(NP (JJ XXX) (NN XXX) (NP*))	2
+(VP (`` `) (VB do) (RB n't) (VP*))	2
+(NP (NP*) (: --) (NP))	2
+(NP (NP*) (PP (:ARG1/IN) (:mod/NP)))	2
+(NP (NP*) (PP (IN of) (NP (NN motion))))	2
+(NP (NP*) (NN dad))	2
+(NP (NP*) (:location-of/VP))	2
+(NP (NP*) (PP (IN from) (NP (DT the) (NNP Trumanesque))))	2
+(NP (NP*) (NNP XXX) (POS 's))	2
+(NP (NP*) (, ,) (:concession/SBAR))	2
+(NP (NP*) (:duration-of/PP))	2
+(NP (:ARG1-of/NP) (NP*))	2
+(NP (NP*) (POS 's))	2
+(NP (NP*) (:domain/PRN))	2
+(NP (NP*) (:ARG4/SBAR))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NN ICI)) (-RRB- -RRB-)))	2
+(NP (NP*) (: -) (NP (CD 24)))	2
+(NP (NP*) (:ARG1-of/ADVP))	2
+(NP (NP*) (:op1/PRN))	2
+(NP (NP*) (PP (IN because) (NP (PRP it))))	2
+(NP (NP*) (: XXX) (NP))	2
+(NP (NP*) (, ,) (:ARG0-of/VP))	2
+(NP (NP*) (:ARG1/PP) (. .))	2
+(NP (NP*) (:op6/PP))	2
+(NP (NP*) (PP (:time/IN) (:op2/NP)))	2
+(NP (NP*) (VP (VBN done)))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (PP (:ARG1-of/ADVP) (IN by) (:ARG0/NP)) (-RRB- -RRB-)))	2
+(NP (NP*) (, ,) (ADVP (IN at) (JJS least)))	2
+(NP (NP*) (, ,) (NP (NN im)))	2
+(NP (NP*) (:part-of/PP) (:ARG0-of/SBAR))	2
+(NP (NP*) (PP (:ARG2-of/VB) (:op3/NP)))	2
+(VP (VB XXX) (VP*))	2
+(NP (NP*) (:ARG3-of/PP))	2
+(NP (NP*) (PP (:ARG1-of/RB) (:ARG1-of/IN) (:quant/NP)))	2
+(NP (NP*) (SBAR (S (NP (PRP you)) (VP (VBP do)))))	2
+(NP (NP*) (:op2/ADJP))	2
+(NP (NP*) (, ,) (:ARG0/SBAR))	2
+(NP (NP*) ('' '') (:ARG1-of/SBAR))	2
+(NP (:poss/NP) (NP*))	2
+(NP (NP*) (PP (:quant/IN) (:op1/NP)))	2
+(NP (NP*) (:ARG1/PP) (:ARG1/SBAR))	2
+(NP (NP*) (PP (:ARG1-of/IN) (:ARG1/NP)))	2
+(NP (NP*) (:frequency-of/SBAR))	2
+(NP (NP*) (:prep-against/PP))	2
+
+
+:ARG1/S	6023
+(VP (TO to) (VP*))	3541
+(VP (VB be) (VP*))	522
+(VP (:ARG1/MD) (VP*))	134
+(VP (VB have) (VP*))	126
+(VP (VB do) (:polarity/RB) (VP*))	100
+(VP (MD would) (VP*))	77
+(VP (MD will) (VP*))	76
+(VP (:op2/MD) (VP*))	62
+(NP (NP*) (:ARG1/PP))	56
+(VP (:op1/MD) (VP*))	45
+(VP (:ARG2/MD) (VP*))	40
+(VP (:ARG1/MD) (:polarity/RB) (VP*))	34
+(VP (:ARG1/VB) (VP*))	32
+(VP (VB be) (:polarity/RB) (VP*))	28
+(NP (NP*) (:ARG2/PP))	27
+(VP (MD must) (VP*))	23
+(NP (NP*) (:ARG1-of/SBAR))	22
+(VP (:op2/MD) (:polarity/RB) (VP*))	19
+(NP (NP*) (:ARG0-of/SBAR))	16
+(NP (NP*) (:mod/PP))	15
+(VP (VB be) (:mod/ADVP) (VP*))	15
+(VP (:snt1/MD) (VP*))	15
+(NP (NP*) (:ARG1/SBAR))	15
+(NP (NP*) (:location/PP))	14
+(VP (MD 'll) (VP*))	14
+(VP (:ARG0/VB) (VP*))	13
+(VP (:op2/VB) (VP*))	12
+(NP (NP*) (:ARG1/VP))	12
+(VP (VB get) (VP*))	12
+(VP (:ARG2/MD) (:polarity/RB) (VP*))	11
+(NP (NP*) (:op2/PP))	11
+(VP (VB do) (VP*))	11
+(NP (NP*) (:ARG0/PP))	10
+(NP (NP*) (:topic/PP))	10
+(VP (:ARG2/VB) (VP*))	10
+(VP (VB be) (:time/ADVP) (VP*))	9
+(VP (MD will) (:polarity/RB) (VP*))	9
+(VP (MD would) (:polarity/RB) (VP*))	9
+(VP (:snt1/MD) (:polarity/RB) (VP*))	8
+(NP (NP*) (:ARG2/SBAR))	8
+(NP (NP*) (:ARG1-of/VP))	7
+(VP (:ARG1-of/MD) (VP*))	7
+(VP (:snt2/MD) (VP*))	7
+(VP (:op3/MD) (VP*))	7
+(VP (:ARG0/MD) (VP*))	7
+(VP (TO To) (VP*))	7
+(VP (:ARG0-of/VB) (VP*))	7
+(NP (NP*) (:ARG1-of/PP))	7
+(NP (NP*) (:op1/PP))	6
+(NP (NP*) (PP))	6
+(VP (:op2/MD) (:mod/ADVP) (VP*))	6
+(VP (:ARG1/MD) (:mod/ADVP) (VP*))	6
+(VP (VB have) (:polarity/RB) (VP*))	6
+(VP (MD can) (VP*))	6
+(VP (:op1/VP) (:ARG1/CC) (VP*))	6
+(VP (:ARG0/TO) (VP*))	5
+(VP (TO na) (VP*))	5
+(NP (NP*) (:compared-to/PP))	5
+(VP (:op1/VB) (VP*))	5
+(NP (NP*) (:ARG0-of/VP))	4
+(NP (NP*) (:ARG0/SBAR))	4
+(VP (MD might) (VP*))	4
+(VP (:ARG1/TO) (VP*))	4
+(NP (NP*) (:beneficiary/PP))	4
+(VP (VB have) (:time/ADVP) (VP*))	4
+(VP (:concession/MD) (VP*))	4
+(VP (MD could) (VP*))	4
+(VP (:polarity/RB) (VP*))	4
+(NP (NP*) (PP (IN of) (NP (PRP them))))	4
+(VP (VB cant) (VP*))	4
+(NP (NP*) (:poss/PP))	4
+(NP (NP*) (:op2/SBAR))	4
+(VP (:ARG0/MD) (:polarity/RB) (VP*))	3
+(VP (TO XXX) (VP*))	3
+(VP (VB be) (:ARG1-of/ADVP) (VP*))	3
+(VP (:op1/MD) (:mod/ADVP) (VP*))	3
+(VP (:ARG2/VP) (CC but) (VP*))	3
+(NP (NP*) (:ARG2-of/SBAR))	3
+(VP (VB do) (RB n't) (VP*))	3
+(VP (:domain/MD) (VP*))	3
+(NP (NP*) (:part-of/PP))	3
+(VP (VB do) (RB not) (VP*))	3
+(VP (MD will) (:mod/ADVP) (VP*))	3
+(VP (VB be) (ADVP (RB never)) (VP*))	3
+(NP (NP*) (, XXX) (:op2/VP))	3
+(VP (VB be) (:degree/ADVP) (VP*))	3
+(VP (:condition/MD) (VP*))	3
+(VP (VB be) (RB not) (VP*))	3
+(VP (VB be) (:manner/ADVP) (VP*))	3
+(VP (:purpose/VB) (VP*))	3
+(VP (TO to) (`` ``) (VP*) ('' ''))	3
+(NP (NP*) (:time/PP))	3
+(NP (NP*) (:ARG2-of/PP))	3
+(VP (:mod/TO) (VP*))	3
+(VP (MD would) (:mod/ADVP) (VP*))	3
+(NP (NP*) (:ARG3/PP))	3
+(VP (VB have) (:mod/ADVP) (VP*))	2
+(VP (MD must) (:mod/ADVP) (VP*))	2
+(NP (NP*) (:op1/ADJP))	2
+(NP (NP*) (:manner/PP))	2
+(NP (NP*) (:domain/PP))	2
+(VP (:condition/MD) (:polarity/RB) (VP*))	2
+(VP (:op1/VP) (, ,) (VP*))	2
+(NP (NP*) (:ARG0/VP))	2
+(VP (:ARG1/VP) (, ,) (VP*))	2
+(NP (NP*) (:age/PP))	2
+(VP (:ARG1/MD) (ADVP (RB no) (RB longer)) (VP*))	2
+(NP (NP*) (PP (IN of) (NP (CD 1/3))))	2
+(VP (MD will) (:time/ADVP) (VP*))	2
+(NP (NP*) (:mod/SBAR))	2
+(VP (:snt1/MD) (:mod/ADVP) (VP*))	2
+(VP (MD will) (:ARG1-of/ADVP) (VP*))	2
+(VP (:location-of/MD) (VP*))	2
+(VP (:op1/VP) (:ARG0/CC) (VP*))	2
+(VP (:ARG1/MD) (:polarity/RB) (:mod/ADVP) (VP*))	2
+(NP (NP*) (:time/VP))	2
+(NP (NP*) (PP (:ARG2-of/VB) (:ARG1/NP)))	2
+(VP (:op2/MD) (RB n't) (VP*))	2
+(VP (MD would) (ADVP (RB never)) (VP*))	2
+(VP (MD would) (:time/ADVP) (VP*))	2
+(NP (NP*) (:consist-of/PP))	2
+(VP (MD should) (VP*))	2
+(NP (NP*) (:time/SBAR))	2
+(VP (:op1/MD) (:ARG1/CC) (:op2/MD) (:polarity/RB) (VP*))	2
+(NP (NP*) (:op2/VP))	2
+(VP (:snt2/MD) (:polarity/RB) (VP*))	2
+(NP (NP*) (:op1/SBAR))	2
+(VP (TO to) (`` `) (VP*))	2
+(NP (NP*) (, ,) (:ARG0-of/VP))	2
+(S (S*) (. .))	2
+(NP (NP*) (PP (:location/IN) (:op1/NP)))	2
+(VP (:ARG0/VB) (:polarity/RB) (VP*))	2
+(S (S*) (, ,) (IN so) (S))	2
+(VP (:ARG3/VB) (VP*))	2
+(VP (VB do) (:polarity/RB) (:mod/ADVP) (VP*))	2
+(NP (NP*) (, ,) (:ARG2/SBAR))	2
+(VP (:op1/MD) (:polarity/RB) (VP*))	2
+(NP (NP*) (:condition/ADJP))	2
+(VP (VB have) (ADVP (RB vastly)) (VP*))	2
+(VP (TO to) (:polarity/RB) (VP*))	2
+(VP (:snt2/VB) (VP*))	2
+(VP (:ARG2/MD) (:mod/ADVP) (VP*))	2
+(VP (:ARG2/VP) (, ,) (CC but) (VP*))	2
+(VP (:ARG1/VP) (CC but) (VP*))	2
+(VP (VB have) (ADVP (RB never)) (VP*))	2
+(VP (:ARG1/VP) (CC and) (VP*))	2
+(VP (:ARG1/VB) (:time/ADVP) (VP*))	2
+(VP (:ARG1/VP) (:ARG1/CC) (VP*))	2
+(VP (:compared-to/MD) (VP*))	2
+(NP (NP*) (:quant/PP))	2
+(NP (NP*) (: :) (S))	2
+(NP (NP*) (:prep-in/PP))	2
+(VP (:ARG1-of/VB) (VP*))	2
+(NP (NP*) (:duration/PP))	2
+(NP (:mod/NP) (, ,) (NP*))	2
+(VP (:ARG0/MD) (:mod/ADVP) (VP*))	2
+(PP (IN XXX) (PP*))	2
+(VP (VB do) (:polarity/RB) (ADVP (RB really)) (VP*))	2
+(NP (NP*) (:condition/SBAR))	2
+(VP (:ARG2/MD) (RB n't) (VP*))	2
+(VP (:condition-of/MD) (VP*))	2
+(NP (NP*) (PP (IN in) (NP (NN mind))))	2
+
+
+:ARG1/SBAR	4037
+(VP (VB be) (VP*))	924
+(VP (:ARG1/MD) (VP*))	352
+(VP (VB have) (VP*))	305
+(VP (MD will) (VP*))	259
+(VP (MD would) (VP*))	256
+(VP (TO to) (VP*))	198
+(NP (NP*) (SBAR))	121
+(VP (VB do) (:polarity/RB) (VP*))	113
+(NP (NP*) (:ARG1/PP))	86
+(VP (:ARG0-of/VB) (VP*))	51
+(VP (:ARG1/MD) (:polarity/RB) (VP*))	47
+(VP (:ARG0/VB) (VP*))	38
+(VP (:ARG0/MD) (VP*))	34
+(NP (NP*) (:ARG2/PP))	33
+(VP (:op1/MD) (VP*))	32
+(VP (VB be) (:polarity/RB) (VP*))	30
+(VP (:ARG1-of/MD) (VP*))	27
+(VP (:op2/MD) (VP*))	25
+(VP (:ARG2/MD) (VP*))	25
+(VP (MD 'll) (VP*))	25
+(VP (:ARG1/VB) (VP*))	23
+(VP (:purpose/MD) (VP*))	21
+(VP (MD would) (:polarity/RB) (VP*))	21
+(NP (NP*) (:location/PP))	20
+(VP (MD will) (:polarity/RB) (VP*))	17
+(VP (VB have) (:time/ADVP) (VP*))	17
+(VP (VB be) (:mod/ADVP) (VP*))	17
+(NP (NP*) (:ARG0/PP))	17
+(VP (VB be) (:time/ADVP) (VP*))	16
+(NP (NP*) (:ARG1/SBAR))	16
+(VP (MD could) (VP*))	15
+(VP (VB have) (:polarity/RB) (VP*))	14
+(VP (VB get) (VP*))	14
+(VP (:ARG1/MD) (:mod/ADVP) (VP*))	13
+(VP (VB do) (VP*))	12
+(VP (MD will) (:mod/ADVP) (VP*))	12
+(NP (NP*) (:ARG1-of/VP))	11
+(ADVP (ADVP*) (SBAR))	11
+(VP (:ARG2/MD) (:polarity/RB) (VP*))	10
+(VP (:ARG0/MD) (:polarity/RB) (VP*))	10
+(NP (NP*) (:ARG0-of/SBAR))	10
+(VP (:condition/MD) (VP*))	10
+(NP (NP*) (:ARG1-of/SBAR))	10
+(VP (:op1/VB) (VP*))	10
+(VP (VB have) (:mod/ADVP) (VP*))	9
+(VP (MD will) (:time/ADVP) (VP*))	9
+(NP (NP*) (:op2/PP))	8
+(VP (TO na) (VP*))	8
+(VP (:ARG2/VB) (VP*))	8
+(VP (MD can) (VP*))	8
+(NP (NP*) (:mod/PP))	7
+(VP (TO XXX) (VP*))	7
+(NP (NP*) (:ARG0-of/VP))	7
+(NP (NP*) (:part-of/PP))	7
+(NP (NP*) (:topic/PP))	7
+(VP (VB be) (:manner/ADVP) (VP*))	7
+(VP (:op1/VP) (:ARG1/CC) (VP*))	7
+(VP (:ARG1/MD) (:manner/ADVP) (VP*))	6
+(VP (MD might) (VP*))	6
+(NP (NP*) (:poss/PP))	6
+(VP (:manner-of/MD) (VP*))	6
+(NP (NP*) (:ARG1-of/PP))	6
+(VP (VB be) (:ARG1-of/ADVP) (VP*))	5
+(VP (:location-of/MD) (VP*))	5
+(VP (:time/MD) (:polarity/RB) (VP*))	5
+(VP (MD would) (:time/ADVP) (VP*))	5
+(NP (NP*) (PP))	5
+(NP (NP*) (:quant-of/PP))	5
+(VP (:ARG0-of/VB) (:time/ADVP) (VP*))	5
+(NP (NP*) (:ARG1/VP))	5
+(NP (NP*) (:time/PP))	5
+(NP (NP*) (:ARG2/SBAR))	5
+(VP (MD would) (:mod/ADVP) (VP*))	5
+(VP (:topic/MD) (VP*))	4
+(VP (MD must) (VP*))	4
+(VP (:condition/MD) (:polarity/RB) (VP*))	4
+(VP (MD should) (VP*))	4
+(VP (:ARG0/MD) (:mod/ADVP) (VP*))	4
+(NP (NP*) (:domain/SBAR))	4
+(NP (NP*) (:op1/PP))	4
+(VP (:domain/MD) (VP*))	4
+(VP (:ARG0-of/VB) (:polarity/RB) (VP*))	4
+(NP (NP*) (:purpose/PP))	4
+(VP (VB be) (:degree/ADVP) (VP*))	4
+(VP (:op2/VB) (VP*))	4
+(VP (:ARG1/VP) (:ARG1/CC) (VP*))	4
+(VP (:ARG1-of/VP) (CC and) (VP*))	3
+(VP (MD may) (VP*))	3
+(VP (:ARG1/MD) (:degree/ADVP) (VP*))	3
+(VP (:mod/MD) (VP*))	3
+(NP (NP*) (:beneficiary/PP))	3
+(VP (:op1/VP) (:ARG0/CC) (VP*))	3
+(NP (NP*) ('' '') (SBAR))	3
+(VP (:op3/MD) (VP*))	3
+(VP (:ARG1/VB) (:polarity/RB) (VP*))	3
+(NP (NP*) (:op2/VP))	3
+(VP (:manner/MD) (VP*))	3
+(VP (:op1/MD) (:polarity/RB) (VP*))	3
+(VP (:ARG1-of/MD) (:polarity/RB) (VP*))	3
+(VP (:op2/MD) (:polarity/RB) (VP*))	3
+(VP (:ARG1-of/VB) (:polarity/RB) (VP*))	3
+(VP (VB do) (:polarity/RB) (ADVP (RB really)) (VP*))	3
+(VP (VB be) (ADVP (RB apparently)) (VP*))	3
+(NP (NP*) (NP))	2
+(VP (:instrument-of/MD) (VP*))	2
+(NP (NP*) (, ,) (SBAR) (, ,))	2
+(VP (MD will) (ADVP (RB never)) (VP*))	2
+(VP (:time/MD) (VP*))	2
+(VP (:ARG0/VB) (:mod/ADVP) (VP*))	2
+(VP (:op1/MD) (:mod/ADVP) (VP*))	2
+(NP (NP*) (:ARG0/SBAR))	2
+(NP (NP*) (:mod/SBAR))	2
+(VP (MD will) (:ARG1-of/ADVP) (VP*))	2
+(VP (VB do) (RB n't) (VP*))	2
+(NP (NP*) (PP (:ARG1/IN) (:beneficiary/NP)))	2
+(VP (MD would) (ADVP (RB never)) (VP*))	2
+(VP (VB do) (RB not) (VP*))	2
+(VP (:condition/VB) (VP*))	2
+(NP (NP*) (:ARG1/PP) (:ARG2/S))	2
+(VP (:purpose/MD) (:manner/ADVP) (VP*))	2
+(NP (NP*) (PP (:ARG0/IN) (:ARG1/NP)))	2
+(VP (:ARG1/MD) (:time/ADVP) (VP*))	2
+(NP (NP*) (:op3/PP))	2
+(NP (NP*) (:location/VP))	2
+(VP (MD could) (:mod/ADVP) (VP*))	2
+(ADJP (ADJP*) (SBAR))	2
+(VP (VB have) (ADVP (RB successfully)) (VP*))	2
+(VP (:op2/MD) (:mod/ADVP) (VP*))	2
+(VP (:op1/VP) (:condition/CC) (VP*))	2
+(NP (NP*) (:ARG0-of/PP))	2
+(VP (VB have) (:manner/ADVP) (VP*))	2
+(VP (:ARG1/VP) (:ARG2/CC) (VP*))	2
+(VP (:ARG2-of/MD) (VP*))	2
+(VP (VB have) (:frequency/ADVP) (VP*))	2
+(VP (MD can) (:polarity/RB) (VP*))	2
+(NP (NP*) (:compared-to/PP))	2
+(VP (:compared-to/MD) (VP*))	2
+(VP (:ARG3/MD) (VP*))	2
+(VP (VB be) (ADVP (RB slowly)) (VP*))	2
+(VP (:topic/MD) (:polarity/RB) (VP*))	2
+(VP (VB cant) (VP*))	2
+(VP (VB be) (ADVP (RB really)) (VP*))	2
+(VP (MD would) (:ARG1/ADVP) (VP*))	2
+(VP (:ARG1-of/VB) (VP*))	2
+(NP (NP*) (SBAR (:ARG1-of/WHNP) (:purpose/S)))	2
+(VP (:compared-to/VB) (VP*))	2
+(VP (VB have) (:ARG1-of/ADVP) (VP*))	2
+(NP (NP*) (:ARG2-of/PP))	2
+
+
+:ARG1/PP	3328
+(NP (NP*) (PP))	549
+(NP (NP*) (:ARG1/PP))	311
+(NP (NP*) (:location/PP))	182
+(NP (NP*) (:ARG2/PP))	167
+(NP (NP*) (:ARG0/PP))	99
+(NP (NP*) (:ARG1-of/VP))	97
+(NP (NP*) (:ARG0-of/SBAR))	86
+(NP (NP*) (:mod/PP))	74
+(NP (NP*) (:ARG1-of/SBAR))	64
+(NP (NP*) (:op2/PP))	52
+(NP (NP*) (:time/PP))	50
+(NP (NP*) (:poss/PP))	41
+(NP (NP*) (:ARG0-of/VP))	37
+(NP (NP*) (:part-of/PP))	37
+(NP (NP*) (:op1/PP))	36
+(NP (NP*) (:ARG2-of/PP))	33
+(NP (NP*) (:topic/PP))	32
+(VP (VB be) (VP*))	30
+(NP (NP*) (:ARG1/VP))	29
+(NP (NP*) (:source/PP))	21
+(NP (NP*) (:ARG1-of/PP))	20
+(NP (NP*) (:ARG1/SBAR))	18
+(VP (TO to) (VP*))	17
+(NP (NP*) (:ARG2/SBAR))	17
+(NP (NP*) (:purpose/PP))	15
+(NP (:ARG0/NP) (CC and) (NP*))	14
+(NP (NP*) (:quant/PP))	14
+(NP (:ARG1/NP) (NP*))	13
+(NP (NP*) (:ARG0-of/PP))	13
+(NP (NP*) (:consist-of/PP))	13
+(NP (NP*) (:manner/PP))	11
+(NP (NP*) (:ARG0/VP))	11
+(NP (NP*) (:op2/VP))	11
+(NP (NP*) (:ARG1-of/ADJP))	11
+(NP (NP*) (:ARG3/PP))	11
+(NP (NP*) (, ,) (:ARG1-of/SBAR))	10
+(NP (NP*) (:example/PP))	10
+(NP (NP*) (:duration/PP))	10
+(NP (NP*) (:quant-of/PP))	9
+(PP (:ARG0-of/VB) (PP*))	9
+(NP (NP*) (:ARG2/VP))	9
+(NP (:mod/NP) (NP*))	8
+(NP (NP*) (:op3/PP))	8
+(NP (NP*) (:ARG0/SBAR))	8
+(NP (NP*) (:compared-to/PP))	8
+(NP (NP*) (:op2/SBAR))	8
+(NP (NP*) (NP))	7
+(NP (:location/NP) (, ,) (NP*))	7
+(VP (:ARG1/MD) (VP*))	7
+(NP (:ARG0/NP) (NP*))	7
+(NP (NP*) (:beneficiary/PP))	7
+(NP (NP*) (:ARG2-of/SBAR))	7
+(NP (NP*) (:time/SBAR))	7
+(NP (:ARG1/NP) (:ARG1/CC) (NP*))	6
+(NP (:ARG1/NP) (, ,) (NP*))	6
+(NP (NP*) (:medium/PP))	6
+(PP (:ARG1/IN) (PP*))	6
+(NP (:ARG2/NP) (NP*))	6
+(NP (NP*) (:mod/SBAR))	5
+(NP (NP*) (PP (:ARG2-of/VB) (:ARG1/NP)))	5
+(NP (NP*) (:topic/VP))	5
+(VP (VB have) (VP*))	5
+(NP (:ARG1/NP) (CC and) (NP*))	5
+(NP (:op1/NP) (:ARG2/CC) (NP*))	5
+(PP (IN for) (PP*))	5
+(PP (IN as) (PP*))	5
+(ADVP (ADVP*) (PP))	5
+(NP (NP*) (:domain/PP))	4
+(NP (NP*) (CC XXX) (NP))	4
+(NP (:location/NP) (NP*))	4
+(NP (NP*) (PP (:ARG1/IN) (:ARG0/NP)))	4
+(NP (NP*) (PP (:time/IN) (:op1/NP)))	4
+(NP (NP*) (:ARG2-of/VP))	4
+(NP (NP*) (PP (:path/IN) (:op1/NP)))	4
+(NP (NP*) (PP (:ARG1/IN) (:ARG1/NP)))	4
+(NP (NP*) (:ARG0/ADJP))	4
+(NP (NP*) (:mod/PRN))	4
+(NP (NP*) (PP (:location/IN) (:op1/NP)))	4
+(NP (NP*) (:prep-with/PP))	4
+(NP (NP*) (:ARG4/PP))	4
+(NP (NP*) (NNP XXX))	4
+(NP (NP*) (, ,) (:ARG1/SBAR))	4
+(NP (NP*) (:accompanier/PP))	4
+(NP (NP*) (:op1/VP))	4
+(NP (NP*) (PP (:ARG2/IN) (:op1/NP)))	3
+(PP (IN As) (PP*))	3
+(NP (NP*) (NN XXX))	3
+(NP (NP*) (:manner/VP))	3
+(PP (IN with) (PP*))	3
+(NP (:ARG1/NP) (:ARG0/CC) (NP*))	3
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP ASEAN)) (-RRB- -RRB-)))	3
+(NP (:ARG2/NP) (:ARG1/CC) (NP*))	3
+(NP (NP*) (, ,) (NP))	3
+(ADJP (ADJP*) (PP))	3
+(NP (NP*) (PP (:ARG2-of/VB) (:op2/NP)))	3
+(NP (NP*) (:condition/PP))	3
+(NP (:ARG0/NP) (:ARG1/CC) (NP*))	3
+(NP (NP*) (:mod/ADVP))	3
+(NP (NP*) (:op1/SBAR))	3
+(PP (IN on) (PP*))	3
+(NP (NP*) (VP))	3
+(PP (IN of) (PP*))	3
+(NP (NP*) (:instrument/PP))	3
+(NP (:ARG0-of/NP) (NP*))	3
+(NP (NP*) (:ARG2/ADVP))	3
+(NP (NP*) (:degree/PP))	3
+(PP (:ARG2-of/VB) (PP*))	3
+(NP (NP*) (:op2/ADJP))	3
+(NP (NP*) (:op4/PP))	3
+(NP (:mod/NP) (: -) (NP*))	3
+(NP (NP*) (:time/ADVP))	3
+(NP (NP*) (PP (:mod/IN) (:op1/NP)))	3
+(NP (NP*) (PP (IN of) (NP (NN speech))))	3
+(NP (:op1/NP) (:ARG1/CC) (NP*))	3
+(NP (NP*) (PP (:ARG1/IN) (:ARG2/NP)))	3
+(PP (:ARG2-of/IN) (PP*))	3
+(NP (NP*) (:condition/VP))	3
+(NP (:ARG1-of/NP) (, ,) (NP*))	2
+(NP (NP*) (PP (:ARG2/IN) (:ARG1/NP)))	2
+(WHNP (WHNP*) (PP))	2
+(NP (NP*) (, ,) (NP) (CC XXX) (NP))	2
+(NP (:op2/NP) (NP*))	2
+(PP (IN because) (PP*))	2
+(PP (:op2/IN) (PP*))	2
+(NP (NP*) (:ARG0/PRN))	2
+(NP (NP*) (:ARG1/PP) (:ARG1-of/SBAR))	2
+(NP (NP*) (:ARG1/ADJP))	2
+(NP (NP*) (PP (:ARG4/IN) (:op1/NP)))	2
+(NP (:op1/NP) (:ARG0/CC) (NP*))	2
+(NP (NP*) (:example/PRN))	2
+(NP (NP*) (:degree-of/PP))	2
+(NP (NP*) (:time/JJ))	2
+(NP (NP*) (:prep-under/PP))	2
+(NP (NP*) (:ARG3/VP))	2
+(NP (NP*) (:location/PP) (:ARG0-of/SBAR))	2
+(NP (:manner/NP) (NP*))	2
+(PP (:ARG1-of/VB) (PP*))	2
+(NP (NP*) (:location/SBAR))	2
+(NP (NP*) (SBAR (:time/IN) (:op1/S)))	2
+(NP (NP*) (:time-of/SBAR))	2
+(NP (NP*) (:op1/PP) (:ARG1-of/VP))	2
+(PP (IN while) (PP*))	2
+(NP (NP*) (:ARG2/JJ))	2
+(PP (VBG according) (PP*))	2
+(NP (:ARG0-of/NP) (, ,) (NP*))	2
+(NP (:time/NP) (NP*))	2
+(NP (NP*) (PP (:ARG2-of/VB) (:op3/NP)))	2
+(NP (NP*) (:instrument-of/PP))	2
+(NP (NP*) (PP (IN of) (NP (NNS reformists))))	2
+(NP (NP*) (, ,) (:ARG2/VP))	2
+(NP (NP*) (PP (IN in) (NP (DT the) (NN event))))	2
+(NP (NP*) (:quant/ADVP))	2
+(NP (NP*) (, ,) (:op3/VP))	2
+(NP (NP*) (, ,) (:ARG2-of/SBAR))	2
+(NP (NP*) (:prep-in/PP))	2
+(NP (:ARG2/NP) (: -) (NP*))	2
+(NP (:ARG2/NP) (, ,) (NP*) (, ,))	2
+(PP (VBN compared) (PP*))	2
+(VP (VB get) (VP*))	2
+(NP (NP*) (:location/PP) (:ARG1-of/SBAR))	2
+(NP (NP*) (:location-of/PP))	2
+(NP (NP*) (:extent/PP))	2
+(NP (NP*) (:condition/SBAR))	2
+(NP (:ARG1/NP) (, ,) (:ARG1/NP) (:ARG0/CC) (NP*))	2
+(NP (NP*) (SBAR (:ARG1/WHNP) (:ARG1-of/S)))	2
+(NP (NP*) (PP (:ARG1-of/IN) (:ARG1/NP)))	2
+(NP (NP*) (PP (:ARG1-of/VB) (:ARG2/NP)))	2
+(NP (NP*) (PP (:ARG1-of/IN) (:ARG2/NP)))	2
+(NP (NP*) (:location-of/SBAR))	2
+(NP (NP*) (:manner-of/PP))	2
+(NP (NP*) (PP (:ARG2/IN) (:op2/NP)))	2
+(PP (IN from) (PP*))	2
+(NP (NP*) (:manner-of/SBAR))	2
+(NP (NP*) (:prep-against/PP))	2
+
+
+:ARG0/NP	2356
+(NP (NP*) (:ARG1/PP))	291
+(NP (NP*) (:location/PP))	125
+(NP (NP*) (PP))	112
+(NP (NP*) (NP))	68
+(NP (NP*) (:ARG0-of/SBAR))	66
+(NP (NP*) (:ARG1-of/VP))	60
+(NP (NP*) (:ARG2/PP))	56
+(NP (NP*) (:ARG1/VP))	56
+(NP (NP*) (:ARG0/PP))	54
+(NP (NP*) (:ARG1/SBAR))	49
+(NP (NP*) (:ARG1-of/SBAR))	48
+(NP (NP*) (:mod/PP))	45
+(NP (NP*) (:part-of/PP))	44
+(NP (NP*) (:poss/PP))	40
+(NP (NP*) (:time/PP))	33
+(NP (NP*) (:ARG1-of/PP))	27
+(NP (NP*) (, ,) (NP))	26
+(NP (NP*) (:op2/PP))	24
+(NP (NP*) (:ARG0-of/VP))	23
+(NP (NP*) (:topic/PP))	21
+(NP (NP*) (:source/PP))	21
+(NP (NP*) (:op1/PP))	20
+(NP (:ARG1/NP) (NP*))	18
+(NP (:mod/NP) (NP*))	17
+(NP (NP*) (:op1/VP))	15
+(NP (NP*) (:consist-of/PP))	14
+(NP (NP*) (, ,) (NP) (, ,))	14
+(NP (NP*) (:ARG0/VP))	13
+(NP (NP*) (:quant-of/PP))	13
+(NP (:time/NP) (NP*))	12
+(NP (:ARG1/NP) (, ,) (NP*))	11
+(NP (NP*) (:ARG2/VP))	11
+(NP (NP*) (:example/PP))	10
+(NP (NP*) (:op1/SBAR))	9
+(NP (NP*) (, ,) (:ARG1-of/VP) (, ,))	9
+(NP (:ARG0/NP) (, ,) (NP*) (, ,))	9
+(NP (:ARG0-of/NP) (NP*))	9
+(NP (NP*) (NNP XXX))	9
+(NP (NP*) (:medium/PP))	8
+(NP (NP*) (NN XXX))	8
+(NP (NP*) (, ,) (:ARG0-of/SBAR) (, ,))	8
+(NP (NP*) (:op2/SBAR))	8
+(NP (:ARG0/NP) (NP*))	7
+(NP (NP*) (:ARG3/PP))	7
+(NP (NP*) (CC XXX) (NP))	6
+(NP (NP*) (:ARG2/SBAR))	6
+(NP (NP*) (:op3/PP))	6
+(NP (NP*) (:mod/ADVP))	6
+(NP (NP*) (:ARG0-of/PP))	6
+(NP (NP*) (:domain/VP))	6
+(NP (:mod/NP) (, ,) (NP*))	6
+(NP (NP*) (:manner/PP))	5
+(NP (NP*) (:ARG2/PRN))	5
+(NP (NP*) (:ARG0/SBAR))	5
+(NP (NP*) (:op2/VP))	5
+(VP (VB XXX) (VP*))	5
+(NP (:quant/NP) (, ,) (NP*))	5
+(NP (:ARG2/NP) (, ,) (NP*))	4
+(NP (NP*) (:ARG1/CC) (NP))	4
+(NP (NP*) (:ARG1/ADJP))	4
+(NP (NP*) (:mod/PRN))	4
+(NP (NP*) (PP (:location/IN) (:op1/NP)))	4
+(NP (DT the) (NP*))	4
+(NP (NP*) (:ARG1-of/ADJP))	4
+(NP (:ARG0-of/NP) (, ,) (NP*) (, ,))	4
+(X (X*) (NP))	4
+(NP (NP*) (, ,) (:ARG1-of/SBAR) (, ,))	4
+(NP (NP*) (: -) (NP))	4
+(NP (NP*) (:snt1/SBAR))	4
+(NP (NP*) (:prep-in/PP))	4
+(NP (:ARG0/NP) (, ,) (NP*))	4
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP IAEA)) (-RRB- -RRB-)))	4
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NN moea)) (-RRB- -RRB-)))	4
+(NP (NP*) (, ,) (NP (:location/NNP) (, ,) (:time/NNP) (NNP 13th)))	4
+(NP (:ARG2/NP) (NP*))	4
+(NP (:op1/NP) (NP*))	4
+(NP (NP*) (PP (:ARG0/IN) (:part-of/NP)))	3
+(NP (NP*) (SBAR))	3
+(NP (NP*) (PP (:time/IN) (:op1/NP)))	3
+(NP (NP*) (PP (IN of) (NP (NN mine))))	3
+(NP (NP*) (NP (NNPS States)))	3
+(NP (:mod/NP) (`` ``) (NP*) ('' ''))	3
+(NP (NP*) (POS 's))	3
+(NP (NP*) (:ARG2-of/SBAR))	3
+(NP (NP*) (PP (:ARG2-of/VB) (:ARG1/NP)))	3
+(NP (NP*) (PP (:ARG2-of/VB) (:op2/NP)))	3
+(NP (NP*) (:degree/ADJP))	3
+(NP (NP*) (: :) (NP))	3
+(NP (:part-of/NP) (NP*))	3
+(NP (NP*) (PP (IN of) (NP (DT this))))	3
+(NP (:ARG1/NP) (CC and) (NP*))	3
+(NP (NP*) (:compared-to/PP))	3
+(NP (NP*) (PP (:mod/IN) (:op1/NP)))	3
+(NP (NP*) (:topic/SBAR))	3
+(NP (:op1/NP) (:ARG1/CC) (NP*))	3
+(NP (NP*) (: ...))	3
+(NP (NP*) (:ARG2-of/PP))	3
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NN UNODC)) (-RRB- -RRB-)))	3
+(NP (NP*) (PP (:ARG2/IN) (:ARG1/NP)))	2
+(NP (:ARG2/NP) (: :) (NP*))	2
+(NP (:op1/NP) (:topic/CC) (NP*))	2
+(NP (NP*) (, ,) (NP) (CC XXX) (NP))	2
+(NP (PRP$ its) (NP*))	2
+(NP (NP*) (X (SYM *)))	2
+(NP (:op2/NP) (NP*))	2
+(NP (:op3/NP) (NP*))	2
+(NP (NP*) (, ,) (:ARG1/SBAR) (, ,))	2
+(NP (:op1/NP) (:ARG2/CC) (NP*))	2
+(NP (:topic/NP) (NP*))	2
+(NP (NP*) (:ARG2-of/VP))	2
+(NP (NP*) (:condition/VP))	2
+(VP (:ARG1/MD) (VP*))	2
+(NP (NP*) (:ARG0/PRN))	2
+(NP (:ARG1-of/NP) (NP*))	2
+(NP (NP*) (NP (NN </a>)))	2
+(NP (NP*) (:domain/SBAR))	2
+(NP (NP*) (NN application))	2
+(NP (DT The) (NP*))	2
+(NP (:polarity/NP) (NP*))	2
+(NP (NP*) (, ,) (:ARG1-of/PP) (, ,))	2
+(NP (:op1/NP) (:ARG0/CC) (NP*))	2
+(NP (:op1/NP) (: :) (NP*) (:op2/,))	2
+(NP (NP*) (:ARG0/CC) (NP))	2
+(NP (NP*) (ADVP (RB never)))	2
+(NP (NP*) (CC and) (NP))	2
+(NP (NP*) (SBAR (:ARG0/WHNP) (:ARG0-of/S)))	2
+(NP (NP*) (PP (:ARG2/IN) (:part-of/NP)))	2
+(NP (NP*) (PP (:ARG0/IN) (:ARG1/NP)))	2
+(NP (:ARG1/NP) (:ARG1/CC) (NP*))	2
+(NP (NP*) (, ,) (:ARG0-of/VP))	2
+(NP (NP*) (:compared-to/VP))	2
+(NP (NP*) (, ,) (:mod/PP) (, ,))	2
+(NP (NP*) (VP))	2
+(NP (NP*) (, ,) (:ARG0-of/VP) (, ,))	2
+(NP (NP*) (:location/VP))	2
+(NP (NP*) (PP (:ARG1/VB) (:ARG1/NP)))	2
+(NP (:age/NP) (NP*))	2
+(NP (NP*) (:polarity/PP))	2
+(NP (NP*) (NNS actions))	2
+(NP (:ARG1/NP) (: -) (NP*))	2
+(NP (NP*) (NN ceasefire))	2
+(NP (:op2/NP) (, ,) (NP*))	2
+(NP (:op1/NP) (CC and) (NP*))	2
+(NP (NP*) (, ,) (:ARG0-of/SBAR))	2
+(NP (NP*) (:mod/ADJP))	2
+(NP (NP*) (:ARG0-of/PRN))	2
+(NP (NP*) (NNP XXX) (NNP XXX))	2
+(NP (:ARG1/NP) (, ,) (NP*) (, ,))	2
+(NP (NP*) (:quant/PP))	2
+(NP (NP*) (, ,) (:ARG0/SBAR))	2
+(NP (NP*) (NP) (. .))	2
+(NP (NP*) (:subevent-of/PP))	2
+(NP (NP*) (:time/ADVP))	2
+(NP (NP*) (, ,) (:ARG2-of/PP) (, ,))	2
+(NP (NP*) (, ,) (:manner/PP) (, ,))	2
+(NP (:op1/NP) (, ,) (NP*))	2
+(NP (NP*) (, ,) (:ARG1/VP) (, ,))	2
+(NP (NP*) (:ARG2/CC) (NP))	2
+(NP (NP*) (PP (:ARG1-of/IN) (:ARG2/NP)))	2
+(NP (NP*) (NN censorship))	2
+(NP (:domain/NP) (NP*))	2
+
+
+:ARG2/PP	2319
+(NP (NP*) (PP))	300
+(NP (NP*) (:ARG1/PP))	209
+(NP (NP*) (:location/PP))	130
+(NP (NP*) (:ARG0-of/SBAR))	74
+(NP (NP*) (:ARG1-of/VP))	71
+(NP (NP*) (:mod/PP))	71
+(NP (NP*) (:ARG2/PP))	62
+(NP (NP*) (:part-of/PP))	58
+(NP (NP*) (:time/PP))	49
+(NP (NP*) (:ARG1-of/SBAR))	48
+(NP (NP*) (:ARG0/PP))	48
+(NP (NP*) (:op2/PP))	40
+(PP (:ARG1-of/VB) (PP*))	36
+(NP (NP*) (:poss/PP))	35
+(NP (NP*) (:op1/PP))	32
+(NP (NP*) (:ARG0-of/VP))	25
+(NP (NP*) (:ARG3/PP))	23
+(NP (NP*) (:ARG1-of/PP))	21
+(NP (NP*) (:ARG1/SBAR))	20
+(NP (NP*) (:topic/PP))	17
+(VP (VB be) (VP*))	14
+(NP (:ARG1/NP) (, ,) (NP*))	13
+(NP (NP*) (:duration/PP))	13
+(NP (NP*) (:purpose/PP))	12
+(PP (VBG according) (PP*))	11
+(NP (:ARG1/NP) (NP*))	11
+(NP (:ARG1/NP) (CC and) (NP*))	11
+(NP (NP*) (:consist-of/PP))	11
+(NP (NP*) (:ARG0-of/PP))	10
+(NP (NP*) (:ARG2-of/PP))	10
+(NP (NP*) (:beneficiary/PP))	9
+(VP (TO to) (VP*))	9
+(NP (NP*) (:op3/PP))	9
+(NP (:ARG2/NP) (, ,) (NP*))	8
+(NP (NP*) (:manner/PP))	8
+(PP (IN on) (PP*))	8
+(NP (NP*) (, ,) (:ARG0-of/SBAR))	8
+(NP (NP*) (:quant/PP))	8
+(NP (NP*) (PP (:time/IN) (:op1/NP)))	7
+(NP (NP*) (, ,) (:ARG1-of/SBAR))	7
+(NP (NP*) (PP (:location/IN) (:op1/NP)))	7
+(NP (NP*) (:source/PP))	7
+(NP (NP*) (:ARG2/VP))	7
+(NP (NP*) (:ARG0/VP))	6
+(NP (NP*) (:ARG2/PRN))	6
+(NP (NP*) (:ARG2-of/SBAR))	6
+(NP (NP*) (:time/SBAR))	6
+(NP (NP*) (:example/PP))	6
+(NP (NP*) (:ARG1/VP))	6
+(NP (NP*) (:ARG2/SBAR))	6
+(NP (NP*) (:mod/SBAR))	5
+(NP (NP*) (PP (:ARG2-of/VB) (:ARG1/NP)))	5
+(NP (NP*) (:op2/VP))	5
+(NP (NP*) (:op1/SBAR))	5
+(PP (IN of) (PP*))	5
+(NP (NP*) (:ARG0/ADJP))	5
+(NP (NP*) (:ARG1-of/ADJP))	5
+(NP (NP*) (:compared-to/PP))	5
+(PP (IN as) (PP*))	5
+(NP (NP*) (:op2/SBAR))	5
+(NP (NP*) (NP))	4
+(NP (:location/NP) (, ,) (NP*))	4
+(NP (NP*) (PP (IN in) (NP (NN prison))))	4
+(NP (NP*) (:location-of/SBAR))	4
+(NP (NP*) (PP (IN of) (NP (NN money-laundering))))	4
+(NP (NP*) (:instrument/PP))	4
+(NP (NP*) (:ord/PP))	4
+(NP (NP*) (, ,) (:ARG1/SBAR))	4
+(NP (NP*) (PP (:ARG1/IN) (:op1/NP)))	4
+(NP (:mod/NP) (, ,) (NP*))	4
+(PP (IN in) (PP*))	4
+(NP (:ARG2/NP) (NP*))	4
+(ADVP (ADVP*) (PP))	4
+(NP (NP*) (:medium/PP))	3
+(NP (:mod/NP) (NP*))	3
+(NP (NP*) (:domain/SBAR))	3
+(ADJP (ADJP*) (PP))	3
+(NP (NP*) (PP (IN in) (NP (NNS terms))))	3
+(NP (:ARG2/NP) (, ,) (:polarity/RB) (NP*))	3
+(NP (:ARG0/NP) (CC and) (NP*))	3
+(NP (NP*) (:time/JJ))	3
+(PP (IN like) (PP*))	3
+(PP (IN while) (PP*))	3
+(VP (:ARG1/VP) (CC and) (VP*))	3
+(NP (NP*) (, ,) (:ARG0/SBAR))	3
+(NP (NP*) (:quant/ADVP))	3
+(NP (NP*) (:purpose/VP))	3
+(NP (NP*) (:prep-in/PP))	3
+(PP (:ARG1/IN) (PP*))	3
+(NP (NP*) (:location-of/PP))	3
+(NP (NP*) (PP (:ARG1-of/IN) (:ARG2/NP)))	3
+(NP (:op1/NP) (NP*))	3
+(NP (:ARG1/NP) (CONJP (RB rather) (IN than)) (NP*))	2
+(NP (NP*) (:domain/PP))	2
+(NP (NP*) (PP (:op1/IN) (:ARG1/NP)))	2
+(PP (VBG According) (PP*))	2
+(NP (NP*) (NN XXX))	2
+(NP (NP*) (ADVP (IN at) (DT all)))	2
+(NP (NP*) (:ARG2-of/VP))	2
+(NP (:ARG0/NP) (:ARG1/CC) (NP*))	2
+(NP (NP*) (:ARG0/SBAR))	2
+(NP (NP*) (:location/ADVP))	2
+(NP (NP*) (PP) (. .))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP IAEA)) (-RRB- -RRB-)))	2
+(NP (NP*) (:op1/ADVP))	2
+(NP (NP*) (PP (:ARG2/VB) (:ARG1/NP)))	2
+(NP (NP*) (, ,) (NP))	2
+(NP (NP*) (PP (IN at) (NP (NN hand))))	2
+(NP (NP*) (:quant-of/PP))	2
+(VP (VB do) (VP*))	2
+(NP (NP*) (:condition/PP))	2
+(NP (:ARG1/NP) (`` ``) (NP*) ('' ''))	2
+(PP (:ARG2/VB) (PP*))	2
+(NP (NP*) (:mod/ADVP))	2
+(NP (NP*) (, ,) (:ARG1-of/VP))	2
+(NP (:op1/NP) (:ARG0/CC) (NP*))	2
+(NP (NP*) (:ARG2-of/PRN))	2
+(PP (:purpose/IN) (PP*))	2
+(PP (:purpose/VB) (PP*))	2
+(NP (NP*) (:ARG4/PP))	2
+(NP (:time/NP) (:ARG4/PP) (ADVP (RB then)) (NP*))	2
+(NP (NP*) (:time-of/PP))	2
+(NP (NP*) (NNP XXX))	2
+(NP (:op1/NP) (:ARG2/CC) (NP*))	2
+(NP (NP*) (:poss-of/PP))	2
+(NP (NP*) (PP (:ARG2-of/VB) (:op1/NP)))	2
+(NP (NP*) (PP (IN of) (NP (PRP them))))	2
+(NP (NP*) (PP (IN of) (NP (:op1/NN) (:ARG1/CC) (NN trafficking))))	2
+(NP (NP*) (SBAR (WHNP (WDT that))))	2
+(NP (NP*) (ADJP))	2
+(NP (NP*) (:subevent-of/PP))	2
+(NP (NP*) (:consist-of/PP) (:ARG0-of/SBAR))	2
+(NP (NP*) (:purpose/SBAR))	2
+(PP (IN for) (PP*))	2
+(NP (NP*) (PP (IN of) (NP (NN speech))))	2
+(NP (:ARG0/NP) (NP*) (: --))	2
+(NP (NP*) (:mod/VP))	2
+(NP (NP*) (PP (IN in) (NP (NN addition))))	2
+(NP (NP*) (:ARG1-of/PRN))	2
+(NP (NP*) (:accompanier/PP))	2
+(NP (NP*) (:op5/PP))	2
+(PP (:ARG2/PP) (:ARG1/CONJP) (PP*))	2
+(NP (NP*) (:op1/VP))	2
+(NP (NP*) (PP (:ARG1-of/VB) (:ARG2/NP)))	2
+
+
+:ARG2/S	2118
+(VP (TO to) (VP*))	1371
+(VP (VB be) (VP*))	146
+(VP (VB do) (:polarity/RB) (VP*))	58
+(VP (VB have) (VP*))	37
+(VP (MD would) (VP*))	29
+(NP (NP*) (:ARG1/PP))	26
+(VP (MD will) (VP*))	26
+(VP (VB be) (:polarity/RB) (VP*))	15
+(VP (:ARG1/MD) (VP*))	14
+(VP (VB be) (:mod/ADVP) (VP*))	10
+(VP (VB do) (VP*))	9
+(VP (MD will) (:polarity/RB) (VP*))	7
+(VP (:op2/MD) (VP*))	6
+(NP (NP*) (:ARG0-of/SBAR))	6
+(NP (NP*) (:ARG1/SBAR))	6
+(VP (MD 'll) (VP*))	6
+(VP (MD would) (:polarity/RB) (VP*))	5
+(NP (NP*) (:ARG1-of/SBAR))	5
+(NP (NP*) (:location/PP))	4
+(NP (NP*) (:mod/PP))	4
+(VP (MD can) (VP*))	4
+(NP (NP*) (:ARG2/PP))	4
+(VP (:ARG1/VB) (VP*))	4
+(VP (:ARG0/TO) (VP*))	4
+(VP (:ARG1/TO) (VP*))	4
+(NP (:ARG1/NP) (, ,) (NP*))	4
+(VP (:ARG1-of/MD) (VP*))	3
+(VP (VB have) (:polarity/RB) (VP*))	3
+(VP (:snt1/MD) (VP*))	3
+(VP (VB be) (:time/ADVP) (VP*))	3
+(NP (NP*) (PP))	3
+(VP (:op1/MD) (VP*))	3
+(NP (NP*) (:time/PP))	3
+(VP (TO XXX) (VP*))	3
+(VP (VB get) (VP*))	3
+(VP (:ARG2/MD) (VP*))	3
+(VP (:ARG1-of/VB) (VP*))	3
+(VP (:ARG1/VP) (CONJP (RB rather) (IN than)) (VP*))	3
+(VP (:ARG1/VP) (, ,) (:ARG2/CC) (VP*))	3
+(NP (NP*) (:ARG0-of/VP))	3
+(NP (NP*) (:part-of/PP))	3
+(VP (TO TO) (VP*))	3
+(VP (:op1/VP) (:ARG1/CC) (VP*))	3
+(VP (MD would) (:mod/ADVP) (VP*))	3
+(NP (NP*) (:ARG3/PP))	3
+(VP (:ARG0/MD) (VP*))	2
+(VP (:ARG1-of/VP) (, ,) (:ARG1-of/CC) (VP*))	2
+(VP (TO na) (VP*))	2
+(NP (NP*) (:ARG1/VP))	2
+(NP (NP*) (:purpose/PP))	2
+(VP (TO To) (VP*))	2
+(S (S*) (: ...) (: ...) (. .))	2
+(NP (NP*) (CC but) (S))	2
+(NP (NP*) (:ARG2/SBAR))	2
+(VP (:ARG1/VP) (:ARG1-of/CC) (VP*))	2
+(VP (:ARG1/VB) (:polarity/RB) (VP*))	2
+(NP (:ARG3/NP) (, ,) (NP*))	2
+(VP (MD shall) (VP*))	2
+(VP (:ARG2/MD) (:mod/ADVP) (VP*))	2
+(VP (VB do) (:polarity/RB) (ADVP (RB really)) (VP*))	2
+(VP (:ARG1/MD) (:mod/ADVP) (VP*))	2
+(VP (MD can) (:polarity/RB) (VP*))	2
+(VP (VB have) (ADVP (RB never)) (VP*))	2
+(VP (:ARG1/VP) (CC and) (VP*))	2
+(NP (NP*) (:beneficiary/PP))	2
+(VP (:op1/VP) (:op1/CC) (VP*))	2
+(NP (NP*) (PP (IN for) (NP (PRP it))))	2
+(VP (VB have) (:time/ADVP) (VP*))	2
+(VP (:ARG0-of/VP) (:ARG1/CC) (VP*))	2
+(VP (MD will) (:mod/ADVP) (VP*))	2
+(VP (:op2/MD) (:polarity/RB) (VP*))	2
+(VP (VB be) (RB not) (VP*))	2
+(NP (NP*) (:topic/PP))	2
+
+
+:op2/NP	2046
+(NP (:op1/NP) (:ARG1/CC) (NP*))	292
+(NP (:op1/NP) (:ARG0/CC) (NP*))	127
+(NP (NP*) (:ARG1/PP))	110
+(NP (:op1/NP) (: ;) (NP*))	103
+(NP (NP*) (: ;) (NP))	56
+(NP (:op1/NP) (:ARG2/CC) (NP*))	41
+(NP (NP*) (:ARG1/CC) (NP))	36
+(NP (NP*) (:ARG0/PP))	32
+(NP (NP*) (:ARG2/PP))	31
+(NP (:op1/NP) (, ,) (NP*))	29
+(NP (:op1/NP) (CC and) (NP*))	28
+(NP (NP*) (:poss/PP))	27
+(NP (NP*) (:location/PP))	27
+(NP (NP*) (:ARG0-of/SBAR))	26
+(NP (NP*) (:mod/PP))	21
+(NP (NP*) (:op1/PP))	20
+(NP (NP*) (PP))	19
+(NP (NP*) (:op2/PP))	18
+(NP (:ARG1/NP) (:ARG1/CC) (NP*))	18
+(NP (NP*) (:ARG1-of/VP))	15
+(NP (:op1/NP) (:op1/CC) (NP*))	15
+(NP (NP*) (:ARG1-of/PP))	15
+(NP (NP*) (:ARG0-of/VP))	14
+(NP (NP*) (:ARG1-of/SBAR))	14
+(NP (NP*) (:ARG0/CC) (NP))	13
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NN RU)) (-RRB- -RRB-)))	13
+(NP (NP*) (, ,) (NP))	12
+(NP (:op1/NP) (NP*))	12
+(NP (NP*) (NP))	11
+(NP (NP*) (:part-of/PP))	10
+(NP (NP*) (:ARG1/SBAR))	10
+(NP (NP*) (:topic/PP))	9
+(NP (NP*) (:ARG2/CC) (NP))	9
+(NP (NP*) (: ;) (NP (NNP Telecom)))	8
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NN CN)) (-RRB- -RRB-)))	8
+(NP (:op1/NP) (, ,) (NP*) (, ,))	8
+(NP (:op1/NP) (:domain/CC) (NP*))	8
+(NP (NP*) (:op3/PP))	7
+(NP (NP*) (:ARG0-of/PP))	7
+(NP (:ARG1/NP) (NP*))	7
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP US)) (-RRB- -RRB-)))	7
+(NP (:op1/NP) (, ,) (:ARG1/CC) (NP*))	6
+(NP (:ARG1/NP) (, ,) (NP*))	6
+(NP (NP*) (:compared-to/PP))	6
+(NP (NP*) (:ARG2-of/PP))	6
+(NP (NP*) (:mod/SBAR))	5
+(NP (:ARG2/NP) (:ARG1/CC) (NP*))	5
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP GB)) (-RRB- -RRB-)))	5
+(NP (:ARG1/NP) (:ARG2/CC) (NP*))	5
+(NP (NP*) (:domain/PP))	4
+(NP (:op1/NP) (CC &) (NP*))	4
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP TW)) (-RRB- -RRB-)))	4
+(NP (:ARG1-of/NP) (:ARG1/CC) (NP*))	4
+(NP (NP*) (:ARG2/PRN))	4
+(NP (:ARG0/NP) (NP*))	4
+(NP (NP*) (:ARG2-of/SBAR))	4
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NN MM)) (-RRB- -RRB-)))	4
+(NP (NP*) (CC and) (NP))	4
+(NP (NP*) (:op1/SBAR))	4
+(NP (:ARG0-of/NP) (NP*))	4
+(NP (:time/NP) (NP*))	4
+(NP (NP*) (:ARG1/VP))	4
+(NP (NP*) (: -) (NP))	4
+(NP (:op1/NP) (:op2/CC) (NP*))	4
+(NP (NP*) (PRN (-LRB- -LRB-) (PP (IN IN)) (-RRB- -RRB-)))	4
+(NP (NP*) (:ARG3/PP))	4
+(NP (NP*) (:domain/CC) (NP))	3
+(NP (:op1/NP) (:topic/CC) (NP*))	3
+(NP (NP*) (:prep-for/PP))	3
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP AF)) (-RRB- -RRB-)))	3
+(NP (NP*) (:purpose/PP))	3
+(NP (NP*) (PP (:time/RB) (IN of) (:op1/NP)))	3
+(NP (NP*) (PP (:time/IN) (:op1/NP)))	3
+(NP (NP*) (PP (:location/IN) (:op1/NP)))	3
+(NP (:ARG0/NP) (:ARG1/CC) (NP*))	3
+(NP (:ARG1/NP) (:ARG0/CC) (NP*))	3
+(NP (:op1/NP) (, ,) (NP*) (. .))	3
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP IR)) (-RRB- -RRB-)))	3
+(NP (:op1/NP) (:location/CC) (NP*))	3
+(NP (:op1/NP) (, ,) (:ARG1/CC) (NP*) (, ,))	3
+(NP (NP*) (:quant-of/PP))	3
+(NP (PRP$ its) (NP*))	3
+(NP (:op2/NP) (:ARG1/CC) (NP*))	3
+(NP (NP*) (:topic/CC) (NP))	3
+(NP (:op1/NP-TMP) (: ;) (NP*))	3
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP ZW)) (-RRB- -RRB-)))	3
+(NP (:ARG1/NP) (CC and) (NP*))	3
+(NP (:op1/NP) (CONJP (RB as) (RB well) (IN as)) (NP*))	3
+(NP (:op1/NP) (CC nor) (NP*))	3
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP IQ)) (-RRB- -RRB-)))	3
+(NP (NP*) (:consist-of/PP))	3
+(NP (:ARG1/NP) (CONJP (RB as) (RB well) (IN as)) (NP*))	3
+(NP (:op1/NP) (:purpose/CC) (NP*))	3
+(NP (:ARG2/NP) (NP*))	3
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NN FR)) (-RRB- -RRB-)))	3
+(NP (NP*) (:manner/PP))	2
+(NP (:mod/NP) (NP*))	2
+(NP (:op1/NP) (: :) (NP*))	2
+(NP (:op2/NP) (, ,) (:op1/CC) (NP*))	2
+(NP (NP*) (:op4/PP) (:ARG0-of/SBAR))	2
+(NP (NP*) (:op1/,) (:mod/ADVP))	2
+(NP (:op1/NP) (, ,) (CC and) (NP*))	2
+(NP (:op1/NP) (, ,) (NP*) (, ,) (:ARG1/CC) (NP))	2
+(NP (:op1/NP) (CC and/or) (NP*))	2
+(NP (NP*) (:purpose/CC) (NP))	2
+(NP (NP*) (: ;) (NP (NN health)))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP LY)) (-RRB- -RRB-)))	2
+(NP (NP*) (:op2/PRN))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (PP (:time/IN) (:op1/NP)) (-RRB- -RRB-)))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP ID)) (-RRB- -RRB-)))	2
+(NP (NP*) (PP (IN of) (NP (NN course))))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP JP)) (-RRB- -RRB-)))	2
+(NP (CC either) (:op1/NP) (:ARG0/CC) (NP*))	2
+(NP (:op1/NP) (, ,) (:ARG0/CC) (NP*) (, ,))	2
+(NP (NP*) (:time/SBAR))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP BR)) (-RRB- -RRB-)))	2
+(NP (:op1/NP) (:ARG3/CC) (NP*))	2
+(NP (NP*) (:mod/ADVP))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NP (NNP Islamic) (NNP Republic)) (PP (IN of))) (-RRB- -RRB-)))	2
+(NP (NP*) (, ,) (:ARG1-of/SBAR))	2
+(NP (:ARG1/NP) (:topic/CC) (NP*))	2
+(NP (CC neither) (:op1/NP) (CC nor) (NP*))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP LV)) (-RRB- -RRB-)))	2
+(NP (NP*) (: :) (NP))	2
+(NP (NP*) (, ,) (NP) (, ,) (NP (:op3/PRP$) (NN Meltdown) (:ARG4/CD) (NN TPMMuckraker) (NN </a>)))	2
+(NP (NP*) (:ARG1/PP) (:ARG0-of/SBAR))	2
+(NP (NP*) (CC &) (NP))	2
+(NP (:ARG2/NP) (:ARG0/CC) (NP*))	2
+(NP (:op1/NP) (: --) (NP*))	2
+(NP (:ARG2/NP) (:topic/CC) (NP*))	2
+(NP (:op1/NP) (: -) (NP*))	2
+(NP (NP*) (PP (IN of) (NP (DT the))))	2
+(NP (:ARG1/NP) (: -) (NP*))	2
+(NP (:ARG1/CC) (NP*))	2
+(NP (NP*) (NP (NN etc)))	2
+(NP (:op2/NP) (, ,) (NP*))	2
+(NP (NP*) (: ...))	2
+(NP (:op1/NP) (:source/CC) (NP*))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP JO)) (-RRB- -RRB-)))	2
+(NP (:op1/NP) (:snt2/CC) (NP*))	2
+(NP (NP*) (:op3/PP) (:ARG0-of/SBAR))	2
+(NP (NP*) (PP (IN of)))	2
+(NP (NP*) (NNP XXX) (NNP XXX))	2
+(NP (NP*) (:source/PP))	2
+(NP (NP*) (:prep-on/PP))	2
+(NP (NP*) (:quant/PP))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP PK)) (-RRB- -RRB-)))	2
+(NP (:ARG0-of/NP) (:ARG1/CC) (NP*))	2
+(NP (NP*) (, ,) (:ARG1/CC) (NP))	2
+(NP (:ARG0-of/NP) (:ARG0/CC) (NP*))	2
+(NP (:mod/NP) (:ARG1/CC) (NP*))	2
+(NP (NP*) (:purpose/SBAR))	2
+(NP (:ARG1/NP) (:location/CC) (NP*))	2
+(NP (NP*) (:prep-in/PP))	2
+(NP (:op2/NP) (: ;) (NP*))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP UA)) (-RRB- -RRB-)))	2
+(NP (NP*) (:ARG2/SBAR))	2
+(NP (CC both) (:op1/NP) (:ARG1/CC) (NP*))	2
+(NP (NP*) (, ,) (:ARG0-of/SBAR))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NN IR)) (-RRB- -RRB-)))	2
+(NP (NP*) (:op2/SBAR))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NN DE)) (-RRB- -RRB-)))	2
+(NP (NP*) (, ,) (NP (FW etc.)))	2
+
+
+:op2/S	1683
+(VP (TO to) (VP*))	349
+(VP (VB be) (VP*))	223
+(VP (:op1/VP) (:ARG1/CC) (VP*))	158
+(VP (VB have) (VP*))	71
+(VP (MD will) (VP*))	65
+(VP (:op1/VP) (:ARG2/CC) (VP*))	49
+(VP (MD would) (VP*))	41
+(VP (VB do) (:polarity/RB) (VP*))	26
+(VP (:ARG1/VP) (:ARG1/CC) (VP*))	19
+(VP (:op1/VP) (:purpose/CC) (VP*))	19
+(NP (NP*) (:ARG1/PP))	18
+(VP (:op1/VP) (:op2/CC) (VP*))	16
+(VP (VB be) (:mod/ADVP) (VP*))	14
+(VP (MD 'll) (VP*))	13
+(VP (:op1/VP) (CC and) (VP*))	11
+(VP (:op1/VP) (, ,) (:ARG1/CC) (VP*))	11
+(NP (:op1/NP) (:ARG1/CC) (NP*))	10
+(VP (VB be) (:time/ADVP) (VP*))	9
+(NP (NP*) (:ARG2/PP))	9
+(VP (:op1/VP) (:op1/CC) (VP*))	9
+(NP (:op1/NP) (:ARG2/CC) (NP*))	9
+(VP (:op1/VP) (, ,) (VP*))	8
+(VP (:op1/VP) (:ARG0/CC) (VP*))	8
+(VP (:op1/VP) (, ,) (:ARG2/CC) (VP*))	8
+(NP (NP*) (:ARG1-of/SBAR))	7
+(VP (:ARG1/MD) (VP*))	6
+(NP (NP*) (:location/PP))	6
+(VP (:ARG0/VB) (VP*))	6
+(VP (:op1/VB) (VP*))	6
+(VP (:ARG2/VP) (:ARG1/CC) (VP*))	6
+(VP (VB be) (:polarity/RB) (VP*))	6
+(NP (NP*) (:mod/PP))	5
+(VP (VB have) (:time/ADVP) (VP*))	5
+(NP (:op1/NP) (:ARG0/CC) (NP*))	5
+(VP (:op1/VP) (:domain/CC) (VP*))	5
+(VP (MD would) (:polarity/RB) (VP*))	5
+(VP (:op1/VP) (:snt2/CC) (VP*))	5
+(VP (:op1/VP) (:snt1/CC) (VP*))	5
+(VP (VB have) (:mod/ADVP) (VP*))	4
+(VP (:op1/VP) (:ARG1/CC) (:mod/ADVP) (VP*))	4
+(VP (:op1/VP) (:ARG3/CC) (VP*))	4
+(VP (MD will) (:time/ADVP) (VP*))	4
+(VP (VB do) (RB n't) (VP*))	4
+(VP (:ARG0/VP) (:ARG1/CC) (VP*))	4
+(VP (MD will) (:mod/ADVP) (VP*))	4
+(VP (TO na) (VP*))	4
+(VP (:ARG1/VP) (:purpose/CC) (VP*))	4
+(VP (:ARG1/VP) (:ARG2/CC) (VP*))	4
+(NP (NP*) (:ARG1-of/PP))	4
+(VP (:op1/MD) (VP*))	4
+(VP (VB get) (VP*))	4
+(NP (NP*) (:ARG1-of/VP))	3
+(VP (:ARG1/VP) (:ARG0/CC) (VP*))	3
+(VP (MD will) (ADVP (RB never)) (VP*))	3
+(VP (:op2/VP) (:ARG1/CC) (VP*))	3
+(VP (:ARG0-of/VP) (:ARG1/CC) (VP*))	3
+(VP (MD will) (:polarity/RB) (VP*))	3
+(VP (VB do) (VP*))	3
+(VP (:op1/VP) (, ,) (:purpose/CC) (VP*))	3
+(VP (MD shall) (VP*))	3
+(VP (:op1/VP) (:ARG1/CC) (:polarity/RB) (VP*))	3
+(VP (VB be) (:degree/ADVP) (VP*))	3
+(VP (VB do) (:polarity/RB) (:mod/ADVP) (VP*))	3
+(VP (:op1/VP) (:condition/CC) (VP*))	3
+(VP (:op1/VP) (:example/CC) (VP*))	3
+(VP (:ARG0-of/VB) (VP*))	3
+(NP (NP*) (:poss/PP))	3
+(VP (:ARG1/VP) (CC and) (VP*))	3
+(VP (:ARG2/VB) (VP*))	3
+(VP (VB be) (:manner/ADVP) (VP*))	3
+(NP (:op1/NP) (, ,) (NP*))	3
+(VP (:op2/MD) (VP*))	2
+(NP (NP*) (:ARG0-of/SBAR))	2
+(NP (:op1/NP) (CC &) (NP*))	2
+(VP (:op1/VP) (, ,) (CC and) (VP*))	2
+(VP (:op1/VP) (CC or) (VP*))	2
+(NP (NP*) (:op1/PP))	2
+(NP (NP*) (:beneficiary/PP))	2
+(VP (:ARG2/MD) (VP*))	2
+(VP (:ARG1/VP) (:op2/CC) (VP*))	2
+(NP (NP*) (PP))	2
+(NP (NP*) (:part-of/PP))	2
+(VP (:op1/VP) (:manner/CC) (VP*))	2
+(NP (:ARG1/NP) (:ARG1/CC) (NP*))	2
+(VP (:snt1/MD) (VP*))	2
+(VP (:snt2/MD) (VP*))	2
+(VP (:ARG2/VP) (:ARG2/CC) (VP*))	2
+(VP (TO XXX) (VP*))	2
+(VP (:op1/VP) (, ,) (:snt1/CC) (VP*))	2
+(NP (NP*) (:ARG0/PP))	2
+(NP (NP*) (:compared-to/PP))	2
+(VP (:op1/VP) (, ,) (:ARG0/CC) (VP*))	2
+(VP (:op1/VP) (, ,) (:topic/CC) (VP*))	2
+(VP (VB be) (ADVP (RB really)) (VP*))	2
+(VP (VB have) (:polarity/RB) (VP*))	2
+(NP (NP*) (:ARG1/VP))	2
+(VP (MD would) (:mod/ADVP) (VP*))	2
+(VP (:op1/VP) (:concession-of/CC) (VP*))	2
+(VP (VB be) (:polarity/RB) (:mod/ADVP) (VP*))	2
+(VP (:op1/VP) (, ,) (:time/ADVP) (VP*))	2
+
+
+:op1/NP	1465
+(NP (NP*) (:ARG1/PP))	227
+(NP (NP*) (:op2/PP))	66
+(NP (NP*) (:ARG2/PP))	52
+(NP (NP*) (:location/PP))	48
+(NP (NP*) (:op1/PP))	47
+(NP (NP*) (:ARG0/PP))	33
+(NP (NP*) (:time/PP))	29
+(NP (NP*) (:mod/PP))	26
+(NP (NP*) (PP))	26
+(NP (NP*) (NP))	23
+(NP (NP*) (: ;) (S (:op2/ADJP) (: ;) (:op3/NP)))	21
+(NP (NP*) (:poss/PP))	20
+(NP (NP*) (:part-of/PP))	19
+(NP (NP*) (:ARG0-of/SBAR))	18
+(NP (NP*) (:ARG1/CC) (NP))	15
+(NP (NP*) (:ARG1-of/SBAR))	13
+(NP (NP*) (:ARG1-of/VP))	12
+(NP (NP*) (PRN (-LRB- -LRB-) (PP (IN IN)) (-RRB- -RRB-)))	12
+(NP (NP*) (: ;) (NP (NNP Telecom)))	10
+(NP (NP*) (:ARG0/CC) (NP))	10
+(NP (NP*) (:op2/PRN))	8
+(NP (:op1/NP) (:ARG1/CC) (NP*))	8
+(NP (NP*) (:op2/SBAR))	8
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NN RU)) (-RRB- -RRB-)))	7
+(NP (NP*) (:ARG1/SBAR))	7
+(NP (NP*) (:ARG1-of/PP))	7
+(NP (:mod/NP) (NP*))	6
+(NP (NP*) (:ARG2/PRN))	6
+(NP (NP*) (:ARG0-of/VP))	6
+(NP (NP*) (:topic/PP))	6
+(NP (NP*) (:consist-of/PP))	6
+(NP (NP*) (:domain/PP))	5
+(NP (NP*) (:op3/PP))	5
+(NP (NP*) (:source/PP))	5
+(NP (NP*) (:ARG0-of/PP))	5
+(NP (:ARG1/NP) (NP*))	5
+(NP (NP*) (:prep-in/PP))	5
+(NP (NP*) (:ARG2/SBAR))	5
+(NP (NP*) (:ARG2-of/PP))	5
+(NP (:op1/NP) (NP*))	5
+(NP (NP*) (:duration-of/PP))	4
+(NP (NP*) (:ARG1/PRN))	4
+(NP (NP*) (NP (-LRB- -LRB-) (NNP EE) (-RRB- -RRB-)))	4
+(NP (:ARG1/NP) (: -) (NP*))	4
+(NP (NP*) (PP (:op1/IN) (:op2/NP)))	4
+(NP (NP*) (: ...))	4
+(NP (NP*) (:quant/PP))	4
+(NP (NP*) (:op4/PP))	4
+(NP (:location/NP) (NP*))	3
+(NP (NP*) (:prep-from/PP))	3
+(NP (NP*) (:purpose/PP))	3
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP ZA)) (-RRB- -RRB-)))	3
+(NP (NP*) (PP (:time/IN) (:op1/NP)))	3
+(NP (NP*) (NN XXX))	3
+(NP (NP*) (:mod/SBAR))	3
+(NP (NP*) (:beneficiary/PP))	3
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP LY)) (-RRB- -RRB-)))	3
+(NP (NP*) (NP (-LRB- -LRB-) (NNP PK) (-RRB- -RRB-)))	3
+(NP (:op1/NP) (:ARG0/CC) (NP*))	3
+(NP (NP*) (, ,) (NP))	3
+(NP (NP*) (:quant-of/PP))	3
+(VP (TO to) (VP*))	3
+(NP (NP*) (PP (IN on)))	3
+(NP (NP*) (:ARG1-of/ADJP))	3
+(NP (:ARG0-of/NP) (NP*))	3
+(NP (NP*) (NP (-LRB- -LRB-) (NNP IQ) (-RRB- -RRB-)))	3
+(NP (NP*) (:ARG2/CC) (NP))	3
+(NP (:ARG2/NP) (NP*))	3
+(NP (NP*) (:ARG3/PP))	3
+(NP (NP*) (:time/ADJP))	2
+(NP (NP*) (NP (-LRB- -LRB-) (NNP GE) (-RRB- -RRB-)))	2
+(NP (NP*) (:manner/PP))	2
+(NP (NP*) (NP (-LRB- -LRB-) (NNP AF) (-RRB- -RRB-)))	2
+(NP (NP*) (:ARG0/VP))	2
+(NP (NP*) (:op1/CC) (NP))	2
+(NP (:op2/NP) (NP*))	2
+(NP (NP*) (NP (-LRB- -LRB-) (NNP KH) (-RRB- -RRB-)))	2
+(NP (NP*) (SBAR))	2
+(NP (:ARG0/NP) (NP*))	2
+(NP (NP*) (NP (DT each)))	2
+(NP (NP*) (:ARG0/PRN))	2
+(NP (NP*) (:ARG0/SBAR))	2
+(NP (:ARG2/NP) (:ARG1/CC) (NP*))	2
+(NP (NP*) (PP (IN of) (NP (DT those))))	2
+(NP (DT The) (NP*))	2
+(NP (NP*) (:op1/ADVP))	2
+(NP (NP*) (PP (IN of) (NP (NNPS Americans))))	2
+(NP (NP*) (: ;) (:op3/S))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP JP)) (-RRB- -RRB-)))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP GB)) (-RRB- -RRB-)))	2
+(NP (NP*) (CC or) (NP (JJR more)))	2
+(NP (NP*) (PP (IN of) (NP (NP (DT the) (NNS decades)) (PP (IN of) (NP (CD 600000) (CC and) (CD 700000))))))	2
+(NP (NP*) (CC and) (NP))	2
+(NP (NP*) (:op1/SBAR))	2
+(NP (:ARG1/NP) (:ARG1/CC) (NP*))	2
+(NP (:ARG1/NP) (, ,) (NP*))	2
+(NP (NP*) (, ,) (:ARG1-of/SBAR))	2
+(NP (NP*) (:mod/PRN))	2
+(NP (:domain/NP) (NP*))	2
+(NP (NP*) (:ARG1/PP) (:ARG0-of/SBAR))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP MY)) (-RRB- -RRB-)))	2
+(NP (NP*) (, ,) (NP) (, ,))	2
+(NP (NP*) (:time/PP) (:ARG1/SBAR))	2
+(NP (:time/NP) (NP*))	2
+(VP (VB XXX) (VP*))	2
+(NP (NP*) (:compared-to/PP))	2
+(NP (:mod/NP) (:op2/CC) (NP*))	2
+(NP (NP*) (PP (IN of)))	2
+(NP (NP*) (PP (IN of) (NP (NN silence))))	2
+(NP (NP*) (:subevent-of/PP))	2
+(NP (NP*) (NP (-LRB- -LRB-) (NNP TJ) (-RRB- -RRB-)))	2
+(NP (:quant/NP) (NP*))	2
+(NP (NP*) (:duration/PP))	2
+(NP (NP*) (ADVP (RB later)))	2
+(NP (NP*) (:ARG2/VP))	2
+(NP (:ARG1/NP) (CONJP (RB as) (RB well) (IN as)) (NP*))	2
+(NP (NP*) (NP (-LRB- -LRB-) (NNP IR) (-RRB- -RRB-)))	2
+(NP (:mod/NP) (:ARG0/CC) (NP*))	2
+
+
+:ARG0/PP	1432
+(NP (NP*) (PP))	174
+(NP (NP*) (:ARG1/PP))	140
+(NP (NP*) (:location/PP))	56
+(PP (VBG According) (PP*))	52
+(PP (VBG according) (PP*))	49
+(NP (NP*) (:ARG1-of/VP))	47
+(NP (NP*) (:ARG0-of/SBAR))	35
+(NP (NP*) (:ARG2/PP))	35
+(NP (NP*) (:ARG0/PP))	33
+(NP (NP*) (:time/PP))	28
+(NP (NP*) (:ARG1-of/SBAR))	25
+(NP (NP*) (:ARG1/VP))	25
+(PP (IN because) (PP*))	23
+(NP (NP*) (:mod/PP))	20
+(NP (NP*) (:op2/PP))	17
+(NP (NP*) (:ARG0-of/VP))	16
+(NP (NP*) (:ARG1/SBAR))	16
+(NP (NP*) (:op1/PP))	14
+(NP (NP*) (:part-of/PP))	12
+(NP (NP*) (:poss/PP))	12
+(NP (NP*) (:ARG2-of/PP))	10
+(NP (NP*) (NP))	9
+(NP (NP*) (:consist-of/PP))	9
+(NP (NP*) (:topic/PP))	9
+(NP (NP*) (:ARG1-of/PP))	9
+(NP (NP*) (:ARG2/VP))	9
+(NP (NP*) (:source/PP))	7
+(NP (NP*) (, ,) (:ARG0-of/SBAR))	7
+(NP (NP*) (:op2/SBAR))	7
+(NP (:mod/NP) (NP*))	6
+(NP (NP*) (:ARG0-of/PP))	6
+(VP (VB be) (VP*))	6
+(NP (NP*) (CC XXX) (NP))	5
+(NP (NP*) (PP (:ARG2-of/VB) (:ARG1/NP)))	5
+(NP (:ARG1/NP) (, ,) (NP*))	5
+(NP (NP*) (, ,) (:ARG1-of/SBAR))	5
+(NP (NP*) (PP (:location/IN) (:op1/NP)))	5
+(NP (NP*) (:ARG1-of/ADJP))	5
+(NP (NP*) (:duration/PP))	5
+(NP (NP*) (:ARG2/SBAR))	5
+(PP (IN Because) (PP*))	5
+(NP (NP*) (:purpose/PP))	4
+(NP (NP*) (:ARG0/VP))	4
+(VP (VB have) (VP*))	4
+(NP (NP*) (:op2/VP))	4
+(NP (NP*) (:op3/PP))	4
+(PP (IN As) (PP*))	4
+(NP (:ARG1/NP) (NP*))	4
+(NP (NP*) (:op1/VP))	4
+(NP (NP*) (PP (:time/IN) (:op1/NP)))	3
+(NP (NP*) (NN XXX))	3
+(NP (NP*) (JJ XXX))	3
+(PP (IN with) (PP*))	3
+(NP (NP*) (:ARG0/SBAR))	3
+(NP (NP*) (:mod/SBAR))	3
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP IAEA)) (-RRB- -RRB-)))	3
+(NP (NP*) (:ARG2-of/SBAR))	3
+(NP (NP*) (:ARG1/ADJP))	3
+(NP (NP*) (, ,) (NP))	3
+(NP (NP*) (:topic/VP))	3
+(NP (:ARG1/NP) (:ARG1/CC) (NP*))	3
+(NP (NP*) (NNS actions))	3
+(NP (NP*) (NNP XXX))	3
+(NP (NP*) (:domain/VP))	3
+(NP (:ARG1/NP) (CC and) (NP*))	3
+(NP (:op1/NP) (:ARG2/CC) (NP*))	3
+(NP (NP*) (:quant/PP))	3
+(NP (NP*) (:mod/VP))	3
+(ADVP (ADVP*) (PP))	3
+(NP (NP*) (:ARG3/PP))	3
+(NP (NP*) (:medium/PP))	2
+(NP (NP*) (:manner/PP))	2
+(NP (:ARG2/NP) (, ,) (NP*))	2
+(NP (NP*) (:condition/VP))	2
+(NP (:ARG0/NP) (NP*))	2
+(NP (NP*) (:manner/VP))	2
+(NP (:ARG1-of/NP) (NP*))	2
+(NP (NP*) (:domain/SBAR))	2
+(NP (NP*) (NNS efforts))	2
+(NP (NP*) (:time/VP))	2
+(NP (:mod/NP) (: -) (NP*))	2
+(NP (NP*) (:ARG1/PRN))	2
+(NP (NP*) (PP (IN of) (NP (NP (DT the) (NN government) (POS 's)) (PP (IN of) (NP (CD 9/11))))))	2
+(NP (NP*) (PP (:ARG2-of/VB) (:op2/NP)))	2
+(NP (NP*) (:time/SBAR))	2
+(NP (NP*) (:op1/SBAR))	2
+(NP (NP*) (PP (:ARG0/IN) (:ARG1/NP)))	2
+(PP (IN on) (PP*))	2
+(NP (NP*) (:location/VP))	2
+(NP (NP*) (NN point))	2
+(NP (NP*) (PP (IN as) (NP (NN part))))	2
+(NP (NP*) (SBAR (WHNP (WP who))))	2
+(NP (NP*) (PP (IN for) (NP (NN non-payment))))	2
+(NP (NP*) (:op2/PRN))	2
+(NP (:time/NP) (, ,) (NP*))	2
+(VP (VB XXX) (VP*))	2
+(NP (NP*) (:ARG3-of/PP))	2
+(NP (NP*) (:mod/ADJP))	2
+(NP (NP*) (:compared-to/PP))	2
+(NP (NP*) (, ,) (:ARG1/SBAR))	2
+(NP (NP*) (PP (:mod/IN) (:op2/NP)))	2
+(PP (VBN given) (PP*))	2
+(NP (NP*) (:prep-in/PP))	2
+(NP (NP*) (:topic/SBAR))	2
+(NP (NP*) (:compared-to/VP))	2
+(NP (NP*) (:condition/SBAR))	2
+(NP (:ARG3/NP) (NP*))	2
+(PP (IN in) (PP*))	2
+(NP (:ARG0/NP) (: ;) (NP*))	2
+(VP (:op1/VP) (:ARG1/CC) (VP*))	2
+
+
+:op2/PP	1309
+(NP (:op1/NP) (:ARG1/CC) (NP*))	96
+(NP (NP*) (PP))	84
+(NP (NP*) (:ARG1/PP))	82
+(NP (:op1/NP) (:ARG2/CC) (NP*))	67
+(NP (:op1/NP) (:ARG0/CC) (NP*))	63
+(NP (:op1/NP) (CC and) (NP*))	22
+(NP (NP*) (:location/PP))	22
+(NP (:op1/NP) (:location/CC) (NP*))	21
+(NP (NP*) (:ARG1-of/VP))	19
+(NP (NP*) (:mod/PP))	17
+(NP (:op1/NP) (:topic/CC) (NP*))	16
+(NP (:op1/NP) (:example/CC) (NP*))	16
+(NP (:op1/NP) (, ,) (NP*))	14
+(NP (NP*) (:ARG0-of/SBAR))	13
+(NP (:ARG1/NP) (:ARG1/CC) (NP*))	13
+(NP (NP*) (:poss/PP))	13
+(NP (NP*) (:ARG2/PP))	12
+(NP (NP*) (:op1/PP))	11
+(NP (NP*) (:ARG0/PP))	11
+(VP (:op1/VP) (:ARG2/CC) (VP*))	11
+(VP (:op1/VP) (:ARG1/CC) (VP*))	11
+(NP (NP*) (:op2/PP))	10
+(NP (:op1/NP) (:ARG3/CC) (NP*))	10
+(VP (:op1/VP) (:manner/CC) (VP*))	10
+(NP (NP*) (:ARG1-of/SBAR))	9
+(PP (:op1/PP) (:ARG1/CC) (PP*))	8
+(NP (:op1/NP) (, ,) (NP*) (, ,))	8
+(NP (:op1/NP) (:time/CC) (NP*))	8
+(NP (NP*) (NN XXX))	7
+(NP (:op1/NP) (: ;) (NP*))	6
+(NP (:ARG2/NP) (:ARG1/CC) (NP*))	6
+(NP (:op1/NP) (:manner/CC) (NP*))	6
+(NP (NP*) (:time/PP))	6
+(NP (:ARG2/NP) (, ,) (NP*))	5
+(NP (:op1/NP) (:poss/CC) (NP*))	5
+(VP (TO to) (VP*))	5
+(NP (NP*) (PP (:location/IN) (:op1/NP)))	5
+(NP (NP*) (:op3/PP))	5
+(NP (:ARG1/NP) (CC and) (NP*))	5
+(NP (:mod/NP) (:ARG1/CC) (NP*))	5
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NN KP)) (-RRB- -RRB-)))	5
+(NP (:ARG1-of/NP) (:ARG1/CC) (NP*))	4
+(NP (:poss/NP) (:ARG1/CC) (NP*))	4
+(PP (IN because) (PP*))	4
+(NP (:ARG1/NP) (:ARG0/CC) (NP*))	4
+(NP (:op1/NP) (:consist-of/CC) (NP*))	4
+(NP (NP*) (, ,) (NP))	4
+(ADJP (ADJP*) (PP))	4
+(NP (NP*) (:part-of/PP))	4
+(PP (:op1/PP) (:ARG2/CC) (PP*))	4
+(NP (:op1/NP) (:source/CC) (NP*))	4
+(PP (:op1/PP) (:location/CC) (PP*))	4
+(PP (:op1/PP) (:ARG0/CC) (PP*))	4
+(PP (IN as) (PP*))	4
+(NP (:ARG1-of/NP) (:ARG2/CC) (NP*))	4
+(NP (:ARG0/NP) (:ARG1/CC) (NP*))	4
+(NP (NP*) (:topic/PP))	3
+(VP (:op1/VP) (:topic/CC) (VP*))	3
+(NP (:op1/NP) (:accompanier/CC) (NP*))	3
+(NP (:op1/NP) (, ,) (NP*) (, ,) (FW etc.))	3
+(NP (:ARG2/NP) (:location/CC) (NP*))	3
+(NP (:op1/NP) (CC or) (NP*))	3
+(NP (:op1/NP) (:concession/CC) (NP*))	3
+(PP (:ARG1-of/VB) (PP*))	3
+(NP (NP*) (:ARG1/SBAR))	3
+(NP (NP*) (:op1/SBAR))	3
+(NP (:ARG1/NP) (, ,) (NP*) (, ,))	3
+(PP (:op1/PP) (:manner/CC) (PP*))	3
+(NP (NP*) (:ARG1-of/PP))	3
+(VP (VB be) (VP*))	3
+(NP (NP*) (:ARG2-of/PP))	3
+(NP (NP*) (: ;) (NP))	3
+(NP (:op1/NP) (:condition/CC) (NP*))	3
+(NP (:op1/NP) (:compared-to/CC) (NP*))	3
+(NP (:op1/NP) (:op1/CC) (NP*))	2
+(VP (:op1/VP) (:time-of/CC) (VP*))	2
+(NP (:op1/NP) (CC &) (NP*))	2
+(NP (:location/NP) (, ,) (NP*))	2
+(NP (NP*) (:purpose/PP))	2
+(NP (:op1/NP) (, ,) (:op2/NP) (:ARG0/CC) (NP*))	2
+(PP (VBG According) (PP*))	2
+(NP (NP*) (, ,) (SBAR (IN if) (S (:op2/S) (, ,) (RB then) (:ARG1/S))) (, ,))	2
+(NP (NP*) (:ARG0-of/VP))	2
+(NP (:op1/NP) (:prep-with/CC) (NP*))	2
+(NP (NP*) (:beneficiary/PP))	2
+(NP (:op1/NP) (:part-of/CC) (NP*))	2
+(NP (NP*) (PP) (. .))	2
+(NP (:op1/NP) (:duration/CC) (NP*))	2
+(NP (NP*) (PP (:ARG2-of/VB) (:ARG1/NP)))	2
+(NP (:op1/NP) (:prep-to/CC) (NP*))	2
+(NP (:beneficiary/NP) (:ARG1/CC) (NP*))	2
+(NP (:location/NP) (:ARG0/CC) (NP*))	2
+(NP (:op1/NP) (:instrument/CC) (NP*))	2
+(NP (:ARG2/NP) (:ARG0/CC) (NP*))	2
+(PP (PP*) (:ARG0/CC) (PP))	2
+(VP (:op1/VP) (:direction/CC) (VP*))	2
+(NP (:ARG1/NP) (, ,) (NP*))	2
+(NP (:part-of/NP) (:ARG0/CC) (NP*))	2
+(VP (:op1/VP) (:part-of/CC) (VP*))	2
+(NP (:op1/NP) (:beneficiary/CC) (NP*))	2
+(PP (:ARG1/PP) (:ARG3/CC) (PP*))	2
+(NP (NP*) (:prep-with/PP))	2
+(NP (:ARG1/NP) (:ARG2/CC) (NP*))	2
+(NP (:ARG0-of/NP) (NP*))	2
+(PP (:ARG2/PP) (CC and) (PP*))	2
+(NP (:location/NP) (:ARG1/CC) (NP*))	2
+(NP (:source/NP) (:ARG1/CC) (NP*))	2
+(VP (:op1/VP) (:concession/CC) (VP*))	2
+(NP (:part-of/NP) (:ARG1/CC) (NP*))	2
+(VP (:op1/VP) (, ,) (:ARG2/CC) (VP*))	2
+(PP (IN As) (PP*))	2
+(NP (:op1/NP) (, ,) (:op2/NP) (:ARG1/CC) (NP*))	2
+(PP (:op1/PP) (:ARG3/CC) (PP*))	2
+(NP (:ARG2-of/NP) (:ARG1/CC) (NP*))	2
+(VP (:op1/VP) (:purpose/CC) (VP*))	2
+(NP (:topic/NP) (:ARG1/CC) (NP*))	2
+(NP (NP*) (:op2/SBAR))	2
+(NP (:ARG1/NP) (:domain/CC) (NP*))	2
+(NP (:ARG0/NP) (:ARG3/CC) (NP*))	2
+(NP (:op1/NP) (NP*))	2
+(NP (NP*) (:ARG3/PP))	2
+
+
+:ARG1-of/SBAR	1146
+(VP (VB be) (VP*))	403
+(VP (VB have) (VP*))	127
+(VP (:ARG1-of/MD) (VP*))	85
+(NP (NP*) (SBAR))	84
+(VP (TO to) (VP*))	55
+(VP (MD would) (VP*))	33
+(VP (MD will) (VP*))	27
+(VP (VB do) (:polarity/RB) (VP*))	22
+(VP (VB have) (:time/ADVP) (VP*))	19
+(VP (:ARG1-of/MD) (:polarity/RB) (VP*))	15
+(VP (VB be) (:polarity/RB) (VP*))	14
+(VP (VB be) (:time/ADVP) (VP*))	11
+(VP (:ARG0-of/VP) (CC and) (VP*))	10
+(VP (VB be) (:mod/ADVP) (VP*))	9
+(VP (VB get) (VP*))	8
+(VP (:ARG1-of/VP) (CC and) (VP*))	6
+(VP (VB be) (:manner/ADVP) (VP*))	6
+(VP (:ARG1/VB) (VP*))	6
+(VP (:ARG2-of/MD) (VP*))	6
+(VP (VB have) (:polarity/RB) (VP*))	5
+(VP (VB be) (:ARG1-of/ADVP) (VP*))	5
+(VP (:ARG1/MD) (VP*))	5
+(VP (:ARG0/VB) (VP*))	5
+(VP (:ARG2/VB) (VP*))	4
+(NP (NP*) (, ,) (SBAR))	4
+(ADVP (ADVP*) (SBAR))	4
+(ADJP (ADJP*) (SBAR))	3
+(NP (NP*) (:ARG1/PP))	3
+(VP (:ARG1-of/VB) (VP*))	3
+(NP (:op1/NP) (:ARG1/CC) (NP*))	3
+(NP (NP*) (:ARG2/PP))	3
+(VP (:ARG1-of/MD) (:time/ADVP) (VP*))	3
+(VP (VB be) (ADVP (IN in)) (VP*))	3
+(VP (:op2/MD) (VP*))	2
+(NP (NP*) (:location/PP))	2
+(VP (:ARG2/MD) (VP*))	2
+(VP (VB do) (RB n't) (VP*))	2
+(VP (VB be) (:frequency/ADVP) (VP*))	2
+(VP (:ARG2-of/VB) (VP*))	2
+(NP (NP*) ('' '') (SBAR))	2
+(VP (VB have) (ADVP (RB previously)) (VP*))	2
+(VP (VB be) (:ord/ADVP) (VP*))	2
+(NP (NP*) (:ARG1-of/SBAR))	2
+(VP (:ARG0-of/VB) (VP*))	2
+(VP (MD will) (ADVP (RB never)) (VP*))	2
+(VP (VB dont) (VP*))	2
+(NP (NP*) (:ARG1/SBAR))	2
+(VP (MD 'll) (VP*))	2
+(VP (MD will) (:time/ADVP) (VP*))	2
+(VP (VB have) (ADVP (RB never)) (VP*))	2
+(VP (:ARG1-of/VP) (:ARG1/CC) (VP*))	2
+(VP (:ARG0-of/VP) (:ARG1/CC) (VP*))	2
+(VP (MD will) (:polarity/RB) (VP*))	2
+(VP (VB do) (VP*))	2
+(VP (VB be) (:degree/ADVP) (VP*))	2
+
+
+:ARG2/NP	1145
+(NP (NP*) (:ARG1/PP))	126
+(NP (NP*) (NP))	31
+(NP (NP*) (:ARG1/SBAR))	31
+(NP (NP*) (:location/PP))	29
+(NP (NP*) (:ARG1-of/VP))	27
+(NP (NP*) (:ARG2/PP))	27
+(NP (NP*) (:mod/PP))	26
+(NP (NP*) (:ARG1-of/SBAR))	26
+(NP (NP*) (:ARG0/PP))	23
+(NP (:ARG1/NP) (NP*))	22
+(NP (NP*) (:ARG0-of/SBAR))	20
+(NP (NP*) (PP))	20
+(NP (NP*) (:op1/PP))	19
+(NP (NP*) (:poss/PP))	19
+(NP (NP*) (, ,) (NP))	16
+(NP (:ARG1/NP) (, ,) (NP*))	16
+(NP (NP*) (:part-of/PP))	15
+(NP (NP*) (:time/PP))	14
+(VP (TO to) (VP*))	13
+(NP (NP*) (:ARG0-of/VP))	13
+(NP (NP*) (:op2/PP))	11
+(NP (NP*) (:ARG3/PP))	9
+(NP (NP*) (:topic/PP))	8
+(NP (NP*) (:ARG1-of/PP))	8
+(NP (:mod/NP) (NP*))	7
+(NP (NP*) (:ARG2-of/PP))	7
+(NP (NP*) (NP) (. .))	6
+(NP (NP*) (, ,) (:ARG0-of/SBAR))	6
+(NP (NP*) (:quant-of/PP))	5
+(NP (NP*) (CC and) (NP))	5
+(NP (:ARG1/NP) (, ,) (NP*) (. .))	5
+(NP (:op1/NP) (, ,) (NP*))	5
+(NP (NP*) (:op1/VP))	5
+(NP (NP*) (:prep-for/PP))	4
+(NP (NP*) (:purpose/PP))	4
+(NP (:op2/NP) (NP*))	4
+(NP (NP*) (:consist-of/PP))	4
+(NP (NP*) (:beneficiary/PP))	4
+(NP (NP*) (:ARG0-of/PP))	4
+(NP (:ARG1/NP) (CC and) (NP*))	4
+(NP (NP*) (:quant/PP))	4
+(NP (NP*) (:ARG1/VP))	4
+(NP (NP*) (:ARG1-of/PRN))	4
+(NP (:op1/NP) (NP*))	4
+(NP (NP*) (:domain/PP))	3
+(NP (NP*) (:manner/PP))	3
+(NP (NP*) (:ARG1/CC) (NP))	3
+(NP (:ARG0/NP) (NP*))	3
+(NP (NP*) (:ARG0/SBAR))	3
+(NP (NP*) (:mod/VP))	3
+(NP (NP*) (:ARG2-of/SBAR))	3
+(NP (NP*) (:time/PRN))	3
+(NP (NP*) (:time/SBAR))	3
+(NP (NP*) (:op1/SBAR))	3
+(NP (NP*) (:op3/PP))	3
+(NP (NP*) (`` ``) (NP) ('' ''))	3
+(NP (NP*) (:source/PP))	3
+(NP (NP*) (, ,) (NP) (, ,))	3
+(NP (:ARG0/NP) (:ARG0/CC) (NP*))	3
+(NP (NP*) (:compared-to/PP))	3
+(NP (NP*) (SBAR (WHNP (WDT that))))	3
+(NP (NP*) (:ARG1/PRN))	3
+(NP (NP*) (:duration/PP))	3
+(NP (NP*) (:location-of/PP))	3
+(NP (NP*) (PP (:ARG2/IN) (:ARG1/NP)))	2
+(NP (`` ``) (NP*) ('' '') (PRN (: --) (NP (JJ Diplomatic) (NNP Summary)) (: --)))	2
+(NP (NP*) (:snt2/SBAR))	2
+(NP (:ARG2/NP) (, ,) (NP*))	2
+(NP (NP*) (SBAR))	2
+(NP (NP*) (:direction/PP))	2
+(NP (NP*) (: :) (NP (:ARG1-of/NNP) (:mod/NNP) (:ARG0-of/NNP) (NNP Murderer)))	2
+(NP (NP*) (:ARG2/PRN))	2
+(NP (:ARG0/NP) (:ARG1/CC) (NP*))	2
+(NP (NP*) (:ARG0/PRN))	2
+(NP (NP*) (`` `) (NP) ('' '))	2
+(NP (NP*) (:mod/SBAR))	2
+(NP (:ARG2/NP) (:ARG1/CC) (NP*))	2
+(NP (NP*) (:domain/SBAR))	2
+(NP (NP*) (POS 's))	2
+(NP (NP*) (:ARG1/ADJP))	2
+(NP (NP*) (PP (:ARG1/IN) (:ARG1/NP)))	2
+(NP (NP*) (:op2/VP))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP SSW)) (-RRB- -RRB-)))	2
+(NP (NP*) (, ,) (:ARG1-of/SBAR))	2
+(NP (NP*) (:mod/PRN))	2
+(NP (NP*) (PP (:ARG1/IN) (:op1/NP)))	2
+(NP (NP*) (:prep-with/PP))	2
+(NP (NP*) (PP (:location/IN) (:op1/NP)))	2
+(NP (NP*) (: ...))	2
+(NP (:ARG1/NP) (: ...) (NP*))	2
+(NP (:ARG1/NP) (, ,) (`` ``) (NP*) ('' ''))	2
+(NP (:ARG1/NP) (NP*) (. !))	2
+(NP (:op2/NP) (, ,) (NP*))	2
+(NP (NP*) (NNP XXX))	2
+(NP (:ARG1-of/NP) (, ,) (NP*) (. .))	2
+(NP (NP*) (: -) (NP))	2
+(NP (NP*) (PP (:ARG2/IN) (:op2/NP)))	2
+(NP (:poss/NP) (NP*))	2
+(NP (NP*) (:time/ADVP))	2
+(NP (:ARG2/NP) (: -) (NP*))	2
+(NP (NP*) (. .))	2
+(NP (NP*) (, ,) (:polarity/RB) (NP))	2
+(NP (:ARG1/NP) (`` `) (NP*) ('' '))	2
+(NP (:op1/NP) (:ARG1/CC) (NP*))	2
+(NP (NP*) (:ARG2/SBAR))	2
+(NP (NP*) (:accompanier/PP))	2
+(NP (NP*) (:condition/SBAR))	2
+(NP (NP*) (NP (NN coon)))	2
+(NP (NP*) (:prep-against/PP))	2
+
+
+:ARG1/VP	1125
+(VP (VB be) (VP*))	290
+(VP (VB have) (VP*))	93
+(VP (TO to) (VP*))	75
+(NP (NP*) (VP))	41
+(VP (:op2/MD) (VP*))	40
+(VP (:ARG1/MD) (VP*))	36
+(VP (VB do) (:polarity/RB) (VP*))	29
+(VP (MD will) (VP*))	20
+(VP (:op2/MD) (:polarity/RB) (VP*))	20
+(VP (:ARG1/VB) (VP*))	16
+(VP (:op1/MD) (VP*))	15
+(VP (MD would) (VP*))	15
+(VP (:ARG1/MD) (:polarity/RB) (VP*))	12
+(VP (:ARG2/MD) (VP*))	11
+(VP (:ARG2/MD) (:polarity/RB) (VP*))	11
+(NP (NP*) (:ARG1/PP))	11
+(VP (VB be) (:polarity/RB) (VP*))	10
+(NP (NP*) (:mod/PP))	9
+(VP (VB get) (VP*))	9
+(NP (NP*) (:ARG0-of/SBAR))	7
+(VP (:ARG2/VB) (VP*))	7
+(NP (NP*) (:ARG2/PP))	7
+(VP (MD will) (:polarity/RB) (VP*))	7
+(NP (NP*) (:location/PP))	6
+(VP (MD 'll) (VP*))	6
+(VP (:ARG1-of/MD) (VP*))	5
+(NP (NP*) (:ARG1-of/SBAR))	5
+(VP (:op2/VB) (VP*))	4
+(NP (NP*) (:ARG2/VP))	4
+(VP (:op1/MD) (:polarity/RB) (VP*))	4
+(VP (MD would) (:polarity/RB) (VP*))	4
+(VP (VB be) (:mod/ADVP) (VP*))	4
+(VP (:ARG0/MD) (VP*))	3
+(NP (NP*) (:ARG1/VP))	3
+(NP (NP*) (:purpose/PP))	3
+(VP (:op2/MD) (:ARG1-of/ADVP) (VP*))	3
+(VP (:ARG0-of/VB) (VP*))	3
+(VP (VB be) (:ARG1-of/ADVP) (VP*))	3
+(NP (NP*) (:op2/VP))	3
+(NP (NP*) (:poss/PP))	3
+(VP (:op2/MD) (:mod/ADVP) (VP*))	3
+(NP (NP*) (:domain/SBAR))	3
+(S (S*) (, ,) (:ARG0/NP) (VP) (. .))	3
+(VP (MD would) (:mod/ADVP) (VP*))	3
+(VP (VP*) (:ARG1/CC) (VP))	3
+(NP (NP*) (:topic/PP))	3
+(VP (VB have) (:mod/ADVP) (VP*))	2
+(NP (NP*) (:ARG1-of/VP))	2
+(NP (NP*) (:ARG1-of/PP))	2
+(VP (VB have) (:polarity/RB) (VP*))	2
+(VP (:condition/MD) (VP*))	2
+(NP (NP*) (:ARG1/SBAR))	2
+(NP (NP*) (:ARG1-of/ADJP))	2
+(NP (NP*) (, ,) (VP))	2
+(VP (VB be) (:time/ADVP) (VP*))	2
+(NP (:ARG1/NP) (NP*))	2
+(NP (NP*) (:ARG0/SBAR))	2
+(VP (:condition-of/MD) (VP*))	2
+(VP (:ARG1/VP) (CC and) (VP*))	2
+(VP (:ARG0/VB) (VP*))	2
+(VP (TO to) (DT a) (VP*))	2
+(VP (MD could) (VP*))	2
+(VP (:ARG1/MD) (:mod/ADVP) (VP*))	2
+(NP (NP*) (:op1/PP))	2
+(S (S*) (VP) (. .))	2
+(VP (:ARG0-of/MD) (VP*))	2
+(NP (NP*) (:beneficiary/PP))	2
+(VP (:op1/VP) (:ARG0/CC) (VP*))	2
+(NP (NP*) (:ARG0-of/VP))	2
+(NP (NP*) (:ARG3/PP))	2
+(NP (NP*) (:ARG0/VP))	2
+
+
+:purpose/S	1091
+(VP (TO to) (VP*))	1017
+(VP (TO To) (VP*))	22
+(VP (VB be) (VP*))	15
+(NP (NP*) (:ARG1/PP))	3
+(NP (NP*) (:ARG2/PP))	3
+(VP (:mod/TO) (VP*))	2
+(VP (VB have) (VP*))	2
+
+
+:mod/NP	978
+(NP (NP*) (:ARG1/PP))	172
+(NP (NP*) (:ARG0/PP))	38
+(NP (NP*) (:ARG2/PP))	36
+(NP (NP*) (:location/PP))	27
+(NP (NP*) (:ARG1/SBAR))	22
+(NP (NP*) (:op1/PP))	20
+(NP (NP*) (:ARG1-of/SBAR))	19
+(NP (NP*) (:ARG1-of/PP))	19
+(NP (NP*) (NP))	18
+(NP (NP*) (:ARG0-of/SBAR))	17
+(NP (NP*) (:mod/PP))	14
+(NP (NP*) (:op2/PP))	14
+(NP (NP*) (:ARG1-of/VP))	11
+(NP (:ARG1/NP) (NP*))	10
+(NP (NP*) (:domain/PP))	9
+(NP (NP*) (:ARG0/SBAR))	9
+(NP (:op1/NP) (:ARG0/CC) (NP*))	9
+(NP (NP*) (, ,) (NP))	8
+(NP (:mod/NP) (NP*))	7
+(NP (NP*) (:ARG2/SBAR))	7
+(NP (:ARG1/NP) (, ,) (NP*))	7
+(NP (NP*) (:op2/SBAR))	7
+(NP (NP*) (:ARG0-of/VP))	6
+(NP (:op1/NP) (:ARG1/CC) (NP*))	6
+(NP (NP*) (:part-of/PP))	6
+(NP (NP*) (:time/SBAR))	6
+(NP (:ARG0/NP) (, ,) (NP*) (, ,))	6
+(NP (:mod/NP) (, ,) (NP*))	6
+(NP (NP*) (:time/PP))	6
+(NP (NP*) (:mod/PRN))	5
+(NP (NP*) (:ARG2-of/PP))	5
+(NP (NP*) (:op1/SBAR))	5
+(NP (:ARG1/NP) (, ,) (NP*) (, ,))	5
+(NP (NP*) (:topic/PP))	5
+(NP (NP*) (:ARG1/CC) (NP))	4
+(NP (NP*) (:op3/PP))	4
+(NP (NP*) (:source/PP))	4
+(NP (NP*) (:poss/PP))	4
+(NP (NP*) (:ARG1/VP))	4
+(NP (NP*) (:op1/VP))	4
+(NP (:op2/NP) (NP*))	3
+(NP (NP*) (:mod/SBAR))	3
+(NP (NP*) (:ARG0/JJ))	3
+(NP (:mod/NP) (CC and) (NP*))	3
+(NP (NP*) (:ARG0/ADJP))	3
+(NP (NP*) (:ARG0-of/PP))	3
+(NP (:ARG1/NP) (: :) (NP*))	3
+(NP (NP*) (: -) (NP))	3
+(PP (NP) (PP*))	3
+(NP (:op1/NP) (, ,) (NP*))	3
+(NP (:op1/NP) (NP*))	3
+(NP (NP*) (:ARG3/PP))	3
+(NP (:location/NP) (, ,) (NP*))	2
+(NP (NP*) (, ,) (:mod/NP) (, ,) (NP))	2
+(NP (NP*) (, ,) (:ARG0/CC) (NP) (, ,))	2
+(NP (NP*) (, ,) (:mod/ADJP) (, ,))	2
+(NP (NP*) (NP (NN ·) (NN Source)))	2
+(NP (NP*) (ADVP (RBR better)))	2
+(NP (NP*) (PP (:ARG2-of/VB) (:ARG1/NP)))	2
+(NP (NP*) (PP (:ARG1/IN) (:ARG1/NP)))	2
+(NP (NP*) (PP))	2
+(NP (:op1/NP) (, ,) (NP*) (, ,))	2
+(NP (NP*) (:condition/PP))	2
+(NP (:op1/NP) (, ,) (:ARG1/CC) (NP*))	2
+(NP (NP*) (CC and) (NP))	2
+(NP (NP*) (PP (:ARG1-of/IN) (:ARG2/NP)))	2
+(NP (NP*) (:ARG1/PP) (:ARG0-of/SBAR))	2
+(NP (:ARG1/NP) (: -) (NP*))	2
+(NP (NP*) (:ARG1-of/ADJP))	2
+(NP (:op1/NP) (CC and) (NP*))	2
+(NP (NP*) (: ...))	2
+(NP (NP*) (:ARG0-of/PRN))	2
+(NP (:op1/NP) (:ARG2/CC) (NP*))	2
+(NP (NP*) (:op2/ADJP))	2
+(NP (NP*) (, ,) (:ARG1-of/SBAR) (, ,))	2
+(NP (NP*) (NNS houses))	2
+(NP (NP*) (:duration/PP))	2
+(NP (NP*) (:manner/SBAR))	2
+(NP (:mod/NP) (: :) (NP*))	2
+(NP (NP*) (:ARG2/CC) (NP))	2
+(NP (NP*) (: :) (:topic/S))	2
+(NP (:time/NP) (NP*))	2
+(NP (NP*) (, ,) (:condition/SBAR))	2
+(NP (NP*) (NP (CD 1942-1945)))	2
+(NP (NP*) (:prep-against/PP))	2
+
+
+:op1/S	920
+(VP (VB be) (VP*))	265
+(VP (TO to) (VP*))	163
+(VP (VB have) (VP*))	76
+(VP (MD will) (VP*))	33
+(VP (MD would) (VP*))	26
+(VP (VB do) (:polarity/RB) (VP*))	25
+(NP (NP*) (:ARG1/PP))	20
+(VP (:op2/VB) (VP*))	9
+(VP (VB have) (:time/ADVP) (VP*))	8
+(VP (VB do) (VP*))	8
+(VP (VB get) (VP*))	7
+(VP (:ARG1/VB) (VP*))	7
+(VP (MD 'll) (VP*))	7
+(VP (:ARG0/VB) (VP*))	7
+(VP (VB be) (:mod/ADVP) (VP*))	7
+(VP (:ARG0-of/VB) (VP*))	6
+(VP (:ARG2/VB) (VP*))	5
+(NP (NP*) (:op2/PP))	4
+(VP (VB be) (:manner/ADVP) (VP*))	4
+(NP (NP*) (:op1/PP))	4
+(NP (NP*) (:mod/PP))	4
+(VP (:ARG1-of/VB) (VP*))	4
+(NP (NP*) (:ARG2/PP))	4
+(VP (VB be) (:ARG1-of/ADVP) (VP*))	4
+(VP (VB be) (:polarity/RB) (VP*))	4
+(VP (:op2/MD) (VP*))	3
+(VP (:op1/VB) (VP*))	3
+(VP (VB have) (:polarity/RB) (VP*))	3
+(NP (NP*) (:ARG1/SBAR))	3
+(VP (MD will) (:mod/ADVP) (VP*))	3
+(NP (NP*) (:op2/SBAR))	3
+(NP (NP*) (:beneficiary/PP))	3
+(VP (VB have) (:mod/ADVP) (VP*))	2
+(NP (NP*) (:ARG1-of/VP))	2
+(NP (NP*) (:location/PP))	2
+(VP (VB do) (RB n't) (VP*))	2
+(VP (TO To) (VP*))	2
+(NP (NP*) (:duration/PP))	2
+(NP (NP*) (:ARG1-of/PP))	2
+(NP (NP*) (:consist-of/PP))	2
+(NP (NP*) (:time/PP))	2
+(NP (NP*) (:ARG1-of/SBAR))	2
+(VP (VB have) (:manner/ADVP) (VP*))	2
+(VP (VB dont) (VP*))	2
+(NP (NP*) (:time/SBAR))	2
+(VP (:ARG1/MD) (VP*))	2
+(VP (VB have) (:ARG1-of/ADVP) (VP*))	2
+(VP (MD will) (:time/ADVP) (VP*))	2
+(VP (:ARG0/TO) (VP*))	2
+(NP (NP*) (:compared-to/PP))	2
+(VP (MD will) (:ARG1-of/ADVP) (VP*))	2
+(VP (MD will) (:polarity/RB) (VP*))	2
+
+
+:quant/NP	915
+(NP (NP*) (:ARG1/PP))	322
+(NP (NP*) (:ARG0/PP))	92
+(NP (NP*) (:ARG2/PP))	63
+(NP (NP*) (:op2/PP))	40
+(NP (NP*) (:op1/PP))	39
+(NP (NP*) (:ARG1-of/PP))	18
+(NP (NP*) (:mod/PP))	10
+(NP (NP*) (:op4/PP))	9
+(NP (NP*) (:ARG0-of/PP))	9
+(NP (NP*) (:op3/PP))	8
+(NP (NP*) (:domain/PP))	8
+(NP (NP*) (PP (IN of) (NP (PRP them))))	7
+(NP (:quant/NP) (:ARG1/CC) (NP*))	7
+(NP (:op1/NP) (:ARG1/CC) (NP*))	6
+(NP (NP*) (:ARG1-of/SBAR))	6
+(NP (NP*) (:location/PP))	6
+(NP (NP*) (:ARG1-of/VP))	5
+(NP (NP*) (:ARG2-of/PP))	5
+(NP (NP*) (:ARG0-of/SBAR))	4
+(NP (NP*) (PP))	4
+(NP (NP*) (:ARG1/SBAR))	4
+(NP (NP*) (:op2/VP))	4
+(NP (NP*) (:ARG2-of/VP))	4
+(NP (NP*) (:frequency/PP))	4
+(NP (NP*) (NP))	3
+(NP (NP*) (PP (IN of) (NP (NNPS Americans))))	3
+(NP (NP*) (:time/PP))	3
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (CD 110) (NNS pounds)) (-RRB- -RRB-)))	3
+(NP (NP*) (:ARG1/CC) (NP))	3
+(NP (NP*) (:ARG1/PP) (:ARG1-of/SBAR))	3
+(NP (NP*) (:topic/PP))	3
+(NP (NP*) (:op6/PP))	3
+(NP (NP*) (PP (IN of) (NP (DT those))))	2
+(NP (NP*) (:ARG0-of/VP) (. .))	2
+(NP (NP*) (PP (IN of) (NP (DT these))))	2
+(NP (:op1/NP) (CC and) (NP*))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (CD 198) (NNS pounds)) (-RRB- -RRB-)))	2
+(NP (NP*) (:mod/JJ))	2
+(NP (NP*) (:op5/PP))	2
+(NP (:op2/NP) (, ,) (:op3/NP) (:ARG1/CC) (NP*))	2
+(NP (:ARG1/NP) (NP*))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (CD 44) (NNS pounds)) (-RRB- -RRB-)))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (CD 1.3) (NNS tons)) (-RRB- -RRB-)))	2
+(NP (:ARG1/NP) (, ,) (NP*))	2
+(NP (NP*) (:quant/PP))	2
+(NP (NP*) (:ARG3/PP))	2
+
+
+:op2/VP	899
+(VP (VB be) (VP*))	179
+(VP (VB have) (VP*))	82
+(VP (MD will) (VP*))	44
+(VP (:op1/VP) (:ARG1/CC) (VP*))	44
+(VP (TO to) (VP*))	37
+(VP (VB do) (:polarity/RB) (VP*))	34
+(VP (:op1/VP) (:ARG2/CC) (VP*))	25
+(VP (MD would) (VP*))	23
+(VP (VP*) (:ARG1/CC) (VP))	18
+(NP (NP*) (VP))	12
+(VP (:op1/VP) (CC and) (VP*))	9
+(VP (:op1/VP) (:op2/CC) (VP*))	9
+(VP (:op1/VP) (:ARG0/CC) (VP*))	9
+(NP (NP*) (:ARG1/PP))	8
+(NP (NP*) (:ARG2/PP))	8
+(VP (VB have) (:polarity/RB) (VP*))	7
+(NP (NP*) (:location/PP))	6
+(VP (VB have) (:mod/ADVP) (VP*))	5
+(VP (:op1/VB) (VP*))	5
+(VP (:op1/VP) (, ,) (:ARG1/CC) (VP*))	5
+(VP (VB be) (:time/ADVP) (VP*))	5
+(VP (:ARG0-of/VB) (VP*))	5
+(VP (VB get) (VP*))	5
+(VP (:ARG1-of/MD) (VP*))	4
+(VP (VP*) (CC and) (VP))	4
+(VP (MD would) (:polarity/RB) (VP*))	4
+(VP (VP*) (:ARG2/CC) (VP))	4
+(VP (MD will) (:polarity/RB) (VP*))	4
+(VP (MD would) (:mod/ADVP) (VP*))	4
+(VP (VB have) (:time/ADVP) (VP*))	4
+(VP (VB be) (:polarity/RB) (VP*))	4
+(VP (VB do) (VP*))	4
+(NP (NP*) (:ARG0-of/SBAR))	3
+(VP (:ARG2/VB) (VP*))	3
+(VP (VB do) (:polarity/RB) (:mod/ADVP) (VP*))	3
+(NP (NP*) (:ARG1-of/VP))	3
+(VP (:op1/VP) (:domain/CC) (VP*))	3
+(NP (:op1/NP) (:ARG0/CC) (NP*))	3
+(VP (:op1/MD) (VP*))	3
+(NP (:op1/NP) (:ARG1/CC) (NP*))	3
+(VP (:ARG0-of/VB) (:time/ADVP) (VP*))	3
+(VP (:ARG1/MD) (VP*))	3
+(VP (MD will) (:mod/ADVP) (VP*))	3
+(VP (:ARG1/VP) (:ARG1/CC) (VP*))	3
+(VP (MD will) (:ARG1-of/ADVP) (VP*))	3
+(VP (:op1/VP) (, ,) (:ARG0/CC) (VP*))	3
+(VP (MD would) (:ARG1-of/ADVP) (VP*))	3
+(VP (VB be) (:mod/ADVP) (VP*))	3
+(VP (VP*) (, ,) (:ARG0/CC) (VP))	3
+(VP (VP*) (:ARG0/CC) (VP))	2
+(VP (VP*) (:op1/CC) (VP))	2
+(VP (VB be) (:manner/ADVP) (VP*))	2
+(VP (MD will) (ADVP (RB never)) (VP*))	2
+(NP (NP*) (:mod/PP))	2
+(VP (:mod/ADVP) (:op1/VP) (, ,) (VP*))	2
+(VP (:op1/VP) (, ,) (:ARG2/CC) (VP*))	2
+(NP (NP*) (:ARG1-of/SBAR))	2
+(VP (:ARG1/VB) (VP*))	2
+(NP (NP*) (:ARG1/SBAR))	2
+(VP (VB be) (:ARG1-of/ADVP) (VP*))	2
+(VP (MD shall) (VP*))	2
+(VP (:op1/VP) (, ,) (:op2/CC) (VP*))	2
+(NP (:op1/NP) (, ,) (:ARG1/CC) (NP*))	2
+(VP (VB have) (:ARG1-of/ADVP) (VP*))	2
+(VP (:ARG0/VP) (:ARG0/CC) (VP*))	2
+(VP (:op1/VP) (:manner/CC) (VP*))	2
+(VP (:op2/VP) (:ARG1/CC) (VP*))	2
+(VP (:mod/VP) (:ARG1/CC) (VP*))	2
+(NP (:op1/NP) (:ARG2/CC) (NP*))	2
+(S (S*) (, ,) (:ARG0/NP) (VP) (. .))	2
+(VP (MD 'll) (VP*))	2
+(VP (:ARG1-of/MD) (:polarity/RB) (VP*))	2
+
+
+:op2/SBAR	897
+(VP (VB be) (VP*))	124
+(VP (:op1/VP) (:ARG1/CC) (VP*))	121
+(VP (TO to) (VP*))	46
+(VP (MD will) (VP*))	44
+(VP (VB have) (VP*))	36
+(VP (MD would) (VP*))	31
+(VP (:ARG1/MD) (VP*))	27
+(NP (NP*) (SBAR))	26
+(VP (:op1/VP) (:ARG2/CC) (VP*))	22
+(VP (:op1/VP) (:ARG0/CC) (VP*))	21
+(VP (VB do) (:polarity/RB) (VP*))	15
+(VP (:ARG1/VP) (:ARG1/CC) (VP*))	14
+(NP (NP*) (:ARG1/PP))	11
+(VP (:op1/VP) (:condition/CC) (VP*))	11
+(NP (:op1/NP) (:ARG1/CC) (NP*))	9
+(VP (:ARG0-of/VP) (:ARG1/CC) (VP*))	9
+(VP (:op1/VP) (, ,) (:ARG1/CC) (VP*))	7
+(VP (:op1/VP) (CC and) (VP*))	7
+(VP (:ARG1-of/MD) (VP*))	6
+(VP (:time/VP) (:ARG1/CC) (VP*))	5
+(VP (:op1/VP) (:time/CC) (VP*))	5
+(VP (:ARG1/VP) (:ARG0/CC) (VP*))	4
+(NP (NP*) (:ARG0/PP))	4
+(VP (:op1/VP) (:ARG1/CC) (:polarity/RB) (VP*))	4
+(VP (:ARG1/VP) (:ARG2/CC) (VP*))	4
+(VP (:op1/VP) (:topic/CC) (VP*))	4
+(VP (:op1/VP) (:op2/CC) (VP*))	4
+(VP (:ARG2/MD) (VP*))	3
+(VP (:op1/VB) (VP*))	3
+(VP (VB have) (:polarity/RB) (VP*))	3
+(VP (VB have) (:time/ADVP) (VP*))	3
+(NP (NP*) (, ,) (SBAR))	3
+(NP (NP*) (:ARG1-of/SBAR))	3
+(NP (NP*) (:ARG2/PP))	3
+(VP (MD should) (VP*))	3
+(VP (:ARG0/VP) (:ARG1/CC) (VP*))	3
+(VP (:ARG0/VB) (VP*))	3
+(VP (:ARG1-of/VP) (:ARG1/CC) (VP*))	3
+(NP (NP*) (:domain/SBAR))	3
+(VP (:op1/VP) (, ,) (:ARG2/CC) (VP*))	3
+(VP (VB be) (:mod/ADVP) (VP*))	3
+(NP (NP*) (:topic/PP))	3
+(VP (:ARG0/MD) (VP*))	2
+(NP (NP*) (:ARG0-of/SBAR))	2
+(VP (:op1/VP) (:time-of/CC) (VP*))	2
+(NP (NP*) (:mod/PP))	2
+(VP (:op1/VP) (:domain/CC) (VP*))	2
+(VP (:op1/VP) (:ARG1/CC) (VP*) (:ARG1/NP))	2
+(VP (MD will) (:time/ADVP) (VP*))	2
+(VP (:ARG0-of/VB) (VP*))	2
+(NP (NP*) (:ARG1/SBAR))	2
+(VP (:compared-to/VP) (CC and) (VP*))	2
+(VP (:purpose/MD) (VP*))	2
+(VP (:ARG1/VP) (:purpose/CC) (VP*))	2
+(NP (NP*) (:poss/PP))	2
+(NP (:op1/NP) (, ,) (CC and) (NP*))	2
+(NP (NP*) (:ARG0-of/VP))	2
+(VP (:op2/VP) (:ARG1/CC) (VP*))	2
+(VP (:op1/VP) (:purpose/CC) (VP*))	2
+(NP (:op1/NP) (:ARG2/CC) (NP*))	2
+(VP (MD will) (:ARG1-of/ADVP) (VP*))	2
+(VP (:op1/VP) (:op1/CC) (VP*))	2
+(VP (MD could) (VP*))	2
+(VP (:op1/VP) (, ,) (:ARG0/CC) (VP*))	2
+(VP (MD would) (:mod/ADVP) (VP*))	2
+(NP (:ARG1/NP) (:ARG1/CC) (NP*))	2
+(VP (VB be) (:polarity/RB) (VP*))	2
+
+
+:location/PP	861
+(NP (NP*) (PP))	135
+(NP (NP*) (:location/PP))	82
+(NP (NP*) (:part-of/PP))	53
+(NP (NP*) (:time/PP))	44
+(NP (NP*) (:ARG1/PP))	24
+(NP (NP*) (:poss/PP))	22
+(NP (NP*) (:op1/PP))	21
+(NP (NP*) (:ARG0-of/SBAR))	19
+(NP (NP*) (:ARG1-of/SBAR))	19
+(NP (NP*) (:mod/PP))	17
+(NP (NP*) (:ARG1-of/VP))	16
+(NP (NP*) (:ARG0/PP))	16
+(NP (NP*) (:ARG2/PP))	15
+(NP (:location/NP) (, ,) (NP*))	12
+(NP (NP*) (:op2/PP))	10
+(NP (NP*) (:ARG0-of/VP))	9
+(NP (NP*) (PP (:time/IN) (:op1/NP)))	7
+(NP (NP*) (:ARG1/SBAR))	7
+(NP (NP*) (:location-of/SBAR))	6
+(NP (NP*) (:ARG1/VP))	6
+(PP (:ARG1-of/VB) (PP*))	6
+(PP (IN on) (PP*))	6
+(NP (NP*) (:purpose/PP))	5
+(NP (NP*) (:ARG1-of/PP))	5
+(NP (NP*) (:ARG2-of/VP))	5
+(NP (NP*) (PP (:ARG1-of/IN) (:ARG2/NP)))	5
+(NP (NP*) (:beneficiary/PP))	5
+(NP (NP*) (PP (:mod/IN) (:op1/NP)))	4
+(NP (NP*) (PP (:ARG2-of/VB) (:ARG1/NP)))	4
+(NP (NP*) (SBAR (WHNP (WDT that))))	3
+(NP (NP*) (PP (:location/IN) (:op1/NP)))	3
+(NP (NP*) (:op3/PP))	3
+(PP (IN for) (PP*))	3
+(NP (NP*) (, ,) (:location-of/SBAR))	3
+(NP (NP*) (:duration/PP))	3
+(NP (:location/NP) (, ,) (NP*) (, ,))	3
+(NP (NP*) (:ARG0-of/PP))	3
+(NP (NP*) (:location-of/PP))	3
+(NP (NP*) (:ARG2/PRN))	3
+(PP (:ARG1-of/IN) (PP*))	3
+(NP (:ARG1/NP) (NP*))	3
+(NP (NP*) (:compared-to/PP))	3
+(NP (NP*) (:quant/PP))	3
+(NP (NP*) (, ,) (:ARG1-of/SBAR))	3
+(NP (:ARG4/NP) (, ,) (NP*))	2
+(NP (NP*) (:manner/PP))	2
+(NP (NP*) (:example/PP))	2
+(NP (NP*) (PP (:location/IN) (:mod/NP)))	2
+(NP (NP*) (:example/PRN))	2
+(NP (NP*) (:location/PP) (:ARG1/PP))	2
+(NP (NP*) (:consist-of/PP))	2
+(NP (NP*) (:ARG2-of/SBAR))	2
+(NP (NP*) (:mod/VP))	2
+(NP (NP*) (, ,) (:ARG0-of/SBAR))	2
+(NP (NP*) (:accompanier/PP))	2
+(NP (NP*) (:op1/VP))	2
+(NP (NP*) (NN number))	2
+(NP (NP*) (:ARG2-of/PP))	2
+(NP (NP*) (:op1/SBAR))	2
+(NP (NP*) (PP (IN for) (NP (NN trafficking))))	2
+
+
+:ARG2/SBAR	755
+(VP (VB be) (VP*))	142
+(VP (TO to) (VP*))	123
+(NP (NP*) (SBAR))	40
+(VP (:ARG1/MD) (VP*))	34
+(VP (MD would) (VP*))	31
+(VP (VB do) (:polarity/RB) (VP*))	29
+(VP (MD will) (VP*))	29
+(VP (VB have) (VP*))	25
+(NP (NP*) (:ARG1/PP))	11
+(VP (VB do) (VP*))	7
+(VP (MD can) (VP*))	6
+(NP (NP*) (:ARG2/PP))	6
+(NP (NP*) (:ARG0-of/VP))	6
+(VP (VB be) (:mod/ADVP) (VP*))	6
+(VP (:ARG0/MD) (VP*))	5
+(VP (:ARG2/VB) (VP*))	5
+(VP (:ARG1/VB) (VP*))	5
+(VP (:ARG2/MD) (VP*))	4
+(VP (:op2/MD) (VP*))	4
+(NP (NP*) (:location/PP))	4
+(VP (:ARG1-of/MD) (VP*))	4
+(NP (NP*) (:mod/PP))	4
+(VP (:ARG1/MD) (:polarity/RB) (VP*))	4
+(NP (NP*) (:time/PP))	4
+(VP (:op2/VB) (VP*))	3
+(VP (:ARG1-of/VB) (VP*))	3
+(VP (:op1/MD) (VP*))	3
+(NP (NP*) (PP))	3
+(NP (NP*) (, ,) (SBAR))	3
+(NP (NP*) (:ARG1-of/SBAR))	3
+(VP (VB get) (VP*))	3
+(VP (VB be) (:ARG1-of/ADVP) (VP*))	3
+(VP (MD can) (:polarity/RB) (VP*))	3
+(NP (:ARG1/NP) (CC and) (NP*))	3
+(NP (NP*) (:ARG1-of/VP))	2
+(NP (NP*) (PP (:ARG2/IN) (:ARG1/NP)))	2
+(VP (:ARG1/VP) (, ,) (:ARG1-of/CC) (VP*))	2
+(NP (NP*) (:op2/PP))	2
+(VP (VB have) (:polarity/RB) (VP*))	2
+(ADVP (ADVP*) (SBAR))	2
+(VP (MD might) (VP*))	2
+(NP (NP*) (:part-of/PP))	2
+(NP (NP*) (:domain/PP))	2
+(NP (NP*) (:ARG1-of/PP))	2
+(VP (:snt2/VB) (VP*))	2
+(VP (MD should) (VP*))	2
+(VP (:ARG1/VP) (CONJP (RB rather) (IN than)) (VP*))	2
+(VP (VB be) (:time/ADVP) (VP*))	2
+(VP (MD 'll) (VP*))	2
+(VP (:ARG0-of/VP) (, ,) (CC and) (VP*))	2
+(VP (MD will) (:time/ADVP) (VP*))	2
+(VP (VB have) (ADVP (RB never)) (VP*))	2
+(VP (:ARG0-of/VP) (:ARG1-of/CC) (VP*))	2
+(VP (MD will) (:mod/ADVP) (VP*))	2
+(VP (:ARG1/VP) (:ARG1/CC) (VP*))	2
+(VP (MD could) (VP*))	2
+(VP (VB be) (ADVP (RB apparently)) (VP*))	2
+(VP (VB be) (:polarity/RB) (VP*))	2
+(VP (:ARG0-of/VP) (:ARG1/CC) (VP*))	2
+
+
+:op1/PP	723
+(NP (NP*) (PP))	137
+(NP (NP*) (:ARG1/PP))	47
+(NP (NP*) (:op2/PP))	38
+(NP (NP*) (:location/PP))	19
+(NP (NP*) (:ARG2/PP))	14
+(NP (NP*) (:op1/PP))	14
+(NP (NP*) (:ARG0-of/SBAR))	12
+(NP (NP*) (:ARG0/PP))	12
+(NP (NP*) (:mod/PP))	11
+(NP (NP*) (:ARG1-of/SBAR))	10
+(VP (VB be) (VP*))	9
+(NP (NP*) (:ARG1-of/PP))	8
+(NP (NP*) (:ARG1-of/VP))	7
+(PP (:time/RB) (PP*))	7
+(NP (:op1/NP) (:ARG1/CC) (NP*))	7
+(NP (NP*) (:poss/PP))	7
+(NP (NP*) (:part-of/PP))	6
+(NP (NP*) (:ARG0-of/PP))	6
+(NP (:mod/NP) (:ARG1/CC) (NP*))	6
+(ADJP (ADJP*) (PP))	6
+(NP (NP*) (NP))	5
+(NP (NP*) (:op3/PP))	5
+(NP (NP*) (:purpose/PP))	5
+(NP (:ARG1/NP) (:ARG2/CC) (NP*))	5
+(NP (NP*) (NN XXX))	5
+(NP (NP*) (:ARG0-of/VP))	5
+(ADVP (ADVP*) (PP))	5
+(NP (NP*) (:manner/PP))	4
+(NP (NP*) (:time/PP))	4
+(NP (NP*) (:ARG1/SBAR))	4
+(PP (IN Up) (PP*))	4
+(PP (VBG According) (PP*))	3
+(NP (NP*) (PP (:op1/IN) (:op2/NP)))	3
+(NP (NP*) (:source/PP))	3
+(NP (NP*) (:op2/VP))	3
+(NP (NP*) (:op1/PRN))	3
+(PP (:location/IN) (PP*))	3
+(NP (NP*) (, ,) (NP (FW etc.)))	3
+(NP (NP*) (:topic/PP))	3
+(NP (NP*) (:domain/PP))	2
+(PP (:ARG1/IN) (PP*))	2
+(VP (MD will) (VP*))	2
+(NP (NP*) (:ARG2-of/SBAR))	2
+(PP (:ARG2/IN) (PP*))	2
+(PP (RB prior) (PP*))	2
+(NP (NP*) (PP (IN of) (NP (NNPS Americans))))	2
+(NP (NP*) (:prep-in/PP))	2
+(NP (:mod/NP) (CC and) (NP*))	2
+(NP (:op1/NP) (:ARG0/CC) (NP*))	2
+(NP (NP*) (PP (:time/IN) (:op1/S)))	2
+(PP (CC both) (PP*))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (:ARG2/CC) (:op2/NP) (-RRB- -RRB-)))	2
+(NP (NP*) (:quant-of/PP))	2
+(NP (:ARG1/NP) (:ARG1/CC) (NP*))	2
+(PP (IN As) (PP*))	2
+(NP (NP*) (:op2/PRN))	2
+(NP (NP*) (PP (:time/IN) (:op1/NP)))	2
+(NP (NP*) (:ARG2/CC) (NP))	2
+(NP (NP*) (:manner/VP))	2
+(NP (NP*) (PP (:ARG1-of/VB) (:ARG2/NP)))	2
+(NP (NP*) (NNS relations))	2
+(NP (NP*) (:op1/VP))	2
+(NP (NP*) (:op2/SBAR))	2
+(NP (NP*) (:beneficiary/PP))	2
+
+
+:op3/NP	702
+(NP (:op2/NP) (: ;) (NP*))	152
+(NP (:op1/NP) (: ;) (NP*))	68
+(NP (:op1/NP) (, ,) (:op2/NP) (:ARG1/CC) (NP*))	35
+(NP (NP*) (: ;) (NP))	24
+(NP (NP*) (:ARG1/PP))	19
+(NP (:op1/NP) (, ,) (:op2/NP) (:ARG0/CC) (NP*))	12
+(NP (:op1/NP) (, ,) (:op2/NP) (:ARG2/CC) (NP*))	11
+(NP (:op2/NP) (, ,) (NP*))	10
+(NP (:op2/NP) (:ARG1/CC) (NP*))	9
+(NP (:op1/NP) (, ,) (:op2/NP) (, ,) (:ARG1/CC) (NP*))	7
+(NP (NP*) (:location/PP))	7
+(NP (NP*) (:ARG0-of/SBAR))	6
+(NP (NP*) (:mod/PP))	6
+(NP (NP*) (:ARG1-of/VP))	6
+(NP (:op1/NP) (, ,) (NP*))	6
+(NP (NP*) (, ,) (NP))	5
+(NP (NP*) (PP))	5
+(NP (:op1/NP) (, ,) (NP*) (, ,))	5
+(NP (NP*) (:op2/PP))	5
+(NP (NP*) (:ARG0/PP))	5
+(NP (:op1/NP) (, ,) (:op2/NP) (, ,) (:ARG0/CC) (NP*))	5
+(NP (:op1/NP) (, ,) (:op2/NP) (, ,) (NP*))	4
+(NP (:op1/NP) (:ARG1/CC) (NP*))	4
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP US)) (-RRB- -RRB-)))	4
+(NP (NP*) (:ARG1/CC) (NP))	4
+(NP (NP*) (, ,) (:op2/NP) (:ARG1/CC) (NP))	4
+(NP (NP*) (:ARG0-of/VP))	4
+(NP (:ARG1/NP) (, ,) (NP*))	4
+(NP (:op1/NP) (NP*))	4
+(NP (:op1/NP) (CONJP (RB as) (RB well) (IN as)) (NP*))	3
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP SG)) (-RRB- -RRB-)))	3
+(NP (:op2/NP) (CC or) (NP*))	3
+(NP (NP*) (: ;) (NP) (PRN (-LRB- -LRB-) (NP (NNP US)) (-RRB- -RRB-)))	3
+(NP (NP*) (:ARG1-of/ADJP))	3
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP AF)) (-RRB- -RRB-)))	3
+(NP (NP*) (:source/PP))	3
+(NP (:op2/NP) (:ARG2/CC) (NP*))	3
+(NP (NP*) (:ARG0-of/PP))	3
+(NP (:op2/NP) (:ARG0/CC) (NP*))	3
+(NP (:op1/NP) (CC and) (NP*))	3
+(NP (NP*) (:poss/PP))	3
+(NP (:op1/NP) (, ,) (:ARG0-of/NP) (:ARG1/CC) (NP*))	3
+(NP (:op1/NP) (:op1/CC) (NP*))	2
+(NP (:ARG1/NP) (: --) (NP*))	2
+(NP (NP*) (X (NN etc.)))	2
+(NP (NP*) (:op3/PP))	2
+(NP (:op2/NP) (, ,) (NP*) (, ,))	2
+(NP (NP*) (JJ XXX) (NN XXX))	2
+(NP (NP*) (:ARG1-of/PP))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NN LT)) (-RRB- -RRB-)))	2
+(NP (NP*) (:ARG0-of/ADJP))	2
+(NP (:ARG1/NP) (, ,) (CC and) (NP*))	2
+(NP (NP*) (:ARG1-of/SBAR))	2
+(NP (:op3/NP) (: ;) (NP*))	2
+(NP (NP*) (:ARG2/PP))	2
+(NP (:ARG1/CC) (NP*))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP LA)) (-RRB- -RRB-)))	2
+(NP (:ARG1-of/NP) (CC and) (NP*))	2
+(NP (:op2/NP) (, ,) (:ARG1/CC) (NP*))	2
+(NP (:op1/NP) (, ,) (:op2/NP) (, ,) (:ARG2/CC) (NP*))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NN FR)) (-RRB- -RRB-)))	2
+(NP (NP*) (:purpose/PP))	2
+(NP (:ARG1/NP) (:ARG0/CC) (NP*))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP PK)) (-RRB- -RRB-)))	2
+
+
+:ARG0-of/SBAR	686
+(NP (NP*) (SBAR))	106
+(VP (VB be) (VP*))	74
+(VP (:ARG1-of/MD) (VP*))	64
+(VP (VB have) (VP*))	61
+(VP (MD will) (VP*))	49
+(VP (VB do) (:polarity/RB) (VP*))	42
+(VP (MD would) (VP*))	32
+(VP (:ARG0-of/VP) (CC and) (VP*))	27
+(VP (TO to) (VP*))	26
+(NP (NP*) (:ARG1/PP))	13
+(VP (:ARG0-of/VB) (VP*))	12
+(VP (:ARG1-of/MD) (:polarity/RB) (VP*))	8
+(VP (VB be) (:polarity/RB) (VP*))	7
+(VP (:ARG1/VB) (VP*))	6
+(VP (VB do) (RB n't) (VP*))	5
+(VP (VB be) (:time/ADVP) (VP*))	5
+(VP (:ARG0-of/VP) (:ARG1/CC) (VP*))	5
+(VP (VB have) (:time/ADVP) (VP*))	5
+(VP (VB be) (:mod/ADVP) (VP*))	5
+(VP (:ARG1-of/VP) (CC and) (VP*))	4
+(VP (VB have) (:polarity/RB) (VP*))	4
+(VP (:ARG1/MD) (VP*))	4
+(VP (:op2/VB) (VP*))	4
+(VP (MD could) (VP*))	4
+(VP (:ARG0/VB) (VP*))	3
+(VP (MD will) (:polarity/RB) (VP*))	3
+(NP (:ARG0/NP) (, ,) (NP*) (, ,))	2
+(VP (MD may) (VP*))	2
+(VP (:ARG1-of/VB) (VP*))	2
+(VP (MD can) (VP*))	2
+(VP (VB do) (RB not) (VP*))	2
+(NP (NP*) (, ,) (SBAR))	2
+(VP (TO XXX) (VP*))	2
+(VP (VB be) (:ARG1-of/ADVP) (VP*))	2
+(NP (NP*) (:location/PP))	2
+(VP (:ARG0-of/VP) (, ,) (:mod/ADVP) (VP*))	2
+(VP (:ARG1/VP) (CC and) (VP*))	2
+(NP (NP*) (PP (IN of) (NP (PRP us))) (SBAR))	2
+
+
+:mod/PP	660
+(NP (NP*) (PP))	66
+(NP (NP*) (:ARG1/PP))	55
+(NP (NP*) (:ARG2/PP))	42
+(NP (NP*) (:location/PP))	25
+(NP (NP*) (:ARG0/PP))	18
+(NP (NP*) (:ARG1-of/VP))	17
+(NP (NP*) (:ARG0-of/SBAR))	15
+(NP (NP*) (:mod/PP))	15
+(NP (NP*) (:ARG1-of/SBAR))	13
+(NP (NP*) (:ARG1-of/PP))	12
+(NP (NP*) (:op2/PP))	9
+(NP (:ARG2/NP) (, ,) (NP*))	8
+(NP (NP*) (:time/PP))	8
+(NP (NP*) (:poss/PP))	8
+(NP (NP*) (:ARG1/VP))	7
+(NP (NP*) (:op1/PP))	6
+(NP (NP*) (:ARG2/SBAR))	5
+(NP (NP*) (:ARG0-of/VP))	5
+(NP (NP*) (:purpose/PP))	4
+(NP (:mod/NP) (, ,) (NP*))	4
+(NP (NP*) (:part-of/PP))	4
+(NP (NP*) (:op2/PRN))	4
+(NP (NP*) (:op2/VP))	4
+(NP (NP*) (:ARG0/SBAR))	4
+(NP (:op1/NP) (:ARG2/CC) (NP*))	4
+(NP (NP*) (:ARG3/PP))	4
+(NP (NP*) (:manner/PP))	3
+(NP (:op1/NP) (:ARG1/CC) (NP*))	3
+(NP (NP*) (:ARG1/PP) (:ARG0-of/SBAR))	3
+(NP (:location/NP) (, ,) (NP*))	3
+(NP (NP*) (:source/PP))	3
+(NP (:mod/NP) (CC and) (NP*))	3
+(NP (:op1/NP) (:location/CC) (NP*))	3
+(NP (NP*) (:prep-in/PP))	3
+(NP (:topic/NP) (NP*))	3
+(NP (NP*) (:ARG2-of/PP))	3
+(NP (NP*) (:mod/SBAR))	3
+(NP (:ARG2/NP) (NP*))	3
+(NP (NP*) (:op2/SBAR))	3
+(NP (NP*) (NP))	2
+(NP (NP*) (:domain/PP))	2
+(NP (NP*) (:ARG2-of/SBAR))	2
+(VP (VB be) (VP*))	2
+(NP (NP*) (:medium/PP))	2
+(NP (:mod/NP) (NP*))	2
+(NP (NP*) (:ARG0-of/ADJP))	2
+(NP (:op1/NP) (:ARG0/CC) (NP*))	2
+(NP (NP*) (:duration/PP))	2
+(NP (NP*) (:ARG0-of/PP))	2
+(NP (NP*) (:consist-of/PP))	2
+(NP (NP*) (:ARG2/VP))	2
+(NP (NP*) (:mod/VP))	2
+(NP (NP*) (:ARG1/SBAR))	2
+(NP (NP*) (, ,) (:ARG0-of/SBAR))	2
+(NP (:time/NP) (, ,) (NP*))	2
+(NP (NP*) (:ARG2-of/VP))	2
+(NP (NP*) (:ARG2/PRN))	2
+(NP (NP*) (:location-of/SBAR))	2
+(NP (NP*) (:op1/VP))	2
+(NP (NP*) (:prep-to/PP))	2
+(NP (:op1/NP) (:time/CC) (NP*))	2
+(NP (:ARG1/NP) (NP*))	2
+(NP (NP*) (:compared-to/PP))	2
+(PP (:ARG1-of/VB) (PP*))	2
+(ADJP (ADJP*) (PP))	2
+(NP (NP*) (PP (:mod/IN) (:op1/NP)))	2
+(NP (NP*) (:topic/PP))	2
+(NP (:ARG1/NP) (, ,) (NP*))	2
+(NP (NP*) (:prep-on/PP))	2
+(NP (NP*) (:beneficiary/PP))	2
+(NP (NP*) (:mod/PRN))	2
+(NP (NP*) (:location/ADVP))	2
+
+
+:time/PP	563
+(NP (NP*) (PP))	94
+(NP (NP*) (:ARG1/PP))	72
+(NP (NP*) (:location/PP))	29
+(NP (NP*) (NP-TMP))	25
+(NP (NP*) (:ARG2/PP))	17
+(NP (NP*) (:ARG0/PP))	14
+(NP (NP*) (:mod/PP))	13
+(NP (NP*) (:time/PP))	12
+(NP (NP*) (:poss/PP))	11
+(NP (NP*) (:ARG1-of/VP))	8
+(NP (NP*) (:op2/PP))	8
+(NP (NP*) (:op1/PP))	7
+(NP (NP*) (:part-of/PP))	6
+(NP (NP*) (:ARG1/SBAR))	6
+(NP (NP*) (:ARG0-of/SBAR))	5
+(NP (NP*) (:purpose/PP))	5
+(NP (NP*) (:time-of/PP))	5
+(PP (:ARG1-of/VB) (PP*))	5
+(ADJP (ADJP*) (PP))	5
+(NP (NP*) (NP-TMP (NNP April) (CD 2003)))	4
+(NP (:mod/NP) (NP*))	4
+(NP (NP*) (:ARG1-of/PP))	4
+(NP (NP*) (:ARG1-of/SBAR))	4
+(NP (NP*) (:op2/SBAR))	4
+(NP (NP*) (:ARG1/VP))	3
+(VP (VB be) (VP*))	3
+(NP (NP*) (:topic/PP))	3
+(NP (NP*) (PP (IN of) (NP (NP (NN trafficking)) (PRN (-LRB- -LRB-) (NP (CD 154) (NNS pounds)) (-RRB- -RRB-)))))	2
+(NP (NP*) (:ARG0-of/PP))	2
+(NP (NP*) (:ARG2/SBAR))	2
+(NP (NP*) (:time/SBAR))	2
+(NP (NP*) (PRN))	2
+(NP (NP*) (PP (IN of) (NP (NNP April))))	2
+(NP (NP*) (, ,) (:ARG0-of/SBAR))	2
+(NP (:ARG0/NP) (NP*))	2
+(NP (NP*) (:duration-of/PP))	2
+(NP (:ARG1/NP) (NP*))	2
+(PP (IN in) (PP*))	2
+(NP (NP*) (NP-TMP (NNP July) (CD 2008)))	2
+
+
+:ARG1-of/S	544
+(VP (TO to) (VP*))	243
+(VP (VB be) (VP*))	81
+(VP (VB have) (VP*))	20
+(VP (:ARG1-of/MD) (VP*))	11
+(VP (MD would) (VP*))	9
+(VP (:ARG1/VB) (VP*))	9
+(VP (VB do) (:polarity/RB) (VP*))	7
+(VP (TO To) (VP*))	7
+(NP (NP*) (:ARG1/PP))	6
+(NP (NP*) (:ARG1-of/VP))	4
+(VP (:ARG2/VB) (VP*))	4
+(VP (:ARG0/VB) (VP*))	4
+(VP (:op1/VB) (VP*))	3
+(VP (:ARG1-of/VP) (CC and) (VP*))	3
+(NP (NP*) (:ARG1/VP))	3
+(NP (NP*) (:ARG2/PP))	3
+(VP (:ARG1/MD) (VP*))	3
+(VP (MD will) (VP*))	3
+(NP (NP*) (:ARG0/PP))	3
+(NP (NP*) (:op2/PP))	2
+(NP (NP*) (:mod/PP))	2
+(VP (VB be) (:polarity/RB) (VP*))	2
+(NP (NP*) (:ARG1-of/SBAR))	2
+(NP (NP*) (PP (:time/IN) (:op1/NP)))	2
+(PP (IN XXX) (PP*))	2
+(VP (:ARG1-of/MD) (:polarity/RB) (VP*))	2
+(VP (VB do) (VP*))	2
+(NP (NP*) (:ARG3/PP))	2
+
+
+:ARG1-of/PP	532
+(NP (NP*) (PP))	58
+(NP (NP*) (:ARG2/PP))	57
+(NP (NP*) (:ARG0/PP))	36
+(VP (VB be) (VP*))	28
+(NP (NP*) (:ARG1/PP))	16
+(NP (NP*) (:location/PP))	16
+(PP (VBG According) (PP*))	14
+(VP (VB have) (VP*))	11
+(NP (NP*) (:op1/PP))	11
+(NP (NP*) (:ARG1-of/SBAR))	10
+(NP (NP*) (:op2/PP))	9
+(NP (NP*) (:ARG0-of/SBAR))	9
+(VP (TO to) (VP*))	9
+(NP (NP*) (:ARG3/PP))	9
+(NP (NP*) (:ARG1-of/VP))	7
+(PP (:ARG1-of/VB) (PP*))	6
+(VP (:ARG1-of/MD) (VP*))	5
+(NP (NP*) (:mod/PP))	5
+(NP (NP*) (:ARG1-of/PP))	5
+(VP (MD would) (VP*))	4
+(NP (NP*) (:time/PP))	4
+(NP (NP*) (:op3/PP))	4
+(NP (:mod/NP) (:ARG1/CC) (NP*))	4
+(NP (:ARG2/NP) (, ,) (NP*))	3
+(NP (:ARG1-of/NP) (CONJP (RB as) (RB well) (IN as)) (NP*))	3
+(PP (IN because) (PP*))	3
+(NP (NP*) (:condition/SBAR))	3
+(NP (NP*) (:ARG2-of/PP))	3
+(PP (VBG according) (PP*))	3
+(NP (:op1/NP) (:ARG2/CC) (NP*))	3
+(NP (NP*) (:topic/PP))	3
+(VP (:ARG2/VB) (VP*))	2
+(NP (NP*) (:purpose/PP))	2
+(PP (PP*) (PP))	2
+(NP (NP*) (:ARG0/VP))	2
+(NP (:mod/NP) (, ,) (NP*))	2
+(NP (NP*) (PP (IN of) (NP (DT the) (NN Taliban/al-Qaeda) (POS 's))))	2
+(VP (:ARG1/VB) (VP*))	2
+(NP (NP*) (:ARG1/SBAR))	2
+(NP (NP*) (PP (:quant/IN) (:op1/NP)))	2
+(NP (NP*) (:ARG2-of/VP))	2
+(NP (NP*) (:ARG2/PRN))	2
+(NP (NP*) (:ARG0-of/VP))	2
+(NP (:ARG1/NP) (, ,) (NP*))	2
+
+
+:op1/VP	520
+(VP (VB be) (VP*))	138
+(VP (VB have) (VP*))	79
+(VP (TO to) (VP*))	68
+(VP (MD will) (VP*))	17
+(NP (NP*) (VP))	15
+(VP (VB do) (:polarity/RB) (VP*))	14
+(NP (NP*) (:ARG1/PP))	13
+(VP (MD would) (VP*))	12
+(VP (VB get) (VP*))	7
+(VP (:ARG0/VB) (VP*))	6
+(VP (VB have) (:polarity/RB) (VP*))	4
+(NP (NP*) (:ARG2/PP))	4
+(VP (:ARG1/VB) (VP*))	4
+(VP (VB be) (:polarity/RB) (VP*))	4
+(VP (:op2/MD) (VP*))	3
+(NP (NP*) (:op2/PP))	3
+(NP (NP*) (:mod/PP))	3
+(VP (VB be) (:time/ADVP) (VP*))	3
+(VP (VB have) (:ARG1/NP) (VP*))	3
+(VP (:ARG0-of/VB) (VP*))	3
+(VP (:ARG1/MD) (VP*))	3
+(VP (VB be) (:mod/ADVP) (VP*))	3
+(NP (NP*) (:ARG1-of/VP))	2
+(VP (:ARG1-of/MD) (VP*))	2
+(VP (VB do) (:polarity/RB) (:mod/ADVP) (VP*))	2
+(VP (TO To) (VP*))	2
+(NP (NP*) (:part-of/PP))	2
+(NP (NP*) (:ARG0-of/PP))	2
+(S (S*) (VP))	2
+(NP (NP*) (:poss/PP))	2
+(VP (VB have) (:ARG1-of/ADVP) (VP*))	2
+(VP (VB be) (ADVP (RB heavily)) (VP*))	2
+(VP (MD would) (:mod/ADVP) (VP*))	2
+(VP (VB have) (:time/ADVP) (VP*))	2
+(VP (VB do) (VP*))	2
+
+
+:op1/SBAR	502
+(VP (VB be) (VP*))	137
+(VP (VB have) (VP*))	66
+(VP (MD would) (VP*))	23
+(VP (TO to) (VP*))	22
+(VP (MD will) (VP*))	21
+(VP (VB do) (:polarity/RB) (VP*))	20
+(NP (NP*) (SBAR))	20
+(NP (NP*) (:ARG1/PP))	16
+(ADVP (ADVP*) (SBAR))	14
+(VP (:ARG1/MD) (VP*))	10
+(VP (:ARG0-of/VB) (VP*))	6
+(NP (NP*) (:ARG0/PP))	6
+(NP (NP*) (:op2/PP))	5
+(VP (MD 'll) (VP*))	5
+(VP (:ARG0/VB) (VP*))	4
+(VP (:ARG2/MD) (VP*))	3
+(VP (:op2/MD) (VP*))	3
+(VP (VB be) (:manner/ADVP) (VP*))	3
+(VP (MD will) (:mod/ADVP) (VP*))	3
+(VP (:op2/VB) (VP*))	2
+(VP (:op1/VB) (VP*))	2
+(NP (NP*) (:ARG0-of/SBAR))	2
+(NP (NP*) (:location/PP))	2
+(VP (VB have) (:polarity/RB) (VP*))	2
+(VP (:ARG2/VB) (VP*))	2
+(VP (VB be) (:time/ADVP) (VP*))	2
+(VP (VB get) (VP*))	2
+(VP (VB be) (ADVP (RB no) (RB longer)) (VP*))	2
+(VP (:op1/VP) (:ARG1/CC) (VP*))	2
+(VP (MD will) (:polarity/RB) (VP*))	2
+(VP (VB be) (:polarity/RB) (VP*))	2
+(VP (:topic/MD) (:polarity/RB) (VP*))	2
+(VP (VB be) (:degree/ADVP) (VP*))	2
+
+
+:ARG0/SBAR	455
+(VP (VB be) (VP*))	104
+(NP (NP*) (SBAR))	32
+(VP (VB have) (VP*))	30
+(VP (MD would) (VP*))	22
+(VP (VB do) (:polarity/RB) (VP*))	18
+(VP (MD will) (VP*))	18
+(NP (NP*) (:ARG1/PP))	13
+(VP (TO to) (VP*))	12
+(VP (VB be) (:polarity/RB) (VP*))	10
+(VP (VB be) (:mod/ADVP) (VP*))	10
+(NP (NP*) (:ARG0/PP))	7
+(NP (NP*) (:ARG0-of/SBAR))	6
+(VP (VB have) (:polarity/RB) (VP*))	6
+(VP (:ARG1-of/MD) (VP*))	5
+(NP (NP*) (:ARG1/VP))	5
+(NP (NP*) (:ARG1-of/VP))	4
+(NP (NP*) (:ARG2/PP))	4
+(NP (NP*) (:ARG1/SBAR))	4
+(VP (:ARG1/MD) (VP*))	4
+(VP (MD would) (:polarity/RB) (VP*))	4
+(VP (VB be) (:time/ADVP) (VP*))	3
+(NP (NP*) (, ,) (SBAR))	3
+(NP (NP*) (:op1/PP))	3
+(VP (VB have) (ADVP (RB never)) (VP*))	3
+(ADVP (ADVP*) (SBAR))	3
+(NP (NP*) (NP))	2
+(NP (NP*) (:op2/PP))	2
+(NP (NP*) (:manner/PP))	2
+(NP (NP*) (:mod/PP))	2
+(NP (NP*) (:consist-of/PP))	2
+(NP (NP*) (:ARG2/SBAR))	2
+(VP (VB get) (VP*))	2
+(NP (NP*) (SBAR (WHNP (WDT that)) (S (VP (VBP pose) (:ARG1/NP) (:ARG2/PP) (:ARG1/SBAR)))))	2
+(VP (:ARG1/VB) (VP*))	2
+(VP (VB be) (:ARG1-of/ADVP) (VP*))	2
+(NP (NP*) (:poss/PP))	2
+(NP (NP*) (:topic/VP))	2
+(VP (:ARG0/VB) (VP*))	2
+(VP (:ARG0-of/VB) (:polarity/RB) (VP*))	2
+(VP (MD will) (:polarity/RB) (VP*))	2
+(VP (VB be) (:degree/ADVP) (VP*))	2
+
+
+:ARG0/S	450
+(VP (TO to) (VP*))	125
+(VP (VB be) (VP*))	53
+(VP (VB have) (VP*))	27
+(VP (MD would) (VP*))	15
+(NP (NP*) (:ARG1/PP))	14
+(NP (NP*) (:ARG1/SBAR))	13
+(VP (MD will) (VP*))	10
+(VP (VB do) (:polarity/RB) (VP*))	9
+(NP (NP*) (:ARG2/PP))	8
+(NP (NP*) (:ARG0-of/SBAR))	5
+(VP (:ARG0-of/VB) (VP*))	5
+(VP (VB be) (:polarity/RB) (VP*))	5
+(NP (NP*) (:ARG1/VP))	4
+(NP (NP*) (:op2/VP))	4
+(NP (NP*) (:mod/PP))	3
+(NP (NP*) (:ARG1-of/SBAR))	3
+(VP (:ARG1/VB) (VP*))	3
+(VP (:ARG1/MD) (VP*))	3
+(NP (NP*) (:ARG2-of/PP))	3
+(NP (NP*) (:example-of/PP))	2
+(NP (NP*) (:snt1/SBAR))	2
+(NP (NP*) (:topic/SBAR))	2
+(NP (NP*) (:snt2/SBAR))	2
+(NP (NP*) (:part-of/PP))	2
+(VP (TO XXX) (VP*))	2
+(PP (VBG According) (PP*))	2
+(NP (NP*) (:ARG2/VP))	2
+(NP (NP*) (:ARG2/ADJP))	2
+(NP (NP*) (:poss/PP))	2
+(NP (NP*) (:op1/VP))	2
+(NP (NP*) (:condition/SBAR))	2
+(NP (NP*) (:mod/ADJP))	2
+(VP (MD would) (:polarity/RB) (VP*))	2
+(NP (NP*) (:op2/SBAR))	2
+(VP (VB be) (:mod/ADVP) (VP*))	2
+
+
+:ARG2/VP	434
+(VP (VB be) (VP*))	81
+(VP (TO to) (VP*))	73
+(VP (VB do) (:polarity/RB) (VP*))	36
+(NP (NP*) (VP))	23
+(VP (VB have) (VP*))	22
+(VP (MD will) (VP*))	16
+(NP (NP*) (:ARG1/PP))	16
+(VP (MD would) (VP*))	13
+(VP (:ARG1/MD) (VP*))	9
+(VP (VB do) (VP*))	7
+(VP (MD will) (:polarity/RB) (VP*))	5
+(VP (VB get) (VP*))	4
+(NP (NP*) (:topic/PP))	4
+(VP (VB be) (:time/ADVP) (VP*))	3
+(NP (NP*) (:poss/PP))	3
+(NP (NP*) (:location/PP))	3
+(VP (VB be) (:polarity/RB) (VP*))	3
+(VP (:ARG2/MD) (VP*))	2
+(NP (NP*) (:domain/PP))	2
+(VP (VB have) (:mod/ADVP) (VP*))	2
+(NP (NP*) (:ARG0-of/SBAR))	2
+(VP (VB have) (:polarity/RB) (VP*))	2
+(VP (:ARG2/VB) (VP*))	2
+(VP (:op1/MD) (VP*))	2
+(VP (VB do) (RB not) (VP*))	2
+(NP (NP*) (:ARG2/PP))	2
+(VP (:ARG1/VB) (VP*))	2
+(NP (NP*) (:ARG0/PP))	2
+(NP (NP*) (:ARG2-of/PP))	2
+(VP (MD will) (:time/ADVP) (VP*))	2
+(VP (VB be) (:polarity/RB) (:mod/ADVP) (VP*))	2
+(VP (MD could) (VP*))	2
+(VP (VB have) (:time/ADVP) (VP*))	2
+(VP (VB be) (:mod/ADVP) (VP*))	2
+(S (S*) (VP) (. .))	2
+
+
+:ARG1-of/NP	415
+(NP (NP*) (:ARG1/PP))	38
+(NP (NP*) (:ARG2/PP))	36
+(NP (NP*) (:ARG0/PP))	23
+(NP (NP*) (:ARG1-of/SBAR))	17
+(NP (NP*) (:location/PP))	17
+(NP (NP*) (:ARG1-of/VP))	9
+(NP (NP*) (:time/PP))	8
+(NP (:op1/NP) (:ARG1/CC) (NP*))	8
+(NP (NP*) (:op1/PP))	8
+(NP (NP*) (:ARG1-of/PP))	7
+(NP (NP*) (:ARG1/SBAR))	7
+(NP (NP*) (:topic/PP))	7
+(NP (:op1/NP) (:ARG0/CC) (NP*))	6
+(NP (NP*) (NP))	5
+(NP (NP*) (:ARG1/VP))	5
+(NP (NP*) (:mod/PP))	5
+(NP (NP*) (, ,) (NP))	5
+(NP (:ARG1/NP) (NP*))	5
+(NP (NP*) (:ARG0/PP) (. .))	5
+(NP (NP*) (:ARG0-of/SBAR))	4
+(NP (NP*) (:op3/PP))	4
+(NP (NP*) (:ARG0-of/VP))	4
+(NP (:mod/NP) (NP*))	3
+(NP (NP*) (:ARG3/PP))	3
+(NP (NP*) (: -) (NP))	2
+(NP (NP*) (:op2/PP))	2
+(NP (NP*) (:ARG0/VP))	2
+(NP (NP*) (:source/PP) (:ARG0-of/SBAR))	2
+(NP (:quant/NP) (NP*) (. .))	2
+(NP (NP*) (:ARG2/VP))	2
+(NP (NP*) (:source/PP))	2
+(NP (NP*) (:beneficiary/PP))	2
+(NP (NP*) (PP (IN as) (ADJP (JJ baseless))))	2
+(NP (NP*) (, ,))	2
+(NP (NP*) (:ARG0/SBAR))	2
+(X (X*) (NP))	2
+(NP (NP*) (:domain/SBAR))	2
+(NP (NP*) (, ,) (:ARG1-of/SBAR) (, ,))	2
+(PP (NP) (PP*))	2
+
+
+:ARG0-of/NP	410
+(NP (NP*) (:ARG1/PP))	93
+(NP (NP*) (:ARG0/PP))	47
+(NP (:ARG0/NP) (, ,) (NP*) (, ,))	16
+(NP (NP*) (:ARG2/PP))	14
+(NP (NP*) (:location/PP))	12
+(NP (:ARG0/NP) (, ,) (NP*))	9
+(NP (NP*) (PP (:ARG0/IN) (:ARG1/NP)))	8
+(NP (NP*) (NP))	7
+(NP (NP*) (:op2/PP))	6
+(NP (NP*) (:ARG1/SBAR))	6
+(NP (:ARG1/NP) (, ,) (NP*))	6
+(NP (:op1/NP) (:ARG0/CC) (NP*))	5
+(NP (NP*) (:op1/PP))	5
+(NP (NP*) (:ARG0-of/SBAR))	4
+(NP (NP*) (:ARG0-of/PP))	4
+(NP (NP*) (:ARG1-of/PP))	4
+(NP (NP*) (:ARG0-of/VP))	4
+(NP (:ARG0-of/NP) (CC and) (NP*))	4
+(NP (:ARG1/NP) (, ,) (NP*) (, ,))	4
+(NP (NP*) (:topic/PP))	4
+(NP (NP*) (:mod/PP))	3
+(NP (NP*) (PP (:ARG1/IN) (:ARG0-of/NP)))	3
+(NP (NP*) (:time/PP))	3
+(NP (:op1/NP) (:ARG1/CC) (NP*))	3
+(NP (NP*) (:ARG1-of/SBAR))	3
+(NP (NP*) (:poss/PP))	3
+(NP (NP*) (:ARG1-of/VP))	2
+(NP (NP*) (:op3/PP))	2
+(NP (:ARG0-of/NP) (:ARG0/CC) (NP*))	2
+(NP (NP*) (PP (:ARG0/IN) (:ARG0/NP)))	2
+(NP (NP*) (PP (:part-of/IN) (:ARG1/NP)))	2
+(NP (NP*) (PP (IN of) (NP (DT the) (NNS Arms))))	2
+(NP (:op2/NP) (NP*))	2
+(NP (NP*) (:ARG2/SBAR))	2
+(NP (:op1/NP) (, ,) (NP*))	2
+(VP (TO to) (VP*))	2
+(NP (:op2/NP) (, ,) (NP*))	2
+(NP (NP*) (PP (:op2/IN) (:ARG1/NP)))	2
+(NP (NP*) (:op3/SBAR))	2
+(NP (:ARG1-of/NP) (:ARG0/CC) (NP*))	2
+(NP (NP*) (:compared-to/PP))	2
+(NP (NP*) (, ,) (:ARG1-of/SBAR))	2
+
+
+:op4/NP	389
+(NP (:op3/NP) (: ;) (NP*))	101
+(NP (:op2/NP) (: ;) (NP*))	62
+(NP (:op1/NP) (: ;) (NP*))	59
+(NP (NP*) (: ;) (NP))	9
+(NP (:op1/NP) (, ,) (:op2/NP) (, ,) (:op3/NP) (:ARG1/CC) (NP*))	6
+(NP (NP*) (:ARG1/PP))	5
+(NP (:op1/NP) (, ,) (NP*))	5
+(NP (:op3/NP) (CC and) (NP*))	4
+(NP (:op1/NP) (, ,) (:op2/NP) (, ,) (:op3/NP) (:ARG0/CC) (NP*))	4
+(NP (NP*) (NP))	3
+(NP (NP*) (PP))	3
+(NP (:op2/NP) (, ,) (:op3/NP) (:ARG1/CC) (NP*))	3
+(NP (:op1/NP) (, ,) (:op2/NP) (, ,) (:op3/NP) (, ,) (:ARG1/CC) (NP*))	3
+(NP (NP*) (:op1/PP))	3
+(NP (:op3/NP) (, ,) (NP*))	2
+(NP (NP*) (:ARG0-of/SBAR))	2
+(NP (:op1/NP) (, ,) (:op2/NP) (, ,) (:op3/NP) (CC and) (NP*))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NN CN)) (-RRB- -RRB-)))	2
+(NP (NP*) (, ,) (NP))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP KG)) (-RRB- -RRB-)))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP PH)) (-RRB- -RRB-)))	2
+(NP (NP*) (NN XXX))	2
+(NP (:op2/NP) (, ,) (NP*))	2
+(NP (:op2/NP) (, ,) (:poss/CC) (NP*))	2
+(NP (NP*) (:location/PP))	2
+(NP (:op1/NP) (, ,) (:op2/NP) (, ,) (:op3/NP) (, ,) (NP*) (: ...))	2
+(NP (:ARG1/NP) (NP*))	2
+(NP (:op3/NP) (:ARG1/CC) (NP*))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NN FR)) (-RRB- -RRB-)))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NN DE)) (-RRB- -RRB-)))	2
+
+
+:domain/NP	320
+(NP (NP*) (:ARG1/PP))	32
+(NP (NP*) (:location/PP))	19
+(NP (NP*) (:ARG1-of/SBAR))	18
+(NP (NP*) (:ARG0-of/SBAR))	14
+(NP (NP*) (:ARG1/SBAR))	11
+(NP (NP*) (:mod/PP))	10
+(NP (NP*) (PP))	8
+(NP (NP*) (:poss/PP))	8
+(NP (NP*) (:ARG0/PP))	8
+(NP (NP*) (:topic/PP))	6
+(NP (NP*) (PP (:location/IN) (:op1/NP)))	5
+(NP (NP*) (:part-of/PP))	5
+(NP (NP*) (:op1/PP))	5
+(NP (NP*) (:ARG1-of/VP))	4
+(NP (NP*) (, ,) (NP))	4
+(NP (NP*) (:ARG1-of/PP))	4
+(NP (NP*) (:ARG2/PP))	4
+(NP (:snt1/NP) (, ,) (NP*))	3
+(NP (:ARG2/NP) (, ,) (NP*))	3
+(NP (NP*) (:ARG0-of/PP))	3
+(NP (NP*) (:time/PP))	3
+(NP (NP*) (:ARG2/SBAR))	3
+(NP (NP*) (:ARG0-of/VP))	3
+(NP (NP*) (:compared-to/PP))	3
+(NP (NP*) (NP))	2
+(NP (NP*) (, ,) (:ARG1-of/VP) (, ,))	2
+(NP (NP*) (VP (VBD was)) (:ARG1/SBAR))	2
+(NP (:mod/NP) (NP*))	2
+(NP (NP*) (:op2/PP))	2
+(NP (:ARG1/NP) (NP*))	2
+(NP (NP*) (:ARG0/SBAR))	2
+(NP (NP*) (:degree/ADJP))	2
+(NP (:ARG1/NP) (, ,) (NP*))	2
+
+
+:ARG1-of/VP	297
+(NP (NP*) (VP))	105
+(VP (VB be) (VP*))	64
+(VP (VB have) (VP*))	15
+(VP (:ARG1-of/MD) (VP*))	9
+(VP (MD will) (VP*))	8
+(VP (TO to) (VP*))	7
+(VP (VB do) (:polarity/RB) (VP*))	7
+(VP (MD would) (VP*))	5
+(VP (:ARG1-of/VP) (CC and) (VP*))	5
+(NP (NP*) (, ,) (VP))	2
+(VP (:op1/VB) (VP*))	2
+(VP (VP*) (CC and) (VP))	2
+(VP (:ARG2-of/VP) (CC and) (VP*))	2
+(VP (VB do) (VP*))	2
+(VP (:ARG1-of/VP) (CC or) (VP*))	2
+(VP (:op1/VP) (:ARG1/CC) (VP*))	2
+(NP (NP*) (:ARG0/PP))	2
+
+
+:topic/PP	289
+(NP (NP*) (:ARG1/PP))	39
+(NP (NP*) (PP))	35
+(NP (NP*) (:mod/PP))	14
+(NP (NP*) (:location/PP))	14
+(NP (NP*) (:ARG0-of/SBAR))	13
+(NP (NP*) (:ARG2/PP))	11
+(NP (NP*) (:ARG0/PP))	9
+(NP (NP*) (:poss/PP))	7
+(NP (NP*) (:ARG1-of/VP))	6
+(NP (NP*) (:op2/PP))	6
+(NP (NP*) (:ARG1-of/SBAR))	6
+(NP (NP*) (:ARG0-of/VP))	6
+(NP (NP*) (:part-of/PP))	5
+(PP (IN As) (PP*))	5
+(NP (NP*) (:medium/PP))	4
+(NP (NP*) (:ARG1-of/PP))	4
+(NP (NP*) (:op1/PP))	4
+(PP (IN as) (PP*))	3
+(NP (NP*) (:degree-of/PP))	3
+(NP (NP*) (:ARG2-of/PP))	3
+(NP (NP*) (:example/PP))	2
+(NP (NP*) (:source/PP))	2
+(NP (NP*) (:ARG2/SBAR))	2
+(NP (NP*) (:ARG1/SBAR))	2
+(VP (VB be) (VP*))	2
+(NP (NP*) (, ,) (:ARG0-of/SBAR))	2
+(NP (NP*) (:op1/SBAR))	2
+(PP (IN on) (PP*))	2
+(NP (NP*) (:topic/PP))	2
+
+
+:ARG0-of/S	285
+(VP (TO to) (VP*))	139
+(VP (VB be) (VP*))	19
+(VP (VB have) (VP*))	14
+(VP (:ARG0-of/VP) (CC and) (VP*))	7
+(NP (NP*) (:ARG1/PP))	7
+(VP (MD would) (VP*))	5
+(VP (:ARG1-of/MD) (VP*))	5
+(VP (TO To) (VP*))	4
+(VP (MD will) (VP*))	4
+(VP (:ARG1/VB) (VP*))	4
+(VP (VB be) (:mod/ADVP) (VP*))	3
+(VP (VB do) (:polarity/RB) (:mod/ADVP) (VP*))	2
+(VP (:ARG0/VB) (VP*))	2
+(VP (VB do) (:polarity/RB) (VP*))	2
+(VP (:mod/MD) (VP*))	2
+(VP (:ARG0-of/VP) (:ARG1/CC) (VP*))	2
+(VP (:ARG1-of/MD) (:polarity/RB) (VP*))	2
+(VP (:ARG1/TO) (VP*))	2
+(NP (NP*) (:ARG0/PP))	2
+(NP (NP*) (:mod/PP))	2
+
+
+:op3/PP	283
+(NP (:op1/NP) (, ,) (NP*))	15
+(NP (:op2/NP) (, ,) (NP*))	14
+(NP (NP*) (:ARG1/PP))	13
+(NP (:op1/NP) (, ,) (:op2/NP) (, ,) (:ARG1/CC) (NP*))	11
+(NP (:op1/NP) (, ,) (:op2/NP) (:ARG0/CC) (NP*))	11
+(NP (NP*) (PP))	10
+(NP (:op1/NP) (, ,) (:op2/NP) (:ARG1/CC) (NP*))	7
+(NP (:op1/NP) (, ,) (:op2/NP) (:ARG2/CC) (NP*))	6
+(NP (:op1/NP) (, ,) (:op2/NP) (:topic/CC) (NP*))	5
+(NP (:op1/NP) (, ,) (:op2/NP) (, ,) (:ARG2/CC) (NP*))	5
+(NP (NP*) (:ARG1-of/VP))	4
+(NP (NP*) (NP (FW etc.)))	4
+(NP (NP*) (:op2/PP))	3
+(NP (:op1/NP) (, ,) (:op2/NP) (:location/CC) (NP*))	3
+(NP (:ARG1/NP) (, ,) (:op2/NP) (:ARG0/CC) (NP*))	3
+(NP (:op1/NP) (, ,) (:op2/NP) (, ,) (:location/CC) (NP*))	3
+(NP (NP*) (:poss/PP))	3
+(NP (NP*) (:location/PP))	3
+(NP (:ARG1/NP) (CC and) (NP*))	3
+(NP (:ARG1/NP) (, ,) (NP*))	3
+(NP (NP*) (:ARG0-of/SBAR))	2
+(NP (:topic/NP) (, ,) (NP*))	2
+(NP (NP*) (:mod/PP))	2
+(NP (NP*) (:ARG1-of/PP))	2
+(NP (:op1/NP) (:ARG1/CC) (NP*))	2
+(NP (:op1/NP) (, ,) (NP*) (, ,))	2
+(NP (NP*) (:ARG1-of/SBAR))	2
+(NP (:op1/NP) (, ,) (:op2/NP) (, ,) (CC and) (NP*))	2
+(NP (:op1/NP) (, ,) (:op2/NP) (:example/CC) (NP*))	2
+(NP (:ARG1/NP) (, ,) (:op2/NP) (:ARG1/CC) (NP*))	2
+(NP (:op1/NP) (, ,) (:op2/NP) (CC and) (NP*))	2
+(NP (:ARG1-of/NP) (:ARG2/CC) (NP*))	2
+(NP (NP*) (:beneficiary/PP))	2
+
+
+:ARG3/PP	272
+(NP (NP*) (PP))	31
+(NP (NP*) (:ARG1/PP))	31
+(NP (NP*) (:time/PP))	18
+(NP (NP*) (:ARG2/PP))	14
+(NP (NP*) (:location/PP))	10
+(NP (NP*) (:ARG0-of/SBAR))	8
+(NP (NP*) (:mod/PP))	7
+(NP (NP*) (:ARG1-of/PP))	6
+(NP (NP*) (:part-of/PP))	6
+(NP (NP*) (:ARG1-of/SBAR))	6
+(NP (NP*) (:ARG1-of/VP))	5
+(NP (NP*) (:ARG0/PP))	5
+(NP (NP*) (:op2/PP))	3
+(NP (NP*) (:ARG1/VP))	3
+(VP (TO to) (VP*))	3
+(NP (NP*) (:op1/PP))	3
+(NP (NP*) (PP (:location/IN) (:op1/NP)))	2
+(NP (NP*) (:consist-of/PP))	2
+(NP (NP*) (:destination/PP))	2
+(NP (NP*) (:poss/PP))	2
+(NP (NP*) (:ARG0/PRN))	2
+(NP (NP*) (:degree/PP))	2
+(NP (NP*) (:op2/SBAR))	2
+(NP (NP*) (SBAR))	2
+
+
+:quant/PP	271
+(NP (NP*) (:ARG1/PP))	39
+(NP (NP*) (:ARG2/PP))	26
+(NP (NP*) (:ARG0/PP))	22
+(NP (NP*) (:op2/PP))	13
+(NP (NP*) (PP))	13
+(NP (NP*) (:location/PP))	9
+(NP (NP*) (:ARG1-of/PP))	7
+(NP (NP*) (:time/PP))	6
+(NP (NP*) (:op1/PP))	6
+(NP (NP*) (:ARG3/PP))	5
+(NP (NP*) (:ARG1-of/VP))	4
+(NP (NP*) (:manner/PP))	3
+(PP (VBN compared) (PP*))	3
+(NP (NP*) (:duration/PP))	3
+(NP (NP*) (:prep-with/PP))	3
+(NP (NP*) (:frequency/PP))	3
+(NP (NP*) (:subevent-of/PP))	2
+(NP (:ARG1/NNP) (NP*))	2
+(NP (NP*) (:mod/PP))	2
+(NP (:op1/NP) (, ,) (NP*))	2
+(NP (NP*) (:poss/PP))	2
+(NP (NP*) (:accompanier/PP))	2
+(NP (:ARG1/NP) (NP*))	2
+(NP (:ARG2/NP) (NP*))	2
+(NP (NP*) (PP (IN of) (NP (PRP them))))	2
+(NP (NP*) (:beneficiary/PP))	2
+(NP (NP*) (:topic/PP))	2
+
+
+:ARG0-of/PP	265
+(NP (NP*) (:ARG1/PP))	55
+(NP (NP*) (PP))	30
+(NP (NP*) (:ARG2/PP))	10
+(NP (NP*) (:location/PP))	10
+(NP (:ARG1/NP) (, ,) (NP*))	7
+(NP (NP*) (:ARG1-of/PP))	5
+(NP (:ARG0/NP) (, ,) (NP*))	5
+(NP (NP*) (:op2/PP))	4
+(NP (NP*) (:ARG0-of/SBAR))	4
+(VP (VB be) (VP*))	4
+(NP (NP*) (:time/PP))	3
+(PP (VBG According) (PP*))	3
+(NP (NP*) (:op1/PP))	3
+(NP (NP*) (:ARG1/SBAR))	3
+(NP (NP*) (:op3/PP))	2
+(NP (NP*) (:ARG1/VP))	2
+(NP (:location/NP) (, ,) (NP*))	2
+(NP (NP*) (:source/PP))	2
+(NP (:part-of/NP) (:ARG2/CC) (NP*))	2
+(PP (IN As) (PP*))	2
+(NP (:op1/NP) (:ARG1/CC) (NP*))	2
+(PP (IN because) (PP*))	2
+(VP (:ARG1-of/MD) (VP*))	2
+(NP (NP*) (:ARG0/PP))	2
+(NP (:ARG1-of/NP) (CC and) (NP*))	2
+(NP (:op1/NP) (:ARG2/CC) (NP*))	2
+(NP (:ARG1/NP) (, ,) (NP*) (, ,))	2
+(NP (NP*) (:quant/PP))	2
+(NP (NP*) (:topic/PP))	2
+
+
+:time/NP	261
+(NP (:ARG0/NP) (, ,) (NP*) (, ,))	28
+(NP (:ARG0/NP) (, ,) (:location/NP) (, ,) (NP*) (, ,))	23
+(NP (NP*) (NP))	11
+(NP (NP*) (:mod/PP))	11
+(NP (:ARG0/NP) (, ,) (NP*))	10
+(NP (NP*) (:ARG1/PP))	9
+(NP (NP*) (NP (JJ 23rd)))	9
+(NP (NP*) (, ,) (NP) (, ,))	7
+(NP (NP*) (, ,) (NP))	7
+(NP (:ARG1/NP) (NP*))	6
+(NP (NP*) (:ARG1/SBAR))	6
+(NP (NP*) (:time-of/SBAR))	5
+(NP (NP*) (:ARG0/PP))	5
+(NP (NP*) (:time/PP))	4
+(NP (NP*) (:op1/PP))	4
+(NP (NP*) (NP (CD ·) (NN Source)))	3
+(NP (NP*) (:ARG0-of/PP))	3
+(NP (NP*) (:ARG2/SBAR))	3
+(NP (NP*) (NP-TMP))	3
+(NP (NP*) (NP (JJ 17th)))	3
+(NP (NP*) (:location/PP))	3
+(NP (:ARG0/NP) (, ,) (:location/NP) (, ,) (NP*) (, ,) (:op1/PP))	3
+(NP (:op1/NP) (NP*))	3
+(NP (NP*) (: -) (NP))	2
+(NP (NP*) (:ARG1/VP))	2
+(NP (:ARG0/NP) (, ,) (:location/NP) (, ,) (NP*) (, ,) (:ARG1/PP))	2
+(NP (NP*) (, ,) (:time/PP))	2
+(NP (NP*) (NP (JJ 25th)))	2
+(NP (NP*) (:part-of/PP))	2
+(NP (NP*) (:ARG1-of/PRN))	2
+(NP (NP*) (:quant/SBAR))	2
+(NP (:ARG0/NP) (NP*))	2
+(NP (NP*) (NP (JJ 14th)))	2
+(NP (NP*) (NP (JJ 18th)))	2
+(NP (NP*) (:ARG0/SBAR))	2
+(NP (NP*) (:op1/SBAR))	2
+(NP (NP*) (ADVP (JJ 11th)))	2
+(NP (:ARG2/NP) (NP*))	2
+(NP (NP*) (:beneficiary/PP))	2
+(NP (:ARG0/NP) (, ,) (:location/NP) (, ,) (NP*) (, ,) (:ARG4/PP))	2
+
+
+:op5/NP	244
+(NP (:op4/NP) (: ;) (NP*))	67
+(NP (:op1/NP) (: ;) (NP*))	45
+(NP (:op3/NP) (: ;) (NP*))	41
+(NP (:op1/NP) (, ,) (:op2/NP) (, ,) (:op3/NP) (, ,) (NP*) (:ARG1/CC) (NP))	6
+(NP (NP*) (PP))	5
+(NP (:op2/NP) (: ;) (NP*))	4
+(NP (NP*) (:ARG1/PP))	4
+(NP (NP*) (: ;) (NP))	3
+(NP (:op1/NP) (, ,) (:op2/NP) (, ,) (:op3/NP) (, ,) (:op4/NP) (, ,) (:ARG1/CC) (NP*))	2
+(NP (:op1/NP) (, ,) (NP*))	2
+(NP (:op3/NP) (, ,) (NP*))	2
+(NP (:op3/NP) (, ,) (CONJP (RB as) (RB well) (IN as)) (NP*))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP US)) (-RRB- -RRB-)))	2
+(NP (NP*) (, ,) (NP))	2
+(NP (:op4/NP) (:ARG0/CC) (NP*))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP IT)) (-RRB- -RRB-)))	2
+(NP (:op4/NP) (:ARG1/CC) (NP*))	2
+(NP (NP*) (:location/PP))	2
+(NP (:op4/NP) (, ,) (NP*))	2
+(NP (NP*) (:ARG0/PP))	2
+(NP (:op1/NP) (NP*))	2
+
+
+:ARG3/NP	237
+(NP (NP*) (:ARG1/PP))	41
+(NP (NP*) (:ARG2/PP))	29
+(NP (NP*) (:ARG0/PP))	16
+(NP (NP*) (:op2/PP))	7
+(NP (NP*) (:time/PP))	6
+(NP (NP*) (:mod/PP))	5
+(NP (NP*) (:ARG1-of/PP))	5
+(NP (NP*) (:ARG1-of/VP))	4
+(NP (:ARG1/NP) (NP*))	4
+(NP (NP*) (:op1/PP))	4
+(NP (NP*) (NP))	3
+(NP (NP*) (:ARG1/VP))	3
+(NP (NP*) (:location/PP))	3
+(NP (NP*) (:ARG2-of/PP))	3
+(NP (NP*) (:domain/PP))	2
+(NP (NP*) (:ARG0-of/SBAR))	2
+(NP (NP*) (PP))	2
+(NP (NP*) (:ARG0-of/PP))	2
+(NP (:op1/NP) (:ARG1/CC) (NP*))	2
+(NP (NP*) (SBAR))	2
+(NP (NP*) (:ARG0-of/VP))	2
+(NP (:ARG2/NP) (NP*))	2
+(NP (NP*) (:beneficiary/PP))	2
+(NP (NP*) (:ARG3/PP))	2
+
+
+:condition/SBAR	235
+(VP (VB be) (VP*))	69
+(VP (VB do) (:polarity/RB) (VP*))	32
+(VP (TO to) (VP*))	14
+(VP (VB have) (VP*))	14
+(VP (MD would) (VP*))	10
+(VP (VB be) (:polarity/RB) (VP*))	9
+(VP (VB do) (VP*))	8
+(ADVP (ADVP*) (SBAR))	7
+(VP (VB get) (VP*))	5
+(NP (NP*) (:ARG1/PP))	5
+(VP (MD will) (VP*))	4
+(NP (NP*) (SBAR))	3
+(NP (NP*) (, ,) (SBAR))	3
+(VP (VB do) (RB n't) (VP*))	2
+(VP (VB be) (:mod/ADVP) (VP*))	2
+
+
+:domain/S	224
+(VP (TO to) (VP*))	108
+(VP (VB be) (VP*))	12
+(VP (TO To) (VP*))	6
+(VP (MD would) (VP*))	5
+(NP (NP*) (:location/PP))	4
+(NP (NP*) (:topic/PP))	4
+(VP (MD will) (VP*))	3
+(NP (NP*) (:ARG1/PP))	3
+(VP (VB have) (VP*))	2
+(VP (VB be) (:ARG1/ADVP) (VP*))	2
+(VP (MD will) (:ARG2/ADVP) (VP*))	2
+(VP (MD will) (:polarity/RB) (VP*))	2
+(VP (VB get) (VP*))	2
+(NP (NP*) (:ARG1/SBAR))	2
+
+
+:mod/S	216
+(VP (TO to) (VP*))	60
+(VP (VB be) (VP*))	14
+(NP (NP*) (:ARG1/PP))	10
+(NP (NP*) (:ARG1-of/SBAR))	5
+(NP (NP*) (:ARG2/PP))	5
+(NP (NP*) (:mod/PP))	4
+(NP (NP*) (:location/PP))	4
+(NP (NP*) (:op1/PP))	4
+(NP (NP*) (:ARG0-of/SBAR))	3
+(NP (NP*) (:manner/PP))	3
+(VP (MD would) (VP*))	3
+(NP (NP*) (:ARG1/SBAR))	3
+(NP (NP*) (:ARG0/PP))	3
+(VP (MD will) (VP*))	2
+(VP (:ARG0/MD) (VP*))	2
+(NP (NP*) (:op2/PP))	2
+(NP (NP*) (:ARG1/VP))	2
+(VP (VB have) (VP*))	2
+(NP (NP*) (:ARG0/ADJP))	2
+(VP (TO na) (VP*))	2
+(NP (NP*) (:op2/SBAR))	2
+(VP (VB be) (:polarity/RB) (VP*))	2
+(NP (NP*) (:beneficiary/PP))	2
+(NP (NP*) (:quant/PP))	2
+
+
+:manner/PP	187
+(NP (NP*) (:ARG1/PP))	24
+(NP (NP*) (PP))	12
+(NP (NP*) (:ARG0/PP))	10
+(VP (VB be) (VP*))	7
+(NP (NP*) (:location/PP))	7
+(NP (NP*) (:mod/PP))	6
+(NP (NP*) (:ARG2/PP))	6
+(NP (NP*) (:ARG1-of/VP))	5
+(NP (NP*) (:ARG1-of/SBAR))	5
+(NP (NP*) (:ARG1/SBAR))	5
+(NP (NP*) (:ARG1-of/PP))	4
+(NP (NP*) (:compared-to/PP))	3
+(NP (NP*) (:op1/PP))	3
+(NP (:manner/NP) (CC and) (NP*))	2
+(NP (NP*) (PP (:time/IN) (:op1/NP)))	2
+(NP (NP*) (:poss/PP))	2
+(NP (:ARG1/NP) (NP*))	2
+(NP (NP*) (:degree/PP))	2
+(NP (:ARG2/NP) (NP*))	2
+(NP (NP*) (:ARG3/PP))	2
+
+
+:snt1/S	187
+(VP (VB be) (VP*))	55
+(VP (VB have) (VP*))	17
+(VP (VB do) (:polarity/RB) (VP*))	11
+(VP (MD will) (VP*))	7
+(VP (TO to) (VP*))	5
+(VP (VB have) (:time/ADVP) (VP*))	4
+(NP (NP*) (:ARG1/PP))	4
+(VP (MD would) (VP*))	3
+(VP (VB do) (RB n't) (VP*))	3
+(VP (VB be) (:polarity/RB) (VP*))	3
+(VP (:ARG0-of/VB) (VP*))	3
+(VP (:ARG1/VB) (VP*))	2
+(VP (VB be) (:ARG1-of/ADVP) (VP*))	2
+(NP (NP*) (:ARG0/PP))	2
+(VP (VB be) (:time/ADVP) (VP*))	2
+(VP (VB be) (:mod/ADVP) (VP*))	2
+(VP (VB do) (VP*))	2
+
+
+:time/SBAR	176
+(VP (VB be) (VP*))	88
+(NP (NP*) (SBAR))	17
+(VP (VB have) (VP*))	12
+(VP (MD will) (VP*))	4
+(NP (NP*) (:ARG1/PP))	4
+(VP (TO to) (VP*))	3
+(VP (MD would) (VP*))	3
+(ADVP (ADVP*) (SBAR))	2
+(NP (NP*) (:ARG0/PP))	2
+
+
+:op3/S	174
+(VP (TO to) (VP*))	30
+(VP (VB be) (VP*))	18
+(VP (:op2/VP) (CC and) (VP*))	10
+(VP (:op1/VP) (:ARG1/CC) (VP*))	6
+(VP (MD would) (VP*))	5
+(VP (MD will) (VP*))	4
+(VP (:op1/VP) (, ,) (:op2/VP) (, ,) (VP*))	3
+(VP (:ARG1/VP) (CC and) (VP*))	3
+(VP (:op1/VP) (, ,) (:op2/VP) (, ,) (:ARG1/CC) (VP*))	3
+(VP (VB have) (:mod/ADVP) (VP*))	2
+(VP (:op2/VP) (, ,) (:ARG1/CC) (VP*))	2
+(NP (NP*) (:ARG1/PP))	2
+(VP (VB be) (:time/ADVP) (VP*))	2
+(VP (VB have) (VP*))	2
+(VP (VB get) (VP*))	2
+(VP (:op2/VP) (, ,) (VP*))	2
+(VP (:op2/VP) (, ,) (:ARG2/CC) (VP*))	2
+
+
+:poss/PP	173
+(NP (NP*) (PP))	29
+(NP (NP*) (:ARG1/PP))	13
+(NP (NP*) (:location/PP))	10
+(NP (NP*) (:time/PP))	5
+(NP (NP*) (:ARG1-of/VP))	4
+(NP (NP*) (:ARG1-of/SBAR))	4
+(NP (NP*) (:ARG0-of/VP))	4
+(NP (NP*) (:topic/PP))	4
+(NP (NP*) (:ARG0-of/SBAR))	3
+(NP (NP*) (:mod/PP))	3
+(NP (NP*) (:poss/PP))	3
+(NP (NP*) (:ARG0/PP))	3
+(NP (NP*) (:ARG1-of/PP))	2
+(NP (NP*) (:ARG2/SBAR))	2
+(PP (VBG According) (PP*))	2
+(NP (NP*) (:ARG2-of/PP))	2
+(NP (NP*) (PP (IN on) (NP (CD 020115))))	2
+(NP (NP*) (:ARG1-of/PP) (:ARG1-of/VP))	2
+
+
+:part-of/PP	172
+(NP (NP*) (PP))	60
+(NP (NP*) (:ARG1-of/VP))	8
+(NP (NP*) (:ARG0-of/SBAR))	7
+(NP (NP*) (:ARG1/PP))	7
+(NP (NP*) (:location/PP))	6
+(NP (NP*) (:ARG1-of/SBAR))	5
+(NP (NP*) (:ARG0/PP))	4
+(NP (NP*) (:part-of/PP))	3
+(NP (NP*) (:ARG2/PP))	3
+(NP (NP*) (PP (:part-of/IN) (:ARG1/NP)))	3
+(NP (NP*) (:time/PP))	3
+(NP (:poss/NP) (NP*))	2
+(NP (NP*) (NP))	2
+(NP (NP*) (:poss/PP))	2
+(NP (NP*) (:ARG1/VP))	2
+(NP (NP*) (:op2/SBAR))	2
+(NP (NP*) (:mod/PP))	2
+
+
+:op6/NP	171
+(NP (:op5/NP) (: ;) (NP*))	36
+(NP (:op1/NP) (: ;) (NP*))	29
+(NP (:op4/NP) (: ;) (NP*))	29
+(NP (:op2/NP) (: ;) (NP*))	26
+(NP (NP*) (: ;) (NP))	4
+(NP (NP*) (: ;) (:op3/NP) (: ;) (:op4/NP) (: ;) (:op5/NP) (: ;) (NP))	3
+(NP (NP*) (:ARG1/PP))	3
+(NP (:op2/NP) (: ;) (:op3/NP) (: ;) (:op4/NP) (: ;) (:op5/NP) (: ;) (NP*))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NN ES)) (-RRB- -RRB-)))	2
+
+
+:purpose/SBAR	168
+(VP (TO to) (VP*))	132
+(VP (VB be) (VP*))	6
+(VP (MD would) (VP*))	5
+(VP (MD could) (VP*))	3
+(NP (NP*) (SBAR))	2
+(VP (MD can) (VP*))	2
+(VP (:ARG1-of/MD) (VP*))	2
+
+
+:ARG2-of/NP	156
+(NP (NP*) (:ARG1/PP))	51
+(NP (NP*) (:ARG1-of/SBAR))	7
+(NP (NP*) (:op2/PP))	4
+(NP (NP*) (:ARG1-of/VP))	4
+(NP (NP*) (:mod/PP))	4
+(NP (NP*) (:ARG1-of/PP))	3
+(NP (NP*) (:op1/PP))	3
+(NP (NP*) (, ,) (:ARG1-of/SBAR))	3
+(NP (NP*) (:ARG0/PP))	3
+(NP (:ARG1-of/NP) (:ARG1/CC) (NP*))	2
+(NP (NP*) (:ARG0-of/SBAR))	2
+(NP (NP*) (:time/PP))	2
+(NP (:op1/NP) (:ARG1/CC) (NP*))	2
+(NP (NP*) (:example/PP))	2
+(NP (:ARG1/NP) (, ,) (NP*))	2
+(NP (NP*) (:location/PP))	2
+(NP (NP*) (PP (:ARG1-of/IN) (:ARG1/NP)))	2
+(NP (NP*) (:ARG2/PP))	2
+(NP (NP*) (:ARG0/SBAR))	2
+
+
+:ARG2-of/SBAR	148
+(VP (VB be) (VP*))	49
+(VP (VB have) (VP*))	15
+(VP (TO to) (VP*))	12
+(NP (NP*) (:ARG1/PP))	7
+(NP (NP*) (SBAR))	6
+(VP (:ARG1-of/MD) (VP*))	6
+(VP (MD would) (VP*))	5
+(VP (MD will) (VP*))	4
+(NP (NP*) (:ARG0/PP))	4
+(VP (:ARG0/VB) (VP*))	3
+(NP (NP*) (, ,) (SBAR))	3
+(VP (VB do) (:polarity/RB) (VP*))	2
+(VP (MD will) (:polarity/RB) (VP*))	2
+(VP (:ARG1-of/MD) (:polarity/RB) (VP*))	2
+(VP (:ARG4-of/MD) (VP*))	2
+
+
+:purpose/PP	146
+(NP (NP*) (:ARG1/PP))	33
+(NP (NP*) (PP))	22
+(VP (TO to) (VP*))	9
+(NP (NP*) (:ARG2/PP))	7
+(NP (NP*) (:location/PP))	5
+(NP (NP*) (:ARG1-of/VP))	4
+(NP (NP*) (:op1/PP))	3
+(NP (NP*) (:ARG1/SBAR))	3
+(NP (NP*) (:mod/PP))	3
+(PP (IN in) (PP*))	2
+(NP (NP*) (:subevent-of/PP))	2
+(NP (NP*) (:time/PP))	2
+(NP (NP*) (:ARG1-of/SBAR))	2
+(NP (NP*) (:beneficiary/PP))	2
+(NP (NP*) (, ,) (:ARG1-of/SBAR))	2
+(NP (NP*) (:ARG0/PP))	2
+(NP (NP*) (NN sake))	2
+
+
+:ARG0/VP	141
+(NP (NP*) (VP))	16
+(VP (VB be) (VP*))	15
+(VP (VB have) (VP*))	6
+(VP (TO to) (VP*))	5
+(NP (NP*) (:op2/SBAR))	5
+(VP (MD would) (VP*))	4
+(NP (NP*) (:ARG1/PP))	4
+(NP (NP*) (:domain/VP))	3
+(NP (NP*) (:ARG0-of/SBAR))	3
+(NP (NP*) (:ARG1/VP))	3
+(VP (MD will) (VP*))	3
+(NP (NP*) (:ARG1/SBAR))	3
+(NP (NP*) (:manner/VP))	2
+(NP (NP*) (:op2/PP))	2
+(S (S*) (, ,) (:ARG0/NP) (VP) (. .))	2
+(VP (VB have) (:time/ADVP) (VP*))	2
+(NP (NP*) (:ARG1-of/SBAR))	2
+(NP (NP*) (:ARG2/VP))	2
+(NP (NP*) (:mod/PP))	2
+(S (S*) (VP))	2
+
+
+:mod/SBAR	140
+(NP (NP*) (:ARG1/PP))	11
+(VP (VB be) (VP*))	8
+(NP (NP*) (SBAR))	7
+(VP (TO to) (VP*))	5
+(VP (MD would) (VP*))	5
+(VP (VB have) (VP*))	5
+(VP (MD will) (VP*))	4
+(NP (NP*) (:ARG2/PP))	4
+(NP (NP*) (SBAR (:mod/WHNP) (:ARG0-of/S)))	4
+(NP (NP*) (:ARG0/PP))	4
+(NP (NP*) (:location/PP))	3
+(VP (VB do) (:polarity/RB) (VP*))	3
+(VP (:ARG1/MD) (VP*))	3
+(NP (NP*) (:ARG1-of/VP))	3
+(NP (NP*) (:ARG1/SBAR))	3
+(NP (NP*) (:poss/PP))	2
+(NP (NP*) (:ARG0-of/SBAR))	2
+(NP (NP*) (:ARG1/VP))	2
+(NP (NP*) (:op1/PP))	2
+(ADVP (ADVP*) (SBAR))	2
+(NP (NP*) (:mod/PP))	2
+
+
+:ARG2-of/PP	139
+(NP (NP*) (:ARG1/PP))	40
+(NP (NP*) (PP))	12
+(NP (NP*) (:ARG0/PP))	12
+(NP (NP*) (:ARG1-of/VP))	8
+(NP (NP*) (:op2/PP))	4
+(VP (VB be) (VP*))	3
+(NP (NP*) (:ARG0-of/PP))	3
+(NP (NP*) (:time/PP))	3
+(NP (NP*) (:op1/PP))	3
+(VP (TO to) (VP*))	2
+(NP (NP*) (:ARG1-of/SBAR))	2
+(NP (NP*) (:location/PP))	2
+(NP (NP*) (:ARG1/SBAR))	2
+(PP (IN because) (PP*))	2
+
+
+:compared-to/PP	122
+(PP (VBN compared) (PP*))	15
+(ADJP (ADJP*) (PP))	15
+(NP (NP*) (PP))	8
+(NP (NP*) (:ARG1/PP))	7
+(NP (NP*) (:mod/PP))	7
+(NP (NP*) (:ARG1-of/SBAR))	5
+(PP (IN than) (PP*))	4
+(NP (NP*) (:ARG1-of/VP))	3
+(NP (NP*) (:poss/PP))	3
+(PP (VBN Compared) (PP*))	3
+(NP (NP*) (:part-of/PP))	3
+(NP (NP*) (:time/PP))	3
+(NP (NP*) (:ARG0-of/VP))	3
+(NP (NP*) (:ARG2/PP))	3
+(NP (NP*) (PP (:mod/IN) (:op1/NP)))	2
+(NP (NP*) (:duration/PP))	2
+(NP (NP*) (:ARG2/SBAR))	2
+(NP (NP*) (PP (IN of) (NP (NN prostitution))))	2
+
+
+:source/PP	118
+(NP (NP*) (PP))	9
+(NP (NP*) (:location/PP))	8
+(NP (NP*) (:ARG1-of/VP))	6
+(NP (NP*) (:ARG0-of/SBAR))	4
+(NP (NP*) (:topic/PP))	4
+(NP (NP*) (:part-of/PP))	3
+(NP (NP*) (:time/PP))	3
+(NP (NP*) (:consist-of/PP))	3
+(NP (NP*) (:ARG0-of/VP))	3
+(NP (NP*) (:ARG1/PP))	3
+(NP (NP*) (:mod/PP))	3
+(NP (NP*) (PP (:location/IN) (:op1/NP)))	2
+(NP (NP*) (:op1/VP))	2
+(NP (NP*) (:destination/PP))	2
+(NP (NP*) (:ARG1/SBAR))	2
+(NP (NP*) (, ,) (:mod/SBAR))	2
+
+
+:ARG0-of/VP	112
+(NP (NP*) (VP))	25
+(VP (VB be) (VP*))	14
+(VP (VB have) (VP*))	6
+(VP (VB do) (:polarity/RB) (VP*))	6
+(VP (:ARG0-of/VP) (CC and) (VP*))	5
+(VP (TO to) (VP*))	4
+(VP (VP*) (CC and) (VP))	4
+(NP (NP*) (:ARG1/PP))	4
+(VP (MD would) (VP*))	3
+(VP (:ARG1-of/MD) (VP*))	3
+(NP (NP*) ('' '') (VP))	2
+(NP (NP*) (:ARG0-of/SBAR))	2
+(VP (TO XXX) (VP*))	2
+(VP (MD will) (VP*))	2
+
+
+:location/NP	111
+(NP (:ARG0/NP) (, ,) (NP*) (, ,))	14
+(NP (NP*) (:location/PP))	5
+(NP (NP*) (:ARG1-of/SBAR))	4
+(NP (NP*) (POS 's))	3
+(NP (NP*) (NP))	3
+(NP (NP*) (:part-of/PP))	3
+(NP (NP*) (:op1/PP))	3
+(NP (NP*) (:ARG2/PP))	3
+(NP (NP*) (, ,) (NP))	2
+(NP (NP*) (PP))	2
+(NP (NP*) (NNP Dai))	2
+(NP (NP*) (:location-of/SBAR))	2
+(NP (NP*) (:mod/PP))	2
+
+
+:ARG4/PP	101
+(NP (NP*) (:time/PP))	9
+(NP (NP*) (PP))	7
+(NP (NP*) (:location/PP))	5
+(NP (NP*) (:ARG1/PRN))	5
+(NP (NP*) (:mod/PP))	5
+(NP (NP*) (:ARG0-of/SBAR))	3
+(NP (NP*) (:ARG1/PP))	3
+(NP (NP*) (PP (IN in) (NP (NNP Iraq))))	2
+(NP (NP*) (:purpose/PP))	2
+(NP (NP*) (:poss/PP))	2
+(NP (NP*) (:part-of/PP))	2
+(NP (NP*) (:op2/PRN))	2
+(NP (NP*) (:op1/PP))	2
+(NP (NP*) (, ,) (:ARG1/SBAR))	2
+(NP (NP*) (:ARG0/PP))	2
+(NP (NP*) (:ARG2/PP))	2
+
+
+:ARG3/S	99
+(VP (TO to) (VP*))	78
+(NP (NP*) (:ARG2/PP))	3
+(VP (VB be) (VP*))	3
+
+
+:ARG2-of/S	92
+(VP (TO to) (VP*))	47
+(VP (VB be) (VP*))	12
+(NP (NP*) (:ARG1/PP))	4
+(VP (MD would) (VP*))	3
+(VP (:ARG1-of/MD) (VP*))	3
+(VP (VB have) (VP*))	2
+(VP (:ARG1/VB) (VP*))	2
+
+
+:domain/SBAR	86
+(VP (VB be) (VP*))	19
+(VP (TO to) (VP*))	11
+(VP (MD will) (VP*))	4
+(NP (NP*) (SBAR))	4
+(VP (VB be) (:ARG1/ADVP) (VP*))	4
+(VP (MD would) (VP*))	3
+(NP (NP*) (:ARG0/PP))	2
+(NP (NP*) (:ARG1-of/SBAR))	2
+(NP (NP*) (:topic/PP))	2
+(NP (NP*) (:ARG1/PP))	2
+(NP (NP*) (:ARG1/SBAR))	2
+
+
+:op3/SBAR	85
+(VP (VB be) (VP*))	7
+(VP (:op2/VP) (CC and) (VP*))	5
+(NP (NP*) (SBAR))	5
+(VP (MD would) (VP*))	3
+(VP (VB have) (VP*))	3
+(VP (:op1/VP) (, ,) (:op2/VP) (:ARG1/CC) (VP*))	3
+(VP (MD will) (VP*))	2
+(VP (MD could) (VP*))	2
+(VP (:ARG1/MD) (VP*))	2
+(VP (VB be) (:mod/ADVP) (VP*))	2
+(VP (:op1/VP) (:ARG1/CC) (VP*))	2
+(VP (:op1/VP) (, ,) (:op2/VP) (, ,) (VP*))	2
+
+
+:snt2/S	81
+(VP (VB be) (VP*))	21
+(VP (MD 'll) (VP*))	6
+(VP (VB have) (VP*))	4
+(VP (VB do) (:polarity/RB) (VP*))	4
+(VP (MD would) (VP*))	3
+(VP (MD will) (VP*))	3
+(VP (VB be) (:time/ADVP) (VP*))	2
+(VP (TO to) (VP*))	2
+(VP (VB do) (VP*))	2
+(NP (NP*) (:ARG2/PP))	2
+(NP (NP*) (:ARG1/PP))	2
+
+
+:duration/PP	80
+(NP (NP*) (PP))	14
+(NP (NP*) (:op1/PP))	8
+(NP (NP*) (:ARG2/PP))	6
+(NP (NP*) (:ARG1/PP))	6
+(NP (:ARG2/NP) (NP*))	3
+(NP (NP*) (:location/PP))	3
+(NP (NP*) (:ARG3/PP))	3
+(NP (NP*) (:mod/PP))	3
+(NP (NP*) (:compared-to/PP))	2
+(PP (IN for) (PP*))	2
+
+
+:domain/VP	79
+(VP (TO to) (VP*))	14
+(VP (VB be) (VP*))	6
+(VP (MD would) (VP*))	4
+(NP (NP*) (VP))	3
+(VP (VB have) (VP*))	3
+(NP (NP*) (:topic/PP))	3
+(NP (NP*) (:ARG0-of/SBAR))	2
+(NP (NP*) (:ARG1-of/PP))	2
+(NP (NP*) (:ARG0-of/VP))	2
+(NP (NP*) (:ARG0/PP) (:ARG1/S))	2
+(NP (NP*) (:ARG1-of/SBAR))	2
+(NP (NP*) (:ARG1/PP))	2
+
+
+:degree/NP	78
+(NP (NP*) (:ARG1/PP))	8
+(NP (:ARG1/NP) (NP*))	6
+(NP (NP*) (NP))	2
+(NP (NP*) (:ARG1-of/VP))	2
+(NP (NP*) (PP (:ARG2/IN) (:op1/NP)))	2
+(NP (NP*) (:ARG2/VP))	2
+(NP (NP*) (:ARG0/PP))	2
+
+
+:quant/S	77
+(NP (NP*) (:ARG1/PP))	14
+(VP (TO to) (VP*))	4
+(NP (NP*) (:ARG0/PP))	4
+(VP (VB be) (VP*))	3
+(NP (NP*) (:ARG2/PP))	3
+(NP (NP*) (:op2/PP))	2
+(NP (NP*) (:ARG1-of/PP))	2
+(NP (NP*) (:quant/PP))	2
+
+
+:op3/VP	77
+(VP (VB be) (VP*))	10
+(VP (:op1/VP) (, ,) (:op2/VP) (:ARG1/CC) (VP*))	4
+(VP (:op2/VP) (CC and) (VP*))	4
+(VP (:op2/VP) (, ,) (:ARG1/CC) (VP*))	3
+(NP (NP*) (VP))	3
+(VP (VP*) (:ARG0/CC) (VP))	3
+(VP (MD will) (VP*))	3
+(VP (VB have) (VP*))	2
+(VP (:op1/VP) (, ,) (:op2/VP) (:ARG0/CC) (VP*))	2
+(VP (TO to) (VP*))	2
+
+
+:poss/NP	75
+(NP (NP*) (JJ nuclear))	3
+(NP (NP*) (:ARG1/PP))	3
+(NP (NP*) (NP))	2
+(NP (NP*) (:ARG1-of/VP))	2
+(NP (NP*) (PP (:poss/IN) (:ARG1/NP)))	2
+(NP (:ARG2/NP) (NP*))	2
+(NP (:op1/NP) (:ARG1/CC) (NP*))	2
+(NP (NP*) (:ARG2/SBAR))	2
+(NP (NP*) (:location/PP))	2
+(NP (NP*) (PP (:time/IN) (:op1/NP)))	2
+(NP (NP*) (:ARG1-of/SBAR))	2
+
+
+:polarity/RB	71
+(VP (VB do) (RB XXX) (VP*))	35
+(VP (MD will) (RB XXX) (VP*))	12
+(VP (VB be) (RB XXX) (VP*))	6
+(VP (MD would) (RB XXX) (VP*))	6
+(VP (VB have) (RB XXX) (VP*))	4
+
+
+:beneficiary/PP	70
+(NP (NP*) (PP))	17
+(NP (NP*) (:ARG0-of/SBAR))	8
+(NP (NP*) (:ARG1/PP))	5
+(NP (NP*) (:source/PP))	2
+(NP (NP*) (:ARG1-of/SBAR))	2
+(NP (NP*) (:mod/PP))	2
+
+
+:ARG1/PRN	69
+(VP (VB be) (VP*))	8
+(NP (NP*) (PRN))	6
+(NP (:ARG1/NP) (NP*))	5
+(VP (VB have) (VP*))	4
+(VP (VB do) (:polarity/RB) (VP*))	4
+(VP (:snt2/MD) (VP*))	3
+(VP (:concession/MD) (:polarity/RB) (VP*))	3
+(VP (:op2/MD) (VP*))	2
+(VP (TO to) (VP*))	2
+(VP (:ARG2/MD) (:polarity/RB) (VP*))	2
+(NP (NP*) (PP))	2
+
+
+:snt1/NP	68
+(NP (NP*) (:ARG1/PP))	4
+(NP (NP*) (:location/PP))	3
+(NP (NP*) (:ARG2/PP))	3
+(NP (:mod/NP) (NP*) (. .))	2
+(NP (NP*) (:ARG0-of/SBAR))	2
+(NP (NP*) (:snt2/SBAR))	2
+(NP (NP*) (:ARG0/PP))	2
+(NP (NP*) (:ARG1/SBAR))	2
+(NP (NP*) (:ARG0/SBAR))	2
+
+
+:medium/PP	67
+(NP (NP*) (:ARG1-of/VP))	11
+(NP (NP*) (:ARG2/PP))	4
+(NP (NP*) (:time/PP))	4
+(NP (NP*) (:ARG0/PP))	4
+(NP (NP*) (PP))	3
+(NP (NP*) (:location/PP))	3
+(NP (NP*) (:poss/PP))	2
+(NP (NP*) (:ARG1-of/SBAR))	2
+(NP (NP*) (:ARG3/PP))	2
+
+
+:time/S	67
+(VP (VB be) (VP*))	11
+(VP (TO to) (VP*))	11
+(VP (VB have) (VP*))	8
+(VP (:op2/VB) (VP*))	2
+(NP (NP*) (:ARG1-of/VP))	2
+(VP (:ARG0/VB) (VP*))	2
+(NP (NP*) (:ARG1/PP))	2
+
+
+:domain/PP	64
+(NP (NP*) (PP))	12
+(NP (NP*) (:location/PP))	5
+(NP (NP*) (:ARG0-of/SBAR))	4
+(NP (NP*) (:ARG1-of/SBAR))	3
+(NP (NP*) (:ARG1/PP))	3
+(NP (NP*) (:mod/PP))	3
+(NP (NP*) (:op2/PP))	2
+(NP (:ARG1/NP) (, ,) (NP*))	2
+
+
+:manner-of/SBAR	63
+(VP (TO to) (VP*))	29
+(VP (VB be) (VP*))	13
+(NP (NP*) (SBAR))	6
+(VP (MD would) (VP*))	4
+(VP (VB have) (VP*))	3
+(VP (:ARG1-of/MD) (VP*))	3
+
+
+:mod/VP	61
+(VP (VB be) (VP*))	7
+(NP (NP*) (VP))	6
+(VP (VB have) (VP*))	3
+(VP (TO to) (VP*))	2
+(VP (MD would) (VP*))	2
+(NP (NP*) (:op2/PP))	2
+(NP (NP*) (:ARG0-of/SBAR))	2
+(NP (NP*) (:poss/PP))	2
+(NP (NP*) (:ARG1-of/PP))	2
+(NP (NP*) (:destination/PP))	2
+(VP (MD will) (VP*))	2
+
+
+:op2/PRN	61
+(VP (VB be) (VP*))	6
+(NP (:op1/NP) (:ARG1/CC) (NP*))	3
+(NP (NP*) (PRN))	2
+(NP (:op1/NP) (, ,) (NP*))	2
+(VP (TO to) (VP*))	2
+(VP (VB do) (:polarity/RB) (VP*))	2
+(VP (MD will) (VP*))	2
+(NP (:op1/NP) (NP*))	2
+
+
+:ARG2/PRN	59
+(NP (NP*) (PRN))	6
+(NP (NP*) (:ARG1/PP))	5
+(VP (VB be) (VP*))	5
+(NP (NP*) (PP))	4
+(VP (TO to) (VP*))	2
+(NP (NP*) (:ARG1-of/PP))	2
+(ADJP (ADJP*) (PRN))	2
+(NP (:ARG1/NP) (NP*))	2
+
+
+:op7/NP	58
+(NP (:op6/NP) (: ;) (NP*))	14
+(NP (:op1/NP) (: ;) (NP*))	10
+(NP (:op3/NP) (: ;) (:op5/NP) (: ;) (NP*))	9
+(NP (NP*) (: ;) (:op5/NP) (: ;) (NP))	3
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP SK)) (-RRB- -RRB-)))	2
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP PK)) (-RRB- -RRB-)))	2
+
+
+:location-of/SBAR	55
+(VP (VB be) (VP*))	29
+(VP (VB have) (VP*))	4
+(VP (:ARG1-of/MD) (VP*))	3
+(VP (MD will) (VP*))	2
+(NP (NP*) (SBAR))	2
+(VP (VB be) (:ARG1-of/ADVP) (VP*))	2
+(VP (TO to) (VP*))	2
+
+
+:ARG1/FRAG	55
+(VP (TO to) (VP*))	5
+(PP (IN As) (PP*))	4
+(NP (NP*) (:ARG2/PP))	3
+(NP (NP*) (:op1/SBAR))	2
+(FRAG (:ARG0/NP) (: :) (FRAG*) (. .))	2
+(NP (NP*) (:ARG1-of/SBAR))	2
+(NP (NP*) (:ARG2/SBAR))	2
+(VP (VB be) (VP*))	2
+(NP (NP*) (:ARG1/SBAR))	2
+
+
+:ARG1/MD	55
+(VP (MD XXX) (VP*))	50
+
+
+:consist-of/PP	54
+(NP (NP*) (:ARG1-of/VP))	4
+(NP (NP*) (:ARG0-of/SBAR))	4
+(NP (NP*) (:ARG1/PP))	4
+(NP (NP*) (:ARG0-of/VP))	3
+(NP (NP*) (:op1/PP))	3
+(NP (NP*) (:location/PP))	3
+(NP (NP*) (PP))	2
+(NP (NP*) (PP (:location/IN) (:op1/NP)))	2
+(NP (NP*) (:ARG1-of/PP))	2
+(NP (NP*) (:ARG1-of/SBAR))	2
+(NP (NP*) (:ARG2/PP))	2
+
+
+:ARG1/ADJP	54
+(VP (TO to) (VP*))	28
+(NP (NP*) (ADJP))	10
+(VP (VB be) (VP*))	3
+(S (NP (PRP it)) (ADJP) (S*))	2
+
+
+:topic/S	53
+(VP (TO to) (VP*))	26
+(VP (VB have) (VP*))	4
+(VP (VB be) (VP*))	3
+(NP (NP*) (:poss/PP))	3
+(NP (NP*) (:ARG1/PP))	2
+
+
+:quant-of/PP	50
+(NP (NP*) (:ARG1-of/VP))	8
+(NP (NP*) (:ARG0-of/SBAR))	6
+(NP (NP*) (:ARG1-of/SBAR))	6
+(NP (NP*) (:location/PP))	5
+(NP (NP*) (PP))	3
+(NP (NP*) (:time/PP))	2
+(NP (NP*) (:ARG0-of/VP))	2
+(NP (NP*) (:ARG2/SBAR))	2
+(NP (NP*) (:ARG0/PP))	2
+(NP (NP*) (:ARG1/PP))	2
+
+
+:op4/PP	48
+(NP (NP*) (PP))	6
+(NP (:op1/NP) (, ,) (NP*))	3
+(NP (:op3/NP) (, ,) (NP*))	2
+(NP (:op1/NP) (, ,) (:op2/NP) (, ,) (:op3/NP) (, ,) (NP*))	2
+(NP (:op1/NP) (, ,) (:op2/NP) (, ,) (:op3/NP) (:ARG1/CC) (NP*))	2
+
+
+:topic/SBAR	47
+(VP (VB be) (VP*))	11
+(VP (VB have) (VP*))	6
+(VP (MD will) (VP*))	5
+(VP (MD would) (VP*))	4
+(NP (NP*) (:ARG2/PP))	2
+(VP (TO to) (VP*))	2
+(NP (NP*) (:ARG1/PP))	2
+(VP (:ARG1-of/MD) (VP*))	2
+(NP (NP*) (SBAR))	2
+
+
+:ARG1/NN	47
+(NP (NP*) (NN XXX))	27
+(NP (NP*) (:mod/NN) (NN XXX))	3
+(NP (NP*) (NN XXX) (:ARG1/S))	2
+(NP (NP*) (JJ nuclear) (NN XXX))	2
+(NP (NP*) (:mod/JJ) (NN XXX))	2
+
+
+:quant/SBAR	45
+(NP (NP*) (:ARG1/PP))	9
+(NP (NP*) (:ARG2/PP))	3
+(VP (MD would) (VP*))	2
+(VP (MD will) (VP*))	2
+(NP (NP*) (:mod/PP))	2
+
+
+:mod/ADVP	44
+(VP (VB have) (ADVP) (VP*))	7
+(VP (VB be) (ADVP) (VP*))	7
+(NP (NP*) (ADVP))	5
+(VP (MD would) (ADVP) (VP*))	5
+(NP (NP*) (, ,) (ADVP))	4
+(VP (MD will) (ADVP) (VP*))	2
+
+
+:duration/NP	44
+(NP (NP*) (:op1/PP))	9
+(NP (NP*) (:ARG1/PP))	7
+(NP (NP*) (:location/PP))	3
+(NP (NP*) (:ARG2/PP))	2
+
+
+:ARG1-of/PRN	43
+(VP (VB be) (VP*))	8
+(NP (NP*) (PRN))	5
+(VP (MD will) (VP*))	4
+(VP (VB have) (VP*))	3
+(VP (:ARG1-of/MD) (VP*))	2
+
+
+:condition/S	43
+(VP (TO to) (VP*))	18
+(VP (VB be) (VP*))	9
+(VP (MD would) (VP*))	2
+(VP (:beneficiary/VB) (VP*))	2
+(VP (TO To) (VP*))	2
+
+
+:ARG0/FRAG	43
+(NP (NP*) (:ARG1/SBAR))	9
+(VP (VB be) (VP*))	5
+(VP (VB do) (:polarity/RB) (VP*))	3
+(NP (NP*) (:ARG2/SBAR))	3
+(NP (NP*) (:ARG1-of/VP))	2
+
+
+:op4/S	43
+(VP (VB be) (VP*))	8
+(VP (TO to) (VP*))	6
+(VP (VB have) (VP*))	2
+(VP (:op3/VP) (:ARG1/CC) (VP*))	2
+
+
+:ARG1/SQ	42
+(VP (TO to) (VP*))	9
+(VP (VB be) (VP*))	4
+(NP (NP*) (:ARG2/PP))	3
+(VP (VB have) (VP*))	2
+(NP (NP*) (:ARG1/PP))	2
+
+
+:ARG4/S	42
+(VP (TO to) (VP*))	30
+(VP (:ARG1/VB) (VP*))	2
+
+
+:manner/NP	42
+(NP (NP*) (:ARG1/PP))	4
+(NP (:ARG1/NP) (NP*))	3
+(NP (NP*) (:ARG1-of/SBAR))	3
+(NP (NP*) (:location/PP))	3
+(NP (NP*) (:ARG2/PP))	3
+(NP (NP*) (:manner-of/SBAR))	2
+
+
+:location/SBAR	41
+(VP (VB be) (VP*))	8
+(NP (NP*) (SBAR))	4
+(VP (VB have) (VP*))	3
+(NP (NP*) (:poss/PP))	3
+(NP (NP*) (:op2/PP))	2
+(NP (NP*) (:location/PP))	2
+
+
+:manner/S	41
+(VP (TO to) (VP*))	14
+(VP (VB be) (VP*))	4
+(VP (MD would) (VP*))	2
+(NP (NP*) (:location/PP))	2
+(NP (NP*) (:ARG1/PP))	2
+
+
+:prep-with/PP	41
+(NP (NP*) (:ARG1-of/SBAR))	4
+(NP (NP*) (:ARG1/PP))	4
+(NP (NP*) (:mod/PP))	4
+(NP (NP*) (:ARG1-of/VP))	3
+(NP (NP*) (PP (:location/IN) (:op1/NP)))	2
+(NP (NP*) (:ARG2/PP))	2
+(NP (NP*) (:quant/PP))	2
+(NP (NP*) (:prep-in/PP))	2
+
+
+:degree/PP	40
+(NP (NP*) (PP))	6
+(NP (NP*) (:ARG0/PP))	5
+(NP (NP*) (:ARG1/PP))	2
+(NP (NP*) (:ARG0/SBAR))	2
+
+
+:manner-of/S	40
+(VP (TO to) (VP*))	24
+(VP (VB be) (VP*))	8
+(VP (:ARG1-of/MD) (VP*))	2
+
+
+:op2/FRAG	38
+(NP (:op1/NP) (: ;) (NP*))	7
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP PK)) (-RRB- -RRB-)))	5
+(VP (TO to) (VP*))	2
+(VP (:op1/VP) (:ARG1/CC) (VP*))	2
+
+
+:part-of/NP	38
+(NP (NP*) (:ARG1/PP))	4
+(NP (NP*) (:ARG1-of/VP))	2
+(NP (NP*) (PP))	2
+(NP (NP*) (:op2/PP))	2
+
+
+:topic/NP	37
+(NP (NP*) (:ARG1/PP))	4
+(NP (NP*) (NP))	2
+
+
+:concession/SBAR	37
+(VP (VB be) (VP*))	8
+(VP (MD will) (VP*))	3
+(VP (MD would) (VP*))	2
+(VP (VB have) (VP*))	2
+(VP (VB do) (:polarity/RB) (VP*))	2
+(NP (NP*) (SBAR))	2
+
+
+:ARG1-of/MD	37
+(VP (MD XXX) (VP*))	37
+
+
+:subevent-of/PP	36
+(NP (NP*) (PP))	14
+(NP (NP*) (:ARG1-of/VP))	4
+(NP (NP*) (:ARG2/PP))	2
+(NP (NP*) (:location/PP))	2
+(NP (NP*) (:mod/PP))	2
+
+
+:accompanier/PP	36
+(NP (NP*) (:location/PP))	3
+(NP (NP*) (:ARG1/PP))	3
+(NP (NP*) (:mod/PP))	3
+(NP (NP*) (:time/PP))	2
+(NP (NP*) (:topic/PP))	2
+
+
+:snt2/SBAR	35
+(NP (NP*) (SBAR))	7
+(VP (VB be) (VP*))	6
+(VP (VB have) (VP*))	5
+(VP (VB do) (:polarity/RB) (VP*))	3
+(NP (NP*) (:ARG1/SBAR))	2
+(VP (MD would) (VP*))	2
+
+
+:ARG1/CC	35
+
+
+:degree/S	35
+(NP (NP*) (:ARG1/PP))	8
+(VP (TO to) (VP*))	3
+(NP (NP*) (PP (IN for) (NP (PRP it))))	2
+(NP (NP*) (PP (IN at) (NP (NN risk))))	2
+(VP (VB be) (VP*))	2
+
+
+:time/VP	34
+(VP (VB be) (VP*))	10
+(VP (VB have) (VP*))	6
+(VP (MD will) (VP*))	4
+(NP (NP*) (VP))	3
+
+
+:ARG2-of/VP	33
+(VP (VB be) (VP*))	6
+(VP (TO to) (VP*))	6
+(VP (VP*) (CC and) (VP))	2
+(NP (NP*) (VP))	2
+
+
+:concession/PP	33
+(NP (NP*) (PP))	6
+(NP (NP*) (:ARG1/PP))	6
+
+
+:ARG0/ADJP	33
+(NP (NP*) (ADJP))	8
+(NP (NP*) (:ARG1/PP))	4
+(NP (NP*) (:ARG0/VP))	2
+(NP (NP*) (:ARG0/PP))	2
+
+
+:ARG3/SBAR	32
+(NP (NP*) (:ARG2/PP))	6
+(VP (VB be) (VP*))	3
+(VP (TO to) (VP*))	2
+(NP (NP*) (:ARG1/PP))	2
+(VP (:ARG0-of/VB) (VP*))	2
+(NP (NP*) (:location/PP))	2
+
+
+:ARG0/PRN	32
+(NP (NP*) (PRN))	7
+(VP (VB be) (VP*))	4
+(VP (VB have) (VP*))	2
+
+
+:ARG0-of/VB	32
+(VP (VB XXX) (VP*))	11
+(NP (NP*) (:ARG1/PP))	6
+(NP (NP*) (PP))	2
+(NP (NP*) (:ARG0-of/PP))	2
+
+
+:op5/PP	31
+(NP (NP*) (:ARG1/PP))	4
+(NP (NP*) (PP))	2
+
+
+:manner/SBAR	31
+(NP (NP*) (SBAR))	8
+(VP (VB be) (VP*))	4
+(VP (VB have) (VP*))	4
+(VP (TO to) (VP*))	3
+(NP (NP*) (:ARG1-of/VP))	2
+(NP (NP*) (:ARG0/PP))	2
+
+
+:ARG1/VB	31
+(VP (VB XXX) (VP*))	15
+(VP (VB XXX) (ADVP (RB never)) (VP*))	2
+(VP (TO XXX) (VP*))	2
+(NP (NP*) (:ARG1/PP))	2
+
+
+:snt2/NP	30
+(NP (NP*) (, ,) (NP))	2
+(NP (NP*) (:topic/PP))	2
+
+
+:direction/PP	30
+(NP (NP*) (:op1/PP))	11
+(NP (NP*) (PP))	3
+(NP (NP*) (:ARG2/PP))	2
+(NP (NP*) (:ARG0-of/SBAR))	2
+
+
+:prep-in/PP	29
+(NP (NP*) (:mod/PP))	5
+(NP (NP*) (:poss/PP))	4
+(NP (NP*) (PP))	3
+(NP (NP*) (:op1/PP))	2
+(NP (NP*) (:ARG1/PP))	2
+
+
+:compared-to/SBAR	29
+(VP (TO to) (VP*))	5
+(ADVP (ADVP*) (SBAR))	5
+(VP (VB be) (VP*))	2
+(NP (NP*) (:ARG1/PP))	2
+(VP (VB have) (VP*))	2
+(VP (MD would) (VP*))	2
+
+
+:mod/PRN	29
+(NP (NP*) (PRN))	2
+(NP (:mod/NP) (CC and) (NP*))	2
+(WHNP (WHNP*) (PRN))	2
+(NP (NP*) (:ARG1-of/PP))	2
+
+
+:ARG2/FRAG	28
+(VP (TO to) (VP*))	3
+(VP (VB be) (VP*))	3
+(NP (NP*) (:ARG1/SBAR))	2
+
+
+:prep-as/PP	27
+(NP (NP*) (:topic/PP))	3
+(NP (NP*) (PP (IN of) (NP (NNP GDP))))	2
+(NP (NP*) (:poss/PP))	2
+(NP (NP*) (:ARG1/PP))	2
+
+
+:example/PP	27
+(NP (NP*) (PP))	4
+(NP (NP*) (:location/PP))	3
+(NP (NP*) (:ARG1-of/VP))	2
+(NP (NP*) (:op3/PP))	2
+
+
+:condition/PP	27
+(NP (NP*) (PP))	16
+(NP (NP*) (:mod/PP))	2
+
+
+:ord/NP	27
+(NP (NP*) (:ARG2/PP))	4
+(NP (NP*) (:ARG1/PP))	4
+(NP (NP*) (:ARG1-of/SBAR))	3
+
+
+:destination/PP	26
+(NP (NP*) (:purpose/PP))	3
+(NP (NP*) (:location/PP))	2
+(NP (NP*) (:time/PP))	2
+
+
+:op8/NP	25
+(NP (:op7/NP) (: ;) (NP*))	4
+(NP (:op4/NP) (: ;) (:op6/NP) (: ;) (NP*))	3
+(NP (:op2/NP) (: ;) (NP*))	2
+(NP (:op1/NP) (: ;) (NP*))	2
+
+
+:polarity/NP	25
+(NP (NP*) (:ARG1/PP))	3
+
+
+:time-of/SBAR	24
+(VP (VB be) (VP*))	6
+(NP (NP*) (SBAR))	6
+(VP (VB have) (VP*))	4
+(VP (TO to) (VP*))	2
+
+
+:polarity/S	24
+(NP (NP*) (:ARG1/VP))	3
+(VP (TO to) (VP*))	2
+(NP (NP*) (:ARG1/SBAR))	2
+(NP (NP*) (:ARG1/PP))	2
+
+
+:manner-of/PP	24
+(VP (VB be) (VP*))	7
+(VP (TO to) (VP*))	7
+(NP (NP*) (PP))	2
+(PP (IN because) (PP*))	2
+(VP (MD will) (VP*))	2
+
+
+:compared-to/S	24
+(VP (TO to) (VP*))	4
+(VP (VB have) (VP*))	2
+(VP (TO XXX) (VP*))	2
+(VP (MD would) (VP*))	2
+
+
+:location/VP	24
+(VP (VB be) (VP*))	6
+(VP (VB have) (VP*))	3
+(NP (NP*) (:location/PP))	2
+
+
+:time-of/S	24
+(VP (TO to) (VP*))	15
+(VP (VB be) (VP*))	8
+
+
+:concession/S	24
+(VP (VB have) (VP*))	4
+(VP (VB be) (VP*))	3
+(VP (TO to) (VP*))	3
+(VP (VB be) (:polarity/RB) (VP*))	3
+
+
+:source/NP	23
+(NP (NP*) (:location/PP))	2
+(NP (NP*) (PP (:source/IN) (:ARG0/NP)))	2
+
+
+:ARG3-of/SBAR	23
+(VP (VB be) (VP*))	10
+(VP (:ARG1-of/MD) (VP*))	4
+(VP (VB have) (VP*))	3
+(VP (TO to) (VP*))	2
+
+
+:ARG4/NP	23
+(NP (NP*) (:ARG2/PP))	3
+(NP (NP*) (:time/PP))	2
+(NP (NP*) (:manner/VP))	2
+
+
+:op2/ADJP	23
+(VP (TO to) (VP*))	5
+(NP (NP*) (ADJP))	2
+(VP (:op1/VP) (:ARG2/CC) (VP*))	2
+(NP (:op1/NP) (:ARG0/CC) (NP*))	2
+
+
+:ord/PP	22
+(NP (NP*) (PP))	4
+(NP (NP*) (:source/VP))	4
+(NP (NP*) (PP (:ord/IN) (:op1/NP)))	3
+(NP (NP*) (:ARG1/PP))	2
+
+
+:location/S	22
+(VP (VB be) (VP*))	6
+(VP (TO to) (VP*))	3
+(NP (NP*) (:part-of/PP))	2
+
+
+:location-of/S	22
+(VP (TO to) (VP*))	12
+(VP (:ARG1-of/MD) (VP*))	2
+
+
+:prep-under/PP	22
+(NP (NP*) (:ARG1/PP))	5
+(NP (NP*) (:ARG0/PP))	3
+(NP (NP*) (PP))	2
+(NP (NP*) (:ARG1-of/VP))	2
+(NP (NP*) (:mod/PP))	2
+
+
+:instrument-of/S	22
+(VP (TO to) (VP*))	22
+
+
+:instrument/PP	21
+(NP (NP*) (:ARG1-of/SBAR))	4
+(NP (NP*) (PP))	2
+(NP (NP*) (:ARG1/PP))	2
+(NP (NP*) (:location/PP))	2
+
+
+:mod/ADJP	21
+(NP (NP*) (ADJP))	3
+
+
+:prep-to/PP	20
+(ADVP (ADVP*) (PP))	2
+
+
+:example/NP	20
+(NP (NP*) (NP))	3
+
+
+:ARG1-of/ADJP	20
+(NP (NP*) (ADJP))	4
+(VP (TO to) (VP*))	3
+(ADJP (ADJP*) (CC and) (ADJP))	2
+(VP (VB be) (VP*))	2
+(NP (NP*) (, ,) (ADJP))	2
+
+
+:degree/SBAR	20
+(NP (NP*) (SBAR))	6
+(VP (MD would) (VP*))	3
+(VP (VB be) (VP*))	2
+(VP (VB have) (VP*))	2
+
+
+:op2/MD	20
+(VP (MD XXX) (VP*))	19
+
+
+:concession-of/SBAR	19
+(VP (VB be) (VP*))	4
+(VP (TO to) (VP*))	2
+(VP (:ARG0-of/VP) (CC but) (VP*))	2
+
+
+:ARG1/NNS	19
+(NP (NP*) (NNS XXX))	8
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNS ddos)) (-RRB- -RRB-)) (NNS XXX))	2
+
+
+:purpose/VP	19
+(VP (TO to) (VP*))	13
+(VP (VB be) (VP*))	2
+
+
+:time/ADVP	18
+(NP (NP*) (ADVP))	4
+(VP (VB be) (ADVP) (VP*))	3
+(VP (MD will) (ADVP) (VP*))	3
+(VP (VB have) (ADVP) (VP*))	2
+
+
+:ARG2/ADJP	18
+(VP (TO to) (VP*))	7
+(NP (NP*) (ADJP))	5
+
+
+:op1/PRN	18
+(VP (VB be) (VP*))	6
+
+
+:concession-of/S	18
+(VP (VB be) (VP*))	4
+(VP (VB do) (:polarity/RB) (VP*))	3
+
+
+:quant/VP	18
+(NP (NP*) (:ARG1/PP))	3
+
+
+:compared-to/NP	18
+(NP (NP*) (:ARG1/PP))	2
+(NP (NP*) (:ARG0/PP))	2
+
+
+:ARG0-of/PRN	18
+(VP (MD would) (VP*))	3
+(NP (NP*) (PRN))	2
+(VP (MD will) (:polarity/RB) (VP*))	2
+(VP (VB do) (:polarity/RB) (VP*))	2
+
+
+:ARG1/IN	18
+(NP (NP*) (PP))	7
+
+
+:time/NP-TMP	18
+(NP (NP*) (NP-TMP))	7
+(NP (NP*) (PP))	6
+
+
+:op4/VP	18
+(VP (VB be) (VP*))	2
+(NP (NP*) (VP))	2
+
+
+:ARG4/SBAR	17
+(VP (TO to) (VP*))	5
+(NP (NP*) (SBAR))	5
+(VP (VB be) (VP*))	2
+(ADVP (ADVP*) (SBAR))	2
+
+
+:ARG1-of/ADVP	17
+(NP (NP*) (ADVP))	5
+(VP (VB have) (ADVP) (VP*))	2
+(VP (VB be) (ADVP) (VP*))	2
+
+
+:op1/ADJP	17
+(NP (NP*) (ADJP))	6
+(VP (TO to) (VP*))	3
+
+
+:path/PP	17
+(NP (NP*) (:ARG1/PP))	3
+(NP (NP*) (:location/PP))	3
+
+
+:consist-of/NP	16
+(NP (NP*) (:ARG1/PP))	2
+
+
+:purpose/NP	16
+(VP (TO to) (VP*))	5
+
+
+:ARG2/MD	16
+(VP (MD XXX) (VP*))	15
+
+
+:condition/VP	16
+(VP (VB be) (VP*))	6
+
+
+:prep-against/PP	16
+(NP (NP*) (PP))	4
+(NP (NP*) (:ARG1/PP))	3
+(NP (NP*) (:ARG0-of/PP))	2
+
+
+:ARG0/VB	16
+(VP (VB XXX) (VP*))	6
+(NP (NP*) (:ARG1/PP))	3
+
+
+:ARG1-of/VB	15
+(PP (VB XXX) (PP*))	11
+(VP (VB XXX) (VP*))	4
+
+
+:ARG1/ADVP	15
+
+
+:direction/NP	15
+(NP (NP*) (:op1/PP))	7
+(NP (NP*) (:ARG1/PP))	2
+
+
+:consist-of/S	15
+(VP (TO to) (VP*))	5
+(VP (VB be) (VP*))	2
+
+
+:op4/SBAR	15
+(NP (NP*) (SBAR))	3
+(VP (TO to) (VP*))	2
+
+
+:age/NP	14
+(NP (NP*) (ADJP (JJ old)))	4
+(NP (:ARG0/NP) (, ,) (NP*) (, ,))	3
+(NP (:ARG1/NP) (, ,) (NP*) (, ,))	2
+
+
+:ARG1/WHNP	14
+(WHNP (WHNP*) (:time/PP))	2
+(WHNP (WHNP*) (:location/PP))	2
+
+
+:snt2/PRN	14
+(VP (VB be) (VP*))	4
+(VP (VB do) (:polarity/RB) (VP*))	3
+
+
+:mod/WHNP	14
+(WHNP (WHNP*) (:ARG0/PP))	2
+(WHNP (WHNP*) (:ARG1/PP))	2
+
+
+:ARG2/CC	14
+
+
+:ARG3-of/S	14
+(VP (TO to) (VP*))	9
+(VP (VB be) (VP*))	3
+
+
+:ARG3-of/NP	14
+(NP (NP*) (:ARG2/PP))	3
+(NP (NP*) (:ARG1/PP))	2
+
+
+:op2/SQ	14
+(VP (:op1/VP) (:ARG1/CC) (VP*))	3
+(VP (TO to) (VP*))	3
+
+
+:location-of/PP	14
+(NP (NP*) (:ARG3/PP))	3
+(NP (NP*) (:time/PP))	2
+(NP (NP*) (:ARG1/PP))	2
+
+
+:ARG3/VP	13
+(VP (VB be) (VP*))	2
+(NP (NP*) (:ARG1-of/SBAR))	2
+(NP (NP*) (:ARG1/PP))	2
+(VP (MD will) (VP*))	2
+
+
+:polarity/PP	13
+(NP (NP*) (:ARG1/PP))	2
+
+
+:li/NP	13
+(NP (NP*) (:ARG2/SBAR))	3
+(NP (NP*) (:ARG0/SBAR))	2
+
+
+:beneficiary/NP	13
+
+
+:prep-on-behalf-of/PP	13
+(NP (NP*) (PP))	10
+
+
+:op6/PP	13
+(NP (NP*) (PP))	2
+(NP (NP*) (:ARG1-of/VP))	2
+
+
+:op3/FRAG	12
+(NP (:op2/NP) (: ;) (NP*))	3
+(NP (:op1/NP) (: ;) (NP*))	3
+
+
+:op3/PRN	12
+(VP (VB be) (VP*))	2
+
+
+:ARG3-of/PP	12
+(NP (NP*) (:ARG1/PP))	3
+(NP (NP*) (:ARG2/PP))	2
+
+
+:prep-for/PP	12
+(NP (NP*) (PP))	3
+(NP (NP*) (:ARG1/PP))	2
+(NP (NP*) (:mod/PP))	2
+
+
+:op2/ADVP	12
+(NP (NP*) (:ARG1/PP))	3
+
+
+:domain/PRN	12
+
+
+:ARG1/SINV	12
+(VP (VB do) (:polarity/RB) (VP*))	2
+
+
+:snt1/SBAR	12
+(NP (NP*) (SBAR))	5
+(VP (VB be) (VP*))	4
+
+
+:ARG2/VB	12
+(VP (VB XXX) (VP*))	3
+(NP (NP*) (:ARG1/PP))	3
+
+
+:polarity/VP	12
+
+
+:age/PP	12
+(NP (NP*) (PP))	3
+(NP (NP*) (:purpose/ADJP))	2
+(NP (NP*) (:ARG1/ADJP))	2
+
+
+:concession/PRN	12
+(NP (NP*) (PRN))	2
+(VP (VB be) (VP*))	2
+(VP (VB do) (VP*))	2
+
+
+:example/PRN	11
+(NP (NP*) (PRN))	2
+(NP (NP*) (:ARG2/PP))	2
+
+
+:op2/SINV	11
+(NP (:op1/NP) (:ARG1/CC) (NP*))	3
+
+
+:prep-on/PP	11
+(NP (NP*) (:op2/PP))	2
+
+
+:op1/ADVP	11
+(NP (NP*) (:ARG1/PP))	3
+
+
+:location-of/NP	11
+(NP (NP*) (:location/PP))	2
+
+
+:op9/NP	11
+
+
+:op1/NP-TMP	11
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP KR)) (-RRB- -RRB-)))	4
+
+
+:medium/NP	11
+(NP (NP*) (:ARG0-of/SBAR))	2
+(NP (NP*) (NP (NN </a>)))	2
+
+
+:condition-of/S	11
+(VP (TO to) (VP*))	7
+
+
+:time-of/PP	11
+(NP (NP*) (PP))	2
+(NP (NP*) (:ARG1/PP))	2
+
+
+:op6/S	11
+(VP (TO to) (VP*))	2
+
+
+:frequency/PP	11
+
+
+:topic/VP	11
+(VP (VB be) (VP*))	5
+
+
+:degree/ADVP	11
+(ADVP (ADVP*) (RB importantly))	2
+(VP (VB be) (ADVP) (VP*))	2
+
+
+:frequency/NP	10
+(NP (NP*) (:ARG0/PP))	2
+(NP (:ARG1/NP) (NP*))	2
+
+
+:concession-of/VP	10
+(VP (VB do) (:polarity/RB) (VP*))	4
+
+
+:ARG2/ADVP	10
+
+
+:op5/S	10
+(VP (VB be) (VP*))	3
+
+
+:condition/NP	10
+(NP (NP*) (:ARG1/PP))	2
+(NP (NP*) (PP (:condition/IN) (:ARG0/NP)))	2
+
+
+:degree/VP	10
+(NP (NP*) (:ARG1/PP))	2
+
+
+:instrument-of/NP	10
+(NP (NP*) (:ARG1/PP))	2
+
+
+:op2/VB	10
+(VP (VB XXX) (VP*))	4
+
+
+:ARG2/SQ	10
+(VP (TO to) (VP*))	5
+
+
+:manner/VP	10
+(VP (VB be) (VP*))	2
+(NP (NP*) (VP))	2
+
+
+:time/PRN	9
+(NP (NP*) (NP (NNP A.D.)))	3
+(VP (VB be) (VP*))	3
+
+
+:snt1/VP	9
+(S (S*) (, ,) (:ARG0/NP) (VP) (. .))	3
+(VP (VB be) (VP*))	2
+(VP (MD would) (VP*))	2
+
+
+:poss/S	9
+
+
+:op4/PRN	9
+
+
+:extent/NP	9
+
+
+:ARG0/CC	9
+
+
+:concession/NP	9
+(NP (NP*) (NP))	2
+
+
+:polarity/SBAR	9
+(NP (NP*) (:ARG1/PP))	4
+(NP (NP*) (SBAR))	3
+
+
+:ARG2/NN	9
+(NP (NP*) (NN XXX))	2
+
+
+:ARG2/IN	9
+(NP (NP*) (PP))	5
+(NP (NP*) (NN XXX))	2
+
+
+:op1/FRAG	9
+(VP (VB be) (VP*))	2
+
+
+:duration/S	9
+(VP (VB have) (VP*))	2
+(VP (TO to) (VP*))	2
+(NP (:ARG1/NP) (NP*))	2
+
+
+:quant/WHNP	8
+
+
+:duration/SBAR	8
+(VP (VB be) (VP*))	2
+
+
+:beneficiary/SBAR	8
+(VP (VB be) (VP*))	2
+(VP (VB have) (VP*))	2
+
+
+:op5/VP	8
+(VP (VB be) (VP*))	2
+
+
+:source/SBAR	8
+(PP (IN in) (PP*))	2
+
+
+:ARG1/NNP	8
+(NP (NP*) (NNP XXX))	3
+
+
+:ARG3-of/VP	8
+(VP (VB be) (VP*))	3
+
+
+:quant/PRN	8
+(NP (NP*) (:ARG1/PP))	2
+
+
+:quant/ADVP	8
+(NP (NP*) (:op1/PP))	4
+
+
+:ord/S	8
+(VP (MD will) (VP*))	2
+
+
+:ARG2/NNS	8
+(NP (NP*) (NNS XXX))	6
+
+
+:prep-from/PP	7
+(NP (NP*) (:prep-to/PP))	2
+
+
+:prep-to/S	7
+(VP (TO to) (VP*))	5
+
+
+:snt2/PP	7
+(NP (NP*) (:ARG1/PP))	2
+
+
+:ARG0-of/ADJP	7
+(NP (NP*) (ADJP))	3
+
+
+:ARG4-of/SBAR	7
+(VP (VB be) (VP*))	3
+(VP (TO to) (VP*))	2
+
+
+:mod/RB	7
+
+
+:duration/VP	7
+(VP (VB have) (VP*))	2
+
+
+:mod/FRAG	7
+
+
+:op11/NP	7
+
+
+:snt1/PP	7
+(NP (NP*) (PP))	2
+
+
+:snt3/S	7
+(VP (VB be) (VP*))	2
+
+
+:ARG0/ADVP	7
+
+
+:snt2/VP	7
+
+
+:concession/VP	6
+(NP (NP*) (VP))	2
+
+
+:extent/SBAR	6
+(NP (NP*) (SBAR))	4
+
+
+:polarity/:	6
+
+
+:op2/SBARQ	6
+(VP (VB be) (VP*))	2
+(VP (:op1/VP) (:time-of/CC) (VP*))	2
+
+
+:prep-on-behalf-of/NP	6
+(NP (NP*) (NNP XXX))	3
+(NP (NP*) (PRN (-LRB- -LRB-) (NP (NNP PKK)) (-RRB- -RRB-)))	3
+
+
+:prep-without/PP	6
+
+
+:op4/FRAG	6
+(NP (:op2/NP) (: ;) (NP*))	2
+(NP (:op3/NP) (: ;) (NP*))	2
+
+
+:snt1/PRN	6
+
+
+:poss-of/PP	6
+(NP (NP*) (PP))	2
+
+
+:op12/NP	6
+
+
+:op1/VB	6
+(VP (VB XXX) (VP*))	4
+(NP (NP*) (:ARG1/PP))	2
+
+
+:instrument-of/PP	6
+(NP (NP*) (PP))	3
+
+
+:condition/PRN	6
+
+
+:op3/SQ	5
+
+
+:domain/FRAG	5
+
+
+:quant-of/NP	5
+(NP (NP*) (:ARG1-of/VP))	2
+
+
+:ARG0/SINV	5
+
+
+:condition-of/SBAR	5
+(VP (TO to) (VP*))	3
+
+
+:example-of/PP	5
+(NP (NP*) (PP))	4
+
+
+:time-of/VP	5
+(VP (TO to) (VP*))	4
+
+
+:ARG0/,	5
+(VP (TO XXX) (VP*))	3
+
+
+:ARG2/X	5
+
+
+:op10/NP	5
+
+
+:purpose/ADJP	5
+(VP (TO to) (VP*))	4
+
+
+:li/VP	5
+
+
+:ARG0/IN	5
+
+
+:example/SBAR	5
+
+
+:poss/NNP	5
+(NP (NP*) (NNP XXX))	2
+(NP (NP*) (:part-of/PP))	2
+
+
+:ARG1-of/NNS	5
+
+
+:ARG0/SQ	5
+
+
+:ARG0/MD	5
+(VP (MD XXX) (VP*))	5
+
+
+:poss/SBAR	5
+
+
+:op8/PP	5
+
+
+:extent/PP	5
+(NP (NP*) (PP))	3
+
+
+:instrument/NP	5
+
+
+:part/PP	5
+
+
+:op2/NN	5
+
+
+:ARG2-of/PRN	5
+
+
+:ARG0/NNS	5
+(NP (NP*) (NNS XXX))	3
+
+
+:op3/NN	5
+
+
+:ARG1/TO	5
+(VP (TO XXX) (VP*))	3
+
+
+:purpose-of/SBAR	5
+
+
+:consist-of/VP	5
+(NP (NP*) (VP))	2
+
+
+:op7/PP	5
+
+
+:op1/MD	5
+(VP (MD XXX) (VP*))	5
+
+
+:prep-into/PP	5
+(NP (NP*) (:time/PP))	2
+
+
+:ARG1-of/FRAG	5
+
+
+:ARG2/WHNP	5
+
+
+:part-of/IN	5
+(NP (NP*) (PP))	2
+
+
+:domain/SQ	5
+
+
+:degree-of/PP	5
+(NP (NP*) (:ARG1-of/VP))	3
+(NP (NP*) (:ARG1/PP))	2
+
+
+:manner-of/VP	5
+(VP (TO to) (VP*))	3
+
+
+:op2/IN	5
+
+
+:accompanier/S	4
+(VP (TO to) (VP*))	2
+
+
+:ARG4-of/S	4
+(VP (TO to) (VP*))	4
+
+
+:prep-in/NP	4
+
+
+:topic-of/PP	4
+
+
+:polarity/ADVP	4
+(VP (MD will) (ADVP) (VP*))	2
+
+
+:time/IN	4
+(PP (IN XXX) (PP*))	2
+
+
+:degree/ADJP	4
+
+
+:ARG0-of/NN	4
+(NP (NP*) (:ARG1-of/JJ) (NN XXX))	2
+
+
+:topic/FRAG	4
+(PP (IN As) (PP*))	2
+
+
+:prep-under/NP	4
+
+
+:ARG2-of/VB	4
+(VP (VB XXX) (VP*))	2
+
+
+:quant/ADJP	4
+
+
+:prep-at/PP	4
+
+
+:source/S	4
+
+
+:topic/CC	4
+
+
+:ARG0/WHNP	4
+
+
+:snt2/FRAG	4
+
+
+:op10/VP	4
+(NP (:op1/NP) (, ,) (:op2/NP) (, ,) (:op3/NP) (, ,) (:op4/NP) (, ,) (NP*))	2
+
+
+:op2/NNP	4
+
+
+:mod/X	4
+
+
+:ARG1/NP-TMP	4
+
+
+:prep-by/PP	4
+
+
+:accompanier/NP	4
+
+
+:ARG4/VP	4
+
+
+:mod/SQ	4
+
+
+:ARG0/NN	4
+(NP (NP*) (NN XXX))	3
+
+
+:ARG1/NX	4
+
+
+:value/NP	4
+(NP (NP*) (NP))	2
+
+
+:ARG2/RB	4
+
+
+:time/SQ	4
+
+
+:prep-with/NP	4
+
+
+:condition/MD	4
+(VP (MD XXX) (VP*))	4
+
+
+:destination/S	4
+(VP (TO to) (VP*))	4
+
+
+:instrument/SBAR	4
+
+
+:prep-against/S	4
+
+
+:mod/CC	3
+
+
+:op1/NX	3
+
+
+:compared-to/VP	3
+
+
+:ARG0/X	3
+
+
+:part-of/S	3
+
+
+:ARG2/SBARQ	3
+
+
+:snt1/MD	3
+(VP (MD XXX) (VP*))	2
+
+
+:source-of/PP	3
+
+
+:manner-of/NP	3
+(NP (NP*) (:ARG1/PP))	2
+
+
+:location/ADJP	3
+
+
+:degree-of/SBAR	3
+
+
+:op2/NP-TMP	3
+
+
+:range/PP	3
+
+
+:op2/CC	3
+
+
+:prep-amid/PP	3
+(NP (NP*) (:ARG1-of/SBAR))	2
+
+
+:concession/MD	3
+(VP (MD XXX) (VP*))	3
+
+
+:purpose/MD	3
+(VP (MD XXX) (VP*))	3
+
+
+:op1/CC	3
+
+
+:location/IN	3
+
+
+:domain/ADJP	3
+(VP (TO to) (VP*))	2
+
+
+:mod/SINV	3
+
+
+:op15/NP-TMP	3
+
+
+:location/NN	3
+(NP (NP*) (NN XXX))	2
+
+
+:ARG4-of/PP	3
+(NP (NP*) (:ARG2/PP))	3
+
+
+:op3/CC	3
+
+
+:prep-against/NP	3
+(NP (NP*) (:op2/PP))	2
+
+
+:ARG1-of/SBARQ	3
+
+
+:prep-among/PP	3
+(NP (NP*) (PP))	2
+
+
+:quant-of/SBAR	3
+
+
+:prep-in/SBAR	3
+
+
+:manner/ADVP	3
+
+
+:location/ADVP	3
+(NP (NP*) (ADVP))	2
+
+
+:time/FRAG	3
+
+
+:duration-of/S	3
+(VP (TO to) (VP*))	3
+
+
+:ARG1/PRP$	3
+(NP (PRP$ XXX) (NP*))	3
+
+
+:concession-of/NP	3
+
+
+:snt2/SINV	3
+
+
+:medium-of/SBAR	3
+
+
+:condition/ADJP	3
+
+
+:ARG2/NP-TMP	3
+
+
+:domain/MD	3
+(VP (MD XXX) (VP*))	3
+
+
+:quant/FRAG	3
+
+
+:op17/NP	3
+
+
+:ARG3/NN	3
+(NP (NP*) (NN XXX))	2
+
+
+:prep-under/VP	3
+
+
+:ord/VP	3
+
+
+:frequency/S	3
+
+
+:ARG1-of/IN	2
+
+
+:op9/S	2
+
+
+:beneficiary-of/PP	2
+
+
+:degree/PRN	2
+
+
+:ARG0-of/SQ	2
+
+
+:prep-with/ADJP	2
+
+
+:manner-of/MD	2
+(VP (MD XXX) (VP*))	2
+
+
+:duration/NP-TMP	2
+(NP (NP*) (NP-TMP))	2
+
+
+:purpose-of/PP	2
+(NP (NP*) (PP))	2
+
+
+:time/RB	2
+(PP (RB XXX) (PP*))	2
+
+
+:li/FRAG	2
+
+
+:op1/NNS	2
+(NP (NP*) (NNS XXX))	2
+
+
+:op1/NNP	2
+
+
+:topic/SQ	2
+
+
+:value/X	2
+
+
+:ARG2/:	2
+
+
+:prep-as/NP	2
+
+
+:ARG4/:	2
+
+
+:polarity/SQ	2
+
+
+:topic/NN	2
+
+
+:age/PRN	2
+
+
+:part-of/SBAR	2
+(NP (NP*) (SBAR))	2
+
+
+:source/CC	2
+
+
+:dayperiod/PP	2
+
+
+:ARG1/RB	2
+
+
+:op5/SBAR	2
+
+
+:op12/S	2
+
+
+:purpose/PRN	2
+(VP (TO to) (VP*))	2
+
+
+:duration/CC	2
+
+
+:prep-along-with/PP	2
+
+
+:duration/WHNP	2
+
+
+:op16/S	2
+
+
+:condition/CC	2
+
+
+:poss/VB	2
+
+
+:op15/S	2
+
+
+:consist-of/SBAR	2
+
+
+:poss/VP	2
+
+
+:prep-in/VP	2
+
+
+:duration-of/PP	2
+
+
+:op2/TO	2
+(VP (TO XXX) (VP*))	2
+
+
+:op5/RRC	2
+
+
+:prep-for/S	2
+(VP (TO to) (VP*))	2
+
+
+:subevent-of/NP	2
+
+
+:op5/PRN	2
+
+
+:path/NP	2
+
+
+:op8/S	2
+
+
+:prep-for/NP	2
+(NP (NP*) (:op1/PP))	2
+
+
+:domain/,	2
+
+
+:example/CC	2
+
+
+:instrument-of/SBAR	2
+(VP (MD would) (VP*))	2
+
+
+:prep-in-addition-to/PP	2
+(NP (NP*) (PP))	2
+
+
+:mod/VB	2
+
+
+:extent/S	2
+
+
+:snt3/SBAR	2
+(VP (VB have) (VP*))	2
+
+
+:beneficiary/S	2
+
+
+:part/VP	2
+
+
+:manner/ADJP	2
+
+
+:frequency/PRN	2
+
+
+:ARG0/UCP	2
+
+
+:value/PP	2
+
+
+:ARG1/JJ	2
+
+
+:poss/IN	2
+(NP (NP*) (PP))	2
+
+
+:conj-as-if/SBAR	2
+
+
+:polite/PP	2
+
+
+:source/VP	2
+
+
+:manner/CC	2
+
+
+:ARG3-of/NP-TMP	2
+
+
+:quant/SQ	2
+
+
+:ARG0/NNP	2
+
+
+:condition-of/VP	2
+
+
+:polarity/PRN	2
+
+
+:example/VP	2
+
+
+:subevent-of/S	2
+
+
+:time/,	2
+
+
+:subevent/SBAR	2
+
+
+:ARG0/RB	2
+
+
+:op1/WHNP	2
+
+
+:compared-to/ADJP	2
+
+
+:condition/FRAG	2
+
+
+:time/NN	2
+
+
+:ARG1-of/NP-TMP	2
+
+
+:topic/ADJP	2
+
+
+:topic-of/SBAR	2
+
+
+:location/PRN	2
+(NP (NP*) (PRN))	2
+
+
+:destination/NP	2
+
+
+:condition/VB	2
+(VP (VB XXX) (VP*))	2
+
+
+:poss-of/NP	2
+
+
+:ARG1-of/NN	2
+
+
+:example/S	2
+
+
+:ARG1/X	2
+
+
+:op13/NP	2
+
+
+:ARG1-of/SQ	2
+
+
+:location/CC	2
+
+
+:li/S	2
+
+
+:medium/VP	2
+
+
+:age/SBAR	2
+
+
+:prep-without/S	2
+
+
+:ARG0-of/SINV	2
+
+
+:condition/ADVP	2
+
+
+:op2/X	2
+
+
+:topic-of/NP	2
+(NP (NP*) (NP))	2
+
+
+:time/VB	2
+(VP (VB XXX) (VP*))	2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
