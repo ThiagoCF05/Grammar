@@ -25,7 +25,7 @@ class RuleInducer(object):
             id2alignment[rule_id] = align
 
             # Initializing subtrees with their heads
-            id2subtrees[rule_id] = {'tree':{}, 'nodes':{}, 'head':[], 'root':'', 'info':{'type':'verb', 'pos':[], 'tokens':[]}}
+            id2subtrees[rule_id] = {'tree':{}, 'nodes':{}, 'head':[], 'root':'', 'info':{'type':'', 'pos':[], 'tokens':[], 'lemmas':[]}}
             id2subtrees[rule_id]['head'].append(align['edges'][0][1])
             id2subtrees[rule_id]['head'].extend(map(lambda x: x[0], align['edges'][1:]))
 
@@ -60,6 +60,94 @@ class RuleInducer(object):
                 for i in xrange(len(closing)):
                     prev_id = nodes[prev_id]['parent']
         return nodes, tree, _id
+
+    # TO DO: treat modals would, should, might to, must, etc.
+    def get_verb_tense(self, pos, lemmas):
+        voice, tense = 'active', 'simple present'
+        if len(pos) == 1:
+            if pos[0] == 'VB':
+                tense = 'infinitive'
+            elif pos[0] in ['VBP', 'VBZ']:
+                tense = 'simple present'
+            elif pos[0] in ['VBD', 'VBN']:
+                tense = 'simple past'
+            elif pos[0] == 'VBG':
+                tense = 'present continuous'
+        elif len(pos) == 2:
+            if pos[0] in ['VB', 'VBP', 'VBZ']:
+                if lemmas[0] == 'be' and pos[1] == 'VBG':
+                    tense = 'present continuous'
+                elif lemmas[0] == 'have' and pos[1] == 'VBN':
+                    tense = 'present perfect'
+                elif lemmas[0] == 'be' and pos[1] == 'VBN':
+                    tense = 'simple present'
+                    voice = 'passive'
+            elif pos[0] == 'VBD':
+                if lemmas[0] == 'be' and pos[1] == 'VBG':
+                    tense = 'past continuous'
+                elif lemmas[0] == 'have' and pos[1] == 'VBN':
+                    tense = 'past perfect'
+                elif lemmas[0] == 'be' and pos[1] == 'VBN':
+                    tense = 'simple past'
+                    voice = 'passive'
+            elif lemmas[0] == 'will':
+                tense = 'simple future'
+        elif len(pos) == 3:
+            if pos[0] in ['VB', 'VBP', 'VBZ']:
+                if lemmas[0] == 'have' and pos[1] == 'VBN' and lemmas[1] == 'be':
+                    if pos[2] == 'VBG':
+                        tense = 'present perfect continuous'
+                    elif pos[2] == 'VBN':
+                        tense = 'present perfect'
+                        voice = 'passive'
+                elif lemmas[0] == 'be' and pos[1] == 'VBN' and lemmas[1] == 'be' and pos[2] == 'VBN':
+                    tense = 'simple present continuous'
+                    voice = 'passive'
+            elif pos[0] == 'VBD':
+                if lemmas[0] == 'have' and pos[1] == 'VBN' and lemmas[1] == 'be':
+                    if pos[2] == 'VBG':
+                        tense = 'past perfect continuous'
+                    elif pos[2] == 'VBN':
+                        tense = 'past perfect'
+                        voice = 'passive'
+                elif lemmas[0] == 'be' and pos[1] == 'VBN' and lemmas[1] == 'be' and pos[2] == 'VBN':
+                    tense = 'simple past continuous'
+                    voice = 'passive'
+            elif lemmas[0] == 'will':
+                if lemmas[1] == 'be':
+                    if pos[2] == 'VBG':
+                        tense = 'future continuous'
+                    elif pos[2] == 'VBN':
+                        tense = 'simple future'
+                        voice = 'passive'
+                elif lemmas[1] == 'have' and pos[2] == 'VBN':
+                    tense = 'future perfect'
+        elif len(pos) == 4:
+            if pos[1] == 'VBN' and lemmas[1] == 'be' \
+                    and pos[2] == 'VBG' and lemmas[2] == 'be' and pos[3] == 'VBN':
+                if pos[0] in ['VB', 'VBP', 'VBZ'] and lemmas[0] == 'have':
+                    tense = 'present perfect continuous'
+                    voice = 'passive'
+                elif pos[0] == 'VBD' and lemmas[0] == 'have':
+                    tense = 'past perfect continuous'
+                    voice = 'passive'
+            elif lemmas[0] == 'will':
+                if lemmas[1] == 'have' and pos[2] == 'VBN' and lemmas[2] == 'be':
+                    if pos[3] == 'VBG':
+                        tense = 'future present continuous'
+                    elif pos[3] == 'VBN':
+                        tense = 'future perfect'
+                        voice = 'passive'
+                elif lemmas[1] == 'be' and pos[2] == 'VBG' and lemmas[2] == 'be' and lemmas[3] == 'VBN':
+                    tense = 'future continuous'
+                    voice = 'passive'
+        elif len(pos) == 5:
+            if lemmas[0] == 'will' and lemmas[1] == 'have' \
+                    and pos[2] == 'VBN' and lemmas[2] == 'be' \
+                    and pos[3] == 'VBG' and lemmas[3] and pos[4] == 'VBN':
+                tense = 'future perfect continuos'
+                voice = 'passive'
+        return voice, tense
 
     def induce(self, root, head_label, id2alignment, id2subtree, id2rule, id2adjtree={}):
         def get_children_labels():
@@ -142,14 +230,12 @@ class RuleInducer(object):
             # Extract verb information
             id2subtree[label]['info']['type'] = 'verb'
             id2subtree[label]['info']['pos'].insert(0, self.nodes[root]['name'])
-            try:
-                id2subtree[label]['info']['tokens'].insert(0, self.nodes[root]['lexicon'])
-            except:
-                print self.nodes[root]
+            id2subtree[label]['info']['tokens'].insert(0, self.nodes[root]['lexicon'])
 
             if len(self.nodes[root]['name']) == 3:
                 self.nodes[root]['name'] = self.nodes[root]['name'][:-1]
             self.nodes[root]['lexicon'] = self.info['lemmas'][self.info['tokens'].index(self.nodes[root]['lexicon'])]
+            id2subtree[label]['info']['lemmas'].insert(0, self.nodes[root]['lexicon'])
 
             return id2subtree[label]['info']
 
@@ -157,7 +243,7 @@ class RuleInducer(object):
         if self.nodes[root]['type'] == 'terminal':
             for label in id2alignment:
                 if self.nodes[root]['value'] in id2alignment[label]['tokens']:
-                    if 'VB' in self.nodes[root]['name']:
+                    if 'VB' in self.nodes[root]['name'] or self.nodes[root]['name'] == 'MD':
                         id2subtree[label]['info'] = get_verb_info(root, label)
 
                     update_rule(root, label)
@@ -176,7 +262,7 @@ class RuleInducer(object):
                 # Extract tense of the verb in case of a verb phrase
                 if self.nodes[root]['name'] == 'VP':
                     for edge in self.tree[root]:
-                        if 'VB' in self.nodes[edge]['name'] and self.nodes[edge]['type'] == 'terminal' and self.nodes[edge]['label'] == -1:
+                        if ('VB' in self.nodes[edge]['name'] or self.nodes[edge]['name'] == 'MD') and self.nodes[edge]['type'] == 'terminal' and self.nodes[edge]['label'] == -1:
                             id2subtree[labels[0]]['info'] = get_verb_info(edge, labels[0])
                             break
 
@@ -206,7 +292,7 @@ class RuleInducer(object):
                     # Extract tense of the verb in case of a verb phrase
                     if self.nodes[root]['name'] == 'VP':
                         for edge in self.tree[root]:
-                            if 'VB' in self.nodes[edge]['name'] and self.nodes[edge]['type'] == 'terminal' and self.nodes[edge]['label'] == -1:
+                            if ('VB' in self.nodes[edge]['name'] or self.nodes[edge]['name'] == 'MD') and self.nodes[edge]['type'] == 'terminal' and self.nodes[edge]['label'] == -1:
                                 id2subtree[head]['info'] = get_verb_info(edge, head)
                                 break
 
@@ -256,19 +342,24 @@ class RuleInducer(object):
                 _type = 'initial'
 
             head = get_head()
+            if id2subtree[_id]['info']['type'] == 'verb':
+                voice, tense = id2subtree[_id]['info']['voice'], id2subtree[_id]['info']['tense']
+                lexical_id = (rule, head, voice, tense)
+            else:
+                lexical_id = (rule, head)
 
-            if (rule, head) not in ltag[_type]:
-                ltag[_type][(rule, head)] = []
+            if lexical_id not in ltag[_type]:
+                ltag[_type][lexical_id] = []
             if rule not in tag[_type]:
                 tag[_type][rule] = []
 
             if id2subtree[_id]['root'] == '':
                 tag[_type][rule].append('empty')
-                ltag[_type][(rule, head)].append('empty')
+                ltag[_type][lexical_id].append('empty')
             else:
                 tree = self.print_tree(id2subtree[_id]['root'], id2subtree[_id]['nodes'], id2subtree[_id]['tree'], '')
                 tag[_type][rule].append(tree)
-                ltag[_type][(rule, head)].append(tree)
+                ltag[_type][lexical_id].append(tree)
 
         # Adjoining rules
         for _id in id2adjtree:
@@ -276,15 +367,21 @@ class RuleInducer(object):
 
             rule = id2rule[_id]
 
-            if (rule, head) not in ltag['adjoining']:
-                ltag['adjoining'][(rule, head)] = []
+            if id2subtree[_id]['info']['type'] == 'verb':
+                voice, tense = id2subtree[_id]['info']['voice'], id2subtree[_id]['info']['tense']
+                lexical_id = (rule, head, voice, tense)
+            else:
+                lexical_id = (rule, head)
+
+            if lexical_id not in ltag['adjoining']:
+                ltag['adjoining'][lexical_id] = []
             if rule not in tag['adjoining']:
                 tag['adjoining'][rule] = []
 
             for tree in id2adjtree[_id]:
                 pretty_tree = self.print_tree(tree['root'], tree['nodes'], tree['tree'], '')
                 tag['adjoining'][rule].append(pretty_tree)
-                ltag['adjoining'][(rule, head)].append(pretty_tree)
+                ltag['adjoining'][lexical_id].append(pretty_tree)
 
         return tag, ltag
 
@@ -306,5 +403,9 @@ class RuleInducer(object):
             if _id not in id2rule:
                 rule_name = id2alignment[_id]['edges'][0][0]+'/'+'E'
                 id2rule[_id] = rule_name
+            if id2subtrees[_id]['info']['type'] == 'verb':
+                voice, tense = self.get_verb_tense(id2subtrees[_id]['info']['pos'], id2subtrees[_id]['info']['lemmas'])
+                id2subtrees[_id]['info']['voice'] = voice
+                id2subtrees[_id]['info']['tense'] = tense
 
         return id2subtrees, id2rule, adjtrees

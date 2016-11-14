@@ -15,12 +15,11 @@ if __name__ == '__main__':
     sub2word = utils.subgraph_word('data/verbalization-list-v1.06.txt')
 
     aligner = Aligner(verb2noun, noun2verb, verb2actor, actor2verb, sub2word, freq_table, proc)
-    text = 'Barack Obama'
+    text = 'The machine was adjusted by the girl .'
 
-    amr = """(p / person
-                      :name (n / name
-                            :op1 \"Barack\"
-                            :op2 \"Obama\"))"""
+    amr = """(a / adjust-01
+                      :ARG0 (g / girl)
+                      :ARG1 (m / machine))"""
 
     alignments, info = aligner.run(amr, text)
 
