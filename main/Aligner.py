@@ -22,10 +22,11 @@ class Aligner(object):
         info = self.proc.parse_doc(text)
         coref = info['entities']
 
-        all_lemmas, all_pos, entitymentions, parse = [], [], [], ''
+        all_lemmas, all_tokens, all_pos, entitymentions, parse = [], [], [], [], ''
         sent2size = [0]
         for i, sent in enumerate(info['sentences']):
             all_lemmas.extend(sent['lemmas'])
+            all_tokens.extend(sent['tokens'])
             all_pos.extend(sent['pos'])
 
             for j, entity in enumerate(sent['entitymentions']):
@@ -43,7 +44,7 @@ class Aligner(object):
                 mention['tokspan_in_sentence'][1] += sent2size[mention['sentence']]
 
         parse = parse.strip()
-        info = {'lemmas':all_lemmas, 'entitymentions':entitymentions, 'pos':all_pos, 'parse':parse}
+        info = {'lemmas':all_lemmas, 'entitymentions':entitymentions, 'pos':all_pos, 'parse':parse, 'tokens':all_tokens}
         return info, coref
 
     def parse(self, amr):

@@ -13,7 +13,7 @@ from sys import path
 path.append('/home/tcastrof/amr/scp_repo')
 from stanford_corenlp_pywrapper import CoreNLP
 
-def write(fname, tag):
+def write(fname, tag, type):
     rule_freq = sorted(map(lambda x: (x, len(tag[x])), tag.keys()), key=operator.itemgetter(1))
     rule_freq.reverse()
 
@@ -21,7 +21,7 @@ def write(fname, tag):
 
     for item in rule_freq:
         rule, freq = item
-        if freq > 1:
+        if freq > 1 or type == 'initial':
             f.write(str(rule).encode('utf-8'))
             f.write('\t')
             f.write(str(freq).encode('utf-8'))
@@ -32,7 +32,7 @@ def write(fname, tag):
 
         for item2 in tree_freq:
             tree, freq = item2
-            if freq > 1:
+            if freq > 1 or type == 'initial':
                 f.write(tree.encode('utf-8'))
                 f.write('\t')
                 f.write(str(freq).encode('utf-8'))
@@ -85,8 +85,9 @@ def evaluate(aligner):
 def main(aligner):
     dir = 'data/LDC2016E25/data/amrs/unsplit'
 
-    tag, ltag = {}, {}
+    tag, ltag = {'initial':{}, 'substitution':{}, 'adjoining':{}}, {'initial':{}, 'substitution':{}, 'adjoining':{}}
 
+    errors = 0
     for fname in os.listdir(dir):
         print fname, '\r',
         amrs = utils.parse_corpus(os.path.join(dir, fname))
@@ -95,14 +96,15 @@ def main(aligner):
             try:
                 alignments, info = aligner.run(amr['amr'], amr['sentence'])
             except:
-                print 'ALIGNER ERROR', amr['file'], amr['id']
+                errors = errors + 1
+                print 'ALIGNER ERROR', amr['file'], amr['id'], errors
                 alignments, info = None, None
 
             if alignments != None:
                 try:
-                    inducer = RuleInducer(amr['sentence'], amr['amr'], info['parse'], alignments)
-                    id2subtrees, id2rule = inducer.run()
-                    tag, ltag = inducer.prettify(id2subtrees, id2rule, tag, ltag)
+                    inducer = RuleInducer(amr['sentence'], amr['amr'], info, alignments)
+                    id2subtrees, id2rule, adjtrees = inducer.run()
+                    tag, ltag = inducer.prettify(id2subtrees, id2rule, adjtrees, tag, ltag)
                 except:
                     print 'INDUCER ERROR', amr['file'], amr['id']
     return tag, ltag
@@ -115,8 +117,16 @@ if __name__ == '__main__':
     sub2word = utils.subgraph_word('data/verbalization-list-v1.06.txt')
 
     aligner = Aligner(verb2noun, noun2verb, verb2actor, actor2verb, sub2word, freq_table, proc)
-    evaluate(aligner)
-    # tag, ltag = main(aligner)
-    #
-    # write('tag.txt', tag)
-    # write('ltag.txt', ltag)
+    # evaluate(aligner)
+    tag, ltag = main(aligner)
+
+    print ltag
+
+    write('tag_initial.txt', tag['initial'], 'initial')
+    write('ltag_initial.txt', ltag['initial'], 'initial')
+
+    write('tag_substitution.txt', tag['substitution'], 'substitution')
+    write('ltag_substitution.txt', ltag['substitution'], 'substitution')
+
+    write('tag_adjoining.txt', tag['adjoining'], 'adjoining')
+    write('ltag_adjoining.txt', ltag['adjoining'], 'adjoining')
