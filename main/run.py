@@ -87,6 +87,7 @@ def main(aligner):
 
     tag, ltag = {'initial':{}, 'substitution':{}, 'adjoining':{}}, {'initial':{}, 'substitution':{}, 'adjoining':{}}
 
+    errors = 0
     for fname in os.listdir(dir):
         print fname, '\r',
         amrs = utils.parse_corpus(os.path.join(dir, fname))
@@ -95,7 +96,8 @@ def main(aligner):
             try:
                 alignments, info = aligner.run(amr['amr'], amr['sentence'])
             except:
-                print 'ALIGNER ERROR', amr['file'], amr['id']
+                errors = errors + 1
+                print 'ALIGNER ERROR', amr['file'], amr['id'], errors
                 alignments, info = None, None
 
             if alignments != None:
