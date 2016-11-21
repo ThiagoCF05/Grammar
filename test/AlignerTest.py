@@ -1,6 +1,7 @@
+from main.old import Aligner
+
 __author__ = 'thiagocastroferreira'
 
-from main.Aligner import Aligner
 from stanford_corenlp_pywrapper import CoreNLP
 
 import unittest

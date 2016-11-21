@@ -11,7 +11,7 @@ lemma = ('lemma', 'status')
 info = {'lemmas':[], 'entitymentions':[], 'pos':[], 'parse':''}
 
 # Alignment
-alignment = {'edges':[], 'tokens':[], 'ids':[], 'lemmas':[]}
+alignment = {'root':-1, 'nodes':{}, 'edges':{}, 'tokens':[], 'ids':[], 'lemmas':[]}
 
 # Rule Inducer
 rule = {'tree':{}, 'nodes':{}, 'head':[], 'root':'', 'info':{'voice':'active', 'tense':''}}

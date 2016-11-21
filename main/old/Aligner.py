@@ -85,10 +85,13 @@ class Aligner(object):
                 else:
                     if edge not in [':wiki', ':mode']:
                         _node = copy.copy(name)
-                        i = 1
+                        i, isCoref = 1, False
                         while _node in nodes.keys():
                             _node = name + '-coref' + str(i)
+                            isCoref = True
                             i = i + 1
+                        if isCoref:
+                            name = nodes[name]['name']
                         nodes[_node] = {'name':name, 'parent':{'node':parent, 'edge':edge}, 'status':'unlabeled', 'tokens':list(set(tokens))}
 
                         edges[_node] = []
@@ -107,6 +110,7 @@ class Aligner(object):
                 self.nodes[root]['tokens'].append(index)
                 return index
             return -1
+
         def set_label_given(index):
             self.nodes[root]['tokens'].append(index)
             return index
@@ -181,7 +185,7 @@ class Aligner(object):
         else:
             concept = self.nodes[root]['name']
         if isSet < 0 and concept in ['possible', 'obligate', 'permit', 'recommend', 'likely', 'prefer']:
-            _indexes = filter(lambda x: lemmas[x][1] == 'unlabeled' and lemmas[x][0].lower() != 'will' and self.info['pos'][x] == 'MD', xrange(len(lemmas)))
+            _indexes = filter(lambda x: lemmas[x][1] == 'unlabeled' and lemmas[x][0].lower() not in ['will', 'would'] and self.info['pos'][x] == 'MD', xrange(len(lemmas)))
             for index in _indexes:
                 isSet = set_label_given(index)
                 break
@@ -336,30 +340,36 @@ class Aligner(object):
                     break
         return alignments, lemmas
 
-    def _create_alignment(self, root):
+    def _create_alignment(self, root, alignment={}):
         self.nodes[root]['status'] = 'labeled'
 
-        edge = (self.nodes[root]['parent']['edge'], root)
+        if alignment == {}:
+            alignment = {'root':root, 'nodes':{}, 'edges':{}, 'external_edges':{}, 'tokens':[], 'ids':[], 'lemmas':[]}
+
         indexes = self.nodes[root]['tokens']
         lemmas = map(lambda x: self.info['lemmas'][x], indexes)
-        alignment = {'edges':[edge], 'tokens':indexes, 'ids':[], 'lemmas':lemmas}
+        alignment['tokens'].extend(indexes)
+        alignment['lemmas'].extend(lemmas)
+
+        alignment['nodes'][root] = copy.copy(self.nodes[root])
+        del alignment['nodes'][root]['status']
+        del alignment['nodes'][root]['tokens']
+
+        alignment['edges'][root] = []
+        alignment['external_edges'][root] = map(lambda x: x[0], self.edges[root])
+
+        alignment['tokens'] = list(set(alignment['tokens']))
         return alignment
 
-    def align(self, root, visited, lemmas, alignments, id, isAligned = False):
+    def align(self, root, visited, lemmas, herg, id, isAligned = False):
         def create_subgraph_alignment(edges):
-            self.nodes[root]['status'] = 'labeled'
-            alignment = {'edges':[], 'tokens':[], 'ids':[]}
-
-            edge = (self.nodes[root]['parent']['edge'], root)
-            alignment['edges'].append(edge)
-            alignment['tokens'].extend(self.nodes[root]['tokens'])
+            alignment = self._create_alignment(root)
 
             for edge in edges:
-                self.nodes[edge[1]]['status'] = 'labeled'
-                alignment['edges'].append(edge)
+                alignment = self._create_alignment(edge[1], alignment)
+                alignment['edges'][root].append(edge)
+                alignment['external_edges'][root].remove(edge[0])
 
-                indexes = self.nodes[edge[1]]['tokens']
-                alignment['tokens'].extend(indexes)
             alignment['tokens'] = list(set(alignment['tokens']))
             return alignment
 
@@ -379,10 +389,10 @@ class Aligner(object):
                 if len(subgraph) == 1:
                     self.nodes[root]['tokens'].append(index)
                     alignment = self._create_alignment(root)
-                    alignments.append(alignment)
+                    herg.append(alignment)
                 else:
                     self.nodes[subgraph[1][1]]['tokens'].append(index)
-                    alignments.append(create_subgraph_alignment(subgraph[1:]))
+                    herg.append(create_subgraph_alignment(subgraph[1:]))
             elif not isAligned:
                 indexes = self.match_node_patterns(root, lemmas)
                 for index in indexes:
@@ -390,46 +400,76 @@ class Aligner(object):
 
         for i, edge in enumerate(self.edges[root]):
             if edge[1] not in visited:
-                lemmas, alignments = self.align(edge[1], visited, lemmas, alignments, id+'.'+str(i), isAligned)
+                lemmas, herg = self.align(edge[1], visited, lemmas, herg, id+'.'+str(i), isAligned)
 
             # MATCH parent of :degree non-matched
             if edge[0] == ':degree' and len(self.nodes[edge[1]]['tokens']) == 0:
-                alignments.append(create_subgraph_alignment([edge]))
+                herg.append(create_subgraph_alignment([edge]))
 
             # MATCH parent of :name
             if edge[0] == ':name':
                 self.nodes[root]['status'] = 'labeled'
 
-                for alignment in alignments:
-                    if edge in alignment['edges']:
-                        n_e = (self.nodes[root]['parent']['edge'], root)
-                        alignment['tokens'].extend(self.nodes[root]['tokens'])
-                        alignment['edges'].insert(0, n_e)
+                for i, alignment in enumerate(herg):
+                    if alignment['root'] == edge[1]:
+                        herg[i]['root'] = root
+
+                        indexes = self.nodes[root]['tokens']
+                        _lemmas = map(lambda x: self.info['lemmas'][x], indexes)
+                        herg[i]['tokens'].extend(indexes)
+                        herg[i]['lemmas'].extend(_lemmas)
+                        herg[i]['tokens'] = list(set(herg[i]['tokens']))
+
+                        herg[i]['nodes'][root] = copy.copy(self.nodes[root])
+                        del herg[i]['nodes'][root]['status']
+                        del herg[i]['nodes'][root]['tokens']
+
+                        herg[i]['edges'][root] = [edge]
+                        herg[i]['external_edges'][root] = []
+
+                        for _edge in self.edges[root]:
+                            if edge != _edge:
+                                herg[i]['external_edges'].append(_edge[0])
                         break
 
             # MATCH reification
             elif self.nodes[edge[1]]['name'] in ['have-rel-role-91', 'have-org-role-91'] and self.nodes[root]['status'] != 'labeled' and len(self.nodes[root]['tokens']) == 0:
                 self.nodes[root]['status'] = 'labeled'
 
-                for alignment in alignments:
-                    if edge in alignment['edges']:
-                        n_e = (self.nodes[root]['parent']['edge'], root)
-                        alignment['tokens'].extend(self.nodes[root]['tokens'])
-                        alignment['edges'].insert(0, n_e)
+                for i, alignment in enumerate(herg):
+                    if alignment['root'] == edge[1]:
+                        herg[i]['root'] = root
+
+                        indexes = self.nodes[root]['tokens']
+                        _lemmas = map(lambda x: self.info['lemmas'][x], indexes)
+                        herg[i]['tokens'].extend(indexes)
+                        herg[i]['lemmas'].extend(_lemmas)
+                        herg[i]['tokens'] = list(set(herg[i]['tokens']))
+
+                        herg[i]['nodes'][root] = copy.copy(self.nodes[root])
+                        del herg[i]['nodes'][root]['status']
+                        del herg[i]['nodes'][root]['tokens']
+
+                        herg[i]['edges'][root] = [edge]
+                        herg[i]['external_edges'][root] = []
+
+                        for _edge in self.edges[root]:
+                            if edge != _edge:
+                                herg[i]['external_edges'].append(_edge[0])
                         break
 
         # MATCH NAME NODES
         if self.nodes[root]['name'] == 'name':
-            alignments.append(create_subgraph_alignment(self.edges[root]))
+            herg.append(create_subgraph_alignment(self.edges[root]))
         # MATCH entity and quantity nodes
         elif regex.match(self.nodes[root]['name']) != None:
-            alignments.append(create_subgraph_alignment(self.edges[root]))
+            herg.append(create_subgraph_alignment(self.edges[root]))
         # MATCH org and rel roles
         elif self.nodes[root]['name'] in ['have-rel-role-91', 'have-org-role-91']:
             edges = filter(lambda x: x[0] == ':ARG2', self.edges[root])
-            alignments.append(create_subgraph_alignment(edges))
+            herg.append(create_subgraph_alignment(edges))
 
-        return lemmas, alignments
+        return lemmas, herg
 
     def train(self, amr, text):
         self.info, self.coref = self.get_corenlp_result(text)
@@ -456,7 +496,7 @@ class Aligner(object):
             for entity in entities:
                 tokens = []
                 for alignment in alignments:
-                    if len(filter(lambda edge: edge[1] == entity, alignment['edges'])) > 0:
+                    if entity in alignment['nodes']:
                         tokens = alignment['tokens']
                         break
                 if len(tokens) == 0:
@@ -477,26 +517,26 @@ class Aligner(object):
         lemmas = map(lambda x: (x, 'unlabeled'), self.info['lemmas'])
 
         root = self.edges['root'][0][1]
-        lemmas, alignments = self.align(root, [], lemmas, [], '0')
+        lemmas, herg = self.align(root, [], lemmas, [], '0')
 
         # Label nodes that have at least one token attached
         for node in self.nodes:
             if self.nodes[node]['status'] != 'labeled':
                 if len(self.nodes[node]['tokens']) > 0:
                     alignment = self._create_alignment(node)
-                    alignments.append(alignment)
+                    herg.append(alignment)
 
         # Label coreferences
-        alignments, lemmas = match_coreferences(alignments, lemmas)
+        herg, lemmas = match_coreferences(herg, lemmas)
 
         # Classify unlabeled nodes by frequency in the training alignments
         for node in self.nodes:
             if self.nodes[node]['status'] != 'labeled':
                 alignment, lemmas = self.match_frequency_patterns(node, lemmas)
-                alignments.append(alignment)
+                herg.append(alignment)
 
-        for alignment in alignments:
-            alignment['ids'] = map(lambda edge: self.nodes[edge[1]]['id'], alignment['edges'])
-            alignment['edges'] = map(lambda edge: (edge[0], self.nodes[edge[1]]['name']), alignment['edges'])
+        for alignment in herg:
+            alignment['ids'] = map(lambda node: self.nodes[node]['id'], alignment['nodes'])
+            # alignment['edges'] = map(lambda edge: (edge[0], self.nodes[edge[1]]['name']), alignment['edges'])
 
-        return alignments, self.info
+        return herg, self.info

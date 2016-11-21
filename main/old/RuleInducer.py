@@ -10,27 +10,29 @@ Description:
 import copy
 
 class RuleInducer(object):
-    def __init__(self, text, amr, info, alignments):
+    def __init__(self, text, amr, info, erg):
         self.text = text
         self.tokens = text.split()
         self.amr = amr
         self.tree = info['parse']
-        self.alignments = alignments
+        self.erg = erg
         self.info = info
 
     def get_rules(self):
         rule_id = 1
-        id2alignment, id2subtrees = {}, {}
-        for i, align in enumerate(self.alignments):
-            id2alignment[rule_id] = align
+        id2erg, id2subtrees = {}, {}
+        for i, align in enumerate(self.erg):
+            id2erg[rule_id] = align
 
             # Initializing subtrees with their heads
             id2subtrees[rule_id] = {'tree':{}, 'nodes':{}, 'head':[], 'root':'', 'info':{'type':'', 'pos':[], 'tokens':[], 'lemmas':[]}}
-            id2subtrees[rule_id]['head'].append(align['edges'][0][1])
-            id2subtrees[rule_id]['head'].extend(map(lambda x: x[0], align['edges'][1:]))
+
+            root = align['root']
+            id2subtrees[rule_id]['head'].append(align['nodes'][root]['name'])
+            # id2subtrees[rule_id]['head'].extend(map(lambda x: x[0], align['edges'][1:]))
 
             rule_id = rule_id + 1
-        return id2alignment, id2subtrees
+        return id2erg, id2subtrees
 
     def parse_tree(self):
         nodes = {}
@@ -52,7 +54,7 @@ class RuleInducer(object):
                 closing = filter(lambda x: x == ')', child)
                 terminal = child.replace(closing, '')
                 nodes[prev_id]['value'] = terminal_id
-                nodes[prev_id]['lexicon'] = terminal
+                nodes[prev_id]['lexicon'] = terminal.lower()
                 nodes[prev_id]['type'] = 'terminal'
 
                 terminal_id = terminal_id + 1
@@ -149,7 +151,7 @@ class RuleInducer(object):
                 voice = 'passive'
         return voice, tense
 
-    def induce(self, root, head_label, id2alignment, id2subtree, id2rule, id2adjtree={}):
+    def induce(self, root, head_label, id2erg, id2subtree, id2rule, id2adjtree={}):
         def get_children_labels():
             labels = []
             for edge in self.tree[root]:
@@ -163,8 +165,17 @@ class RuleInducer(object):
                 self.nodes[root]['label'] = label
 
                 id2subtree[label]['root'] = root
-                rule_name = id2alignment[self.nodes[root]['label']]['edges'][0][0]+'/'+self.nodes[root]['name']
-                id2rule[self.nodes[root]['label']] = rule_name
+
+                parent = id2erg[label]['nodes'][id2erg[label]['root']]['parent']
+                rule_name = parent['edge']+'/'+self.nodes[root]['name']
+                id2rule[label] = rule_name
+
+                for _id in id2erg:
+                    if parent['node'] in id2erg[_id]['nodes']:
+                        external = filter(lambda external: parent['edge'] in external, id2erg[_id]['external_edges'][parent['node']])[0]
+                        index = id2erg[_id]['external_edges'][parent['node']].index(external)
+                        id2erg[_id]['external_edges'][id2erg[_id]['root']][index] = rule_name
+                        break
 
             if root not in id2subtree[label]['nodes']:
                 id2subtree[label]['nodes'][root] = copy.copy(self.nodes[root])
@@ -241,8 +252,8 @@ class RuleInducer(object):
 
         self.nodes[root]['label'] = -1
         if self.nodes[root]['type'] == 'terminal':
-            for label in id2alignment:
-                if self.nodes[root]['value'] in id2alignment[label]['tokens']:
+            for label in id2erg:
+                if self.nodes[root]['value'] in id2erg[label]['tokens']:
                     if 'VB' in self.nodes[root]['name'] or self.nodes[root]['name'] == 'MD':
                         id2subtree[label]['info'] = get_verb_info(root, label)
 
@@ -250,7 +261,7 @@ class RuleInducer(object):
                     break
         else:
             for edge in self.tree[root]:
-                id2subtree, id2rule, id2adjtree = self.induce(edge, head_label, id2alignment, id2subtree, id2rule, id2adjtree)
+                id2subtree, id2rule, id2adjtree = self.induce(edge, head_label, id2erg, id2subtree, id2rule, id2adjtree)
 
             # Get children labels (except non-label nodes: -1)
             labels = get_children_labels()
@@ -278,8 +289,18 @@ class RuleInducer(object):
 
                 for edge in self.tree[root]:
                     if self.nodes[edge]['label'] not in [-1, head]:
-                        rule_name = id2alignment[self.nodes[edge]['label']]['edges'][0][0]+'/'+self.nodes[edge]['name']
+
+                        parent = id2erg[self.nodes[edge]['label']]['nodes'][id2erg[self.nodes[edge]['label']]['root']]['parent']
+
+                        rule_name = parent['edge']+'/'+self.nodes[edge]['name']
                         id2rule[self.nodes[edge]['label']] = rule_name
+
+                        for _id in id2erg:
+                            if parent['node'] in id2erg[_id]['nodes']:
+                                external = filter(lambda external: parent['edge'] in external, id2erg[_id]['external_edges'][parent['node']])[0]
+                                index = id2erg[_id]['external_edges'][parent['node']].index(external)
+                                id2erg[_id]['external_edges'][id2erg[_id]['root']][index] = rule_name
+                                break
 
                         self.nodes[self._id] = {'name': rule_name, 'parent': root, 'type':'rule', 'label':-1}
                         self.tree[self._id] = []
@@ -388,20 +409,23 @@ class RuleInducer(object):
     def run(self):
         self.nodes, self.tree, self._id = self.parse_tree()
 
-        id2alignment, id2subtrees = self.get_rules()
+        id2erg, id2subtrees = self.get_rules()
 
         root = filter(lambda x: self.nodes[x]['name'] == 'ROOT', self.nodes)[0]
         head_label = ''
-        for _id in id2alignment:
-            if len(filter(lambda x: x[0] == ':root', id2alignment[_id]['edges'])) > 0:
+        for _id in id2erg:
+            _root = id2erg[_id]['root']
+            edge_parent = id2erg[_id]['nodes'][_root]['parent']['edge']
+            if edge_parent == ':root':
                 head_label = _id
                 break
 
-        id2subtrees, id2rule, adjtrees = self.induce(root, head_label, id2alignment, id2subtrees, {}, {})
+        id2subtrees, id2rule, adjtrees = self.induce(root, head_label, id2erg, id2subtrees, {}, {})
 
         for _id in id2subtrees:
             if _id not in id2rule:
-                rule_name = id2alignment[_id]['edges'][0][0]+'/'+'E'
+                parent = id2erg[_id]['nodes'][id2erg[_id]['root']]['parent']['edge']
+                rule_name = parent+'/'+'E'
                 id2rule[_id] = rule_name
             if id2subtrees[_id]['info']['type'] == 'verb':
                 voice, tense = self.get_verb_tense(id2subtrees[_id]['info']['pos'], id2subtrees[_id]['info']['lemmas'])

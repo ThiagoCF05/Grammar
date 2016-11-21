@@ -1,11 +1,11 @@
+from main.old import Aligner, RuleInducer
+
 __author__ = 'thiagocastroferreira'
 
 import unittest
 import main.utils as utils
 import json
 
-from main.Aligner import Aligner
-from main.RuleInducer import RuleInducer
 from stanford_corenlp_pywrapper import CoreNLP
 
 class RuleInducerTest(unittest.TestCase):
@@ -64,7 +64,7 @@ class RuleInducerTest(unittest.TestCase):
         original = {
             'ltag': {
                 'initial': {
-                    (u':root/ROOT', '[cat]'): [u'(ROOT (FRAG (NP (DT The) (NN XXX))))']
+                    (u':root/ROOT', '[cat]'): [u'(ROOT (FRAG (NP (DT the) (NN XXX))))']
                 },
                 'substitution':{},
                 'adjoining':{}
@@ -72,11 +72,53 @@ class RuleInducerTest(unittest.TestCase):
             'tag':
                 {
                     'initial': {
-                        u':root/ROOT': [u'(ROOT (FRAG (NP (DT The) (NN XXX))))']
+                        u':root/ROOT': [u'(ROOT (FRAG (NP (DT the) (NN XXX))))']
                     },
                     'substitution':{},
                     'adjoining':{}
                 }}
+
+        self.assertDictEqual(original, {'tag':tag, 'ltag':ltag})
+
+    def test_np2(self):
+        text = 'The teacher and the worker'
+
+        amr = """(a / and
+                    :op1 (p / person
+                            :ARG0-of (t / teach-01))
+                    :op2 (p2 / person
+                            :ARG0-of (w / work-01))"""
+
+        alignments, info = self.aligner.run(amr, text)
+        inducer = RuleInducer(text, amr, info, alignments)
+        id2subtrees, id2rule, adjtrees = inducer.run()
+
+        tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        tag, ltag = inducer.prettify(id2subtrees, id2rule, adjtrees, tag, ltag)
+
+        original = {
+            'ltag': {
+                'initial': {
+                    (u':root/ROOT', '[and]'): [u'(ROOT (NP (:op1/NP) (CC XXX) (:op2/NP)))']
+                },
+                'adjoining': {},
+                'substitution': {
+                    (u':op2/NP', '[person, :ARG0-of]'): [u'(NP (DT the) (NN XXX))'],
+                    (u':op1/NP', '[person, :ARG0-of]'): [u'(NP (DT the) (NN XXX))']
+                }
+            },
+            'tag': {
+                'initial': {
+                    u':root/ROOT': [u'(ROOT (NP (:op1/NP) (CC XXX) (:op2/NP)))']
+                },
+                'adjoining': {},
+                'substitution': {
+                    u':op2/NP': [u'(NP (DT the) (NN XXX))'],
+                    u':op1/NP': [u'(NP (DT the) (NN XXX))']
+                }
+            }
+        }
 
         self.assertDictEqual(original, {'tag':tag, 'ltag':ltag})
 
@@ -139,7 +181,7 @@ class RuleInducerTest(unittest.TestCase):
                     },
                     'substitution':{
                         (u':ARG1/NP', '[machine]'): [u'(NP (DT the) (NN XXX))'],
-                        (u':ARG0/NP', '[girl]'): [u'(NP (DT The) (NN XXX))']
+                        (u':ARG0/NP', '[girl]'): [u'(NP (DT the) (NN XXX))']
                     },
                     'adjoining':{}
                 },
@@ -150,7 +192,7 @@ class RuleInducerTest(unittest.TestCase):
                     },
                     'substitution':{
                         u':ARG1/NP': [u'(NP (DT the) (NN XXX))'],
-                        u':ARG0/NP': [u'(NP (DT The) (NN XXX))']
+                        u':ARG0/NP': [u'(NP (DT the) (NN XXX))']
                     },
                     'adjoining':{}
                 }}
@@ -181,7 +223,7 @@ class RuleInducerTest(unittest.TestCase):
                     },
                     'substitution':{
                         (u':ARG1/NP', '[mission]'): [u'(NP (DT the) (NN XXX))'],
-                        (u':ARG0/NP', '[man]'): [u'(NP (DT The) (NN XXX))'],
+                        (u':ARG0/NP', '[man]'): [u'(NP (DT the) (NN XXX))'],
                         (u':ARG2/PP', '[disaster]'): [u'(PP (IN as) (NP (DT a) (NN XXX)))']
                     },
                     'adjoining':{}
@@ -193,7 +235,7 @@ class RuleInducerTest(unittest.TestCase):
                     },
                     'substitution':{
                         u':ARG1/NP': [u'(NP (DT the) (NN XXX))'],
-                        u':ARG0/NP': [u'(NP (DT The) (NN XXX))'],
+                        u':ARG0/NP': [u'(NP (DT the) (NN XXX))'],
                         u':ARG2/PP': [u'(PP (IN as) (NP (DT a) (NN XXX)))']
                     },
                     'adjoining':{}
@@ -225,7 +267,7 @@ class RuleInducerTest(unittest.TestCase):
                     },
                     'substitution':{
                         (u':ARG1/NP', '[girl]'): [u'(NP (DT the) (NN XXX))'],
-                        (u':ARG0/NP', '[man]'): [u'(NP (DT The) (NN XXX))'],
+                        (u':ARG0/NP', '[man]'): [u'(NP (DT the) (NN XXX))'],
                         (u':location/PP', '[house]'): [u'(PP (IN at) (NP (DT the) (NN XXX)))']
                     },
                     'adjoining':{
@@ -239,7 +281,7 @@ class RuleInducerTest(unittest.TestCase):
                     },
                     'substitution':{
                         u':ARG1/NP': [u'(NP (DT the) (NN XXX))'],
-                        u':ARG0/NP': [u'(NP (DT The) (NN XXX))'],
+                        u':ARG0/NP': [u'(NP (DT the) (NN XXX))'],
                         u':location/PP': [u'(PP (IN at) (NP (DT the) (NN XXX)))']
                     },
                     'adjoining':{
@@ -265,33 +307,6 @@ class RuleInducerTest(unittest.TestCase):
         ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
         tag, ltag = inducer.prettify(id2subtrees, id2rule, adjtrees, tag, ltag)
 
-        o = {
-            'ltag': {
-                'initial': {
-                    (u':root/ROOT', '[adjust-01]', 'passive', 'simple past'): [u'(ROOT (S (:ARG1/NP) (VP (VBN XXX) (:ARG0/PP)) (. .)))']
-                },
-                'adjoining': {
-                    (u':root/ROOT', '[adjust-01]', 'passive', 'simple past'): [u'(VP (VB be) (VP*))']
-                },
-                'substitution': {
-                    (u':ARG1/NP', '[machine]'): [u'(NP (DT The) (NN XXX))'],
-                    (u':ARG0/PP', '[girl]'): [u'(PP (IN by) (NP (DT the) (NN XXX)))']
-                }
-            },
-            'tag': {
-                'initial': {
-                    u':root/ROOT': [u'(ROOT (S (:ARG1/NP) (VP (VBN XXX) (:ARG0/PP)) (. .)))']
-                },
-                'adjoining': {
-                    u':root/ROOT': [u'(VP (VB be) (VP*))']
-                },
-                'substitution': {
-                    u':ARG1/NP': [u'(NP (DT The) (NN XXX))'],
-                    u':ARG0/PP': [u'(PP (IN by) (NP (DT the) (NN XXX)))']
-                }
-            }
-        }
-
         original = {
             'ltag':
                 {
@@ -301,7 +316,7 @@ class RuleInducerTest(unittest.TestCase):
                     'substitution':{
                         (u':ARG1/NP', '[girl]'): [u'(NP (DT the) (NN XXX))'],
                         (u':ARG0/NP', '[man]'): [u'(NP (DT the) (NN XXX))'],
-                        (u':location/PP', '[house]'): [u'(PP (IN At) (NP (DT the) (NN XXX)))']
+                        (u':location/PP', '[house]'): [u'(PP (IN at) (NP (DT the) (NN XXX)))']
                     },
                     'adjoining':{}
                 },
@@ -313,7 +328,7 @@ class RuleInducerTest(unittest.TestCase):
                     'substitution':{
                         u':ARG1/NP': [u'(NP (DT the) (NN XXX))'],
                         u':ARG0/NP': [u'(NP (DT the) (NN XXX))'],
-                        u':location/PP': [u'(PP (IN At) (NP (DT the) (NN XXX)))']
+                        u':location/PP': [u'(PP (IN at) (NP (DT the) (NN XXX)))']
                     },
                     'adjoining':{}
                 }}
@@ -334,54 +349,6 @@ class RuleInducerTest(unittest.TestCase):
         tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
         ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
         tag, ltag = inducer.prettify(id2subtrees, id2rule, adjtrees, tag, ltag)
-
-        o = {
-            'initial': {
-                (u':root/ROOT', '[possible-01]', 'active', 'simple present'): [u'(ROOT (S (:ARG0/NP) (VP (MD XXX) (:polarity/RB) (:ARG1/VP)) (. .)))'],
-                (u':root/ROOT', '[and]', 'active', 'simple present'): [u'(ROOT (S (:condition/SBAR) (, ,) (:ARG0/NP) (VP (:op1/VP) (, ,) (CC XXX) (:op2/VP)) (. .)))'],
-                (u':root/ROOT', '[and]'): [u'(ROOT (S (:ARG1/NP) (VP (:op1/VB) (CC XXX) (:op2/VB) (:ARG2/PP)) (. .)))'],
-                (u':root/ROOT', '[establish-01]', 'active', 'present continuous'): [u'(ROOT (S (VP (VB XXX) (:ARG1/NP) (:mod/PP))))'],
-                (u':root/ROOT', '[join-01]', 'active', 'simple future'): [u'(ROOT (S (:ARG0/NP) (VP (VB XXX) (:ARG1/NP) (:ARG1-of/PP) (:time/NP-TMP)) (. .)))'],
-                (u':root/ROOT', '[date-entity, :year, :month, :day]'): [u'(ROOT (FRAG (NP (CD XXX))))'],
-                (u':root/ROOT', '[byline-91]'): [u'(ROOT (S))'],
-                (u':root/ROOT', '[announce-01]'): [u'(ROOT (SINV))'],
-                (u':root/ROOT', '[start-01]', 'active', 'simple past'): [u'(ROOT (S (:time/PP) (, ,) (:ARG0/NP) (VP (VB XXX) (:ARG1/S)) (. .)))']
-            },
-            'adjoining': {
-                (u':ARG0/NP', '[person, :name, :op1, :op2]'): [u'(NP (NP*) (, ,) (:age/ADJP) (, ,))'],
-                (u':ARG0/NP', '[picture]'): [u'(NP (NP*) (:ARG1-of/SBAR))'],
-                (u':ARG1/S', '[help-02]', 'active', 'infinitive'): [u'(VP (TO to) (VP*))'],
-                (u':ARG1/S', '[accept-01]', 'passive', 'simple present'): [u'(VP (VB be) (VP*))', u'(VP (TO to) (VP*))'],
-                (u':op1/S', '[bear-02]', 'passive', 'simple present'): [u'(VP (VB be) (VP*))'],
-                (u':ARG1-of/SBAR', '[look-forward-03]', 'active', 'present perfect continuous'): [u'(VP (VB be) (VP*))', u'(VP (VB have) (:ARG1-of/ADVP) (VP*))'],
-                (u':location/PP', '[media]'): [u'(NP (NP*) (PP))'],
-                (u':root/ROOT', '[join-01]', 'active', 'simple future'): [u'(VP (MD will) (VP*))'],
-                (u':ARG1/NP', '[company, :name, :op1]'): [u'(NP (NP*) (:ARG3/PP))'],
-                (u':ARG1/PP', '[gift]'): [u'(NP (NP*) (, ,) (:op3/VP))'],
-                (u':location/NP', '[city, :name, :op1, :op2]'): [u'(NP (:ARG0/NP) (, ,) (NP*) (, ,))'],
-                (u':root/ROOT', '[and]', 'active', 'simple present'): [u'(VP (MD will) (VP*))'],
-                (u':time/PP', '[date-entity, :year, :season]'): [u'(NP (NP*) (PP))'],
-                (u':ARG1/SINV', '[acquire-01]', 'active', 'simple future'): [u'(VP (MD will) (VP*))']
-            },
-            'substitution': {
-                (u':op2/PP', '[everything]'): [u'(PP (IN for) (NP (:op1/NN) (:ARG1/CC) (NN XXX)))'],
-                (u':op1/VP', '[go-02]', 'active', 'infinitive'): [u'(VP (VB XXX) (:ARG4/PP))'],
-                (u':condition/SBAR', '[that]'): [u'(SBAR (IN If) (S (NP (DT XXX)) (VP (VBZ is) (NP (DT the) (NN case)) (, ,) (SBAR (:time/IN) (:op1/S)))))'],
-                (u':ARG3/PP', '[monetary-quantity, :quant, :unit]'): [u'(PP (IN for) (NP (CD XXX)))'],
-                (u':op2/VP', '[present-01]', 'active', 'infinitive'): [u'(VP (VB XXX) (:ARG2/NP) (:ARG1/PP))'],
-                (u':ARG1/NP', '[company, :name, :op1]'): [u'(NP (:purpose/NNP) (:mod/NNP) (NNP XXX))'],
-                (u':location/PP', '[media]'): [u'(PP (IN in) (NP (:mod/JJ) (:ARG1-of/JJ) (:location/NNP) (:location/NNP) (NNS XXX)))'],
-                (u':ARG1/NN', '[family]'): [u'(NN XXX)'], (u':ARG1/PP', '[gift]'): [u'(PP (IN with) (NP (NNS XXX)))'],
-                (u':op1/VB', '[begin-01]', 'active', 'simple present'): [u'(VB XXX)'],
-                (u':mod/NNP', '[website]'): [u'(NNP XXX)'],
-                (u':ARG1-of/PP', '[have-org-role-91, :ARG2]'): [u'(PP (IN as) (NP (DT a) (JJ nonexecutive) (NN XXX)))'],
-                (u':ARG1/SINV', '[acquire-01]', 'active', 'simple future'): [u'(SINV (:ARG0/FRAG) (VP (VB XXX) (:ARG1/NP)) (:mod/NP))'],
-                (u':ARG1/PP', '[apologize-01]', 'active', 'present continuous'): [u'(PP (IN from) (S (VP (VB XXX) (:op2/PP))))'],
-                (u':ARG0/NP', '[publication, :name, :op1, :op2, :op3]'): [u'(NP (NNP XXX) (NNP XXX) (NNP XXX))'],
-                (u':ARG0/FRAG', '[c]'): [u'(FRAG (NP-TMP (:time/NP) (NP (PRP XXX))))'],
-                (u':ARG1/NP', '[child]'): [u'(NP (DT the) (NN XXX))'],
-                (':ARG1/E', '[industry]'): ['empty'], (':ARG0/E', '[p]'): ['empty'],
-                (u':ARG1/PP', '[h3]'): [u'(PP (IN as) (NP (DT XXX) (NN XXX)))'], (u':ARG1/CC', '[and]'): [u'(CC XXX)'], (':ARG2/E', '[t]'): ['empty'], (u':mod/PP', '[innovate-01]'): [u'(PP (IN in) (NP (NNP Industrial) (NNP XXX)))'], (u':ARG1/NP', '[model]'): [u'(NP (NNS XXX))'], (u':location/NP', '[city, :name, :op1, :op2]'): [u'(NP (NNP XXX) (NNP XXX))'], (u':op3/VP', '[ask-02]', 'active', 'present continuous'): [u'(VP (VB XXX) (:ARG1/S))'], (':ARG1-of/E', '[frequent-02]'): ['empty'], (':ARG1/E', '[c]'): ['empty'], (u':ARG1/VP', '[seem-01]', 'active', 'infinitive'): [u'(VP (VB XXX) (:ARG1/S))'], (':polarity/E', '[-]'): ['empty'], (u':ARG0/NP', '[he]'): [u'(NP (PRP XXX))'], (u':op2/VB', '[end-01]', 'active', 'simple present'): [u'(VB XXX)'], (u':ARG0/NP', '[picture]'): [u'(NP (DT a) (NN XXX))'], (':ARG1/E', '[i]'): ['empty'], (u':ARG1/S', '[help-02]', 'active', 'infinitive'): [u'(S (VP (VB XXX) (:ARG0/NP) (:ARG1/PP)))'], (u':time/S', '[date-entity, :month, :day]'): [u'(S (NP (:location/NP) (NP-TMP (NNP XXX))) (ADJP (JJ 23rd)))'], (':ARG0/E', '[p3]'): ['empty', 'empty'], (u':mod/JJ', '[various]'): [u'(JJ XXX)'], (u':ARG1-of/SBAR', '[look-forward-03]', 'active', 'present perfect continuous'): [u'(SBAR (IN that) (S (:ARG0/NP) (VP (VB XXX) (ADVP (RB XXX)) (PP (TO to)))))'], (u':location/NNP', '[city, :name, :op1, :op2]'): [u'(NNP XXX)'], (u':ARG1/S', '[emerge-01]', 'active', 'present continuous'): [u'(S (VP (VB XXX) (PP (IN with) (NP (NN frequency)))))'], (u':ARG2/PP', '[thing, :name, :op1]'): [u'(PP (IN with) (NP (NNP XXX)))'], (u':ARG1-of/ADVP', '[long-03]'): [u'(ADVP (RB XXX))'], (u':ARG1-of/JJ', '[major-02]'): [u'(JJ XXX)'], (u':op1/S', '[bear-02]', 'passive', 'simple present'): [u'(S (:ARG1/NP) (VP (VB XXX)))'], (u':time/PP', '[date-entity, :year, :season]'): [u'(PP (IN In) (NP (DT the) (NN XXX)))'], (u':time/IN', '[after]'): [u'(IN XXX)'], (u':ARG1/NP', '[it]'): [u'(NP (PRP XXX))'], (u':ARG0/NP', '[h2]'): [u'(NP (PRP XXX))'], (u':op1/NN', '[anything]'): [u'(NN XXX)'], (u':ARG0/NP', '[person, :name, :op1, :op2]'): [u'(NP (NNP XXX) (NNP XXX))'], (u':ARG0/NP', '[person]'): [u'(NP (NNS XXX))'], (u':ARG1/NP', '[board]'): [u'(NP (DT the) (NN XXX))'], (u':mod/NP', '[country, :name, :op1]'): [u'(NP (NNP Million) (NNP XXX) (NNPS Dollars))'], (u':ARG1/S', '[accept-01]', 'passive', 'simple present'): [u'(S (VP (VB XXX) (:ARG1/PP)))'], (u':polarity/RB', '[-]'): [u'(RB XXX)'], (u':ARG2/NP', '[person, :ARG0-of, :ARG2]'): [u'(NP (DT the) (:ARG1/NN) (NN XXX))'], (u':poss/NP', '[person, :ARG0-of, :ARG2]'): [u"(NP (DT the) (NN XXX) (POS 's))"], (u':purpose/NNP', '[ticket]'): [u'(NNP XXX)'], (u':ARG4/PP', '[home]'): [u'(PP (TO to) (NP (:poss/NP) (NN XXX)))'], (':mod/E', '[executive]'): ['empty'], (u':time/NP', '[today]'): [u'(NP (:ARG0/NNP) (NNP Announces) (NNP XXX))'], (u':ARG0/NP', '[person, :ARG0-of, :ARG2]'): [u'(NP (DT the) (NN XXX))'], (u':time/NP-TMP', '[date-entity, :month, :day]'): [u'(NP-TMP (NNP XXX) (CD 29))'], (u':ARG0/NNP', '[company, :name, :op1]'): [u'(NNP XXX)'], (u':age/ADJP', '[temporal-quantity, :quant, :unit]'): [u'(ADJP (NP (CD XXX) (NNS XXX)) (JJ old))']}}
 
         original = {
             'ltag':
@@ -431,7 +398,7 @@ class RuleInducerTest(unittest.TestCase):
                         (u':root/ROOT', '[adjust-01]', 'passive', 'simple past'): [u'(ROOT (S (:ARG1/NP) (VP (VB XXX) (:ARG0/PP)) (. .)))']
                     },
                     'substitution':{
-                        (u':ARG1/NP', '[machine]'): [u'(NP (DT The) (NN XXX))'],
+                        (u':ARG1/NP', '[machine]'): [u'(NP (DT the) (NN XXX))'],
                         (u':ARG0/PP', '[girl]'): [u'(PP (IN by) (NP (DT the) (NN XXX)))']
                     },
                     'adjoining':{
@@ -444,7 +411,7 @@ class RuleInducerTest(unittest.TestCase):
                         u':root/ROOT': [u'(ROOT (S (:ARG1/NP) (VP (VB XXX) (:ARG0/PP)) (. .)))']
                     },
                     'substitution':{
-                        u':ARG1/NP': [u'(NP (DT The) (NN XXX))'],
+                        u':ARG1/NP': [u'(NP (DT the) (NN XXX))'],
                         u':ARG0/PP': [u'(PP (IN by) (NP (DT the) (NN XXX)))']
                     },
                     'adjoining':{
@@ -672,7 +639,7 @@ class RuleInducerTest(unittest.TestCase):
                     },
                     'substitution':{
                         (u':mod/JJ', '[red]'): [u'(JJ XXX)'],
-                        (u':ARG0/NP', '[boy]'): [u'(NP (DT The) (NN XXX))'],
+                        (u':ARG0/NP', '[boy]'): [u'(NP (DT the) (NN XXX))'],
                         (u':ARG1/NP', '[bicycle]'): [u'(NP (DT the) (:mod/JJ) (NN XXX))'],
                         (u':ARG1/S', '[ride-01]', 'active', 'infinitive'): [u'(S (VP (VB XXX) (:ARG1/NP)))']
                     },
@@ -688,7 +655,7 @@ class RuleInducerTest(unittest.TestCase):
                     'substitution':{
                         u':ARG1/NP': [u'(NP (DT the) (:mod/JJ) (NN XXX))'],
                         u':ARG1/S': [u'(S (VP (VB XXX) (:ARG1/NP)))'],
-                        u':ARG0/NP': [u'(NP (DT The) (NN XXX))'],
+                        u':ARG0/NP': [u'(NP (DT the) (NN XXX))'],
                         u':mod/JJ': [u'(JJ XXX)']
                     },
                     'adjoining':{
@@ -736,7 +703,7 @@ class RuleInducerTest(unittest.TestCase):
                     (':ARG1/E', '[p]'): ['empty', 'empty'],
                     (u':mod/NN', '[emergency]'): [u'(NN XXX)'],
                     (u':purpose/PP', '[treat-03]'): [u'(PP (IN for) (NP (NN XXX)))'],
-                    (u':ARG0/NP', '[service]'): [u'(NP (DT The) (:location/NNP) (:mod/NN) (NNS XXX))'],
+                    (u':ARG0/NP', '[service]'): [u'(NP (DT the) (:location/NNP) (:mod/NN) (NNS XXX))'],
                     (u':quant/NNS', '[11]'): [u'(NNS XXX)'],
                     (u':ARG2/ADJP', '[wound-01]'): [u'(ADJP (JJ due) (PP (TO to) (NP (:mod/JJ) (NNS XXX))))'],
                     (u':mod/JJ', '[minor]'): [u'(JJ XXX)'],
@@ -756,7 +723,7 @@ class RuleInducerTest(unittest.TestCase):
                     u':purpose/PP': [u'(PP (IN for) (NP (NN XXX)))'],
                     u':mod/ADVP': [u'(ADVP (RB XXX))'],
                     u':ARG1/SBAR': [u'(SBAR (IN that) (S (:mod/ADVP) (:ARG1/NP) (VP (VB XXX) (:ARG2/PP) (:purpose/PP))))'],
-                    u':ARG0/NP': [u'(NP (DT The) (:location/NNP) (:mod/NN) (NNS XXX))'],
+                    u':ARG0/NP': [u'(NP (DT the) (:location/NNP) (:mod/NN) (NNS XXX))'],
                     u':quant/NNS': [u'(NNS XXX)'], u':ARG1/NP': [u'(NP (:quant/NNS) (NNS XXX))'],
                     u':mod/NN': [u'(NN XXX)'],
                     ':ARG1/E': ['empty', 'empty'],
@@ -803,7 +770,7 @@ class RuleInducerTest(unittest.TestCase):
                 'substitution':{
                     (u':mod/DT', '[this]'): [u'(DT XXX)'],
                     (u':time/PP', '[date-entity, :month, :day]'): [u'(PP (IN on) (NP (NNP XXX) (CD XXX)))'],
-                    (u':ARG0/NP', '[organization, :name, :op1, :op2, :op3]'): [u'(NP (DT The) (NNP XXX) (NNP XXX) (NNP XXX))'],
+                    (u':ARG0/NP', '[organization, :name, :op1, :op2, :op3]'): [u'(NP (DT the) (NNP XXX) (NNP XXX) (NNP XXX))'],
                     (u':ARG1/SBAR', '[list-01]', 'passive', 'simple future'): [u'(SBAR (IN that) (S (:ARG1/NP) (VP (VB XXX) (:ARG2/PP))))'],
                     (u':mod/ADVP', '[official]'): [u'(ADVP (RB XXX))'],
                     (u':ARG2/PP', '[exchange-01]'): [u'(PP (IN on) (NP (DT the) (:ARG1/NN) (NN XXX)))'],
@@ -824,7 +791,7 @@ class RuleInducerTest(unittest.TestCase):
                     u':time/PP': [u'(PP (IN on) (NP (NNP XXX) (CD XXX)))'],
                     u':mod/ADVP': [u'(ADVP (RB XXX))'],
                     u':ARG1/SBAR': [u'(SBAR (IN that) (S (:ARG1/NP) (VP (VB XXX) (:ARG2/PP))))'],
-                    u':ARG0/NP': [u'(NP (DT The) (NNP XXX) (NNP XXX) (NNP XXX))'],
+                    u':ARG0/NP': [u'(NP (DT the) (NNP XXX) (NNP XXX) (NNP XXX))'],
                     u':ARG1/NN': [u'(NN XXX)'], u':ARG1/NP': [u'(NP (:mod/DT) (NN XXX))'],
                     u':mod/DT': [u'(DT XXX)'],
                     u':ARG2/PP': [u'(PP (IN on) (NP (DT the) (:ARG1/NN) (NN XXX)))']
@@ -972,7 +939,7 @@ class RuleInducerTest(unittest.TestCase):
                     (u':degree/RB', '[extreme]'): [u'(RB XXX)'],
                     (':ARG0/E', '[p]'): ['empty'],
                     (u':op1/VP', '[stupid]'): [u'(VP (VBZ is) (ADJP (:degree/RB) (JJ XXX)))'],
-                    (u':domain/NP', '[policy]'): [u'(NP (DT The) (:ARG1/NN) (:topic/NN) (NN XXX))'],
+                    (u':domain/NP', '[policy]'): [u'(NP (DT the) (:ARG1/NN) (:topic/NN) (NN XXX))'],
                     (u':topic/NN', '[plan-01]'): [u'(NN XXX)'],
                     (u':ARG1/NP', '[disaster]'): [u'(NP (NNS XXX))'],
                     (u':ARG1/NN', '[family]'): [u'(NN XXX)'],
@@ -1051,7 +1018,7 @@ class RuleInducerTest(unittest.TestCase):
                     (u':ARG2/PP', '[hand]'): [u'(PP (IN in) (NP (DT the) (NNS XXX)))'],
                     (':ARG2/E', '[terrible-01, :degree]'): ['empty'],
                     (u':ARG1/NP', '[person, :ARG0-of, :ARG2]'): [u'(NP (DT the) (:ARG1/NN) (NNS XXX))'],
-                    (u':ARG1/NP', '[terrible-01]'): [u'(NP (DT The) (ADJP (:degree/RBS) (JJ XXX)) (NN thing))'],
+                    (u':ARG1/NP', '[terrible-01]'): [u'(NP (DT the) (ADJP (:degree/RBS) (JJ XXX)) (NN thing))'],
                     (u':degree/RBS', '[most]'): [u'(RBS XXX)']
                 },
                 'adjoining':{
@@ -1068,7 +1035,7 @@ class RuleInducerTest(unittest.TestCase):
                     u':degree/RBS': [u'(RBS XXX)'],
                     u':ARG1/NN': [u'(NN XXX)'],
                     u':ARG1/NP': [u'(NP (DT the) (:ARG1/NN) (NNS XXX))',
-                                  u'(NP (DT The) (ADJP (:degree/RBS) (JJ XXX)) (NN thing))',
+                                  u'(NP (DT the) (ADJP (:degree/RBS) (JJ XXX)) (NN thing))',
                                   u'(NP (DT the) (NN XXX))'],
                     u':part-of/PP': [u'(PP (IN of) (NP (DT XXX) (NNS XXX)))'],
                     ':ARG2/E': ['empty'],
@@ -1147,6 +1114,80 @@ class RuleInducerTest(unittest.TestCase):
             }}
 
         self.assertDictEqual(original, {'tag':tag, 'ltag':ltag})
+
+    def test_spec7(self):
+        text = 'Audit cadres must require themselves to adhere to the standards they apply when auditing others .'
+
+        amr = """(o2 / obligate-01
+                      :ARG2 (r / require-01
+                            :ARG0 (c / cadre
+                                  :ARG0-of (a / audit-01))
+                            :ARG1 (a2 / adhere-02
+                                  :ARG0 c
+                                  :ARG1 (s / standard
+                                        :ARG1-of (a3 / apply-02
+                                              :ARG0 c
+                                              :ARG2 (a4 / audit-01
+                                                    :ARG0 c
+                                                    :ARG1 (o / other)))))
+                            :ARG2 c))"""
+
+        alignments, info = self.aligner.run(amr, text)
+        inducer = RuleInducer(text, amr, info, alignments)
+        id2subtrees, id2rule, adjtrees = inducer.run()
+
+        tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
+        tag, ltag = inducer.prettify(id2subtrees, id2rule, adjtrees, tag, ltag)
+
+        original = {
+            'ltag': {
+                'initial': {
+                    (u':root/ROOT', '[obligate-01]', 'active', 'simple present'): [u'(ROOT (S (:ARG0/NP) (VP (MD XXX) (:ARG2/VP)) (. .)))']
+                },
+                'adjoining': {
+                    (u':ARG1/S', '[adhere-02]', 'active', 'infinitive'): [u'(VP (TO to) (VP*))'],
+                    (u':ARG1/PP', '[standard]'): [u'(NP (NP*) (:ARG1-of/SBAR))']
+                },
+                'substitution': {
+                    (':ARG2/E', '[c]'): ['empty'],
+                    (u':ARG1/SBAR', '[other]'): [u'(SBAR (WHADVP (WRB when)) (FRAG (NP (:ARG2/NN) (NNS XXX))))'],
+                    (':ARG0/E', '[c]'): ['empty'],
+                    (u':ARG2/NN', '[audit-01]'): [u'(NN XXX)'],
+                    (u':ARG0/NP', '[c]'): [u'(NP (PRP XXX))', u'(NP (PRP XXX))'],
+                    (u':ARG1-of/SBAR', '[apply-02]', 'active', 'simple present'): [u'(SBAR (S (:ARG0/NP) (VP (VB XXX))))'],
+                    (u':ARG1/PP', '[standard]'): [u'(PP (TO to) (NP (DT the) (NNS XXX)))'],
+                    (u':ARG2/VP', '[require-01]', 'active', 'infinitive'): [u'(VP (VB XXX) (:ARG1/S))'],
+                    (u':ARG0-of/NNP', '[audit-01]'): [u'(NNP XXX)'],
+                    (u':ARG0/NP', '[cadre]'): [u'(NP (:ARG0-of/NNP) (NNS XXX))'],
+                    (u':ARG1/S', '[adhere-02]', 'active', 'infinitive'): [u'(S (:ARG0/NP) (VP (VB XXX) (:ARG1/PP) (:ARG1/SBAR)))']
+                }
+            },
+            'tag': {
+                'initial': {
+                    u':root/ROOT': [u'(ROOT (S (:ARG0/NP) (VP (MD XXX) (:ARG2/VP)) (. .)))']
+                },
+                'adjoining': {
+                    u':ARG1/S': [u'(VP (TO to) (VP*))'],
+                    u':ARG1/PP': [u'(NP (NP*) (:ARG1-of/SBAR))']
+                },
+                'substitution': {
+                    u':ARG0-of/NNP': [u'(NNP XXX)'],
+                    u':ARG1/S': [u'(S (:ARG0/NP) (VP (VB XXX) (:ARG1/PP) (:ARG1/SBAR)))'],
+                    u':ARG1-of/SBAR': [u'(SBAR (S (:ARG0/NP) (VP (VB XXX))))'],
+                    u':ARG1/SBAR': [u'(SBAR (WHADVP (WRB when)) (FRAG (NP (:ARG2/NN) (NNS XXX))))'],
+                    u':ARG0/NP': [u'(NP (:ARG0-of/NNP) (NNS XXX))', u'(NP (PRP XXX))', u'(NP (PRP XXX))'],
+                    u':ARG2/VP': [u'(VP (VB XXX) (:ARG1/S))'],
+                    ':ARG0/E': ['empty'],
+                    ':ARG2/E': ['empty'],
+                    u':ARG2/NN': [u'(NN XXX)'],
+                    u':ARG1/PP': [u'(PP (TO to) (NP (DT the) (NNS XXX)))']
+                }
+            }
+        }
+
+        self.assertDictEqual(original, {'tag':tag, 'ltag':ltag})
+
 
 if __name__ == '__main__':
     unittest.main()

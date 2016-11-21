@@ -1,3 +1,5 @@
+from main.old import Aligner, RuleInducer
+
 __author__ = 'thiagocastroferreira'
 
 import json
@@ -5,9 +7,6 @@ import operator
 import os
 import nltk
 import utils
-
-from Aligner import Aligner
-from RuleInducer import RuleInducer
 
 from sys import path
 path.append('/home/tcastrof/amr/scp_repo')
