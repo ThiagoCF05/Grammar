@@ -1,5 +1,8 @@
 __author__ = 'thiagocastroferreira'
 
+from sys import path
+path.append('/home/tcastrof/amr/scp_repo')
+path.append('/home/tcastrof/amr/Grammar')
 from main.aligners.AMRAligner import AMRAligner
 from main.grammars.SynchG import SynchG, SynchRule
 from main.aligners.TAGSynchAligner import TAGSynchAligner
@@ -9,8 +12,6 @@ import json
 import os
 import utils
 
-from sys import path
-path.append('/home/tcastrof/amr/scp_repo')
 from stanford_corenlp_pywrapper import CoreNLP
 
 def write(grammar, fname):
