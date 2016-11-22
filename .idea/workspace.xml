@@ -26,13 +26,16 @@
       <file leaf-file-name="TAGSynchAligner.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/aligners/TAGSynchAligner.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2590" max-vertical-offset="3210">
-              <caret line="321" column="0" selection-start-line="321" selection-start-column="0" selection-end-line="321" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1731" max-vertical-offset="2775">
+              <caret line="308" column="32" selection-start-line="308" selection-start-column="32" selection-end-line="308" selection-end-column="32" />
               <folding>
                 <element signature="e#191#202#0" expanded="true" />
-                <element signature="e#1090#5382#0" expanded="false" />
-                <element signature="e#7217#8609#0" expanded="false" />
-                <element signature="e#10513#11085#0" expanded="false" />
+                <element signature="e#700#1113#0" expanded="false" />
+                <element signature="e#1219#5511#0" expanded="false" />
+                <element signature="e#7298#8967#0" expanded="false" />
+                <element signature="e#9021#10972#0" expanded="false" />
+                <element signature="e#11059#11259#0" expanded="false" />
+                <element signature="e#11309#11881#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -41,44 +44,15 @@
       <file leaf-file-name="AMRAligner.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/aligners/AMRAligner.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2040">
-              <caret line="53" column="181" selection-start-line="53" selection-start-column="181" selection-end-line="53" selection-end-column="181" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2909" max-vertical-offset="3510">
+              <caret line="80" column="57" selection-start-line="80" selection-start-column="57" selection-end-line="80" selection-end-column="57" />
               <folding>
-                <element signature="e#37#48#0" expanded="true" />
                 <element signature="e#663#1822#0" expanded="false" />
-                <element signature="e#2947#3446#0" expanded="false" />
-                <element signature="e#3502#4287#0" expanded="false" />
-                <element signature="e#4342#5733#0" expanded="false" />
-                <element signature="e#5784#13057#0" expanded="false" />
-                <element signature="e#13110#14987#0" expanded="false" />
-                <element signature="e#15052#20652#0" expanded="false" />
+                <element signature="e#3617#4402#0" expanded="false" />
+                <element signature="e#4457#5848#0" expanded="false" />
+                <element signature="e#5899#13254#0" expanded="false" />
+                <element signature="e#13307#15213#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RuleInducer.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/old/RuleInducer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2916" max-vertical-offset="3855">
-              <caret line="247" column="61" selection-start-line="247" selection-start-column="61" selection-end-line="247" selection-end-column="61" />
-              <folding>
-                <element signature="e#1105#2036#0" expanded="false" />
-                <element signature="e#2151#6332#0" expanded="false" />
-                <element signature="e#6766#7941#0" expanded="false" />
-                <element signature="e#8003#9336#0" expanded="false" />
-                <element signature="e#9386#9948#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Aligner.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/old/Aligner.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="7253" max-vertical-offset="8205">
-              <caret line="525" column="54" selection-start-line="525" selection-start-column="37" selection-end-line="525" selection-end-column="54" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -86,30 +60,8 @@
       <file leaf-file-name="test.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="975">
-              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-              <folding>
-                <element signature="e#37#48#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RuleProducer.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/RuleProducer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2055">
-              <caret line="86" column="4" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SynchG.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/grammars/SynchG.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-              <caret line="14" column="36" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="1410">
+              <caret line="53" column="45" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -118,8 +70,8 @@
       <file leaf-file-name="RuleInducerTest.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/RuleInducerTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="97" max-vertical-offset="1740">
-              <caret line="623" column="54" selection-start-line="617" selection-start-column="8" selection-end-line="623" selection-end-column="54" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="65" max-vertical-offset="1755">
+              <caret line="383" column="45" selection-start-line="379" selection-start-column="8" selection-end-line="383" selection-end-column="45" />
               <folding>
                 <element signature="e#654#1739#0" expanded="false" />
                 <element signature="e#1772#2789#0" expanded="false" />
@@ -130,11 +82,11 @@
                 <element signature="e#9174#11154#0" expanded="false" />
                 <element signature="e#11202#13036#0" expanded="false" />
                 <element signature="e#13072#14625#0" expanded="false" />
-                <element signature="e#14663#16470#0" expanded="false" />
                 <element signature="e#16517#18025#0" expanded="false" />
                 <element signature="e#18065#19436#0" expanded="false" />
                 <element signature="e#19475#21931#0" expanded="false" />
                 <element signature="e#21975#25219#0" expanded="false" />
+                <element signature="e#25261#27440#0" expanded="false" />
                 <element signature="e#27476#31647#0" expanded="false" />
                 <element signature="e#31683#35141#0" expanded="false" />
                 <element signature="e#35177#41025#0" expanded="false" />
@@ -142,18 +94,33 @@
                 <element signature="e#45125#49034#0" expanded="false" />
                 <element signature="e#49070#52356#0" expanded="false" />
                 <element signature="e#52392#56235#0" expanded="false" />
+                <element signature="e#56271#56978#0" expanded="false" />
+                <element signature="e#57014#58537#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ERG.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="RuleProducer.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main/RuleProducer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.49684873" vertical-offset="1298" max-vertical-offset="2250">
+              <caret line="55" column="44" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="44" />
+              <folding>
+                <element signature="e#37#84#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ERG.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/grammars/ERG.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.27415967" vertical-offset="279" max-vertical-offset="1470">
-              <caret line="93" column="41" selection-start-line="93" selection-start-column="41" selection-end-line="93" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="80" max-vertical-offset="1020">
+              <caret line="15" column="19" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="19" />
               <folding>
                 <element signature="e#613#3051#0" expanded="false" />
+                <element signature="e#3125#4238#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -164,6 +131,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="368" max-vertical-offset="1320">
               <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utils.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="1695">
+              <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -186,11 +163,9 @@
         <option value="$PROJECT_DIR$/main/data/have-rel-role-91-roles-v1.06.txt" />
         <option value="$PROJECT_DIR$/main/main.py" />
         <option value="$PROJECT_DIR$/main/main_run.py" />
-        <option value="$PROJECT_DIR$/main/utils.py" />
         <option value="$PROJECT_DIR$/main/prepare_alignment_data.py" />
         <option value="$PROJECT_DIR$/test/AlignerTest.py" />
         <option value="$PROJECT_DIR$/main/run.py" />
-        <option value="$PROJECT_DIR$/test/RuleInducerTest.py" />
         <option value="$PROJECT_DIR$/main/layouts.py" />
         <option value="$PROJECT_DIR$/main/Aligner.py" />
         <option value="$PROJECT_DIR$/main/Generator.py" />
@@ -198,12 +173,14 @@
         <option value="$PROJECT_DIR$/main/ERGCreator.py" />
         <option value="$PROJECT_DIR$/main/aligners/Alignments.py" />
         <option value="$PROJECT_DIR$/main/grammars/TAG.py" />
-        <option value="$PROJECT_DIR$/main/test.py" />
-        <option value="$PROJECT_DIR$/main/grammars/ERG.py" />
-        <option value="$PROJECT_DIR$/main/aligners/TAGSynchAligner.py" />
-        <option value="$PROJECT_DIR$/main/aligners/AMRAligner.py" />
-        <option value="$PROJECT_DIR$/main/RuleProducer.py" />
         <option value="$PROJECT_DIR$/main/grammars/SynchG.py" />
+        <option value="$PROJECT_DIR$/test/RuleInducerTest.py" />
+        <option value="$PROJECT_DIR$/main/grammars/ERG.py" />
+        <option value="$PROJECT_DIR$/main/aligners/AMRAligner.py" />
+        <option value="$PROJECT_DIR$/main/test.py" />
+        <option value="$PROJECT_DIR$/main/aligners/TAGSynchAligner.py" />
+        <option value="$PROJECT_DIR$/main/utils.py" />
+        <option value="$PROJECT_DIR$/main/RuleProducer.py" />
       </list>
     </option>
   </component>
@@ -239,6 +216,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -299,14 +277,49 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="old" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Models" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="grammars" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Models" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aligners" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -324,7 +337,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/anaconda/bin" />
-    <property name="FullScreen" value="false" />
+    <property name="FullScreen" value="true" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
   </component>
@@ -342,27 +355,7 @@
       <recent name="$PROJECT_DIR$/main" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test (1)">
-    <configuration default="false" name="run" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/main" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Models" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/RuleProducer.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PyDebugRunner" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PyDebugRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.RuleProducer">
     <configuration default="false" name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -440,6 +433,26 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Models" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/grammars/ERG.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="RuleProducer" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/main" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Models" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/RuleProducer.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
@@ -703,6 +716,19 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <method />
+    </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -723,33 +749,20 @@
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
-    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="" />
-      <setting name="testKind" value="Class" />
-      <setting name="showProgressMessages" value="true" />
-      <method />
-    </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.run" />
-      <item index="1" class="java.lang.String" itemvalue="Python.test (1)" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in RuleInducerTest" />
-      <item index="3" class="java.lang.String" itemvalue="Python.TAG" />
-      <item index="4" class="java.lang.String" itemvalue="Python.ERG" />
+      <item index="0" class="java.lang.String" itemvalue="Python.test (1)" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in RuleInducerTest" />
+      <item index="2" class="java.lang.String" itemvalue="Python.TAG" />
+      <item index="3" class="java.lang.String" itemvalue="Python.ERG" />
+      <item index="4" class="java.lang.String" itemvalue="Python.RuleProducer" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.test (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Python.ERG" />
-        <item index="2" class="java.lang.String" itemvalue="Python.TAG" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in RuleInducerTest" />
-        <item index="4" class="java.lang.String" itemvalue="Python.run" />
+        <item index="0" class="java.lang.String" itemvalue="Python.RuleProducer" />
+        <item index="1" class="java.lang.String" itemvalue="Python.test (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Python.ERG" />
+        <item index="3" class="java.lang.String" itemvalue="Python.TAG" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in RuleInducerTest" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -807,12 +820,12 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17155068" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47040817" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34489796" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -835,9 +848,9 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17155068" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.47040817" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34489796" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -875,20 +888,40 @@
           <option name="timeStamp" value="135" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/main/old/Aligner.py</url>
-          <line>473</line>
-          <option name="timeStamp" value="144" />
+          <url>file://$PROJECT_DIR$/main/RuleProducer.py</url>
+          <line>18</line>
+          <option name="timeStamp" value="174" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/main/aligners/AMRAligner.py</url>
-          <line>503</line>
-          <option name="timeStamp" value="152" />
+          <line>348</line>
+          <option name="timeStamp" value="205" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/main/RuleProducer.py</url>
+          <line>87</line>
+          <option name="timeStamp" value="208" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/main/aligners/TAGSynchAligner.py</url>
+          <line>306</line>
+          <option name="timeStamp" value="209" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/main/aligners/TAGSynchAligner.py</url>
+          <line>284</line>
+          <option name="timeStamp" value="210" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/main/aligners/TAGSynchAligner.py</url>
+          <line>266</line>
+          <option name="timeStamp" value="211" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="172" />
+      <option name="time" value="212" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -896,42 +929,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/main/old/RuleInducer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="615" max-vertical-offset="2025">
-          <caret line="43" column="53" selection-start-line="42" selection-start-column="16" selection-end-line="43" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="270">
-          <caret line="12" column="31" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/old/Aligner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="1380">
-          <caret line="74" column="61" selection-start-line="74" selection-start-column="61" selection-end-line="74" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/RuleInducerTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="6015" max-vertical-offset="6210">
-          <caret line="401" column="120" selection-start-line="401" selection-start-column="120" selection-end-line="401" selection-end-column="120" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/old/RuleInducer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="615" max-vertical-offset="2025">
-          <caret line="43" column="53" selection-start-line="42" selection-start-column="16" selection-end-line="43" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="270">
@@ -1165,13 +1162,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66239315" vertical-offset="0" max-vertical-offset="1695">
-          <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/old/layouts.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29829547" vertical-offset="0" max-vertical-offset="704">
@@ -1179,18 +1169,83 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main/old/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26785713" vertical-offset="45" max-vertical-offset="2055">
+          <caret line="20" column="25" selection-start-line="0" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/old/Aligner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="6905" max-vertical-offset="8205">
+          <caret line="473" column="0" selection-start-line="473" selection-start-column="0" selection-end-line="473" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python2.7/site-packages/nltk/stem/porter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="9302" max-vertical-offset="10530">
+          <caret line="631" column="0" selection-start-line="631" selection-start-column="0" selection-end-line="631" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/grammars/SynchG.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
+          <caret line="3" column="140" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="140" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main/aligners/Alignments.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-          <caret line="3" column="80" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="80" />
+        <state vertical-scroll-proportion="0.31578946" vertical-offset="0" max-vertical-offset="570">
+          <caret line="12" column="94" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="94" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/grammars/TAG.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1320">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/grammars/ERG.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="80" max-vertical-offset="1020">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="19" />
+          <folding>
+            <element signature="e#613#3051#0" expanded="false" />
+            <element signature="e#3125#4238#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/aligners/AMRAligner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="566" max-vertical-offset="3510">
+          <caret line="80" column="57" selection-start-line="80" selection-start-column="57" selection-end-line="80" selection-end-column="57" />
+          <folding>
+            <element signature="e#663#1822#0" expanded="false" />
+            <element signature="e#3617#4402#0" expanded="false" />
+            <element signature="e#4457#5848#0" expanded="false" />
+            <element signature="e#5899#13254#0" expanded="false" />
+            <element signature="e#13307#15213#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/RuleInducerTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="67" max-vertical-offset="1710">
-          <caret line="623" column="54" selection-start-line="617" selection-start-column="8" selection-end-line="623" selection-end-column="54" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="65" max-vertical-offset="1755">
+          <caret line="383" column="45" selection-start-line="379" selection-start-column="8" selection-end-line="383" selection-end-column="45" />
           <folding>
             <element signature="e#654#1739#0" expanded="false" />
             <element signature="e#1772#2789#0" expanded="false" />
@@ -1201,11 +1256,11 @@
             <element signature="e#9174#11154#0" expanded="false" />
             <element signature="e#11202#13036#0" expanded="false" />
             <element signature="e#13072#14625#0" expanded="false" />
-            <element signature="e#14663#16470#0" expanded="false" />
             <element signature="e#16517#18025#0" expanded="false" />
             <element signature="e#18065#19436#0" expanded="false" />
             <element signature="e#19475#21931#0" expanded="false" />
             <element signature="e#21975#25219#0" expanded="false" />
+            <element signature="e#25261#27440#0" expanded="false" />
             <element signature="e#27476#31647#0" expanded="false" />
             <element signature="e#31683#35141#0" expanded="false" />
             <element signature="e#35177#41025#0" expanded="false" />
@@ -1213,29 +1268,15 @@
             <element signature="e#45125#49034#0" expanded="false" />
             <element signature="e#49070#52356#0" expanded="false" />
             <element signature="e#52392#56235#0" expanded="false" />
+            <element signature="e#56271#56978#0" expanded="false" />
+            <element signature="e#57014#58537#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/old/Aligner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="7253" max-vertical-offset="8205">
-          <caret line="525" column="54" selection-start-line="525" selection-start-column="37" selection-end-line="525" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/grammars/TAG.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="368" max-vertical-offset="1320">
-          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/old/RuleInducer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="628" max-vertical-offset="3855">
+        <state vertical-scroll-proportion="0.0" vertical-offset="891" max-vertical-offset="2940">
           <caret line="247" column="61" selection-start-line="247" selection-start-column="61" selection-end-line="247" selection-end-column="61" />
           <folding>
             <element signature="e#1105#2036#0" expanded="false" />
@@ -1243,72 +1284,49 @@
             <element signature="e#6766#7941#0" expanded="false" />
             <element signature="e#8003#9336#0" expanded="false" />
             <element signature="e#9386#9948#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/aligners/TAGSynchAligner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2590" max-vertical-offset="3210">
-          <caret line="321" column="0" selection-start-line="321" selection-start-column="0" selection-end-line="321" selection-end-column="0" />
-          <folding>
-            <element signature="e#191#202#0" expanded="true" />
-            <element signature="e#1090#5382#0" expanded="false" />
-            <element signature="e#7217#8609#0" expanded="false" />
-            <element signature="e#10513#11085#0" expanded="false" />
+            <element signature="e#15334#17560#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="975">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="1410">
+          <caret line="53" column="45" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/aligners/TAGSynchAligner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1731" max-vertical-offset="2775">
+          <caret line="308" column="32" selection-start-line="308" selection-start-column="32" selection-end-line="308" selection-end-column="32" />
           <folding>
-            <element signature="e#37#48#0" expanded="true" />
+            <element signature="e#191#202#0" expanded="true" />
+            <element signature="e#700#1113#0" expanded="false" />
+            <element signature="e#1219#5511#0" expanded="false" />
+            <element signature="e#7298#8967#0" expanded="false" />
+            <element signature="e#9021#10972#0" expanded="false" />
+            <element signature="e#11059#11259#0" expanded="false" />
+            <element signature="e#11309#11881#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="1695">
+          <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/RuleProducer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2055">
-          <caret line="86" column="4" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/aligners/AMRAligner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="260" max-vertical-offset="2040">
-          <caret line="53" column="181" selection-start-line="53" selection-start-column="181" selection-end-line="53" selection-end-column="181" />
+        <state vertical-scroll-proportion="-0.49684873" vertical-offset="1298" max-vertical-offset="2250">
+          <caret line="55" column="44" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="44" />
           <folding>
-            <element signature="e#37#48#0" expanded="true" />
-            <element signature="e#663#1822#0" expanded="false" />
-            <element signature="e#2947#3446#0" expanded="false" />
-            <element signature="e#3502#4287#0" expanded="false" />
-            <element signature="e#4342#5733#0" expanded="false" />
-            <element signature="e#5784#13057#0" expanded="false" />
-            <element signature="e#13110#14987#0" expanded="false" />
-            <element signature="e#15052#20652#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/grammars/SynchG.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-          <caret line="14" column="36" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/grammars/ERG.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27415967" vertical-offset="279" max-vertical-offset="1470">
-          <caret line="93" column="41" selection-start-line="93" selection-start-column="41" selection-end-line="93" selection-end-column="41" />
-          <folding>
-            <element signature="e#613#3051#0" expanded="false" />
+            <element signature="e#37#84#0" expanded="true" />
           </folding>
         </state>
       </provider>

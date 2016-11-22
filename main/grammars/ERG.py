@@ -100,7 +100,7 @@ class AMR(object):
                 closing = True
 
             for edge in self.edges[root]:
-                amr = amr + ' \n' + (level * '\t') + edge.name
+                amr = amr + ' \n' + (level * '\t') + ' ' + edge.name
                 if not edge.isRule:
                     amr = print_amr(edge.node_id, head, amr, level)
                 else:
@@ -114,7 +114,7 @@ class AMR(object):
         return print_amr(root, head, '', 0)
 
 class ERGRule(object):
-    def __init__(self, name='', parent='', head='', graph=AMR, tokens=[], lemmas=[], rules={}):
+    def __init__(self, name='', parent='', head='', graph=None, tokens=[], lemmas=[], rules={}):
         self.name = name
         self.parent = parent
         self.head = head

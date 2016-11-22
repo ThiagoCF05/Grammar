@@ -1188,6 +1188,54 @@ class RuleInducerTest(unittest.TestCase):
 
         self.assertDictEqual(original, {'tag':tag, 'ltag':ltag})
 
+    def test_spec8(self):
+        text = 'Pierre Vinken , 61 years old , will join the board as a nonexecutive director Nov. 29 .'
+
+        amr = """(j / join-01
+                  :ARG0 (p / person :wiki -
+                        :name (p2 / name :op1 "Pierre" :op2 "Vinken")
+                        :age (t / temporal-quantity :quant 61
+                              :unit (y / year)))
+                  :ARG1 (b / board
+                        :ARG1-of (h / have-org-role-91
+                              :ARG0 p
+                              :ARG2 (d2 / director
+                                    :mod (e / executive :polarity -))))
+                  :time (d / date-entity :month 11 :day 29))"""
+
+        self.assertEqual('', 'thiago')
+
+    def test_spec9(self):
+        text = 'If that is the case, after the child is born, the father will go to the mother\'s home, and present the family matriarch with gifts, asking to be accepted as the father.'
+
+        amr = """(a / and
+                      :op1 (g / go-02
+                            :ARG0 (p3 / person
+                                  :ARG0-of (h3 / have-rel-role-91
+                                        :ARG1 c
+                                        :ARG2 (f / father)))
+                            :ARG4 (h / home
+                                  :poss (p4 / person
+                                        :ARG0-of (h4 / have-rel-role-91
+                                              :ARG1 c
+                                              :ARG2 (m / mother)))))
+                      :op2 (p / present-01
+                            :ARG0 p3
+                            :ARG1 (g2 / gift)
+                            :ARG2 (p2 / person
+                                  :ARG0-of (h2 / have-org-role-91
+                                        :ARG1 (f2 / family)
+                                        :ARG2 (m2 / matriarch))))
+                      :op3 (a3 / ask-02
+                            :ARG0 p3
+                            :ARG1 (a4 / accept-01
+                                  :ARG1 h3))
+                      :time (a2 / after
+                            :op1 (b / bear-02
+                                  :ARG1 (c / child)))
+                      :condition (t / that)) """
+
+        self.assertEqual('', 'thiago')
 
 if __name__ == '__main__':
     unittest.main()
