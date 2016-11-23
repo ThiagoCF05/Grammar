@@ -29,7 +29,7 @@ def parse_corpus(fname):
     instances = doc.split('\n\n')[1:]
 
     amrs = []
-    for instance in instances[:1]:
+    for instance in instances:
         try:
             instance = instance.split('\n')
             sentence_id = instance[0].split()[2]

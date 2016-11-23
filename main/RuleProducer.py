@@ -52,7 +52,7 @@ def main(aligner):
         print fname, '\r',
         amrs = utils.parse_corpus(os.path.join(dir, fname))
 
-        for amr in amrs[:30]:
+        for amr in amrs:
             processed = processed + 1
             try:
                 alignments, info = aligner.run(amr['amr'], amr['sentence'])
