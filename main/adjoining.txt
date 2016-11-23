@@ -1,0 +1,347 @@
+[
+    {
+        "features": {
+            "tense": "simple present",
+            "type": "verb",
+            "voice": "active"
+        },
+        "graph": "(XXX \n\t :year c \n\t :season (s2 / summer))",
+        "graph_rules": {},
+        "head": "date-entity",
+        "name": ":time/PP",
+        "parent_head": "start-01",
+        "parent_rule": ":root/ROOT",
+        "tree": "(NP (NP*) (PP))",
+        "tree_rules": []
+    },
+    {
+        "features": {
+            "tense": "simple present",
+            "type": "verb",
+            "voice": "active"
+        },
+        "graph": "(XXX \n\t :mod/JJ - \n\t :ARG1-of/JJ - \n\t :location/NNP -)",
+        "graph_rules": {
+            "media": [
+                ":mod/JJ",
+                ":ARG1-of/JJ",
+                ":location/NNP"
+            ]
+        },
+        "head": "media",
+        "name": ":location/PP",
+        "parent_head": "emerge-01",
+        "parent_rule": ":ARG1/S",
+        "tree": "(NP (NP*) (PP))",
+        "tree_rules": []
+    },
+    {
+        "features": {
+            "tense": "present perfect continuous",
+            "type": "verb",
+            "voice": "active"
+        },
+        "graph": "(XXX \n\t :ARG0/NP - \n\t :ARG1-of/ADVP -)",
+        "graph_rules": {
+            "look-forward-03": [
+                ":ARG0/NP",
+                ":ARG1-of/ADVP"
+            ]
+        },
+        "head": "look-forward-03",
+        "name": ":ARG1-of/SBAR",
+        "parent_head": "picture",
+        "parent_rule": ":ARG0/NP",
+        "tree": "(VP (VB be) (VP*))",
+        "tree_rules": []
+    },
+    {
+        "features": {
+            "tense": "present perfect continuous",
+            "type": "verb",
+            "voice": "active"
+        },
+        "graph": "(XXX \n\t :ARG0/NP - \n\t :ARG1-of/ADVP -)",
+        "graph_rules": {
+            "look-forward-03": [
+                ":ARG0/NP",
+                ":ARG1-of/ADVP"
+            ]
+        },
+        "head": "look-forward-03",
+        "name": ":ARG1-of/SBAR",
+        "parent_head": "picture",
+        "parent_rule": ":ARG0/NP",
+        "tree": "(VP (VB have) (:ARG1-of/ADVP) (VP*))",
+        "tree_rules": []
+    },
+    {
+        "features": {
+            "tense": "simple present",
+            "type": "verb",
+            "voice": "active"
+        },
+        "graph": "(XXX \n\t :ARG1-of/SBAR -)",
+        "graph_rules": {
+            "picture": [
+                ":ARG1-of/SBAR"
+            ]
+        },
+        "head": "picture",
+        "name": ":ARG0/NP",
+        "parent_head": "start-01",
+        "parent_rule": ":root/ROOT",
+        "tree": "(NP (NP*) (:ARG1-of/SBAR))",
+        "tree_rules": []
+    },
+    {
+        "features": {
+            "tense": "simple present",
+            "type": "verb",
+            "voice": "active"
+        },
+        "graph": "(XXX \n\t :name (p2 / name \n\t\t :op1 c \n\t\t :op2 c) \n\t :age/ADJP -)",
+        "graph_rules": {
+            "person": [
+                ":age/ADJP"
+            ]
+        },
+        "head": "person",
+        "name": ":ARG0/NP",
+        "parent_head": "join-01",
+        "parent_rule": ":root/ROOT",
+        "tree": "(NP (NP*) (, ,) (:age/ADJP) (, ,))",
+        "tree_rules": []
+    },
+    {
+        "features": {
+            "tense": "simple future",
+            "type": "verb",
+            "voice": "active"
+        },
+        "graph": "(XXX \n\t :ARG0/NP - \n\t :ARG1/NP - \n\t :time/NP-TMP -)",
+        "graph_rules": {
+            "join-01": [
+                ":ARG0/NP",
+                ":ARG1/NP",
+                ":time/NP-TMP"
+            ]
+        },
+        "head": "join-01",
+        "name": ":root/ROOT",
+        "parent_head": "",
+        "parent_rule": "",
+        "tree": "(VP (MD will) (VP*))",
+        "tree_rules": []
+    },
+    {
+        "features": {
+            "tense": "infinitive",
+            "type": "verb",
+            "voice": "active"
+        },
+        "graph": "(XXX \n\t :ARG0/NP - \n\t :ARG1/PP -)",
+        "graph_rules": {
+            "help-02": [
+                ":ARG0/NP",
+                ":ARG1/PP"
+            ]
+        },
+        "head": "help-02",
+        "name": ":ARG1/S",
+        "parent_head": "seem-01",
+        "parent_rule": ":ARG1/VP",
+        "tree": "(VP (TO to) (VP*))",
+        "tree_rules": []
+    },
+    {
+        "features": {
+            "tense": "simple present",
+            "type": "verb",
+            "voice": "active"
+        },
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "gift",
+        "name": ":ARG1/PP",
+        "parent_head": "present-01",
+        "parent_rule": ":op2/VP",
+        "tree": "(NP (NP*) (, ,) (:op3/VP))",
+        "tree_rules": []
+    },
+    {
+        "features": {
+            "tense": "simple present",
+            "type": "verb",
+            "voice": "passive"
+        },
+        "graph": "(XXX \n\t :ARG1/E -)",
+        "graph_rules": {
+            "accept-01": [
+                ":ARG1/E"
+            ]
+        },
+        "head": "accept-01",
+        "name": ":ARG1/S",
+        "parent_head": "ask-02",
+        "parent_rule": ":op3/VP",
+        "tree": "(VP (VB be) (VP*))",
+        "tree_rules": []
+    },
+    {
+        "features": {
+            "tense": "simple present",
+            "type": "verb",
+            "voice": "passive"
+        },
+        "graph": "(XXX \n\t :ARG1/E -)",
+        "graph_rules": {
+            "accept-01": [
+                ":ARG1/E"
+            ]
+        },
+        "head": "accept-01",
+        "name": ":ARG1/S",
+        "parent_head": "ask-02",
+        "parent_rule": ":op3/VP",
+        "tree": "(VP (TO to) (VP*))",
+        "tree_rules": []
+    },
+    {
+        "features": {
+            "tense": "simple present",
+            "type": "verb",
+            "voice": "active"
+        },
+        "graph": "(XXX \n\t :op1/VP - \n\t :op2/VP - \n\t :op3/VP - \n\t :time/IN - \n\t :condition/SBAR -)",
+        "graph_rules": {
+            "and": [
+                ":op1/VP",
+                ":op2/VP",
+                ":op3/VP",
+                ":time/IN",
+                ":condition/SBAR"
+            ]
+        },
+        "head": "and",
+        "name": ":root/ROOT",
+        "parent_head": "",
+        "parent_rule": "",
+        "tree": "(VP (MD will) (VP*))",
+        "tree_rules": []
+    },
+    {
+        "features": {
+            "tense": "simple present",
+            "type": "verb",
+            "voice": "passive"
+        },
+        "graph": "(XXX \n\t :ARG1/NP -)",
+        "graph_rules": {
+            "bear-02": [
+                ":ARG1/NP"
+            ]
+        },
+        "head": "bear-02",
+        "name": ":op1/S",
+        "parent_head": "after",
+        "parent_rule": ":time/IN",
+        "tree": "(VP (VB be) (VP*))",
+        "tree_rules": []
+    },
+    {
+        "features": {
+            "tense": "simple present",
+            "type": "verb",
+            "voice": "active"
+        },
+        "graph": "(XXX \n\t :ARG0/E - \n\t :ARG1/NP -)",
+        "graph_rules": {
+            "emit-01": [
+                ":ARG0/E",
+                ":ARG1/NP"
+            ]
+        },
+        "head": "emit-01",
+        "name": ":ARG1/SBAR",
+        "parent_head": "cause-01",
+        "parent_rule": ":ARG0-of/E",
+        "tree": "(NP (NP*) (SBAR))",
+        "tree_rules": []
+    },
+    {
+        "features": {
+            "tense": "simple present",
+            "type": "verb",
+            "voice": "active"
+        },
+        "graph": "(XXX \n\t :ARG0/E - \n\t :ARG1/PP -)",
+        "graph_rules": {
+            "exploit-01": [
+                ":ARG0/E",
+                ":ARG1/PP"
+            ]
+        },
+        "head": "exploit-01",
+        "name": ":ARG1/NP",
+        "parent_head": "accelerate-01",
+        "parent_rule": ":ARG1/SBAR",
+        "tree": "(NP (NP*) (:ARG1/PP))",
+        "tree_rules": []
+    },
+    {
+        "features": {
+            "tense": "simple present",
+            "type": "verb",
+            "voice": "active"
+        },
+        "graph": "(XXX \n\t :name (n2 / name \n\t\t :op1 c) \n\t :mod/NNP -)",
+        "graph_rules": {
+            "company": [
+                ":mod/NNP"
+            ]
+        },
+        "head": "company",
+        "name": ":ARG1/NP",
+        "parent_head": "acquire-01",
+        "parent_rule": ":ARG1/SINV",
+        "tree": "(NP (NP*) (:ARG3/PP))",
+        "tree_rules": []
+    },
+    {
+        "features": {
+            "tense": "simple future",
+            "type": "verb",
+            "voice": "active"
+        },
+        "graph": "(XXX \n\t :ARG0/FRAG - \n\t :ARG1/NP - \n\t :ARG3/PP -)",
+        "graph_rules": {
+            "acquire-01": [
+                ":ARG0/FRAG",
+                ":ARG1/NP",
+                ":ARG3/PP"
+            ]
+        },
+        "head": "acquire-01",
+        "name": ":ARG1/SINV",
+        "parent_head": "announce-01",
+        "parent_rule": ":root/ROOT",
+        "tree": "(VP (MD will) (VP*))",
+        "tree_rules": []
+    },
+    {
+        "features": {
+            "tense": "simple present",
+            "type": "verb",
+            "voice": "active"
+        },
+        "graph": "(XXX \n\t :name (n2 / name \n\t\t :op1 c \n\t\t :op2 c))",
+        "graph_rules": {},
+        "head": "city",
+        "name": ":location/NP",
+        "parent_head": "byline-91",
+        "parent_rule": ":root/ROOT",
+        "tree": "(NP (:ARG0/NP) (, ,) (NP*) (, ,))",
+        "tree_rules": []
+    }
+]

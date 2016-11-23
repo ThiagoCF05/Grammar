@@ -116,7 +116,7 @@ class AMRAligner(object):
                 rule.graph.nodes[root] = copy.copy(self.amr.nodes[root])
 
                 rule.graph.edges[root] = []
-                for _edge in self.amr.graph.edges[root]:
+                for _edge in self.amr.edges[root]:
                     if _edge.name == edge.name:
                         rule.graph.edges[root].append(AMREdge(name=_edge.name, node_id=_edge.node_id, isRule=False))
                     else:
