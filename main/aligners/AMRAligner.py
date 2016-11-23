@@ -51,14 +51,18 @@ class AMRAligner(object):
         self.amr.nodes[root].status = 'labeled'
 
         if rule == None:
-            rule = ERGRule(name=self.amr.nodes[root].parent['edge'], head=self.amr.nodes[root].name, graph=AMR(nodes={}, edges={}, root=''), tokens=[], lemmas=[], parent='', rules={})
+            rule = ERGRule(name=self.amr.nodes[root].parent['edge'],
+                           head=self.amr.nodes[root].name,
+                           graph=AMR(nodes={}, edges={}, root=root),
+                           tokens=[],
+                           lemmas=[],
+                           parent='',
+                           rules={})
 
         indexes = copy.copy(self.amr.nodes[root].tokens)
         lemmas = map(lambda x: self.info['lemmas'][x], indexes)
         rule.tokens.extend(indexes)
         rule.lemmas.extend(lemmas)
-
-        rule.graph.root = root
 
         node = self.amr.nodes[root]
         rule.graph.nodes[root] = AMRNode(id=node.id, name=node.name, parent=node.parent, status=node.status, tokens=node.tokens)
@@ -90,9 +94,37 @@ class AMRAligner(object):
         if root in rule.rules and len(rule.rules[root]) == 0:
             del rule.rules[root]
 
-        rule.graph.root = root
-        rule.tokens = list(set(rule.tokens))
         return rule
+
+    def create_father(self, root, edge):
+        self.amr.nodes[root].status = 'labeled'
+
+        for rule_id in self.alignments.erg_rules:
+            rule = self.alignments.erg_rules[rule_id]
+
+            if rule.graph.root == edge.node_id:
+                rule.name = self.amr.nodes[root].parent['edge']
+                rule.head = self.amr.nodes[root].name
+                rule.graph.root = root
+
+                indexes = self.amr.nodes[root].tokens
+                _lemmas = map(lambda x: self.info['lemmas'][x], indexes)
+                rule.tokens.extend(indexes)
+                rule.lemmas.extend(_lemmas)
+                rule.tokens = list(set(rule.tokens))
+
+                rule.graph.nodes[root] = copy.copy(self.amr.nodes[root])
+
+                rule.graph.edges[root] = []
+                for _edge in self.amr.graph.edges[root]:
+                    if _edge.name == edge.name:
+                        rule.graph.edges[root].append(AMREdge(name=_edge.name, node_id=_edge.node_id, isRule=False))
+                    else:
+                        rule.graph.edges[root].append(AMREdge(name=_edge.name, node_id=_edge.node_id, isRule=True))
+                        if root not in rule.rules:
+                            rule.rules[root] = []
+                        rule.rules[root].append(_edge.name)
+                break
 
     def match_frequency_patterns(self, root):
         try:
@@ -176,7 +208,8 @@ class AMRAligner(object):
         # MATCH PROPBANK
         if isSet < 0:
             m = regex_propbank.match(concept)
-            if m != None:
+            # Avoid reification tags
+            if m != None and str(concept.split('-')[-1]) != '91':
                 concept = m.groups()[0]
                 # Split for the case of phrasal verbs
                 for _concept in concept.split('-'):
@@ -345,32 +378,6 @@ class AMRAligner(object):
                 tokens = self.amr.nodes[entity].tokens
             match(entity, tokens)
 
-    def create_father(self, root, edge):
-        self.amr.nodes[root].status = 'labeled'
-
-        for rule_id in self.alignments.erg_rules:
-            if self.alignments.erg_rules[rule_id].graph.root == edge.node_id:
-                self.alignments.erg_rules[rule_id].name = self.amr.nodes[root].parent['edge']
-                self.alignments.erg_rules[rule_id].head = self.amr.nodes[root].name
-                self.alignments.erg_rules[rule_id].graph.root = root
-
-                indexes = self.amr.nodes[root].tokens
-                _lemmas = map(lambda x: self.info['lemmas'][x], indexes)
-                self.alignments.erg_rules[rule_id].tokens.extend(indexes)
-                self.alignments.erg_rules[rule_id].lemmas.extend(_lemmas)
-                self.alignments.erg_rules[rule_id].tokens = list(set(self.alignments.erg_rules[rule_id].tokens))
-
-                self.alignments.erg_rules[rule_id].graph.nodes[root] = copy.copy(self.amr.nodes[root])
-
-                self.alignments.erg_rules[rule_id].graph.edges[root] = copy.copy(self.amr.edges[root])
-                for _edge in self.alignments.erg_rules[rule_id].graph.edges[root]:
-                    if _edge.name != edge.name:
-                        _edge.isRule = True
-                        if root not in self.alignments.erg_rules[rule_id].rules:
-                            self.alignments.erg_rules[rule_id].rules[root] = []
-                        self.alignments.erg_rules[rule_id].rules[root].append(_edge.name)
-                break
-
     def align(self, root, visited, isAligned = False):
         visited.append(root)
 
@@ -482,6 +489,7 @@ class AMRAligner(object):
 
         return self.alignments, self.info
 
+    # TO DO: refactor
     def train(self, amr, text):
         self.info, self.coref = self.get_corenlp_result(text)
 
@@ -500,5 +508,16 @@ class AMRAligner(object):
             rule = self.create_rule(node)
             self.alignments.erg_rules[self.alignments.count] = rule
             self.alignments.count = self.alignments.count + 1
+
+        # Set parent rule names
+        for rule_id in self.alignments.erg_rules:
+            graph = self.alignments.erg_rules[rule_id].graph
+            root = graph.root
+            parent = graph.nodes[root].parent
+
+            for _id in self.alignments.erg_rules:
+                if parent['node'] in self.alignments.erg_rules[_id].graph.nodes:
+                    self.alignments.erg_rules[rule_id].parent = _id
+                    break
 
         return self.alignments, self.info

@@ -31,7 +31,7 @@ def write(grammar, fname):
             'graph':graph,
             'graph_rules':rule.graph_rules,
             'tree':tree,
-            # 'tree_rules':rule.tree_rules,
+            'tree_rules':rule.tree_rules,
             'features':{
                 'type': rule.features.type,
                 'voice': rule.features.voice,
@@ -52,7 +52,7 @@ def main(aligner):
         print fname, '\r',
         amrs = utils.parse_corpus(os.path.join(dir, fname))
 
-        for amr in amrs:
+        for amr in amrs[:30]:
             processed = processed + 1
             try:
                 alignments, info = aligner.run(amr['amr'], amr['sentence'])
@@ -126,7 +126,7 @@ def main(aligner):
                 print 'INDUCER ERROR', amr['file'], amr['id']
                 print 'AMRs processed: ', processed
                 print 'Errors: ', errors
-                print 'Rate: ', str(round(float(processed)/errors, 4))
+                print 'Rate: ', str(round(float(errors)/processed, 4))
                 print 20 * '-' + '\n\n'
 
     return grammar

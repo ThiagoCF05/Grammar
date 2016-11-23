@@ -68,7 +68,7 @@ class Tree(object):
         return print_tree(root, '')
 
 class TAGRule(object):
-    def __init__(self, name='', parent='', head='', tree=Tree, type='initial', rules={}):
+    def __init__(self, name='', parent='', head='', tree=Tree, type='initial', rules=[]):
         self.name = name
         self.parent = parent
         self.head = head

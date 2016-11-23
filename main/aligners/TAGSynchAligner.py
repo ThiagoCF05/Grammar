@@ -4,7 +4,7 @@ __author__ = 'thiagocastroferreira'
 Author: Thiago Castro Ferreira
 Date: 31/10/2016
 Description:
-    This script aims to extract the rules of our Lexicalized Tree Adjoining Grammar
+    This script aims to extract the rules of our Synchronized Grammar
 """
 
 import copy
@@ -27,7 +27,12 @@ class TAGSynchAligner(object):
     def set_tree_rules(self):
         for rule_id in self.alignments.erg_rules:
             # Initializing subtrees with their heads
-            self.alignments.tag_rules[rule_id] = TAGRule(tree=Tree(nodes={}, edges={}, root=1), head=self.alignments.erg_rules[rule_id].head, name='', rules={}, parent='', type='substitution')
+            self.alignments.tag_rules[rule_id] = TAGRule(tree=Tree(nodes={}, edges={}, root=1),
+                                                         head=self.alignments.erg_rules[rule_id].head,
+                                                         name=self.alignments.erg_rules[rule_id].name,
+                                                         rules=[],
+                                                         parent=self.alignments.erg_rules[rule_id].parent,
+                                                         type='substitution')
             self.alignments.features[rule_id] = Features(type='verb', pos=[], tokens=[], lemmas=[], voice='', tense='')
 
     # TO DO: treat modals would, should, might to, must, etc.
@@ -136,30 +141,35 @@ class TAGSynchAligner(object):
         feature.lemmas.insert(0, self.tree.nodes[root].lexicon)
 
     def update_rule_tree(self, root, rule_id, should_label=True):
+        erg_rule = self.alignments.erg_rules[rule_id]
+        tag_rule = self.alignments.tag_rules[rule_id]
+
         if should_label:
             self.tree.nodes[root].label = rule_id
 
-            self.alignments.tag_rules[rule_id].tree.root = root
+            tag_rule.tree.root = root
 
-            graph_root = self.alignments.erg_rules[rule_id].graph.root
-            graph_parent = self.alignments.erg_rules[rule_id].graph.nodes[graph_root].parent
+            graph_root = erg_rule.graph.root
+            graph_root_parent = erg_rule.graph.nodes[graph_root].parent
 
             # Determine rule name
-            rule_name = graph_parent['edge']+'/'+self.tree.nodes[root].name
+            rule_name = graph_root_parent['edge']+'/'+self.tree.nodes[root].name
             self.alignments.id2rule[rule_id] = rule_name
-            self.alignments.erg_rules[rule_id].name = rule_name
-            self.alignments.tag_rules[rule_id].name = rule_name
+            erg_rule.name = rule_name
+            tag_rule.name = rule_name
 
         if root not in self.alignments.tag_rules[rule_id].tree.nodes:
-            self.alignments.tag_rules[rule_id].tree.nodes[root] = copy.copy(self.tree.nodes[root])
-            self.alignments.tag_rules[rule_id].tree.edges[root] = copy.copy(self.tree.edges[root])
+            tag_rule.tree.nodes[root] = copy.copy(self.tree.nodes[root])
+            tag_rule.tree.edges[root] = copy.copy(self.tree.edges[root])
 
         for edge in self.tree.edges[root]:
             self.update_rule_tree(edge, rule_id, False)
             del self.tree.nodes[edge]
             del self.tree.edges[edge]
+
         self.tree.edges[root] = []
 
+    # TO DO: improve storage
     def create_adjoining(self, root, rule_id):
         def create(root, adj_edge, adjtree):
             adjtree.tree.nodes[root] = copy.copy(self.tree.nodes[root])
@@ -186,7 +196,7 @@ class TAGSynchAligner(object):
                                   head=self.alignments.erg_rules[rule_id].head,
                                   tree=Tree(root=root, nodes={}, edges={}),
                                   type='adjoining',
-                                  rules={},
+                                  rules=[],
                                   parent=self.alignments.erg_rules[rule_id].parent)
                 adjtree = create(root, edge, adjtree)
 
@@ -202,30 +212,33 @@ class TAGSynchAligner(object):
     def prune_tree(self, root, prune_node):
         # Get rule_id, its parent and graph root and its parent
         rule_id = self.tree.nodes[prune_node].label
-        graph_root = self.alignments.erg_rules[rule_id].graph.root
-        graph_parent = self.alignments.erg_rules[rule_id].graph.nodes[graph_root].parent
-        rule_parent = self.alignments.erg_rules[rule_id].parent
+        tag_rule = self.alignments.tag_rules[rule_id]
+        erg_rule = self.alignments.erg_rules[rule_id]
+
+        graph_root = erg_rule.graph.root
+        graph_parent = erg_rule.graph.nodes[graph_root].parent
+        rule_parent = erg_rule.parent
+
+        tag_parent_rule = self.alignments.tag_rules[rule_parent]
+        erg_parent_rule = self.alignments.erg_rules[rule_parent]
 
         # Update rule name
         rule_name = graph_parent['edge']+'/'+self.tree.nodes[prune_node].name
         self.alignments.id2rule[rule_id] = rule_name
-        self.alignments.erg_rules[rule_id].name = rule_name
+        erg_rule.name = rule_name
 
-        self.alignments.tag_rules[rule_id].name = rule_name
-        self.alignments.tag_rules[rule_id].parent = rule_parent
+        tag_rule.name = rule_name
 
         # Update graph parents with the new rule name
-        external = filter(lambda external: graph_parent['edge'] in external, self.alignments.erg_rules[rule_parent].rules[graph_parent['node']])[0]
-        index = self.alignments.erg_rules[rule_parent].rules[graph_parent['node']].index(external)
-        self.alignments.erg_rules[rule_parent].rules[graph_parent['node']][index] = rule_name
+        external = filter(lambda external: graph_parent['edge'] in external, erg_parent_rule.rules[graph_parent['node']])[0]
+        index = erg_parent_rule.rules[graph_parent['node']].index(external)
+        erg_parent_rule.rules[graph_parent['node']][index] = rule_name
 
-        external = filter(lambda external: graph_parent['edge'] in external.name, self.alignments.erg_rules[rule_parent].graph.edges[graph_parent['node']])[0]
+        external = filter(lambda external: graph_parent['edge'] in external.name, erg_parent_rule.graph.edges[graph_parent['node']])[0]
         external.name = rule_name
 
         # Update tree parents with the new rule name
-        if root not in self.alignments.tag_rules[rule_parent].rules:
-            self.alignments.tag_rules[rule_parent].rules[root] = []
-        self.alignments.tag_rules[rule_parent].rules[root].append(rule_name)
+        tag_parent_rule.rules.append(rule_name)
 
         # Create substitution subtree and prune the tree
         self.tree.nodes[self._id] = TAGNode(id=self._id, name=rule_name, parent=root, type='rule', label=-1, lexicon='', index=-1)
@@ -338,24 +351,33 @@ class TAGSynchAligner(object):
         for rule_id in self.alignments.erg_rules:
             # Empty references
             if rule_id not in self.alignments.id2rule:
-                graph_root = self.alignments.erg_rules[rule_id].graph.root
-                graph_parent = self.alignments.erg_rules[rule_id].graph.nodes[graph_root].parent
-                rule_parent = self.alignments.erg_rules[rule_id].parent
+                tag_rule = self.alignments.tag_rules[rule_id]
+                erg_rule = self.alignments.erg_rules[rule_id]
+
+                graph_root = erg_rule.graph.root
+                graph_parent = erg_rule.graph.nodes[graph_root].parent
+                rule_parent = erg_rule.parent
+
+                tag_parent_rule = self.alignments.tag_rules[rule_parent]
+                erg_parent_rule = self.alignments.erg_rules[rule_parent]
 
                 rule_name = graph_parent['edge']+'/'+'E'
-                self.alignments.erg_rules[rule_id].name = rule_name
+                erg_rule.name = rule_name
 
-                self.alignments.tag_rules[rule_id].name = rule_name
-                self.alignments.tag_rules[rule_id].parent = rule_parent
+                tag_rule.name = rule_name
+                tag_rule.parent = rule_parent
                 self.alignments.id2rule[rule_id] = rule_name
 
                 # Update graph parents with the new rule name
-                external = filter(lambda external: graph_parent['edge'] in external, self.alignments.erg_rules[rule_parent].rules[graph_parent['node']])[0]
-                index = self.alignments.erg_rules[rule_parent].rules[graph_parent['node']].index(external)
-                self.alignments.erg_rules[rule_parent].rules[graph_parent['node']][index] = rule_name
+                external = filter(lambda external: graph_parent['edge'] in external, erg_parent_rule.rules[graph_parent['node']])[0]
+                index = erg_parent_rule.rules[graph_parent['node']].index(external)
+                erg_parent_rule.rules[graph_parent['node']][index] = rule_name
 
-                external = filter(lambda external: graph_parent['edge'] in external.name, self.alignments.erg_rules[rule_parent].graph.edges[graph_parent['node']])[0]
+                external = filter(lambda external: graph_parent['edge'] in external.name, erg_parent_rule.graph.edges[graph_parent['node']])[0]
                 external.name = rule_name
+
+                # Update tree parents with the new rule name
+                tag_parent_rule.rules.append(rule_name)
 
             # Get verb tense
             if self.alignments.features[rule_id].type == 'verb':
