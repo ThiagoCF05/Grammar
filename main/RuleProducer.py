@@ -58,7 +58,7 @@ def main(aligner):
 
     grammar = SynchG(initial_rules=[], substitution_rules=[], adjoining_rules=[])
 
-    processed, errors, rules_processed, invalid_rules = 0, 0, 0
+    processed, errors, rules_processed, invalid_rules = 0, 0, 0, 0
     for fname in os.listdir(dir):
         print fname, '\r',
         amrs = utils.parse_corpus(os.path.join(dir, fname))
@@ -80,6 +80,7 @@ def main(aligner):
 
                     for rule_id in alignments.erg_rules:
                         rules_processed = rules_processed + 1
+                        
                         name = alignments.erg_rules[rule_id].name
                         head = alignments.erg_rules[rule_id].head
 
