@@ -16,29 +16,34 @@ from stanford_corenlp_pywrapper import CoreNLP
 
 def write(grammar, fname):
     rules = []
+    errors = 0
     for rule in grammar:
-        if '/E' in rule.name:
-            tree = 'empty'
-        else:
-            tree = rule.tree.prettify(rule.tree.root)
-        graph = rule.graph.prettify(rule.head, rule.graph.root, print_constants=False)
+        try:
+            if '/E' in rule.name:
+                tree = 'empty'
+            else:
+                tree = rule.tree.prettify(rule.tree.root)
+            graph = rule.graph.prettify(rule.head, rule.graph.root, print_constants=False)
 
-        aux = {
-            'name':rule.name,
-            'head':rule.head,
-            'parent_rule':rule.parent_rule,
-            'parent_head':rule.parent_head,
-            'graph':graph,
-            'graph_rules':rule.graph_rules,
-            'tree':tree,
-            'tree_rules':rule.tree_rules,
-            'features':{
-                'type': rule.features.type,
-                'voice': rule.features.voice,
-                'tense': rule.features.tense
+            aux = {
+                'name':rule.name,
+                'head':rule.head,
+                'parent_rule':rule.parent_rule,
+                'parent_head':rule.parent_head,
+                'graph':graph,
+                'graph_rules':rule.graph_rules,
+                'tree':tree,
+                'tree_rules':rule.tree_rules,
+                'features':{
+                    'type': rule.features.type,
+                    'voice': rule.features.voice,
+                    'tense': rule.features.tense
+                }
             }
-        }
-        rules.append(aux)
+            rules.append(aux)
+        except:
+            errors = errors + 1
+            print 'Error: ', errors
 
     json.dump(rules, open(fname, 'w'), sort_keys=True, indent=4, separators=(',', ': '))
 
@@ -80,7 +85,7 @@ def main(aligner):
 
                     for rule_id in alignments.erg_rules:
                         rules_processed = rules_processed + 1
-                        
+
                         name = alignments.erg_rules[rule_id].name
                         head = alignments.erg_rules[rule_id].head
 
