@@ -36,7 +36,7 @@
       <file leaf-file-name="AMRAligner.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/aligners/AMRAligner.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2235" max-vertical-offset="7845">
+            <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="7845">
               <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
               <folding />
             </state>
@@ -55,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RuleProb.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="RuleProb.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/rule_production/RuleProb.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.59033614" vertical-offset="473" max-vertical-offset="1755">
-              <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="308" max-vertical-offset="1260">
+              <caret line="71" column="54" selection-start-line="71" selection-start-column="54" selection-end-line="71" selection-end-column="54" />
               <folding>
                 <element signature="e#37#56#0" expanded="true" />
               </folding>
@@ -67,47 +67,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RuleInducerTest.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/RuleInducerTest.py">
+      <file leaf-file-name="Generator.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main/generator/Generator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="431" max-vertical-offset="2250">
-              <caret line="682" column="63" selection-start-line="668" selection-start-column="8" selection-end-line="682" selection-end-column="63" />
+            <state vertical-scroll-proportion="0.17331932" vertical-offset="0" max-vertical-offset="952">
+              <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
               <folding>
-                <element signature="e#654#1739#0" expanded="false" />
-                <element signature="e#1772#2789#0" expanded="false" />
-                <element signature="e#2823#4343#0" expanded="false" />
-                <element signature="e#4380#5657#0" expanded="false" />
-                <element signature="e#5701#7263#0" expanded="false" />
-                <element signature="e#7311#9126#0" expanded="false" />
-                <element signature="e#9174#11154#0" expanded="false" />
-                <element signature="e#11202#13036#0" expanded="false" />
-                <element signature="e#13072#14625#0" expanded="false" />
-                <element signature="e#14663#16470#0" expanded="false" />
-                <element signature="e#16517#18025#0" expanded="false" />
-                <element signature="e#18065#19436#0" expanded="false" />
-                <element signature="e#19475#21931#0" expanded="false" />
-                <element signature="e#21975#25219#0" expanded="false" />
-                <element signature="e#25261#27440#0" expanded="false" />
-                <element signature="e#31683#35141#0" expanded="false" />
-                <element signature="e#35177#41025#0" expanded="false" />
-                <element signature="e#41061#45089#0" expanded="false" />
-                <element signature="e#45125#49034#0" expanded="false" />
-                <element signature="e#49070#52356#0" expanded="false" />
-                <element signature="e#52392#56235#0" expanded="false" />
-                <element signature="e#56271#56978#0" expanded="false" />
-                <element signature="e#57014#58537#0" expanded="false" />
-                <element signature="e#58574#60321#0" expanded="false" />
+                <element signature="e#37#56#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RuleProducer.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/rule_production/RuleProducer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1883" max-vertical-offset="2835">
-              <caret line="182" column="69" selection-start-line="182" selection-start-column="69" selection-end-line="182" selection-end-column="69" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -161,6 +128,7 @@
         <option value="$PROJECT_DIR$/main/rule_inference/RuleProb.py" />
         <option value="$PROJECT_DIR$/main/rule_inference/RuleProducer.py" />
         <option value="$PROJECT_DIR$/main/rule_production/RuleProducer.py" />
+        <option value="$PROJECT_DIR$/main/generator/Generator.py" />
         <option value="$PROJECT_DIR$/main/rule_production/RuleProb.py" />
       </list>
     </option>
@@ -275,7 +243,25 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
+              <option name="myItemId" value="grammars" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Models" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generator" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1105,14 +1091,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/grammars/SynchG.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
-          <caret line="3" column="140" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="140" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/aligners/Alignments.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.31578946" vertical-offset="0" max-vertical-offset="570">
@@ -1160,9 +1138,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main/scripts/prepare_alignment_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.875" vertical-offset="1193" max-vertical-offset="2145">
+          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/aligners/TAGSynchAligner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2976" max-vertical-offset="5805">
+          <caret line="208" column="8" selection-start-line="208" selection-start-column="8" selection-end-line="208" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="275" max-vertical-offset="2910">
+          <caret line="43" column="88" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="88" />
+          <folding>
+            <element signature="e#37#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/grammars/SynchG.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.04726891" vertical-offset="0" max-vertical-offset="952">
+          <caret line="3" column="140" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="140" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/aligners/AMRAligner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="807" max-vertical-offset="3675">
+          <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/rule_production/RuleProducer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8897059" vertical-offset="1883" max-vertical-offset="2835">
+          <caret line="182" column="69" selection-start-line="182" selection-start-column="69" selection-end-line="182" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/RuleInducerTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="431" max-vertical-offset="2250">
+        <state vertical-scroll-proportion="0.019957984" vertical-offset="926" max-vertical-offset="2250">
           <caret line="682" column="63" selection-start-line="668" selection-start-column="8" selection-end-line="682" selection-end-column="63" />
           <folding>
             <element signature="e#654#1739#0" expanded="false" />
@@ -1193,52 +1221,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/scripts/prepare_alignment_data.py">
+    <entry file="file://$PROJECT_DIR$/main/rule_production/RuleProb.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.875" vertical-offset="1193" max-vertical-offset="2145">
-          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/rule_production/RuleProducer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1883" max-vertical-offset="2835">
-          <caret line="182" column="69" selection-start-line="182" selection-start-column="69" selection-end-line="182" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/aligners/AMRAligner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="807" max-vertical-offset="3675">
-          <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/aligners/TAGSynchAligner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2976" max-vertical-offset="5805">
-          <caret line="208" column="8" selection-start-line="208" selection-start-column="8" selection-end-line="208" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="275" max-vertical-offset="2910">
-          <caret line="43" column="88" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="88" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="308" max-vertical-offset="1260">
+          <caret line="71" column="54" selection-start-line="71" selection-start-column="54" selection-end-line="71" selection-end-column="54" />
           <folding>
-            <element signature="e#37#48#0" expanded="true" />
+            <element signature="e#37#56#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/rule_production/RuleProb.py">
+    <entry file="file://$PROJECT_DIR$/main/generator/Generator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.59033614" vertical-offset="473" max-vertical-offset="1755">
-          <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.17331932" vertical-offset="0" max-vertical-offset="952">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
           <folding>
             <element signature="e#37#56#0" expanded="true" />
           </folding>
