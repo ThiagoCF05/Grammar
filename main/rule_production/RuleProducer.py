@@ -176,8 +176,8 @@ if __name__ == '__main__':
     # evaluate(aligner)
     grammar = main(aligner)
 
-    write(grammar.initial_rules, 'initial.json')
+    write(grammar.initial_rules, '/home/tcastrof/amr/initial.json')
 
-    write(grammar.substitution_rules, 'substitution.json')
+    write(grammar.substitution_rules, '/home/tcastrof/amr/substitution.json')
 
-    write(grammar.adjoining_rules, 'adjoining.json')
+    write(grammar.adjoining_rules, '/home/tcastrof/amr/adjoining.json')

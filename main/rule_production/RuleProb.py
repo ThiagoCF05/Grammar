@@ -105,7 +105,7 @@ class RuleProb(object):
         json.dump(freq_dem_5, open(fname, 'w'), sort_keys=True, indent=4, separators=(',', ': '))
 
 if __name__ == '__main__':
-    RuleProb(initial='../data/grammars/initial.json',
-             substitution='../data/grammars/substitution.json',
-             adjoining='../data/grammars/adjoining.json',
-             fwrite='..data/grammars')
+    RuleProb(initial='/home/tcastrof/amr/data/grammars/initial.json',
+             substitution='/home/tcastrof/amr/data/grammars/substitution.json',
+             adjoining='/home/tcastrof/amr/data/grammars/adjoining.json',
+             fwrite='/home/tcastrof/amr/data/grammars')
