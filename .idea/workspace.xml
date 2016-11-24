@@ -58,8 +58,8 @@
       <file leaf-file-name="RuleProb.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/rule_production/RuleProb.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.79516804" vertical-offset="803" max-vertical-offset="1755">
-              <caret line="104" column="64" selection-start-line="104" selection-start-column="64" selection-end-line="104" selection-end-column="64" />
+            <state vertical-scroll-proportion="0.59033614" vertical-offset="473" max-vertical-offset="1755">
+              <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
               <folding>
                 <element signature="e#37#56#0" expanded="true" />
               </folding>
@@ -160,8 +160,8 @@
         <option value="$PROJECT_DIR$/main/test.py" />
         <option value="$PROJECT_DIR$/main/rule_inference/RuleProb.py" />
         <option value="$PROJECT_DIR$/main/rule_inference/RuleProducer.py" />
-        <option value="$PROJECT_DIR$/main/rule_production/RuleProb.py" />
         <option value="$PROJECT_DIR$/main/rule_production/RuleProducer.py" />
+        <option value="$PROJECT_DIR$/main/rule_production/RuleProb.py" />
       </list>
     </option>
   </component>
@@ -764,7 +764,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1680" y="-143" width="1680" height="1050" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -782,7 +782,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12942614" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12942614" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34387755" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1237,8 +1237,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/rule_production/RuleProb.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.79516804" vertical-offset="803" max-vertical-offset="1755">
-          <caret line="104" column="64" selection-start-line="104" selection-start-column="64" selection-end-line="104" selection-end-column="64" />
+        <state vertical-scroll-proportion="0.59033614" vertical-offset="473" max-vertical-offset="1755">
+          <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
           <folding>
             <element signature="e#37#56#0" expanded="true" />
           </folding>
