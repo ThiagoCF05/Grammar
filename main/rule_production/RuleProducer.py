@@ -110,7 +110,6 @@ def main(aligner):
                         features = alignments.features[rule_id]
 
                         if check_validity(tree):
-                            # TO DO: check if the tree is well formed (leafs are terminals or rule nodes)
                             rule = SynchRule(name=name,
                                       head=head,
                                       parent_rule=parent_rule,
@@ -177,8 +176,8 @@ if __name__ == '__main__':
     # evaluate(aligner)
     grammar = main(aligner)
 
-    write(grammar.initial_rules, 'initial.txt')
+    write(grammar.initial_rules, 'initial.json')
 
-    write(grammar.substitution_rules, 'substitution.txt')
+    write(grammar.substitution_rules, 'substitution.json')
 
-    write(grammar.adjoining_rules, 'adjoining.txt')
+    write(grammar.adjoining_rules, 'adjoining.json')

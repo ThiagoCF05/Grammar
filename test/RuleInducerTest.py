@@ -1237,5 +1237,37 @@ class RuleInducerTest(unittest.TestCase):
 
         self.assertEqual('', 'thiago')
 
+    def test_spec10(self):
+        text = 'According to the international reports on January 11 , eBay announced that it will acquire online ticket website StubHub for 310 million US dollars in cash to further expand its influence on electronic commerce .'
+
+        amr = """(s / say-01
+                  :ARG0 (r / report-01
+                        :mod (i2 / international))
+                  :ARG1 (a / announce-01
+                        :ARG0 (c / company :wiki "EBay"
+                              :name (n / name :op1 "eBay"))
+                        :ARG1 (a2 / acquire-01
+                              :ARG0 c
+                              :ARG1 (c2 / company :wiki "StubHub"
+                                    :name (n2 / name :op1 "StubHub")
+                                    :mod (w / website
+                                          :purpose (t / ticket)
+                                          :mod (o / online)))
+                              :ARG3 (m / monetary-quantity :quant 310000000
+                                    :unit (d / dollar)
+                                    :mod (c3 / country :wiki "United_States"
+                                          :name (n3 / name :op1 "US"))
+                                    :consist-of (c4 / cash))
+                              :purpose (e / expand-01
+                                    :ARG0 c
+                                    :ARG1 (i / influence-01
+                                          :ARG0 c
+                                          :ARG1 (c5 / commerce
+                                                :mod (e2 / electronic)))
+                                    :degree (f / further))))
+                  :time (d2 / date-entity :month 1 :day 11))"""
+
+        self.assertEqual('', 'thiago')
+
 if __name__ == '__main__':
     unittest.main()
