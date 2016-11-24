@@ -1,5 +1,6 @@
 __author__ = 'thiagocastroferreira'
 
+import cPickle as p
 import json
 import nltk
 import os
@@ -70,39 +71,39 @@ class RuleProb(object):
 
         # 2 conditions
         freq_num_2 = dict(nltk.FreqDist(num_2))
-        fname = fname + '_rule_edges_num.json'
-        json.dump(freq_num_2, open(fname, 'w'), sort_keys=True, indent=4, separators=(',', ': '))
+        fname = fname + '_rule_edges_num.pickle'
+        p.dump(freq_num_2, open(fname, 'w'), sort_keys=True, indent=4, separators=(',', ': '))
 
         freq_dem_2 = dict(nltk.FreqDist(dem_2))
-        fname = fname + '_rule_edges_dem.json'
-        json.dump(freq_dem_2, open(fname, 'w'), sort_keys=True, indent=4, separators=(',', ': '))
+        fname = fname + '_rule_edges_dem.pickle'
+        p.dump(freq_dem_2, open(fname, 'w'), sort_keys=True, indent=4, separators=(',', ': '))
 
         # 3 conditions
         freq_num_3 = dict(nltk.FreqDist(num_3))
-        fname = fname + '_rule_edges_head_num.json'
-        json.dump(freq_num_3, open(fname, 'w'), sort_keys=True, indent=4, separators=(',', ': '))
+        fname = fname + '_rule_edges_head_num.pickle'
+        p.dump(freq_num_3, open(fname, 'w'), sort_keys=True, indent=4, separators=(',', ': '))
 
         freq_dem_3 = dict(nltk.FreqDist(dem_3))
-        fname = fname + '_rule_edges_head_dem.json'
-        json.dump(freq_dem_3, open(fname, 'w'), sort_keys=True, indent=4, separators=(',', ': '))
+        fname = fname + '_rule_edges_head_dem.pickle'
+        p.dump(freq_dem_3, open(fname, 'w'), sort_keys=True, indent=4, separators=(',', ': '))
 
         # 4 conditions
         freq_num_4 = dict(nltk.FreqDist(num_4))
-        fname = fname + '_rule_edges_head_prule_num.json'
-        json.dump(freq_num_4, open(fname, 'w'), sort_keys=True, indent=4, separators=(',', ': '))
+        fname = fname + '_rule_edges_head_prule_num.pickle'
+        p.dump(freq_num_4, open(fname, 'w'), sort_keys=True, indent=4, separators=(',', ': '))
 
         freq_dem_4 = dict(nltk.FreqDist(dem_4))
-        fname = fname + '_rule_edges_head_prule_dem.json'
-        json.dump(freq_dem_4, open(fname, 'w'), sort_keys=True, indent=4, separators=(',', ': '))
+        fname = fname + '_rule_edges_head_prule_dem.pickle'
+        p.dump(freq_dem_4, open(fname, 'w'), sort_keys=True, indent=4, separators=(',', ': '))
 
         # 5 conditions
         freq_num_5 = dict(nltk.FreqDist(num_5))
-        fname = fname + '_rule_edges_head_prule_phead_num.json'
-        json.dump(freq_num_5, open(fname, 'w'), sort_keys=True, indent=4, separators=(',', ': '))
+        fname = fname + '_rule_edges_head_prule_phead_num.pickle'
+        p.dump(freq_num_5, open(fname, 'w'), sort_keys=True, indent=4, separators=(',', ': '))
 
         freq_dem_5 = dict(nltk.FreqDist(dem_5))
-        fname = fname + '_rule_edges_head_prule_phead_dem.json'
-        json.dump(freq_dem_5, open(fname, 'w'), sort_keys=True, indent=4, separators=(',', ': '))
+        fname = fname + '_rule_edges_head_prule_phead_dem.pickle'
+        p.dump(freq_dem_5, open(fname, 'w'), sort_keys=True, indent=4, separators=(',', ': '))
 
 if __name__ == '__main__':
     RuleProb(initial='/home/tcastrof/amr/data/grammars/initial.json',
