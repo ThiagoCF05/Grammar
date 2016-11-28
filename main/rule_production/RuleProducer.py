@@ -172,9 +172,9 @@ def main(aligner):
 
 if __name__ == '__main__':
     proc = CoreNLP("coref")
-    freq_table = json.load(open('data/alignments/table.json'))
-    verb2noun, noun2verb, verb2actor, actor2verb = utils.noun_verb('data/morph-verbalization-v1.01.txt')
-    sub2word = utils.subgraph_word('data/verbalization-list-v1.06.txt')
+    freq_table = json.load(open('../data/alignments/table.json'))
+    verb2noun, noun2verb, verb2actor, actor2verb = utils.noun_verb('../data/morph-verbalization-v1.01.txt')
+    sub2word = utils.subgraph_word('../data/verbalization-list-v1.06.txt')
 
     aligner = AMRAligner(verb2noun, noun2verb, verb2actor, actor2verb, sub2word, freq_table, proc)
     # evaluate(aligner)
