@@ -63,7 +63,7 @@ def check_validity(tree):
     return isValid
 
 def main(aligner):
-    dir = 'data/LDC2016E25/data/amrs/unsplit'
+    dir = '../data/LDC2016E25/data/amrs/unsplit'
 
     grammar = SynchG(initial_rules=[], substitution_rules=[], adjoining_rules=[])
 
