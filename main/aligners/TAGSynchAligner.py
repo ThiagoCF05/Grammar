@@ -10,7 +10,7 @@ Description:
 import copy
 import re
 
-from main.aligners.Features import Features, NounPhrase, VerbPhrase
+from main.aligners.Features import NounPhrase, VerbPhrase
 from main.grammars.TAG import Tree, TAGNode, TAGRule
 
 class TAGSynchAligner(object):

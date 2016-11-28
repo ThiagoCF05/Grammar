@@ -10,7 +10,7 @@ from main.aligners.TAGSynchAligner import TAGSynchAligner
 import copy
 import json
 import os
-import utils
+import main.utils as utils
 
 from stanford_corenlp_pywrapper import CoreNLP
 
