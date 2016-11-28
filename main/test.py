@@ -21,6 +21,13 @@ def write(grammar, fname):
                 tree = rule.tree.prettify(rule.tree.root)
             graph = rule.graph.prettify(rule.head, rule.graph.root, print_constants=False)
 
+            verb, noun = {}, {}
+            if rule.features != None:
+                if rule.features.type == 'verb':
+                    verb = {'tense': rule.features.tense, 'voice': rule.features.voice}
+                elif rule.features.type == 'noun':
+                    noun = {'form': rule.features.form, 'number': rule.features.number, 'inPP': rule.features.inPP}
+
             aux = {
                 'name':rule.name,
                 'head':rule.head,
@@ -30,11 +37,13 @@ def write(grammar, fname):
                 'graph_rules':rule.graph_rules,
                 'tree':tree,
                 'tree_rules':rule.tree_rules,
-                'features':{
-                    'type': rule.features.type,
-                    'voice': rule.features.voice,
-                    'tense': rule.features.tense
-                }
+                'noun_info': noun,
+                'verb_info': verb
+                # 'features':{
+                #     'type': rule.features.type,
+                #     'voice': rule.features.voice,
+                #     'tense': rule.features.tense
+                # }
             }
             rules.append(aux)
         except:
@@ -120,21 +129,12 @@ if __name__ == '__main__':
 
     aligner = AMRAligner(verb2noun, noun2verb, verb2actor, actor2verb, sub2word, freq_table, proc)
 
-    text = 'The London emergency services said that altogether eleven people had been sent to hospital for treatment due to minor wounds.'
-    amr = """(s / say-01
-                      :ARG0 (s2 / service
-                            :mod (e / emergency)
-                            :location (c / city :wiki 'London'
-                                  :name (n / name :op1 'London')))
-                      :ARG1 (s3 / send-01
-                            :ARG1 (p / person :quant 11)
-                            :ARG2 (h / hospital)
-                            :mod (a / altogether)
-                            :purpose (t / treat-03
-                                  :ARG1 p
-                                  :ARG2 (w / wound-01
-                                        :ARG1 p
-                                        :mod (m / minor)))))"""
+    text = 'The teacher and the worker'
+    amr = """(a / and
+                    :op1 (p / person
+                            :ARG0-of (t / teach-01))
+                    :op2 (p2 / person
+                            :ARG0-of (w / work-01))"""
 
     alignments, info = aligner.run(amr, text)
     print info['parse']

@@ -23,32 +23,32 @@ class RuleProb(object):
         for i, rule in enumerate(rules):
             print 'Rule: ', str(i+1), '\r',
             if len(rule['tree_rules']) == 0:
-                g2 = (rule['name'], 'empty', rule['tree'])
+                g2 = (rule['tree'], rule['name'], 'empty')
                 group_2.append(g2)
 
-                g3 = (rule['name'], 'empty', rule['head'], rule['tree'])
+                g3 = (rule['tree'], rule['name'], 'empty', rule['head'])
                 group_3.append(g3)
 
-                g4 = (rule['name'], 'empty', rule['head'], rule['parent_rule'], rule['tree'])
+                g4 = (rule['tree'], rule['name'], 'empty', rule['head'], rule['parent_rule'])
                 group_4.append(g4)
 
-                g5 = (rule['name'], 'empty', rule['head'], rule['parent_rule'], rule['parent_head'], rule['tree'])
+                g5 = (rule['tree'], rule['name'], 'empty', rule['head'], rule['parent_rule'], rule['parent_head'])
                 group_5.append(g5)
             else:
                 edges = rule['tree_rules']
                 edges.sort()
                 edges = tuple(edges)
 
-                g2 = (rule['name'], edges, rule['tree'])
+                g2 = (rule['tree'], rule['name'], edges)
                 group_2.append(g2)
 
-                g3 = (rule['name'], edges, rule['head'], rule['tree'])
+                g3 = (rule['tree'], rule['name'], edges, rule['head'])
                 group_3.append(g3)
 
-                g4 = (rule['name'], edges, rule['head'], rule['parent_rule'], rule['tree'])
+                g4 = (rule['tree'], rule['name'], edges, rule['head'], rule['parent_rule'])
                 group_4.append(g4)
 
-                g5 = (rule['name'], edges, rule['head'], rule['parent_rule'], rule['parent_head'], rule['tree'])
+                g5 = (rule['tree'], rule['name'], edges, rule['head'], rule['parent_rule'], rule['parent_head'])
                 group_5.append(g5)
         print '\n'
 

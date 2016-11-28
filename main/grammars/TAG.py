@@ -24,8 +24,12 @@ class Tree(object):
         terminal_id = 0
 
         for child in tree.replace('\n', '').split():
+            closing = filter(lambda x: x == ')', child)
             if child[0] == '(':
-                node = TAGNode(id=node_id, name=child[1:], parent=prev_id, type='nonterminal')
+                if len(closing) > 0:
+                    node = TAGNode(id=node_id, name=child[1:-len(closing)], parent=prev_id, type='rule')
+                else:
+                    node = TAGNode(id=node_id, name=child[1:], parent=prev_id, type='nonterminal')
                 self.nodes[node_id] = node
                 self.edges[node_id] = []
 
@@ -34,7 +38,6 @@ class Tree(object):
                 prev_id = copy.copy(node_id)
                 node_id = node_id + 1
             else:
-                closing = filter(lambda x: x == ')', child)
                 terminal = child.replace(closing, '')
 
                 self.nodes[prev_id].index = terminal_id
@@ -43,8 +46,8 @@ class Tree(object):
 
                 terminal_id = terminal_id + 1
 
-                for i in xrange(len(closing)):
-                    prev_id = self.nodes[prev_id].parent
+            for i in xrange(len(closing)):
+                prev_id = self.nodes[prev_id].parent
 
     def prettify(self, root):
         def print_tree(root, tree):

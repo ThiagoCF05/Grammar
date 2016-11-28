@@ -87,6 +87,7 @@ class AMRAligner(object):
 
                 for _edge in rule.graph.edges[root]:
                     if _edge.name == edge.name:
+                        rule.head = rule.head + '/' + self.amr.nodes[edge.node_id].name
                         rule.rules[root].remove(_edge.name)
                         _edge.isRule = False
                         break
@@ -104,7 +105,10 @@ class AMRAligner(object):
 
             if rule.graph.root == edge.node_id:
                 rule.name = self.amr.nodes[root].parent['edge']
-                rule.head = self.amr.nodes[root].name
+
+                aux = rule.head.split('/')
+                rule.head = self.amr.nodes[root].name + '/' + aux[0]
+
                 rule.graph.root = root
 
                 indexes = self.amr.nodes[root].tokens

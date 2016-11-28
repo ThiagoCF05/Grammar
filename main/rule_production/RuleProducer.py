@@ -25,6 +25,13 @@ def write(grammar, fname):
                 tree = rule.tree.prettify(rule.tree.root)
             graph = rule.graph.prettify(rule.head, rule.graph.root, print_constants=False)
 
+            verb, noun = {}, {}
+            if rule.features != None:
+                if rule.features.type == 'verb':
+                    verb = {'tense': rule.features.tense, 'voice': rule.features.voice}
+                elif rule.features.type == 'noun':
+                    noun = {'form': rule.features.form, 'number': rule.features.number, 'inPP': rule.features.inPP}
+
             aux = {
                 'name':rule.name,
                 'head':rule.head,
@@ -34,11 +41,8 @@ def write(grammar, fname):
                 'graph_rules':rule.graph_rules,
                 'tree':tree,
                 'tree_rules':rule.tree_rules,
-                'features':{
-                    'type': rule.features.type,
-                    'voice': rule.features.voice,
-                    'tense': rule.features.tense
-                }
+                'noun_info': noun,
+                'verb_info': verb
             }
             rules.append(aux)
         except:
