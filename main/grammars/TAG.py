@@ -41,7 +41,11 @@ class Tree(object):
                 terminal = child.replace(closing, '')
 
                 self.nodes[prev_id].index = terminal_id
-                self.nodes[prev_id].lexicon = terminal.lower()
+                # Abstract punctuation
+                if terminal.strip() == '!':
+                    self.nodes[prev_id].lexicon = '.'
+                else:
+                    self.nodes[prev_id].lexicon = terminal.lower()
                 self.nodes[prev_id].type = 'terminal'
 
                 terminal_id = terminal_id + 1

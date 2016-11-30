@@ -1,5 +1,9 @@
 __author__ = 'thiagocastroferreira'
 
+from sys import path
+path.append('/home/tcastrof/amr/scp_repo')
+path.append('/home/tcastrof/amr/Grammar')
+
 import copy
 import cPickle as p
 import operator
@@ -10,24 +14,30 @@ from main.grammars.ERG import AMR, AMRNode, AMREdge, ERG, ERGRule
 from main.grammars.TAG import Tree
 
 class Generator(object):
-    def __init__(self, amr='', sub2word={}):
+    def __init__(self, amr='', verb2noun={}, noun2verb={}, verb2actor={}, actor2verb={}, sub2word={}, models=[]):
+        self.verb2noun = verb2noun
+        self.noun2verb = noun2verb
+        self.verb2actor = verb2actor
+        self.actor2verb = actor2verb
         self.sub2word = sub2word
 
         self.amr = AMR(nodes={}, edges={}, root='')
         self.amr.parse(amr)
 
-        # for fname in model_files:
-        #     aux = fname.split('_')
-        #     if aux[0] == 'initial':
-        #         self.grammar['initial'][len(aux)-1] = p.load(open(os.path.join(self.fread, fname)))
-        #     elif aux[0] == 'substitution':
-        #         self.grammar['substitution'][len(aux)-1] = p.load(open(os.path.join(self.fread, fname)))
-        #     else:
-        #         self.grammar['adjoining'][len(aux)-1] = p.load(open(os.path.join(self.fread, fname)))
         self.grammar = {'initial':{}, 'substitution':{}, 'adjoining':{}}
-        self.grammar['initial'] = p.load(open('../data/grammars/initial_rule_edges_head.pickle'))
-        self.grammar['substitution'] = p.load(open('../data/grammars/substitution_rule_edges_head.pickle'))
-        self.grammar['adjoining'] = p.load(open('../data/grammars/adjoining_rule_edges_head.pickle'))
+        for fname in models:
+            aux = fname.split('/')[-1].split('_')
+            if aux[0] == 'initial':
+                self.grammar['initial'][len(aux)-1] = p.load(open(fname))
+            elif aux[0] == 'substitution':
+                self.grammar['substitution'][len(aux)-1] = p.load(open(fname))
+            else:
+                self.grammar['adjoining'][len(aux)-1] = p.load(open(fname))
+
+        # self.grammar = {'initial':{}, 'substitution':{}, 'adjoining':{}}
+        # self.grammar['initial'] = p.load(open('../data/grammars/initial_rule_edges_head.pickle'))
+        # self.grammar['substitution'] = p.load(open('../data/grammars/substitution_rule_edges_head.pickle'))
+        # self.grammar['adjoining'] = p.load(open('../data/grammars/adjoining_rule_edges_head.pickle'))
 
         # Break the amr into subgraphs and create ERG
         self.create_erg()
@@ -37,9 +47,9 @@ class Generator(object):
         self.generate(rule_id=root_rule,
                       graph_edge_parent={'node':0, 'edge':0},
                       graph=AMR(nodes={}, edges={}, root=1),
-                      tree_node_parent=0,
-                      tree=Tree(nodes={}, edges={}, root=1),
-                      tree_pos=0)
+                      tree_node_parents=None,
+                      trees=[],
+                      tree_pos=[])
 
     # AMR operations
     def match_subgraph_patterns(self, root):
@@ -52,8 +62,10 @@ class Generator(object):
 
             matched = True
             filtered_subgraph = [self.amr.nodes[root].name]
+            tokens = []
             for sub in subgraphs:
                 matched = True
+                tokens = self.sub2word[sub]
                 for edge in sub[1:]:
                     f = filter(lambda match_edge: match_edge.name == edge[0] and self.amr.nodes[match_edge.node_id].name == edge[1], self.amr.edges[root])
                     if len(f) > 0:
@@ -66,8 +78,8 @@ class Generator(object):
                     break
 
             if matched:
-                return filtered_subgraph
-        return None
+                return filtered_subgraph, tokens
+        return None, []
 
     def create_rule(self, root, rule=None):
         self.amr.nodes[root].status = 'labeled'
@@ -94,8 +106,9 @@ class Generator(object):
 
         return rule
 
-    def create_subgraph_rule(self, root, edges):
+    def create_subgraph_rule(self, root, edges, tokens):
         rule = self.create_rule(root)
+        rule.tokens = tokens
 
         for edge in edges:
             if self.amr.nodes[edge.node_id].status == 'unlabeled':
@@ -144,11 +157,11 @@ class Generator(object):
 
         if self.amr.nodes[root].status != 'labeled':
             # Find subgraph defined at verbalization-list, and have-org/rel
-            subgraph = self.match_subgraph_patterns(root)
+            subgraph, tokens = self.match_subgraph_patterns(root)
             if subgraph != None:
                 # When there is no edges
                 if len(subgraph) > 1:
-                    rule = self.create_subgraph_rule(root, subgraph[1:])
+                    rule = self.create_subgraph_rule(root, subgraph[1:], tokens)
                     self.erg.rules[self.erg.count] = rule
                     self.erg.count = self.erg.count + 1
 
@@ -209,31 +222,42 @@ class Generator(object):
                     self.erg.rules[rule_id].parent = _id
                     break
 
-    # Tree operations
-    def find_subtree(self, rule_id, tree_type, beam_n):
-        grammar = filter(lambda rule: self.erg.rules[rule_id].name in rule[0]
-                                      and self.erg.rules[rule_id].head == rule[2], self.grammar[tree_type])
+    def find_subtree(self, rule_id, tree_type, trees, beam_n):
+        rule = self.erg.rules[rule_id]
 
-        if len(self.erg.rules[rule_id].rules.keys()) == 0:
-            grammar = filter(lambda rule: rule[1] == 'empty', grammar)
+        # Get rules with the same income edge and head
+        grammar = filter(lambda g: rule.name == g[1].split('/')[0] and rule.head == g[3], self.grammar[tree_type][3])
+
+        # Test outcome edges condition
+        if len(rule.rules.keys()) == 0:
+            grammar = filter(lambda g: g[2] == 'empty', grammar)
         else:
-            for amr_node in self.erg.rules[rule_id].rules:
-                for edge_rule in self.erg.rules[rule_id].rules[amr_node]:
+            for node in rule.rules:
+                for edge_rule in rule.rules[node]:
                     _grammar = []
-                    for row in grammar:
-                        for edge in row[1]:
-                            if edge_rule in edge:
-                                _grammar.append(row)
+                    for g in grammar:
+                        for edge in g[2]:
+                            if edge_rule == edge.split('/')[0]:
+                                _grammar.append(g)
                     grammar = _grammar
 
-        dem = sum(map(lambda rule: self.grammar[tree_type][rule], grammar))
-        candidates = dict(map(lambda rule: (rule[3], float(self.grammar[tree_type][rule])/dem), grammar))
+        dem = sum(map(lambda rule: self.grammar[tree_type][3][rule], grammar))
+        candidates = map(lambda rule: (rule[0], float(self.grammar[tree_type][3][rule])/dem), grammar)
 
-        trees = sorted(candidates.items(), key=operator.itemgetter(1))
-        trees.reverse()
-        return trees[:beam_n]
+        new_trees = []
+        if len(trees) == 0:
+            new_trees = map(lambda candidate: (None, candidate[0], candidate[1]), candidates)
+        else:
+            for tree in trees:
+                for candidate in candidates:
+                    new_tree = (tree[0], candidate[0], tree[1] * candidate[1])
+                    new_trees.append(new_tree)
 
-    def generate(self, rule_id, graph_edge_parent, graph, tree_node_parent, tree, tree_pos):
+        new_trees = sorted(new_trees, key=operator.itemgetter(2))
+        new_trees.reverse()
+        return new_trees[:beam_n]
+
+    def generate(self, rule_id, graph_edge_parent, graph, tree_node_parents, trees, tree_pos):
         def find_leaf(root, rule, leaf):
             if rule in tree.nodes[root].name:
                 leaf = root
@@ -253,15 +277,23 @@ class Generator(object):
                     return _rule_id
             return -1
 
-        if tree_node_parent == 0:
-            # Choose initial graph
+        root_trees = []
+
+        # Choose initial graph
+        if tree_node_parents == None:
             graph = copy.copy(self.erg.rules[rule_id].graph)
 
             # Choose initial tree and parse it
-            string_tree = self.find_subtree(rule_id, 'initial', 5)[1]
-            tree.parse(string_tree[0])
+            candidates = self.find_subtree(rule_id, 'initial', [], 20)
+            tree_pos = []
+            for candidate in candidates:
+                tree = Tree(nodes={}, edges={}, root=1)
+                tree.parse(candidate[1])
 
-            root_tree = 1
+                trees.append((tree, candidate[2]))
+                root_trees.append(1)
+                tree_node_parents.append(0)
+                tree_pos.append(0)
         else:
             # Insert subgraph into the graph
             subgraph = copy.copy(self.erg.rules[rule_id].graph)
@@ -278,25 +310,33 @@ class Generator(object):
                     edge.node_id = subgraph.root
                     break
 
-            # Insert subtree into the tree
-            subtree = Tree(nodes={}, edges={}, root=1)
-            string_tree = self.find_subtree(rule_id, 'substitution', 5)[0]
-            subtree.parse(string_tree[0])
+            candidates = self.find_subtree(rule_id, 'substitution', trees, 20)
+            trees = []
+            for i, candidate in enumerate(candidates):
+                # Insert subtree into the tree
+                tree = candidate[0]
+                tree_parent = tree_node_parents[i]
+                pos = tree_pos[i]
 
-            for node_id in subtree.nodes:
-                tree.nodes[tree_pos+node_id] = copy.copy(subtree.nodes[node_id])
-                tree.edges[tree_pos+node_id] = map(lambda x: x+tree_pos, subtree.edges[node_id])
+                subtree = Tree(nodes={}, edges={}, root=1)
+                subtree.parse(candidate[1])
 
-            root_tree = tree_pos + 1
-            root = tree.nodes[tree_node_parent].parent
-            tree.nodes[root_tree].parent = root
-            index = tree.edges[root].index(tree_node_parent)
-            tree.edges[root][index] = root_tree
+                for node_id in subtree.nodes:
+                    tree.nodes[pos+node_id] = copy.copy(subtree.nodes[node_id])
+                    tree.edges[pos+node_id] = map(lambda x: x+pos, subtree.edges[node_id])
 
-            del tree.nodes[tree_node_parent]
-            del tree.edges[tree_node_parent]
+                root_tree = pos + 1
+                root = tree.nodes[tree_parent].parent
+                tree.nodes[root_tree].parent = root
+                index = tree.edges[root].index(tree_parent)
+                tree.edges[root][index] = root_tree
 
-        tree_pos = max(tree.nodes)
+                del tree.nodes[tree_parent]
+                del tree.edges[tree_parent]
+
+                trees.append((tree, candidate[2]))
+                root_trees.append(root_tree)
+                tree_pos[i] = max(tree.nodes)
 
         for node_parent in self.erg.rules[rule_id].rules:
             for rule_edge in self.erg.rules[rule_id].rules[node_parent]:
@@ -304,18 +344,37 @@ class Generator(object):
 
                 graph_edge_parent = {'node':node_parent, 'edge':rule_edge}
 
-                tree_node_parent = find_leaf(root_tree, rule_edge, '')
+                for i, tree in trees:
+                    tree_node_parents[i] = find_leaf(root_trees[i], rule_edge, '')
 
-                # edge_parent = self.erg.rules[child_rule_id].graph.root
-                graph, tree = self.generate(child_rule_id, graph_edge_parent, graph, tree_node_parent, tree, tree_pos)
+                graph, trees = self.generate(child_rule_id, graph_edge_parent, graph, tree_node_parents, trees, tree_pos)
 
-        return graph, tree
+        return graph, trees
 
 if __name__ == '__main__':
+    models = ['../data/grammars/initial_rule_edges.pickle',
+              '../data/grammars/initial_rule_edges_head.pickle',
+              '../data/grammars/initial_rule_edges_head_prule.pickle',
+              '../data/grammars/initial_rule_edges_head_prule_phead.pickle',
+              '../data/grammars/substitution_rule_edges.pickle',
+              '../data/grammars/substitution_rule_edges_head.pickle',
+              '../data/grammars/substitution_rule_edges_head_prule.pickle',
+              '../data/grammars/substitution_rule_edges_head_prule_phead.pickle',
+              '../data/grammars/adjoining_rule_edges.pickle',
+              '../data/grammars/adjoining_rule_edges_head.pickle',
+              '../data/grammars/adjoining_rule_edges_head_prule.pickle',
+              '../data/grammars/adjoining_rule_edges_head_prule_phead.pickle']
+    verb2noun, noun2verb, verb2actor, actor2verb = utils.noun_verb('../data/morph-verbalization-v1.01.txt')
     sub2word = utils.subgraph_word('../data/verbalization-list-v1.06.txt')
 
     amr = """(p / love-01
                 :ARG0 (b / boy)
                 :ARG1 (g / girl))"""
 
-    gen = Generator(amr=amr, sub2word=sub2word)
+    gen = Generator(amr=amr,
+                    verb2noun=verb2noun,
+                    noun2verb=noun2verb,
+                    verb2actor=verb2actor,
+                    actor2verb=actor2verb,
+                    sub2word=sub2word,
+                    models=models)
