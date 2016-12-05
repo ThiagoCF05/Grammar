@@ -42,8 +42,10 @@ class Tree(object):
 
                 self.nodes[prev_id].index = terminal_id
                 # Abstract punctuation
-                if terminal.strip() == '!':
+                if self.nodes[prev_id].name == '.':
                     self.nodes[prev_id].lexicon = '.'
+                elif self.nodes[prev_id].name == ':':
+                    self.nodes[prev_id].lexicon = ':'
                 else:
                     self.nodes[prev_id].lexicon = terminal.lower()
                 self.nodes[prev_id].type = 'terminal'

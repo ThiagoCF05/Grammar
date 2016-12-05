@@ -87,7 +87,8 @@ class AMRAligner(object):
 
                 for _edge in rule.graph.edges[root]:
                     if _edge.name == edge.name:
-                        rule.head = rule.head + '/' + self.amr.nodes[edge.node_id].name
+                        if '-entity' not in self.amr.nodes[root].name and '-quantity' not in self.amr.nodes[root].name:
+                            rule.head = rule.head + '/' + self.amr.nodes[edge.node_id].name
                         rule.rules[root].remove(_edge.name)
                         _edge.isRule = False
                         break

@@ -1,6 +1,7 @@
 __author__ = 'thiagocastroferreira'
 
 import copy
+import re
 
 class AMREdge(object):
     def __init__(self, name, node_id, isRule=False):
@@ -128,6 +129,198 @@ class ERG(object):
         self.rules = rules
         self.count = 0
         self.start = start
+
+class ERGFactory(object):
+    def __init__(self, amr='', verb2noun={}, noun2verb={}, verb2actor={}, actor2verb={}, sub2word={}):
+        self.verb2noun = verb2noun
+        self.noun2verb = noun2verb
+        self.verb2actor = verb2actor
+        self.actor2verb = actor2verb
+        self.sub2word = sub2word
+
+        self.amr = AMR(nodes={}, edges={}, root='')
+        self.amr.parse(amr)
+
+    def match_subgraph_patterns(self, root):
+        # filter subgraphs with the root given as a parameter which the related word is in the sentence
+        subgraphs = filter(lambda iter: iter[0] == self.amr.nodes[root].name, self.sub2word)
+
+        if len(subgraphs) > 0:
+            subgraphs = sorted(subgraphs, key=len)
+            subgraphs.reverse()
+
+            matched = True
+            filtered_subgraph = [self.amr.nodes[root].name]
+            tokens = []
+            for sub in subgraphs:
+                matched = True
+                tokens = self.sub2word[sub]
+                for edge in sub[1:]:
+                    f = filter(lambda match_edge: match_edge.name == edge[0] and self.amr.nodes[match_edge.node_id].name == edge[1], self.amr.edges[root])
+                    if len(f) > 0:
+                        filtered_subgraph.append(f[0])
+                    else:
+                        matched = False
+                        filtered_subgraph = [self.amr.nodes[root].name]
+                        break
+                if matched:
+                    break
+
+            if matched:
+                return filtered_subgraph, tokens
+        return None, []
+
+    def create_rule(self, root, rule=None):
+        self.amr.nodes[root].status = 'labeled'
+
+        if rule == None:
+            rule = ERGRule(name=self.amr.nodes[root].parent['edge'],
+                           head=self.amr.nodes[root].name,
+                           graph=AMR(nodes={}, edges={}, root=root),
+                           tokens=[],
+                           lemmas=[],
+                           parent='',
+                           rules={})
+
+        node = self.amr.nodes[root]
+        rule.graph.nodes[root] = AMRNode(id=node.id, name=node.name, parent=node.parent, status=node.status, tokens=node.tokens)
+
+        rule.graph.edges[root] = []
+        for edge in self.amr.edges[root]:
+            rule.graph.edges[root].append(AMREdge(name=edge.name, node_id=edge.node_id, isRule=True))
+
+            if root not in rule.rules:
+                rule.rules[root] = []
+            rule.rules[root].append(edge)
+
+        return rule
+
+    def create_subgraph_rule(self, root, edges, tokens):
+        rule = self.create_rule(root)
+        rule.tokens = tokens
+
+        for edge in edges:
+            if self.amr.nodes[edge.node_id].status == 'unlabeled':
+                rule = self.create_rule(edge.node_id, rule)
+
+                for _edge in rule.graph.edges[root]:
+                    if _edge.name == edge.name:
+                        if '-entity' not in self.amr.nodes[root].name and '-quantity' not in self.amr.nodes[root].name:
+                            rule.head = rule.head + '/' + self.amr.nodes[edge.node_id].name
+                        rule.rules[root] = filter(lambda x: x.name != _edge.name, rule.rules[root])
+                        _edge.isRule = False
+                        break
+
+        if root in rule.rules and len(rule.rules[root]) == 0:
+            del rule.rules[root]
+
+        return rule
+
+    def create_father(self, root, edge):
+        self.amr.nodes[root].status = 'labeled'
+
+        for rule_id in self.erg.rules:
+            rule = self.erg.rules[rule_id]
+
+            if rule.graph.root == edge.node_id:
+                rule.name = self.amr.nodes[root].parent['edge']
+
+                aux = rule.head.split('/')
+                rule.head = self.amr.nodes[root].name + '/' + aux[0]
+
+                rule.graph.root = root
+
+                rule.graph.nodes[root] = copy.copy(self.amr.nodes[root])
+
+                rule.graph.edges[root] = []
+                for _edge in self.amr.edges[root]:
+                    if _edge.name == edge.name:
+                        rule.graph.edges[root].append(AMREdge(name=_edge.name, node_id=_edge.node_id, isRule=False))
+                    else:
+                        rule.graph.edges[root].append(AMREdge(name=_edge.name, node_id=_edge.node_id, isRule=True))
+                        if root not in rule.rules:
+                            rule.rules[root] = []
+                        rule.rules[root].append(_edge)
+                break
+
+    def find_subgraphs(self, root, visited):
+        visited.append(root)
+
+        # Find entity and quantity nodes
+        regex = re.compile("""(.+-entity)$|(.+-quantity)$""")
+
+        if self.amr.nodes[root].status != 'labeled':
+            # Find subgraph defined at verbalization-list, and have-org/rel
+            subgraph, tokens = self.match_subgraph_patterns(root)
+            if subgraph != None:
+                # When there is no edges
+                if len(subgraph) > 1:
+                    rule = self.create_subgraph_rule(root, subgraph[1:], tokens)
+                    self.erg.rules[self.erg.count] = rule
+                    self.erg.count = self.erg.count + 1
+
+        for i, edge in enumerate(self.amr.edges[root]):
+            if edge.node_id not in visited:
+                self.find_subgraphs(edge.node_id, visited)
+
+            # MATCH parent of :degree non-matched
+            if edge.name == ':degree' and len(self.amr.nodes[edge.node_id].tokens) == 0:
+                rule = self.create_subgraph_rule(root, [edge])
+                self.erg.rules[self.erg.count] = rule
+                self.erg.count = self.erg.count + 1
+
+            # MATCH parent of :name
+            if edge.name == ':name':
+                self.create_father(root, edge)
+
+            # MATCH reification
+            elif self.amr.nodes[edge.node_id].name in ['have-rel-role-91', 'have-org-role-91'] and self.amr.nodes[root].status != 'labeled' and len(self.amr.nodes[root].tokens) == 0:
+                self.create_father(root, edge)
+
+        # MATCH NAME NODES
+        if self.amr.nodes[root].name == 'name':
+            rule = self.create_subgraph_rule(root, self.amr.edges[root], self.amr.nodes[root].tokens)
+            self.erg.rules[self.erg.count] = rule
+            self.erg.count = self.erg.count + 1
+        # MATCH entity and quantity nodes
+        elif regex.match(self.amr.nodes[root].name) != None:
+            rule = self.create_subgraph_rule(root, self.amr.edges[root])
+            self.erg.rules[self.erg.count] = rule
+            self.erg.count = self.erg.count + 1
+        # MATCH org and rel roles
+        elif self.amr.nodes[root].name in ['have-rel-role-91', 'have-org-role-91']:
+            edges = filter(lambda edge: edge.name == ':ARG2', self.amr.edges[root])
+            rule = self.create_subgraph_rule(root, edges)
+            self.erg.rules[self.erg.count] = rule
+            self.erg.count = self.erg.count + 1
+
+    def create_erg(self):
+        self.erg = ERG(rules={}, start='')
+        self.find_subgraphs(self.amr.root, [])
+
+        # Create rule for the unlabeled nodes
+        for node in self.amr.nodes:
+            if self.amr.nodes[node].status != 'labeled':
+                rule = self.create_rule(node)
+                self.erg.rules[self.erg.count] = rule
+                self.erg.count = self.erg.count + 1
+
+        # Set parent rule names
+        for rule_id in self.erg.rules:
+            graph = self.erg.rules[rule_id].graph
+            root = graph.root
+            parent = graph.nodes[root].parent
+
+            for _id in self.erg.rules:
+                if parent['node'] in self.erg.rules[_id].graph.nodes:
+                    self.erg.rules[rule_id].parent = _id
+
+                    for edge in self.erg.rules[_id].rules[parent['node']]:
+                        if edge.name == parent['edge']:
+                            edge.node_id = rule_id
+                            break
+                    break
+        return self.erg
 
 # if __name__ == '__main__':
 #     amr = """(s / say-01
