@@ -81,12 +81,12 @@ def main(aligner):
 
             for amr in amrs:
                 processed = processed + 1
-                try:
-                    alignments, info = aligner.run(amr['amr'], amr['sentence'])
-                except:
-                    errors = errors + 1
-                    print 'ALIGNER ERROR', amr['file'], amr['id'], errors
-                    alignments, info = None, None
+                # try:
+                alignments, info = aligner.run(amr['amr'], amr['sentence'])
+                # except:
+                #     errors = errors + 1
+                #     print 'ALIGNER ERROR', amr['file'], amr['id'], errors
+                #     alignments, info = None, None
                 try:
                     if alignments != None:
                         # print amr['sentence']
