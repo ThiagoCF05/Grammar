@@ -11,6 +11,7 @@ import copy
 import json
 import os
 import main.utils as utils
+import traceback
 
 from stanford_corenlp_pywrapper import CoreNLP
 
@@ -81,12 +82,14 @@ def main(aligner):
 
             for amr in amrs:
                 processed = processed + 1
-                # try:
-                alignments, info = aligner.run(amr['amr'], amr['sentence'])
-                # except:
-                #     errors = errors + 1
-                #     print 'ALIGNER ERROR', amr['file'], amr['id'], errors
-                #     alignments, info = None, None
+                try:
+                    alignments, info = aligner.run(amr['amr'], amr['sentence'])
+                except:
+                    errors = errors + 1
+                    print 'ALIGNER ERROR', amr['file'], amr['id'], errors
+                    print traceback.print_exc()
+                    print '\n'
+                    alignments, info = None, None
                 try:
                     if alignments != None:
                         # print amr['sentence']
@@ -177,6 +180,8 @@ def main(aligner):
                     print 'Rules processed', rules_processed
                     print 'Invalid rules: ', invalid_rules
                     print 'Rate: ', str(round(float(invalid_rules)/rules_processed, 4))
+                    print '\n'
+                    traceback.print_exc()
                     print 20 * '-' + '\n\n'
 
     return grammar
