@@ -24,3 +24,6 @@ def run():
     f = open('text_for_lm')
     f.write('\n'.join(texts))
     f.close()
+
+if __name__ == '__main__':
+    run()
