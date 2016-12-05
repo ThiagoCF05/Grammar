@@ -42,7 +42,8 @@ def write(grammar, fname):
                 'tree':tree,
                 'tree_rules':rule.tree_rules,
                 'noun_info': noun,
-                'verb_info': verb
+                'verb_info': verb,
+                'tokens':rule.tokens
             }
             rules.append(aux)
         except:
@@ -63,90 +64,112 @@ def check_validity(tree):
     return isValid
 
 def main(aligner):
-    dir = '../data/LDC2016E25/data/amrs/unsplit'
+    dirs = ['../data/LDC2015E86/data/amrs/split/training',
+            '../data/LDC2015E86/data/amrs/split/dev',
+            '../data/LDC2016E25/data/amrs/split/training',
+            '../data/LDC2016E25/data/amrs/split/dev',
+            '../data/LDC2016E33/data/amrs']
+    # dir = '../data/LDC2016E25/data/amrs/unsplit'
 
     grammar = SynchG(initial_rules=[], substitution_rules=[], adjoining_rules=[])
 
     processed, errors, rules_processed, invalid_rules = 0, 0, 0, 0
-    for fname in os.listdir(dir):
-        print fname, '\r',
-        amrs = utils.parse_corpus(os.path.join(dir, fname))
+    for dir in dirs:
+        for fname in os.listdir(dir):
+            print fname, '\r',
+            amrs = utils.parse_corpus(os.path.join(dir, fname))
 
-        for amr in amrs:
-            processed = processed + 1
-            try:
-                alignments, info = aligner.run(amr['amr'], amr['sentence'])
-            except:
-                errors = errors + 1
-                print 'ALIGNER ERROR', amr['file'], amr['id'], errors
-                alignments, info = None, None
-            try:
-                if alignments != None:
-                    # print amr['sentence']
-                    # print amr['amr'], '\n\n'
-                    inducer = TAGSynchAligner(text=amr['sentence'], amr=amr['amr'], info=info, alignments=alignments)
-                    alignments = inducer.run()
+            for amr in amrs:
+                processed = processed + 1
+                try:
+                    alignments, info = aligner.run(amr['amr'], amr['sentence'])
+                except:
+                    errors = errors + 1
+                    print 'ALIGNER ERROR', amr['file'], amr['id'], errors
+                    alignments, info = None, None
+                try:
+                    if alignments != None:
+                        # print amr['sentence']
+                        # print amr['amr'], '\n\n'
+                        inducer = TAGSynchAligner(text=amr['sentence'], amr=amr['amr'], info=info, alignments=alignments)
+                        alignments = inducer.run()
 
-                    for rule_id in alignments.erg_rules:
-                        rules_processed = rules_processed + 1
+                        for rule_id in alignments.erg_rules:
+                            rules_processed = rules_processed + 1
 
-                        name = alignments.erg_rules[rule_id].name
-                        head = alignments.erg_rules[rule_id].head
+                            name = alignments.erg_rules[rule_id].name
+                            head = alignments.erg_rules[rule_id].head
+                            tokens = alignments.erg_rules[rule_id].tokens
 
-                        parent = alignments.erg_rules[rule_id].parent
-                        if parent != '':
-                            parent_rule = alignments.id2rule[parent]
-                            parent_head = alignments.erg_rules[parent].head
-                        else:
-                            parent_rule, parent_head = '', ''
-
-                        graph = alignments.erg_rules[rule_id].graph
-                        _graph_rules = alignments.erg_rules[rule_id].rules
-                        # fix rule names
-                        graph_rules = {}
-                        for node in _graph_rules:
-                            graph_rules[graph.nodes[node].name] = copy.copy(_graph_rules[node])
-
-                        tree = alignments.tag_rules[rule_id].tree
-                        tree_rules = alignments.tag_rules[rule_id].rules
-                        # TO DO fix rule names
-
-                        features = alignments.features[rule_id]
-
-                        if check_validity(tree):
-                            rule = SynchRule(name=name,
-                                      head=head,
-                                      parent_rule=parent_rule,
-                                      parent_head=parent_head,
-                                      graph=graph,
-                                      graph_rules=graph_rules,
-                                      tree=tree,
-                                      tree_rules=tree_rules,
-                                      features=features)
-
-                            if rule.name == ':root/ROOT':
-                                grammar.initial_rules.append(rule)
+                            parent = alignments.erg_rules[rule_id].parent
+                            if parent != '':
+                                parent_rule = alignments.id2rule[parent]
+                                parent_head = alignments.erg_rules[parent].head
                             else:
-                                grammar.substitution_rules.append(rule)
+                                parent_rule, parent_head = '', ''
 
-                            if rule_id in alignments.adjoining_rules:
-                                for adjoining in alignments.adjoining_rules[rule_id]:
-                                    tree = adjoining.tree
-                                    tree_rules = adjoining.rules
-                                    rule = SynchRule(name=name,
-                                                     head=head,
-                                                     parent_rule=parent_rule,
-                                                     parent_head=parent_head,
-                                                     graph=graph,
-                                                     graph_rules=graph_rules,
-                                                     tree=tree,
-                                                     tree_rules=tree_rules,
-                                                     features=features)
-                                    grammar.adjoining_rules.append(rule)
-                        else:
-                            invalid_rules = invalid_rules + 1
+                            graph = alignments.erg_rules[rule_id].graph
+                            _graph_rules = alignments.erg_rules[rule_id].rules
+                            # fix rule names
+                            graph_rules = {}
+                            for node in _graph_rules:
+                                graph_rules[graph.nodes[node].name] = copy.copy(_graph_rules[node])
 
-                if (processed % 1000) == 0:
+                            tree = alignments.tag_rules[rule_id].tree
+                            tree_rules = alignments.tag_rules[rule_id].rules
+                            # TO DO fix rule names
+
+                            features = alignments.features[rule_id]
+
+                            if check_validity(tree):
+                                rule = SynchRule(name=name,
+                                          head=head,
+                                          parent=parent,
+                                          parent_rule=parent_rule,
+                                          parent_head=parent_head,
+                                          graph=graph,
+                                          graph_rules=graph_rules,
+                                          tree=tree,
+                                          tree_rules=tree_rules,
+                                          features=features,
+                                          tokens=tokens)
+
+                                if ':root' in rule.name:
+                                    grammar.initial_rules.append(rule)
+                                else:
+                                    grammar.substitution_rules.append(rule)
+
+                                if rule_id in alignments.adjoining_rules:
+                                    for adjoining in alignments.adjoining_rules[rule_id]:
+                                        tree = adjoining.tree
+                                        tree_rules = adjoining.rules
+                                        rule = SynchRule(name=name,
+                                                         head=head,
+                                                         parent=parent,
+                                                         parent_rule=parent_rule,
+                                                         parent_head=parent_head,
+                                                         graph=graph,
+                                                         graph_rules=graph_rules,
+                                                         tree=tree,
+                                                         tree_rules=tree_rules,
+                                                         features=features,
+                                                         tokens=tokens)
+                                        grammar.adjoining_rules.append(rule)
+                            else:
+                                invalid_rules = invalid_rules + 1
+
+                    if (processed % 1000) == 0:
+                        print 'AMRs processed: ', processed
+                        print 'Errors: ', errors
+                        print 'Rate: ', str(round(float(errors)/processed, 4))
+                        print 10 * '-'
+                        print 'Rules processed', rules_processed
+                        print 'Invalid rules: ', invalid_rules
+                        print 'Rate: ', str(round(float(invalid_rules)/rules_processed, 4))
+                        print 20 * '-' + '\n\n'
+                except:
+                    errors = errors +1
+                    print 'INDUCER ERROR', amr['file'], amr['id']
                     print 'AMRs processed: ', processed
                     print 'Errors: ', errors
                     print 'Rate: ', str(round(float(errors)/processed, 4))
@@ -155,17 +178,6 @@ def main(aligner):
                     print 'Invalid rules: ', invalid_rules
                     print 'Rate: ', str(round(float(invalid_rules)/rules_processed, 4))
                     print 20 * '-' + '\n\n'
-            except:
-                errors = errors +1
-                print 'INDUCER ERROR', amr['file'], amr['id']
-                print 'AMRs processed: ', processed
-                print 'Errors: ', errors
-                print 'Rate: ', str(round(float(errors)/processed, 4))
-                print 10 * '-'
-                print 'Rules processed', rules_processed
-                print 'Invalid rules: ', invalid_rules
-                print 'Rate: ', str(round(float(invalid_rules)/rules_processed, 4))
-                print 20 * '-' + '\n\n'
 
     return grammar
 

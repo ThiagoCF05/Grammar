@@ -361,7 +361,8 @@ class TAGSynchAligner(object):
                     self.get_noun_info(root, labels[0])
 
                 # Extract adjoining rules
-                isAdjoined = self.create_adjoining(root, labels[0])
+                # isAdjoined = self.create_adjoining(root, labels[0])
+                isAdjoined = False
 
                 if not isAdjoined:
                     label = labels[0]
@@ -385,7 +386,8 @@ class TAGSynchAligner(object):
                         self.get_noun_info(root, head)
 
                     # Extract adjoining rules
-                    isAdjoined = self.create_adjoining(root, head)
+                    # isAdjoined = self.create_adjoining(root, labels[0])
+                    isAdjoined = False
                     if not isAdjoined:
                         self.update_rule_tree(root, head)
 

@@ -1,11 +1,13 @@
 __author__ = 'thiagocastroferreira'
 
 class SynchRule(object):
-    def __init__(self, name='', head='', parent=-1, graph=None, graph_rules={}, tree=None, tree_rules=[], tokens=[], features=None):
+    def __init__(self, name='', head='', parent=-1, parent_rule='', parent_head='', graph=None, graph_rules={}, tree=None, tree_rules=[], tokens=[], features=None):
         self.name = name
         self.head = head
 
         self.parent = parent
+        self.parent_rule = parent_rule
+        self.parent_head = parent_head
 
         self.graph_rules = graph_rules
         self.tree_rules = tree_rules

@@ -269,18 +269,18 @@ class Generator(object):
             print candidate.tree.prettify(candidate.tree.root)
 
 if __name__ == '__main__':
-    models = ['../data/grammars/initial_rule_edges.pickle',
-              '../data/grammars/initial_rule_edges_head.pickle',
-              '../data/grammars/initial_rule_edges_head_prule.pickle',
-              '../data/grammars/initial_rule_edges_head_prule_phead.pickle',
-              '../data/grammars/substitution_rule_edges.pickle',
-              '../data/grammars/substitution_rule_edges_head.pickle',
-              '../data/grammars/substitution_rule_edges_head_prule.pickle',
-              '../data/grammars/substitution_rule_edges_head_prule_phead.pickle',
-              '../data/grammars/adjoining_rule_edges.pickle',
-              '../data/grammars/adjoining_rule_edges_head.pickle',
-              '../data/grammars/adjoining_rule_edges_head_prule.pickle',
-              '../data/grammars/adjoining_rule_edges_head_prule_phead.pickle']
+    models = ['/Users/thiagocastroferreira/Documents/Doutorado/Third_Chapter/AMR/induced_grammars/initial_rule_edges.pickle',
+              '/Users/thiagocastroferreira/Documents/Doutorado/Third_Chapter/AMR/induced_grammars/initial_rule_edges_head.pickle',
+              '/Users/thiagocastroferreira/Documents/Doutorado/Third_Chapter/AMR/induced_grammars/initial_rule_edges_head_prule.pickle',
+              '/Users/thiagocastroferreira/Documents/Doutorado/Third_Chapter/AMR/induced_grammars/initial_rule_edges_head_prule_phead.pickle',
+              '/Users/thiagocastroferreira/Documents/Doutorado/Third_Chapter/AMR/induced_grammars/substitution_rule_edges.pickle',
+              '/Users/thiagocastroferreira/Documents/Doutorado/Third_Chapter/AMR/induced_grammars/substitution_rule_edges_head.pickle',
+              '/Users/thiagocastroferreira/Documents/Doutorado/Third_Chapter/AMR/induced_grammars/substitution_rule_edges_head_prule.pickle',
+              '/Users/thiagocastroferreira/Documents/Doutorado/Third_Chapter/AMR/induced_grammars/substitution_rule_edges_head_prule_phead.pickle',
+              '/Users/thiagocastroferreira/Documents/Doutorado/Third_Chapter/AMR/induced_grammars/adjoining_rule_edges.pickle',
+              '/Users/thiagocastroferreira/Documents/Doutorado/Third_Chapter/AMR/induced_grammars/adjoining_rule_edges_head.pickle',
+              '/Users/thiagocastroferreira/Documents/Doutorado/Third_Chapter/AMR/induced_grammars/adjoining_rule_edges_head_prule.pickle',
+              '/Users/thiagocastroferreira/Documents/Doutorado/Third_Chapter/AMR/induced_grammars/adjoining_rule_edges_head_prule_phead.pickle']
     verb2noun, noun2verb, verb2actor, actor2verb = utils.noun_verb('../data/morph-verbalization-v1.01.txt')
     sub2word = utils.subgraph_word('../data/verbalization-list-v1.06.txt')
 
