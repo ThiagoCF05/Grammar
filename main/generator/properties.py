@@ -1,22 +1,30 @@
-morph_verb = '../data/morph-verbalization-v1.01.txt'
-verbalization = '../data/verbalization-list-v1.06.txt'
+import os
 
-initial_rules = '../data/TEST/rules/initial.json'
-substitution_rules = '../data/TEST/rules/substitution.json'
-adjoining_rules = '../data/TEST/rules/adjoining.json'
+local_dir = '../data/'
+server_dir = '/home/tcastrof/amr/data/'
 
-lexicons = '../data/TEST/lexicon/lexicon.json'
-lexicon_laplace='../data/TEST/lexicon/laplace.pickle'
-lexicon_w='../data/TEST/lexicon/w.pickle'
-lexicon_w_tm1='../data/TEST/lexicon/w_wtm1.pickle'
-lexicon_w_head='../data/TEST/lexicon/w_head.pickle'
-lexicon_w_pos='../data/TEST/lexicon/w_pos.pickle'
-lexicon_w_edge='../data/TEST/lexicon/w_edge.pickle'
+prince_dir = os.path.join(server_dir, 'prince')
+semeval_dir = os.path.join(server_dir, 'semeval')
 
-initial_rule_edges = '../data/TEST/rules/initial_rule_edges.pickle'
-substitution_rule_edges = '../data/TEST/rules/substitution_rule_edges.pickle'
-initial_rule_edges_head = '../data/TEST/rules/initial_rule_edges_head.pickle'
-substitution_rule_edges_head = '../data/TEST/rules/substitution_rule_edges_head.pickle'
+morph_verb = os.path.join(server_dir, 'morph-verbalization-v1.01.txt')
+verbalization = os.path.join(server_dir, 'verbalization-list-v1.06.txt')
 
-voices = '../data/TEST/rules/voices.json'
-template_voice = '../data/TEST/rules/voices.pickle'
+initial_rules = os.path.join(prince_dir, '/rules/initial.json')
+substitution_rules = os.path.join(prince_dir, '/rules/substitution.json')
+adjoining_rules = os.path.join(prince_dir, '/rules/adjoining.json')
+
+lexicons = os.path.join(prince_dir, '/lexicon/lexicon.json')
+lexicon_laplace= os.path.join(prince_dir, '/lexicon/laplace.pickle')
+lexicon_w= os.path.join(prince_dir, '/lexicon/w.pickle')
+lexicon_w_tm1= os.path.join(prince_dir, '/lexicon/w_wtm1.pickle')
+lexicon_w_head= os.path.join(prince_dir, '/lexicon/w_head.pickle')
+lexicon_w_pos= os.path.join(prince_dir, '/lexicon/w_pos.pickle')
+lexicon_w_edge= os.path.join(prince_dir, '/lexicon/w_edge.pickle')
+
+initial_rule_edges = os.path.join(prince_dir, '/rules/initial_rule_edges.pickle')
+substitution_rule_edges = os.path.join(prince_dir, '/rules/substitution_rule_edges.pickle')
+initial_rule_edges_head = os.path.join(prince_dir, '/rules/initial_rule_edges_head.pickle')
+substitution_rule_edges_head = os.path.join(prince_dir, '/rules/substitution_rule_edges_head.pickle')
+
+voices = os.path.join(prince_dir, '/rules/voices.json')
+template_voice = os.path.join(prince_dir, '/rules/voices.pickle')

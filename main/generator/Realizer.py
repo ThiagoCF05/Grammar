@@ -3,6 +3,7 @@ __author__ = 'thiagocastroferreira'
 import copy
 import sys
 sys.path.append("/Users/thiagocastroferreira/workspace/simplenlg/SimpleNLG-4.4.8.jar")
+sys.path.append("/home/tcastrof/amr/simplenlg/SimpleNLG-4.4.8.jar")
 sys.path.append('../../')
 
 # SimpleNLG will do the NLG generation
