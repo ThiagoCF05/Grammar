@@ -224,12 +224,12 @@ class RuleProducer(object):
         write(self.grammar.substitution_rules, fnames['substitution'])
         write(self.grammar.adjoining_rules, fnames['adjoining'])
 
-    def run(self):
+    def run(self, isPrince=False):
         for dir in self.dirs:
             files = os.listdir(dir)
             for fname in files:
                 print fname, '\r',
-                amrs = utils.parse_corpus(os.path.join(dir, fname))
+                amrs = utils.parse_corpus(fname=os.path.join(dir, fname), prince=isPrince)
 
                 for amr in amrs:
                     self.process(amr)
@@ -245,20 +245,23 @@ if __name__ == '__main__':
 
     aligner = AMRAligner(verb2noun, noun2verb, verb2actor, actor2verb, sub2word, freq_table, proc)
 
-    dirs = ['/home/tcastrof/amr/data/LDC2016E25/data/amrs/unsplit',
-            '/home/tcastrof/amr/data/LDC2016E33/data']
+    # dirs = ['/home/tcastrof/amr/data/LDC2016E25/data/amrs/unsplit',
+    #         '/home/tcastrof/amr/data/LDC2016E33/data']
+
+    dirs = ['../data/prince/train']
+
     frules = {
-        'initial': '/home/tcastrof/amr/data/semeval/rules/initial.json',
-        'substitution': '/home/tcastrof/amr/data/semeval/rules/substitution.json',
-        'adjoining': '/home/tcastrof/amr/data/semeval/rules/adjoining.json'
+        'initial': '/home/tcastrof/amr/data/prince/rules/initial.json',
+        'substitution': '/home/tcastrof/amr/data/prince/rules/substitution.json',
+        'adjoining': '/home/tcastrof/amr/data/prince/rules/adjoining.json'
     }
 
-    flexicons = '/home/tcastrof/amr/data/TEST/lexicon/lexicon.json'
-    fvoices = '/home/tcastrof/amr/data/TEST/lexicon/voices.json'
+    flexicons = '/home/tcastrof/amr/data/prince/lexicon/lexicon.json'
+    fvoices = '/home/tcastrof/amr/data/prince/lexicon/voices.json'
 
     producer = RuleProducer(aligner=aligner, dirs=dirs)
 
-    producer.run()
+    producer.run(True)
     producer.write_rules(frules)
     producer.write_lexicons(flexicons)
     producer.write_voices(fvoices)

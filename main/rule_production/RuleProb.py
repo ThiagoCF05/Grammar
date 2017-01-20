@@ -135,11 +135,11 @@ if __name__ == '__main__':
     #          adjoining='/home/tcastrof/amr/data/grammars/adjoining.json',
     #          fwrite='/home/tcastrof/amr/data/grammars')
 
-    RuleProb(initial='/home/tcastrof/amr/data/semeval/rules/initial.json',
-             substitution='/home/tcastrof/amr/data/semeval/rules/substitution.json',
-             adjoining='/home/tcastrof/amr/data/semeval/rules/adjoining.json',
-             lexicons='/home/tcastrof/amr/data/semeval/lexicon/lexicon.json',
-             voices='/home/tcastrof/amr/data/semeval/lexicon/voices.json',
-             rule_write='/home/tcastrof/amr/data/semeval/rules',
-             lexicon_write='/home/tcastrof/amr/data/semeval/lexicon',
-             voice_write='/home/tcastrof/amr/data/semeval/rules/voices.pickle')
+    RuleProb(initial='/home/tcastrof/amr/data/prince/rules/initial.json',
+             substitution='/home/tcastrof/amr/data/prince/rules/substitution.json',
+             adjoining='/home/tcastrof/amr/data/prince/rules/adjoining.json',
+             lexicons='/home/tcastrof/amr/data/prince/lexicon/lexicon.json',
+             voices='/home/tcastrof/amr/data/prince/lexicon/voices.json',
+             rule_write='/home/tcastrof/amr/data/prince/rules',
+             lexicon_write='/home/tcastrof/amr/data/prince/lexicon',
+             voice_write='/home/tcastrof/amr/data/prince/rules/voices.pickle')
