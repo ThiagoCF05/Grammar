@@ -23,6 +23,30 @@ class AMR(object):
         self.edges = edges
         self.root = root
 
+    def get_rules(self, root='', rules=[]):
+        for edge in self.edges[root]:
+            if edge.isRule:
+                rules.append(edge.node_id)
+            else:
+                rules = self.get_rules(edge.node_id, rules)
+        return rules
+
+    def insert(self, subgraph):
+        for node in subgraph.nodes:
+            _id = subgraph.nodes[node].id
+            self.nodes[_id] = subgraph.nodes[node]
+            self.edges[_id] = subgraph.edges[node]
+
+        if self.root == '':
+            self.root = subgraph.root
+        else:
+            parent = subgraph.nodes[subgraph.root].parent
+
+            for i, edge in enumerate(self.edges[parent['node']]):
+                if edge.node_id == subgraph.root:
+                    self.edges[parent['node']][i].isRule = False
+                    break
+
     def parse(self, amr):
         self.edges['root'] = []
 
@@ -131,15 +155,12 @@ class ERG(object):
         self.start = start
 
 class ERGFactory(object):
-    def __init__(self, amr='', verb2noun={}, noun2verb={}, verb2actor={}, actor2verb={}, sub2word={}):
+    def __init__(self, verb2noun={}, noun2verb={}, verb2actor={}, actor2verb={}, sub2word={}):
         self.verb2noun = verb2noun
         self.noun2verb = noun2verb
         self.verb2actor = verb2actor
         self.actor2verb = actor2verb
         self.sub2word = sub2word
-
-        self.amr = AMR(nodes={}, edges={}, root='')
-        self.amr.parse(amr)
 
     def match_subgraph_patterns(self, root):
         # filter subgraphs with the root given as a parameter which the related word is in the sentence
@@ -265,7 +286,7 @@ class ERGFactory(object):
 
             # MATCH parent of :degree non-matched
             if edge.name == ':degree' and len(self.amr.nodes[edge.node_id].tokens) == 0:
-                rule = self.create_subgraph_rule(root, [edge])
+                rule = self.create_subgraph_rule(root, [edge], self.amr.nodes[root].tokens)
                 self.erg.rules[self.erg.count] = rule
                 self.erg.count = self.erg.count + 1
 
@@ -284,17 +305,23 @@ class ERGFactory(object):
             self.erg.count = self.erg.count + 1
         # MATCH entity and quantity nodes
         elif regex.match(self.amr.nodes[root].name) != None:
-            rule = self.create_subgraph_rule(root, self.amr.edges[root])
+            rule = self.create_subgraph_rule(root, self.amr.edges[root], self.amr.nodes[root].tokens)
             self.erg.rules[self.erg.count] = rule
             self.erg.count = self.erg.count + 1
         # MATCH org and rel roles
         elif self.amr.nodes[root].name in ['have-rel-role-91', 'have-org-role-91']:
             edges = filter(lambda edge: edge.name == ':ARG2', self.amr.edges[root])
-            rule = self.create_subgraph_rule(root, edges)
+            rule = self.create_subgraph_rule(root, edges, self.amr.nodes[root].tokens)
             self.erg.rules[self.erg.count] = rule
             self.erg.count = self.erg.count + 1
 
-    def create_erg(self):
+    def create_erg(self, amr):
+        if type(amr) == str:
+            self.amr = AMR(nodes={}, edges={}, root='')
+            self.amr.parse(amr)
+        else:
+            self.amr = amr
+
         self.erg = ERG(rules={}, start='')
         self.find_subgraphs(self.amr.root, [])
 

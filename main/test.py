@@ -129,12 +129,11 @@ if __name__ == '__main__':
 
     aligner = AMRAligner(verb2noun, noun2verb, verb2actor, actor2verb, sub2word, freq_table, proc)
 
-    text = 'The teacher and the worker'
-    amr = """(a / and
-                    :op1 (p / person
-                            :ARG0-of (t / teach-01))
-                    :op2 (p2 / person
-                            :ARG0-of (w / work-01))"""
+    text = 'The man described the mission as a disaster .'
+    amr = """(d / describe-01
+                :arg0 (m / man)
+                :arg1 (m2 / mission)
+                :arg2 (d / disaster))"""
 
     alignments, info = aligner.run(amr, text)
     print info['parse']

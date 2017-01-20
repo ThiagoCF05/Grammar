@@ -71,7 +71,7 @@ def evaluate(aligner):
         for i, amr in enumerate(amrs):
             try:
                 gold_alignments = aligner.train(aligned_amrs[i]['amr'], aligned_amrs[i]['sentence'])
-                alignments, info = aligner.run(amr['amr'], amr['sentence'])
+                alignments, info = aligner.freq_rules(amr['amr'], amr['sentence'])
 
                 _num, _dem = accuracy(gold_alignments, alignments)
                 num += _num
@@ -93,7 +93,7 @@ def main(aligner):
 
         for amr in amrs:
             try:
-                alignments, info = aligner.run(amr['amr'], amr['sentence'])
+                alignments, info = aligner.freq_rules(amr['amr'], amr['sentence'])
             except:
                 errors = errors + 1
                 print 'ALIGNER ERROR', amr['file'], amr['id'], errors
@@ -102,7 +102,7 @@ def main(aligner):
             if alignments != None:
                 try:
                     inducer = RuleInducer(amr['sentence'], amr['amr'], info, alignments)
-                    id2subtrees, id2rule, adjtrees = inducer.run()
+                    id2subtrees, id2rule, adjtrees = inducer.freq_rules()
                     tag, ltag = inducer.prettify(id2subtrees, id2rule, adjtrees, tag, ltag)
                 except:
                     print 'INDUCER ERROR', amr['file'], amr['id']

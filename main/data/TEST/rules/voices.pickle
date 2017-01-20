@@ -1,0 +1,234 @@
+cnltk.probability
+FreqDist
+p1
+((dp2
+(V(ROOT (S (:ARG0/NP) (VP (VB xxx) (:ARG1/NP)) (. -)))
+p3
+Vactive
+p4
+tp5
+I4
+s(V(ROOT (S (:ARG0/NP) (VP (MD xxx) (:polarity/RB) (:domain/VP)) (. -)))
+p6
+Vactive
+p7
+tp8
+I1
+s(V(ROOT (S (:ARG0/NP) (VP (VB -) (ADJP (JJ xxx) (:ARG1/S))) (. -)))
+p9
+Vactive
+p10
+tp11
+I1
+s(V(ROOT (S (:ARG0/NP) (VP (VB xxx) (:ARG0/NP)) (. -)))
+p12
+Vactive
+p13
+tp14
+I1
+s(V(S (NP (PRP -)) (VP (VB -) (RB -) (ADJP (JJ -)) (SBAR (IN -) (S (:ARG0/NP) (VP (TO -) (VP (VB xxx)))))) (. -))
+p15
+Vactive
+p16
+tp17
+I1
+s(V(SBAR (WHNP (WP -)) (S (VP (VB xxx))))
+p18
+Vactive
+p19
+tp20
+I1
+s(V(ROOT (S (:ARG0/NP) (VP (VB xxx)) (. -)))
+p21
+Vactive
+p22
+tp23
+I1
+s(V(S (VP (TO -) (VP (VB xxx) (:ARG1/NP))))
+p24
+Vactive
+p25
+tp26
+I2
+s(V(ROOT (S (:ARG0/NP) (VP (VB -) (VP (VB xxx) (:ARG0/PP))) (. -)))
+p27
+Vpassive
+p28
+tp29
+I1
+s(V(SBAR (S (:ARG1/NP) (VP (VB xxx))))
+p30
+Vactive
+p31
+tp32
+I1
+s(V(ROOT (S (:ARG0/NP) (VP (VB xxx) (:ARG1/NP) (:ARG2/PP)) (. -)))
+p33
+Vactive
+p34
+tp35
+I1
+s(V(ROOT (S (:ARG0/NP) (VP (VB -) (VP (VB xxx) (:ARG1/PP))) (. -)))
+p36
+Vpassive
+p37
+tp38
+I1
+s(V(ROOT (S (:ARG0/NP) (VP (VB xxx) (:ARG1/SBAR)) (. -)))
+p39
+Vactive
+p40
+tp41
+I3
+s(V(ROOT (S (:ARG1/NP) (VP (VB -) (VP (VB xxx))) (. -)))
+p42
+Vpassive
+p43
+tp44
+I1
+s(V(PP (TO -) (NP (VB xxx)))
+p45
+Vactive
+p46
+tp47
+I1
+s(V(ROOT (S (:ARG0/NP) (VP (VB -) (:polarity/RB) (VP (VB xxx) (:ARG1/NP))) (. -)))
+p48
+Vactive
+p49
+tp50
+I1
+s(V(ROOT (S (:ARG0/NP) (VP (MD xxx) (:polarity/RB) (:ARG2/VP)) (. -)))
+p51
+Vactive
+p52
+tp53
+I1
+s(V(ROOT (S (:ARG0/NP) (VP (VB xxx) (:ARG1/S)) (. -)))
+p54
+Vactive
+p55
+tp56
+I2
+s(V(SBAR (IN -) (S (:mod/ADVP) (:ARG1/NP) (VP (VB -) (VP (VB -) (VP (VB xxx) (:ARG2/PP) (:purpose/PP))))))
+p57
+Vpassive
+p58
+tp59
+I1
+s(V(SBAR (WHNP (WP -)) (S (VP (VB xxx) (:ARG1/NP))))
+p60
+Vactive
+p61
+tp62
+I1
+s(V(ROOT (S (:ARG0/NP) (VP (VB xxx) (:ARG1/NP) (:ARG3/PP)) (. -)))
+p63
+Vactive
+p64
+tp65
+I1
+s(V(VP (VB -) (NP-TMP (NN xxx)))
+p66
+Vactive
+p67
+tp68
+I1
+s(V(S (VP (TO -) (VP (VB xxx))))
+p69
+Vactive
+p70
+tp71
+I2
+s(V(VP (VB xxx))
+p72
+Vactive
+p73
+tp74
+I8
+s(V(ROOT (S (NP (PRP -)) (VP (MD xxx) (:ARG1/VP)) (. -)))
+p75
+Vactive
+p76
+tp77
+I1
+s(V(ROOT (S (:ARG1/NP) (VP (VB -) (:polarity/RB) (VP (VB xxx) (:ARG0/PP))) (. -)))
+p78
+Vpassive
+p79
+tp80
+I1
+s(V(ROOT (S (:ARG1/NP) (VP (VB -) (ADJP (JJ xxx))) (. -)))
+p81
+Vactive
+p82
+tp83
+I2
+s(V(SBAR (S (:ARG0/NP) (VP (MD -) (VP (VB xxx)))))
+p84
+Vactive
+p85
+tp86
+I1
+s(V(ROOT (S (:ARG0/NP) (VP (VB xxx) (:ARG1/NP) (PRT (RP xxx)) (:time/PP)) (. -)))
+p87
+Vactive
+p88
+tp89
+I1
+s(V(SBAR (S (:ARG0/NP) (VP (MD -) (:polarity/RB) (VP (VB xxx)))))
+p90
+Vactive
+p91
+tp92
+I1
+s(V(ROOT (S (:ARG0/NP) (VP (VB xxx) (:ARG2/PP)) (. -)))
+p93
+Vactive
+p94
+tp95
+I1
+s(V(ROOT (S (:ARG0/NP) (VP (VB -) (:polarity/RB) (VP (VB xxx))) (. -)))
+p96
+Vactive
+p97
+tp98
+I2
+s(V(ROOT (S (:ARG1/NP) (VP (VB -) (VP (VB xxx) (:ARG0/PP))) (. -)))
+p99
+Vpassive
+p100
+tp101
+I1
+s(V(SBAR (IN -) (S (:ARG1/NP) (VP (VB -) (ADJP (JJ xxx)))))
+p102
+Vactive
+p103
+tp104
+I1
+s(V(ROOT (S (NP (PRP -)) (VP (VB -) (:polarity/RB) (ADJP (JJ -)) (SBAR (IN -) (S (:ARG0/NP) (VP (VB xxx) (:ARG1/SBAR))))) (. -)))
+p105
+Vactive
+p106
+tp107
+I1
+s(V(S (:ARG0/NP) (VP (VB -) (:polarity/RB) (VP (VB -) (S (VP (TO -) (VP (VB xxx)))))) (. -))
+p108
+Vactive
+p109
+tp110
+I1
+s(V(ROOT (S (:ARG0/NP) (VP (MD xxx) (:ARG1/VP)) (. -)))
+p111
+Vactive
+p112
+tp113
+I3
+s(V(ROOT (S (:ARG0/NP) (VP (MD xxx) (:polarity/RB) (:ARG1/VP)) (. -)))
+p114
+Vactive
+p115
+tp116
+I2
+stRp117
+.

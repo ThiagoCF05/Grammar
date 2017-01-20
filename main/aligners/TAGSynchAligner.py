@@ -10,7 +10,7 @@ Description:
 import copy
 import re
 
-from main.aligners.Features import NounPhrase, VerbPhrase
+from main.aligners.Features import NounPhrase, VerbPhrase, Lexicon
 from main.grammars.TAG import Tree, TAGNode, TAGRule
 
 class TAGSynchAligner(object):
@@ -23,6 +23,43 @@ class TAGSynchAligner(object):
         self.info = info
 
         self.info['tokens'] = map(lambda x: x.lower(), self.info['tokens'])
+
+    def init_lexicons(self, tree):
+        terminals = tree.get_nodes_by(type='terminal', root=tree.root, nodes=[])
+        terminals.sort(key=lambda x: tree.nodes[x].index)
+
+        lexicons = []
+        for i, terminal in enumerate(terminals):
+            w_tm1 = '*'
+            if i > 0:
+                w_tm1 = tree.nodes[terminals[i-1]].lexicon
+
+            lexicon = Lexicon(w_t=tree.nodes[terminal].lexicon,
+                              w_tm1=w_tm1,
+                              head='',
+                              pos=tree.nodes[terminal].name,
+                              edge='',
+                              rule_id=-1,
+                              index=tree.nodes[terminal].index)
+
+            lexicons.append(lexicon)
+        return lexicons
+
+    def get_lexicon_information(self, root, rule_id):
+        index = self.tree.nodes[root].index
+        if index > 0:
+            w_tm1 = self.info['lemmas'][index-1].lower()
+        else:
+            w_tm1 = '*'
+
+        lexicon = Lexicon(w_t=self.tree.nodes[root].lexicon,
+                          w_tm1=w_tm1,
+                          head='',
+                          pos=self.tree.nodes[root].name,
+                          edge='',
+                          rule_id=rule_id,
+                          index=index)
+        return lexicon
 
     def set_tree_rules(self):
         for rule_id in self.alignments.erg_rules:
@@ -199,13 +236,19 @@ class TAGSynchAligner(object):
         erg_rule = self.alignments.erg_rules[rule_id]
         tag_rule = self.alignments.tag_rules[rule_id]
 
+        self.tree.nodes[root].rule_id = rule_id
+
+        graph_root = erg_rule.graph.root
+        graph_root_parent = erg_rule.graph.nodes[graph_root].parent
+
+        # Update lexicon information
+        if self.tree.nodes[root].type == 'terminal':
+            self.alignments.lexicons.append(self.get_lexicon_information(root, rule_id))
+
         if should_label:
             self.tree.nodes[root].label = rule_id
 
             tag_rule.tree.root = root
-
-            graph_root = erg_rule.graph.root
-            graph_root_parent = erg_rule.graph.nodes[graph_root].parent
 
             # Determine rule name
             rule_name = graph_root_parent['edge']+'/'+self.tree.nodes[root].name
@@ -401,6 +444,9 @@ class TAGSynchAligner(object):
         self.tree = Tree(nodes={}, edges={}, root=1)
         self.tree.parse(self.string_tree)
 
+        # Initialize lexicons
+        self.alignments.lexicons = []
+
         self._id = max(self.tree.nodes) + 1
 
         head_label = ''
@@ -447,5 +493,7 @@ class TAGSynchAligner(object):
             feature = self.alignments.features[rule_id]
             if feature != None and feature.type == 'verb':
                 self.alignments.features[rule_id] = self.get_verb_tense(self.alignments.features[rule_id])
+
+            self.alignments.erg_rules[rule_id].tokens = map(lambda x: self.info['lemmas'][x], self.alignments.erg_rules[rule_id].tokens)
 
         return self.alignments

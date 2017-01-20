@@ -1,0 +1,238 @@
+[
+    {
+        "template": "(ROOT (S (:ARG0/NP) (VP (VB xxx) (:ARG1/NP)) (. -)))",
+        "voice": "active"
+    },
+    {
+        "template": "(ROOT (S (:ARG0/NP) (VP (VB xxx) (:ARG2/PP)) (. -)))",
+        "voice": "active"
+    },
+    {
+        "template": "(ROOT (S (:ARG0/NP) (VP (VB xxx) (:ARG1/S)) (. -)))",
+        "voice": "active"
+    },
+    {
+        "template": "(ROOT (S (:ARG0/NP) (VP (VB xxx) (:ARG1/NP)) (. -)))",
+        "voice": "active"
+    },
+    {
+        "template": "(ROOT (S (:ARG1/NP) (VP (VB -) (VP (VB xxx) (:ARG0/PP))) (. -)))",
+        "voice": "passive"
+    },
+    {
+        "template": "(ROOT (S (:ARG1/NP) (VP (VB -) (:polarity/RB) (VP (VB xxx) (:ARG0/PP))) (. -)))",
+        "voice": "passive"
+    },
+    {
+        "template": "(ROOT (S (:ARG0/NP) (VP (VB xxx) (:ARG1/NP) (:ARG2/PP)) (. -)))",
+        "voice": "active"
+    },
+    {
+        "template": "(ROOT (S (:ARG0/NP) (VP (MD xxx) (:ARG1/VP)) (. -)))",
+        "voice": "active"
+    },
+    {
+        "template": "(ROOT (S (:ARG0/NP) (VP (MD xxx) (:ARG1/VP)) (. -)))",
+        "voice": "active"
+    },
+    {
+        "template": "(ROOT (S (:ARG0/NP) (VP (MD xxx) (:ARG1/VP)) (. -)))",
+        "voice": "active"
+    },
+    {
+        "template": "(ROOT (S (:ARG0/NP) (VP (VB xxx) (:ARG1/SBAR)) (. -)))",
+        "voice": "active"
+    },
+    {
+        "template": "(ROOT (S (:ARG0/NP) (VP (VB -) (:polarity/RB) (VP (VB xxx))) (. -)))",
+        "voice": "active"
+    },
+    {
+        "template": "(ROOT (S (:ARG0/NP) (VP (MD xxx) (:polarity/RB) (:domain/VP)) (. -)))",
+        "voice": "active"
+    },
+    {
+        "template": "(ROOT (S (:ARG0/NP) (VP (VB xxx) (:ARG1/NP) (:ARG3/PP)) (. -)))",
+        "voice": "active"
+    },
+    {
+        "template": "(ROOT (S (:ARG0/NP) (VP (VB xxx) (:ARG0/NP)) (. -)))",
+        "voice": "active"
+    },
+    {
+        "template": "(ROOT (S (:ARG0/NP) (VP (MD xxx) (:polarity/RB) (:ARG2/VP)) (. -)))",
+        "voice": "active"
+    },
+    {
+        "template": "(ROOT (S (:ARG0/NP) (VP (MD xxx) (:polarity/RB) (:ARG1/VP)) (. -)))",
+        "voice": "active"
+    },
+    {
+        "template": "(ROOT (S (:ARG1/NP) (VP (VB -) (ADJP (JJ xxx))) (. -)))",
+        "voice": "active"
+    },
+    {
+        "template": "(ROOT (S (:ARG0/NP) (VP (VB xxx) (:ARG1/SBAR)) (. -)))",
+        "voice": "active"
+    },
+    {
+        "template": "(ROOT (S (:ARG0/NP) (VP (VB xxx) (:ARG1/NP)) (. -)))",
+        "voice": "active"
+    },
+    {
+        "template": "(ROOT (S (:ARG0/NP) (VP (VB xxx) (:ARG1/NP)) (. -)))",
+        "voice": "active"
+    },
+    {
+        "template": "(ROOT (S (:ARG0/NP) (VP (VB -) (VP (VB xxx) (:ARG0/PP))) (. -)))",
+        "voice": "passive"
+    },
+    {
+        "template": "(ROOT (S (:ARG1/NP) (VP (VB -) (VP (VB xxx))) (. -)))",
+        "voice": "passive"
+    },
+    {
+        "template": "(ROOT (S (:ARG0/NP) (VP (VB xxx) (:ARG1/S)) (. -)))",
+        "voice": "active"
+    },
+    {
+        "template": "(ROOT (S (:ARG0/NP) (VP (VB xxx)) (. -)))",
+        "voice": "active"
+    },
+    {
+        "template": "(ROOT (S (NP (PRP -)) (VP (MD xxx) (:ARG1/VP)) (. -)))",
+        "voice": "active"
+    },
+    {
+        "template": "(ROOT (S (:ARG0/NP) (VP (VB -) (ADJP (JJ xxx) (:ARG1/S))) (. -)))",
+        "voice": "active"
+    },
+    {
+        "template": "(ROOT (S (:ARG0/NP) (VP (VB -) (VP (VB xxx) (:ARG1/PP))) (. -)))",
+        "voice": "passive"
+    },
+    {
+        "template": "(ROOT (S (:ARG0/NP) (VP (VB -) (:polarity/RB) (VP (VB xxx))) (. -)))",
+        "voice": "active"
+    },
+    {
+        "template": "(ROOT (S (:ARG0/NP) (VP (MD xxx) (:polarity/RB) (:ARG1/VP)) (. -)))",
+        "voice": "active"
+    },
+    {
+        "template": "(ROOT (S (:ARG0/NP) (VP (VB xxx) (:ARG1/SBAR)) (. -)))",
+        "voice": "active"
+    },
+    {
+        "template": "(ROOT (S (NP (PRP -)) (VP (VB -) (:polarity/RB) (ADJP (JJ -)) (SBAR (IN -) (S (:ARG0/NP) (VP (VB xxx) (:ARG1/SBAR))))) (. -)))",
+        "voice": "active"
+    },
+    {
+        "template": "(ROOT (S (:ARG0/NP) (VP (VB -) (:polarity/RB) (VP (VB xxx) (:ARG1/NP))) (. -)))",
+        "voice": "active"
+    },
+    {
+        "template": "(ROOT (S (:ARG1/NP) (VP (VB -) (ADJP (JJ xxx))) (. -)))",
+        "voice": "active"
+    },
+    {
+        "template": "(ROOT (SBARQ (:ARG1/WHNP) (SQ (VBD -) (:ARG0/NP) (VP (VB xxx))) (. -)))",
+        "voice": "active"
+    },
+    {
+        "template": "(ROOT (S (:ARG0/NP) (VP (VB xxx) (:ARG1/NP) (PRT (RP xxx)) (:time/PP)) (. -)))",
+        "voice": "active"
+    },
+    {
+        "template": "(S (VP (TO -) (VP (VB xxx) (:ARG1/NP))))",
+        "voice": "active"
+    },
+    {
+        "template": "(SBAR (WHNP (WP -)) (S (VP (VB xxx))))",
+        "voice": "active"
+    },
+    {
+        "template": "(VP (VB xxx))",
+        "voice": "active"
+    },
+    {
+        "template": "(S (NP (PRP -)) (VP (VB -) (RB -) (ADJP (JJ -)) (SBAR (IN -) (S (:ARG0/NP) (VP (TO -) (VP (VB xxx)))))) (. -))",
+        "voice": "active"
+    },
+    {
+        "template": "(VP (VB xxx))",
+        "voice": "active"
+    },
+    {
+        "template": "(VP (VB xxx))",
+        "voice": "active"
+    },
+    {
+        "template": "(SBAR (IN -) (S (:mod/ADVP) (:ARG1/NP) (VP (VB -) (VP (VB -) (VP (VB xxx) (:ARG2/PP) (:purpose/PP))))))",
+        "voice": "passive"
+    },
+    {
+        "template": "(VP (VB xxx))",
+        "voice": "active"
+    },
+    {
+        "template": "(S (VP (TO -) (VP (VB xxx) (:ARG1/NP))))",
+        "voice": "active"
+    },
+    {
+        "template": "(VP (VB -) (NP-TMP (NN xxx)))",
+        "voice": "active"
+    },
+    {
+        "template": "(VP (VB xxx))",
+        "voice": "active"
+    },
+    {
+        "template": "(VP (VB xxx))",
+        "voice": "active"
+    },
+    {
+        "template": "(SBAR (IN -) (S (:ARG1/NP) (VP (VB -) (ADJP (JJ xxx)))))",
+        "voice": "active"
+    },
+    {
+        "template": "(SBAR (WHNP (WP -)) (S (VP (VB xxx) (:ARG1/NP))))",
+        "voice": "active"
+    },
+    {
+        "template": "(SBAR (S (:ARG1/NP) (VP (VB xxx))))",
+        "voice": "active"
+    },
+    {
+        "template": "(S (VP (TO -) (VP (VB xxx))))",
+        "voice": "active"
+    },
+    {
+        "template": "(VP (VB xxx))",
+        "voice": "active"
+    },
+    {
+        "template": "(S (VP (TO -) (VP (VB xxx))))",
+        "voice": "active"
+    },
+    {
+        "template": "(PP (TO -) (NP (VB xxx)))",
+        "voice": "active"
+    },
+    {
+        "template": "(VP (VB xxx))",
+        "voice": "active"
+    },
+    {
+        "template": "(S (:ARG0/NP) (VP (VB -) (:polarity/RB) (VP (VB -) (S (VP (TO -) (VP (VB xxx)))))) (. -))",
+        "voice": "active"
+    },
+    {
+        "template": "(SBAR (S (:ARG0/NP) (VP (MD -) (:polarity/RB) (VP (VB xxx)))))",
+        "voice": "active"
+    },
+    {
+        "template": "(SBAR (S (:ARG0/NP) (VP (MD -) (VP (VB xxx)))))",
+        "voice": "active"
+    }
+]

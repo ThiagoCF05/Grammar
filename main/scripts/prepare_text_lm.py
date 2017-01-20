@@ -21,7 +21,7 @@ def run():
             for amr in amrs:
                 texts.append(amr['sentence'])
 
-    f = open('text_for_lm')
+    f = open('text_for_lm', 'w')
     f.write('\n'.join(texts))
     f.close()
 

@@ -32,7 +32,7 @@ class AlignerTest(unittest.TestCase):
                                   :ARG2 (w / wound-01
                                         :ARG1 p
                                         :mod (m / minor)))))"""
-        self.aligner.run(amr, text)
+        self.aligner.freq_rules(amr, text)
 
         self.assertDictEqual({}, {1:1})
 
@@ -48,7 +48,7 @@ class AlignerTest(unittest.TestCase):
                               :ARG1 (s2 / stock-01))
                         :mod (o2 / official)
                         :time (d / date-entity :month 8 :day 8)))"""
-        self.aligner.run(amr, text)
+        self.aligner.freq_rules(amr, text)
 
         self.assertDictEqual({}, {1:1})
 
@@ -75,7 +75,7 @@ class AlignerTest(unittest.TestCase):
                                                     :ARG1 (c5 / center
                                                           :mod (s3 / sport)))))
                                   :time (a4 / already))))"""
-        self.aligner.run(amr, text)
+        self.aligner.freq_rules(amr, text)
 
         self.assertDictEqual({}, {1:1})
 
@@ -97,7 +97,7 @@ class AlignerTest(unittest.TestCase):
                             :ARG1 p
                             :ARG2 (c / conscience)
                             :degree (t / total)))"""
-        self.aligner.run(amr, text)
+        self.aligner.freq_rules(amr, text)
 
         self.assertDictEqual({}, {1:1})
 
@@ -106,7 +106,7 @@ class AlignerTest(unittest.TestCase):
         amr = """(c / cut-01
                       :ARG0 (h / he)
                       :ARG1 h)"""
-        self.aligner.run(amr, text)
+        self.aligner.freq_rules(amr, text)
 
         self.assertDictEqual({}, {1:1})
 
@@ -126,7 +126,7 @@ class AlignerTest(unittest.TestCase):
                                         :ARG2 (h / hand
                                               :part-of p2)))
                             :degree (m2 / most)))"""
-        self.aligner.run(amr, text)
+        self.aligner.freq_rules(amr, text)
 
         self.assertDictEqual({}, {1:1})
 
@@ -145,7 +145,7 @@ class AlignerTest(unittest.TestCase):
                                                     :ARG2 i))))
                             :manner (d / die-01
                                   :ARG1 y)))"""
-        self.aligner.run(amr, text)
+        self.aligner.freq_rules(amr, text)
 
         self.assertDictEqual({}, {1:1})
 
@@ -162,7 +162,7 @@ class AlignerTest(unittest.TestCase):
                                       :ARG0 i2
                                       :ARG1 (w / world
                                             :ARG1-of (n / new-02)))))"""
-            self.aligner.run(amr, text)
+            self.aligner.freq_rules(amr, text)
 
             self.assertDictEqual({}, {1:1})
 
@@ -175,6 +175,6 @@ class AlignerTest(unittest.TestCase):
                                   :name (n / name :op1 "Hong" :op2 "Kong"))
                             :ARG2 (p2 / paradise
                                   :topic (s / shop-01))))"""
-        self.aligner.run(amr, text)
+        self.aligner.freq_rules(amr, text)
 
         self.assertDictEqual({}, {1:1})

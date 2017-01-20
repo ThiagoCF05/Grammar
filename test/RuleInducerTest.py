@@ -24,9 +24,9 @@ class RuleInducerTest(unittest.TestCase):
                             :op1 \"Barack\"
                             :op2 \"Obama\"))"""
 
-        alignments, info = self.aligner.run(amr, text)
+        alignments, info = self.aligner.freq_rules(amr, text)
         inducer = RuleInducer(text, amr, info, alignments)
-        id2subtrees, id2rule, adjtrees = inducer.run()
+        id2subtrees, id2rule, adjtrees = inducer.freq_rules()
 
         tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
         ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
@@ -53,9 +53,9 @@ class RuleInducerTest(unittest.TestCase):
 
         amr = """(c / cat)"""
 
-        alignments, info = self.aligner.run(amr, text)
+        alignments, info = self.aligner.freq_rules(amr, text)
         inducer = RuleInducer(text, amr, info, alignments)
-        id2subtrees, id2rule, adjtrees = inducer.run()
+        id2subtrees, id2rule, adjtrees = inducer.freq_rules()
 
         tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
         ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
@@ -89,9 +89,9 @@ class RuleInducerTest(unittest.TestCase):
                     :op2 (p2 / person
                             :ARG0-of (w / work-01))"""
 
-        alignments, info = self.aligner.run(amr, text)
+        alignments, info = self.aligner.freq_rules(amr, text)
         inducer = RuleInducer(text, amr, info, alignments)
-        id2subtrees, id2rule, adjtrees = inducer.run()
+        id2subtrees, id2rule, adjtrees = inducer.freq_rules()
 
         tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
         ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
@@ -127,9 +127,9 @@ class RuleInducerTest(unittest.TestCase):
         amr = """(s / shame
                     :domain (t / that))"""
 
-        alignments, info = self.aligner.run(amr, text)
+        alignments, info = self.aligner.freq_rules(amr, text)
         inducer = RuleInducer(text, amr, info, alignments)
-        id2subtrees, id2rule, adjtrees = inducer.run()
+        id2subtrees, id2rule, adjtrees = inducer.freq_rules()
 
         tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
         ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
@@ -165,9 +165,9 @@ class RuleInducerTest(unittest.TestCase):
                       :ARG0 (g / girl)
                       :ARG1 (m / machine))"""
 
-        alignments, info = self.aligner.run(amr, text)
+        alignments, info = self.aligner.freq_rules(amr, text)
         inducer = RuleInducer(text, amr, info, alignments)
-        id2subtrees, id2rule, adjtrees = inducer.run()
+        id2subtrees, id2rule, adjtrees = inducer.freq_rules()
 
         tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
         ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
@@ -207,9 +207,9 @@ class RuleInducerTest(unittest.TestCase):
                       :ARG1 (m / mission)
                       :ARG2 (d / disaster))"""
 
-        alignments, info = self.aligner.run(amr, text)
+        alignments, info = self.aligner.freq_rules(amr, text)
         inducer = RuleInducer(text, amr, info, alignments)
-        id2subtrees, id2rule, adjtrees = inducer.run()
+        id2subtrees, id2rule, adjtrees = inducer.freq_rules()
 
         tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
         ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
@@ -251,9 +251,9 @@ class RuleInducerTest(unittest.TestCase):
                       :ARG1 (g / girl
                             :location (h / house)))"""
 
-        alignments, info = self.aligner.run(amr, text)
+        alignments, info = self.aligner.freq_rules(amr, text)
         inducer = RuleInducer(text, amr, info, alignments)
-        id2subtrees, id2rule, adjtrees = inducer.run()
+        id2subtrees, id2rule, adjtrees = inducer.freq_rules()
 
         tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
         ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
@@ -299,9 +299,9 @@ class RuleInducerTest(unittest.TestCase):
                       :ARG1 (g / girl
                             :location (h / house)))"""
 
-        alignments, info = self.aligner.run(amr, text)
+        alignments, info = self.aligner.freq_rules(amr, text)
         inducer = RuleInducer(text, amr, info, alignments)
-        id2subtrees, id2rule, adjtrees = inducer.run()
+        id2subtrees, id2rule, adjtrees = inducer.freq_rules()
 
         tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
         ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
@@ -342,9 +342,9 @@ class RuleInducerTest(unittest.TestCase):
                       :domain (l / leave-01
                             :ARG0 (y / you)))"""
 
-        alignments, info = self.aligner.run(amr, text)
+        alignments, info = self.aligner.freq_rules(amr, text)
         inducer = RuleInducer(text, amr, info, alignments)
-        id2subtrees, id2rule, adjtrees = inducer.run()
+        id2subtrees, id2rule, adjtrees = inducer.freq_rules()
 
         tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
         ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
@@ -383,9 +383,9 @@ class RuleInducerTest(unittest.TestCase):
                       :ARG0 (g / girl)
                       :ARG1 (m / machine))"""
 
-        alignments, info = self.aligner.run(amr, text)
+        alignments, info = self.aligner.freq_rules(amr, text)
         inducer = RuleInducer(text, amr, info, alignments)
-        id2subtrees, id2rule, adjtrees = inducer.run()
+        id2subtrees, id2rule, adjtrees = inducer.freq_rules()
 
         tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
         ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
@@ -428,9 +428,9 @@ class RuleInducerTest(unittest.TestCase):
                    :ARG1-of (b / black-04
                               :polarity -))"""
 
-        alignments, info = self.aligner.run(amr, text)
+        alignments, info = self.aligner.freq_rules(amr, text)
         inducer = RuleInducer(text, amr, info, alignments)
-        id2subtrees, id2rule, adjtrees = inducer.run()
+        id2subtrees, id2rule, adjtrees = inducer.freq_rules()
 
         tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
         ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
@@ -466,9 +466,9 @@ class RuleInducerTest(unittest.TestCase):
                       :ARG0 (h / he)
                       :ARG1 h)"""
 
-        alignments, info = self.aligner.run(amr, text)
+        alignments, info = self.aligner.freq_rules(amr, text)
         inducer = RuleInducer(text, amr, info, alignments)
-        id2subtrees, id2rule, adjtrees = inducer.run()
+        id2subtrees, id2rule, adjtrees = inducer.freq_rules()
 
         tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
         ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
@@ -508,9 +508,9 @@ class RuleInducerTest(unittest.TestCase):
                             :ARG2 (p2 / paradise
                                   :topic (s / shop-01))))"""
 
-        alignments, info = self.aligner.run(amr, text)
+        alignments, info = self.aligner.freq_rules(amr, text)
         inducer = RuleInducer(text, amr, info, alignments)
-        id2subtrees, id2rule, adjtrees = inducer.run()
+        id2subtrees, id2rule, adjtrees = inducer.freq_rules()
 
         tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
         ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
@@ -564,9 +564,9 @@ class RuleInducerTest(unittest.TestCase):
                                       :ARG1 (w / world
                                             :ARG1-of (n / new-02)))))"""
 
-        alignments, info = self.aligner.run(amr, text)
+        alignments, info = self.aligner.freq_rules(amr, text)
         inducer = RuleInducer(text, amr, info, alignments)
-        id2subtrees, id2rule, adjtrees = inducer.run()
+        id2subtrees, id2rule, adjtrees = inducer.freq_rules()
 
         tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
         ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
@@ -623,9 +623,9 @@ class RuleInducerTest(unittest.TestCase):
                             :ARG1 (b / bicycle
                                   :mod (r / red))))"""
 
-        alignments, info = self.aligner.run(amr, text)
+        alignments, info = self.aligner.freq_rules(amr, text)
         inducer = RuleInducer(text, amr, info, alignments)
-        id2subtrees, id2rule, adjtrees = inducer.run()
+        id2subtrees, id2rule, adjtrees = inducer.freq_rules()
 
         tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
         ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
@@ -682,9 +682,9 @@ class RuleInducerTest(unittest.TestCase):
                                         :ARG1 p
                                         :mod (m / minor)))))"""
 
-        alignments, info = self.aligner.run(amr, text)
+        alignments, info = self.aligner.freq_rules(amr, text)
         inducer = RuleInducer(text, amr, info, alignments)
-        id2subtrees, id2rule, adjtrees = inducer.run()
+        id2subtrees, id2rule, adjtrees = inducer.freq_rules()
 
         tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
         ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
@@ -754,9 +754,9 @@ class RuleInducerTest(unittest.TestCase):
                         :mod (o2 / official)
                         :time (d / date-entity :month 8 :day 8)))"""
 
-        alignments, info = self.aligner.run(amr, text)
+        alignments, info = self.aligner.freq_rules(amr, text)
         inducer = RuleInducer(text, amr, info, alignments)
-        id2subtrees, id2rule, adjtrees = inducer.run()
+        id2subtrees, id2rule, adjtrees = inducer.freq_rules()
 
         tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
         ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
@@ -829,9 +829,9 @@ class RuleInducerTest(unittest.TestCase):
                                                           :mod (s3 / sport)))))
                                   :time (a4 / already))))"""
 
-        alignments, info = self.aligner.run(amr, text)
+        alignments, info = self.aligner.freq_rules(amr, text)
         inducer = RuleInducer(text, amr, info, alignments)
-        id2subtrees, id2rule, adjtrees = inducer.run()
+        id2subtrees, id2rule, adjtrees = inducer.freq_rules()
 
         tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
         ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
@@ -922,9 +922,9 @@ class RuleInducerTest(unittest.TestCase):
                             :ARG2 (c / conscience)
                             :degree (t / total)))"""
 
-        alignments, info = self.aligner.run(amr, text)
+        alignments, info = self.aligner.freq_rules(amr, text)
         inducer = RuleInducer(text, amr, info, alignments)
-        id2subtrees, id2rule, adjtrees = inducer.run()
+        id2subtrees, id2rule, adjtrees = inducer.freq_rules()
 
         tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
         ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
@@ -996,9 +996,9 @@ class RuleInducerTest(unittest.TestCase):
                                               :part-of p2)))
                             :degree (m2 / most)))"""
 
-        alignments, info = self.aligner.run(amr, text)
+        alignments, info = self.aligner.freq_rules(amr, text)
         inducer = RuleInducer(text, amr, info, alignments)
-        id2subtrees, id2rule, adjtrees = inducer.run()
+        id2subtrees, id2rule, adjtrees = inducer.freq_rules()
 
         tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
         ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
@@ -1066,9 +1066,9 @@ class RuleInducerTest(unittest.TestCase):
                             :manner (d / die-01
                                   :ARG1 y)))"""
 
-        alignments, info = self.aligner.run(amr, text)
+        alignments, info = self.aligner.freq_rules(amr, text)
         inducer = RuleInducer(text, amr, info, alignments)
-        id2subtrees, id2rule, adjtrees = inducer.run()
+        id2subtrees, id2rule, adjtrees = inducer.freq_rules()
 
         tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
         ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}
@@ -1132,9 +1132,9 @@ class RuleInducerTest(unittest.TestCase):
                                                     :ARG1 (o / other)))))
                             :ARG2 c))"""
 
-        alignments, info = self.aligner.run(amr, text)
+        alignments, info = self.aligner.freq_rules(amr, text)
         inducer = RuleInducer(text, amr, info, alignments)
-        id2subtrees, id2rule, adjtrees = inducer.run()
+        id2subtrees, id2rule, adjtrees = inducer.freq_rules()
 
         tag={'initial':{}, 'substitution':{}, 'adjoining':{}}
         ltag={'initial':{}, 'substitution':{}, 'adjoining':{}}

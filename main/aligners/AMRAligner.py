@@ -459,7 +459,7 @@ class AMRAligner(object):
         self.lemmas = map(lambda x: (x, 'unlabeled'), self.info['lemmas'])
 
         # Initialize Aligner
-        self.alignments = Alignments(erg_rules={}, tag_rules={}, adjoining_rules={}, features={}, id2rule={})
+        self.alignments = Alignments(erg_rules={}, tag_rules={}, adjoining_rules={}, features={}, id2rule={}, lexicons=[])
         root = self.amr.edges['root'][0].node_id
         self.align(root, [], False)
 
@@ -499,7 +499,7 @@ class AMRAligner(object):
         self.info, self.coref = self.get_corenlp_result(text)
 
         # Initialize Aligner
-        self.alignments = Alignments(erg_rules={}, tag_rules={}, adjoining_rules={}, features={}, id2rule={})
+        self.alignments = Alignments(erg_rules={}, tag_rules={}, adjoining_rules={}, features={}, id2rule={}, lexicons=[])
 
         # Initialize AMR
         self.amr = AMR(nodes={}, edges={}, root='')

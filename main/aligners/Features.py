@@ -20,3 +20,13 @@ class NounPhrase(Features):
         self.number = number
         # in prepositional phrase
         self.inPP = inPP
+
+class Lexicon(object):
+    def __init__(self, w_t, w_tm1, head, pos, edge, rule_id, index):
+        self.rule_id = rule_id
+        self.w_t = w_t
+        self.w_tm1 = w_tm1
+        self.head = head
+        self.pos = pos
+        self.edge = edge
+        self.index= index
