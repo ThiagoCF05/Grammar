@@ -62,17 +62,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RuleProducer.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RuleProducer.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/rule_production/RuleProducer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="250" column="51" lean-forward="false" selection-start-line="250" selection-start-column="20" selection-end-line="250" selection-end-column="51" />
+            <state relative-caret-position="267">
+              <caret line="207" column="57" lean-forward="true" selection-start-line="207" selection-start-column="57" selection-end-line="207" selection-end-column="57" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RuleProb.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RuleProb.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/rule_production/RuleProb.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="567">
@@ -200,8 +200,8 @@
         <option value="$PROJECT_DIR$/main/generator/Generator.py" />
         <option value="$PROJECT_DIR$/main/generator/Lexicalizer.py" />
         <option value="$PROJECT_DIR$/main/generator/Realizer.py" />
-        <option value="$PROJECT_DIR$/main/rule_production/RuleProducer.py" />
         <option value="$PROJECT_DIR$/main/rule_production/RuleProb.py" />
+        <option value="$PROJECT_DIR$/main/rule_production/RuleProducer.py" />
       </list>
     </option>
   </component>
@@ -1481,18 +1481,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/rule_production/RuleProducer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="250" column="51" lean-forward="false" selection-start-line="250" selection-start-column="20" selection-end-line="250" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/rule_production/RuleProb.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="567">
           <caret line="141" column="52" lean-forward="false" selection-start-line="141" selection-start-column="45" selection-end-line="141" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/rule_production/RuleProducer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="207" column="57" lean-forward="true" selection-start-line="207" selection-start-column="57" selection-end-line="207" selection-end-column="57" />
           <folding />
         </state>
       </provider>

@@ -128,7 +128,7 @@ class RuleProducer(object):
                 self.print_report()
 
     def process(self, amr):
-        print amr
+        # print amr
         try:
             alignments, info = self.align_amr(amr)
 
