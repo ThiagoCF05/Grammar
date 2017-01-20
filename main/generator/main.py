@@ -9,10 +9,10 @@ from Generator import Generator
 from Realizer import Realizer
 
 def write(l, fname):
-    with open(fname, 'w') as f:
-        for row in l:
-            f.write(row)
-            f.write('\n')
+    f = open(fname, 'w')
+    for row in l:
+        f.write(row)
+        f.write('\n')
     f.close()
 
 if __name__ == '__main__':
