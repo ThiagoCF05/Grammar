@@ -1,6 +1,6 @@
-__author__ = 'thiagocastroferreira'
+from main.old import Aligner
 
-from Aligner import Aligner
+__author__ = 'thiagocastroferreira'
 
 from sys import path
 path.append('/home/tcastrof/amr/scp_repo')

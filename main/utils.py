@@ -22,7 +22,7 @@ def parse_aligned_corpus(fname):
             pass
     return amrs
 
-def parse_corpus(fname):
+def parse_corpus(fname, prince=False):
     with open(fname) as f:
         doc = f.read()
 
@@ -34,7 +34,10 @@ def parse_corpus(fname):
             instance = instance.split('\n')
             sentence_id = instance[0].split()[2]
             sentence = ' '.join(instance[1].split()[2:])
-            amr = '\n'.join(instance[3:])
+            if prince:
+                amr = '\n'.join(instance[4:])
+            else:
+                amr = '\n'.join(instance[3:])
 
             amrs.append({'id':sentence_id, 'file':fname, 'sentence': sentence, 'amr': amr})
         except:
@@ -105,4 +108,4 @@ def subgraph_word(fname):
     return sub2word
 
 # if __name__ == '__main__':
-#     parse_aligned_corpus('data/aligned.txt')
+#     parse_corpus('data/prince/dev.txt', True)
