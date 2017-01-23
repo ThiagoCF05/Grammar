@@ -44,7 +44,7 @@
               <folding>
                 <element signature="e#37#56#0" expanded="true" />
                 <element signature="e#3840#5168#0" expanded="false" />
-                <marker date="1485176079000" expanded="true" signature="205:978" ph="..." />
+                <marker date="1485189117000" expanded="true" signature="205:978" ph="..." />
               </folding>
             </state>
           </provider>
@@ -60,13 +60,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RuleProducer.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RuleProducer.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/rule_production/RuleProducer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="40" />
+            <state relative-caret-position="322">
+              <caret line="234" column="32" lean-forward="false" selection-start-line="234" selection-start-column="32" selection-end-line="234" selection-end-column="32" />
               <folding>
                 <element signature="e#2102#5349#0" expanded="false" />
+                <element signature="e#5387#6023#0" expanded="false" />
                 <element signature="e#6070#6481#0" expanded="false" />
                 <element signature="e#6526#7234#0" expanded="false" />
               </folding>
@@ -74,10 +75,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RuleProb.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RuleProb.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/rule_production/RuleProb.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="742">
+            <state relative-caret-position="1252">
               <caret line="123" column="60" lean-forward="false" selection-start-line="123" selection-start-column="60" selection-end-line="123" selection-end-column="60" />
               <folding />
             </state>
@@ -98,7 +99,7 @@
         <entry file="file://$PROJECT_DIR$/main/grammars/TAG.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="337">
-              <caret line="154" column="0" lean-forward="true" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
+              <caret line="154" column="0" lean-forward="false" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
               <folding>
                 <element signature="e#1550#2395#0" expanded="false" />
                 <element signature="e#2432#4001#0" expanded="false" />
@@ -184,8 +185,8 @@
         <option value="$PROJECT_DIR$/main/generator/Lexicalizer.py" />
         <option value="$PROJECT_DIR$/main/grammars/TAG.py" />
         <option value="$PROJECT_DIR$/main/generator/properties.py" />
-        <option value="$PROJECT_DIR$/main/rule_production/RuleProducer.py" />
         <option value="$PROJECT_DIR$/main/rule_production/RuleProb.py" />
+        <option value="$PROJECT_DIR$/main/rule_production/RuleProducer.py" />
       </list>
     </option>
   </component>
@@ -1328,17 +1329,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/generator/lexicalized">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-98">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/main/generator/lexicalized" />
     <entry file="file://$APPLICATION_PLUGINS_DIR$/python/helpers/pydev/_pydev_bundle/pydev_monkey_qt.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -1400,7 +1394,7 @@
     <entry file="file://$PROJECT_DIR$/main/grammars/TAG.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="337">
-          <caret line="154" column="0" lean-forward="true" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
+          <caret line="154" column="0" lean-forward="false" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
           <folding>
             <element signature="e#1550#2395#0" expanded="false" />
             <element signature="e#2432#4001#0" expanded="false" />
@@ -1453,7 +1447,7 @@
           <folding>
             <element signature="e#37#56#0" expanded="true" />
             <element signature="e#3840#5168#0" expanded="false" />
-            <marker date="1485176079000" expanded="true" signature="205:978" ph="..." />
+            <marker date="1485189117000" expanded="true" signature="205:978" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1463,18 +1457,6 @@
         <state relative-caret-position="-48">
           <caret line="450" column="51" lean-forward="true" selection-start-line="450" selection-start-column="51" selection-end-line="450" selection-end-column="51" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/rule_production/RuleProducer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="40" />
-          <folding>
-            <element signature="e#2102#5349#0" expanded="false" />
-            <element signature="e#6070#6481#0" expanded="false" />
-            <element signature="e#6526#7234#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1488,9 +1470,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/rule_production/RuleProb.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="742">
+        <state relative-caret-position="1252">
           <caret line="123" column="60" lean-forward="false" selection-start-line="123" selection-start-column="60" selection-end-line="123" selection-end-column="60" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/rule_production/RuleProducer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="234" column="32" lean-forward="false" selection-start-line="234" selection-start-column="32" selection-end-line="234" selection-end-column="32" />
+          <folding>
+            <element signature="e#2102#5349#0" expanded="false" />
+            <element signature="e#5387#6023#0" expanded="false" />
+            <element signature="e#6070#6481#0" expanded="false" />
+            <element signature="e#6526#7234#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

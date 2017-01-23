@@ -229,6 +229,10 @@ class RuleProducer(object):
 
     def run(self, isPrince=False):
         for dir in self.dirs:
+            if 'prince' in dir:
+                isPrince = True
+            else:
+                isPrince = False
             files = os.listdir(dir)
             for fname in files:
                 print fname, '\r',
