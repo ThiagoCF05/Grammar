@@ -9,7 +9,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(ROOT (NP (NN xxx) (NN xxx)))",
+        "tree": " barack obama",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -23,7 +23,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(ROOT (NP (DT -) (NN xxx) (. -)))",
+        "tree": " DT cat .",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -38,7 +38,7 @@
         "head": "miss-01",
         "name": ":root/ROOT",
         "noun_info": {},
-        "tree": "(ROOT (S (:ARG0/NP) (VP (VB xxx) (:ARG1/NP)) (. -)))",
+        "tree": " :ARG0/NP miss :ARG1/NP .",
         "tree_rules": [
             ":ARG1/NP",
             ":ARG0/NP"
@@ -59,7 +59,7 @@
         "head": "talk-01",
         "name": ":root/ROOT",
         "noun_info": {},
-        "tree": "(ROOT (S (:ARG0/NP) (VP (VB xxx) (:ARG2/PP)) (. -)))",
+        "tree": " :ARG0/NP talk :ARG2/PP .",
         "tree_rules": [
             ":ARG2/PP",
             ":ARG0/NP"
@@ -80,7 +80,7 @@
         "head": "want-01",
         "name": ":root/ROOT",
         "noun_info": {},
-        "tree": "(ROOT (S (:ARG0/NP) (VP (VB xxx) (:ARG1/S)) (. -)))",
+        "tree": " :ARG0/NP want :ARG1/S .",
         "tree_rules": [
             ":ARG1/S",
             ":ARG0/NP"
@@ -101,7 +101,7 @@
         "head": "adjust-01",
         "name": ":root/ROOT",
         "noun_info": {},
-        "tree": "(ROOT (S (:ARG0/NP) (VP (VB xxx) (:ARG1/NP)) (. -)))",
+        "tree": " :ARG0/NP adjust :ARG1/NP .",
         "tree_rules": [
             ":ARG1/NP",
             ":ARG0/NP"
@@ -122,7 +122,7 @@
         "head": "adjust-01",
         "name": ":root/ROOT",
         "noun_info": {},
-        "tree": "(ROOT (S (:ARG1/NP) (VP (VB -) (VP (VB xxx) (:ARG0/PP))) (. -)))",
+        "tree": " :ARG1/NP VB adjust :ARG0/PP .",
         "tree_rules": [
             ":ARG0/PP",
             ":ARG1/NP"
@@ -144,7 +144,7 @@
         "head": "adjust-01",
         "name": ":root/ROOT",
         "noun_info": {},
-        "tree": "(ROOT (S (:ARG1/NP) (VP (VB -) (:polarity/RB) (VP (VB xxx) (:ARG0/PP))) (. -)))",
+        "tree": " :ARG1/NP VB :polarity/RB adjust :ARG0/PP .",
         "tree_rules": [
             ":ARG0/PP",
             ":polarity/RB",
@@ -167,7 +167,7 @@
         "head": "describe-01",
         "name": ":root/ROOT",
         "noun_info": {},
-        "tree": "(ROOT (S (:ARG0/NP) (VP (VB xxx) (:ARG1/NP) (:ARG2/PP)) (. -)))",
+        "tree": " :ARG0/NP describe :ARG1/NP :ARG2/PP .",
         "tree_rules": [
             ":ARG1/NP",
             ":ARG2/PP",
@@ -194,7 +194,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(ROOT (NP (NP (NP (:ARG0/NP) (NN xxx)) (:ARG1/PP)) (: -) (:ARG2/NP) (. -)))",
+        "tree": " :ARG0/NP description :ARG1/PP : :ARG2/NP .",
         "tree_rules": [
             ":ARG0/NP",
             ":ARG1/PP",
@@ -212,7 +212,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(ROOT (NP (DT -) (NN xxx) (. -)))",
+        "tree": " DT teacher .",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -230,7 +230,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(ROOT (NP (DT -) (NN xxx) (:ARG0-of/SBAR) (. -)))",
+        "tree": " DT person :ARG0-of/SBAR .",
         "tree_rules": [
             ":ARG0-of/SBAR"
         ],
@@ -246,7 +246,7 @@
         "head": "permit-01",
         "name": ":root/ROOT",
         "noun_info": {},
-        "tree": "(ROOT (S (:ARG0/NP) (VP (MD xxx) (:ARG1/VP)) (. -)))",
+        "tree": " :ARG0/NP can :ARG1/VP .",
         "tree_rules": [
             ":ARG1/VP"
         ],
@@ -265,7 +265,7 @@
         "head": "obligate-01",
         "name": ":root/ROOT",
         "noun_info": {},
-        "tree": "(ROOT (S (:ARG0/NP) (VP (MD xxx) (:ARG1/VP)) (. -)))",
+        "tree": " :ARG0/NP must :ARG1/VP .",
         "tree_rules": [
             ":ARG1/VP"
         ],
@@ -284,7 +284,7 @@
         "head": "recommend-01",
         "name": ":root/ROOT",
         "noun_info": {},
-        "tree": "(ROOT (S (:ARG0/NP) (VP (MD xxx) (:ARG1/VP)) (. -)))",
+        "tree": " :ARG0/NP should :ARG1/VP .",
         "tree_rules": [
             ":ARG1/VP"
         ],
@@ -304,7 +304,7 @@
         "head": "say-01",
         "name": ":root/ROOT",
         "noun_info": {},
-        "tree": "(ROOT (S (:ARG0/NP) (VP (VB xxx) (:ARG1/SBAR)) (. -)))",
+        "tree": " :ARG0/NP say :ARG1/SBAR .",
         "tree_rules": [
             ":ARG1/SBAR",
             ":ARG0/NP"
@@ -325,7 +325,7 @@
         "head": "go-01",
         "name": ":root/ROOT",
         "noun_info": {},
-        "tree": "(ROOT (S (:ARG0/NP) (VP (VB -) (:polarity/RB) (VP (VB xxx))) (. -)))",
+        "tree": " :ARG0/NP VB :polarity/RB go .",
         "tree_rules": [
             ":polarity/RB",
             ":ARG0/NP"
@@ -346,7 +346,7 @@
         "head": "possible",
         "name": ":root/ROOT",
         "noun_info": {},
-        "tree": "(ROOT (S (:ARG0/NP) (VP (MD xxx) (:polarity/RB) (:domain/VP)) (. -)))",
+        "tree": " :ARG0/NP can :polarity/RB :domain/VP .",
         "tree_rules": [
             ":polarity/RB",
             ":domain/VP"
@@ -369,7 +369,7 @@
         "head": "send-01",
         "name": ":root/ROOT",
         "noun_info": {},
-        "tree": "(ROOT (S (:ARG0/NP) (VP (VB xxx) (:ARG1/NP) (:ARG3/PP)) (. -)))",
+        "tree": " :ARG0/NP send :ARG1/NP :ARG3/PP .",
         "tree_rules": [
             ":ARG4/PP",
             ":ARG1/NP",
@@ -392,7 +392,7 @@
         "head": "want-01",
         "name": ":root/ROOT",
         "noun_info": {},
-        "tree": "(ROOT (S (:ARG0/NP) (VP (VB xxx) (:ARG0/NP)) (. -)))",
+        "tree": " :ARG0/NP want :ARG0/NP .",
         "tree_rules": [
             ":ARG1/S",
             ":ARG0/NP"
@@ -416,7 +416,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(ROOT (S (NP (DT -) (NN xxx)) (:time/VP) (. -)))",
+        "tree": " DT killing :time/VP .",
         "tree_rules": [
             ":time/VP"
         ],
@@ -437,7 +437,7 @@
             "inPP": false,
             "number": "plural"
         },
-        "tree": "(ROOT (NP (NP (:op1/NP) (CC xxx) (:op2/NP)) (. -)))",
+        "tree": " :op1/NP and :op2/NP .",
         "tree_rules": [
             ":op1/NP",
             ":op2/NP"
@@ -458,7 +458,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(ROOT (FRAG (NP (:poss/PRP$) (NN xxx)) (. -)))",
+        "tree": " :poss/PRP$ boat .",
         "tree_rules": [
             ":poss/PRP$"
         ],
@@ -474,7 +474,7 @@
         "head": "obligate-01",
         "name": ":root/ROOT",
         "noun_info": {},
-        "tree": "(ROOT (S (:ARG0/NP) (VP (MD xxx) (:polarity/RB) (:ARG2/VP)) (. -)))",
+        "tree": " :ARG0/NP must :polarity/RB :ARG2/VP .",
         "tree_rules": [
             ":ARG2/VP"
         ],
@@ -494,7 +494,7 @@
         "head": "permit-01",
         "name": ":root/ROOT",
         "noun_info": {},
-        "tree": "(ROOT (S (:ARG0/NP) (VP (MD xxx) (:polarity/RB) (:ARG1/VP)) (. -)))",
+        "tree": " :ARG0/NP may :polarity/RB :ARG1/VP .",
         "tree_rules": [
             ":polarity/RB",
             ":ARG1/VP"
@@ -514,7 +514,7 @@
         "head": "white-03",
         "name": ":root/ROOT",
         "noun_info": {},
-        "tree": "(ROOT (S (:ARG1/NP) (VP (VB -) (ADJP (JJ xxx))) (. -)))",
+        "tree": " :ARG1/NP VB white .",
         "tree_rules": [
             ":ARG1/NP"
         ],
@@ -534,7 +534,7 @@
         "head": "see-01",
         "name": ":root/ROOT",
         "noun_info": {},
-        "tree": "(ROOT (S (:ARG0/NP) (VP (VB xxx) (:ARG1/SBAR)) (. -)))",
+        "tree": " :ARG0/NP see :ARG1/SBAR .",
         "tree_rules": [
             ":ARG1/SBAR",
             ":ARG0/NP"
@@ -555,7 +555,7 @@
         "head": "see-01",
         "name": ":root/ROOT",
         "noun_info": {},
-        "tree": "(ROOT (S (:ARG0/NP) (VP (VB xxx) (:ARG1/NP)) (. -)))",
+        "tree": " :ARG0/NP see :ARG1/NP .",
         "tree_rules": [
             ":ARG1/NP",
             ":ARG0/NP"
@@ -576,7 +576,7 @@
         "head": "see-01",
         "name": ":root/ROOT",
         "noun_info": {},
-        "tree": "(ROOT (S (:ARG0/NP) (VP (VB xxx) (:ARG1/NP)) (. -)))",
+        "tree": " :ARG0/NP see :ARG1/NP .",
         "tree_rules": [
             ":ARG1/NP",
             ":ARG0/NP"
@@ -597,7 +597,7 @@
         "head": "want-01",
         "name": ":root/ROOT",
         "noun_info": {},
-        "tree": "(ROOT (S (:ARG0/NP) (VP (VB -) (VP (VB xxx) (:ARG0/PP))) (. -)))",
+        "tree": " :ARG0/NP VB want :ARG0/PP .",
         "tree_rules": [
             ":ARG1/NP",
             ":ARG0/PP"
@@ -617,7 +617,7 @@
         "head": "change-01",
         "name": ":root/ROOT",
         "noun_info": {},
-        "tree": "(ROOT (S (:ARG1/NP) (VP (VB -) (VP (VB xxx))) (. -)))",
+        "tree": " :ARG1/NP VB change .",
         "tree_rules": [
             ":ARG1/NP"
         ],
@@ -637,7 +637,7 @@
         "head": "want-01",
         "name": ":root/ROOT",
         "noun_info": {},
-        "tree": "(ROOT (S (:ARG0/NP) (VP (VB xxx) (:ARG1/S)) (. -)))",
+        "tree": " :ARG0/NP want :ARG1/S .",
         "tree_rules": [
             ":ARG1/S",
             ":ARG0/NP"
@@ -657,7 +657,7 @@
         "head": "believe-01",
         "name": ":root/ROOT",
         "noun_info": {},
-        "tree": "(ROOT (S (:ARG0/NP) (VP (VB xxx)) (. -)))",
+        "tree": " :ARG0/NP believe .",
         "tree_rules": [
             ":ARG0/NP"
         ],
@@ -676,7 +676,7 @@
         "head": "possible-01",
         "name": ":root/ROOT",
         "noun_info": {},
-        "tree": "(ROOT (S (NP (PRP -)) (VP (MD xxx) (:ARG1/VP)) (. -)))",
+        "tree": " PRP may :ARG1/VP .",
         "tree_rules": [
             ":ARG1/VP"
         ],
@@ -695,7 +695,7 @@
         "head": "likely-01",
         "name": ":root/ROOT",
         "noun_info": {},
-        "tree": "(ROOT (S (:ARG0/NP) (VP (VB -) (ADJP (JJ xxx) (:ARG1/S))) (. -)))",
+        "tree": " :ARG0/NP VB likely :ARG1/S .",
         "tree_rules": [
             ":ARG1/S"
         ],
@@ -715,7 +715,7 @@
         "head": "use-02",
         "name": ":root/ROOT",
         "noun_info": {},
-        "tree": "(ROOT (S (:ARG0/NP) (VP (VB -) (VP (VB xxx) (:ARG1/PP))) (. -)))",
+        "tree": " :ARG0/NP VB use :ARG1/PP .",
         "tree_rules": [
             ":ARG1/PP",
             ":ARG0/NP"
@@ -736,7 +736,7 @@
         "head": "go-02",
         "name": ":root/ROOT",
         "noun_info": {},
-        "tree": "(ROOT (S (:ARG0/NP) (VP (VB -) (:polarity/RB) (VP (VB xxx))) (. -)))",
+        "tree": " :ARG0/NP VB :polarity/RB go .",
         "tree_rules": [
             ":polarity/RB",
             ":ARG0/NP"
@@ -757,7 +757,7 @@
         "head": "possible-01",
         "name": ":root/ROOT",
         "noun_info": {},
-        "tree": "(ROOT (S (:ARG0/NP) (VP (MD xxx) (:polarity/RB) (:ARG1/VP)) (. -)))",
+        "tree": " :ARG0/NP can :polarity/RB :ARG1/VP .",
         "tree_rules": [
             ":polarity/RB",
             ":ARG1/VP"
@@ -778,7 +778,7 @@
         "head": "think-01",
         "name": ":root/ROOT",
         "noun_info": {},
-        "tree": "(ROOT (S (:ARG0/NP) (VP (VB xxx) (:ARG1/SBAR)) (. -)))",
+        "tree": " :ARG0/NP think :ARG1/SBAR .",
         "tree_rules": [
             ":ARG1/SBAR",
             ":ARG0/NP"
@@ -800,7 +800,7 @@
         "head": "think-01",
         "name": ":root/ROOT",
         "noun_info": {},
-        "tree": "(ROOT (S (NP (PRP -)) (VP (VB -) (:polarity/RB) (ADJP (JJ -)) (SBAR (IN -) (S (:ARG0/NP) (VP (VB xxx) (:ARG1/SBAR))))) (. -)))",
+        "tree": " PRP VB :polarity/RB JJ IN :ARG0/NP think :ARG1/SBAR .",
         "tree_rules": [
             ":ARG1/SBAR",
             ":ARG0/NP",
@@ -823,7 +823,7 @@
         "head": "have-01",
         "name": ":root/ROOT",
         "noun_info": {},
-        "tree": "(ROOT (S (:ARG0/NP) (VP (VB -) (:polarity/RB) (VP (VB xxx) (:ARG1/NP))) (. -)))",
+        "tree": " :ARG0/NP VB :polarity/RB have :ARG1/NP .",
         "tree_rules": [
             ":ARG1/NP",
             ":polarity/RB",
@@ -848,7 +848,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(ROOT (S (:domain/NP) (VP (VB -) (NP (DT -) (NN xxx))) (. -)))",
+        "tree": " :domain/NP VB DT lawyer .",
         "tree_rules": [
             ":domain/NP"
         ],
@@ -864,7 +864,7 @@
         "head": "sad-02",
         "name": ":root/ROOT",
         "noun_info": {},
-        "tree": "(ROOT (S (:ARG1/NP) (VP (VB -) (ADJP (JJ xxx))) (. -)))",
+        "tree": " :ARG1/NP VB sad .",
         "tree_rules": [
             ":ARG1/NP"
         ],
@@ -884,7 +884,7 @@
         "head": "find-01",
         "name": ":root/ROOT",
         "noun_info": {},
-        "tree": "(ROOT (SBARQ (:ARG1/WHNP) (SQ (VBD -) (:ARG0/NP) (VP (VB xxx))) (. -)))",
+        "tree": " :ARG1/WHNP VBD :ARG0/NP find .",
         "tree_rules": [
             ":ARG0/NP",
             ":ARG1/WHNP"
@@ -906,7 +906,7 @@
         "head": "shut-down-05",
         "name": ":root/ROOT",
         "noun_info": {},
-        "tree": "(ROOT (S (:ARG0/NP) (VP (VB xxx) (:ARG1/NP) (PRT (RP xxx)) (:time/PP)) (. -)))",
+        "tree": " :ARG0/NP shut :ARG1/NP down :time/PP .",
         "tree_rules": [
             ":ARG1/NP",
             ":time/PP",

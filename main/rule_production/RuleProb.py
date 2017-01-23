@@ -135,11 +135,11 @@ if __name__ == '__main__':
     #          adjoining='/home/tcastrof/amr/data/grammars/adjoining.json',
     #          fwrite='/home/tcastrof/amr/data/grammars')
 
-    RuleProb(initial='/home/tcastrof/amr/data/prince/rules/initial.json',
-             substitution='/home/tcastrof/amr/data/prince/rules/substitution.json',
-             adjoining='/home/tcastrof/amr/data/prince/rules/adjoining.json',
-             lexicons='/home/tcastrof/amr/data/prince/lexicon/lexicon.json',
-             voices='/home/tcastrof/amr/data/prince/lexicon/voices.json',
-             rule_write='/home/tcastrof/amr/data/prince/rules',
-             lexicon_write='/home/tcastrof/amr/data/prince/lexicon',
-             voice_write='/home/tcastrof/amr/data/prince/rules/voices.pickle')
+    RuleProb(initial='../data/prince/rules/initial.json',
+             substitution='../data/prince/rules/substitution.json',
+             adjoining='../data/prince/rules/adjoining.json',
+             lexicons='../data/prince/lexicon/lexicon.json',
+             voices='../data/prince/lexicon/voices.json',
+             rule_write='../data/prince/rules',
+             lexicon_write='../data/prince/lexicon',
+             voice_write='../data/prince/rules/voices.pickle')

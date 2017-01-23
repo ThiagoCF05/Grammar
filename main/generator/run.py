@@ -6,7 +6,7 @@ import properties as prop
 
 from main.grammars.ERG import ERGFactory
 from Generator import Generator
-from Realizer import Realizer
+# from Realizer import Realizer
 
 def write(l, fname):
     f = open(fname, 'w')
@@ -16,7 +16,7 @@ def write(l, fname):
     f.close()
 
 if __name__ == '__main__':
-    models = [prop.initial_rules,
+    models = [prop.initial_rule_edges,
               prop.substitution_rule_edges,
               prop.initial_rule_edges_head,
               prop.substitution_rule_edges_head]
@@ -30,27 +30,30 @@ if __name__ == '__main__':
                          verb2actor=verb2actor,
                          actor2verb=actor2verb,
                          sub2word=sub2word)
-    realizer = Realizer()
+    # realizer = Realizer()
 
     dev_file = '../data/prince/dev.txt'
 
     gold, lexicalized, realized = [], [], []
     for amr in utils.parse_corpus(dev_file, True):
-        gen = Generator(amr=amr['amr'],
-                        erg_factory=factory,
-                        models=models,
-                        beam_n=20)
+        print amr['sentence']
+        try:
+            gen = Generator(amr=amr['amr'],
+                            erg_factory=factory,
+                            models=models,
+                            beam_n=20)
 
-        amr, tree = gen.run()
-        if tree != None:
-            t = realizer.run(tree, gen.synchg)
-
-            lexicalized.append(tree.realize(tree.root, ''))
-            realized.append(t)
-        else:
-            lexicalized.append('-')
-            realized.append('-')
-        gold.append(amr['sentence'])
+            candidates = gen.run()
+            for candidate in candidates[:10]:
+                tree = candidate.tree
+                print tree.realize(root=tree.root, text=''), ' \t', tree.prettify(root=tree.root, isRule=False)
+        except:
+            print 'Error'
+            # lexicalized.append('-')
+            # realized.append('-')
+        # gold.append(amr['sentence'])
+        print 10 * '-'
+            
 
     write(gold, 'gold')
     write(lexicalized, 'lexicalized')

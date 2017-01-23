@@ -190,6 +190,7 @@ class RuleProducer(object):
                     if '/E' in rule.name:
                         tree = 'empty'
                     else:
+                        # tree = rule.tree.realize(root=rule.tree.root, text='', isRule=True)
                         tree = rule.tree.prettify(rule.tree.root)
                     graph = rule.graph.prettify(rule.head, rule.graph.root, print_constants=False)
 
@@ -239,29 +240,29 @@ class RuleProducer(object):
 
 if __name__ == '__main__':
     proc = CoreNLP("coref")
-    freq_table = json.load(open('/home/tcastrof/amr/data/alignments/table.json'))
-    verb2noun, noun2verb, verb2actor, actor2verb = utils.noun_verb('/home/tcastrof/amr/data/morph-verbalization-v1.01.txt')
-    sub2word = utils.subgraph_word('/home/tcastrof/amr/data/verbalization-list-v1.06.txt')
+    freq_table = json.load(open('../data/alignments/table.json'))
+    verb2noun, noun2verb, verb2actor, actor2verb = utils.noun_verb('../data/morph-verbalization-v1.01.txt')
+    sub2word = utils.subgraph_word('../data/verbalization-list-v1.06.txt')
 
     aligner = AMRAligner(verb2noun, noun2verb, verb2actor, actor2verb, sub2word, freq_table, proc)
 
     # dirs = ['/home/tcastrof/amr/data/LDC2016E25/data/amrs/unsplit',
     #         '/home/tcastrof/amr/data/LDC2016E33/data']
 
-    dirs = ['../data/prince/train']
+    dirs = ['../data/TEST/data']
 
     frules = {
-        'initial': '/home/tcastrof/amr/data/prince/rules/initial.json',
-        'substitution': '/home/tcastrof/amr/data/prince/rules/substitution.json',
-        'adjoining': '/home/tcastrof/amr/data/prince/rules/adjoining.json'
+        'initial': '../data/TEST/rules/initial.json',
+        'substitution': '../data/TEST/rules/substitution.json',
+        'adjoining': '../data/TEST/rules/adjoining.json'
     }
 
-    flexicons = '/home/tcastrof/amr/data/prince/lexicon/lexicon.json'
-    fvoices = '/home/tcastrof/amr/data/prince/lexicon/voices.json'
+    flexicons = '../data/TEST/lexicon/lexicon.json'
+    fvoices = '../data/TEST/lexicon/voices.json'
 
     producer = RuleProducer(aligner=aligner, dirs=dirs)
 
-    producer.run(True)
+    producer.run(False)
     producer.write_rules(frules)
     producer.write_lexicons(flexicons)
     producer.write_voices(fvoices)

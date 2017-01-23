@@ -417,7 +417,7 @@ if __name__ == '__main__':
                     models=models,
                     beam_n=20)
 
-    amr, tree = gen.run()
+    amr, tree = gen.run2()
 
     if tree != None:
         print 'Synchronous Grammar'

@@ -9,7 +9,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (NN xxx) (NN xxx))",
+        "tree": " anna castro",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -23,7 +23,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (NN xxx))",
+        "tree": " DT cat",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -37,7 +37,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (NN xxx) (NN xxx) (NN xxx))",
+        "tree": " thiago castro ferreira",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -51,7 +51,7 @@
             "inPP": true,
             "number": "singular"
         },
-        "tree": "(PP (IN -) (NP (DT -) (NN xxx)))",
+        "tree": " IN DT game",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -65,7 +65,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (NN xxx))",
+        "tree": " DT boy",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -79,7 +79,7 @@
             "inPP": false,
             "number": ""
         },
-        "tree": "(JJ xxx)",
+        "tree": " red",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -97,7 +97,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (:mod/JJ) (NN xxx))",
+        "tree": " DT :mod/JJ bicycle",
         "tree_rules": [
             ":mod/JJ"
         ],
@@ -114,7 +114,7 @@
         "head": "ride-01",
         "name": ":ARG1/S",
         "noun_info": {},
-        "tree": "(S (VP (TO -) (VP (VB xxx) (:ARG1/NP))))",
+        "tree": " TO ride :ARG1/NP",
         "tree_rules": [
             ":ARG1/NP",
             ":ARG0/E"
@@ -144,7 +144,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (NN xxx))",
+        "tree": " DT machine",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -158,7 +158,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (NN xxx))",
+        "tree": " DT girl",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -172,7 +172,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (NN xxx))",
+        "tree": " DT machine",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -186,7 +186,7 @@
             "inPP": true,
             "number": "singular"
         },
-        "tree": "(PP (IN -) (NP (DT -) (NN xxx)))",
+        "tree": " IN DT girl",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -196,7 +196,7 @@
         "head": "-",
         "name": ":polarity/RB",
         "noun_info": {},
-        "tree": "(RB xxx)",
+        "tree": " not",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -210,7 +210,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (NN xxx))",
+        "tree": " DT machine",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -224,7 +224,7 @@
             "inPP": true,
             "number": "singular"
         },
-        "tree": "(PP (IN -) (NP (DT -) (NN xxx)))",
+        "tree": " IN DT girl",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -238,7 +238,7 @@
             "inPP": true,
             "number": "singular"
         },
-        "tree": "(PP (IN -) (NP (DT -) (NN xxx)))",
+        "tree": " IN DT disaster",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -252,7 +252,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (NN xxx))",
+        "tree": " DT man",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -266,7 +266,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (NN xxx))",
+        "tree": " DT mission",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -280,7 +280,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (NN xxx))",
+        "tree": " disaster",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -294,7 +294,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (NN xxx) (POS -))",
+        "tree": " DT man POS",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -308,7 +308,7 @@
             "inPP": true,
             "number": "singular"
         },
-        "tree": "(PP (IN -) (NP (DT -) (NN xxx)))",
+        "tree": " IN DT mission",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -318,7 +318,7 @@
         "head": "teach-01",
         "name": ":ARG0-of/SBAR",
         "noun_info": {},
-        "tree": "(SBAR (WHNP (WP -)) (S (VP (VB xxx))))",
+        "tree": " WP teach",
         "tree_rules": [],
         "verb_info": {
             "tense": "simple present",
@@ -335,7 +335,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (PRP xxx))",
+        "tree": " you",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -349,7 +349,7 @@
         "head": "leave-01",
         "name": ":ARG1/VP",
         "noun_info": {},
-        "tree": "(VP (VB xxx))",
+        "tree": " leave",
         "tree_rules": [
             ":ARG0/NP"
         ],
@@ -368,7 +368,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (PRP xxx))",
+        "tree": " you",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -382,7 +382,7 @@
         "head": "leave-01",
         "name": ":ARG1/S",
         "noun_info": {},
-        "tree": "(S (NP (PRP -)) (VP (VB -) (RB -) (ADJP (JJ -)) (SBAR (IN -) (S (:ARG0/NP) (VP (TO -) (VP (VB xxx)))))) (. -))",
+        "tree": " PRP VB RB JJ IN :ARG0/NP TO leave .",
         "tree_rules": [
             ":ARG0/NP"
         ],
@@ -401,7 +401,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (PRP xxx))",
+        "tree": " you",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -415,7 +415,7 @@
         "head": "leave-01",
         "name": ":ARG1/VP",
         "noun_info": {},
-        "tree": "(VP (VB xxx))",
+        "tree": " leave",
         "tree_rules": [
             ":ARG0/NP"
         ],
@@ -434,7 +434,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (PRP xxx))",
+        "tree": " you",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -448,7 +448,7 @@
         "head": "leave-01",
         "name": ":ARG1/VP",
         "noun_info": {},
-        "tree": "(VP (VB xxx))",
+        "tree": " leave",
         "tree_rules": [
             ":ARG0/NP"
         ],
@@ -467,7 +467,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NN xxx)",
+        "tree": " london",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -481,7 +481,7 @@
             "inPP": false,
             "number": ""
         },
-        "tree": "(CD xxx)",
+        "tree": " 11",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -491,7 +491,7 @@
         "head": "altogether",
         "name": ":mod/ADVP",
         "noun_info": {},
-        "tree": "(ADVP (RB xxx))",
+        "tree": " altogether",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -505,7 +505,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NN xxx)",
+        "tree": " emergency",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -522,7 +522,7 @@
         "head": "send-01",
         "name": ":ARG1/SBAR",
         "noun_info": {},
-        "tree": "(SBAR (IN -) (S (:mod/ADVP) (:ARG1/NP) (VP (VB -) (VP (VB -) (VP (VB xxx) (:ARG2/PP) (:purpose/PP))))))",
+        "tree": " IN :mod/ADVP :ARG1/NP VB VB send :ARG2/PP :purpose/PP",
         "tree_rules": [
             ":ARG2/PP",
             ":purpose/PP",
@@ -549,7 +549,7 @@
             "inPP": false,
             "number": "plural"
         },
-        "tree": "(NP (DT -) (:location/NN) (:mod/NN) (NN xxx))",
+        "tree": " DT :location/NN :mod/NN services",
         "tree_rules": [
             ":location/NN",
             ":mod/NN"
@@ -566,7 +566,7 @@
             "inPP": false,
             "number": ""
         },
-        "tree": "(JJ xxx)",
+        "tree": " minor",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -584,7 +584,7 @@
             "inPP": false,
             "number": "plural"
         },
-        "tree": "(NP (:quant/CD) (NN xxx))",
+        "tree": " :quant/CD people",
         "tree_rules": [
             ":quant/CD"
         ],
@@ -605,7 +605,7 @@
             "inPP": true,
             "number": "singular"
         },
-        "tree": "(PP (IN -) (NP (NP (NN xxx)) (:ARG2/ADJP)))",
+        "tree": " IN treatment :ARG2/ADJP",
         "tree_rules": [
             ":ARG2/ADJP",
             ":ARG1/E"
@@ -627,7 +627,7 @@
             "inPP": true,
             "number": "plural"
         },
-        "tree": "(ADJP (JJ -) (PP (TO -) (NP (:mod/JJ) (NN xxx))))",
+        "tree": " JJ TO :mod/JJ wounds",
         "tree_rules": [
             ":mod/JJ",
             ":ARG1/E"
@@ -644,7 +644,7 @@
             "inPP": true,
             "number": "singular"
         },
-        "tree": "(PP (TO -) (NP (NN xxx)))",
+        "tree": " TO hospital",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -678,7 +678,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (NN xxx))",
+        "tree": " DT boy",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -688,7 +688,7 @@
         "head": "-",
         "name": ":polarity/RB",
         "noun_info": {},
-        "tree": "(RB xxx)",
+        "tree": " not",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -702,7 +702,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (NN xxx))",
+        "tree": " DT boy",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -712,7 +712,7 @@
         "head": "-",
         "name": ":polarity/RB",
         "noun_info": {},
-        "tree": "(RB xxx)",
+        "tree": " not",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -726,7 +726,7 @@
         "head": "go-01",
         "name": ":domain/VP",
         "noun_info": {},
-        "tree": "(VP (VB xxx))",
+        "tree": " go",
         "tree_rules": [
             ":ARG0/NP"
         ],
@@ -749,7 +749,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (:mod/JJ) (NN xxx))",
+        "tree": " DT :mod/JJ boy",
         "tree_rules": [
             ":mod/JJ"
         ],
@@ -765,7 +765,7 @@
             "inPP": true,
             "number": "singular"
         },
-        "tree": "(PP (TO -) (NP (DT -) (NN xxx)))",
+        "tree": " TO DT store",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -779,7 +779,7 @@
             "inPP": false,
             "number": ""
         },
-        "tree": "(JJ xxx)",
+        "tree": " nice",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -793,7 +793,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (NN xxx))",
+        "tree": " DT box",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -807,7 +807,7 @@
             "inPP": true,
             "number": "singular"
         },
-        "tree": "(PP (IN -) (NP (NP (DT -) (NN xxx)) (:ARG4/PP)))",
+        "tree": " IN DT house :ARG4/PP",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -821,7 +821,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (NN xxx) (:ARG1/S))",
+        "tree": " DT girl :ARG1/S",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -835,7 +835,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (NN xxx))",
+        "tree": " DT boy",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -850,7 +850,7 @@
         "head": "believe-01",
         "name": ":ARG1/S",
         "noun_info": {},
-        "tree": "(S (VP (TO -) (VP (VB xxx) (:ARG1/NP))))",
+        "tree": " TO believe :ARG1/NP",
         "tree_rules": [
             ":ARG1/NP",
             ":ARG0/NP"
@@ -870,7 +870,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (PRP xxx))",
+        "tree": " him",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -880,7 +880,7 @@
         "head": "yesterday",
         "name": ":time/VP",
         "noun_info": {},
-        "tree": "(VP (VB -) (NP-TMP (NN xxx)))",
+        "tree": " VB yesterday",
         "tree_rules": [],
         "verb_info": {
             "tense": "simple past",
@@ -897,7 +897,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (NN xxx))",
+        "tree": " DT boy",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -911,7 +911,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (NN xxx))",
+        "tree": " DT girl",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -925,7 +925,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(PRP$ xxx)",
+        "tree": " his",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -939,7 +939,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (NN xxx))",
+        "tree": " DT boy",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -949,7 +949,7 @@
         "head": "-",
         "name": ":polarity/RB",
         "noun_info": {},
-        "tree": "(RB xxx)",
+        "tree": " not",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -964,7 +964,7 @@
         "head": "go-02",
         "name": ":ARG2/VP",
         "noun_info": {},
-        "tree": "(VP (VB xxx))",
+        "tree": " go",
         "tree_rules": [
             ":polarity/RB",
             ":ARG0/NP"
@@ -984,7 +984,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (NN xxx))",
+        "tree": " DT boy",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -994,7 +994,7 @@
         "head": "-",
         "name": ":polarity/RB",
         "noun_info": {},
-        "tree": "(RB xxx)",
+        "tree": " not",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1008,7 +1008,7 @@
         "head": "go-02",
         "name": ":ARG1/VP",
         "noun_info": {},
-        "tree": "(VP (VB xxx))",
+        "tree": " go",
         "tree_rules": [
             ":ARG0/NP"
         ],
@@ -1027,7 +1027,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (NN xxx))",
+        "tree": " DT marble",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1041,7 +1041,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (NN xxx))",
+        "tree": " DT boy",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1055,7 +1055,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (NN xxx))",
+        "tree": " DT marble",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1069,7 +1069,7 @@
         "head": "white-03",
         "name": ":ARG1/SBAR",
         "noun_info": {},
-        "tree": "(SBAR (IN -) (S (:ARG1/NP) (VP (VB -) (ADJP (JJ xxx)))))",
+        "tree": " IN :ARG1/NP VB white",
         "tree_rules": [
             ":ARG1/NP"
         ],
@@ -1088,7 +1088,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (NN xxx))",
+        "tree": " DT boy",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1106,7 +1106,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (:ARG1-of/JJ) (NN xxx))",
+        "tree": " DT :ARG1-of/JJ marble",
         "tree_rules": [
             ":ARG1-of/JJ"
         ],
@@ -1122,7 +1122,7 @@
             "inPP": false,
             "number": ""
         },
-        "tree": "(JJ xxx)",
+        "tree": " white",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1136,7 +1136,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (NN xxx))",
+        "tree": " DT boy",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1150,7 +1150,7 @@
         "head": "want-01",
         "name": ":ARG0-of/SBAR",
         "noun_info": {},
-        "tree": "(SBAR (WHNP (WP -)) (S (VP (VB xxx) (:ARG1/NP))))",
+        "tree": " WP want :ARG1/NP",
         "tree_rules": [
             ":ARG1/NP"
         ],
@@ -1173,7 +1173,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (NP (DT -) (NN xxx)) (:ARG0-of/SBAR))",
+        "tree": " DT girl :ARG0-of/SBAR",
         "tree_rules": [
             ":ARG0-of/SBAR"
         ],
@@ -1189,7 +1189,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (PRP xxx))",
+        "tree": " him",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1203,7 +1203,7 @@
         "head": "see-01",
         "name": ":ARG1-of/SBAR",
         "noun_info": {},
-        "tree": "(SBAR (S (:ARG1/NP) (VP (VB xxx))))",
+        "tree": " :ARG1/NP see",
         "tree_rules": [
             ":ARG0/NP"
         ],
@@ -1222,7 +1222,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (NN xxx))",
+        "tree": " DT boy",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1240,7 +1240,7 @@
             "inPP": true,
             "number": "singular"
         },
-        "tree": "(PP (IN -) (NP (NP (DT -) (NN xxx)) (:ARG1-of/SBAR)))",
+        "tree": " IN DT girl :ARG1-of/SBAR",
         "tree_rules": [
             ":ARG1-of/SBAR"
         ],
@@ -1256,7 +1256,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (PRP xxx))",
+        "tree": " he",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1270,7 +1270,7 @@
             "inPP": false,
             "number": ""
         },
-        "tree": "(JJ xxx)",
+        "tree": " regulatory",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1288,7 +1288,7 @@
             "inPP": false,
             "number": "plural"
         },
-        "tree": "(NP (DT -) (:instrument-of/JJ) (NN xxx))",
+        "tree": " DT :instrument-of/JJ documents",
         "tree_rules": [
             ":instrument-of/JJ"
         ],
@@ -1304,7 +1304,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (NN xxx))",
+        "tree": " DT boy",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1318,7 +1318,7 @@
         "head": "believe-01",
         "name": ":ARG1/S",
         "noun_info": {},
-        "tree": "(S (VP (TO -) (VP (VB xxx))))",
+        "tree": " TO believe",
         "tree_rules": [
             ":ARG0/E"
         ],
@@ -1347,7 +1347,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (NN xxx))",
+        "tree": " DT boy",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1357,7 +1357,7 @@
         "head": "rain-01",
         "name": ":ARG1/VP",
         "noun_info": {},
-        "tree": "(VP (VB xxx))",
+        "tree": " rain",
         "tree_rules": [],
         "verb_info": {
             "tense": "infinitive",
@@ -1374,7 +1374,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (NN xxx))",
+        "tree": " DT boy",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1388,7 +1388,7 @@
         "head": "go-02",
         "name": ":ARG1/S",
         "noun_info": {},
-        "tree": "(S (VP (TO -) (VP (VB xxx))))",
+        "tree": " TO go",
         "tree_rules": [
             ":ARG0/NP"
         ],
@@ -1407,7 +1407,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (PRP xxx))",
+        "tree": " i",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1421,7 +1421,7 @@
         "head": "work-01",
         "name": ":ARG1/PP",
         "noun_info": {},
-        "tree": "(PP (TO -) (NP (VB xxx)))",
+        "tree": " TO work",
         "tree_rules": [
             ":ARG0/E"
         ],
@@ -1450,7 +1450,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (NN xxx))",
+        "tree": " DT boy",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1460,7 +1460,7 @@
         "head": "-",
         "name": ":polarity/RB",
         "noun_info": {},
-        "tree": "(RB xxx)",
+        "tree": " n't",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1474,7 +1474,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (NN xxx))",
+        "tree": " DT boy",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1484,7 +1484,7 @@
         "head": "-",
         "name": ":polarity/RB",
         "noun_info": {},
-        "tree": "(RB xxx)",
+        "tree": " n't",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1498,7 +1498,7 @@
         "head": "go-02",
         "name": ":ARG1/VP",
         "noun_info": {},
-        "tree": "(VP (VB xxx))",
+        "tree": " go",
         "tree_rules": [
             ":ARG0/NP"
         ],
@@ -1517,7 +1517,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (NN xxx))",
+        "tree": " DT boy",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1527,7 +1527,7 @@
         "head": "-",
         "name": ":polarity/RB",
         "noun_info": {},
-        "tree": "(RB xxx)",
+        "tree": " n't",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1541,7 +1541,7 @@
         "head": "go-02",
         "name": ":ARG2/S",
         "noun_info": {},
-        "tree": "(S (:ARG0/NP) (VP (VB -) (:polarity/RB) (VP (VB -) (S (VP (TO -) (VP (VB xxx)))))) (. -))",
+        "tree": " :ARG0/NP VB :polarity/RB VB TO go .",
         "tree_rules": [
             ":ARG0/NP"
         ],
@@ -1560,7 +1560,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (NN xxx))",
+        "tree": " DT boy",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1578,7 +1578,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (:poss/PRP$) (NN xxx))",
+        "tree": " :poss/PRP$ team",
         "tree_rules": [
             ":poss/PRP$"
         ],
@@ -1590,7 +1590,7 @@
         "head": "-",
         "name": ":polarity/RB",
         "noun_info": {},
-        "tree": "(RB xxx)",
+        "tree": " n't",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1605,7 +1605,7 @@
         "head": "win-01",
         "name": ":ARG1/SBAR",
         "noun_info": {},
-        "tree": "(SBAR (S (:ARG0/NP) (VP (MD -) (:polarity/RB) (VP (VB xxx)))))",
+        "tree": " :ARG0/NP MD :polarity/RB win",
         "tree_rules": [
             ":polarity/RB",
             ":ARG0/NP"
@@ -1625,7 +1625,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(PRP$ xxx)",
+        "tree": " his",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1639,7 +1639,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (NN xxx))",
+        "tree": " DT boy",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1657,7 +1657,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (:poss/PRP$) (NN xxx))",
+        "tree": " :poss/PRP$ team",
         "tree_rules": [
             ":poss/PRP$"
         ],
@@ -1669,7 +1669,7 @@
         "head": "-",
         "name": ":polarity/RB",
         "noun_info": {},
-        "tree": "(RB xxx)",
+        "tree": " not",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1683,7 +1683,7 @@
         "head": "win-01",
         "name": ":ARG1/SBAR",
         "noun_info": {},
-        "tree": "(SBAR (S (:ARG0/NP) (VP (MD -) (VP (VB xxx)))))",
+        "tree": " :ARG0/NP MD win",
         "tree_rules": [
             ":ARG0/NP"
         ],
@@ -1702,7 +1702,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(PRP$ xxx)",
+        "tree": " his",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1716,7 +1716,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (PRP xxx))",
+        "tree": " i",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1726,7 +1726,7 @@
         "head": "-",
         "name": ":polarity/RB",
         "noun_info": {},
-        "tree": "(RB xxx)",
+        "tree": " n't",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1740,7 +1740,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (NN xxx))",
+        "tree": " DT money",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1754,7 +1754,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (NN xxx))",
+        "tree": " DT man",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1768,7 +1768,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (NN xxx))",
+        "tree": " DT girl",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1778,7 +1778,7 @@
         "head": "amr-unknown",
         "name": ":ARG1/WHNP",
         "noun_info": {},
-        "tree": "(WHNP (WP xxx))",
+        "tree": " what",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1792,7 +1792,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (DT -) (NN xxx))",
+        "tree": " DT girl",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1806,7 +1806,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (NN xxx) (NN xxx))",
+        "tree": " hugo chavez",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1820,7 +1820,7 @@
             "inPP": true,
             "number": ""
         },
-        "tree": "(PP (IN -) (NP (CD xxx)))",
+        "tree": " IN 2004",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1834,7 +1834,7 @@
             "inPP": false,
             "number": "singular"
         },
-        "tree": "(NP (PRP xxx))",
+        "tree": " it",
         "tree_rules": [],
         "verb_info": {}
     }

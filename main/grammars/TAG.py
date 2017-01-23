@@ -144,9 +144,14 @@ class Tree(object):
 
         return print_tree(root, '')
 
-    def realize(self, root=1, text=''):
+    def realize(self, root=1, text='', isRule=True):
         if self.nodes[root].type == 'terminal':
-            text = text + ' ' + self.nodes[root].lexicon
+            if self.nodes[root].label == -1 and isRule:
+                text = text + ' ' + self.nodes[root].name
+            else:
+                text = text + ' ' + self.nodes[root].lexicon
+        elif self.nodes[root].type == 'rule':
+            text = text + ' ' + self.nodes[root].name
 
         for node in self.edges[root]:
             text = self.realize(root=node, text=text)
