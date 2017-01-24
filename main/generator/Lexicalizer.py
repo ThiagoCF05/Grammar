@@ -37,8 +37,8 @@ class Lexicalizer(object):
                         break
                     else:
                         if subtree.nodes[node].type == 'terminal':
-                            # subtree.nodes[node].lexicon = self.select_functional_lexicon(rule, subtree.nodes[node].name)
-                            subtree.nodes[node].lexicon = subtree.nodes[node].name
+                            subtree.nodes[node].lexicon = self.select_functional_lexicon(rule, subtree.nodes[node].name)
+                            # subtree.nodes[node].lexicon = subtree.nodes[node].name
 
             for i, node in enumerate(subtree.edges[root]):
                 if pos == size:
@@ -71,8 +71,8 @@ class Lexicalizer(object):
             for node in subtree.nodes:
                 if subtree.nodes[node].type == 'terminal':
                     if subtree.nodes[node].label == -1:
-                        # subtree.nodes[node].lexicon = self.select_functional_lexicon(rule, subtree.nodes[node].name)
-                        subtree.nodes[node].lexicon = subtree.nodes[node].name
+                        subtree.nodes[node].lexicon = self.select_functional_lexicon(rule, subtree.nodes[node].name)
+                        # subtree.nodes[node].lexicon = subtree.nodes[node].name
                     else:
                         if rule.head == '-':
                             head = 'not'

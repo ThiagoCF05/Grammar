@@ -3,9 +3,11 @@ __author__ = 'thiagocastroferreira'
 from sys import path
 path.append('/home/tcastrof/amr/scp_repo')
 path.append('/home/tcastrof/amr/Grammar')
+path.append('../../')
 from main.aligners.AMRAligner import AMRAligner
 from main.grammars.SynchG import SynchG, SynchRule
 from main.aligners.TAGSynchAligner import TAGSynchAligner
+import main.generator.properties as prop
 
 import copy
 import json
@@ -227,6 +229,10 @@ class RuleProducer(object):
 
     def run(self, isPrince=False):
         for dir in self.dirs:
+            if 'prince' in dir:
+                isPrince = True
+            else:
+                isPrince = False
             files = os.listdir(dir)
             for fname in files:
                 print fname, '\r',
@@ -247,22 +253,30 @@ if __name__ == '__main__':
     aligner = AMRAligner(verb2noun, noun2verb, verb2actor, actor2verb, sub2word, freq_table, proc)
 
     # dirs = ['/home/tcastrof/amr/data/LDC2016E25/data/amrs/unsplit',
-    #         '/home/tcastrof/amr/data/LDC2016E33/data']
+    #         '/home/tcastrof/amr/data/LDC2016E33/data/amrs',
+    #         '../data/prince/train']
+    #
+    # frules = {
+    #     'initial': prop.initial_rules,
+    #     'substitution': prop.substitution_rules,
+    #     'adjoining': prop.adjoining_rules
+    # }
+    #
+    # flexicons = prop.lexicons
+    # fvoices = prop.voices
 
-    dirs = ['../data/TEST/data']
-
+    dirs = ['../data/prince/train']
     frules = {
-        'initial': '../data/TEST/rules/initial.json',
-        'substitution': '../data/TEST/rules/substitution.json',
-        'adjoining': '../data/TEST/rules/adjoining.json'
+        'initial': '../data/prince/rules/initial.json',
+        'substitution': '../data/prince/rules/substitution.json',
+        'adjoining': '../data/prince/rules/adjoining.json'
     }
 
-    flexicons = '../data/TEST/lexicon/lexicon.json'
-    fvoices = '../data/TEST/lexicon/voices.json'
+    flexicons = '../data/prince/lexicon/lexicon.json'
+    fvoices = '../data/prince/lexicon/voices.json'
 
     producer = RuleProducer(aligner=aligner, dirs=dirs)
 
-    producer.run(False)
+    producer.run(True)
     producer.write_rules(frules)
     producer.write_lexicons(flexicons)
-    producer.write_voices(fvoices)

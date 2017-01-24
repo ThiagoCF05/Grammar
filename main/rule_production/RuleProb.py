@@ -1,12 +1,16 @@
 __author__ = 'thiagocastroferreira'
 
+from sys import path
+path.append('../../')
+
+import main.generator.properties as prop
 import cPickle as p
 import json
 import nltk
 import os
 
 class RuleProb(object):
-    def __init__(self, initial='', substitution='', adjoining='', lexicons='', voices='', rule_write='', lexicon_write='', voice_write=''):
+    def __init__(self, initial='', substitution='', adjoining='', lexicons='', rule_write='', lexicon_write=''):
         self.initial = json.load(open(initial))
         self.freq_rules(self.initial, os.path.join(rule_write, 'initial'))
 
@@ -86,12 +90,6 @@ class RuleProb(object):
 
                 g3 = (template, rule['name'], 'empty', rule['head'])
                 group_3.append(g3)
-
-                # g4 = (rule['tree'], rule['name'], 'empty', rule['head'], rule['parent_rule'])
-                # group_4.append(g4)
-                #
-                # g5 = (rule['tree'], rule['name'], 'empty', rule['head'], rule['parent_rule'], rule['parent_head'])
-                # group_5.append(g5)
             else:
                 edges = rule['tree_rules']
                 edges.sort()
@@ -103,12 +101,6 @@ class RuleProb(object):
                 g3 = (template, rule['name'], edges, rule['head'])
                 group_3.append(g3)
 
-                # g4 = (rule['tree'], rule['name'], edges, rule['head'], rule['parent_rule'])
-                # group_4.append(g4)
-                #
-                # g5 = (rule['tree'], rule['name'], edges, rule['head'], rule['parent_rule'], rule['parent_head'])
-                # group_5.append(g5)
-
         # 2 conditions
         freq_2 = dict(nltk.FreqDist(group_2))
         _fname = fname + '_rule_edges.pickle'
@@ -119,27 +111,22 @@ class RuleProb(object):
         _fname = fname + '_rule_edges_head.pickle'
         p.dump(freq_3, open(_fname, 'w'))
 
-        # # 4 conditions
-        # freq_4 = dict(nltk.FreqDist(group_4))
-        # _fname = fname + '_rule_edges_head_prule.pickle'
-        # p.dump(freq_4, open(_fname, 'w'))
-        #
-        # # 5 conditions
-        # freq_5 = dict(nltk.FreqDist(group_5))
-        # _fname = fname + '_rule_edges_head_prule_phead.pickle'
-        # p.dump(freq_5, open(_fname, 'w'))
-
 if __name__ == '__main__':
     # RuleProb(initial='/home/tcastrof/amr/data/grammars/initial.json',
     #          substitution='/home/tcastrof/amr/data/grammars/substitution.json',
     #          adjoining='/home/tcastrof/amr/data/grammars/adjoining.json',
     #          fwrite='/home/tcastrof/amr/data/grammars')
+    initial = prop.initial_rules
+    sub = prop.substitution_rules
+    adj = prop.adjoining_rules
+    lexicons = prop.lexicons
+    rule_write = '../data/prince/rules'
+    lexicon_write = '../data/prince/lexicon'
 
-    RuleProb(initial='../data/prince/rules/initial.json',
-             substitution='../data/prince/rules/substitution.json',
-             adjoining='../data/prince/rules/adjoining.json',
-             lexicons='../data/prince/lexicon/lexicon.json',
-             voices='../data/prince/lexicon/voices.json',
-             rule_write='../data/prince/rules',
-             lexicon_write='../data/prince/lexicon',
-             voice_write='../data/prince/rules/voices.pickle')
+
+    RuleProb(initial=initial,
+             substitution=sub,
+             adjoining=adj,
+             lexicons=lexicons,
+             rule_write=rule_write,
+             lexicon_write=lexicon_write)

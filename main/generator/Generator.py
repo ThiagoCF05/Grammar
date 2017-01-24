@@ -107,7 +107,7 @@ class Generator(object):
             return result
 
         rule = synchg.rules[rule_id]
-        condition_level = 2
+        condition_level = 3
         templates = []
         while condition_level > 1 and len(templates) == 0:
             # Get rules with the same income edge and head
@@ -198,43 +198,43 @@ class Generator(object):
                 # Check if the rule edge is in the template rule
                 if graph_rule_name in tree.nodes[tree_root].name:
                     rule_id = graph_rule_id
-                    synchg.rules[rule_id].name = tree.nodes[tree_root].name
+                    aux_synchg = copy.deepcopy(synchg)
+                    rule = aux_synchg.rules[rule_id]
+                    rule.name = tree.nodes[tree_root].name
 
-                    new_templates = self.get_template(rule_id, synchg, 'substitution')
+                    new_templates = self.get_template(rule_id, aux_synchg, 'substitution')[:self.beam_n]
 
-                    if len(new_templates) == 0:
-                        break
+                    if len(new_templates) > 0:
+                        for new_template in new_templates:
+                            new_synchg = copy.deepcopy(synchg)
+                            new_amr = copy.deepcopy(amr)
+                            new_tree = copy.deepcopy(tree)
 
-                    for new_template in new_templates:
-                        new_synchg = copy.deepcopy(synchg)
-                        new_amr = copy.deepcopy(amr)
-                        new_tree = copy.deepcopy(tree)
+                            rule = new_synchg.rules[rule_id]
+                            rule.name = new_tree.nodes[tree_root].name
+                            rule.update_tree(new_template[0][0])
+                            rule.features = VerbPhrase(voice=new_template[0][1])
+                            new_amr.insert(rule.graph)
 
-                        rule = new_synchg.rules[rule_id]
-                        rule.update_tree(new_template[0][0])
-                        rule.features = VerbPhrase(voice=new_template[0][1])
-                        new_amr.insert(rule.graph)
+                            subtree = Tree(nodes={}, edges={}, root=1)
+                            subtree.parse(new_template[0][0])
+                            for node in subtree.nodes:
+                                subtree.nodes[node].rule_id = rule_id
+                            subtree = self.lexicalizer.choose_words(subtree, rule_id, rule)
+                            new_tree.insert(tree_root, subtree)
 
-                        subtree = Tree(nodes={}, edges={}, root=1)
-                        subtree.parse(new_template[0][0])
-                        for node in subtree.nodes:
-                            subtree.nodes[node].rule_id = rule_id
-                        subtree = self.lexicalizer.choose_words(subtree, rule_id, rule)
-                        new_tree.insert(tree_root, subtree)
+                            new_tree_rules = sorted(new_tree.get_nodes_by(type='rule', root=new_tree.root, nodes=[]))
+                            new_graph_rules = new_amr.get_rules(root=new_amr.root, rules=[])
 
-                        new_tree_rules = sorted(new_tree.get_nodes_by(type='rule', root=new_tree.root, nodes=[]))
-                        new_graph_rules = new_amr.get_rules(root=new_amr.root, rules=[])
+                            candidate = Candidate(amr=new_amr,
+                                                  tree=new_tree,
+                                                  tree_rules=new_tree_rules,
+                                                  graph_rules=new_graph_rules,
+                                                  synchg=new_synchg,
+                                                  prob=prob*new_template[1])
+                            candidates.append(candidate)
 
-                        candidate = Candidate(amr=new_amr,
-                                              tree=new_tree,
-                                              tree_rules=new_tree_rules,
-                                              graph_rules=new_graph_rules,
-                                              synchg=new_synchg,
-                                              prob=prob*new_template[1])
-                        candidates.append(candidate)
-
-                    isSynchronous = True
-                    break
+                        isSynchronous = True
 
             if isSynchronous:
                 break
@@ -258,90 +258,42 @@ class Generator(object):
             templates = sorted(candidates, key=lambda x: x.prob, reverse=True)[:self.beam_n]
         return concluded
 
-    # def run2(self):
-    #     isFail, tree_rules, graph_rules, amr, tree = self.choose_initial()
-    #
-    #     # While the amr or the tree have rules...
-    #     while len(tree_rules) > 0 and len(graph_rules) > 0 and not isFail:
-    #         isSynchronous = False
-    #         for graph_root in graph_rules:
-    #             # Get the name of the rule
-    #             graph_rule_id = filter(lambda rule: self.synchg.rules[rule].graph.root == graph_root, self.synchg.rules)[0]
-    #             graph_rule_name = self.synchg.rules[graph_rule_id].name
-    #
-    #             for tree_root in tree_rules:
-    #                 # Check if the rule edge is in the template rule
-    #                 if graph_rule_name in tree.nodes[tree_root].name:
-    #                     rule_id = graph_rule_id
-    #                     self.synchg.rules[rule_id].name = tree.nodes[tree_root].name
-    #
-    #                     candidates = self.get_template(rule_id, self.synchg, 'substitution')
-    #
-    #                     if len(candidates) == 0:
-    #                         isFail = True
-    #                         break
-    #
-    #                     rule = self.synchg.rules[rule_id]
-    #                     rule.update_tree(candidates[0][0][0])
-    #                     rule.features = VerbPhrase(voice=candidates[0][0][1])
-    #                     amr.insert(rule.graph)
-    #
-    #                     subtree = Tree(nodes={}, edges={}, root=1)
-    #                     subtree.parse(candidates[0][0][0])
-    #                     for node in subtree.nodes:
-    #                         subtree.nodes[node].rule_id = rule_id
-    #                     subtree = self.lexicalizer.choose_words(subtree, rule_id, rule)
-    #                     tree.insert(tree_root, subtree)
-    #
-    #                     isSynchronous = True
-    #                     break
-    #
-    #             if isSynchronous:
-    #                 tree_rules = sorted(tree.get_nodes_by(type='rule', root=tree.root, nodes=[]))
-    #                 graph_rules = amr.get_rules(root=amr.root, rules=[])
-    #                 isSynchronous = False
-    #             else:
-    #                 isFail = True
-    #                 amr, tree = None, None
-    #                 break
-    #     return amr, tree
-
-if __name__ == '__main__':
-    models = ['../data/TEST/rules/initial_rule_edges.pickle',
-              '../data/TEST/rules/substitution_rule_edges.pickle',
-              '../data/TEST/rules/initial_rule_edges_head.pickle',
-              '../data/TEST/rules/substitution_rule_edges_head.pickle']
-    verb2noun, noun2verb, verb2actor, actor2verb = utils.noun_verb('../data/morph-verbalization-v1.01.txt')
-    sub2word = utils.subgraph_word('../data/verbalization-list-v1.06.txt')
-
-    amr = """(s / shut-down-05
-               :ARG0 (p / person :wiki "Hugo_Chvez"
-                  :name (n / name :op1 "Hugo" :op2 "Chavez"))
-               :ARG1 (i / it)
-               :time (d / date-entity :year 2004))"""
-
-    amr = """(a / adjust-01
-                :ARG0 (g / girl)
-                :ARG1 (m / machine))"""
-
-    factory = ERGFactory(verb2noun=verb2noun,
-                     noun2verb=noun2verb,
-                     verb2actor=verb2actor,
-                     actor2verb=actor2verb,
-                     sub2word=sub2word)
-
-    gen = Generator(amr=amr,
-                    erg_factory=factory,
-                    models=models,
-                    beam_n=10)
-
-    candidates = gen.run()
-
-    for candidate in candidates:
-        tree = candidate.tree
-
-        print tree.prettify(root=tree.root)
-        print tree.prettify(root=tree.root, isRule=False)
-        print tree.realize(root=tree.root)
-        print candidate.prob
-        print 10 * '-'
+# if __name__ == '__main__':
+#     models = ['../data/TEST/rules/initial_rule_edges.pickle',
+#               '../data/TEST/rules/substitution_rule_edges.pickle',
+#               '../data/TEST/rules/initial_rule_edges_head.pickle',
+#               '../data/TEST/rules/substitution_rule_edges_head.pickle']
+#     verb2noun, noun2verb, verb2actor, actor2verb = utils.noun_verb('../data/morph-verbalization-v1.01.txt')
+#     sub2word = utils.subgraph_word('../data/verbalization-list-v1.06.txt')
+#
+#     amr = """(s / shut-down-05
+#                :ARG0 (p / person :wiki "Hugo_Chvez"
+#                   :name (n / name :op1 "Hugo" :op2 "Chavez"))
+#                :ARG1 (i / it)
+#                :time (d / date-entity :year 2004))"""
+#
+#     amr = """(a / adjust-01
+#                 :ARG0 (g / girl)
+#                 :ARG1 (m / machine))"""
+#
+#     factory = ERGFactory(verb2noun=verb2noun,
+#                      noun2verb=noun2verb,
+#                      verb2actor=verb2actor,
+#                      actor2verb=actor2verb,
+#                      sub2word=sub2word)
+#
+#     gen = Generator(amr=amr,
+#                     erg_factory=factory,
+#                     models=models,
+#                     beam_n=10)
+#
+#     candidates = gen.run()
+#
+#     for candidate in candidates:
+#         tree = candidate.tree
+#
+#         print tree.prettify(root=tree.root)
+#         print tree.prettify(root=tree.root, isRule=False)
+#         print tree.realize(root=tree.root)
+#         print candidate.prob
+#         print 10 * '-'
