@@ -107,7 +107,7 @@ class Generator(object):
             return result
 
         rule = synchg.rules[rule_id]
-        condition_level = 2
+        condition_level = 3
         templates = []
         while condition_level > 1 and len(templates) == 0:
             # Get rules with the same income edge and head
