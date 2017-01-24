@@ -194,47 +194,43 @@ class Generator(object):
             graph_rule_id = filter(lambda rule: synchg.rules[rule].graph.root == graph_root, synchg.rules)[0]
             graph_rule_name = synchg.rules[graph_rule_id].name
 
-            for tree_root in tree_rules:
-                # Check if the rule edge is in the template rule
-                if graph_rule_name in tree.nodes[tree_root].name:
-                    rule_id = graph_rule_id
-                    synchg.rules[rule_id].name = tree.nodes[tree_root].name
+            ftree_rules = filter(lambda tree_root: graph_rule_name in tree.nodes[tree_root].name, tree_rules)
+            if len(ftree_rules) > 0:
+                rule_id = graph_rule_id
+                new_templates = self.get_template(rule_id, synchg, 'substitution')
 
-                    new_templates = self.get_template(rule_id, synchg, 'substitution')
+                if len(new_templates) > 0:
+                    for tree_root in ftree_rules:
+                        for new_template in new_templates:
+                            new_synchg = copy.deepcopy(synchg)
+                            new_amr = copy.deepcopy(amr)
+                            new_tree = copy.deepcopy(tree)
 
-                    if len(new_templates) == 0:
-                        break
+                            rule = new_synchg.rules[rule_id]
+                            rule.name = new_tree.nodes[tree_root].name
+                            rule.update_tree(new_template[0][0])
+                            rule.features = VerbPhrase(voice=new_template[0][1])
+                            new_amr.insert(rule.graph)
 
-                    for new_template in new_templates:
-                        new_synchg = copy.deepcopy(synchg)
-                        new_amr = copy.deepcopy(amr)
-                        new_tree = copy.deepcopy(tree)
+                            subtree = Tree(nodes={}, edges={}, root=1)
+                            subtree.parse(new_template[0][0])
+                            for node in subtree.nodes:
+                                subtree.nodes[node].rule_id = rule_id
+                            subtree = self.lexicalizer.choose_words(subtree, rule_id, rule)
+                            new_tree.insert(tree_root, subtree)
 
-                        rule = new_synchg.rules[rule_id]
-                        rule.update_tree(new_template[0][0])
-                        rule.features = VerbPhrase(voice=new_template[0][1])
-                        new_amr.insert(rule.graph)
+                            new_tree_rules = sorted(new_tree.get_nodes_by(type='rule', root=new_tree.root, nodes=[]))
+                            new_graph_rules = new_amr.get_rules(root=new_amr.root, rules=[])
 
-                        subtree = Tree(nodes={}, edges={}, root=1)
-                        subtree.parse(new_template[0][0])
-                        for node in subtree.nodes:
-                            subtree.nodes[node].rule_id = rule_id
-                        subtree = self.lexicalizer.choose_words(subtree, rule_id, rule)
-                        new_tree.insert(tree_root, subtree)
-
-                        new_tree_rules = sorted(new_tree.get_nodes_by(type='rule', root=new_tree.root, nodes=[]))
-                        new_graph_rules = new_amr.get_rules(root=new_amr.root, rules=[])
-
-                        candidate = Candidate(amr=new_amr,
-                                              tree=new_tree,
-                                              tree_rules=new_tree_rules,
-                                              graph_rules=new_graph_rules,
-                                              synchg=new_synchg,
-                                              prob=prob*new_template[1])
-                        candidates.append(candidate)
+                            candidate = Candidate(amr=new_amr,
+                                                  tree=new_tree,
+                                                  tree_rules=new_tree_rules,
+                                                  graph_rules=new_graph_rules,
+                                                  synchg=new_synchg,
+                                                  prob=prob*new_template[1])
+                            candidates.append(candidate)
 
                     isSynchronous = True
-                    break
 
             if isSynchronous:
                 break

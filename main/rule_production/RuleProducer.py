@@ -280,4 +280,3 @@ if __name__ == '__main__':
     producer.run(False)
     producer.write_rules(frules)
     producer.write_lexicons(flexicons)
-    producer.write_voices(fvoices)
