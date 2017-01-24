@@ -39,7 +39,7 @@
       <file leaf-file-name="Lexicalizer.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/generator/Lexicalizer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1108">
+            <state relative-caret-position="1110">
               <caret line="74" column="78" lean-forward="false" selection-start-line="74" selection-start-column="78" selection-end-line="74" selection-end-column="78" />
               <folding>
                 <element signature="e#37#56#0" expanded="true" />
@@ -53,7 +53,7 @@
       <file leaf-file-name="amrs.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/data/TEST/data/amrs.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
+            <state relative-caret-position="780">
               <caret line="52" column="9" lean-forward="false" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
               <folding />
             </state>
@@ -63,8 +63,8 @@
       <file leaf-file-name="RuleProducer.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/rule_production/RuleProducer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="234" column="32" lean-forward="false" selection-start-line="234" selection-start-column="32" selection-end-line="234" selection-end-column="32" />
+            <state relative-caret-position="2212">
+              <caret line="275" column="18" lean-forward="false" selection-start-line="268" selection-start-column="9" selection-end-line="275" selection-end-column="18" />
               <folding>
                 <element signature="e#2102#5349#0" expanded="false" />
                 <element signature="e#5387#6023#0" expanded="false" />
@@ -78,7 +78,7 @@
       <file leaf-file-name="RuleProb.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/rule_production/RuleProb.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1252">
+            <state relative-caret-position="742">
               <caret line="123" column="60" lean-forward="false" selection-start-line="123" selection-start-column="60" selection-end-line="123" selection-end-column="60" />
               <folding />
             </state>
@@ -98,7 +98,7 @@
       <file leaf-file-name="TAG.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/grammars/TAG.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
+            <state relative-caret-position="1005">
               <caret line="154" column="0" lean-forward="false" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
               <folding>
                 <element signature="e#1550#2395#0" expanded="false" />
@@ -112,7 +112,7 @@
       <file leaf-file-name="Realizer.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/generator/Realizer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1253">
+            <state relative-caret-position="345">
               <caret line="24" column="26" lean-forward="false" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="26" />
               <folding>
                 <element signature="e#1333#1743#0" expanded="false" />
@@ -140,7 +140,7 @@
       <file leaf-file-name="run.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/generator/run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
+            <state relative-caret-position="720">
               <caret line="48" column="61" lean-forward="false" selection-start-line="48" selection-start-column="61" selection-end-line="48" selection-end-column="61" />
               <folding />
             </state>
@@ -228,8 +228,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -310,31 +311,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Grammar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Grammar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TEST" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -986,8 +964,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14102565" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32244897" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14224665" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1002,6 +979,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32244897" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1296,7 +1274,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1351,15 +1328,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <element signature="e#1436#3874#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/generator/Realizer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1253">
+        <state relative-caret-position="345">
           <caret line="24" column="26" lean-forward="false" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="26" />
           <folding>
             <element signature="e#1333#1743#0" expanded="false" />
@@ -1385,7 +1359,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/data/TEST/data/amrs.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
+        <state relative-caret-position="780">
           <caret line="52" column="9" lean-forward="false" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
           <folding />
         </state>
@@ -1393,7 +1367,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/grammars/TAG.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
+        <state relative-caret-position="1005">
           <caret line="154" column="0" lean-forward="false" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
           <folding>
             <element signature="e#1550#2395#0" expanded="false" />
@@ -1434,7 +1408,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/generator/run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
+        <state relative-caret-position="720">
           <caret line="48" column="61" lean-forward="false" selection-start-line="48" selection-start-column="61" selection-end-line="48" selection-end-column="61" />
           <folding />
         </state>
@@ -1442,7 +1416,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/generator/Lexicalizer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1108">
+        <state relative-caret-position="1110">
           <caret line="74" column="78" lean-forward="false" selection-start-line="74" selection-start-column="78" selection-end-line="74" selection-end-column="78" />
           <folding>
             <element signature="e#37#56#0" expanded="true" />
@@ -1456,7 +1430,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-48">
           <caret line="450" column="51" lean-forward="true" selection-start-line="450" selection-start-column="51" selection-end-line="450" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1470,7 +1443,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/rule_production/RuleProb.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1252">
+        <state relative-caret-position="742">
           <caret line="123" column="60" lean-forward="false" selection-start-line="123" selection-start-column="60" selection-end-line="123" selection-end-column="60" />
           <folding />
         </state>
@@ -1478,8 +1451,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/rule_production/RuleProducer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="234" column="32" lean-forward="false" selection-start-line="234" selection-start-column="32" selection-end-line="234" selection-end-column="32" />
+        <state relative-caret-position="2212">
+          <caret line="275" column="18" lean-forward="false" selection-start-line="268" selection-start-column="9" selection-end-line="275" selection-end-column="18" />
           <folding>
             <element signature="e#2102#5349#0" expanded="false" />
             <element signature="e#5387#6023#0" expanded="false" />
