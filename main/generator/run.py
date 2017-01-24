@@ -74,10 +74,10 @@ if __name__ == '__main__':
 
     print 'Developing Set'
     fread = '../data/prince/dev.txt'
-    fwrite = '../data/prince/results/dev'
+    fwrite = '/home/tcastrof/amr/data/prince/results/dev'
     run(fread=fread, fwrite=fwrite, models=models, factory=factory)
 
     print 'Test Set'
     fread = '../data/prince/test.txt'
-    fwrite = '../data/prince/results/test'
+    fwrite = '/home/tcastrof/amr/data/prince/results/test'
     run(fread=fread, fwrite=fwrite, models=models, factory=factory)
