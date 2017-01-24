@@ -194,13 +194,17 @@ class Generator(object):
             graph_rule_id = filter(lambda rule: synchg.rules[rule].graph.root == graph_root, synchg.rules)[0]
             graph_rule_name = synchg.rules[graph_rule_id].name
 
-            ftree_rules = filter(lambda tree_root: graph_rule_name in tree.nodes[tree_root].name, tree_rules)
-            if len(ftree_rules) > 0:
-                rule_id = graph_rule_id
-                new_templates = self.get_template(rule_id, synchg, 'substitution')
+            for tree_root in tree_rules:
+                # Check if the rule edge is in the template rule
+                if graph_rule_name in tree.nodes[tree_root].name:
+                    rule_id = graph_rule_id
+                    aux_synchg = copy.deepcopy(synchg)
+                    rule = aux_synchg.rules[rule_id]
+                    rule.name = tree.nodes[tree_root].name
 
-                if len(new_templates) > 0:
-                    for tree_root in ftree_rules:
+                    new_templates = self.get_template(rule_id, aux_synchg, 'substitution')[:self.beam_n]
+
+                    if len(new_templates) > 0:
                         for new_template in new_templates:
                             new_synchg = copy.deepcopy(synchg)
                             new_amr = copy.deepcopy(amr)
@@ -230,7 +234,7 @@ class Generator(object):
                                                   prob=prob*new_template[1])
                             candidates.append(candidate)
 
-                    isSynchronous = True
+                        isSynchronous = True
 
             if isSynchronous:
                 break
@@ -254,90 +258,42 @@ class Generator(object):
             templates = sorted(candidates, key=lambda x: x.prob, reverse=True)[:self.beam_n]
         return concluded
 
-    # def run2(self):
-    #     isFail, tree_rules, graph_rules, amr, tree = self.choose_initial()
-    #
-    #     # While the amr or the tree have rules...
-    #     while len(tree_rules) > 0 and len(graph_rules) > 0 and not isFail:
-    #         isSynchronous = False
-    #         for graph_root in graph_rules:
-    #             # Get the name of the rule
-    #             graph_rule_id = filter(lambda rule: self.synchg.rules[rule].graph.root == graph_root, self.synchg.rules)[0]
-    #             graph_rule_name = self.synchg.rules[graph_rule_id].name
-    #
-    #             for tree_root in tree_rules:
-    #                 # Check if the rule edge is in the template rule
-    #                 if graph_rule_name in tree.nodes[tree_root].name:
-    #                     rule_id = graph_rule_id
-    #                     self.synchg.rules[rule_id].name = tree.nodes[tree_root].name
-    #
-    #                     candidates = self.get_template(rule_id, self.synchg, 'substitution')
-    #
-    #                     if len(candidates) == 0:
-    #                         isFail = True
-    #                         break
-    #
-    #                     rule = self.synchg.rules[rule_id]
-    #                     rule.update_tree(candidates[0][0][0])
-    #                     rule.features = VerbPhrase(voice=candidates[0][0][1])
-    #                     amr.insert(rule.graph)
-    #
-    #                     subtree = Tree(nodes={}, edges={}, root=1)
-    #                     subtree.parse(candidates[0][0][0])
-    #                     for node in subtree.nodes:
-    #                         subtree.nodes[node].rule_id = rule_id
-    #                     subtree = self.lexicalizer.choose_words(subtree, rule_id, rule)
-    #                     tree.insert(tree_root, subtree)
-    #
-    #                     isSynchronous = True
-    #                     break
-    #
-    #             if isSynchronous:
-    #                 tree_rules = sorted(tree.get_nodes_by(type='rule', root=tree.root, nodes=[]))
-    #                 graph_rules = amr.get_rules(root=amr.root, rules=[])
-    #                 isSynchronous = False
-    #             else:
-    #                 isFail = True
-    #                 amr, tree = None, None
-    #                 break
-    #     return amr, tree
-
-if __name__ == '__main__':
-    models = ['../data/TEST/rules/initial_rule_edges.pickle',
-              '../data/TEST/rules/substitution_rule_edges.pickle',
-              '../data/TEST/rules/initial_rule_edges_head.pickle',
-              '../data/TEST/rules/substitution_rule_edges_head.pickle']
-    verb2noun, noun2verb, verb2actor, actor2verb = utils.noun_verb('../data/morph-verbalization-v1.01.txt')
-    sub2word = utils.subgraph_word('../data/verbalization-list-v1.06.txt')
-
-    amr = """(s / shut-down-05
-               :ARG0 (p / person :wiki "Hugo_Chvez"
-                  :name (n / name :op1 "Hugo" :op2 "Chavez"))
-               :ARG1 (i / it)
-               :time (d / date-entity :year 2004))"""
-
-    amr = """(a / adjust-01
-                :ARG0 (g / girl)
-                :ARG1 (m / machine))"""
-
-    factory = ERGFactory(verb2noun=verb2noun,
-                     noun2verb=noun2verb,
-                     verb2actor=verb2actor,
-                     actor2verb=actor2verb,
-                     sub2word=sub2word)
-
-    gen = Generator(amr=amr,
-                    erg_factory=factory,
-                    models=models,
-                    beam_n=10)
-
-    candidates = gen.run()
-
-    for candidate in candidates:
-        tree = candidate.tree
-
-        print tree.prettify(root=tree.root)
-        print tree.prettify(root=tree.root, isRule=False)
-        print tree.realize(root=tree.root)
-        print candidate.prob
-        print 10 * '-'
+# if __name__ == '__main__':
+#     models = ['../data/TEST/rules/initial_rule_edges.pickle',
+#               '../data/TEST/rules/substitution_rule_edges.pickle',
+#               '../data/TEST/rules/initial_rule_edges_head.pickle',
+#               '../data/TEST/rules/substitution_rule_edges_head.pickle']
+#     verb2noun, noun2verb, verb2actor, actor2verb = utils.noun_verb('../data/morph-verbalization-v1.01.txt')
+#     sub2word = utils.subgraph_word('../data/verbalization-list-v1.06.txt')
+#
+#     amr = """(s / shut-down-05
+#                :ARG0 (p / person :wiki "Hugo_Chvez"
+#                   :name (n / name :op1 "Hugo" :op2 "Chavez"))
+#                :ARG1 (i / it)
+#                :time (d / date-entity :year 2004))"""
+#
+#     amr = """(a / adjust-01
+#                 :ARG0 (g / girl)
+#                 :ARG1 (m / machine))"""
+#
+#     factory = ERGFactory(verb2noun=verb2noun,
+#                      noun2verb=noun2verb,
+#                      verb2actor=verb2actor,
+#                      actor2verb=actor2verb,
+#                      sub2word=sub2word)
+#
+#     gen = Generator(amr=amr,
+#                     erg_factory=factory,
+#                     models=models,
+#                     beam_n=10)
+#
+#     candidates = gen.run()
+#
+#     for candidate in candidates:
+#         tree = candidate.tree
+#
+#         print tree.prettify(root=tree.root)
+#         print tree.prettify(root=tree.root, isRule=False)
+#         print tree.realize(root=tree.root)
+#         print candidate.prob
+#         print 10 * '-'

@@ -120,8 +120,8 @@ if __name__ == '__main__':
     sub = prop.substitution_rules
     adj = prop.adjoining_rules
     lexicons = prop.lexicons
-    rule_write = '/home/tcastrof/amr/data/prince/rules'
-    lexicon_write = '/home/tcastrof/amr/data/prince/lexicon'
+    rule_write = '../data/prince/rules'
+    lexicon_write = '../data/prince/lexicon'
 
 
     RuleProb(initial=initial,
