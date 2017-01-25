@@ -21,10 +21,12 @@ class SynchRule(object):
         self.features = features
 
     def update_tree(self, tree):
-        self.tree = Tree(nodes={}, edges={}, root=1)
-        self.tree.parse(tree)
+        self.tree = tree
 
-        self.tree_rules = self.tree.get_nodes_by(type='rule', root=self.tree.root, nodes=[])
+        self.tree_rules = []
+        for i, token in enumerate(str(tree).split()):
+            if token[0] == ':' and len(token) > 1:
+                self.tree_rules.append(i)
 
 class SynchG(object):
     def __init__(self, rules={}, start='', initial_rules=[], substitution_rules=[], adjoining_rules=[], lexicons=[]):

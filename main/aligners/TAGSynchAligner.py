@@ -175,8 +175,8 @@ class TAGSynchAligner(object):
 
         if len(self.tree.nodes[root].name) == 3:
             self.tree.nodes[root].name = self.tree.nodes[root].name[:-1]
-        index = self.info['tokens'].index(self.tree.nodes[root].lexicon)
-        self.tree.nodes[root].lexicon = self.info['lemmas'][index]
+        # index = self.info['tokens'].index(self.tree.nodes[root].lexicon)
+        # self.tree.nodes[root].lexicon = self.info['lemmas'][index]
         feature.lemmas.insert(0, self.tree.nodes[root].lexicon)
 
     def get_noun_info(self, root, rule_id):

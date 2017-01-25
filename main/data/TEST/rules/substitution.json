@@ -3,13 +3,13 @@
         "graph": "(p / person \n\t :name (n / name \n\t\t :op1 c \n\t\t :op2 c))",
         "graph_rules": {},
         "head": "person/name",
-        "name": ":ARG0/NP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "proper",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " anna castro",
+        "tree": "XXX-NN XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -17,13 +17,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "cat",
-        "name": ":ARG1/NP",
+        "name": ":ARG1",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT cat",
+        "tree": "the XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -31,13 +31,13 @@
         "graph": "(p / person \n\t :name (n / name \n\t\t :op1 c \n\t\t :op2 c \n\t\t :op3 c))",
         "graph_rules": {},
         "head": "person/name",
-        "name": ":ARG0/NP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "proper",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " thiago castro ferreira",
+        "tree": "XXX-NN XXX-NN XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -45,13 +45,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "game",
-        "name": ":ARG2/PP",
+        "name": ":ARG2",
         "noun_info": {
             "form": "description",
             "inPP": true,
             "number": "singular"
         },
-        "tree": " IN DT game",
+        "tree": "about the XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -59,13 +59,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "boy",
-        "name": ":ARG0/NP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT boy",
+        "tree": "the XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -73,13 +73,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "red",
-        "name": ":mod/JJ",
+        "name": ":mod",
         "noun_info": {
             "form": "",
             "inPP": false,
             "number": ""
         },
-        "tree": " red",
+        "tree": "XXX-JJ",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -87,19 +87,19 @@
         "graph": "(XXX \n\t :mod/JJ -)",
         "graph_rules": {
             "bicycle": [
-                ":mod/JJ"
+                ":mod"
             ]
         },
         "head": "bicycle",
-        "name": ":ARG1/NP",
+        "name": ":ARG1",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT :mod/JJ bicycle",
+        "tree": "the :mod XXX-NN",
         "tree_rules": [
-            ":mod/JJ"
+            ":mod"
         ],
         "verb_info": {}
     },
@@ -107,17 +107,17 @@
         "graph": "(XXX \n\t :ARG0/E - \n\t :ARG1/NP -)",
         "graph_rules": {
             "ride-01": [
-                ":ARG0/E",
-                ":ARG1/NP"
+                ":ARG0",
+                ":ARG1"
             ]
         },
         "head": "ride-01",
-        "name": ":ARG1/S",
+        "name": ":ARG1",
         "noun_info": {},
-        "tree": " TO ride :ARG1/NP",
+        "tree": "to XXX-VB :ARG1",
         "tree_rules": [
-            ":ARG1/NP",
-            ":ARG0/E"
+            ":ARG1",
+            ":ARG0"
         ],
         "verb_info": {
             "tense": "infinitive",
@@ -128,7 +128,7 @@
         "graph": "coref",
         "graph_rules": {},
         "head": "boy",
-        "name": ":ARG0/E",
+        "name": ":ARG0",
         "noun_info": {},
         "tree": "empty",
         "tree_rules": [],
@@ -138,13 +138,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "machine",
-        "name": ":ARG1/NP",
+        "name": ":ARG1",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT machine",
+        "tree": "the XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -152,13 +152,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "girl",
-        "name": ":ARG0/NP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT girl",
+        "tree": "the XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -166,13 +166,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "machine",
-        "name": ":ARG1/NP",
+        "name": ":ARG1",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT machine",
+        "tree": "the XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -180,13 +180,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "girl",
-        "name": ":ARG0/PP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "description",
             "inPP": true,
             "number": "singular"
         },
-        "tree": " IN DT girl",
+        "tree": "by the XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -194,9 +194,9 @@
         "graph": "c",
         "graph_rules": {},
         "head": "-",
-        "name": ":polarity/RB",
+        "name": ":polarity",
         "noun_info": {},
-        "tree": " not",
+        "tree": "XXX-RB",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -204,13 +204,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "machine",
-        "name": ":ARG1/NP",
+        "name": ":ARG1",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT machine",
+        "tree": "the XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -218,13 +218,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "girl",
-        "name": ":ARG0/PP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "description",
             "inPP": true,
             "number": "singular"
         },
-        "tree": " IN DT girl",
+        "tree": "by the XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -232,13 +232,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "disaster",
-        "name": ":ARG2/PP",
+        "name": ":ARG2",
         "noun_info": {
             "form": "description",
             "inPP": true,
             "number": "singular"
         },
-        "tree": " IN DT disaster",
+        "tree": "as a XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -246,13 +246,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "man",
-        "name": ":ARG0/NP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT man",
+        "tree": "the XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -260,13 +260,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "mission",
-        "name": ":ARG1/NP",
+        "name": ":ARG1",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT mission",
+        "tree": "the XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -274,13 +274,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "disaster",
-        "name": ":ARG2/NP",
+        "name": ":ARG2",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " disaster",
+        "tree": "XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -288,13 +288,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "man",
-        "name": ":ARG0/NP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT man POS",
+        "tree": "the XXX-NN 's",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -302,13 +302,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "mission",
-        "name": ":ARG1/PP",
+        "name": ":ARG1",
         "noun_info": {
             "form": "description",
             "inPP": true,
             "number": "singular"
         },
-        "tree": " IN DT mission",
+        "tree": "of the XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -316,9 +316,9 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "teach-01",
-        "name": ":ARG0-of/SBAR",
+        "name": ":ARG0-of",
         "noun_info": {},
-        "tree": " WP teach",
+        "tree": "who XXX-VB",
         "tree_rules": [],
         "verb_info": {
             "tense": "simple present",
@@ -329,13 +329,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "you",
-        "name": ":ARG0/NP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "pronoun",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " you",
+        "tree": "XXX-PRP",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -343,15 +343,15 @@
         "graph": "(XXX \n\t :ARG0/NP -)",
         "graph_rules": {
             "leave-01": [
-                ":ARG0/NP"
+                ":ARG0"
             ]
         },
         "head": "leave-01",
-        "name": ":ARG1/VP",
+        "name": ":ARG1",
         "noun_info": {},
-        "tree": " leave",
+        "tree": "XXX-VB",
         "tree_rules": [
-            ":ARG0/NP"
+            ":ARG0"
         ],
         "verb_info": {
             "tense": "infinitive",
@@ -362,13 +362,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "you",
-        "name": ":ARG0/NP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "pronoun",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " you",
+        "tree": "XXX-PRP",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -376,15 +376,15 @@
         "graph": "(XXX \n\t :ARG0/NP -)",
         "graph_rules": {
             "leave-01": [
-                ":ARG0/NP"
+                ":ARG0"
             ]
         },
         "head": "leave-01",
-        "name": ":ARG1/S",
+        "name": ":ARG1",
         "noun_info": {},
-        "tree": " PRP VB RB JJ IN :ARG0/NP TO leave .",
+        "tree": "it be all right for :ARG0 to XXX-VB .",
         "tree_rules": [
-            ":ARG0/NP"
+            ":ARG0"
         ],
         "verb_info": {
             "tense": "simple present",
@@ -395,13 +395,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "you",
-        "name": ":ARG0/NP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "pronoun",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " you",
+        "tree": "XXX-PRP",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -409,15 +409,15 @@
         "graph": "(XXX \n\t :ARG0/NP -)",
         "graph_rules": {
             "leave-01": [
-                ":ARG0/NP"
+                ":ARG0"
             ]
         },
         "head": "leave-01",
-        "name": ":ARG1/VP",
+        "name": ":ARG1",
         "noun_info": {},
-        "tree": " leave",
+        "tree": "XXX-VB",
         "tree_rules": [
-            ":ARG0/NP"
+            ":ARG0"
         ],
         "verb_info": {
             "tense": "infinitive",
@@ -428,13 +428,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "you",
-        "name": ":ARG0/NP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "pronoun",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " you",
+        "tree": "XXX-PRP",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -442,15 +442,15 @@
         "graph": "(XXX \n\t :ARG0/NP -)",
         "graph_rules": {
             "leave-01": [
-                ":ARG0/NP"
+                ":ARG0"
             ]
         },
         "head": "leave-01",
-        "name": ":ARG1/VP",
+        "name": ":ARG1",
         "noun_info": {},
-        "tree": " leave",
+        "tree": "XXX-VB",
         "tree_rules": [
-            ":ARG0/NP"
+            ":ARG0"
         ],
         "verb_info": {
             "tense": "infinitive",
@@ -461,13 +461,13 @@
         "graph": "(c / city \n\t :name (n / name \n\t\t :op1 c))",
         "graph_rules": {},
         "head": "city/name",
-        "name": ":location/NN",
+        "name": ":location",
         "noun_info": {
             "form": "proper",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " london",
+        "tree": "XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -475,13 +475,13 @@
         "graph": "c",
         "graph_rules": {},
         "head": "11",
-        "name": ":quant/CD",
+        "name": ":quant",
         "noun_info": {
             "form": "",
             "inPP": false,
             "number": ""
         },
-        "tree": " 11",
+        "tree": "XXX-CD",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -489,9 +489,9 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "altogether",
-        "name": ":mod/ADVP",
+        "name": ":mod",
         "noun_info": {},
-        "tree": " altogether",
+        "tree": "XXX-RB",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -499,13 +499,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "emergency",
-        "name": ":mod/NN",
+        "name": ":mod",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " emergency",
+        "tree": "XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -513,21 +513,21 @@
         "graph": "(XXX \n\t :ARG1/NP - \n\t :ARG2/PP - \n\t :mod/ADVP - \n\t :purpose/PP -)",
         "graph_rules": {
             "send-01": [
-                ":ARG1/NP",
-                ":ARG2/PP",
-                ":mod/ADVP",
-                ":purpose/PP"
+                ":ARG1",
+                ":ARG2",
+                ":mod",
+                ":purpose"
             ]
         },
         "head": "send-01",
-        "name": ":ARG1/SBAR",
+        "name": ":ARG1",
         "noun_info": {},
-        "tree": " IN :mod/ADVP :ARG1/NP VB VB send :ARG2/PP :purpose/PP",
+        "tree": "that :mod :ARG1 have be XXX-VB :ARG2 :purpose",
         "tree_rules": [
-            ":ARG2/PP",
-            ":purpose/PP",
-            ":mod/ADVP",
-            ":ARG1/NP"
+            ":ARG2",
+            ":purpose",
+            ":mod",
+            ":ARG1"
         ],
         "verb_info": {
             "tense": "past perfect",
@@ -538,21 +538,21 @@
         "graph": "(XXX \n\t :mod/NN - \n\t :location/NN -)",
         "graph_rules": {
             "service": [
-                ":mod/NN",
-                ":location/NN"
+                ":mod",
+                ":location"
             ]
         },
         "head": "service",
-        "name": ":ARG0/NP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "plural"
         },
-        "tree": " DT :location/NN :mod/NN services",
+        "tree": "the :location :mod XXX-NN",
         "tree_rules": [
-            ":location/NN",
-            ":mod/NN"
+            ":location",
+            ":mod"
         ],
         "verb_info": {}
     },
@@ -560,13 +560,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "minor",
-        "name": ":mod/JJ",
+        "name": ":mod",
         "noun_info": {
             "form": "",
             "inPP": false,
             "number": ""
         },
-        "tree": " minor",
+        "tree": "XXX-JJ",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -574,19 +574,19 @@
         "graph": "(XXX \n\t :quant/CD -)",
         "graph_rules": {
             "person": [
-                ":quant/CD"
+                ":quant"
             ]
         },
         "head": "person",
-        "name": ":ARG1/NP",
+        "name": ":ARG1",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "plural"
         },
-        "tree": " :quant/CD people",
+        "tree": ":quant XXX-NN",
         "tree_rules": [
-            ":quant/CD"
+            ":quant"
         ],
         "verb_info": {}
     },
@@ -594,21 +594,21 @@
         "graph": "(XXX \n\t :ARG1/E - \n\t :ARG2/ADJP -)",
         "graph_rules": {
             "treat-03": [
-                ":ARG1/E",
-                ":ARG2/ADJP"
+                ":ARG1",
+                ":ARG2"
             ]
         },
         "head": "treat-03",
-        "name": ":purpose/PP",
+        "name": ":purpose",
         "noun_info": {
             "form": "description",
             "inPP": true,
             "number": "singular"
         },
-        "tree": " IN treatment :ARG2/ADJP",
+        "tree": "for XXX-NN :ARG2",
         "tree_rules": [
-            ":ARG2/ADJP",
-            ":ARG1/E"
+            ":ARG2",
+            ":ARG1"
         ],
         "verb_info": {}
     },
@@ -616,21 +616,21 @@
         "graph": "(XXX \n\t :ARG1/E - \n\t :mod/JJ -)",
         "graph_rules": {
             "wound-01": [
-                ":ARG1/E",
-                ":mod/JJ"
+                ":ARG1",
+                ":mod"
             ]
         },
         "head": "wound-01",
-        "name": ":ARG2/ADJP",
+        "name": ":ARG2",
         "noun_info": {
             "form": "description",
             "inPP": true,
             "number": "plural"
         },
-        "tree": " JJ TO :mod/JJ wounds",
+        "tree": "due to :mod XXX-NN",
         "tree_rules": [
-            ":mod/JJ",
-            ":ARG1/E"
+            ":mod",
+            ":ARG1"
         ],
         "verb_info": {}
     },
@@ -638,13 +638,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "hospital",
-        "name": ":ARG2/PP",
+        "name": ":ARG2",
         "noun_info": {
             "form": "description",
             "inPP": true,
             "number": "singular"
         },
-        "tree": " TO hospital",
+        "tree": "to XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -652,7 +652,7 @@
         "graph": "coref",
         "graph_rules": {},
         "head": "person",
-        "name": ":ARG1/E",
+        "name": ":ARG1",
         "noun_info": {},
         "tree": "empty",
         "tree_rules": [],
@@ -662,7 +662,7 @@
         "graph": "coref",
         "graph_rules": {},
         "head": "person",
-        "name": ":ARG1/E",
+        "name": ":ARG1",
         "noun_info": {},
         "tree": "empty",
         "tree_rules": [],
@@ -672,13 +672,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "boy",
-        "name": ":ARG0/NP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT boy",
+        "tree": "the XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -686,9 +686,9 @@
         "graph": "c",
         "graph_rules": {},
         "head": "-",
-        "name": ":polarity/RB",
+        "name": ":polarity",
         "noun_info": {},
-        "tree": " not",
+        "tree": "XXX-RB",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -696,13 +696,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "boy",
-        "name": ":ARG0/NP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT boy",
+        "tree": "the XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -710,9 +710,9 @@
         "graph": "c",
         "graph_rules": {},
         "head": "-",
-        "name": ":polarity/RB",
+        "name": ":polarity",
         "noun_info": {},
-        "tree": " not",
+        "tree": "XXX-RB",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -720,15 +720,15 @@
         "graph": "(XXX \n\t :ARG0/NP -)",
         "graph_rules": {
             "go-01": [
-                ":ARG0/NP"
+                ":ARG0"
             ]
         },
         "head": "go-01",
-        "name": ":domain/VP",
+        "name": ":domain",
         "noun_info": {},
-        "tree": " go",
+        "tree": "XXX-VB",
         "tree_rules": [
-            ":ARG0/NP"
+            ":ARG0"
         ],
         "verb_info": {
             "tense": "infinitive",
@@ -739,19 +739,19 @@
         "graph": "(XXX \n\t :mod/JJ -)",
         "graph_rules": {
             "boy": [
-                ":mod/JJ"
+                ":mod"
             ]
         },
         "head": "boy",
-        "name": ":ARG0/NP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT :mod/JJ boy",
+        "tree": "the :mod XXX-NN",
         "tree_rules": [
-            ":mod/JJ"
+            ":mod"
         ],
         "verb_info": {}
     },
@@ -759,13 +759,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "store",
-        "name": ":ARG4/PP",
+        "name": ":ARG4",
         "noun_info": {
             "form": "description",
             "inPP": true,
             "number": "singular"
         },
-        "tree": " TO DT store",
+        "tree": "to the XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -773,13 +773,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "nice",
-        "name": ":mod/JJ",
+        "name": ":mod",
         "noun_info": {
             "form": "",
             "inPP": false,
             "number": ""
         },
-        "tree": " nice",
+        "tree": "XXX-JJ",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -787,13 +787,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "box",
-        "name": ":ARG1/NP",
+        "name": ":ARG1",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT box",
+        "tree": "the XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -801,13 +801,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "house",
-        "name": ":ARG3/PP",
+        "name": ":ARG3",
         "noun_info": {
             "form": "description",
             "inPP": true,
             "number": "singular"
         },
-        "tree": " IN DT house :ARG4/PP",
+        "tree": "from the XXX-NN :ARG4",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -815,13 +815,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "girl",
-        "name": ":ARG0/NP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT girl :ARG1/S",
+        "tree": "the XXX-NN :ARG1",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -829,13 +829,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "boy",
-        "name": ":ARG0/NP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT boy",
+        "tree": "the XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -843,17 +843,17 @@
         "graph": "(XXX \n\t :ARG0/NP - \n\t :ARG1/NP -)",
         "graph_rules": {
             "believe-01": [
-                ":ARG0/NP",
-                ":ARG1/NP"
+                ":ARG0",
+                ":ARG1"
             ]
         },
         "head": "believe-01",
-        "name": ":ARG1/S",
+        "name": ":ARG1",
         "noun_info": {},
-        "tree": " TO believe :ARG1/NP",
+        "tree": "to XXX-VB :ARG1",
         "tree_rules": [
-            ":ARG1/NP",
-            ":ARG0/NP"
+            ":ARG1",
+            ":ARG0"
         ],
         "verb_info": {
             "tense": "infinitive",
@@ -864,13 +864,13 @@
         "graph": "coref",
         "graph_rules": {},
         "head": "boy",
-        "name": ":ARG1/NP",
+        "name": ":ARG1",
         "noun_info": {
             "form": "pronoun",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " him",
+        "tree": "XXX-PRP",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -878,9 +878,9 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "yesterday",
-        "name": ":time/VP",
+        "name": ":time",
         "noun_info": {},
-        "tree": " VB yesterday",
+        "tree": "happen XXX-NN",
         "tree_rules": [],
         "verb_info": {
             "tense": "simple past",
@@ -891,13 +891,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "boy",
-        "name": ":op1/NP",
+        "name": ":op1",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT boy",
+        "tree": "the XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -905,13 +905,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "girl",
-        "name": ":op2/NP",
+        "name": ":op2",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT girl",
+        "tree": "the XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -919,13 +919,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "he",
-        "name": ":poss/PRP$",
+        "name": ":poss",
         "noun_info": {
             "form": "possessive pronoun",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " his",
+        "tree": "XXX-PRP$",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -933,13 +933,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "boy",
-        "name": ":ARG0/NP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT boy",
+        "tree": "the XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -947,9 +947,9 @@
         "graph": "c",
         "graph_rules": {},
         "head": "-",
-        "name": ":polarity/RB",
+        "name": ":polarity",
         "noun_info": {},
-        "tree": " not",
+        "tree": "XXX-RB",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -957,17 +957,17 @@
         "graph": "(XXX \n\t :ARG0/NP - \n\t :polarity/RB -)",
         "graph_rules": {
             "go-02": [
-                ":ARG0/NP",
-                ":polarity/RB"
+                ":ARG0",
+                ":polarity"
             ]
         },
         "head": "go-02",
-        "name": ":ARG2/VP",
+        "name": ":ARG2",
         "noun_info": {},
-        "tree": " go",
+        "tree": "XXX-VB",
         "tree_rules": [
-            ":polarity/RB",
-            ":ARG0/NP"
+            ":polarity",
+            ":ARG0"
         ],
         "verb_info": {
             "tense": "infinitive",
@@ -978,13 +978,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "boy",
-        "name": ":ARG0/NP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT boy",
+        "tree": "the XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -992,9 +992,9 @@
         "graph": "c",
         "graph_rules": {},
         "head": "-",
-        "name": ":polarity/RB",
+        "name": ":polarity",
         "noun_info": {},
-        "tree": " not",
+        "tree": "XXX-RB",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1002,15 +1002,15 @@
         "graph": "(XXX \n\t :ARG0/NP -)",
         "graph_rules": {
             "go-02": [
-                ":ARG0/NP"
+                ":ARG0"
             ]
         },
         "head": "go-02",
-        "name": ":ARG1/VP",
+        "name": ":ARG1",
         "noun_info": {},
-        "tree": " go",
+        "tree": "XXX-VB",
         "tree_rules": [
-            ":ARG0/NP"
+            ":ARG0"
         ],
         "verb_info": {
             "tense": "infinitive",
@@ -1021,13 +1021,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "marble",
-        "name": ":ARG1/NP",
+        "name": ":ARG1",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT marble",
+        "tree": "the XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1035,13 +1035,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "boy",
-        "name": ":ARG0/NP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT boy",
+        "tree": "the XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1049,13 +1049,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "marble",
-        "name": ":ARG1/NP",
+        "name": ":ARG1",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT marble",
+        "tree": "the XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1063,15 +1063,15 @@
         "graph": "(XXX \n\t :ARG1/NP -)",
         "graph_rules": {
             "white-03": [
-                ":ARG1/NP"
+                ":ARG1"
             ]
         },
         "head": "white-03",
-        "name": ":ARG1/SBAR",
+        "name": ":ARG1",
         "noun_info": {},
-        "tree": " IN :ARG1/NP VB white",
+        "tree": "that :ARG1 be XXX-JJ",
         "tree_rules": [
-            ":ARG1/NP"
+            ":ARG1"
         ],
         "verb_info": {
             "tense": "simple present",
@@ -1082,13 +1082,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "boy",
-        "name": ":ARG0/NP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT boy",
+        "tree": "the XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1096,19 +1096,19 @@
         "graph": "(XXX \n\t :ARG1-of/JJ -)",
         "graph_rules": {
             "marble": [
-                ":ARG1-of/JJ"
+                ":ARG1-of"
             ]
         },
         "head": "marble",
-        "name": ":ARG1/NP",
+        "name": ":ARG1",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT :ARG1-of/JJ marble",
+        "tree": "the :ARG1-of XXX-NN",
         "tree_rules": [
-            ":ARG1-of/JJ"
+            ":ARG1-of"
         ],
         "verb_info": {}
     },
@@ -1116,13 +1116,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "white-03",
-        "name": ":ARG1-of/JJ",
+        "name": ":ARG1-of",
         "noun_info": {
             "form": "",
             "inPP": false,
             "number": ""
         },
-        "tree": " white",
+        "tree": "XXX-JJ",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1130,13 +1130,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "boy",
-        "name": ":ARG0/NP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT boy",
+        "tree": "the XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1144,15 +1144,15 @@
         "graph": "(XXX \n\t :ARG1/NP -)",
         "graph_rules": {
             "want-01": [
-                ":ARG1/NP"
+                ":ARG1"
             ]
         },
         "head": "want-01",
-        "name": ":ARG0-of/SBAR",
+        "name": ":ARG0-of",
         "noun_info": {},
-        "tree": " WP want :ARG1/NP",
+        "tree": "who XXX-VB :ARG1",
         "tree_rules": [
-            ":ARG1/NP"
+            ":ARG1"
         ],
         "verb_info": {
             "tense": "simple past",
@@ -1163,19 +1163,19 @@
         "graph": "(XXX \n\t :ARG0-of/SBAR -)",
         "graph_rules": {
             "girl": [
-                ":ARG0-of/SBAR"
+                ":ARG0-of"
             ]
         },
         "head": "girl",
-        "name": ":ARG1/NP",
+        "name": ":ARG1",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT girl :ARG0-of/SBAR",
+        "tree": "the XXX-NN :ARG0-of",
         "tree_rules": [
-            ":ARG0-of/SBAR"
+            ":ARG0-of"
         ],
         "verb_info": {}
     },
@@ -1183,13 +1183,13 @@
         "graph": "coref",
         "graph_rules": {},
         "head": "boy",
-        "name": ":ARG1/NP",
+        "name": ":ARG1",
         "noun_info": {
             "form": "pronoun",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " him",
+        "tree": "XXX-PRP",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1197,15 +1197,15 @@
         "graph": "(XXX \n\t :ARG0/NP -)",
         "graph_rules": {
             "see-01": [
-                ":ARG0/NP"
+                ":ARG0"
             ]
         },
         "head": "see-01",
-        "name": ":ARG1-of/SBAR",
+        "name": ":ARG1-of",
         "noun_info": {},
-        "tree": " :ARG1/NP see",
+        "tree": ":ARG1 XXX-VB",
         "tree_rules": [
-            ":ARG0/NP"
+            ":ARG0"
         ],
         "verb_info": {
             "tense": "simple past",
@@ -1216,13 +1216,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "boy",
-        "name": ":ARG0/NP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT boy",
+        "tree": "the XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1230,19 +1230,19 @@
         "graph": "(XXX \n\t :ARG1-of/SBAR -)",
         "graph_rules": {
             "girl": [
-                ":ARG1-of/SBAR"
+                ":ARG1-of"
             ]
         },
         "head": "girl",
-        "name": ":ARG0/PP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "description",
             "inPP": true,
             "number": "singular"
         },
-        "tree": " IN DT girl :ARG1-of/SBAR",
+        "tree": "by the XXX-NN :ARG1-of",
         "tree_rules": [
-            ":ARG1-of/SBAR"
+            ":ARG1-of"
         ],
         "verb_info": {}
     },
@@ -1250,13 +1250,13 @@
         "graph": "coref",
         "graph_rules": {},
         "head": "boy",
-        "name": ":ARG1/NP",
+        "name": ":ARG1",
         "noun_info": {
             "form": "pronoun",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " he",
+        "tree": "XXX-PRP",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1264,13 +1264,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "regulate-01",
-        "name": ":instrument-of/JJ",
+        "name": ":instrument-of",
         "noun_info": {
             "form": "",
             "inPP": false,
             "number": ""
         },
-        "tree": " regulatory",
+        "tree": "XXX-JJ",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1278,19 +1278,19 @@
         "graph": "(XXX \n\t :instrument-of/JJ -)",
         "graph_rules": {
             "document": [
-                ":instrument-of/JJ"
+                ":instrument-of"
             ]
         },
         "head": "document",
-        "name": ":ARG1/NP",
+        "name": ":ARG1",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "plural"
         },
-        "tree": " DT :instrument-of/JJ documents",
+        "tree": "the :instrument-of XXX-NN",
         "tree_rules": [
-            ":instrument-of/JJ"
+            ":instrument-of"
         ],
         "verb_info": {}
     },
@@ -1298,13 +1298,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "boy",
-        "name": ":ARG0/NP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT boy",
+        "tree": "the XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1312,15 +1312,15 @@
         "graph": "(XXX \n\t :ARG0/E -)",
         "graph_rules": {
             "believe-01": [
-                ":ARG0/E"
+                ":ARG0"
             ]
         },
         "head": "believe-01",
-        "name": ":ARG1/S",
+        "name": ":ARG1",
         "noun_info": {},
-        "tree": " TO believe",
+        "tree": "to XXX-VB",
         "tree_rules": [
-            ":ARG0/E"
+            ":ARG0"
         ],
         "verb_info": {
             "tense": "infinitive",
@@ -1331,7 +1331,7 @@
         "graph": "coref",
         "graph_rules": {},
         "head": "boy",
-        "name": ":ARG0/E",
+        "name": ":ARG0",
         "noun_info": {},
         "tree": "empty",
         "tree_rules": [],
@@ -1341,13 +1341,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "boy",
-        "name": ":ARG0/NP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT boy",
+        "tree": "the XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1355,9 +1355,9 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "rain-01",
-        "name": ":ARG1/VP",
+        "name": ":ARG1",
         "noun_info": {},
-        "tree": " rain",
+        "tree": "XXX-VB",
         "tree_rules": [],
         "verb_info": {
             "tense": "infinitive",
@@ -1368,13 +1368,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "boy",
-        "name": ":ARG0/NP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT boy",
+        "tree": "the XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1382,15 +1382,15 @@
         "graph": "(XXX \n\t :ARG0/NP -)",
         "graph_rules": {
             "go-02": [
-                ":ARG0/NP"
+                ":ARG0"
             ]
         },
         "head": "go-02",
-        "name": ":ARG1/S",
+        "name": ":ARG1",
         "noun_info": {},
-        "tree": " TO go",
+        "tree": "to XXX-VB",
         "tree_rules": [
-            ":ARG0/NP"
+            ":ARG0"
         ],
         "verb_info": {
             "tense": "infinitive",
@@ -1401,13 +1401,13 @@
         "graph": "c",
         "graph_rules": {},
         "head": "i",
-        "name": ":ARG0/NP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "pronoun",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " i",
+        "tree": "XXX-PRP",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1415,15 +1415,15 @@
         "graph": "(XXX \n\t :ARG0/E -)",
         "graph_rules": {
             "work-01": [
-                ":ARG0/E"
+                ":ARG0"
             ]
         },
         "head": "work-01",
-        "name": ":ARG1/PP",
+        "name": ":ARG1",
         "noun_info": {},
-        "tree": " TO work",
+        "tree": "to XXX-VB",
         "tree_rules": [
-            ":ARG0/E"
+            ":ARG0"
         ],
         "verb_info": {
             "tense": "present continuous",
@@ -1434,7 +1434,7 @@
         "graph": "coref",
         "graph_rules": {},
         "head": "i",
-        "name": ":ARG0/E",
+        "name": ":ARG0",
         "noun_info": {},
         "tree": "empty",
         "tree_rules": [],
@@ -1444,13 +1444,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "boy",
-        "name": ":ARG0/NP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT boy",
+        "tree": "the XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1458,9 +1458,9 @@
         "graph": "c",
         "graph_rules": {},
         "head": "-",
-        "name": ":polarity/RB",
+        "name": ":polarity",
         "noun_info": {},
-        "tree": " n't",
+        "tree": "XXX-RB",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1468,13 +1468,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "boy",
-        "name": ":ARG0/NP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT boy",
+        "tree": "the XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1482,9 +1482,9 @@
         "graph": "c",
         "graph_rules": {},
         "head": "-",
-        "name": ":polarity/RB",
+        "name": ":polarity",
         "noun_info": {},
-        "tree": " n't",
+        "tree": "XXX-RB",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1492,15 +1492,15 @@
         "graph": "(XXX \n\t :ARG0/NP -)",
         "graph_rules": {
             "go-02": [
-                ":ARG0/NP"
+                ":ARG0"
             ]
         },
         "head": "go-02",
-        "name": ":ARG1/VP",
+        "name": ":ARG1",
         "noun_info": {},
-        "tree": " go",
+        "tree": "XXX-VB",
         "tree_rules": [
-            ":ARG0/NP"
+            ":ARG0"
         ],
         "verb_info": {
             "tense": "infinitive",
@@ -1511,13 +1511,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "boy",
-        "name": ":ARG0/NP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT boy",
+        "tree": "the XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1525,9 +1525,9 @@
         "graph": "c",
         "graph_rules": {},
         "head": "-",
-        "name": ":polarity/RB",
+        "name": ":polarity",
         "noun_info": {},
-        "tree": " n't",
+        "tree": "XXX-RB",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1535,15 +1535,15 @@
         "graph": "(XXX \n\t :ARG0/NP -)",
         "graph_rules": {
             "go-02": [
-                ":ARG0/NP"
+                ":ARG0"
             ]
         },
         "head": "go-02",
-        "name": ":ARG2/S",
+        "name": ":ARG2",
         "noun_info": {},
-        "tree": " :ARG0/NP VB :polarity/RB VB TO go .",
+        "tree": ":ARG0 do :polarity have to XXX-VB .",
         "tree_rules": [
-            ":ARG0/NP"
+            ":ARG0"
         ],
         "verb_info": {
             "tense": "simple present",
@@ -1554,13 +1554,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "boy",
-        "name": ":ARG0/NP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT boy",
+        "tree": "the XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1568,19 +1568,19 @@
         "graph": "(XXX \n\t :poss/PRP$ -)",
         "graph_rules": {
             "team": [
-                ":poss/PRP$"
+                ":poss"
             ]
         },
         "head": "team",
-        "name": ":ARG0/NP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " :poss/PRP$ team",
+        "tree": ":poss XXX-NN",
         "tree_rules": [
-            ":poss/PRP$"
+            ":poss"
         ],
         "verb_info": {}
     },
@@ -1588,9 +1588,9 @@
         "graph": "c",
         "graph_rules": {},
         "head": "-",
-        "name": ":polarity/RB",
+        "name": ":polarity",
         "noun_info": {},
-        "tree": " n't",
+        "tree": "XXX-RB",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1598,17 +1598,17 @@
         "graph": "(XXX \n\t :ARG0/NP - \n\t :polarity/RB -)",
         "graph_rules": {
             "win-01": [
-                ":ARG0/NP",
-                ":polarity/RB"
+                ":ARG0",
+                ":polarity"
             ]
         },
         "head": "win-01",
-        "name": ":ARG1/SBAR",
+        "name": ":ARG1",
         "noun_info": {},
-        "tree": " :ARG0/NP MD :polarity/RB win",
+        "tree": ":ARG0 will :polarity XXX-VB",
         "tree_rules": [
-            ":polarity/RB",
-            ":ARG0/NP"
+            ":polarity",
+            ":ARG0"
         ],
         "verb_info": {
             "tense": "simple future",
@@ -1619,13 +1619,13 @@
         "graph": "coref",
         "graph_rules": {},
         "head": "boy",
-        "name": ":poss/PRP$",
+        "name": ":poss",
         "noun_info": {
             "form": "possessive pronoun",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " his",
+        "tree": "XXX-PRP$",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1633,13 +1633,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "boy",
-        "name": ":ARG0/NP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT boy",
+        "tree": "the XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1647,19 +1647,19 @@
         "graph": "(XXX \n\t :poss/PRP$ -)",
         "graph_rules": {
             "team": [
-                ":poss/PRP$"
+                ":poss"
             ]
         },
         "head": "team",
-        "name": ":ARG0/NP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " :poss/PRP$ team",
+        "tree": ":poss XXX-NN",
         "tree_rules": [
-            ":poss/PRP$"
+            ":poss"
         ],
         "verb_info": {}
     },
@@ -1667,9 +1667,9 @@
         "graph": "c",
         "graph_rules": {},
         "head": "-",
-        "name": ":polarity/RB",
+        "name": ":polarity",
         "noun_info": {},
-        "tree": " not",
+        "tree": "XXX-RB",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1677,15 +1677,15 @@
         "graph": "(XXX \n\t :ARG0/NP -)",
         "graph_rules": {
             "win-01": [
-                ":ARG0/NP"
+                ":ARG0"
             ]
         },
         "head": "win-01",
-        "name": ":ARG1/SBAR",
+        "name": ":ARG1",
         "noun_info": {},
-        "tree": " :ARG0/NP MD win",
+        "tree": ":ARG0 will XXX-VB",
         "tree_rules": [
-            ":ARG0/NP"
+            ":ARG0"
         ],
         "verb_info": {
             "tense": "simple future",
@@ -1696,13 +1696,13 @@
         "graph": "coref",
         "graph_rules": {},
         "head": "boy",
-        "name": ":poss/PRP$",
+        "name": ":poss",
         "noun_info": {
             "form": "possessive pronoun",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " his",
+        "tree": "XXX-PRP$",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1710,13 +1710,13 @@
         "graph": "c",
         "graph_rules": {},
         "head": "i",
-        "name": ":ARG0/NP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "pronoun",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " i",
+        "tree": "XXX-PRP",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1724,9 +1724,9 @@
         "graph": "c",
         "graph_rules": {},
         "head": "-",
-        "name": ":polarity/RB",
+        "name": ":polarity",
         "noun_info": {},
-        "tree": " n't",
+        "tree": "XXX-RB",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1734,13 +1734,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "money",
-        "name": ":ARG1/NP",
+        "name": ":ARG1",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT money",
+        "tree": "any XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1748,13 +1748,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "man",
-        "name": ":domain/NP",
+        "name": ":domain",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT man",
+        "tree": "the XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1762,13 +1762,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "girl",
-        "name": ":ARG1/NP",
+        "name": ":ARG1",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT girl",
+        "tree": "the XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1776,9 +1776,9 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "amr-unknown",
-        "name": ":ARG1/WHNP",
+        "name": ":ARG1",
         "noun_info": {},
-        "tree": " what",
+        "tree": "XXX-WP",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1786,13 +1786,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "girl",
-        "name": ":ARG0/NP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT girl",
+        "tree": "the XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1800,13 +1800,13 @@
         "graph": "(p / person \n\t :name (n / name \n\t\t :op1 c \n\t\t :op2 c))",
         "graph_rules": {},
         "head": "person/name",
-        "name": ":ARG0/NP",
+        "name": ":ARG0",
         "noun_info": {
             "form": "proper",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " hugo chavez",
+        "tree": "XXX-NN XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1814,13 +1814,13 @@
         "graph": "(XXX \n\t :year c)",
         "graph_rules": {},
         "head": "date-entity",
-        "name": ":time/PP",
+        "name": ":time",
         "noun_info": {
             "form": "",
             "inPP": true,
             "number": ""
         },
-        "tree": " IN 2004",
+        "tree": "in XXX-CD",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -1828,13 +1828,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "it",
-        "name": ":ARG1/NP",
+        "name": ":ARG1",
         "noun_info": {
             "form": "pronoun",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " it",
+        "tree": "XXX-PRP",
         "tree_rules": [],
         "verb_info": {}
     }

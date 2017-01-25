@@ -25,7 +25,7 @@ class RuleProb(object):
 
     def freq_lexicon(self, fdir):
         sw, shead, spos, sedge = [], [], [], []
-        w, w_wtm1, w_head, w_pos, w_edge = {}, {}, {}, {}, {}
+        w, w_wtm1, w_head, w_pos, w_edge = [], [], [], [], []
 
         # Group coutings by part-of-speech
         for lexicon in self.lexicons:
@@ -35,23 +35,11 @@ class RuleProb(object):
             spos.append(lexicon['pos'])
             sedge.append(lexicon['edge'])
 
-            pos = lexicon['pos']
-            if pos not in w:
-                w[pos] = []
-            if pos not in w_wtm1:
-                w_wtm1[pos] = []
-            if pos not in w_head:
-                w_head[pos] = []
-            if pos not in w_pos:
-                w_pos[pos] = []
-            if pos not in w_edge:
-                w_edge[pos] = []
-
-            w[pos].append(lexicon['w_t'])
-            w_wtm1[pos].append((lexicon['w_t'], lexicon['w_tm1']))
-            w_head[pos].append((lexicon['w_t'], lexicon['head']))
-            w_pos[pos].append((lexicon['w_t'], lexicon['pos']))
-            w_edge[pos].append((lexicon['w_t'], lexicon['edge']))
+            w.append(lexicon['w_t'])
+            w_wtm1.append((lexicon['w_t'], lexicon['w_tm1']))
+            w_head.append((lexicon['w_t'], lexicon['head']))
+            w_pos.append((lexicon['w_t'], lexicon['pos']))
+            w_edge.append((lexicon['w_t'], lexicon['edge']))
 
         laplace = {
             'w': len(set(sw)),
@@ -60,12 +48,11 @@ class RuleProb(object):
             'edge': len(set(sedge))
         }
 
-        for pos in w:
-            w[pos] = dict(nltk.FreqDist(w[pos]))
-            w_wtm1[pos] = dict(nltk.FreqDist(w_wtm1[pos]))
-            w_head[pos] = dict(nltk.FreqDist(w_head[pos]))
-            w_pos[pos] = dict(nltk.FreqDist(w_pos[pos]))
-            w_edge[pos] = dict(nltk.FreqDist(w_edge[pos]))
+        w = dict(nltk.FreqDist(w))
+        w_wtm1 = dict(nltk.FreqDist(w_wtm1))
+        w_head = dict(nltk.FreqDist(w_head))
+        w_pos = dict(nltk.FreqDist(w_pos))
+        w_edge = dict(nltk.FreqDist(w_edge))
 
         p.dump(laplace, open(os.path.join(fdir, 'laplace.pickle'), 'w'))
         p.dump(w, open(os.path.join(fdir, 'w.pickle'), 'w'))
@@ -112,17 +99,13 @@ class RuleProb(object):
         p.dump(freq_3, open(_fname, 'w'))
 
 if __name__ == '__main__':
-    # RuleProb(initial='/home/tcastrof/amr/data/grammars/initial.json',
-    #          substitution='/home/tcastrof/amr/data/grammars/substitution.json',
-    #          adjoining='/home/tcastrof/amr/data/grammars/adjoining.json',
-    #          fwrite='/home/tcastrof/amr/data/grammars')
     initial = prop.initial_rules
     sub = prop.substitution_rules
     adj = prop.adjoining_rules
     lexicons = prop.lexicons
+
     rule_write = '../data/prince/rules'
     lexicon_write = '../data/prince/lexicon'
-
 
     RuleProb(initial=initial,
              substitution=sub,

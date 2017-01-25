@@ -18,9 +18,10 @@ import traceback
 from stanford_corenlp_pywrapper import CoreNLP
 
 class RuleProducer(object):
-    def __init__(self, aligner, dirs):
+    def __init__(self, aligner, dirs, isAligned):
         self.aligner = aligner
         self.dirs = dirs
+        self.isAligned = isAligned
 
         self.processed, self.errors, self.rules_processed, self.invalid_rules = 0, 0, 0, 0
 
@@ -38,7 +39,7 @@ class RuleProducer(object):
 
     def align_amr(self, amr):
         self.processed = self.processed + 1
-        alignments, info = self.aligner.run(amr['amr'], amr['sentence'])
+        alignments, info = self.aligner.run(amr['amr'], amr['sentence'], isAligned=self.isAligned)
         return alignments, info
 
     def align_tree(self, amr, info, alignments):
@@ -203,12 +204,25 @@ class RuleProducer(object):
                         elif rule.features.type == 'noun':
                             noun = {'form': rule.features.form, 'number': rule.features.number, 'inPP': rule.features.inPP}
 
+                    ############################################################################
+                    for node in rule.tree.nodes:
+                        if rule.tree.nodes[node].type == 'rule':
+                            rule.tree.nodes[node].name = rule.tree.nodes[node].name.split('/')[0]
+                    if tree != 'empty':
+                        tree = rule.tree.realize(root=rule.tree.root, text='', isRule=True).strip()
+
+                    for head in rule.graph_rules:
+                        for i, _rule in enumerate(rule.graph_rules[head]):
+                            rule.graph_rules[head][i] = rule.graph_rules[head][i].split('/')[0]
+
+                    rule.tree_rules = map(lambda x: x.split('/')[0], rule.tree_rules)
+
+                    rule.name = rule.name.split('/')[0]
+                    ############################################################################
 
                     aux = {
                         'name':rule.name,
                         'head':rule.head,
-                        # 'parent_rule':rule.parent_rule,
-                        # 'parent_head':rule.parent_head,
                         'graph':graph,
                         'graph_rules':rule.graph_rules,
                         'tree':tree,
@@ -227,7 +241,7 @@ class RuleProducer(object):
         write(self.grammar.substitution_rules, fnames['substitution'])
         write(self.grammar.adjoining_rules, fnames['adjoining'])
 
-    def run(self, isPrince=False):
+    def run(self):
         for dir in self.dirs:
             if 'prince' in dir:
                 isPrince = True
@@ -273,10 +287,9 @@ if __name__ == '__main__':
     }
 
     flexicons = '../data/prince/lexicon/lexicon.json'
-    fvoices = '../data/prince/lexicon/voices.json'
 
-    producer = RuleProducer(aligner=aligner, dirs=dirs)
+    producer = RuleProducer(aligner=aligner, dirs=dirs, isAligned=True)
 
-    producer.run(True)
+    producer.run()
     producer.write_rules(frules)
     producer.write_lexicons(flexicons)

@@ -444,7 +444,7 @@ class AMRAligner(object):
             self.alignments.erg_rules[self.alignments.count] = rule
             self.alignments.count = self.alignments.count + 1
 
-    def run(self, amr, text):
+    def run(self, amr, text, isAligned=False):
         self.info, self.coref = self.get_corenlp_result(text)
 
         # Initialize AMR
@@ -461,7 +461,7 @@ class AMRAligner(object):
         # Initialize Aligner
         self.alignments = Alignments(erg_rules={}, tag_rules={}, adjoining_rules={}, features={}, id2rule={}, lexicons=[])
         root = self.amr.edges['root'][0].node_id
-        self.align(root, [], False)
+        self.align(root, [], isAligned)
 
         # Label nodes that have at least one token attached
         for node in self.amr.nodes:
@@ -472,14 +472,14 @@ class AMRAligner(object):
                     self.alignments.count = self.alignments.count + 1
 
         # Label coreferences
-        self.match_coreferences_patterns()
+        # self.match_coreferences_patterns()
 
         # Classify unlabeled nodes by frequency in the training alignments
-        for node in self.amr.nodes:
-            if self.amr.nodes[node].status != 'labeled':
-                rule = self.match_frequency_patterns(node)
-                self.alignments.erg_rules[self.alignments.count] = rule
-                self.alignments.count = self.alignments.count + 1
+        # for node in self.amr.nodes:
+        #     if self.amr.nodes[node].status != 'labeled':
+        #         rule = self.match_frequency_patterns(node)
+        #         self.alignments.erg_rules[self.alignments.count] = rule
+        #         self.alignments.count = self.alignments.count + 1
 
         # Set parent rule names
         for rule_id in self.alignments.erg_rules:

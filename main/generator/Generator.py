@@ -1,3 +1,5 @@
+from werkzeug.serving import is_running_from_reloader
+
 __author__ = 'thiagocastroferreira'
 
 from sys import path
@@ -9,6 +11,7 @@ import copy
 import cPickle as p
 import main.utils as utils
 import operator
+import properties as prop
 
 from main.aligners.Features import VerbPhrase
 from main.grammars.ERG import AMR, ERGFactory
@@ -61,53 +64,18 @@ class Generator(object):
     def get_template(self, rule_id, synchg, tree_type):
         def filter_grammar(condition_level):
             rule = synchg.rules[rule_id]
-            if rule.parent == '':
-                parent_rule = ''
-                parent_head = ''
-            else:
-                parent = synchg.rules[rule.parent]
-                parent_rule = parent.name
-                parent_head = parent.head
-
             result = []
 
-            if condition_level == 5:
-                if tree_type == 'initial':
-                    result = filter(lambda g: rule.name == g[1].split('/')[0]
-                                              and rule.head == g[3]
-                                              and parent_rule == g[4]
-                                              and parent_head == g[5], self.grammar[tree_type][condition_level])
-                else:
-                    result = filter(lambda g: rule.name == g[1].split('/')[0]
-                                              and rule.head == g[3]
-                                              and parent_rule == g[4]
-                                              and parent_head == g[5], self.grammar[tree_type][condition_level])
-            elif condition_level == 4:
-                if tree_type == 'initial':
-                    result = filter(lambda g: rule.name == g[1].split('/')[0]
-                                              and rule.head == g[3]
-                                              and parent_rule == g[4], self.grammar[tree_type][condition_level])
-                else:
-                    result = filter(lambda g: rule.name == g[1].split('/')[0]
-                                              and rule.head == g[3]
-                                              and parent_rule == g[4], self.grammar[tree_type][condition_level])
-            elif condition_level == 3:
-                if tree_type == 'initial':
-                    result = filter(lambda g: rule.name == g[1].split('/')[0]
-                                              and rule.head == g[3], self.grammar[tree_type][condition_level])
-                else:
-                    result = filter(lambda g: rule.name.split('/')[1] == g[1].split('/')[1]
-                                              and rule.head == g[3], self.grammar[tree_type][condition_level])
+            if condition_level == 3:
+                result = filter(lambda g: rule.name == g[1]
+                                          and rule.head == g[3], self.grammar[tree_type][condition_level])
             elif condition_level == 2:
-                if tree_type == 'initial':
-                    result = filter(lambda g: rule.name == g[1].split('/')[0], self.grammar[tree_type][condition_level])
-                else:
-                    result = filter(lambda g: rule.name.split('/')[1] == g[1].split('/')[1], self.grammar[tree_type][condition_level])
+                result = filter(lambda g: rule.name == g[1], self.grammar[tree_type][condition_level])
 
             return result
 
         rule = synchg.rules[rule_id]
-        condition_level = 3
+        condition_level = 2
         templates = []
         while condition_level > 1 and len(templates) == 0:
             # Get rules with the same income edge and head
@@ -118,7 +86,7 @@ class Generator(object):
                 templates = filter(lambda g: g[2] == 'empty', templates)
             else:
                 graph_rules = map(lambda edge: edge.name, reduce(lambda x, y: x+y, rule.graph_rules.values()))
-                templates = filter(lambda g: sorted(map(lambda x: x.split('/')[0], list(g[2]))) == sorted(graph_rules), templates)
+                templates = filter(lambda g: sorted(list(g[2])) == sorted(graph_rules), templates)
 
             if len(templates) == 0:
                 condition_level = condition_level - 1
@@ -158,11 +126,8 @@ class Generator(object):
             rule.features = VerbPhrase(voice=template[0][1])
 
             # Update the generated tree
-            tree = Tree(nodes={}, edges={}, root=1)
-            tree.parse(template[0][0])
-            for node in tree.nodes:
-                tree.nodes[node].rule_id = start_rule
-            tree = self.lexicalizer.choose_words(tree, start_rule, rule)
+            tree = template[0][0]
+            tree = self.lexicalizer.choose_words(tree, rule)
 
             # Update the generated amr
             amr = AMR(nodes={}, edges={}, root='')
@@ -194,15 +159,13 @@ class Generator(object):
             graph_rule_id = filter(lambda rule: synchg.rules[rule].graph.root == graph_root, synchg.rules)[0]
             graph_rule_name = synchg.rules[graph_rule_id].name
 
+            aux = tree.split()
             for tree_root in tree_rules:
                 # Check if the rule edge is in the template rule
-                if graph_rule_name in tree.nodes[tree_root].name:
+                if graph_rule_name == aux[tree_root]:
                     rule_id = graph_rule_id
-                    aux_synchg = copy.deepcopy(synchg)
-                    rule = aux_synchg.rules[rule_id]
-                    rule.name = tree.nodes[tree_root].name
 
-                    new_templates = self.get_template(rule_id, aux_synchg, 'substitution')[:self.beam_n]
+                    new_templates = self.get_template(rule_id, synchg, 'substitution')[:self.beam_n]
 
                     if len(new_templates) > 0:
                         for new_template in new_templates:
@@ -211,19 +174,21 @@ class Generator(object):
                             new_tree = copy.deepcopy(tree)
 
                             rule = new_synchg.rules[rule_id]
-                            rule.name = new_tree.nodes[tree_root].name
                             rule.update_tree(new_template[0][0])
                             rule.features = VerbPhrase(voice=new_template[0][1])
                             new_amr.insert(rule.graph)
 
-                            subtree = Tree(nodes={}, edges={}, root=1)
-                            subtree.parse(new_template[0][0])
-                            for node in subtree.nodes:
-                                subtree.nodes[node].rule_id = rule_id
-                            subtree = self.lexicalizer.choose_words(subtree, rule_id, rule)
-                            new_tree.insert(tree_root, subtree)
+                            subtree = new_template[0][0]
+                            subtree = self.lexicalizer.choose_words(subtree, rule)
 
-                            new_tree_rules = sorted(new_tree.get_nodes_by(type='rule', root=new_tree.root, nodes=[]))
+                            new_tree = new_tree.split()
+                            new_tree[tree_root] = subtree
+                            new_tree = ' '.join(new_tree).replace('empty', '')
+
+                            new_tree_rules = []
+                            for i, token in enumerate(str(new_tree).split()):
+                                if token[0] == ':' and len(token) > 1:
+                                    new_tree_rules.append(i)
                             new_graph_rules = new_amr.get_rules(root=new_amr.root, rules=[])
 
                             candidate = Candidate(amr=new_amr,
@@ -241,28 +206,50 @@ class Generator(object):
         return isSynchronous, sorted(candidates, key=lambda x: x.prob, reverse=True)[:self.beam_n]
 
     def run(self):
+        concluded, candidates, fails = [], [], []
+
         isSynchronous, templates = self.choose_initial()
-        concluded = []
+        if isSynchronous:
+            for candidate in templates:
+                if len(candidate.tree_rules) == 0 and len(candidate.graph_rules) == 0:
+                    concluded.append(candidate)
+                else:
+                    candidates.append(candidate)
+        templates = sorted(candidates, key=lambda x: x.prob, reverse=True)[:self.beam_n]
 
         while len(templates) > 0:
+            phrases = []
             candidates = []
+            fails = []
             for template in templates:
                 isSynchronous, new_candidates = self.choose_substitution(template)
 
                 if isSynchronous:
                     for candidate in new_candidates:
-                        if len(candidate.tree_rules) == 0 and len(candidate.graph_rules) == 0:
+                        if len(candidate.tree_rules) == 0 and len(candidate.graph_rules) == 0 and candidate.tree not in phrases:
                             concluded.append(candidate)
+                            phrases.append(candidate.tree)
                         else:
                             candidates.append(candidate)
+                else:
+                    tree = template.tree
+                    aux = []
+                    for token in tree.split():
+                        if not (token[0] == ':' and len(token) > 1):
+                            aux.append(token)
+                    template.tree = ' '.join(aux)
+                    fails.append(template)
             templates = sorted(candidates, key=lambda x: x.prob, reverse=True)[:self.beam_n]
+
+        if len(concluded) == 0:
+            concluded = fails
         return concluded
 
 # if __name__ == '__main__':
-#     models = ['../data/TEST/rules/initial_rule_edges.pickle',
-#               '../data/TEST/rules/substitution_rule_edges.pickle',
-#               '../data/TEST/rules/initial_rule_edges_head.pickle',
-#               '../data/TEST/rules/substitution_rule_edges_head.pickle']
+#     models = [prop.initial_rule_edges,
+#               prop.substitution_rule_edges,
+#               prop.initial_rule_edges_head,
+#               prop.substitution_rule_edges_head]
 #     verb2noun, noun2verb, verb2actor, actor2verb = utils.noun_verb('../data/morph-verbalization-v1.01.txt')
 #     sub2word = utils.subgraph_word('../data/verbalization-list-v1.06.txt')
 #
@@ -272,9 +259,14 @@ class Generator(object):
 #                :ARG1 (i / it)
 #                :time (d / date-entity :year 2004))"""
 #
-#     amr = """(a / adjust-01
-#                 :ARG0 (g / girl)
-#                 :ARG1 (m / machine))"""
+#     amr = """(a / answer-01
+#       :ARG0 (i / i)
+#       :ARG1 (e / eat-01
+#             :ARG1 (a2 / anything
+#                   :ARG1-of (f / find-01
+#                         :ARG0 (i2 / it)
+#                         :location (r / reach-03
+#                               :ARG0 i2)))))"""
 #
 #     factory = ERGFactory(verb2noun=verb2noun,
 #                      noun2verb=noun2verb,
@@ -282,18 +274,16 @@ class Generator(object):
 #                      actor2verb=actor2verb,
 #                      sub2word=sub2word)
 #
-#     gen = Generator(amr=amr,
+#     gen = Generator(amr=amr.lower(),
 #                     erg_factory=factory,
 #                     models=models,
-#                     beam_n=10)
+#                     beam_n=20)
 #
 #     candidates = gen.run()
 #
 #     for candidate in candidates:
 #         tree = candidate.tree
 #
-#         print tree.prettify(root=tree.root)
-#         print tree.prettify(root=tree.root, isRule=False)
-#         print tree.realize(root=tree.root)
+#         print tree
 #         print candidate.prob
 #         print 10 * '-'

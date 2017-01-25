@@ -26,35 +26,38 @@ def write_lexical(l, fname):
 
 def run(fread, fwrite, models, factory):
     gold, lexicalized, realized = [], {}, {}
-    for amr in utils.parse_corpus(fread, True):
+    for j, amr in enumerate(utils.parse_corpus(fread, True)):
         print amr['sentence']
         try:
             gen = Generator(amr=amr['amr'],
                             erg_factory=factory,
                             models=models,
-                            beam_n=10)
+                            beam_n=20)
 
             candidates = gen.run()
-            for i in range(10):
+            for i in range(5):
                 if i not in lexicalized:
                     lexicalized[i] = []
 
                 if i < len(candidates):
                     tree = candidates[i].tree
-                    lexicalized[i].append(tree.realize(root=tree.root, text=''))
+                    lexicalized[i].append(tree)
                     # print tree.realize(root=tree.root, text=''), ' \t', tree.prettify(root=tree.root, isRule=False)
                 else:
-                    lexicalized[i].append('-')
+                    lexicalized[i].append('- - - - ')
         except:
             print 'Error'
-            for i in range(10):
+            for i in range(5):
                 if i not in lexicalized:
                     lexicalized[i] = []
                 lexicalized[i].append('-')
-        gold.append(amr['sentence'])
+        gold.append(amr['sentence'].lower())
+        for i in range(5):
+            print lexicalized[i][j]
+        print 10 * '-'
 
     write(gold, os.path.join(fwrite, 'gold'))
-    write(lexicalized, os.path.join(fwrite, 'lexicalized'))
+    write_lexical(lexicalized, os.path.join(fwrite, 'lexicalized'))
     # write(realized, 'realized')
 
 if __name__ == '__main__':
@@ -74,10 +77,10 @@ if __name__ == '__main__':
 
     print 'Developing Set'
     fread = '../data/prince/dev.txt'
-    fwrite = '..data/prince/results/dev'
+    fwrite = '../data/prince/results/dev'
     run(fread=fread, fwrite=fwrite, models=models, factory=factory)
 
     print 'Test Set'
     fread = '../data/prince/test.txt'
-    fwrite = '..data/prince/results/test'
+    fwrite = '../data/prince/results/test'
     run(fread=fread, fwrite=fwrite, models=models, factory=factory)

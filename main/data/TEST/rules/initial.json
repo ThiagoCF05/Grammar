@@ -3,13 +3,13 @@
         "graph": "(p / person \n\t :name (n / name \n\t\t :op1 c \n\t\t :op2 c))",
         "graph_rules": {},
         "head": "person/name",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {
             "form": "proper",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " barack obama",
+        "tree": "XXX-NN XXX-NN",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -17,13 +17,13 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "cat",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT cat .",
+        "tree": "the XXX-NN .",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -31,17 +31,17 @@
         "graph": "(XXX \n\t :ARG0/NP - \n\t :ARG1/NP -)",
         "graph_rules": {
             "miss-01": [
-                ":ARG0/NP",
-                ":ARG1/NP"
+                ":ARG0",
+                ":ARG1"
             ]
         },
         "head": "miss-01",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {},
-        "tree": " :ARG0/NP miss :ARG1/NP .",
+        "tree": ":ARG0 XXX-VB :ARG1 .",
         "tree_rules": [
-            ":ARG1/NP",
-            ":ARG0/NP"
+            ":ARG1",
+            ":ARG0"
         ],
         "verb_info": {
             "tense": "simple present",
@@ -52,17 +52,17 @@
         "graph": "(XXX \n\t :ARG0/NP - \n\t :ARG2/PP -)",
         "graph_rules": {
             "talk-01": [
-                ":ARG0/NP",
-                ":ARG2/PP"
+                ":ARG0",
+                ":ARG2"
             ]
         },
         "head": "talk-01",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {},
-        "tree": " :ARG0/NP talk :ARG2/PP .",
+        "tree": ":ARG0 XXX-VB :ARG2 .",
         "tree_rules": [
-            ":ARG2/PP",
-            ":ARG0/NP"
+            ":ARG2",
+            ":ARG0"
         ],
         "verb_info": {
             "tense": "simple present",
@@ -73,17 +73,17 @@
         "graph": "(XXX \n\t :ARG0/NP - \n\t :ARG1/S -)",
         "graph_rules": {
             "want-01": [
-                ":ARG0/NP",
-                ":ARG1/S"
+                ":ARG0",
+                ":ARG1"
             ]
         },
         "head": "want-01",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {},
-        "tree": " :ARG0/NP want :ARG1/S .",
+        "tree": ":ARG0 XXX-VB :ARG1 .",
         "tree_rules": [
-            ":ARG1/S",
-            ":ARG0/NP"
+            ":ARG1",
+            ":ARG0"
         ],
         "verb_info": {
             "tense": "simple present",
@@ -94,17 +94,17 @@
         "graph": "(XXX \n\t :ARG0/NP - \n\t :ARG1/NP -)",
         "graph_rules": {
             "adjust-01": [
-                ":ARG0/NP",
-                ":ARG1/NP"
+                ":ARG0",
+                ":ARG1"
             ]
         },
         "head": "adjust-01",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {},
-        "tree": " :ARG0/NP adjust :ARG1/NP .",
+        "tree": ":ARG0 XXX-VB :ARG1 .",
         "tree_rules": [
-            ":ARG1/NP",
-            ":ARG0/NP"
+            ":ARG1",
+            ":ARG0"
         ],
         "verb_info": {
             "tense": "simple past",
@@ -115,17 +115,17 @@
         "graph": "(XXX \n\t :ARG0/PP - \n\t :ARG1/NP -)",
         "graph_rules": {
             "adjust-01": [
-                ":ARG0/PP",
-                ":ARG1/NP"
+                ":ARG0",
+                ":ARG1"
             ]
         },
         "head": "adjust-01",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {},
-        "tree": " :ARG1/NP VB adjust :ARG0/PP .",
+        "tree": ":ARG1 be XXX-VB :ARG0 .",
         "tree_rules": [
-            ":ARG0/PP",
-            ":ARG1/NP"
+            ":ARG0",
+            ":ARG1"
         ],
         "verb_info": {
             "tense": "simple past",
@@ -136,19 +136,19 @@
         "graph": "(XXX \n\t :ARG0/PP - \n\t :ARG1/NP - \n\t :polarity/RB -)",
         "graph_rules": {
             "adjust-01": [
-                ":ARG0/PP",
-                ":ARG1/NP",
-                ":polarity/RB"
+                ":ARG0",
+                ":ARG1",
+                ":polarity"
             ]
         },
         "head": "adjust-01",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {},
-        "tree": " :ARG1/NP VB :polarity/RB adjust :ARG0/PP .",
+        "tree": ":ARG1 be :polarity XXX-VB :ARG0 .",
         "tree_rules": [
-            ":ARG0/PP",
-            ":polarity/RB",
-            ":ARG1/NP"
+            ":ARG0",
+            ":polarity",
+            ":ARG1"
         ],
         "verb_info": {
             "tense": "simple past",
@@ -159,19 +159,19 @@
         "graph": "(XXX \n\t :ARG0/NP - \n\t :ARG1/NP - \n\t :ARG2/PP -)",
         "graph_rules": {
             "describe-01": [
-                ":ARG0/NP",
-                ":ARG1/NP",
-                ":ARG2/PP"
+                ":ARG0",
+                ":ARG1",
+                ":ARG2"
             ]
         },
         "head": "describe-01",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {},
-        "tree": " :ARG0/NP describe :ARG1/NP :ARG2/PP .",
+        "tree": ":ARG0 XXX-VB :ARG1 :ARG2 .",
         "tree_rules": [
-            ":ARG1/NP",
-            ":ARG2/PP",
-            ":ARG0/NP"
+            ":ARG1",
+            ":ARG2",
+            ":ARG0"
         ],
         "verb_info": {
             "tense": "simple past",
@@ -182,23 +182,23 @@
         "graph": "(XXX \n\t :ARG0/NP - \n\t :ARG1/PP - \n\t :ARG2/NP -)",
         "graph_rules": {
             "describe-01": [
-                ":ARG0/NP",
-                ":ARG1/PP",
-                ":ARG2/NP"
+                ":ARG0",
+                ":ARG1",
+                ":ARG2"
             ]
         },
         "head": "describe-01",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " :ARG0/NP description :ARG1/PP : :ARG2/NP .",
+        "tree": ":ARG0 XXX-NN :ARG1 : :ARG2 .",
         "tree_rules": [
-            ":ARG0/NP",
-            ":ARG1/PP",
-            ":ARG2/NP"
+            ":ARG0",
+            ":ARG1",
+            ":ARG2"
         ],
         "verb_info": {}
     },
@@ -206,13 +206,13 @@
         "graph": "(p / person \n\t :ARG0-of (t / teach-01))",
         "graph_rules": {},
         "head": "person/teach-01",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT teacher .",
+        "tree": "the XXX-NN .",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -220,19 +220,19 @@
         "graph": "(XXX \n\t :ARG0-of/SBAR -)",
         "graph_rules": {
             "person": [
-                ":ARG0-of/SBAR"
+                ":ARG0-of"
             ]
         },
         "head": "person",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT person :ARG0-of/SBAR .",
+        "tree": "a XXX-NN :ARG0-of .",
         "tree_rules": [
-            ":ARG0-of/SBAR"
+            ":ARG0-of"
         ],
         "verb_info": {}
     },
@@ -240,15 +240,15 @@
         "graph": "(XXX \n\t :ARG1/VP -)",
         "graph_rules": {
             "permit-01": [
-                ":ARG1/VP"
+                ":ARG1"
             ]
         },
         "head": "permit-01",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {},
-        "tree": " :ARG0/NP can :ARG1/VP .",
+        "tree": ":ARG0 XXX-MD :ARG1 .",
         "tree_rules": [
-            ":ARG1/VP"
+            ":ARG1"
         ],
         "verb_info": {
             "tense": "simple present",
@@ -259,15 +259,15 @@
         "graph": "(XXX \n\t :ARG1/VP -)",
         "graph_rules": {
             "obligate-01": [
-                ":ARG1/VP"
+                ":ARG1"
             ]
         },
         "head": "obligate-01",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {},
-        "tree": " :ARG0/NP must :ARG1/VP .",
+        "tree": ":ARG0 XXX-MD :ARG1 .",
         "tree_rules": [
-            ":ARG1/VP"
+            ":ARG1"
         ],
         "verb_info": {
             "tense": "simple present",
@@ -278,15 +278,15 @@
         "graph": "(XXX \n\t :ARG1/VP -)",
         "graph_rules": {
             "recommend-01": [
-                ":ARG1/VP"
+                ":ARG1"
             ]
         },
         "head": "recommend-01",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {},
-        "tree": " :ARG0/NP should :ARG1/VP .",
+        "tree": ":ARG0 XXX-MD :ARG1 .",
         "tree_rules": [
-            ":ARG1/VP"
+            ":ARG1"
         ],
         "verb_info": {
             "tense": "simple present",
@@ -297,17 +297,17 @@
         "graph": "(XXX \n\t :ARG0/NP - \n\t :ARG1/SBAR -)",
         "graph_rules": {
             "say-01": [
-                ":ARG0/NP",
-                ":ARG1/SBAR"
+                ":ARG0",
+                ":ARG1"
             ]
         },
         "head": "say-01",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {},
-        "tree": " :ARG0/NP say :ARG1/SBAR .",
+        "tree": ":ARG0 XXX-VB :ARG1 .",
         "tree_rules": [
-            ":ARG1/SBAR",
-            ":ARG0/NP"
+            ":ARG1",
+            ":ARG0"
         ],
         "verb_info": {
             "tense": "simple past",
@@ -318,17 +318,17 @@
         "graph": "(XXX \n\t :ARG0/NP - \n\t :polarity/RB -)",
         "graph_rules": {
             "go-01": [
-                ":ARG0/NP",
-                ":polarity/RB"
+                ":ARG0",
+                ":polarity"
             ]
         },
         "head": "go-01",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {},
-        "tree": " :ARG0/NP VB :polarity/RB go .",
+        "tree": ":ARG0 do :polarity XXX-VB .",
         "tree_rules": [
-            ":polarity/RB",
-            ":ARG0/NP"
+            ":polarity",
+            ":ARG0"
         ],
         "verb_info": {
             "tense": "simple present",
@@ -339,17 +339,17 @@
         "graph": "(XXX \n\t :domain/VP - \n\t :polarity/RB -)",
         "graph_rules": {
             "possible": [
-                ":domain/VP",
-                ":polarity/RB"
+                ":domain",
+                ":polarity"
             ]
         },
         "head": "possible",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {},
-        "tree": " :ARG0/NP can :polarity/RB :domain/VP .",
+        "tree": ":ARG0 XXX-MD :polarity :domain .",
         "tree_rules": [
-            ":polarity/RB",
-            ":domain/VP"
+            ":polarity",
+            ":domain"
         ],
         "verb_info": {
             "tense": "simple present",
@@ -360,21 +360,21 @@
         "graph": "(XXX \n\t :ARG0/NP - \n\t :ARG1/NP - \n\t :ARG3/PP - \n\t :ARG4/PP -)",
         "graph_rules": {
             "send-01": [
-                ":ARG0/NP",
-                ":ARG1/NP",
-                ":ARG3/PP",
-                ":ARG4/PP"
+                ":ARG0",
+                ":ARG1",
+                ":ARG3",
+                ":ARG4"
             ]
         },
         "head": "send-01",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {},
-        "tree": " :ARG0/NP send :ARG1/NP :ARG3/PP .",
+        "tree": ":ARG0 XXX-VB :ARG1 :ARG3 .",
         "tree_rules": [
-            ":ARG4/PP",
-            ":ARG1/NP",
-            ":ARG3/PP",
-            ":ARG0/NP"
+            ":ARG4",
+            ":ARG1",
+            ":ARG3",
+            ":ARG0"
         ],
         "verb_info": {
             "tense": "simple present",
@@ -385,17 +385,17 @@
         "graph": "(XXX \n\t :ARG0/NP - \n\t :ARG1/S -)",
         "graph_rules": {
             "want-01": [
-                ":ARG0/NP",
-                ":ARG1/S"
+                ":ARG0",
+                ":ARG1"
             ]
         },
         "head": "want-01",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {},
-        "tree": " :ARG0/NP want :ARG0/NP .",
+        "tree": ":ARG0 XXX-VB :ARG0 .",
         "tree_rules": [
-            ":ARG1/S",
-            ":ARG0/NP"
+            ":ARG1",
+            ":ARG0"
         ],
         "verb_info": {
             "tense": "simple present",
@@ -406,19 +406,19 @@
         "graph": "(XXX \n\t :time/VP -)",
         "graph_rules": {
             "kill-01": [
-                ":time/VP"
+                ":time"
             ]
         },
         "head": "kill-01",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " DT killing :time/VP .",
+        "tree": "the XXX-NN :time .",
         "tree_rules": [
-            ":time/VP"
+            ":time"
         ],
         "verb_info": {}
     },
@@ -426,21 +426,21 @@
         "graph": "(XXX \n\t :op1/NP - \n\t :op2/NP -)",
         "graph_rules": {
             "and": [
-                ":op1/NP",
-                ":op2/NP"
+                ":op1",
+                ":op2"
             ]
         },
         "head": "and",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {
             "form": "list",
             "inPP": false,
             "number": "plural"
         },
-        "tree": " :op1/NP and :op2/NP .",
+        "tree": ":op1 XXX-CC :op2 .",
         "tree_rules": [
-            ":op1/NP",
-            ":op2/NP"
+            ":op1",
+            ":op2"
         ],
         "verb_info": {}
     },
@@ -448,19 +448,19 @@
         "graph": "(XXX \n\t :poss/PRP$ -)",
         "graph_rules": {
             "boat": [
-                ":poss/PRP$"
+                ":poss"
             ]
         },
         "head": "boat",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " :poss/PRP$ boat .",
+        "tree": ":poss XXX-NN .",
         "tree_rules": [
-            ":poss/PRP$"
+            ":poss"
         ],
         "verb_info": {}
     },
@@ -468,15 +468,15 @@
         "graph": "(XXX \n\t :ARG2/VP -)",
         "graph_rules": {
             "obligate-01": [
-                ":ARG2/VP"
+                ":ARG2"
             ]
         },
         "head": "obligate-01",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {},
-        "tree": " :ARG0/NP must :polarity/RB :ARG2/VP .",
+        "tree": ":ARG0 XXX-MD :polarity :ARG2 .",
         "tree_rules": [
-            ":ARG2/VP"
+            ":ARG2"
         ],
         "verb_info": {
             "tense": "simple present",
@@ -487,17 +487,17 @@
         "graph": "(XXX \n\t :ARG1/VP - \n\t :polarity/RB -)",
         "graph_rules": {
             "permit-01": [
-                ":ARG1/VP",
-                ":polarity/RB"
+                ":ARG1",
+                ":polarity"
             ]
         },
         "head": "permit-01",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {},
-        "tree": " :ARG0/NP may :polarity/RB :ARG1/VP .",
+        "tree": ":ARG0 XXX-MD :polarity :ARG1 .",
         "tree_rules": [
-            ":polarity/RB",
-            ":ARG1/VP"
+            ":polarity",
+            ":ARG1"
         ],
         "verb_info": {
             "tense": "simple present",
@@ -508,15 +508,15 @@
         "graph": "(XXX \n\t :ARG1/NP -)",
         "graph_rules": {
             "white-03": [
-                ":ARG1/NP"
+                ":ARG1"
             ]
         },
         "head": "white-03",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {},
-        "tree": " :ARG1/NP VB white .",
+        "tree": ":ARG1 be XXX-JJ .",
         "tree_rules": [
-            ":ARG1/NP"
+            ":ARG1"
         ],
         "verb_info": {
             "tense": "simple present",
@@ -527,17 +527,17 @@
         "graph": "(XXX \n\t :ARG0/NP - \n\t :ARG1/SBAR -)",
         "graph_rules": {
             "see-01": [
-                ":ARG0/NP",
-                ":ARG1/SBAR"
+                ":ARG0",
+                ":ARG1"
             ]
         },
         "head": "see-01",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {},
-        "tree": " :ARG0/NP see :ARG1/SBAR .",
+        "tree": ":ARG0 XXX-VB :ARG1 .",
         "tree_rules": [
-            ":ARG1/SBAR",
-            ":ARG0/NP"
+            ":ARG1",
+            ":ARG0"
         ],
         "verb_info": {
             "tense": "simple present",
@@ -548,17 +548,17 @@
         "graph": "(XXX \n\t :ARG0/NP - \n\t :ARG1/NP -)",
         "graph_rules": {
             "see-01": [
-                ":ARG0/NP",
-                ":ARG1/NP"
+                ":ARG0",
+                ":ARG1"
             ]
         },
         "head": "see-01",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {},
-        "tree": " :ARG0/NP see :ARG1/NP .",
+        "tree": ":ARG0 XXX-VB :ARG1 .",
         "tree_rules": [
-            ":ARG1/NP",
-            ":ARG0/NP"
+            ":ARG1",
+            ":ARG0"
         ],
         "verb_info": {
             "tense": "simple present",
@@ -569,17 +569,17 @@
         "graph": "(XXX \n\t :ARG0/NP - \n\t :ARG1/NP -)",
         "graph_rules": {
             "see-01": [
-                ":ARG0/NP",
-                ":ARG1/NP"
+                ":ARG0",
+                ":ARG1"
             ]
         },
         "head": "see-01",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {},
-        "tree": " :ARG0/NP see :ARG1/NP .",
+        "tree": ":ARG0 XXX-VB :ARG1 .",
         "tree_rules": [
-            ":ARG1/NP",
-            ":ARG0/NP"
+            ":ARG1",
+            ":ARG0"
         ],
         "verb_info": {
             "tense": "simple past",
@@ -590,17 +590,17 @@
         "graph": "(XXX \n\t :ARG0/PP - \n\t :ARG1/NP -)",
         "graph_rules": {
             "want-01": [
-                ":ARG0/PP",
-                ":ARG1/NP"
+                ":ARG0",
+                ":ARG1"
             ]
         },
         "head": "want-01",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {},
-        "tree": " :ARG0/NP VB want :ARG0/PP .",
+        "tree": ":ARG0 be XXX-VB :ARG0 .",
         "tree_rules": [
-            ":ARG1/NP",
-            ":ARG0/PP"
+            ":ARG1",
+            ":ARG0"
         ],
         "verb_info": {
             "tense": "simple present",
@@ -611,15 +611,15 @@
         "graph": "(XXX \n\t :ARG1/NP -)",
         "graph_rules": {
             "change-01": [
-                ":ARG1/NP"
+                ":ARG1"
             ]
         },
         "head": "change-01",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {},
-        "tree": " :ARG1/NP VB change .",
+        "tree": ":ARG1 be XXX-VB .",
         "tree_rules": [
-            ":ARG1/NP"
+            ":ARG1"
         ],
         "verb_info": {
             "tense": "simple past",
@@ -630,17 +630,17 @@
         "graph": "(XXX \n\t :ARG0/NP - \n\t :ARG1/S -)",
         "graph_rules": {
             "want-01": [
-                ":ARG0/NP",
-                ":ARG1/S"
+                ":ARG0",
+                ":ARG1"
             ]
         },
         "head": "want-01",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {},
-        "tree": " :ARG0/NP want :ARG1/S .",
+        "tree": ":ARG0 XXX-VB :ARG1 .",
         "tree_rules": [
-            ":ARG1/S",
-            ":ARG0/NP"
+            ":ARG1",
+            ":ARG0"
         ],
         "verb_info": {
             "tense": "simple present",
@@ -651,15 +651,15 @@
         "graph": "(XXX \n\t :ARG0/NP -)",
         "graph_rules": {
             "believe-01": [
-                ":ARG0/NP"
+                ":ARG0"
             ]
         },
         "head": "believe-01",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {},
-        "tree": " :ARG0/NP believe .",
+        "tree": ":ARG0 XXX-VB .",
         "tree_rules": [
-            ":ARG0/NP"
+            ":ARG0"
         ],
         "verb_info": {
             "tense": "simple present",
@@ -670,15 +670,15 @@
         "graph": "(XXX \n\t :ARG1/VP -)",
         "graph_rules": {
             "possible-01": [
-                ":ARG1/VP"
+                ":ARG1"
             ]
         },
         "head": "possible-01",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {},
-        "tree": " PRP may :ARG1/VP .",
+        "tree": "it XXX-MD :ARG1 .",
         "tree_rules": [
-            ":ARG1/VP"
+            ":ARG1"
         ],
         "verb_info": {
             "tense": "simple present",
@@ -689,15 +689,15 @@
         "graph": "(XXX \n\t :ARG1/S -)",
         "graph_rules": {
             "likely-01": [
-                ":ARG1/S"
+                ":ARG1"
             ]
         },
         "head": "likely-01",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {},
-        "tree": " :ARG0/NP VB likely :ARG1/S .",
+        "tree": ":ARG0 be XXX-JJ :ARG1 .",
         "tree_rules": [
-            ":ARG1/S"
+            ":ARG1"
         ],
         "verb_info": {
             "tense": "simple present",
@@ -708,17 +708,17 @@
         "graph": "(XXX \n\t :ARG0/NP - \n\t :ARG1/PP -)",
         "graph_rules": {
             "use-02": [
-                ":ARG0/NP",
-                ":ARG1/PP"
+                ":ARG0",
+                ":ARG1"
             ]
         },
         "head": "use-02",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {},
-        "tree": " :ARG0/NP VB use :ARG1/PP .",
+        "tree": ":ARG0 be XXX-VB :ARG1 .",
         "tree_rules": [
-            ":ARG1/PP",
-            ":ARG0/NP"
+            ":ARG1",
+            ":ARG0"
         ],
         "verb_info": {
             "tense": "simple present",
@@ -729,17 +729,17 @@
         "graph": "(XXX \n\t :ARG0/NP - \n\t :polarity/RB -)",
         "graph_rules": {
             "go-02": [
-                ":ARG0/NP",
-                ":polarity/RB"
+                ":ARG0",
+                ":polarity"
             ]
         },
         "head": "go-02",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {},
-        "tree": " :ARG0/NP VB :polarity/RB go .",
+        "tree": ":ARG0 do :polarity XXX-VB .",
         "tree_rules": [
-            ":polarity/RB",
-            ":ARG0/NP"
+            ":polarity",
+            ":ARG0"
         ],
         "verb_info": {
             "tense": "simple present",
@@ -750,17 +750,17 @@
         "graph": "(XXX \n\t :ARG1/VP - \n\t :polarity/RB -)",
         "graph_rules": {
             "possible-01": [
-                ":ARG1/VP",
-                ":polarity/RB"
+                ":ARG1",
+                ":polarity"
             ]
         },
         "head": "possible-01",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {},
-        "tree": " :ARG0/NP can :polarity/RB :ARG1/VP .",
+        "tree": ":ARG0 XXX-MD :polarity :ARG1 .",
         "tree_rules": [
-            ":polarity/RB",
-            ":ARG1/VP"
+            ":polarity",
+            ":ARG1"
         ],
         "verb_info": {
             "tense": "simple present",
@@ -771,17 +771,17 @@
         "graph": "(XXX \n\t :ARG0/NP - \n\t :ARG1/SBAR -)",
         "graph_rules": {
             "think-01": [
-                ":ARG0/NP",
-                ":ARG1/SBAR"
+                ":ARG0",
+                ":ARG1"
             ]
         },
         "head": "think-01",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {},
-        "tree": " :ARG0/NP think :ARG1/SBAR .",
+        "tree": ":ARG0 XXX-VB :ARG1 .",
         "tree_rules": [
-            ":ARG1/SBAR",
-            ":ARG0/NP"
+            ":ARG1",
+            ":ARG0"
         ],
         "verb_info": {
             "tense": "simple present",
@@ -792,19 +792,19 @@
         "graph": "(XXX \n\t :ARG0/NP - \n\t :ARG1/SBAR - \n\t :polarity/RB -)",
         "graph_rules": {
             "think-01": [
-                ":ARG0/NP",
-                ":ARG1/SBAR",
-                ":polarity/RB"
+                ":ARG0",
+                ":ARG1",
+                ":polarity"
             ]
         },
         "head": "think-01",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {},
-        "tree": " PRP VB :polarity/RB JJ IN :ARG0/NP think :ARG1/SBAR .",
+        "tree": "it be :polarity true that :ARG0 XXX-VB :ARG1 .",
         "tree_rules": [
-            ":ARG1/SBAR",
-            ":ARG0/NP",
-            ":polarity/RB"
+            ":ARG1",
+            ":ARG0",
+            ":polarity"
         ],
         "verb_info": {
             "tense": "simple present",
@@ -815,19 +815,19 @@
         "graph": "(XXX \n\t :polarity/RB - \n\t :ARG0/NP - \n\t :ARG1/NP -)",
         "graph_rules": {
             "have-01": [
-                ":polarity/RB",
-                ":ARG0/NP",
-                ":ARG1/NP"
+                ":polarity",
+                ":ARG0",
+                ":ARG1"
             ]
         },
         "head": "have-01",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {},
-        "tree": " :ARG0/NP VB :polarity/RB have :ARG1/NP .",
+        "tree": ":ARG0 do :polarity XXX-VB :ARG1 .",
         "tree_rules": [
-            ":ARG1/NP",
-            ":polarity/RB",
-            ":ARG0/NP"
+            ":ARG1",
+            ":polarity",
+            ":ARG0"
         ],
         "verb_info": {
             "tense": "simple present",
@@ -838,19 +838,19 @@
         "graph": "(XXX \n\t :domain/NP -)",
         "graph_rules": {
             "lawyer": [
-                ":domain/NP"
+                ":domain"
             ]
         },
         "head": "lawyer",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {
             "form": "description",
             "inPP": false,
             "number": "singular"
         },
-        "tree": " :domain/NP VB DT lawyer .",
+        "tree": ":domain be a XXX-NN .",
         "tree_rules": [
-            ":domain/NP"
+            ":domain"
         ],
         "verb_info": {}
     },
@@ -858,15 +858,15 @@
         "graph": "(XXX \n\t :ARG1/NP -)",
         "graph_rules": {
             "sad-02": [
-                ":ARG1/NP"
+                ":ARG1"
             ]
         },
         "head": "sad-02",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {},
-        "tree": " :ARG1/NP VB sad .",
+        "tree": ":ARG1 be XXX-JJ .",
         "tree_rules": [
-            ":ARG1/NP"
+            ":ARG1"
         ],
         "verb_info": {
             "tense": "simple present",
@@ -877,17 +877,17 @@
         "graph": "(XXX \n\t :ARG0/NP - \n\t :ARG1/WHNP -)",
         "graph_rules": {
             "find-01": [
-                ":ARG0/NP",
-                ":ARG1/WHNP"
+                ":ARG0",
+                ":ARG1"
             ]
         },
         "head": "find-01",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {},
-        "tree": " :ARG1/WHNP VBD :ARG0/NP find .",
+        "tree": ":ARG1 did :ARG0 XXX-VB .",
         "tree_rules": [
-            ":ARG0/NP",
-            ":ARG1/WHNP"
+            ":ARG0",
+            ":ARG1"
         ],
         "verb_info": {
             "tense": "infinitive",
@@ -898,19 +898,19 @@
         "graph": "(XXX \n\t :ARG0/NP - \n\t :ARG1/NP - \n\t :time/PP -)",
         "graph_rules": {
             "shut-down-05": [
-                ":ARG0/NP",
-                ":ARG1/NP",
-                ":time/PP"
+                ":ARG0",
+                ":ARG1",
+                ":time"
             ]
         },
         "head": "shut-down-05",
-        "name": ":root/ROOT",
+        "name": ":root",
         "noun_info": {},
-        "tree": " :ARG0/NP shut :ARG1/NP down :time/PP .",
+        "tree": ":ARG0 XXX-VB :ARG1 XXX-RP :time .",
         "tree_rules": [
-            ":ARG1/NP",
-            ":time/PP",
-            ":ARG0/NP"
+            ":ARG1",
+            ":time",
+            ":ARG0"
         ],
         "verb_info": {
             "tense": "simple present",

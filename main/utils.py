@@ -32,14 +32,14 @@ def parse_corpus(fname, prince=False):
     for instance in instances:
         try:
             instance = instance.split('\n')
-            sentence_id = instance[0].split()[2]
+            # sentence_id = instance[0].split()[2]
             sentence = ' '.join(instance[1].split()[2:])
             if prince:
                 amr = '\n'.join(instance[4:])
             else:
                 amr = '\n'.join(instance[3:])
 
-            amrs.append({'id':sentence_id, 'file':fname, 'sentence': sentence, 'amr': amr})
+            amrs.append({'file':fname, 'sentence': sentence, 'amr': amr})
         except:
             pass
     return amrs
@@ -107,5 +107,35 @@ def subgraph_word(fname):
 
     return sub2word
 
+from main.grammars.ERG import AMR
+
 # if __name__ == '__main__':
-#     parse_corpus('data/prince/dev.txt', True)
+#     f = open('data/prince/train/AMR_Aligned.keep')
+#     doc = f.read()
+#     doc = doc.split('\n\n')[:-1]
+#     f.close()
+#
+#     fwrite = open('data/prince/train/training_aligned.txt', 'w')
+#     fwrite.write('# AMR release; corpus: lpp; section: training; number of AMRs: 1274 (generated on Fri Mar 4, 2016 at 21:03:52)\n\n')
+#     for row in doc:
+#         snt, amr = row.split('\n')
+#         snt = map(lambda w: w.split('_')[0], snt.split())
+#         snt.insert(1, '::snt')
+#         snt = ' '.join(snt)
+#
+#         graph = AMR(nodes={}, edges={}, root=1)
+#         graph.parse(amr)
+#         amr = graph.prettify(print_constants=True)
+#
+#         fwrite.write('#')
+#         fwrite.write('\n')
+#         fwrite.write(snt)
+#         fwrite.write('\n')
+#         fwrite.write('#')
+#         fwrite.write('\n')
+#         fwrite.write('#')
+#         fwrite.write('\n')
+#         fwrite.write(amr)
+#         fwrite.write('\n')
+#         fwrite.write('\n')
+#     fwrite.close()
