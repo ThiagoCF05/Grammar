@@ -1,5 +1,3 @@
-from werkzeug.serving import is_running_from_reloader
-
 __author__ = 'thiagocastroferreira'
 
 from sys import path
