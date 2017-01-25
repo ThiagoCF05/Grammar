@@ -243,45 +243,41 @@ class Generator(object):
             concluded = fails
         return concluded
 
-# if __name__ == '__main__':
-#     models = [prop.initial_rule_edges,
-#               prop.substitution_rule_edges,
-#               prop.initial_rule_edges_head,
-#               prop.substitution_rule_edges_head]
-#     verb2noun, noun2verb, verb2actor, actor2verb = utils.noun_verb('../data/morph-verbalization-v1.01.txt')
-#     sub2word = utils.subgraph_word('../data/verbalization-list-v1.06.txt')
-#
-#     amr = """(s / shut-down-05
-#                :ARG0 (p / person :wiki "Hugo_Chvez"
-#                   :name (n / name :op1 "Hugo" :op2 "Chavez"))
-#                :ARG1 (i / it)
-#                :time (d / date-entity :year 2004))"""
-#
-#     amr = """(a / answer-01
-#       :ARG0 (i / i)
-#       :ARG1 (e / eat-01
-#             :ARG1 (a2 / anything
-#                   :ARG1-of (f / find-01
-#                         :ARG0 (i2 / it)
-#                         :location (r / reach-03
-#                               :ARG0 i2)))))"""
-#
-#     factory = ERGFactory(verb2noun=verb2noun,
-#                      noun2verb=noun2verb,
-#                      verb2actor=verb2actor,
-#                      actor2verb=actor2verb,
-#                      sub2word=sub2word)
-#
-#     gen = Generator(amr=amr.lower(),
-#                     erg_factory=factory,
-#                     models=models,
-#                     beam_n=20)
-#
-#     candidates = gen.run()
-#
-#     for candidate in candidates:
-#         tree = candidate.tree
-#
-#         print tree
-#         print candidate.prob
-#         print 10 * '-'
+if __name__ == '__main__':
+    models = [prop.initial_rule_edges,
+              prop.substitution_rule_edges,
+              prop.initial_rule_edges_head,
+              prop.substitution_rule_edges_head]
+    verb2noun, noun2verb, verb2actor, actor2verb = utils.noun_verb('../data/morph-verbalization-v1.01.txt')
+    sub2word = utils.subgraph_word('../data/verbalization-list-v1.06.txt')
+
+    amr = """(s / shut-down-05
+               :ARG0 (p / person :wiki "Hugo_Chvez"
+                  :name (n / name :op1 "Hugo" :op2 "Chavez"))
+               :ARG1 (i / it)
+               :time (d / date-entity :year 2004))"""
+
+    amr = """(c / contrast-01
+  :ARG2 (r / reply-01
+          :ARG0 (h / he)
+          :polarity -))"""
+
+    factory = ERGFactory(verb2noun=verb2noun,
+                     noun2verb=noun2verb,
+                     verb2actor=verb2actor,
+                     actor2verb=actor2verb,
+                     sub2word=sub2word)
+
+    gen = Generator(amr=amr.lower(),
+                    erg_factory=factory,
+                    models=models,
+                    beam_n=20)
+
+    candidates = gen.run()
+
+    for candidate in candidates:
+        tree = candidate.tree
+
+        print tree
+        print candidate.prob
+        print 10 * '-'

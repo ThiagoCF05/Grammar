@@ -29,7 +29,7 @@ def run(fread, fwrite, models, factory):
     for j, amr in enumerate(utils.parse_corpus(fread, True)):
         print amr['sentence']
         try:
-            gen = Generator(amr=amr['amr'],
+            gen = Generator(amr=amr['amr'].lower(),
                             erg_factory=factory,
                             models=models,
                             beam_n=20)
@@ -44,7 +44,7 @@ def run(fread, fwrite, models, factory):
                     lexicalized[i].append(tree)
                     # print tree.realize(root=tree.root, text=''), ' \t', tree.prettify(root=tree.root, isRule=False)
                 else:
-                    lexicalized[i].append('- - - - ')
+                    lexicalized[i].append('- - - -')
         except:
             print 'Error'
             for i in range(5):

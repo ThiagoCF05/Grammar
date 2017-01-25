@@ -146,7 +146,7 @@ class RuleProducer(object):
                 self.print_report()
         except:
             self.errors = self.errors + 1
-            print 'ALIGNER ERROR', amr['file'], amr['id'], self.errors
+            print 'ALIGNER ERROR', amr['file'], self.errors
             print traceback.print_exc()
             print '\n'
 
