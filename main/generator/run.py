@@ -4,6 +4,7 @@ sys.path.append('../../')
 import main.utils as utils
 import properties as prop
 import os
+import kenlm
 
 from main.grammars.ERG import ERGFactory
 from Generator import Generator
@@ -24,7 +25,7 @@ def write_lexical(l, fname):
             f.write('\n')
         f.close()
 
-def run(fread, fwrite, models, factory):
+def run(fread, fwrite, models, factory, lm):
     gold, lexicalized, realized = [], {}, {}
     for j, amr in enumerate(utils.parse_corpus(fread, True)):
         print amr['sentence']
@@ -32,7 +33,8 @@ def run(fread, fwrite, models, factory):
             gen = Generator(amr=amr['amr'].lower(),
                             erg_factory=factory,
                             models=models,
-                            beam_n=20)
+                            beam_n=20,
+                            lm=lm)
 
             candidates = gen.run()
             for i in range(5):
@@ -74,13 +76,14 @@ if __name__ == '__main__':
                          actor2verb=actor2verb,
                          sub2word=sub2word)
     # realizer = Realizer()
+    model = kenlm.Model('/home/tcastrof/amr/lm_giga_64k_vp_3gram/train.arpa')
 
     print 'Developing Set'
     fread = '../data/prince/dev.txt'
     fwrite = '../data/prince/results/dev'
-    run(fread=fread, fwrite=fwrite, models=models, factory=factory)
+    run(fread=fread, fwrite=fwrite, models=models, factory=factory, lm=model)
 
     print 'Test Set'
     fread = '../data/prince/test.txt'
     fwrite = '../data/prince/results/test'
-    run(fread=fread, fwrite=fwrite, models=models, factory=factory)
+    run(fread=fread, fwrite=fwrite, models=models, factory=factory, lm=model)

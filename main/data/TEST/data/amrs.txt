@@ -1,7 +1,5 @@
 # AMR release (generated on Fri Jul 31, 2015 at 17:07:31)
 
-# AMR release (generated on Fri Jul 31, 2015 at 17:07:31)
-
 # ::id bolt12_07_4800.1 ::date 2012-12-19T12:53:14 ::annotator SDL-AMR-09 ::preferred
 # ::snt Barack Obama
 # ::save-date Wed Oct 30, 2013 ::file bolt12_07_4800_1.txt
@@ -86,13 +84,13 @@
 # ::id bolt12_07_4800.1 ::date 2012-12-19T12:53:14 ::annotator SDL-AMR-09 ::preferred
 # ::snt The teacher .
 # ::save-date Wed Oct 30, 2013 ::file bolt12_07_4800_1.txt
-(p / person 
+(p / person
 	:ARG0-of (t / teach-01))
 
 # ::id bolt12_07_4800.1 ::date 2012-12-19T12:53:14 ::annotator SDL-AMR-09 ::preferred
 # ::snt A person who teaches .
 # ::save-date Wed Oct 30, 2013 ::file bolt12_07_4800_1.txt
-(p / person 
+(p / person
 	:ARG0-of (t / teach-01))
 
 # ::id bolt12_07_4800.1 ::date 2012-12-19T12:53:14 ::annotator SDL-AMR-09 ::preferred

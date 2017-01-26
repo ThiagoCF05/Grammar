@@ -14,7 +14,6 @@ import properties as prop
 from main.aligners.Features import VerbPhrase
 from main.grammars.ERG import AMR, ERGFactory
 from Lexicalizer import Lexicalizer
-from main.grammars.TAG import Tree
 from main.grammars.SynchG import SynchG, SynchRule
 
 class Candidate(object):
@@ -27,7 +26,7 @@ class Candidate(object):
         self.prob = prob
 
 class Generator(object):
-    def __init__(self, amr='', erg_factory=None, models=[], beam_n=20):
+    def __init__(self, amr='', erg_factory=None, models=[], beam_n=20, lm=None):
         self.grammar = {'initial':{}, 'substitution':{}}
         for fname in models:
             aux = fname.split('/')[-1].split('_')
@@ -42,6 +41,8 @@ class Generator(object):
         erg = erg_factory.create_erg(amr=amr)
         self.init_synchg(erg)
         self.beam_n = beam_n
+
+        self.model = lm
 
     def init_synchg(self, erg):
         self.synchg = SynchG(rules={}, start='', initial_rules=[], substitution_rules=[], adjoining_rules=[])
@@ -203,6 +204,9 @@ class Generator(object):
                 break
         return isSynchronous, sorted(candidates, key=lambda x: x.prob, reverse=True)[:self.beam_n]
 
+    def rerank(self, candidates):
+        return sorted(candidates, key=lambda x: self.model.score(x.tree.strip()), reverse=True)
+
     def run(self):
         concluded, candidates, fails = [], [], []
 
@@ -241,43 +245,42 @@ class Generator(object):
 
         if len(concluded) == 0:
             concluded = fails
-        return concluded
+        return self.rerank(concluded)
 
-if __name__ == '__main__':
-    models = [prop.initial_rule_edges,
-              prop.substitution_rule_edges,
-              prop.initial_rule_edges_head,
-              prop.substitution_rule_edges_head]
-    verb2noun, noun2verb, verb2actor, actor2verb = utils.noun_verb('../data/morph-verbalization-v1.01.txt')
-    sub2word = utils.subgraph_word('../data/verbalization-list-v1.06.txt')
-
-    amr = """(s / shut-down-05
-               :ARG0 (p / person :wiki "Hugo_Chvez"
-                  :name (n / name :op1 "Hugo" :op2 "Chavez"))
-               :ARG1 (i / it)
-               :time (d / date-entity :year 2004))"""
-
-    amr = """(c / contrast-01
-  :ARG2 (r / reply-01
-          :ARG0 (h / he)
-          :polarity -))"""
-
-    factory = ERGFactory(verb2noun=verb2noun,
-                     noun2verb=noun2verb,
-                     verb2actor=verb2actor,
-                     actor2verb=actor2verb,
-                     sub2word=sub2word)
-
-    gen = Generator(amr=amr.lower(),
-                    erg_factory=factory,
-                    models=models,
-                    beam_n=20)
-
-    candidates = gen.run()
-
-    for candidate in candidates:
-        tree = candidate.tree
-
-        print tree
-        print candidate.prob
-        print 10 * '-'
+# if __name__ == '__main__':
+#     models = [prop.initial_rule_edges,
+#               prop.substitution_rule_edges,
+#               prop.initial_rule_edges_head,
+#               prop.substitution_rule_edges_head]
+#     verb2noun, noun2verb, verb2actor, actor2verb = utils.noun_verb('../data/morph-verbalization-v1.01.txt')
+#     sub2word = utils.subgraph_word('../data/verbalization-list-v1.06.txt')
+#
+#     amr = """(s / shut-down-05
+#                :ARG0 (p / person :wiki "Hugo_Chvez"
+#                   :name (n / name :op1 "Hugo" :op2 "Chavez"))
+#                :ARG1 (i / it)
+#                :time (d / date-entity :year 2004))"""
+#
+#     amr = """(h / have-03
+#       :ARG0 (i / it)
+#       :ARG1 (h2 / horn))"""
+#
+#     factory = ERGFactory(verb2noun=verb2noun,
+#                      noun2verb=noun2verb,
+#                      verb2actor=verb2actor,
+#                      actor2verb=actor2verb,
+#                      sub2word=sub2word)
+#
+#     gen = Generator(amr=amr.lower(),
+#                     erg_factory=factory,
+#                     models=models,
+#                     beam_n=20)
+#
+#     candidates = gen.run()
+#
+#     for candidate in candidates:
+#         tree = candidate.tree
+#
+#         print tree
+#         print candidate.prob
+#         print 10 * '-'

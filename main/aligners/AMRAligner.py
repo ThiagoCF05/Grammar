@@ -475,11 +475,11 @@ class AMRAligner(object):
         # self.match_coreferences_patterns()
 
         # Classify unlabeled nodes by frequency in the training alignments
-        # for node in self.amr.nodes:
-        #     if self.amr.nodes[node].status != 'labeled':
-        #         rule = self.match_frequency_patterns(node)
-        #         self.alignments.erg_rules[self.alignments.count] = rule
-        #         self.alignments.count = self.alignments.count + 1
+        for node in self.amr.nodes:
+            if self.amr.nodes[node].status != 'labeled':
+                rule = self.match_frequency_patterns(node)
+                self.alignments.erg_rules[self.alignments.count] = rule
+                self.alignments.count = self.alignments.count + 1
 
         # Set parent rule names
         for rule_id in self.alignments.erg_rules:
