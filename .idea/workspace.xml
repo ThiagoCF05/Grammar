@@ -24,8 +24,8 @@
       <file leaf-file-name="Generator.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/generator/Generator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="787">
-              <caret line="207" column="56" lean-forward="true" selection-start-line="180" selection-start-column="28" selection-end-line="207" selection-end-column="56" />
+            <state relative-caret-position="457">
+              <caret line="185" column="61" lean-forward="true" selection-start-line="185" selection-start-column="61" selection-end-line="185" selection-end-column="61" />
               <folding>
                 <element signature="e#1438#2552#0" expanded="false" />
                 <element signature="e#2618#4601#0" expanded="false" />
@@ -37,7 +37,7 @@
       <file leaf-file-name="Lexicalizer.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/generator/Lexicalizer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-428">
+            <state relative-caret-position="-15">
               <caret line="35" column="4" lean-forward="true" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
               <folding />
             </state>
@@ -47,7 +47,7 @@
       <file leaf-file-name="run.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/generator/run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="847">
+            <state relative-caret-position="937">
               <caret line="87" column="32" lean-forward="false" selection-start-line="87" selection-start-column="32" selection-end-line="87" selection-end-column="32" />
               <folding>
                 <element signature="e#246#341#0" expanded="false" />
@@ -128,8 +128,8 @@
       <file leaf-file-name="RuleProb.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/rule_production/RuleProb.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+            <state relative-caret-position="562">
+              <caret line="91" column="50" lean-forward="false" selection-start-line="91" selection-start-column="44" selection-end-line="91" selection-end-column="50" />
               <folding>
                 <element signature="e#848#2315#0" expanded="false" />
               </folding>
@@ -179,10 +179,10 @@
         <option value="$PROJECT_DIR$/main/prepare_alignment.py" />
         <option value="$PROJECT_DIR$/main/grammars/ERG.py" />
         <option value="$PROJECT_DIR$/main/rule_production/RuleProducer.py" />
-        <option value="$PROJECT_DIR$/main/rule_production/RuleProb.py" />
         <option value="$PROJECT_DIR$/main/generator/properties.py" />
         <option value="$PROJECT_DIR$/main/generator/run.py" />
         <option value="$PROJECT_DIR$/main/generator/Generator.py" />
+        <option value="$PROJECT_DIR$/main/rule_production/RuleProb.py" />
       </list>
     </option>
   </component>
@@ -1331,14 +1331,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/generator/properties.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="37" lean-forward="false" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/prepare_alignment.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
@@ -1374,36 +1366,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/generator/Generator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="787">
-          <caret line="207" column="56" lean-forward="true" selection-start-line="180" selection-start-column="28" selection-end-line="207" selection-end-column="56" />
-          <folding>
-            <element signature="e#1438#2552#0" expanded="false" />
-            <element signature="e#2618#4601#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/generator/Lexicalizer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-428">
-          <caret line="35" column="4" lean-forward="true" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/generator/run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="847">
-          <caret line="87" column="32" lean-forward="false" selection-start-line="87" selection-start-column="32" selection-end-line="87" selection-end-column="32" />
-          <folding>
-            <element signature="e#246#341#0" expanded="false" />
-            <element signature="e#376#523#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/rule_production/RuleProducer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-398">
@@ -1420,10 +1382,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main/generator/properties.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="37" lean-forward="false" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/generator/Generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="185" column="61" lean-forward="true" selection-start-line="185" selection-start-column="61" selection-end-line="185" selection-end-column="61" />
+          <folding>
+            <element signature="e#1438#2552#0" expanded="false" />
+            <element signature="e#2618#4601#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/generator/Lexicalizer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-15">
+          <caret line="35" column="4" lean-forward="true" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/generator/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="937">
+          <caret line="87" column="32" lean-forward="false" selection-start-line="87" selection-start-column="32" selection-end-line="87" selection-end-column="32" />
+          <folding>
+            <element signature="e#246#341#0" expanded="false" />
+            <element signature="e#376#523#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main/rule_production/RuleProb.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+        <state relative-caret-position="562">
+          <caret line="91" column="50" lean-forward="false" selection-start-line="91" selection-start-column="44" selection-end-line="91" selection-end-column="50" />
           <folding>
             <element signature="e#848#2315#0" expanded="false" />
           </folding>
