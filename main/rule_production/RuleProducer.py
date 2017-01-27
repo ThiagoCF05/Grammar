@@ -288,14 +288,14 @@ if __name__ == '__main__':
     # flexicons = prop.lexicons
     # fvoices = prop.voices
 
-    dirs = ['../data/prince/train']
+    dirs = ['/home/tcastrof/amr/data/prince/train']
     frules = {
-        'initial': '../data/prince/rules/initial.json',
-        'substitution': '../data/prince/rules/substitution.json',
-        'adjoining': '../data/prince/rules/adjoining.json'
+        'initial': '/home/tcastrof/amr/data/prince/rules/initial.json',
+        'substitution': '/home/tcastrof/amr/data/prince/rules/substitution.json',
+        'adjoining': '/home/tcastrof/amr/data/prince/rules/adjoining.json'
     }
 
-    flexicons = '../data/prince/lexicon/lexicon.json'
+    flexicons = '/home/tcastrof/amr/data/prince/lexicon/lexicon.json'
 
     producer = RuleProducer(aligner=aligner, dirs=dirs, isAligned=True)
 
