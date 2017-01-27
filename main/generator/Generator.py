@@ -11,7 +11,6 @@ import main.utils as utils
 import operator
 import properties as prop
 
-from main.aligners.Features import VerbPhrase
 from main.grammars.ERG import AMR, ERGFactory
 from Lexicalizer import Lexicalizer
 from main.grammars.SynchG import SynchG, SynchRule
@@ -116,7 +115,7 @@ class Generator(object):
     def choose_initial(self):
         # Generation process from the root rule
         start_rule = filter(lambda rule_id: ':root' in self.synchg.rules[rule_id].name, self.synchg.rules)[0]
-        self.synchg.rules[start_rule].name = ':root/ROOT~' +  self.synchg.rules[start_rule].head
+        self.synchg.rules[start_rule].name = ':root/ROOT~' + self.synchg.rules[start_rule].head
 
         isSynchronous = True
 
