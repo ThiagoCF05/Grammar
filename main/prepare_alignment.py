@@ -40,27 +40,30 @@ def write(fnread, fnwrite):
     fwrite = open(fnwrite, 'w')
     fwrite.write('# AMR release; corpus: lpp; section: training; number of AMRs: 1274 \n\n')
     for row in doc:
-        snt, amr = row.split('\n')
-        snt = map(lambda w: w.split('_')[0], snt.split())
-        snt.insert(1, '::snt')
-        snt = ' '.join(snt)
+        try:
+            snt, amr = row.split('\n')
+            snt = map(lambda w: w.split('_')[0], snt.split())
+            snt.insert(1, '::snt')
+            snt = ' '.join(snt)
 
-        print amr, '\n'
-        graph = AMR(nodes={}, edges={}, root=1)
-        graph.parse(amr)
-        amr = graph.prettify(print_constants=True)
+            print amr, '\n'
+            graph = AMR(nodes={}, edges={}, root=1)
+            graph.parse(amr)
+            amr = graph.prettify(print_constants=True)
 
-        fwrite.write('#')
-        fwrite.write('\n')
-        fwrite.write(snt)
-        fwrite.write('\n')
-        fwrite.write('#')
-        fwrite.write('\n')
-        fwrite.write('#')
-        fwrite.write('\n')
-        fwrite.write(amr)
-        fwrite.write('\n')
-        fwrite.write('\n')
+            fwrite.write('#')
+            fwrite.write('\n')
+            fwrite.write(snt)
+            fwrite.write('\n')
+            fwrite.write('#')
+            fwrite.write('\n')
+            fwrite.write('#')
+            fwrite.write('\n')
+            fwrite.write(amr)
+            fwrite.write('\n')
+            fwrite.write('\n')
+        except:
+            print 'Error'
     fwrite.close()
 
 if __name__ == '__main__':
