@@ -128,10 +128,10 @@
       <file leaf-file-name="RuleProb.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/rule_production/RuleProb.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="562">
-              <caret line="91" column="50" lean-forward="false" selection-start-line="91" selection-start-column="44" selection-end-line="91" selection-end-column="50" />
+            <state relative-caret-position="345">
+              <caret line="23" column="24" lean-forward="false" selection-start-line="22" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
               <folding>
-                <element signature="e#848#2315#0" expanded="false" />
+                <element signature="e#852#2319#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -1422,10 +1422,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/rule_production/RuleProb.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="91" column="50" lean-forward="false" selection-start-line="91" selection-start-column="44" selection-end-line="91" selection-end-column="50" />
+        <state relative-caret-position="345">
+          <caret line="23" column="24" lean-forward="false" selection-start-line="22" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
           <folding>
-            <element signature="e#848#2315#0" expanded="false" />
+            <element signature="e#852#2319#0" expanded="false" />
           </folding>
         </state>
       </provider>
