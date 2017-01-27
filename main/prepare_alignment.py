@@ -61,6 +61,6 @@ def write(fnread, fnwrite):
 
 if __name__ == '__main__':
     fnread = '/home/tcastrof/amr/Aligner/AMR_Aligned.keep'
-    fwrite = 'data/TEST/train'
+    fwrite = 'data/TEST/train/training.txt'
 
     write(fnread=fnread, fnwrite=fwrite)
