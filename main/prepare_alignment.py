@@ -45,6 +45,7 @@ def write(fnread, fnwrite):
         snt.insert(1, '::snt')
         snt = ' '.join(snt)
 
+        print amr, '\n'
         graph = AMR(nodes={}, edges={}, root=1)
         graph.parse(amr)
         amr = graph.prettify(print_constants=True)
