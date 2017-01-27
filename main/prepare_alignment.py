@@ -1,3 +1,6 @@
+from sys import path
+path.append('../')
+
 from main.grammars.ERG import AMR
 import os
 
