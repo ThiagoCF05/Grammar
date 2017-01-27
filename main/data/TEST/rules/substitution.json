@@ -1,34 +1,612 @@
 [
     {
-        "graph": "(XXX \n\t :arg1/E -)",
+        "graph": "(p / person \n\t :name (n / name \n\t\t :op1 c \n\t\t :op2 c))",
+        "graph_rules": {},
+        "head": "person/name",
+        "name": ":ARG0~person/name",
+        "noun_info": {},
+        "tree": "XXX-NNP XXX-NNP",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "cat",
+        "name": ":ARG1~cat",
+        "noun_info": {},
+        "tree": "the XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(p / person \n\t :name (n / name \n\t\t :op1 c \n\t\t :op2 c \n\t\t :op3 c))",
+        "graph_rules": {},
+        "head": "person/name",
+        "name": ":ARG0~person/name",
+        "noun_info": {},
+        "tree": "XXX-NNP XXX-NNP XXX-NNP",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "game",
+        "name": ":ARG2~game",
+        "noun_info": {},
+        "tree": "about the XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "boy",
+        "name": ":ARG0~boy",
+        "noun_info": {},
+        "tree": "the XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "red",
+        "name": ":mod~red",
+        "noun_info": {},
+        "tree": "XXX-JJ",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX \n\t :mod/JJ~red -)",
         "graph_rules": {
-            "enrage-01": [
-                ":arg1"
+            "bicycle": [
+                ":mod~red"
             ]
         },
-        "head": "enrage-01",
-        "name": ":arg0",
-        "noun_info": {
-            "form": "description",
-            "inPP": true,
-            "number": "singular"
-        },
-        "tree": "with XXX-NN",
+        "head": "bicycle",
+        "name": ":ARG1~bicycle",
+        "noun_info": {},
+        "tree": "the :mod~red XXX-NN",
         "tree_rules": [
-            ":arg1"
+            ":mod~red"
+        ],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX \n\t :ARG0/E~boy - \n\t :ARG1/NP~bicycle -)",
+        "graph_rules": {
+            "ride-01": [
+                ":ARG0~boy",
+                ":ARG1~bicycle"
+            ]
+        },
+        "head": "ride-01",
+        "name": ":ARG1~ride-01",
+        "noun_info": {},
+        "tree": "to XXX-VB :ARG1~bicycle",
+        "tree_rules": [
+            ":ARG1~bicycle",
+            ":ARG0~boy"
+        ],
+        "verb_info": {}
+    },
+    {
+        "graph": "coref",
+        "graph_rules": {},
+        "head": "boy",
+        "name": ":ARG0~boy",
+        "noun_info": {},
+        "tree": "empty",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "machine",
+        "name": ":ARG1~machine",
+        "noun_info": {},
+        "tree": "the XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "girl",
+        "name": ":ARG0~girl",
+        "noun_info": {},
+        "tree": "the XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "machine",
+        "name": ":ARG1~machine",
+        "noun_info": {},
+        "tree": "the XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "girl",
+        "name": ":ARG0~girl",
+        "noun_info": {},
+        "tree": "by the XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "c",
+        "graph_rules": {},
+        "head": "-",
+        "name": ":polarity~-",
+        "noun_info": {},
+        "tree": "XXX-RB",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "machine",
+        "name": ":ARG1~machine",
+        "noun_info": {},
+        "tree": "the XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "girl",
+        "name": ":ARG0~girl",
+        "noun_info": {},
+        "tree": "by the XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "disaster",
+        "name": ":ARG2~disaster",
+        "noun_info": {},
+        "tree": "as a XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "man",
+        "name": ":ARG0~man",
+        "noun_info": {},
+        "tree": "the XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "mission",
+        "name": ":ARG1~mission",
+        "noun_info": {},
+        "tree": "the XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "disaster",
+        "name": ":ARG2~disaster",
+        "noun_info": {},
+        "tree": "XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "man",
+        "name": ":ARG0~man",
+        "noun_info": {},
+        "tree": "the XXX-NN 's",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "mission",
+        "name": ":ARG1~mission",
+        "noun_info": {},
+        "tree": "of the XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "teach-01",
+        "name": ":ARG0-of~teach-01",
+        "noun_info": {},
+        "tree": "who XXX-VBZ",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "you",
+        "name": ":ARG0~you",
+        "noun_info": {},
+        "tree": "XXX-PRP",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX \n\t :ARG0/NP~you -)",
+        "graph_rules": {
+            "leave-01": [
+                ":ARG0~you"
+            ]
+        },
+        "head": "leave-01",
+        "name": ":ARG1~leave-01",
+        "noun_info": {},
+        "tree": "XXX-VB",
+        "tree_rules": [
+            ":ARG0~you"
         ],
         "verb_info": {}
     },
     {
         "graph": "(XXX)",
         "graph_rules": {},
-        "head": "little",
-        "name": ":mod",
-        "noun_info": {
-            "form": "",
-            "inPP": false,
-            "number": ""
+        "head": "you",
+        "name": ":ARG0~you",
+        "noun_info": {},
+        "tree": "XXX-PRP",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX \n\t :ARG0/NP~you -)",
+        "graph_rules": {
+            "leave-01": [
+                ":ARG0~you"
+            ]
         },
+        "head": "leave-01",
+        "name": ":ARG1~leave-01",
+        "noun_info": {},
+        "tree": "it 's all right for :ARG0~you to XXX-VB .",
+        "tree_rules": [
+            ":ARG0~you"
+        ],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "you",
+        "name": ":ARG0~you",
+        "noun_info": {},
+        "tree": "XXX-PRP",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX \n\t :ARG0/NP~you -)",
+        "graph_rules": {
+            "leave-01": [
+                ":ARG0~you"
+            ]
+        },
+        "head": "leave-01",
+        "name": ":ARG1~leave-01",
+        "noun_info": {},
+        "tree": "XXX-VB",
+        "tree_rules": [
+            ":ARG0~you"
+        ],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "you",
+        "name": ":ARG0~you",
+        "noun_info": {},
+        "tree": "XXX-PRP",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX \n\t :ARG0/NP~you -)",
+        "graph_rules": {
+            "leave-01": [
+                ":ARG0~you"
+            ]
+        },
+        "head": "leave-01",
+        "name": ":ARG1~leave-01",
+        "noun_info": {},
+        "tree": "XXX-VB",
+        "tree_rules": [
+            ":ARG0~you"
+        ],
+        "verb_info": {}
+    },
+    {
+        "graph": "(c / city \n\t :name (n / name \n\t\t :op1 c))",
+        "graph_rules": {},
+        "head": "city/name",
+        "name": ":location~city/name",
+        "noun_info": {},
+        "tree": "XXX-NNP",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "c",
+        "graph_rules": {},
+        "head": "11",
+        "name": ":quant~11",
+        "noun_info": {},
+        "tree": "XXX-CD",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "altogether",
+        "name": ":mod~altogether",
+        "noun_info": {},
+        "tree": "XXX-RB",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "emergency",
+        "name": ":mod~emergency",
+        "noun_info": {},
+        "tree": "XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX \n\t :ARG1/NP~person - \n\t :ARG2/PP~hospital - \n\t :mod/ADVP~altogether - \n\t :purpose/PP~treat-03 -)",
+        "graph_rules": {
+            "send-01": [
+                ":ARG1~person",
+                ":ARG2~hospital",
+                ":mod~altogether",
+                ":purpose~treat-03"
+            ]
+        },
+        "head": "send-01",
+        "name": ":ARG1~send-01",
+        "noun_info": {},
+        "tree": "that :mod~altogether :ARG1~person had been XXX-VBN :ARG2~hospital :purpose~treat-03",
+        "tree_rules": [
+            ":ARG2~hospital",
+            ":purpose~treat-03",
+            ":mod~altogether",
+            ":ARG1~person"
+        ],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX \n\t :mod/NN~emergency - \n\t :location/NNP~city/name -)",
+        "graph_rules": {
+            "service": [
+                ":mod~emergency",
+                ":location~city/name"
+            ]
+        },
+        "head": "service",
+        "name": ":ARG0~service",
+        "noun_info": {},
+        "tree": "the :location~city/name :mod~emergency XXX-NNS",
+        "tree_rules": [
+            ":location~city/name",
+            ":mod~emergency"
+        ],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "minor",
+        "name": ":mod~minor",
+        "noun_info": {},
+        "tree": "XXX-JJ",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX \n\t :quant/CD~11 -)",
+        "graph_rules": {
+            "person": [
+                ":quant~11"
+            ]
+        },
+        "head": "person",
+        "name": ":ARG1~person",
+        "noun_info": {},
+        "tree": ":quant~11 XXX-NNS",
+        "tree_rules": [
+            ":quant~11"
+        ],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX \n\t :ARG1/E~person - \n\t :ARG2/ADJP~wound-01 -)",
+        "graph_rules": {
+            "treat-03": [
+                ":ARG1~person",
+                ":ARG2~wound-01"
+            ]
+        },
+        "head": "treat-03",
+        "name": ":purpose~treat-03",
+        "noun_info": {},
+        "tree": "for XXX-NN :ARG2~wound-01",
+        "tree_rules": [
+            ":ARG2~wound-01",
+            ":ARG1~person"
+        ],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX \n\t :ARG1/E~person - \n\t :mod/JJ~minor -)",
+        "graph_rules": {
+            "wound-01": [
+                ":ARG1~person",
+                ":mod~minor"
+            ]
+        },
+        "head": "wound-01",
+        "name": ":ARG2~wound-01",
+        "noun_info": {},
+        "tree": "due to :mod~minor XXX-NNS",
+        "tree_rules": [
+            ":mod~minor",
+            ":ARG1~person"
+        ],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "hospital",
+        "name": ":ARG2~hospital",
+        "noun_info": {},
+        "tree": "to XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "coref",
+        "graph_rules": {},
+        "head": "person",
+        "name": ":ARG1~person",
+        "noun_info": {},
+        "tree": "empty",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "coref",
+        "graph_rules": {},
+        "head": "person",
+        "name": ":ARG1~person",
+        "noun_info": {},
+        "tree": "empty",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "boy",
+        "name": ":ARG0~boy",
+        "noun_info": {},
+        "tree": "the XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "c",
+        "graph_rules": {},
+        "head": "-",
+        "name": ":polarity~-",
+        "noun_info": {},
+        "tree": "XXX-RB",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "boy",
+        "name": ":ARG0~boy",
+        "noun_info": {},
+        "tree": "the XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "c",
+        "graph_rules": {},
+        "head": "-",
+        "name": ":polarity~-",
+        "noun_info": {},
+        "tree": "XXX-RB",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX \n\t :ARG0/NP~boy -)",
+        "graph_rules": {
+            "go-01": [
+                ":ARG0~boy"
+            ]
+        },
+        "head": "go-01",
+        "name": ":domain~go-01",
+        "noun_info": {},
+        "tree": "XXX-VB",
+        "tree_rules": [
+            ":ARG0~boy"
+        ],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX \n\t :mod/JJ~nice -)",
+        "graph_rules": {
+            "boy": [
+                ":mod~nice"
+            ]
+        },
+        "head": "boy",
+        "name": ":ARG0~boy",
+        "noun_info": {},
+        "tree": "the :mod~nice XXX-NN",
+        "tree_rules": [
+            ":mod~nice"
+        ],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "store",
+        "name": ":ARG4~store",
+        "noun_info": {},
+        "tree": "to the XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "nice",
+        "name": ":mod~nice",
+        "noun_info": {},
         "tree": "XXX-JJ",
         "tree_rules": [],
         "verb_info": {}
@@ -36,56 +614,830 @@
     {
         "graph": "(XXX)",
         "graph_rules": {},
-        "head": "now",
-        "name": ":time",
+        "head": "box",
+        "name": ":ARG1~box",
+        "noun_info": {},
+        "tree": "the XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "house",
+        "name": ":ARG3~house",
+        "noun_info": {},
+        "tree": "from the XXX-NN :ARG4~store",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "girl",
+        "name": ":ARG0~girl",
+        "noun_info": {},
+        "tree": "the XXX-NN :ARG1~believe-01",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "boy",
+        "name": ":ARG0~boy",
+        "noun_info": {},
+        "tree": "the XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX \n\t :ARG0/NP~girl - \n\t :ARG1/E~boy -)",
+        "graph_rules": {
+            "believe-01": [
+                ":ARG0~girl",
+                ":ARG1~boy"
+            ]
+        },
+        "head": "believe-01",
+        "name": ":ARG1~believe-01",
+        "noun_info": {},
+        "tree": "to XXX-VB him",
+        "tree_rules": [
+            ":ARG0~girl",
+            ":ARG1~boy"
+        ],
+        "verb_info": {}
+    },
+    {
+        "graph": "coref",
+        "graph_rules": {},
+        "head": "boy",
+        "name": ":ARG1~boy",
+        "noun_info": {},
+        "tree": "empty",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "yesterday",
+        "name": ":time~yesterday",
+        "noun_info": {},
+        "tree": "happened XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "boy",
+        "name": ":op1~boy",
+        "noun_info": {},
+        "tree": "the XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "girl",
+        "name": ":op2~girl",
+        "noun_info": {},
+        "tree": "the XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "he",
+        "name": ":poss~he",
+        "noun_info": {},
+        "tree": "XXX-PRP$",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "boy",
+        "name": ":ARG0~boy",
+        "noun_info": {},
+        "tree": "the XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "c",
+        "graph_rules": {},
+        "head": "-",
+        "name": ":polarity~-",
         "noun_info": {},
         "tree": "XXX-RB",
         "tree_rules": [],
         "verb_info": {}
     },
     {
-        "graph": "(XXX \n\t :mod/JJ -)",
+        "graph": "(XXX \n\t :ARG0/NP~boy - \n\t :polarity/RB~- -)",
         "graph_rules": {
-            "prince": [
-                ":mod"
+            "go-02": [
+                ":ARG0~boy",
+                ":polarity~-"
             ]
         },
-        "head": "prince",
-        "name": ":arg1",
-        "noun_info": {
-            "form": "description",
-            "inPP": false,
-            "number": "singular"
-        },
-        "tree": "the :mod XXX-NN",
+        "head": "go-02",
+        "name": ":ARG2~go-02",
+        "noun_info": {},
+        "tree": "XXX-VB",
         "tree_rules": [
-            ":mod"
+            ":polarity~-",
+            ":ARG0~boy"
         ],
         "verb_info": {}
     },
     {
-        "graph": "(XXX \n\t :arg0/PP -)",
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "boy",
+        "name": ":ARG0~boy",
+        "noun_info": {},
+        "tree": "the XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "c",
+        "graph_rules": {},
+        "head": "-",
+        "name": ":polarity~-",
+        "noun_info": {},
+        "tree": "XXX-RB",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX \n\t :ARG0/NP~boy -)",
         "graph_rules": {
-            "cause-01": [
-                ":arg0"
+            "go-02": [
+                ":ARG0~boy"
             ]
         },
-        "head": "cause-01",
-        "name": ":arg1-of",
+        "head": "go-02",
+        "name": ":ARG1~go-02",
+        "noun_info": {},
+        "tree": "XXX-VB",
+        "tree_rules": [
+            ":ARG0~boy"
+        ],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "marble",
+        "name": ":ARG1~marble",
+        "noun_info": {},
+        "tree": "the XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "boy",
+        "name": ":ARG0~boy",
+        "noun_info": {},
+        "tree": "the XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "marble",
+        "name": ":ARG1~marble",
+        "noun_info": {},
+        "tree": "the XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX \n\t :ARG1/NP~marble -)",
+        "graph_rules": {
+            "white-03": [
+                ":ARG1~marble"
+            ]
+        },
+        "head": "white-03",
+        "name": ":ARG1~white-03",
+        "noun_info": {},
+        "tree": "that :ARG1~marble is XXX-JJ",
+        "tree_rules": [
+            ":ARG1~marble"
+        ],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "boy",
+        "name": ":ARG0~boy",
+        "noun_info": {},
+        "tree": "the XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX \n\t :ARG1-of/JJ~white-03 -)",
+        "graph_rules": {
+            "marble": [
+                ":ARG1-of~white-03"
+            ]
+        },
+        "head": "marble",
+        "name": ":ARG1~marble",
+        "noun_info": {},
+        "tree": "the :ARG1-of~white-03 XXX-NN",
+        "tree_rules": [
+            ":ARG1-of~white-03"
+        ],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "white-03",
+        "name": ":ARG1-of~white-03",
+        "noun_info": {},
+        "tree": "XXX-JJ",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "boy",
+        "name": ":ARG0~boy",
+        "noun_info": {},
+        "tree": "the XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX \n\t :ARG1/E~boy -)",
+        "graph_rules": {
+            "want-01": [
+                ":ARG1~boy"
+            ]
+        },
+        "head": "want-01",
+        "name": ":ARG0-of~want-01",
+        "noun_info": {},
+        "tree": "who XXX-VBD him",
+        "tree_rules": [
+            ":ARG1~boy"
+        ],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX \n\t :ARG0-of/SBAR~want-01 -)",
+        "graph_rules": {
+            "girl": [
+                ":ARG0-of~want-01"
+            ]
+        },
+        "head": "girl",
+        "name": ":ARG1~girl",
+        "noun_info": {},
+        "tree": "the XXX-NN :ARG0-of~want-01",
+        "tree_rules": [
+            ":ARG0-of~want-01"
+        ],
+        "verb_info": {}
+    },
+    {
+        "graph": "coref",
+        "graph_rules": {},
+        "head": "boy",
+        "name": ":ARG1~boy",
         "noun_info": {},
         "tree": "empty",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX \n\t :ARG0/NP~boy -)",
+        "graph_rules": {
+            "see-01": [
+                ":ARG0~boy"
+            ]
+        },
+        "head": "see-01",
+        "name": ":ARG1-of~see-01",
+        "noun_info": {},
+        "tree": "he XXX-VBD",
         "tree_rules": [
-            ":arg0"
+            ":ARG0~boy"
+        ],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "boy",
+        "name": ":ARG0~boy",
+        "noun_info": {},
+        "tree": "the XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX \n\t :ARG1-of/SBAR~see-01 -)",
+        "graph_rules": {
+            "girl": [
+                ":ARG1-of~see-01"
+            ]
+        },
+        "head": "girl",
+        "name": ":ARG0~girl",
+        "noun_info": {},
+        "tree": "by the XXX-NN :ARG1-of~see-01",
+        "tree_rules": [
+            ":ARG1-of~see-01"
+        ],
+        "verb_info": {}
+    },
+    {
+        "graph": "coref",
+        "graph_rules": {},
+        "head": "boy",
+        "name": ":ARG1~boy",
+        "noun_info": {},
+        "tree": "empty",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "regulate-01",
+        "name": ":instrument-of~regulate-01",
+        "noun_info": {},
+        "tree": "XXX-JJ",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX \n\t :instrument-of/JJ~regulate-01 -)",
+        "graph_rules": {
+            "document": [
+                ":instrument-of~regulate-01"
+            ]
+        },
+        "head": "document",
+        "name": ":ARG1~document",
+        "noun_info": {},
+        "tree": "the :instrument-of~regulate-01 XXX-NNS",
+        "tree_rules": [
+            ":instrument-of~regulate-01"
+        ],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "boy",
+        "name": ":ARG0~boy",
+        "noun_info": {},
+        "tree": "the XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX \n\t :ARG0/E~boy -)",
+        "graph_rules": {
+            "believe-01": [
+                ":ARG0~boy"
+            ]
+        },
+        "head": "believe-01",
+        "name": ":ARG1~believe-01",
+        "noun_info": {},
+        "tree": "to XXX-VB",
+        "tree_rules": [
+            ":ARG0~boy"
+        ],
+        "verb_info": {}
+    },
+    {
+        "graph": "coref",
+        "graph_rules": {},
+        "head": "boy",
+        "name": ":ARG0~boy",
+        "noun_info": {},
+        "tree": "empty",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "boy",
+        "name": ":ARG0~boy",
+        "noun_info": {},
+        "tree": "the XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "rain-01",
+        "name": ":ARG1~rain-01",
+        "noun_info": {},
+        "tree": "XXX-VB",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "boy",
+        "name": ":ARG0~boy",
+        "noun_info": {},
+        "tree": "the XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX \n\t :ARG0/NP~boy -)",
+        "graph_rules": {
+            "go-02": [
+                ":ARG0~boy"
+            ]
+        },
+        "head": "go-02",
+        "name": ":ARG1~go-02",
+        "noun_info": {},
+        "tree": "to XXX-VB",
+        "tree_rules": [
+            ":ARG0~boy"
         ],
         "verb_info": {}
     },
     {
         "graph": "c",
         "graph_rules": {},
-        "head": "coref",
-        "name": ":arg1",
+        "head": "i",
+        "name": ":ARG0~i",
+        "noun_info": {},
+        "tree": "XXX-PRP",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX \n\t :ARG0/E~i -)",
+        "graph_rules": {
+            "work-01": [
+                ":ARG0~i"
+            ]
+        },
+        "head": "work-01",
+        "name": ":ARG1~work-01",
+        "noun_info": {},
+        "tree": "to XXX-VBG",
+        "tree_rules": [
+            ":ARG0~i"
+        ],
+        "verb_info": {}
+    },
+    {
+        "graph": "coref",
+        "graph_rules": {},
+        "head": "i",
+        "name": ":ARG0~i",
         "noun_info": {},
         "tree": "empty",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "boy",
+        "name": ":ARG0~boy",
+        "noun_info": {},
+        "tree": "the XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "c",
+        "graph_rules": {},
+        "head": "-",
+        "name": ":polarity~-",
+        "noun_info": {},
+        "tree": "XXX-RB",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "boy",
+        "name": ":ARG0~boy",
+        "noun_info": {},
+        "tree": "the XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "c",
+        "graph_rules": {},
+        "head": "-",
+        "name": ":polarity~-",
+        "noun_info": {},
+        "tree": "XXX-RB",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX \n\t :ARG0/NP~boy -)",
+        "graph_rules": {
+            "go-02": [
+                ":ARG0~boy"
+            ]
+        },
+        "head": "go-02",
+        "name": ":ARG1~go-02",
+        "noun_info": {},
+        "tree": "XXX-VB",
+        "tree_rules": [
+            ":ARG0~boy"
+        ],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "boy",
+        "name": ":ARG0~boy",
+        "noun_info": {},
+        "tree": "the XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "c",
+        "graph_rules": {},
+        "head": "-",
+        "name": ":polarity~-",
+        "noun_info": {},
+        "tree": "XXX-RB",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX \n\t :ARG0/NP~boy -)",
+        "graph_rules": {
+            "go-02": [
+                ":ARG0~boy"
+            ]
+        },
+        "head": "go-02",
+        "name": ":ARG2~go-02",
+        "noun_info": {},
+        "tree": ":ARG0~boy does :polarity~- have to XXX-VB .",
+        "tree_rules": [
+            ":ARG0~boy"
+        ],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "boy",
+        "name": ":ARG0~boy",
+        "noun_info": {},
+        "tree": "the XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX \n\t :poss/E~boy -)",
+        "graph_rules": {
+            "team": [
+                ":poss~boy"
+            ]
+        },
+        "head": "team",
+        "name": ":ARG0~team",
+        "noun_info": {},
+        "tree": "his XXX-NN",
+        "tree_rules": [
+            ":poss~boy"
+        ],
+        "verb_info": {}
+    },
+    {
+        "graph": "c",
+        "graph_rules": {},
+        "head": "-",
+        "name": ":polarity~-",
+        "noun_info": {},
+        "tree": "XXX-RB",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX \n\t :ARG0/NP~team - \n\t :polarity/RB~- -)",
+        "graph_rules": {
+            "win-01": [
+                ":ARG0~team",
+                ":polarity~-"
+            ]
+        },
+        "head": "win-01",
+        "name": ":ARG1~win-01",
+        "noun_info": {},
+        "tree": ":ARG0~team wo :polarity~- XXX-VB",
+        "tree_rules": [
+            ":polarity~-",
+            ":ARG0~team"
+        ],
+        "verb_info": {}
+    },
+    {
+        "graph": "coref",
+        "graph_rules": {},
+        "head": "boy",
+        "name": ":poss~boy",
+        "noun_info": {},
+        "tree": "empty",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "boy",
+        "name": ":ARG0~boy",
+        "noun_info": {},
+        "tree": "the XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX \n\t :poss/E~boy -)",
+        "graph_rules": {
+            "team": [
+                ":poss~boy"
+            ]
+        },
+        "head": "team",
+        "name": ":ARG0~team",
+        "noun_info": {},
+        "tree": "his XXX-NN",
+        "tree_rules": [
+            ":poss~boy"
+        ],
+        "verb_info": {}
+    },
+    {
+        "graph": "c",
+        "graph_rules": {},
+        "head": "-",
+        "name": ":polarity~-",
+        "noun_info": {},
+        "tree": "XXX-RB",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX \n\t :ARG0/NP~team -)",
+        "graph_rules": {
+            "win-01": [
+                ":ARG0~team"
+            ]
+        },
+        "head": "win-01",
+        "name": ":ARG1~win-01",
+        "noun_info": {},
+        "tree": ":ARG0~team will XXX-VB",
+        "tree_rules": [
+            ":ARG0~team"
+        ],
+        "verb_info": {}
+    },
+    {
+        "graph": "coref",
+        "graph_rules": {},
+        "head": "boy",
+        "name": ":poss~boy",
+        "noun_info": {},
+        "tree": "empty",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "c",
+        "graph_rules": {},
+        "head": "i",
+        "name": ":ARG0~i",
+        "noun_info": {},
+        "tree": "XXX-PRP",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "c",
+        "graph_rules": {},
+        "head": "-",
+        "name": ":polarity~-",
+        "noun_info": {},
+        "tree": "XXX-RB",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "money",
+        "name": ":ARG1~money",
+        "noun_info": {},
+        "tree": "any XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "man",
+        "name": ":domain~man",
+        "noun_info": {},
+        "tree": "the XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "girl",
+        "name": ":ARG1~girl",
+        "noun_info": {},
+        "tree": "the XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "amr-unknown",
+        "name": ":ARG1~amr-unknown",
+        "noun_info": {},
+        "tree": "XXX-WP",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "girl",
+        "name": ":ARG0~girl",
+        "noun_info": {},
+        "tree": "the XXX-NN",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(p / person \n\t :name (n / name \n\t\t :op1 c \n\t\t :op2 c))",
+        "graph_rules": {},
+        "head": "person/name",
+        "name": ":ARG0~person/name",
+        "noun_info": {},
+        "tree": "XXX-NNP XXX-NNP",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX \n\t :year c)",
+        "graph_rules": {},
+        "head": "date-entity",
+        "name": ":time~date-entity",
+        "noun_info": {},
+        "tree": "in XXX-CD",
+        "tree_rules": [],
+        "verb_info": {}
+    },
+    {
+        "graph": "(XXX)",
+        "graph_rules": {},
+        "head": "it",
+        "name": ":ARG1~it",
+        "noun_info": {},
+        "tree": "XXX-PRP",
         "tree_rules": [],
         "verb_info": {}
     }

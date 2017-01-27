@@ -207,17 +207,26 @@ class RuleProducer(object):
                     ############################################################################
                     for node in rule.tree.nodes:
                         if rule.tree.nodes[node].type == 'rule':
-                            rule.tree.nodes[node].name = rule.tree.nodes[node].name.split('/')[0]
+                            edge_pos, head = rule.tree.nodes[node].name.split('~')
+                            edge, pos = edge_pos.split('/')
+                            rule.tree.nodes[node].name = edge + '/' + pos
                     if tree != 'empty':
                         tree = rule.tree.realize(root=rule.tree.root, text='', isRule=True).strip()
 
                     for head in rule.graph_rules:
                         for i, _rule in enumerate(rule.graph_rules[head]):
-                            rule.graph_rules[head][i] = rule.graph_rules[head][i].split('/')[0]
+                            edge_pos, _head = rule.graph_rules[head][i].split('~')
+                            edge, pos = edge_pos.split('/')
+                            rule.graph_rules[head][i] = edge + '~' + _head
 
-                    rule.tree_rules = map(lambda x: x.split('/')[0], rule.tree_rules)
+                    for i, tree_rule in enumerate(rule.tree_rules):
+                        edge_pos, head = tree_rule.split('~')
+                        edge, pos = edge_pos.split('/')
+                        rule.tree_rules[i] = edge + '~' + head
 
-                    rule.name = rule.name.split('/')[0]
+                    # edge_pos, head = rule.name.split('~')
+                    # edge, pos = edge_pos.split('/')
+                    # rule.name = edge + '~' + head
                     ############################################################################
 
                     aux = {
@@ -233,7 +242,7 @@ class RuleProducer(object):
                     }
                     rules.append(aux)
                 except:
-                    pass
+                    print 'Error writing rule...'
 
             json.dump(rules, open(fname, 'w'), sort_keys=True, indent=4, separators=(',', ': '))
 

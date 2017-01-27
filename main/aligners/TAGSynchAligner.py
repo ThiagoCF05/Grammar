@@ -10,7 +10,7 @@ Description:
 import copy
 import re
 
-from main.aligners.Features import NounPhrase, VerbPhrase, Lexicon
+from main.aligners.Features import Lexicon
 from main.grammars.TAG import Tree, TAGNode, TAGRule
 
 class TAGSynchAligner(object):
@@ -72,166 +72,6 @@ class TAGSynchAligner(object):
                                                          type='substitution')
             self.alignments.features[rule_id] = None
 
-    # TO DO: treat modals would, should, might to, must, etc.
-    def get_verb_tense(self, features):
-        pos, lemmas = features.pos, features.lemmas
-        voice, tense = 'active', 'simple present'
-        if len(pos) == 1:
-            if pos[0] == 'VB':
-                tense = 'infinitive'
-            elif pos[0] in ['VBP', 'VBZ']:
-                tense = 'simple present'
-            elif pos[0] in ['VBD', 'VBN']:
-                tense = 'simple past'
-            elif pos[0] == 'VBG':
-                tense = 'present continuous'
-        elif len(pos) == 2:
-            if pos[0] in ['VB', 'VBP', 'VBZ']:
-                if lemmas[0] == 'be' and pos[1] == 'VBG':
-                    tense = 'present continuous'
-                elif lemmas[0] == 'have' and pos[1] == 'VBN':
-                    tense = 'present perfect'
-                elif lemmas[0] == 'be' and pos[1] == 'VBN':
-                    tense = 'simple present'
-                    voice = 'passive'
-            elif pos[0] == 'VBD':
-                if lemmas[0] == 'be' and pos[1] == 'VBG':
-                    tense = 'past continuous'
-                elif lemmas[0] == 'have' and pos[1] == 'VBN':
-                    tense = 'past perfect'
-                elif lemmas[0] == 'be' and pos[1] == 'VBN':
-                    tense = 'simple past'
-                    voice = 'passive'
-            elif lemmas[0] == 'will':
-                tense = 'simple future'
-        elif len(pos) == 3:
-            if pos[0] in ['VB', 'VBP', 'VBZ']:
-                if lemmas[0] == 'have' and pos[1] == 'VBN' and lemmas[1] == 'be':
-                    if pos[2] == 'VBG':
-                        tense = 'present perfect continuous'
-                    elif pos[2] == 'VBN':
-                        tense = 'present perfect'
-                        voice = 'passive'
-                elif lemmas[0] == 'be' and pos[1] == 'VBN' and lemmas[1] == 'be' and pos[2] == 'VBN':
-                    tense = 'simple present continuous'
-                    voice = 'passive'
-            elif pos[0] == 'VBD':
-                if lemmas[0] == 'have' and pos[1] == 'VBN' and lemmas[1] == 'be':
-                    if pos[2] == 'VBG':
-                        tense = 'past perfect continuous'
-                    elif pos[2] == 'VBN':
-                        tense = 'past perfect'
-                        voice = 'passive'
-                elif lemmas[0] == 'be' and pos[1] == 'VBN' and lemmas[1] == 'be' and pos[2] == 'VBN':
-                    tense = 'simple past continuous'
-                    voice = 'passive'
-            elif lemmas[0] == 'will':
-                if lemmas[1] == 'be':
-                    if pos[2] == 'VBG':
-                        tense = 'future continuous'
-                    elif pos[2] == 'VBN':
-                        tense = 'simple future'
-                        voice = 'passive'
-                elif lemmas[1] == 'have' and pos[2] == 'VBN':
-                    tense = 'future perfect'
-        elif len(pos) == 4:
-            if pos[1] == 'VBN' and lemmas[1] == 'be' \
-                    and pos[2] == 'VBG' and lemmas[2] == 'be' and pos[3] == 'VBN':
-                if pos[0] in ['VB', 'VBP', 'VBZ'] and lemmas[0] == 'have':
-                    tense = 'present perfect continuous'
-                    voice = 'passive'
-                elif pos[0] == 'VBD' and lemmas[0] == 'have':
-                    tense = 'past perfect continuous'
-                    voice = 'passive'
-            elif lemmas[0] == 'will':
-                if lemmas[1] == 'have' and pos[2] == 'VBN' and lemmas[2] == 'be':
-                    if pos[3] == 'VBG':
-                        tense = 'future present continuous'
-                    elif pos[3] == 'VBN':
-                        tense = 'future perfect'
-                        voice = 'passive'
-                elif lemmas[1] == 'be' and pos[2] == 'VBG' and lemmas[2] == 'be' and lemmas[3] == 'VBN':
-                    tense = 'future continuous'
-                    voice = 'passive'
-        elif len(pos) == 5:
-            if lemmas[0] == 'will' and lemmas[1] == 'have' \
-                    and pos[2] == 'VBN' and lemmas[2] == 'be' \
-                    and pos[3] == 'VBG' and lemmas[3] and pos[4] == 'VBN':
-                tense = 'future perfect continuos'
-                voice = 'passive'
-
-        features.voice = voice
-        features.tense = tense
-        return features
-
-    def get_verb_info(self, root, rule_id):
-        # Extract verb information
-        if self.alignments.features[rule_id] == None:
-            self.alignments.features[rule_id] = VerbPhrase(type='verb', pos=[], tokens=[], lemmas=[], voice='', tense='')
-        feature = self.alignments.features[rule_id]
-
-        feature.pos.insert(0, self.tree.nodes[root].name)
-        feature.tokens.insert(0, self.tree.nodes[root].lexicon)
-
-        if len(self.tree.nodes[root].name) == 3:
-            self.tree.nodes[root].name = self.tree.nodes[root].name[:-1]
-        # index = self.info['tokens'].index(self.tree.nodes[root].lexicon)
-        # self.tree.nodes[root].lexicon = self.info['lemmas'][index]
-        feature.lemmas.insert(0, self.tree.nodes[root].lexicon)
-
-    def get_noun_info(self, root, rule_id):
-        def check_terminal(node):
-            if self.tree.nodes[node].name == 'NN':
-                feature.form = 'description'
-                feature.number = 'singular'
-            elif self.tree.nodes[node].name == 'NNS':
-                feature.form = 'description'
-                feature.number = 'plural'
-                self.tree.nodes[node].name = self.tree.nodes[node].name[:-1]
-            elif self.tree.nodes[node].name == 'NNP':
-                feature.form = 'proper'
-                feature.number = 'singular'
-                self.tree.nodes[node].name = self.tree.nodes[node].name[:-1]
-            elif self.tree.nodes[node].name == 'NNPS':
-                feature.form = 'proper'
-                feature.number = 'plural'
-                self.tree.nodes[node].name = self.tree.nodes[node].name[:-2]
-            elif self.tree.nodes[node].name == 'PRP':
-                feature.form = 'pronoun'
-
-                if self.tree.nodes[node].lexicon in ['i', 'you', 'he', 'she', 'it', 'me', 'him', 'her']:
-                    feature.number = 'singular'
-                elif self.tree.nodes[node].lexicon in ['we', 'they', 'us', 'them']:
-                    feature.number = 'plural'
-            elif self.tree.nodes[node].name == 'PRP$':
-                feature.form = 'possessive pronoun'
-
-                if self.tree.nodes[node].lexicon in ['my', 'your', 'his', 'her', 'its', 'mine', 'yours', 'hers']:
-                    feature.number = 'singular'
-                elif self.tree.nodes[node].lexicon in ['our', 'their', 'ours', 'theirs']:
-                    feature.number = 'plural'
-            elif self.tree.nodes[node].name == 'DT':
-                if self.tree.nodes[node].lexicon in ['this', 'that']:
-                    feature.form = 'demonstrative'
-                    feature.number = 'singular'
-                elif self.tree.nodes[node].lexicon in ['these', 'those']:
-                    feature.form = 'demonstrative'
-                    feature.number = 'plural'
-            elif self.tree.nodes[node].name in ['CC', ',']:
-                feature.form = 'list'
-                feature.number = 'plural'
-
-        if self.alignments.features[rule_id] == None:
-            self.alignments.features[rule_id] = NounPhrase(type='noun', pos=[], tokens=[], lemmas=[], form='', number='', inPP=False)
-        feature = self.alignments.features[rule_id]
-
-        if self.tree.nodes[root].type == 'terminal':
-            check_terminal(root)
-        else:
-            parent = self.tree.nodes[root].parent
-            if self.tree.nodes[parent].name == 'PP':
-                feature.inPP = True
-
     def update_rule_tree(self, root, rule_id, should_label=True):
         erg_rule = self.alignments.erg_rules[rule_id]
         tag_rule = self.alignments.tag_rules[rule_id]
@@ -251,7 +91,7 @@ class TAGSynchAligner(object):
             tag_rule.tree.root = root
 
             # Determine rule name
-            rule_name = graph_root_parent['edge']+'/'+self.tree.nodes[root].name
+            rule_name = graph_root_parent['edge']+'/'+self.tree.nodes[root].name+'~'+erg_rule.head
             self.alignments.id2rule[rule_id] = rule_name
             erg_rule.name = rule_name
             tag_rule.name = rule_name
@@ -267,46 +107,6 @@ class TAGSynchAligner(object):
 
         self.tree.edges[root] = []
 
-    # TO DO: improve storage
-    def create_adjoining(self, root, rule_id):
-        def create(root, adj_edge, adjtree):
-            adjtree.tree.nodes[root] = copy.copy(self.tree.nodes[root])
-            adjtree.tree.edges[root] = []
-            for edge in self.tree.edges[root]:
-                adjtree.tree.edges[root].append(edge)
-
-                if edge != adj_edge:
-                    adjtree = create(edge, adj_edge, adjtree)
-                else:
-                    adjtree.tree.nodes[edge] = copy.copy(self.tree.nodes[edge])
-                    adjtree.tree.nodes[edge].name += '*'
-                    adjtree.tree.edges[edge] = []
-            del self.tree.nodes[root]
-            del self.tree.edges[root]
-            return adjtree
-
-        isAdjoined = False
-        for edge in self.tree.edges[root]:
-            if self.tree.nodes[root].name == self.tree.nodes[edge].name:
-                parent = self.tree.nodes[root].parent
-
-                adjtree = TAGRule(name='',
-                                  head=self.alignments.erg_rules[rule_id].head,
-                                  tree=Tree(root=root, nodes={}, edges={}),
-                                  type='adjoining',
-                                  rules=[],
-                                  parent=self.alignments.erg_rules[rule_id].parent)
-                adjtree = create(root, edge, adjtree)
-
-                if rule_id not in self.alignments.adjoining_rules:
-                    self.alignments.adjoining_rules[rule_id] = []
-                self.alignments.adjoining_rules[rule_id].append(adjtree)
-
-                self.tree.edges[parent][self.tree.edges[parent].index(root)] = edge
-                isAdjoined = True
-                break
-        return isAdjoined
-
     def prune_tree(self, root, prune_node):
         # Get rule_id, its parent and graph root and its parent
         rule_id = self.tree.nodes[prune_node].label
@@ -321,7 +121,7 @@ class TAGSynchAligner(object):
         erg_parent_rule = self.alignments.erg_rules[rule_parent]
 
         # Update rule name
-        rule_name = graph_parent['edge']+'/'+self.tree.nodes[prune_node].name
+        rule_name = graph_parent['edge']+'/'+self.tree.nodes[prune_node].name+'~'+erg_rule.head
         self.alignments.id2rule[rule_id] = rule_name
         erg_rule.name = rule_name
 
@@ -375,12 +175,6 @@ class TAGSynchAligner(object):
         if self.tree.nodes[root].type == 'terminal':
             for rule_id in self.alignments.erg_rules:
                 if self.tree.nodes[root].index in self.alignments.erg_rules[rule_id].tokens:
-                    parent = self.tree.nodes[root].parent
-                    if 'VB' in self.tree.nodes[root].name or self.tree.nodes[root].name == 'MD':
-                        self.get_verb_info(root, rule_id)
-                    elif self.tree.nodes[parent].name == 'NP':
-                        self.get_noun_info(root, rule_id)
-
                     self.update_rule_tree(root, rule_id)
                     break
         else:
@@ -394,22 +188,8 @@ class TAGSynchAligner(object):
             if root == 1:
                 self.update_rule_tree(root, head_rule)
             elif len(set(labels)) == 1 and labels[0] > -1:
-                # Extract tense of the verb in case of a verb phrase
-                if self.tree.nodes[root].name == 'VP':
-                    for edge in self.tree.edges[root]:
-                        if ('VB' in self.tree.nodes[edge].name or self.tree.nodes[edge].name == 'MD') and self.tree.nodes[edge].type == 'terminal' and self.tree.nodes[edge].label == -1:
-                            self.get_verb_info(edge, labels[0])
-                            break
-                elif self.tree.nodes[root].name == 'NP':
-                    self.get_noun_info(root, labels[0])
-
-                # Extract adjoining rules
-                # isAdjoined = self.create_adjoining(root, labels[0])
-                isAdjoined = False
-
-                if not isAdjoined:
-                    label = labels[0]
-                    self.update_rule_tree(root, label)
+                label = labels[0]
+                self.update_rule_tree(root, label)
             elif len(set(labels)) > 1:
                 # Find the head of the subtree (the most right element from a specific type)
                 head = get_head(root, labels)
@@ -419,20 +199,7 @@ class TAGSynchAligner(object):
                         self.prune_tree(root, edge)
 
                 if head > -1:
-                    # Extract tense of the verb in case of a verb phrase
-                    if self.tree.nodes[root].name == 'VP':
-                        for edge in self.tree.edges[root]:
-                            if ('VB' in self.tree.nodes[edge].name or self.tree.nodes[edge].name == 'MD') and self.tree.nodes[edge].type == 'terminal' and self.tree.nodes[edge].label == -1:
-                                self.get_verb_info(edge, head)
-                                break
-                    elif self.tree.nodes[root].name == 'NP':
-                        self.get_noun_info(root, head)
-
-                    # Extract adjoining rules
-                    # isAdjoined = self.create_adjoining(root, labels[0])
-                    isAdjoined = False
-                    if not isAdjoined:
-                        self.update_rule_tree(root, head)
+                    self.update_rule_tree(root, head)
 
     def run(self):
         # Check if it is multi-sentence
@@ -471,7 +238,7 @@ class TAGSynchAligner(object):
                 tag_parent_rule = self.alignments.tag_rules[rule_parent]
                 erg_parent_rule = self.alignments.erg_rules[rule_parent]
 
-                rule_name = graph_parent['edge']+'/'+'E'
+                rule_name = graph_parent['edge']+'/'+'E~'+erg_rule.head
                 erg_rule.name = rule_name
 
                 tag_rule.name = rule_name
@@ -488,11 +255,6 @@ class TAGSynchAligner(object):
 
                 # Update tree parents with the new rule name
                 tag_parent_rule.rules.append(rule_name)
-
-            # Get verb tense
-            feature = self.alignments.features[rule_id]
-            if feature != None and feature.type == 'verb':
-                self.alignments.features[rule_id] = self.get_verb_tense(self.alignments.features[rule_id])
 
             self.alignments.erg_rules[rule_id].tokens = map(lambda x: self.info['lemmas'][x], self.alignments.erg_rules[rule_id].tokens)
 

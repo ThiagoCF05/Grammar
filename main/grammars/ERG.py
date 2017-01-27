@@ -84,7 +84,7 @@ class AMR(object):
 
                     parent = node_id
                 else:
-                    if edge not in [':wiki', ':mode']:
+                    if edge not in [':wiki']:
                         _node = copy.copy(name)
                         i, isCoref = 1, False
                         while _node in self.nodes.keys():

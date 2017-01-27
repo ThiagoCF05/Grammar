@@ -102,13 +102,7 @@ class Tree(object):
                 terminal = child.replace(closing, '')
 
                 self.nodes[prev_id].index = terminal_id
-                # Abstract punctuation
-                if self.nodes[prev_id].name == '.':
-                    self.nodes[prev_id].lexicon = '.'
-                elif self.nodes[prev_id].name == ':':
-                    self.nodes[prev_id].lexicon = ':'
-                else:
-                    self.nodes[prev_id].lexicon = terminal.lower()
+                self.nodes[prev_id].lexicon = terminal.lower()
                 self.nodes[prev_id].type = 'terminal'
 
                 # Set the label of the rules (> -1)
@@ -148,8 +142,6 @@ class Tree(object):
         if self.nodes[root].type == 'terminal':
             if self.nodes[root].label > -1 and isRule:
                 text = text + ' XXX-' + self.nodes[root].name
-            elif self.nodes[root].name in [':', '.'] or self.nodes[root].lexicon in ['\'\'']:
-                pass
             else:
                 text = text + ' ' + self.nodes[root].lexicon
         elif self.nodes[root].type == 'rule':

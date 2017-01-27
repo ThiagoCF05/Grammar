@@ -30,10 +30,10 @@ class Generator(object):
         self.grammar = {'initial':{}, 'substitution':{}}
         for fname in models:
             aux = fname.split('/')[-1].split('_')
-            if aux[0] == 'initial':
-                self.grammar['initial'][len(aux)-1] = p.load(open(fname))
-            elif aux[0] == 'substitution':
-                self.grammar['substitution'][len(aux)-1] = p.load(open(fname))
+            if aux[0] == 'initial' and len(aux)-1 == 2:
+                self.grammar['initial'] = p.load(open(fname))
+            elif aux[0] == 'substitution' and len(aux)-1 == 2:
+                self.grammar['substitution'] = p.load(open(fname))
 
         self.lexicalizer = Lexicalizer()
 
@@ -49,6 +49,12 @@ class Generator(object):
         self.synchg.count = erg.count
 
         for rule_id in erg.rules:
+            erg.rules[rule_id].name = erg.rules[rule_id].name + '~' + erg.rules[rule_id].head
+            for head in erg.rules[rule_id].rules:
+                for i, _rule in enumerate(erg.rules[rule_id].rules[head]):
+                    name = erg.rules[_rule.node_id].head
+                    _rule.name = _rule.name + '~' + name
+
             synch_rule = SynchRule(name=erg.rules[rule_id].name,
                                    head=erg.rules[rule_id].head,
                                    parent=erg.rules[rule_id].parent,
@@ -66,15 +72,14 @@ class Generator(object):
             result = []
 
             if condition_level == 3:
-                result = filter(lambda g: rule.name == g[1]
-                                          and rule.head == g[3], self.grammar[tree_type][condition_level])
+                result = filter(lambda g: rule.name == g[1], self.grammar[tree_type])
             elif condition_level == 2:
-                result = filter(lambda g: rule.name == g[1], self.grammar[tree_type][condition_level])
+                result = filter(lambda g: rule.name.split('~')[0] == g[1].split('~')[0], self.grammar[tree_type])
 
             return result
 
         rule = synchg.rules[rule_id]
-        condition_level = 2
+        condition_level = 3
         templates = []
         while condition_level > 1 and len(templates) == 0:
             # Get rules with the same income edge and head
@@ -85,13 +90,18 @@ class Generator(object):
                 templates = filter(lambda g: g[2] == 'empty', templates)
             else:
                 graph_rules = map(lambda edge: edge.name, reduce(lambda x, y: x+y, rule.graph_rules.values()))
-                templates = filter(lambda g: sorted(list(g[2])) == sorted(graph_rules), templates)
+                _templates = filter(lambda g: sorted(list(g[2])) == sorted(graph_rules), templates)
+
+                if len(_templates) == 0:
+                    graph_rules = map(lambda x: x.split('~')[0], graph_rules)
+                    _templates = filter(lambda g: sorted(map(lambda x: x.split('~')[0], list(g[2]))) == sorted(graph_rules), templates)
+                templates = _templates
 
             if len(templates) == 0:
                 condition_level = condition_level - 1
 
-        dem = sum(map(lambda x: self.grammar[tree_type][condition_level][x], templates))
-        templates = map(lambda x: (x[0], float(self.grammar[tree_type][condition_level][x])), templates)
+        dem = sum(map(lambda x: self.grammar[tree_type][x], templates))
+        templates = map(lambda x: (x[0], float(self.grammar[tree_type][x])), templates)
 
         candidates = {}
         for template in templates:
@@ -106,6 +116,7 @@ class Generator(object):
     def choose_initial(self):
         # Generation process from the root rule
         start_rule = filter(lambda rule_id: ':root' in self.synchg.rules[rule_id].name, self.synchg.rules)[0]
+        self.synchg.rules[start_rule].name = ':root/ROOT~' +  self.synchg.rules[start_rule].head
 
         isSynchronous = True
 
@@ -121,11 +132,10 @@ class Generator(object):
             # Update synchronized rule with the predicted tree
             synchg = copy.deepcopy(self.synchg)
             rule = synchg.rules[start_rule]
-            rule.update_tree(template[0][0])
-            rule.features = VerbPhrase(voice=template[0][1])
+            rule.update_tree(template[0])
 
             # Update the generated tree
-            tree = template[0][0]
+            tree = template[0]
             tree = self.lexicalizer.choose_words(tree, rule)
 
             # Update the generated amr
@@ -161,8 +171,9 @@ class Generator(object):
             aux = tree.split()
             for tree_root in tree_rules:
                 # Check if the rule edge is in the template rule
-                if graph_rule_name == aux[tree_root]:
+                if graph_rule_name.split('~')[0].split('/')[0] in aux[tree_root]:
                     rule_id = graph_rule_id
+                    synchg.rules[rule_id].name = aux[tree_root] + '~' + synchg.rules[rule_id].head
 
                     new_templates = self.get_template(rule_id, synchg, 'substitution')[:self.beam_n]
 
@@ -173,11 +184,10 @@ class Generator(object):
                             new_tree = copy.deepcopy(tree)
 
                             rule = new_synchg.rules[rule_id]
-                            rule.update_tree(new_template[0][0])
-                            rule.features = VerbPhrase(voice=new_template[0][1])
+                            rule.update_tree(new_template[0])
                             new_amr.insert(rule.graph)
 
-                            subtree = new_template[0][0]
+                            subtree = new_template[0]
                             subtree = self.lexicalizer.choose_words(subtree, rule)
 
                             new_tree = new_tree.split()
@@ -245,42 +255,51 @@ class Generator(object):
 
         if len(concluded) == 0:
             concluded = fails
-        return self.rerank(concluded)
 
-# if __name__ == '__main__':
-#     models = [prop.initial_rule_edges,
-#               prop.substitution_rule_edges,
-#               prop.initial_rule_edges_head,
-#               prop.substitution_rule_edges_head]
-#     verb2noun, noun2verb, verb2actor, actor2verb = utils.noun_verb('../data/morph-verbalization-v1.01.txt')
-#     sub2word = utils.subgraph_word('../data/verbalization-list-v1.06.txt')
-#
-#     amr = """(s / shut-down-05
-#                :ARG0 (p / person :wiki "Hugo_Chvez"
-#                   :name (n / name :op1 "Hugo" :op2 "Chavez"))
-#                :ARG1 (i / it)
-#                :time (d / date-entity :year 2004))"""
-#
-#     amr = """(h / have-03
-#       :ARG0 (i / it)
-#       :ARG1 (h2 / horn))"""
-#
-#     factory = ERGFactory(verb2noun=verb2noun,
-#                      noun2verb=noun2verb,
-#                      verb2actor=verb2actor,
-#                      actor2verb=actor2verb,
-#                      sub2word=sub2word)
-#
-#     gen = Generator(amr=amr.lower(),
-#                     erg_factory=factory,
-#                     models=models,
-#                     beam_n=20)
-#
-#     candidates = gen.run()
-#
-#     for candidate in candidates:
-#         tree = candidate.tree
-#
-#         print tree
-#         print candidate.prob
-#         print 10 * '-'
+        if self.model == None:
+            return concluded
+        else:
+            return self.rerank(concluded)
+
+if __name__ == '__main__':
+    models = [prop.initial_rule_edges,
+              prop.substitution_rule_edges,
+              prop.initial_rule_edges_head,
+              prop.substitution_rule_edges_head]
+    verb2noun, noun2verb, verb2actor, actor2verb = utils.noun_verb('../data/morph-verbalization-v1.01.txt')
+    sub2word = utils.subgraph_word('../data/verbalization-list-v1.06.txt')
+
+    amr = """(s / shut-down-05
+               :ARG0 (p / person :wiki "Hugo_Chavez"
+                  :name (n / name :op1 "Hugo" :op2 "Chavez"))
+               :ARG1 (i / it)
+               :time (d / date-entity :year 2004))"""
+
+    amr = """(p / possible-01
+      :ARG1 (d / distinguish-01
+            :ARG0 (i / i)
+            :ARG1 (c / country :wiki "China"
+                  :name (n / name :op1 "China"))
+            :ARG2 (s / state :wiki "Arizona"
+                  :name (n2 / name :op1 "Arizona"))))"""
+
+    factory = ERGFactory(verb2noun=verb2noun,
+                     noun2verb=noun2verb,
+                     verb2actor=verb2actor,
+                     actor2verb=actor2verb,
+                     sub2word=sub2word)
+
+    gen = Generator(amr=amr.lower(),
+                    erg_factory=factory,
+                    models=models,
+                    beam_n=20,
+                    lm=None)
+
+    candidates = gen.run()
+
+    for candidate in candidates:
+        tree = candidate.tree
+
+        print tree
+        print candidate.prob
+        print 10 * '-'

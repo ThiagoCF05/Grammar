@@ -1,93 +1,3299 @@
 [
     {
-        "edge": ":mod",
-        "head": "little",
-        "pos": "JJ",
-        "w_t": "little",
+        "edge": ":root",
+        "head": "person/name",
+        "pos": "NNP",
+        "w_t": "barack",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":root",
+        "head": "person/name",
+        "pos": "NNP",
+        "w_t": "obama",
+        "w_tm1": "barack"
+    },
+    {
+        "edge": ":root",
+        "head": "person/name",
+        "pos": "NNP",
+        "w_t": "barack",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":root",
+        "head": "person/name",
+        "pos": "NNP",
+        "w_t": "obama",
+        "w_tm1": "barack"
+    },
+    {
+        "edge": ":root",
+        "head": "cat",
+        "pos": "NN",
+        "w_t": "cat",
         "w_tm1": "the"
     },
     {
-        "edge": ":arg1",
-        "head": "prince",
-        "pos": "NN",
-        "w_t": "prince",
-        "w_tm1": "little"
-    },
-    {
-        "edge": ":arg1",
-        "head": "prince",
+        "edge": ":root",
+        "head": "cat",
         "pos": "DT",
         "w_t": "the",
         "w_tm1": "*"
     },
     {
-        "edge": ":arg1",
-        "head": "prince",
+        "edge": ":root",
+        "head": "cat",
         "pos": "NN",
-        "w_t": "prince",
-        "w_tm1": "little"
-    },
-    {
-        "edge": ":time",
-        "head": "now",
-        "pos": "RB",
-        "w_t": "now",
-        "w_tm1": "be"
-    },
-    {
-        "edge": ":time",
-        "head": "now",
-        "pos": "RB",
-        "w_t": "now",
-        "w_tm1": "be"
+        "w_t": "cat",
+        "w_tm1": "the"
     },
     {
         "edge": ":root",
-        "head": "white-03",
-        "pos": "JJ",
-        "w_t": "white",
-        "w_tm1": "now"
+        "head": "cat",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "cat"
     },
     {
-        "edge": ":arg0",
-        "head": "enrage-01",
+        "edge": ":ARG0",
+        "head": "person/name",
+        "pos": "NNP",
+        "w_t": "anna",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "person/name",
+        "pos": "NNP",
+        "w_t": "castro",
+        "w_tm1": "anna"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "person/name",
+        "pos": "NNP",
+        "w_t": "anna",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "person/name",
+        "pos": "NNP",
+        "w_t": "castro",
+        "w_tm1": "anna"
+    },
+    {
+        "edge": ":root",
+        "head": "miss-01",
+        "pos": "VBZ",
+        "w_t": "misses",
+        "w_tm1": "castro"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "cat",
         "pos": "NN",
-        "w_t": "rage",
-        "w_tm1": "with"
+        "w_t": "cat",
+        "w_tm1": "the"
     },
     {
-        "edge": ":arg0",
-        "head": "enrage-01",
+        "edge": ":ARG1",
+        "head": "cat",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "miss"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "cat",
         "pos": "NN",
-        "w_t": "rage",
-        "w_tm1": "with"
+        "w_t": "cat",
+        "w_tm1": "the"
     },
     {
-        "edge": ":arg0",
-        "head": "enrage-01",
+        "edge": ":root",
+        "head": "miss-01",
+        "pos": "VBZ",
+        "w_t": "misses",
+        "w_tm1": "castro"
+    },
+    {
+        "edge": ":root",
+        "head": "miss-01",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "cat"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "person/name",
+        "pos": "NNP",
+        "w_t": "thiago",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "person/name",
+        "pos": "NNP",
+        "w_t": "castro",
+        "w_tm1": "thiago"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "person/name",
+        "pos": "NNP",
+        "w_t": "ferreira",
+        "w_tm1": "castro"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "person/name",
+        "pos": "NNP",
+        "w_t": "thiago",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "person/name",
+        "pos": "NNP",
+        "w_t": "castro",
+        "w_tm1": "thiago"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "person/name",
+        "pos": "NNP",
+        "w_t": "ferreira",
+        "w_tm1": "castro"
+    },
+    {
+        "edge": ":root",
+        "head": "talk-01",
+        "pos": "VBZ",
+        "w_t": "talks",
+        "w_tm1": "ferreira"
+    },
+    {
+        "edge": ":ARG2",
+        "head": "game",
+        "pos": "NN",
+        "w_t": "game",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG2",
+        "head": "game",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "about"
+    },
+    {
+        "edge": ":ARG2",
+        "head": "game",
+        "pos": "NN",
+        "w_t": "game",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG2",
+        "head": "game",
         "pos": "IN",
-        "w_t": "with",
-        "w_tm1": "white"
+        "w_t": "about",
+        "w_tm1": "talk"
+    },
+    {
+        "edge": ":root",
+        "head": "talk-01",
+        "pos": "VBZ",
+        "w_t": "talks",
+        "w_tm1": "ferreira"
+    },
+    {
+        "edge": ":root",
+        "head": "talk-01",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "game"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":root",
+        "head": "want-01",
+        "pos": "VBZ",
+        "w_t": "wants",
+        "w_tm1": "boy"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "ride-01",
+        "pos": "VB",
+        "w_t": "ride",
+        "w_tm1": "to"
+    },
+    {
+        "edge": ":mod",
+        "head": "red",
+        "pos": "JJ",
+        "w_t": "red",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "bicycle",
+        "pos": "NN",
+        "w_t": "bicycle",
+        "w_tm1": "red"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "bicycle",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "ride"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "bicycle",
+        "pos": "NN",
+        "w_t": "bicycle",
+        "w_tm1": "red"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "ride-01",
+        "pos": "VB",
+        "w_t": "ride",
+        "w_tm1": "to"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "ride-01",
+        "pos": "TO",
+        "w_t": "to",
+        "w_tm1": "want"
+    },
+    {
+        "edge": ":root",
+        "head": "want-01",
+        "pos": "VBZ",
+        "w_t": "wants",
+        "w_tm1": "boy"
+    },
+    {
+        "edge": ":root",
+        "head": "want-01",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "bicycle"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "girl",
+        "pos": "NN",
+        "w_t": "girl",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "girl",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "girl",
+        "pos": "NN",
+        "w_t": "girl",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":root",
+        "head": "adjust-01",
+        "pos": "VBN",
+        "w_t": "adjusted",
+        "w_tm1": "girl"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "machine",
+        "pos": "NN",
+        "w_t": "machine",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "machine",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "adjust"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "machine",
+        "pos": "NN",
+        "w_t": "machine",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":root",
+        "head": "adjust-01",
+        "pos": "VBN",
+        "w_t": "adjusted",
+        "w_tm1": "girl"
+    },
+    {
+        "edge": ":root",
+        "head": "adjust-01",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "machine"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "machine",
+        "pos": "NN",
+        "w_t": "machine",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "machine",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "machine",
+        "pos": "NN",
+        "w_t": "machine",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":root",
+        "head": "adjust-01",
+        "pos": "VBN",
+        "w_t": "adjusted",
+        "w_tm1": "be"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "girl",
+        "pos": "NN",
+        "w_t": "girl",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "girl",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "by"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "girl",
+        "pos": "NN",
+        "w_t": "girl",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "girl",
+        "pos": "IN",
+        "w_t": "by",
+        "w_tm1": "adjust"
+    },
+    {
+        "edge": ":root",
+        "head": "adjust-01",
+        "pos": "VBN",
+        "w_t": "adjusted",
+        "w_tm1": "be"
+    },
+    {
+        "edge": ":root",
+        "head": "adjust-01",
+        "pos": "VBD",
+        "w_t": "was",
+        "w_tm1": "machine"
+    },
+    {
+        "edge": ":root",
+        "head": "adjust-01",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "girl"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "machine",
+        "pos": "NN",
+        "w_t": "machine",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "machine",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "machine",
+        "pos": "NN",
+        "w_t": "machine",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":polarity",
+        "head": "-",
+        "pos": "RB",
+        "w_t": "not",
+        "w_tm1": "be"
+    },
+    {
+        "edge": ":root",
+        "head": "adjust-01",
+        "pos": "VBN",
+        "w_t": "adjusted",
+        "w_tm1": "not"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "girl",
+        "pos": "NN",
+        "w_t": "girl",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "girl",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "by"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "girl",
+        "pos": "NN",
+        "w_t": "girl",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "girl",
+        "pos": "IN",
+        "w_t": "by",
+        "w_tm1": "adjust"
+    },
+    {
+        "edge": ":root",
+        "head": "adjust-01",
+        "pos": "VBN",
+        "w_t": "adjusted",
+        "w_tm1": "not"
+    },
+    {
+        "edge": ":root",
+        "head": "adjust-01",
+        "pos": "VBD",
+        "w_t": "was",
+        "w_tm1": "machine"
+    },
+    {
+        "edge": ":root",
+        "head": "adjust-01",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "girl"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "man",
+        "pos": "NN",
+        "w_t": "man",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "man",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "man",
+        "pos": "NN",
+        "w_t": "man",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":root",
+        "head": "describe-01",
+        "pos": "VBD",
+        "w_t": "described",
+        "w_tm1": "man"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "mission",
+        "pos": "NN",
+        "w_t": "mission",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "mission",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "describe"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "mission",
+        "pos": "NN",
+        "w_t": "mission",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG2",
+        "head": "disaster",
+        "pos": "NN",
+        "w_t": "disaster",
+        "w_tm1": "a"
+    },
+    {
+        "edge": ":ARG2",
+        "head": "disaster",
+        "pos": "DT",
+        "w_t": "a",
+        "w_tm1": "as"
+    },
+    {
+        "edge": ":ARG2",
+        "head": "disaster",
+        "pos": "NN",
+        "w_t": "disaster",
+        "w_tm1": "a"
+    },
+    {
+        "edge": ":ARG2",
+        "head": "disaster",
+        "pos": "IN",
+        "w_t": "as",
+        "w_tm1": "mission"
+    },
+    {
+        "edge": ":root",
+        "head": "describe-01",
+        "pos": "VBD",
+        "w_t": "described",
+        "w_tm1": "man"
+    },
+    {
+        "edge": ":root",
+        "head": "describe-01",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "disaster"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "man",
+        "pos": "NN",
+        "w_t": "man",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "man",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "man",
+        "pos": "NN",
+        "w_t": "man",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "man",
+        "pos": "POS",
+        "w_t": "'s",
+        "w_tm1": "man"
+    },
+    {
+        "edge": ":root",
+        "head": "describe-01",
+        "pos": "NN",
+        "w_t": "description",
+        "w_tm1": "'s"
+    },
+    {
+        "edge": ":root",
+        "head": "describe-01",
+        "pos": "NN",
+        "w_t": "description",
+        "w_tm1": "'s"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "mission",
+        "pos": "NN",
+        "w_t": "mission",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "mission",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "of"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "mission",
+        "pos": "NN",
+        "w_t": "mission",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "mission",
+        "pos": "IN",
+        "w_t": "of",
+        "w_tm1": "description"
+    },
+    {
+        "edge": ":ARG2",
+        "head": "disaster",
+        "pos": "NN",
+        "w_t": "disaster",
+        "w_tm1": ":"
+    },
+    {
+        "edge": ":ARG2",
+        "head": "disaster",
+        "pos": "NN",
+        "w_t": "disaster",
+        "w_tm1": ":"
+    },
+    {
+        "edge": ":root",
+        "head": "describe-01",
+        "pos": ":",
+        "w_t": ":",
+        "w_tm1": "mission"
+    },
+    {
+        "edge": ":root",
+        "head": "describe-01",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "disaster"
+    },
+    {
+        "edge": ":root",
+        "head": "person/teach-01",
+        "pos": "NN",
+        "w_t": "teacher",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":root",
+        "head": "person/teach-01",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":root",
+        "head": "person/teach-01",
+        "pos": "NN",
+        "w_t": "teacher",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":root",
+        "head": "person/teach-01",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "teacher"
+    },
+    {
+        "edge": ":root",
+        "head": "person",
+        "pos": "NN",
+        "w_t": "person",
+        "w_tm1": "a"
+    },
+    {
+        "edge": ":ARG0-of",
+        "head": "teach-01",
+        "pos": "VBZ",
+        "w_t": "teaches",
+        "w_tm1": "who"
+    },
+    {
+        "edge": ":ARG0-of",
+        "head": "teach-01",
+        "pos": "VBZ",
+        "w_t": "teaches",
+        "w_tm1": "who"
+    },
+    {
+        "edge": ":ARG0-of",
+        "head": "teach-01",
+        "pos": "WP",
+        "w_t": "who",
+        "w_tm1": "person"
+    },
+    {
+        "edge": ":root",
+        "head": "person",
+        "pos": "DT",
+        "w_t": "a",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":root",
+        "head": "person",
+        "pos": "NN",
+        "w_t": "person",
+        "w_tm1": "a"
+    },
+    {
+        "edge": ":root",
+        "head": "person",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "teach"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "you",
+        "pos": "PRP",
+        "w_t": "you",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "you",
+        "pos": "PRP",
+        "w_t": "you",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":root",
+        "head": "permit-01",
+        "pos": "MD",
+        "w_t": "can",
+        "w_tm1": "you"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "leave-01",
+        "pos": "VB",
+        "w_t": "leave",
+        "w_tm1": "can"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "leave-01",
+        "pos": "VB",
+        "w_t": "leave",
+        "w_tm1": "can"
+    },
+    {
+        "edge": ":root",
+        "head": "permit-01",
+        "pos": "MD",
+        "w_t": "can",
+        "w_tm1": "you"
+    },
+    {
+        "edge": ":root",
+        "head": "permit-01",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "leave"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "you",
+        "pos": "PRP",
+        "w_t": "you",
+        "w_tm1": "for"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "you",
+        "pos": "PRP",
+        "w_t": "you",
+        "w_tm1": "for"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "leave-01",
+        "pos": "VB",
+        "w_t": "leave",
+        "w_tm1": "to"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "leave-01",
+        "pos": "VB",
+        "w_t": "leave",
+        "w_tm1": "to"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "leave-01",
+        "pos": "TO",
+        "w_t": "to",
+        "w_tm1": "you"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "leave-01",
+        "pos": "IN",
+        "w_t": "for",
+        "w_tm1": "right"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "leave-01",
+        "pos": "VBZ",
+        "w_t": "'s",
+        "w_tm1": "it"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "leave-01",
+        "pos": "RB",
+        "w_t": "all",
+        "w_tm1": "be"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "leave-01",
+        "pos": "JJ",
+        "w_t": "right",
+        "w_tm1": "all"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "leave-01",
+        "pos": "PRP",
+        "w_t": "it",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "leave-01",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "leave"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "you",
+        "pos": "PRP",
+        "w_t": "you",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "you",
+        "pos": "PRP",
+        "w_t": "you",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":root",
+        "head": "obligate-01",
+        "pos": "MD",
+        "w_t": "must",
+        "w_tm1": "you"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "leave-01",
+        "pos": "VB",
+        "w_t": "leave",
+        "w_tm1": "must"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "leave-01",
+        "pos": "VB",
+        "w_t": "leave",
+        "w_tm1": "must"
+    },
+    {
+        "edge": ":root",
+        "head": "obligate-01",
+        "pos": "MD",
+        "w_t": "must",
+        "w_tm1": "you"
+    },
+    {
+        "edge": ":root",
+        "head": "obligate-01",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "leave"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "you",
+        "pos": "PRP",
+        "w_t": "you",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "you",
+        "pos": "PRP",
+        "w_t": "you",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":root",
+        "head": "recommend-01",
+        "pos": "MD",
+        "w_t": "should",
+        "w_tm1": "you"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "leave-01",
+        "pos": "VB",
+        "w_t": "leave",
+        "w_tm1": "should"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "leave-01",
+        "pos": "VB",
+        "w_t": "leave",
+        "w_tm1": "should"
+    },
+    {
+        "edge": ":root",
+        "head": "recommend-01",
+        "pos": "MD",
+        "w_t": "should",
+        "w_tm1": "you"
+    },
+    {
+        "edge": ":root",
+        "head": "recommend-01",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "leave"
+    },
+    {
+        "edge": ":location",
+        "head": "city/name",
+        "pos": "NNP",
+        "w_t": "london",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":mod",
+        "head": "emergency",
+        "pos": "NN",
+        "w_t": "emergency",
+        "w_tm1": "london"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "service",
+        "pos": "NNS",
+        "w_t": "services",
+        "w_tm1": "emergency"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "service",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "service",
+        "pos": "NNS",
+        "w_t": "services",
+        "w_tm1": "emergency"
+    },
+    {
+        "edge": ":root",
+        "head": "say-01",
+        "pos": "VBD",
+        "w_t": "said",
+        "w_tm1": "service"
+    },
+    {
+        "edge": ":mod",
+        "head": "altogether",
+        "pos": "RB",
+        "w_t": "altogether",
+        "w_tm1": "that"
+    },
+    {
+        "edge": ":mod",
+        "head": "altogether",
+        "pos": "RB",
+        "w_t": "altogether",
+        "w_tm1": "that"
+    },
+    {
+        "edge": ":quant",
+        "head": "11",
+        "pos": "CD",
+        "w_t": "11",
+        "w_tm1": "altogether"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "person",
+        "pos": "NNS",
+        "w_t": "people",
+        "w_tm1": "11"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "person",
+        "pos": "NNS",
+        "w_t": "people",
+        "w_tm1": "11"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "send-01",
+        "pos": "VBN",
+        "w_t": "sent",
+        "w_tm1": "be"
+    },
+    {
+        "edge": ":ARG2",
+        "head": "hospital",
+        "pos": "NN",
+        "w_t": "hospital",
+        "w_tm1": "to"
+    },
+    {
+        "edge": ":ARG2",
+        "head": "hospital",
+        "pos": "NN",
+        "w_t": "hospital",
+        "w_tm1": "to"
+    },
+    {
+        "edge": ":ARG2",
+        "head": "hospital",
+        "pos": "TO",
+        "w_t": "to",
+        "w_tm1": "send"
+    },
+    {
+        "edge": ":purpose",
+        "head": "treat-03",
+        "pos": "NN",
+        "w_t": "treatment",
+        "w_tm1": "for"
+    },
+    {
+        "edge": ":purpose",
+        "head": "treat-03",
+        "pos": "NN",
+        "w_t": "treatment",
+        "w_tm1": "for"
+    },
+    {
+        "edge": ":mod",
+        "head": "minor",
+        "pos": "JJ",
+        "w_t": "minor",
+        "w_tm1": "to"
+    },
+    {
+        "edge": ":ARG2",
+        "head": "wound-01",
+        "pos": "NNS",
+        "w_t": "wounds",
+        "w_tm1": "minor"
+    },
+    {
+        "edge": ":ARG2",
+        "head": "wound-01",
+        "pos": "NNS",
+        "w_t": "wounds",
+        "w_tm1": "minor"
+    },
+    {
+        "edge": ":ARG2",
+        "head": "wound-01",
+        "pos": "TO",
+        "w_t": "to",
+        "w_tm1": "due"
+    },
+    {
+        "edge": ":ARG2",
+        "head": "wound-01",
+        "pos": "JJ",
+        "w_t": "due",
+        "w_tm1": "treatment"
+    },
+    {
+        "edge": ":purpose",
+        "head": "treat-03",
+        "pos": "IN",
+        "w_t": "for",
+        "w_tm1": "hospital"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "send-01",
+        "pos": "VBN",
+        "w_t": "sent",
+        "w_tm1": "be"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "send-01",
+        "pos": "VBN",
+        "w_t": "been",
+        "w_tm1": "have"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "send-01",
+        "pos": "VBD",
+        "w_t": "had",
+        "w_tm1": "person"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "send-01",
+        "pos": "IN",
+        "w_t": "that",
+        "w_tm1": "say"
+    },
+    {
+        "edge": ":root",
+        "head": "say-01",
+        "pos": "VBD",
+        "w_t": "said",
+        "w_tm1": "service"
+    },
+    {
+        "edge": ":root",
+        "head": "say-01",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "wound"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":polarity",
+        "head": "-",
+        "pos": "RB",
+        "w_t": "not",
+        "w_tm1": "do"
+    },
+    {
+        "edge": ":root",
+        "head": "go-01",
+        "pos": "VB",
+        "w_t": "go",
+        "w_tm1": "not"
+    },
+    {
+        "edge": ":root",
+        "head": "go-01",
+        "pos": "VB",
+        "w_t": "go",
+        "w_tm1": "not"
+    },
+    {
+        "edge": ":root",
+        "head": "go-01",
+        "pos": "VBD",
+        "w_t": "did",
+        "w_tm1": "boy"
+    },
+    {
+        "edge": ":root",
+        "head": "go-01",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "go"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":root",
+        "head": "possible",
+        "pos": "MD",
+        "w_t": "can",
+        "w_tm1": "boy"
+    },
+    {
+        "edge": ":polarity",
+        "head": "-",
+        "pos": "RB",
+        "w_t": "not",
+        "w_tm1": "can"
+    },
+    {
+        "edge": ":domain",
+        "head": "go-01",
+        "pos": "VB",
+        "w_t": "go",
+        "w_tm1": "not"
+    },
+    {
+        "edge": ":domain",
+        "head": "go-01",
+        "pos": "VB",
+        "w_t": "go",
+        "w_tm1": "not"
+    },
+    {
+        "edge": ":root",
+        "head": "possible",
+        "pos": "MD",
+        "w_t": "can",
+        "w_tm1": "boy"
+    },
+    {
+        "edge": ":root",
+        "head": "possible",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "go"
+    },
+    {
+        "edge": ":mod",
+        "head": "nice",
+        "pos": "JJ",
+        "w_t": "nice",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "nice"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "nice"
+    },
+    {
+        "edge": ":root",
+        "head": "send-01",
+        "pos": "VBZ",
+        "w_t": "sends",
+        "w_tm1": "boy"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "box",
+        "pos": "NN",
+        "w_t": "box",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "box",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "send"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "box",
+        "pos": "NN",
+        "w_t": "box",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG3",
+        "head": "house",
+        "pos": "NN",
+        "w_t": "house",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG3",
+        "head": "house",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "from"
+    },
+    {
+        "edge": ":ARG3",
+        "head": "house",
+        "pos": "NN",
+        "w_t": "house",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG4",
+        "head": "store",
+        "pos": "NN",
+        "w_t": "store",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG4",
+        "head": "store",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "to"
+    },
+    {
+        "edge": ":ARG4",
+        "head": "store",
+        "pos": "NN",
+        "w_t": "store",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG4",
+        "head": "store",
+        "pos": "TO",
+        "w_t": "to",
+        "w_tm1": "house"
+    },
+    {
+        "edge": ":ARG3",
+        "head": "house",
+        "pos": "IN",
+        "w_t": "from",
+        "w_tm1": "box"
+    },
+    {
+        "edge": ":root",
+        "head": "send-01",
+        "pos": "VBZ",
+        "w_t": "sends",
+        "w_tm1": "boy"
+    },
+    {
+        "edge": ":root",
+        "head": "send-01",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "store"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":root",
+        "head": "want-01",
+        "pos": "VBZ",
+        "w_t": "wants",
+        "w_tm1": "boy"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "girl",
+        "pos": "NN",
+        "w_t": "girl",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "believe-01",
+        "pos": "VB",
+        "w_t": "believe",
+        "w_tm1": "to"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "believe-01",
+        "pos": "VB",
+        "w_t": "believe",
+        "w_tm1": "to"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "believe-01",
+        "pos": "PRP",
+        "w_t": "him",
+        "w_tm1": "believe"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "believe-01",
+        "pos": "TO",
+        "w_t": "to",
+        "w_tm1": "girl"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "girl",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "want"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "girl",
+        "pos": "NN",
+        "w_t": "girl",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":root",
+        "head": "want-01",
+        "pos": "VBZ",
+        "w_t": "wants",
+        "w_tm1": "boy"
+    },
+    {
+        "edge": ":root",
+        "head": "want-01",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "he"
+    },
+    {
+        "edge": ":root",
+        "head": "kill-01",
+        "pos": "NN",
+        "w_t": "killing",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":root",
+        "head": "kill-01",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":root",
+        "head": "kill-01",
+        "pos": "NN",
+        "w_t": "killing",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":time",
+        "head": "yesterday",
+        "pos": "NN",
+        "w_t": "yesterday",
+        "w_tm1": "happen"
+    },
+    {
+        "edge": ":time",
+        "head": "yesterday",
+        "pos": "NN",
+        "w_t": "yesterday",
+        "w_tm1": "happen"
+    },
+    {
+        "edge": ":time",
+        "head": "yesterday",
+        "pos": "VBD",
+        "w_t": "happened",
+        "w_tm1": "killing"
+    },
+    {
+        "edge": ":root",
+        "head": "kill-01",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "yesterday"
+    },
+    {
+        "edge": ":op1",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":op1",
+        "head": "boy",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":op1",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":root",
+        "head": "and",
+        "pos": "CC",
+        "w_t": "and",
+        "w_tm1": "boy"
+    },
+    {
+        "edge": ":op2",
+        "head": "girl",
+        "pos": "NN",
+        "w_t": "girl",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":op2",
+        "head": "girl",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "and"
+    },
+    {
+        "edge": ":op2",
+        "head": "girl",
+        "pos": "NN",
+        "w_t": "girl",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":root",
+        "head": "and",
+        "pos": "CC",
+        "w_t": "and",
+        "w_tm1": "boy"
+    },
+    {
+        "edge": ":root",
+        "head": "and",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "girl"
+    },
+    {
+        "edge": ":poss",
+        "head": "he",
+        "pos": "PRP$",
+        "w_t": "his",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":root",
+        "head": "boat",
+        "pos": "NN",
+        "w_t": "boat",
+        "w_tm1": "he"
+    },
+    {
+        "edge": ":root",
+        "head": "boat",
+        "pos": "NN",
+        "w_t": "boat",
+        "w_tm1": "he"
+    },
+    {
+        "edge": ":root",
+        "head": "boat",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "boat"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":root",
+        "head": "obligate-01",
+        "pos": "MD",
+        "w_t": "must",
+        "w_tm1": "boy"
+    },
+    {
+        "edge": ":polarity",
+        "head": "-",
+        "pos": "RB",
+        "w_t": "not",
+        "w_tm1": "must"
+    },
+    {
+        "edge": ":ARG2",
+        "head": "go-02",
+        "pos": "VB",
+        "w_t": "go",
+        "w_tm1": "not"
+    },
+    {
+        "edge": ":ARG2",
+        "head": "go-02",
+        "pos": "VB",
+        "w_t": "go",
+        "w_tm1": "not"
+    },
+    {
+        "edge": ":root",
+        "head": "obligate-01",
+        "pos": "MD",
+        "w_t": "must",
+        "w_tm1": "boy"
+    },
+    {
+        "edge": ":root",
+        "head": "obligate-01",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "go"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":root",
+        "head": "permit-01",
+        "pos": "MD",
+        "w_t": "may",
+        "w_tm1": "boy"
+    },
+    {
+        "edge": ":polarity",
+        "head": "-",
+        "pos": "RB",
+        "w_t": "not",
+        "w_tm1": "may"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "go-02",
+        "pos": "VB",
+        "w_t": "go",
+        "w_tm1": "not"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "go-02",
+        "pos": "VB",
+        "w_t": "go",
+        "w_tm1": "not"
+    },
+    {
+        "edge": ":root",
+        "head": "permit-01",
+        "pos": "MD",
+        "w_t": "may",
+        "w_tm1": "boy"
+    },
+    {
+        "edge": ":root",
+        "head": "permit-01",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "go"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "marble",
+        "pos": "NN",
+        "w_t": "marble",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "marble",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "marble",
+        "pos": "NN",
+        "w_t": "marble",
+        "w_tm1": "the"
     },
     {
         "edge": ":root",
         "head": "white-03",
         "pos": "JJ",
         "w_t": "white",
-        "w_tm1": "now"
+        "w_tm1": "be"
     },
     {
         "edge": ":root",
         "head": "white-03",
-        "pos": "VB",
-        "w_t": "was",
-        "w_tm1": "prince"
+        "pos": "JJ",
+        "w_t": "white",
+        "w_tm1": "be"
+    },
+    {
+        "edge": ":root",
+        "head": "white-03",
+        "pos": "VBZ",
+        "w_t": "is",
+        "w_tm1": "marble"
     },
     {
         "edge": ":root",
         "head": "white-03",
         "pos": ".",
         "w_t": ".",
-        "w_tm1": "rage"
+        "w_tm1": "white"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":root",
+        "head": "see-01",
+        "pos": "VBZ",
+        "w_t": "sees",
+        "w_tm1": "boy"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "marble",
+        "pos": "NN",
+        "w_t": "marble",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "marble",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "that"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "marble",
+        "pos": "NN",
+        "w_t": "marble",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "white-03",
+        "pos": "JJ",
+        "w_t": "white",
+        "w_tm1": "be"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "white-03",
+        "pos": "JJ",
+        "w_t": "white",
+        "w_tm1": "be"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "white-03",
+        "pos": "VBZ",
+        "w_t": "is",
+        "w_tm1": "marble"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "white-03",
+        "pos": "IN",
+        "w_t": "that",
+        "w_tm1": "see"
+    },
+    {
+        "edge": ":root",
+        "head": "see-01",
+        "pos": "VBZ",
+        "w_t": "sees",
+        "w_tm1": "boy"
+    },
+    {
+        "edge": ":root",
+        "head": "see-01",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "white"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":root",
+        "head": "see-01",
+        "pos": "VBZ",
+        "w_t": "sees",
+        "w_tm1": "boy"
+    },
+    {
+        "edge": ":ARG1-of",
+        "head": "white-03",
+        "pos": "JJ",
+        "w_t": "white",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "marble",
+        "pos": "NN",
+        "w_t": "marble",
+        "w_tm1": "white"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "marble",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "see"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "marble",
+        "pos": "NN",
+        "w_t": "marble",
+        "w_tm1": "white"
+    },
+    {
+        "edge": ":root",
+        "head": "see-01",
+        "pos": "VBZ",
+        "w_t": "sees",
+        "w_tm1": "boy"
+    },
+    {
+        "edge": ":root",
+        "head": "see-01",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "marble"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":root",
+        "head": "see-01",
+        "pos": "VBD",
+        "w_t": "saw",
+        "w_tm1": "boy"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "girl",
+        "pos": "NN",
+        "w_t": "girl",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "girl",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "see"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "girl",
+        "pos": "NN",
+        "w_t": "girl",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG0-of",
+        "head": "want-01",
+        "pos": "VBD",
+        "w_t": "wanted",
+        "w_tm1": "who"
+    },
+    {
+        "edge": ":ARG0-of",
+        "head": "want-01",
+        "pos": "VBD",
+        "w_t": "wanted",
+        "w_tm1": "who"
+    },
+    {
+        "edge": ":ARG0-of",
+        "head": "want-01",
+        "pos": "PRP",
+        "w_t": "him",
+        "w_tm1": "want"
+    },
+    {
+        "edge": ":ARG0-of",
+        "head": "want-01",
+        "pos": "WP",
+        "w_t": "who",
+        "w_tm1": "girl"
+    },
+    {
+        "edge": ":root",
+        "head": "see-01",
+        "pos": "VBD",
+        "w_t": "saw",
+        "w_tm1": "boy"
+    },
+    {
+        "edge": ":root",
+        "head": "see-01",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "he"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":root",
+        "head": "want-01",
+        "pos": "VBN",
+        "w_t": "wanted",
+        "w_tm1": "be"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "girl",
+        "pos": "NN",
+        "w_t": "girl",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "girl",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "by"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "girl",
+        "pos": "NN",
+        "w_t": "girl",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG1-of",
+        "head": "see-01",
+        "pos": "VBD",
+        "w_t": "saw",
+        "w_tm1": "he"
+    },
+    {
+        "edge": ":ARG1-of",
+        "head": "see-01",
+        "pos": "VBD",
+        "w_t": "saw",
+        "w_tm1": "he"
+    },
+    {
+        "edge": ":ARG1-of",
+        "head": "see-01",
+        "pos": "PRP",
+        "w_t": "he",
+        "w_tm1": "girl"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "girl",
+        "pos": "IN",
+        "w_t": "by",
+        "w_tm1": "want"
+    },
+    {
+        "edge": ":root",
+        "head": "want-01",
+        "pos": "VBN",
+        "w_t": "wanted",
+        "w_tm1": "be"
+    },
+    {
+        "edge": ":root",
+        "head": "want-01",
+        "pos": "VBZ",
+        "w_t": "is",
+        "w_tm1": "boy"
+    },
+    {
+        "edge": ":root",
+        "head": "want-01",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "see"
+    },
+    {
+        "edge": ":instrument-of",
+        "head": "regulate-01",
+        "pos": "JJ",
+        "w_t": "regulatory",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "document",
+        "pos": "NNS",
+        "w_t": "documents",
+        "w_tm1": "regulatory"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "document",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "document",
+        "pos": "NNS",
+        "w_t": "documents",
+        "w_tm1": "regulatory"
+    },
+    {
+        "edge": ":root",
+        "head": "change-01",
+        "pos": "VBN",
+        "w_t": "changed",
+        "w_tm1": "be"
+    },
+    {
+        "edge": ":root",
+        "head": "change-01",
+        "pos": "VBN",
+        "w_t": "changed",
+        "w_tm1": "be"
+    },
+    {
+        "edge": ":root",
+        "head": "change-01",
+        "pos": "VBD",
+        "w_t": "were",
+        "w_tm1": "document"
+    },
+    {
+        "edge": ":root",
+        "head": "change-01",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "change"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":root",
+        "head": "want-01",
+        "pos": "VBZ",
+        "w_t": "wants",
+        "w_tm1": "boy"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "believe-01",
+        "pos": "VB",
+        "w_t": "believe",
+        "w_tm1": "to"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "believe-01",
+        "pos": "VB",
+        "w_t": "believe",
+        "w_tm1": "to"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "believe-01",
+        "pos": "TO",
+        "w_t": "to",
+        "w_tm1": "want"
+    },
+    {
+        "edge": ":root",
+        "head": "want-01",
+        "pos": "VBZ",
+        "w_t": "wants",
+        "w_tm1": "boy"
+    },
+    {
+        "edge": ":root",
+        "head": "want-01",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "believe"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":root",
+        "head": "believe-01",
+        "pos": "VBZ",
+        "w_t": "believes",
+        "w_tm1": "boy"
+    },
+    {
+        "edge": ":root",
+        "head": "believe-01",
+        "pos": "VBZ",
+        "w_t": "believes",
+        "w_tm1": "boy"
+    },
+    {
+        "edge": ":root",
+        "head": "believe-01",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "believe"
+    },
+    {
+        "edge": ":root",
+        "head": "possible-01",
+        "pos": "MD",
+        "w_t": "may",
+        "w_tm1": "it"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "rain-01",
+        "pos": "VB",
+        "w_t": "rain",
+        "w_tm1": "may"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "rain-01",
+        "pos": "VB",
+        "w_t": "rain",
+        "w_tm1": "may"
+    },
+    {
+        "edge": ":root",
+        "head": "possible-01",
+        "pos": "MD",
+        "w_t": "may",
+        "w_tm1": "it"
+    },
+    {
+        "edge": ":root",
+        "head": "possible-01",
+        "pos": "PRP",
+        "w_t": "it",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":root",
+        "head": "possible-01",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "rain"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":root",
+        "head": "likely-01",
+        "pos": "JJ",
+        "w_t": "likely",
+        "w_tm1": "be"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "go-02",
+        "pos": "VB",
+        "w_t": "go",
+        "w_tm1": "to"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "go-02",
+        "pos": "VB",
+        "w_t": "go",
+        "w_tm1": "to"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "go-02",
+        "pos": "TO",
+        "w_t": "to",
+        "w_tm1": "likely"
+    },
+    {
+        "edge": ":root",
+        "head": "likely-01",
+        "pos": "JJ",
+        "w_t": "likely",
+        "w_tm1": "be"
+    },
+    {
+        "edge": ":root",
+        "head": "likely-01",
+        "pos": "VBZ",
+        "w_t": "is",
+        "w_tm1": "boy"
+    },
+    {
+        "edge": ":root",
+        "head": "likely-01",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "go"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "i",
+        "pos": "PRP",
+        "w_t": "i",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "i",
+        "pos": "PRP",
+        "w_t": "i",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":root",
+        "head": "use-02",
+        "pos": "VBN",
+        "w_t": "used",
+        "w_tm1": "be"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "work-01",
+        "pos": "VBG",
+        "w_t": "working",
+        "w_tm1": "to"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "work-01",
+        "pos": "VBG",
+        "w_t": "working",
+        "w_tm1": "to"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "work-01",
+        "pos": "TO",
+        "w_t": "to",
+        "w_tm1": "use"
+    },
+    {
+        "edge": ":root",
+        "head": "use-02",
+        "pos": "VBN",
+        "w_t": "used",
+        "w_tm1": "be"
+    },
+    {
+        "edge": ":root",
+        "head": "use-02",
+        "pos": "VBP",
+        "w_t": "am",
+        "w_tm1": "i"
+    },
+    {
+        "edge": ":root",
+        "head": "use-02",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "work"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":polarity",
+        "head": "-",
+        "pos": "RB",
+        "w_t": "n't",
+        "w_tm1": "do"
+    },
+    {
+        "edge": ":root",
+        "head": "go-02",
+        "pos": "VB",
+        "w_t": "go",
+        "w_tm1": "not"
+    },
+    {
+        "edge": ":root",
+        "head": "go-02",
+        "pos": "VB",
+        "w_t": "go",
+        "w_tm1": "not"
+    },
+    {
+        "edge": ":root",
+        "head": "go-02",
+        "pos": "VBZ",
+        "w_t": "does",
+        "w_tm1": "boy"
+    },
+    {
+        "edge": ":root",
+        "head": "go-02",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "go"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":root",
+        "head": "possible-01",
+        "pos": "MD",
+        "w_t": "ca",
+        "w_tm1": "boy"
+    },
+    {
+        "edge": ":polarity",
+        "head": "-",
+        "pos": "RB",
+        "w_t": "n't",
+        "w_tm1": "can"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "go-02",
+        "pos": "VB",
+        "w_t": "go",
+        "w_tm1": "not"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "go-02",
+        "pos": "VB",
+        "w_t": "go",
+        "w_tm1": "not"
+    },
+    {
+        "edge": ":root",
+        "head": "possible-01",
+        "pos": "MD",
+        "w_t": "ca",
+        "w_tm1": "boy"
+    },
+    {
+        "edge": ":root",
+        "head": "possible-01",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "go"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":polarity",
+        "head": "-",
+        "pos": "RB",
+        "w_t": "n't",
+        "w_tm1": "do"
+    },
+    {
+        "edge": ":ARG2",
+        "head": "go-02",
+        "pos": "VB",
+        "w_t": "go",
+        "w_tm1": "to"
+    },
+    {
+        "edge": ":ARG2",
+        "head": "go-02",
+        "pos": "VB",
+        "w_t": "go",
+        "w_tm1": "to"
+    },
+    {
+        "edge": ":ARG2",
+        "head": "go-02",
+        "pos": "TO",
+        "w_t": "to",
+        "w_tm1": "have"
+    },
+    {
+        "edge": ":ARG2",
+        "head": "go-02",
+        "pos": "VB",
+        "w_t": "have",
+        "w_tm1": "not"
+    },
+    {
+        "edge": ":ARG2",
+        "head": "go-02",
+        "pos": "VBZ",
+        "w_t": "does",
+        "w_tm1": "boy"
+    },
+    {
+        "edge": ":ARG2",
+        "head": "go-02",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "go"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":root",
+        "head": "think-01",
+        "pos": "VBZ",
+        "w_t": "thinks",
+        "w_tm1": "boy"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "team",
+        "pos": "NN",
+        "w_t": "team",
+        "w_tm1": "he"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "team",
+        "pos": "PRP$",
+        "w_t": "his",
+        "w_tm1": "think"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "team",
+        "pos": "NN",
+        "w_t": "team",
+        "w_tm1": "he"
+    },
+    {
+        "edge": ":polarity",
+        "head": "-",
+        "pos": "RB",
+        "w_t": "n't",
+        "w_tm1": "will"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "win-01",
+        "pos": "VB",
+        "w_t": "win",
+        "w_tm1": "not"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "win-01",
+        "pos": "VB",
+        "w_t": "win",
+        "w_tm1": "not"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "win-01",
+        "pos": "MD",
+        "w_t": "wo",
+        "w_tm1": "team"
+    },
+    {
+        "edge": ":root",
+        "head": "think-01",
+        "pos": "VBZ",
+        "w_t": "thinks",
+        "w_tm1": "boy"
+    },
+    {
+        "edge": ":root",
+        "head": "think-01",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "win"
+    },
+    {
+        "edge": ":polarity",
+        "head": "-",
+        "pos": "RB",
+        "w_t": "not",
+        "w_tm1": "be"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "that"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "boy",
+        "pos": "NN",
+        "w_t": "boy",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":root",
+        "head": "think-01",
+        "pos": "VBZ",
+        "w_t": "thinks",
+        "w_tm1": "boy"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "team",
+        "pos": "NN",
+        "w_t": "team",
+        "w_tm1": "he"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "team",
+        "pos": "PRP$",
+        "w_t": "his",
+        "w_tm1": "think"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "team",
+        "pos": "NN",
+        "w_t": "team",
+        "w_tm1": "he"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "win-01",
+        "pos": "VB",
+        "w_t": "win",
+        "w_tm1": "will"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "win-01",
+        "pos": "VB",
+        "w_t": "win",
+        "w_tm1": "will"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "win-01",
+        "pos": "MD",
+        "w_t": "will",
+        "w_tm1": "team"
+    },
+    {
+        "edge": ":root",
+        "head": "think-01",
+        "pos": "VBZ",
+        "w_t": "thinks",
+        "w_tm1": "boy"
+    },
+    {
+        "edge": ":root",
+        "head": "think-01",
+        "pos": "IN",
+        "w_t": "that",
+        "w_tm1": "true"
+    },
+    {
+        "edge": ":root",
+        "head": "think-01",
+        "pos": "VBZ",
+        "w_t": "'s",
+        "w_tm1": "it"
+    },
+    {
+        "edge": ":root",
+        "head": "think-01",
+        "pos": "JJ",
+        "w_t": "true",
+        "w_tm1": "not"
+    },
+    {
+        "edge": ":root",
+        "head": "think-01",
+        "pos": "PRP",
+        "w_t": "it",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":root",
+        "head": "think-01",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "win"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "i",
+        "pos": "PRP",
+        "w_t": "i",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "i",
+        "pos": "PRP",
+        "w_t": "i",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":polarity",
+        "head": "-",
+        "pos": "RB",
+        "w_t": "n't",
+        "w_tm1": "do"
+    },
+    {
+        "edge": ":root",
+        "head": "have-01",
+        "pos": "VB",
+        "w_t": "have",
+        "w_tm1": "not"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "money",
+        "pos": "NN",
+        "w_t": "money",
+        "w_tm1": "any"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "money",
+        "pos": "DT",
+        "w_t": "any",
+        "w_tm1": "have"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "money",
+        "pos": "NN",
+        "w_t": "money",
+        "w_tm1": "any"
+    },
+    {
+        "edge": ":root",
+        "head": "have-01",
+        "pos": "VB",
+        "w_t": "have",
+        "w_tm1": "not"
+    },
+    {
+        "edge": ":root",
+        "head": "have-01",
+        "pos": "VBP",
+        "w_t": "do",
+        "w_tm1": "i"
+    },
+    {
+        "edge": ":root",
+        "head": "have-01",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "money"
+    },
+    {
+        "edge": ":domain",
+        "head": "man",
+        "pos": "NN",
+        "w_t": "man",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":domain",
+        "head": "man",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":domain",
+        "head": "man",
+        "pos": "NN",
+        "w_t": "man",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":root",
+        "head": "lawyer",
+        "pos": "NN",
+        "w_t": "lawyer",
+        "w_tm1": "a"
+    },
+    {
+        "edge": ":root",
+        "head": "lawyer",
+        "pos": "DT",
+        "w_t": "a",
+        "w_tm1": "be"
+    },
+    {
+        "edge": ":root",
+        "head": "lawyer",
+        "pos": "NN",
+        "w_t": "lawyer",
+        "w_tm1": "a"
+    },
+    {
+        "edge": ":root",
+        "head": "lawyer",
+        "pos": "VBZ",
+        "w_t": "is",
+        "w_tm1": "man"
+    },
+    {
+        "edge": ":root",
+        "head": "lawyer",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "lawyer"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "girl",
+        "pos": "NN",
+        "w_t": "girl",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "girl",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "girl",
+        "pos": "NN",
+        "w_t": "girl",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":root",
+        "head": "sad-02",
+        "pos": "JJ",
+        "w_t": "sad",
+        "w_tm1": "be"
+    },
+    {
+        "edge": ":root",
+        "head": "sad-02",
+        "pos": "JJ",
+        "w_t": "sad",
+        "w_tm1": "be"
+    },
+    {
+        "edge": ":root",
+        "head": "sad-02",
+        "pos": "VBZ",
+        "w_t": "is",
+        "w_tm1": "girl"
+    },
+    {
+        "edge": ":root",
+        "head": "sad-02",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "sad"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "amr-unknown",
+        "pos": "WP",
+        "w_t": "what",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "amr-unknown",
+        "pos": "WP",
+        "w_t": "what",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "girl",
+        "pos": "NN",
+        "w_t": "girl",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "girl",
+        "pos": "DT",
+        "w_t": "the",
+        "w_tm1": "do"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "girl",
+        "pos": "NN",
+        "w_t": "girl",
+        "w_tm1": "the"
+    },
+    {
+        "edge": ":root",
+        "head": "find-01",
+        "pos": "VB",
+        "w_t": "find",
+        "w_tm1": "girl"
+    },
+    {
+        "edge": ":root",
+        "head": "find-01",
+        "pos": "VB",
+        "w_t": "find",
+        "w_tm1": "girl"
+    },
+    {
+        "edge": ":root",
+        "head": "find-01",
+        "pos": "VBD",
+        "w_t": "did",
+        "w_tm1": "what"
+    },
+    {
+        "edge": ":root",
+        "head": "find-01",
+        "pos": ".",
+        "w_t": "?",
+        "w_tm1": "find"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "person/name",
+        "pos": "NNP",
+        "w_t": "hugo",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "person/name",
+        "pos": "NNP",
+        "w_t": "chavez",
+        "w_tm1": "hugo"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "person/name",
+        "pos": "NNP",
+        "w_t": "hugo",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":ARG0",
+        "head": "person/name",
+        "pos": "NNP",
+        "w_t": "chavez",
+        "w_tm1": "hugo"
+    },
+    {
+        "edge": ":root",
+        "head": "shut-down-05",
+        "pos": "VBZ",
+        "w_t": "shuts",
+        "w_tm1": "chavez"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "it",
+        "pos": "PRP",
+        "w_t": "it",
+        "w_tm1": "shut"
+    },
+    {
+        "edge": ":ARG1",
+        "head": "it",
+        "pos": "PRP",
+        "w_t": "it",
+        "w_tm1": "shut"
+    },
+    {
+        "edge": ":root",
+        "head": "shut-down-05",
+        "pos": "RP",
+        "w_t": "down",
+        "w_tm1": "it"
+    },
+    {
+        "edge": ":root",
+        "head": "shut-down-05",
+        "pos": "RP",
+        "w_t": "down",
+        "w_tm1": "it"
+    },
+    {
+        "edge": ":time",
+        "head": "date-entity",
+        "pos": "CD",
+        "w_t": "2004",
+        "w_tm1": "in"
+    },
+    {
+        "edge": ":time",
+        "head": "date-entity",
+        "pos": "CD",
+        "w_t": "2004",
+        "w_tm1": "in"
+    },
+    {
+        "edge": ":time",
+        "head": "date-entity",
+        "pos": "IN",
+        "w_t": "in",
+        "w_tm1": "down"
+    },
+    {
+        "edge": ":root",
+        "head": "shut-down-05",
+        "pos": "VBZ",
+        "w_t": "shuts",
+        "w_tm1": "chavez"
+    },
+    {
+        "edge": ":root",
+        "head": "shut-down-05",
+        "pos": ".",
+        "w_t": ".",
+        "w_tm1": "2004"
     }
 ]

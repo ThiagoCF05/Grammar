@@ -66,10 +66,7 @@ class RuleProb(object):
 
         print fname
         for i, rule in enumerate(rules):
-            if 'voice' in rule['verb_info']:
-                template = (rule['tree'], rule['verb_info']['voice'])
-            else:
-                template = (rule['tree'], 'active')
+            template = rule['tree']
 
             if len(rule['tree_rules']) == 0:
                 g2 = (template, rule['name'], 'empty')
