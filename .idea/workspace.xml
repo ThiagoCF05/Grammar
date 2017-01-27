@@ -51,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="prepare_alignment.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="prepare_alignment.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/prepare_alignment.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="817">
-              <caret line="65" column="24" lean-forward="false" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="24" />
+            <state relative-caret-position="577">
+              <caret line="49" column="21" lean-forward="true" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -67,6 +67,24 @@
             <state relative-caret-position="41700">
               <caret line="2780" column="29" lean-forward="false" selection-start-line="2780" selection-start-column="29" selection-end-line="2780" selection-end-column="29" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ERG.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main/grammars/ERG.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="75" column="34" lean-forward="false" selection-start-line="74" selection-start-column="34" selection-end-line="75" selection-end-column="34" />
+              <folding>
+                <element signature="e#249#435#0" expanded="false" />
+                <element signature="e#641#840#0" expanded="false" />
+                <element signature="e#882#1400#0" expanded="false" />
+                <element signature="e#3952#5065#0" expanded="false" />
+                <element signature="e#5550#14491#0" expanded="false" />
+                <element signature="e#8020#8839#0" expanded="false" />
+                <element signature="e#9988#12463#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -131,10 +149,10 @@
         <option value="$PROJECT_DIR$/main/aligners/TAGSynchAligner.py" />
         <option value="$PROJECT_DIR$/main/rule_production/RuleProb.py" />
         <option value="$PROJECT_DIR$/main/rule_production/RuleProducer.py" />
-        <option value="$PROJECT_DIR$/main/grammars/ERG.py" />
         <option value="$PROJECT_DIR$/main/generator/Generator.py" />
         <option value="$PROJECT_DIR$/main/utils.py" />
         <option value="$PROJECT_DIR$/main/prepare_alignment.py" />
+        <option value="$PROJECT_DIR$/main/grammars/ERG.py" />
       </list>
     </option>
   </component>
@@ -1283,23 +1301,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/grammars/ERG.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="49" column="25" lean-forward="false" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
-          <folding>
-            <element signature="e#249#435#0" expanded="false" />
-            <element signature="e#641#840#0" expanded="false" />
-            <element signature="e#882#1400#0" expanded="false" />
-            <element signature="e#1436#3865#0" expanded="false" />
-            <element signature="e#3939#5052#0" expanded="false" />
-            <element signature="e#5537#14478#0" expanded="false" />
-            <element signature="e#8007#8826#0" expanded="false" />
-            <element signature="e#9975#12450#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/data/others/amrs2.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-360">
@@ -1355,9 +1356,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/prepare_alignment.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="65" column="24" lean-forward="false" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="24" />
+        <state relative-caret-position="577">
+          <caret line="49" column="21" lean-forward="true" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/grammars/ERG.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="75" column="34" lean-forward="false" selection-start-line="74" selection-start-column="34" selection-end-line="75" selection-end-column="34" />
+          <folding>
+            <element signature="e#249#435#0" expanded="false" />
+            <element signature="e#641#840#0" expanded="false" />
+            <element signature="e#882#1400#0" expanded="false" />
+            <element signature="e#3952#5065#0" expanded="false" />
+            <element signature="e#5550#14491#0" expanded="false" />
+            <element signature="e#8020#8839#0" expanded="false" />
+            <element signature="e#9988#12463#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

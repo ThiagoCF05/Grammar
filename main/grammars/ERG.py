@@ -63,17 +63,17 @@ class AMR(object):
                 instance = instance[:-closing]
 
             if instance[0] == ':':
-                instance = instance.split('~e.')
-                edge = instance[0]
-                if len(instance) > 1:
-                    tokens.extend(map(lambda x: int(x), instance[1].split(',')))
+                # instance = instance.split('~e.')
+                edge = instance#[0]
+                # if len(instance) > 1:
+                #     tokens.extend(map(lambda x: int(x), instance[1].split(',')))
             elif instance[0] == '(':
                 node_id = instance[1:]
             else:
-                instance = instance.replace('\'', '').replace('\"', '').split('~e.')
-                name = instance[0]
-                if len(instance) > 1:
-                    tokens.extend(map(lambda x: int(x), instance[1].split(',')))
+                instance = instance.replace('\'', '').replace('\"', '')#.split('~e.')
+                name = instance#[0]
+                # if len(instance) > 1:
+                #     tokens.extend(map(lambda x: int(x), instance[1].split(',')))
                 if node_id != '':
                     node = AMRNode(id=node_id, name=name, parent={'node':parent, 'edge':edge}, status='unlabeled', tokens=list(set(tokens)))
                     self.nodes[node_id] = node
