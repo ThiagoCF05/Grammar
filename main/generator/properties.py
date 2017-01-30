@@ -3,8 +3,8 @@ import os
 local_dir = '../data/'
 server_dir = '/home/tcastrof/amr/data/'
 
-prince_dir = os.path.join(local_dir, 'prince')
-semeval_dir = os.path.join(local_dir, 'semeval')
+prince_dir = os.path.join(server_dir, 'prince')
+semeval_dir = os.path.join(server_dir, 'semeval')
 
 morph_verb = os.path.join(local_dir, 'morph-verbalization-v1.01.txt')
 verbalization = os.path.join(local_dir, 'verbalization-list-v1.06.txt')
