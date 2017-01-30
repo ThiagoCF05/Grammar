@@ -63,7 +63,7 @@ class Lexicalizer(object):
         f = filter(lambda x: x[1] == head and x[2] == pos, self.w_head_pos)
         if len(f) > 0:
             candidates = set(map(lambda w: w[0], f))
-            candidates = dict(map(lambda w: (w[0], 0.0), candidates))
+            candidates = dict(map(lambda w: (w, 0.0), candidates))
 
             dem = sum(map(lambda x: w_head_pos[x], f))
             for candidate in candidates:
