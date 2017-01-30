@@ -250,7 +250,7 @@ class Generator(object):
                             aux.append(token)
                     template.tree = ' '.join(aux)
                     fails.append(template)
-            templates = self.rerank(candidates)[:self.beam_n]
+            templates = sorted(candidates, key=lambda x: x.prob, reverse=True)[:self.beam_n]
 
         if len(concluded) == 0:
             concluded = fails
@@ -260,45 +260,45 @@ class Generator(object):
         else:
             return self.rerank(concluded)
 
-# if __name__ == '__main__':
-#     models = [prop.initial_rule_edges,
-#               prop.substitution_rule_edges,
-#               prop.initial_rule_edges_head,
-#               prop.substitution_rule_edges_head]
-#     verb2noun, noun2verb, verb2actor, actor2verb = utils.noun_verb('../data/morph-verbalization-v1.01.txt')
-#     sub2word = utils.subgraph_word('../data/verbalization-list-v1.06.txt')
-#
-#     amr = """(s / shut-down-05
-#                :ARG0 (p / person :wiki "Hugo_Chavez"
-#                   :name (n / name :op1 "Hugo" :op2 "Chavez"))
-#                :ARG1 (i / it)
-#                :time (d / date-entity :year 2004))"""
-#
-#     amr = """(p / possible-01
-#       :ARG1 (d / distinguish-01
-#             :ARG0 (i / i)
-#             :ARG1 (c / country :wiki "China"
-#                   :name (n / name :op1 "China"))
-#             :ARG2 (s / state :wiki "Arizona"
-#                   :name (n2 / name :op1 "Arizona"))))"""
-#
-#     factory = ERGFactory(verb2noun=verb2noun,
-#                      noun2verb=noun2verb,
-#                      verb2actor=verb2actor,
-#                      actor2verb=actor2verb,
-#                      sub2word=sub2word)
-#
-#     gen = Generator(amr=amr.lower(),
-#                     erg_factory=factory,
-#                     models=models,
-#                     beam_n=20,
-#                     lm=None)
-#
-#     candidates = gen.run()
-#
-#     for candidate in candidates:
-#         tree = candidate.tree
-#
-#         print tree
-#         print candidate.prob
-#         print 10 * '-'
+if __name__ == '__main__':
+    models = [prop.initial_rule_edges,
+              prop.substitution_rule_edges,
+              prop.initial_rule_edges_head,
+              prop.substitution_rule_edges_head]
+    verb2noun, noun2verb, verb2actor, actor2verb = utils.noun_verb('../data/morph-verbalization-v1.01.txt')
+    sub2word = utils.subgraph_word('../data/verbalization-list-v1.06.txt')
+
+    amr = """(s / shut-down-05
+               :ARG0 (p / person :wiki "Hugo_Chavez"
+                  :name (n / name :op1 "Hugo" :op2 "Chavez"))
+               :ARG1 (i / it)
+               :time (d / date-entity :year 2004))"""
+
+    amr = """(p / possible-01
+      :ARG1 (d / distinguish-01
+            :ARG0 (i / i)
+            :ARG1 (c / country :wiki "China"
+                  :name (n / name :op1 "China"))
+            :ARG2 (s / state :wiki "Arizona"
+                  :name (n2 / name :op1 "Arizona"))))"""
+
+    factory = ERGFactory(verb2noun=verb2noun,
+                     noun2verb=noun2verb,
+                     verb2actor=verb2actor,
+                     actor2verb=actor2verb,
+                     sub2word=sub2word)
+
+    gen = Generator(amr=amr.lower(),
+                    erg_factory=factory,
+                    models=models,
+                    beam_n=20,
+                    lm=None)
+
+    candidates = gen.run()
+
+    for candidate in candidates:
+        tree = candidate.tree
+
+        print tree
+        print candidate.prob
+        print 10 * '-'
