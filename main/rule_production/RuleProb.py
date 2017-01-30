@@ -20,12 +20,14 @@ class RuleProb(object):
         self.adjoining = json.load(open(adjoining))
         self.freq_rules(self.adjoining, os.path.join(rule_write, 'adjoining'))
 
-        # self.lexicons = json.load(open(lexicons))
-        # self.freq_lexicon(lexicon_write)
+        self.lexicons = json.load(open(lexicons))
+        self.freq_lexicon(lexicon_write)
 
     def freq_lexicon(self, fdir):
         sw, shead, spos, sedge = [], [], [], []
         w, w_wtm1, w_head, w_pos, w_edge = [], [], [], [], []
+
+        w_head_pos = map(lambda lexicon: (lexicon['w_t'], lexicon['head'], lexicon['pos']), self.lexicons)
 
         # Group coutings by part-of-speech
         for lexicon in self.lexicons:
@@ -53,6 +55,7 @@ class RuleProb(object):
         w_head = dict(nltk.FreqDist(w_head))
         w_pos = dict(nltk.FreqDist(w_pos))
         w_edge = dict(nltk.FreqDist(w_edge))
+        w_head_pos = dict(nltk.FreqDist(w_head_pos))
 
         p.dump(laplace, open(os.path.join(fdir, 'laplace.pickle'), 'w'))
         p.dump(w, open(os.path.join(fdir, 'w.pickle'), 'w'))
@@ -60,6 +63,7 @@ class RuleProb(object):
         p.dump(w_head, open(os.path.join(fdir, 'w_head.pickle'), 'w'))
         p.dump(w_pos, open(os.path.join(fdir, 'w_pos.pickle'), 'w'))
         p.dump(w_edge, open(os.path.join(fdir, 'w_edge.pickle'), 'w'))
+        p.dump(w_head_pos, open(os.path.join(fdir, 'w_head_pos.pickle'), 'w'))
 
     def freq_rules(self, rules, fname):
         group_2, group_3, group_4, group_5 = [], [], [], []
@@ -109,6 +113,9 @@ if __name__ == '__main__':
 
     rule_write = '/home/tcastrof/amr/data/prince/rules'
     lexicon_write = '/home/tcastrof/amr/data/prince/lexicon'
+
+    rule_write = '../data/prince/rules'
+    lexicon_write = '../data/prince/lexicon'
 
     RuleProb(initial=initial,
              substitution=sub,
