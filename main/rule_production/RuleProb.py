@@ -76,7 +76,7 @@ class RuleProb(object):
                 g2 = (template, rule['name'], 'empty')
                 group_2.append(g2)
 
-                g3 = (template, rule['name'], 'empty', rule['head'])
+                g3 = (template, rule['name'], 'empty', rule['parent'])
                 group_3.append(g3)
             else:
                 edges = rule['tree_rules']
@@ -86,23 +86,17 @@ class RuleProb(object):
                 g2 = (template, rule['name'], edges)
                 group_2.append(g2)
 
-                g3 = (template, rule['name'], edges, rule['head'])
+                g3 = (template, rule['name'], edges, rule['parent'])
                 group_3.append(g3)
 
         # 2 conditions
         freq_2 = dict(nltk.FreqDist(group_2))
-        # print 'Freq 2 original size: ', len(freq_2)
-        # freq_2 = dict(map(lambda x: (x, freq_2[x]), filter(lambda k: freq_2[k] > 1, freq_2)))
-        # print 'Freq 2 filtered size: ', len(freq_2)
         _fname = fname + '_rule_edges.pickle'
         p.dump(freq_2, open(_fname, 'w'))
 
         # 3 conditions
         freq_3 = dict(nltk.FreqDist(group_3))
-        # print 'Freq 3 original size: ', len(freq_3)
-        # freq_3 = dict(map(lambda x: (x, freq_3[x]), filter(lambda k: freq_3[k] > 1, freq_3)))
-        # print 'Freq 3 filtered size: ', len(freq_3)
-        _fname = fname + '_rule_edges_head.pickle'
+        _fname = fname + '_rule_edges_parent.pickle'
         p.dump(freq_3, open(_fname, 'w'))
 
 if __name__ == '__main__':
@@ -114,8 +108,8 @@ if __name__ == '__main__':
     rule_write = '/home/tcastrof/amr/data/prince/rules'
     lexicon_write = '/home/tcastrof/amr/data/prince/lexicon'
 
-    rule_write = '../data/prince/rules'
-    lexicon_write = '../data/prince/lexicon'
+    # rule_write = '../data/prince/rules'
+    # lexicon_write = '../data/prince/lexicon'
 
     RuleProb(initial=initial,
              substitution=sub,

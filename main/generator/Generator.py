@@ -274,13 +274,10 @@ if __name__ == '__main__':
                :ARG1 (i / it)
                :time (d / date-entity :year 2004))"""
 
-    amr = """(p / possible-01
-      :ARG1 (d / distinguish-01
-            :ARG0 (i / i)
-            :ARG1 (c / country :wiki "China"
-                  :name (n / name :op1 "China"))
-            :ARG2 (s / state :wiki "Arizona"
-                  :name (n2 / name :op1 "Arizona"))))"""
+    amr = """(p / permit-01
+               :ARG1 (l / leave-01
+                        :ARG0 (y / you)
+                        :ARG1 (i / i)))"""
 
     factory = ERGFactory(verb2noun=verb2noun,
                      noun2verb=noun2verb,
