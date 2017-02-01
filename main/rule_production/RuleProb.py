@@ -108,8 +108,13 @@ if __name__ == '__main__':
     rule_write = '/home/tcastrof/amr/data/prince/rules'
     lexicon_write = '/home/tcastrof/amr/data/prince/lexicon'
 
-    # rule_write = '../data/prince/rules'
-    # lexicon_write = '../data/prince/lexicon'
+    # initial = '../data/TEST/rules/initial.json'
+    # sub = '../data/TEST/rules/substitution.json'
+    # adj = '../data/TEST/rules/adjoining.json'
+    # lexicons = '../data/TEST/lexicon/lexicon.json'
+    #
+    # rule_write = '../data/TEST/rules'
+    # lexicon_write = '../data/TEST/lexicon'
 
     RuleProb(initial=initial,
              substitution=sub,

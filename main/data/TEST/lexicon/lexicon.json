@@ -1,14 +1,7 @@
 [
     {
-        "edge": ":ARG0",
-        "head": "you",
-        "pos": "PRP",
-        "w_t": "you",
-        "w_tm1": "*"
-    },
-    {
-        "edge": ":ARG0",
-        "head": "you",
+        "edge": ":root",
+        "head": "permit-01",
         "pos": "PRP",
         "w_t": "you",
         "w_tm1": "*"
@@ -21,29 +14,8 @@
         "w_tm1": "you"
     },
     {
-        "edge": ":ARG1",
-        "head": "leave-01",
-        "pos": "VB",
-        "w_t": "leave",
-        "w_tm1": "can"
-    },
-    {
-        "edge": ":ARG1",
-        "head": "i",
-        "pos": "PRP",
-        "w_t": "me",
-        "w_tm1": "leave"
-    },
-    {
-        "edge": ":ARG1",
-        "head": "i",
-        "pos": "PRP",
-        "w_t": "me",
-        "w_tm1": "leave"
-    },
-    {
-        "edge": ":ARG1",
-        "head": "leave-01",
+        "edge": ":root",
+        "head": "permit-01",
         "pos": "VB",
         "w_t": "leave",
         "w_tm1": "can"
@@ -51,9 +23,9 @@
     {
         "edge": ":root",
         "head": "permit-01",
-        "pos": "MD",
-        "w_t": "can",
-        "w_tm1": "you"
+        "pos": "PRP",
+        "w_t": "me",
+        "w_tm1": "leave"
     },
     {
         "edge": ":root",

@@ -63,8 +63,8 @@ def run(fread, fwrite, models, factory, lm):
     # write(realized, 'realized')
 
 if __name__ == '__main__':
-    models = [prop.initial_rule_edges,
-              prop.substitution_rule_edges,
+    models = [#prop.initial_rule_edges,
+              #prop.substitution_rule_edges,
               prop.initial_rule_edges_head,
               prop.substitution_rule_edges_head]
     verb2noun, noun2verb, verb2actor, actor2verb = utils.noun_verb(prop.morph_verb)

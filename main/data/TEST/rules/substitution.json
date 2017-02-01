@@ -3,10 +3,10 @@
         "graph": "(XXX)",
         "graph_rules": {},
         "head": "you",
-        "name": ":ARG0/NP~you",
+        "name": ":ARG0/E~you",
         "noun_info": {},
-        "parent": ":ARG1/VP~leave-01",
-        "tree": "XXX-PRP",
+        "parent": ":ARG1/E~leave-01",
+        "tree": "empty",
         "tree_rules": [],
         "verb_info": {}
     },
@@ -14,15 +14,15 @@
         "graph": "c",
         "graph_rules": {},
         "head": "i",
-        "name": ":ARG1/NP~i",
+        "name": ":ARG1/E~i",
         "noun_info": {},
-        "parent": ":ARG1/VP~leave-01",
-        "tree": "XXX-PRP",
+        "parent": ":ARG1/E~leave-01",
+        "tree": "empty",
         "tree_rules": [],
         "verb_info": {}
     },
     {
-        "graph": "(XXX \n\t :ARG0/NP~you - \n\t :ARG1/NP~i -)",
+        "graph": "(XXX \n\t :ARG0/E~you - \n\t :ARG1/E~i -)",
         "graph_rules": {
             "leave-01": [
                 ":ARG0~you",
@@ -30,13 +30,13 @@
             ]
         },
         "head": "leave-01",
-        "name": ":ARG1/VP~leave-01",
+        "name": ":ARG1/E~leave-01",
         "noun_info": {},
         "parent": ":root/ROOT~permit-01",
-        "tree": "XXX-VB :ARG1/NP",
+        "tree": "empty",
         "tree_rules": [
-            ":ARG1~i",
-            ":ARG0~you"
+            ":ARG0~you",
+            ":ARG1~i"
         ],
         "verb_info": {}
     }

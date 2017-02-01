@@ -1,6 +1,6 @@
 [
     {
-        "graph": "(XXX \n\t :ARG1/VP~leave-01 -)",
+        "graph": "(XXX \n\t :ARG1/E~leave-01 -)",
         "graph_rules": {
             "permit-01": [
                 ":ARG1~leave-01"
@@ -10,7 +10,7 @@
         "name": ":root/ROOT~permit-01",
         "noun_info": {},
         "parent": "",
-        "tree": ":ARG0/NP XXX-MD :ARG1/VP .",
+        "tree": "you can leave me .",
         "tree_rules": [
             ":ARG1~leave-01"
         ],

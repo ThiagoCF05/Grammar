@@ -3,6 +3,7 @@ import os
 local_dir = '../data/'
 server_dir = '/home/tcastrof/amr/data/'
 
+test_dir = os.path.join(local_dir, 'TEST')
 prince_dir = os.path.join(server_dir, 'prince')
 semeval_dir = os.path.join(server_dir, 'semeval')
 
@@ -24,8 +25,8 @@ lexicon_w_edge= os.path.join(prince_dir, 'lexicon/w_edge.pickle')
 
 initial_rule_edges = os.path.join(prince_dir, 'rules/initial_rule_edges.pickle')
 substitution_rule_edges = os.path.join(prince_dir, 'rules/substitution_rule_edges.pickle')
-initial_rule_edges_head = os.path.join(prince_dir, 'rules/initial_rule_edges_head.pickle')
-substitution_rule_edges_head = os.path.join(prince_dir, 'rules/substitution_rule_edges_head.pickle')
+initial_rule_edges_head = os.path.join(prince_dir, 'rules/initial_rule_edges_parent.pickle')
+substitution_rule_edges_head = os.path.join(prince_dir, 'rules/substitution_rule_edges_parent.pickle')
 
 voices = os.path.join(prince_dir, '/rules/voices.json')
 template_voice = os.path.join(prince_dir, '/rules/voices.pickle')
