@@ -74,17 +74,17 @@ class Generator(object):
                 if len(result) == 0:
                     result = filter(lambda g: rule.name.split('~')[0] == g[1].split('~')[0], self.grammar[tree_type])
             else:
-                parent = synchg.rules[rule.parent]
-                parent = parent.name
-
-                result = filter(lambda g: rule.name == g[1] and parent == g[3], self.grammar[tree_type])
+                # parent = synchg.rules[rule.parent]
+                # parent = parent.name
+                #
+                # result = filter(lambda g: rule.name == g[1] and parent == g[3], self.grammar[tree_type])
+                # if len(result) == 0:
+                #     result = filter(lambda g: rule.name == g[1] and parent.split('~')[0] == g[3].split('~')[0], self.grammar[tree_type])
+                #
+                #     if len(result) == 0:
+                result = filter(lambda g: rule.name == g[1], self.grammar[tree_type])
                 if len(result) == 0:
-                    result = filter(lambda g: rule.name == g[1] and parent.split('~')[0] == g[3].split('~')[0], self.grammar[tree_type])
-
-                    if len(result) == 0:
-                        result = filter(lambda g: rule.name == g[1], self.grammar[tree_type])
-                        if len(result) == 0:
-                            result = filter(lambda g: rule.name.split('~')[0] == g[1].split('~')[0], self.grammar[tree_type])
+                    result = filter(lambda g: rule.name.split('~')[0] == g[1].split('~')[0], self.grammar[tree_type])
             return result
 
         def filter_by_outcome(templates):
