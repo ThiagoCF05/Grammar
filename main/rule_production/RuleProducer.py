@@ -276,7 +276,7 @@ if __name__ == '__main__':
 
     aligner = AMRAligner(verb2noun, noun2verb, verb2actor, actor2verb, sub2word, freq_table, proc)
 
-    dirs = ['/home/tcastrof/amr/data/prince/data/train']
+    dirs = ['/home/tcastrof/amr/data/prince/train']
 
     frules = {
         'initial': prop.initial_rules,
