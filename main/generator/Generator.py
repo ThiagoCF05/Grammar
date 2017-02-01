@@ -29,9 +29,9 @@ class Generator(object):
         self.grammar = {'initial':{}, 'substitution':{}}
         for fname in models:
             aux = fname.split('/')[-1].split('_')
-            if aux[0] == 'initial' and len(aux)-1 == 2:
+            if aux[0] == 'initial' and len(aux)-1 == 3:
                 self.grammar['initial'] = p.load(open(fname))
-            elif aux[0] == 'substitution' and len(aux)-1 == 2:
+            elif aux[0] == 'substitution' and len(aux)-1 == 3:
                 self.grammar['substitution'] = p.load(open(fname))
 
         self.lexicalizer = Lexicalizer()
@@ -270,10 +270,11 @@ class Generator(object):
             return self.rerank(concluded)
 
 # if __name__ == '__main__':
-#     models = [prop.initial_rule_edges,
-#               prop.substitution_rule_edges,
-#               prop.initial_rule_edges_head,
-#               prop.substitution_rule_edges_head]
+#     models = ['../data/TEST/rules/initial_rule_edges.pickle',
+#               '../data/TEST/rules/substitution_rule_edges.pickle',
+#               '../data/TEST/rules/initial_rule_edges_parent.pickle',
+#               '../data/TEST/rules/substitution_rule_edges_parent.pickle']
+#
 #     verb2noun, noun2verb, verb2actor, actor2verb = utils.noun_verb('../data/morph-verbalization-v1.01.txt')
 #     sub2word = utils.subgraph_word('../data/verbalization-list-v1.06.txt')
 #
@@ -294,7 +295,7 @@ class Generator(object):
 #                      actor2verb=actor2verb,
 #                      sub2word=sub2word)
 #
-#     gen = Generator(amr=amr.lower(),
+#     gen = Generator(amr=amr,
 #                     erg_factory=factory,
 #                     models=models,
 #                     beam_n=20,

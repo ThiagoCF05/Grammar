@@ -276,26 +276,26 @@ if __name__ == '__main__':
 
     aligner = AMRAligner(verb2noun, noun2verb, verb2actor, actor2verb, sub2word, freq_table, proc)
 
-    dirs = ['/home/tcastrof/amr/data/prince/train']
-
-    frules = {
-        'initial': prop.initial_rules,
-        'substitution': prop.substitution_rules,
-        'adjoining': prop.adjoining_rules
-    }
-
-    flexicons = prop.lexicons
-
-    # dirs = ['../data/TEST/train']
+    # dirs = ['/home/tcastrof/amr/data/prince/train']
+    #
     # frules = {
-    #     'initial': '../data/TEST/rules/initial.json',
-    #     'substitution': '../data/TEST/rules/substitution.json',
-    #     'adjoining': '../data/TEST/rules/adjoining.json'
+    #     'initial': prop.initial_rules,
+    #     'substitution': prop.substitution_rules,
+    #     'adjoining': prop.adjoining_rules
     # }
     #
-    # flexicons = '../data/TEST/lexicon/lexicon.json'
+    # flexicons = prop.lexicons
 
-    producer = RuleProducer(aligner=aligner, dirs=dirs, isAligned=True)
+    dirs = ['../data/TEST/train']
+    frules = {
+        'initial': '../data/TEST/rules/initial.json',
+        'substitution': '../data/TEST/rules/substitution.json',
+        'adjoining': '../data/TEST/rules/adjoining.json'
+    }
+
+    flexicons = '../data/TEST/lexicon/lexicon.json'
+
+    producer = RuleProducer(aligner=aligner, dirs=dirs, isAligned=False)
 
     producer.run()
     producer.write_rules(frules)

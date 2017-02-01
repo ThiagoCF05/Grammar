@@ -100,21 +100,21 @@ class RuleProb(object):
         p.dump(freq_3, open(_fname, 'w'))
 
 if __name__ == '__main__':
-    initial = prop.initial_rules
-    sub = prop.substitution_rules
-    adj = prop.adjoining_rules
-    lexicons = prop.lexicons
-
-    rule_write = '/home/tcastrof/amr/data/prince/rules'
-    lexicon_write = '/home/tcastrof/amr/data/prince/lexicon'
-
-    # initial = '../data/TEST/rules/initial.json'
-    # sub = '../data/TEST/rules/substitution.json'
-    # adj = '../data/TEST/rules/adjoining.json'
-    # lexicons = '../data/TEST/lexicon/lexicon.json'
+    # initial = prop.initial_rules
+    # sub = prop.substitution_rules
+    # adj = prop.adjoining_rules
+    # lexicons = prop.lexicons
     #
-    # rule_write = '../data/TEST/rules'
-    # lexicon_write = '../data/TEST/lexicon'
+    # rule_write = '/home/tcastrof/amr/data/prince/rules'
+    # lexicon_write = '/home/tcastrof/amr/data/prince/lexicon'
+
+    initial = '../data/TEST/rules/initial.json'
+    sub = '../data/TEST/rules/substitution.json'
+    adj = '../data/TEST/rules/adjoining.json'
+    lexicons = '../data/TEST/lexicon/lexicon.json'
+
+    rule_write = '../data/TEST/rules'
+    lexicon_write = '../data/TEST/lexicon'
 
     RuleProb(initial=initial,
              substitution=sub,
