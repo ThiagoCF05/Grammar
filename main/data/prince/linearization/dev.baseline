@@ -1,0 +1,145 @@
+:root chapter :mod 1
+:arg1 i :time age-01 :arg2 temporal-quantity :arg0 i :root see-01 :mod once :arg1 picture :location book/name :mod primeval :topic forest :mod magnificent
+:root picture :domain it :mod constrictor :topic boa :arg0-of swallow-01 :arg1 animal
+:root be-located-at-91 :arg2-of copy-01 :arg1 picture :arg1-of draw-01 :arg1 thing :arg2 here
+:arg0 boa :mod constrictor :arg1 swallow-01 :arg1 prey :arg0 boa :mod constrictor :polarity - :manner chew-01 :arg1 prey :root say-01 :arg0 book
+:op1 possible-01 :polarity - :arg0 they :arg1 move-01 :time after :op1 that :root and :arg0 they :op2 sleep-01 :duration temporal-quantity :arg0 they :purpose digest-01 :arg0 they
+:time then :arg0 i :arg1 adventure :location jungle :arg1-of deep-02 :root ponder-01
+:root and :arg0 i :op2 succeed-01 :arg0 i :arg1 make-01 :arg1 picture :arg1-of draw-01 :arg0 i :ord ordinal-entity :time after :op1 work-01 :arg0 i :mod color :instrument pencil :mod some
+:poss i :root picture/name
+:root and :arg0 it :op1 look-02 :arg1 this :arg0 i :op2 show-01 :arg2 grown-up :poss i :arg1 masterpiece :arg0 i :op3 ask-01 :arg0 picture :arg1-of draw-01 :arg1 frighten-01 :mode interrogative :arg1 grown-up :arg2 grown-up
+:root contrast-01 :arg0 they :arg2 answer-01 :arg2 frighten-01 :mode interrogative
+:arg0 hat :root frighten-01 :arg1 one :mod any :arg1-of cause-01 :arg0 amr-unknown
+:arg0 picture :arg1-of draw-01 :arg0 i :polarity - :root picture-01 :arg1 hat
+:arg0 it :root picture-01 :mod constrictor :arg1 boa :arg0-of digest-01 :arg1 elephant
+:root contrast-01 :arg0 i :op1 draw-01 :mod another :arg1 picture :arg1-of cause-01 :arg0 possible-01 :polarity - :arg0 grown-up :arg1 understand-01 :arg1 it :arg2 and :arg0 i :op2 draw-01 :part-of boa :mod constrictor :arg1 inside :purpose possible-01 :arg0 grown-up :arg1 see-01 :arg1 it :arg1-of clear-06
+:time always :arg0 they :root need-01 :arg1 explain-01
+-
+:arg0 that :root cause-01 :arg1 i :time age-01 :arg2 temporal-quantity :arg0 i :arg1 give-up-07 :topic person :arg0-of paint-02 :mod magnificent :arg1 career
+-
+:op1 understand-01 :polarity - :arg0 grown-up :arg1 anything :time ever :mod by-oneself :root and :domain explain-01 :arg0 child :arg1 thing :arg2 grown-up :time always :mod forever :op2 tiresome
+:root cause-01 :arg0 i :op1 choose-01 :mod another :arg1 profession :arg1 and :arg0 i :op2 learn-01 :arg0 i :arg1 pilot-01 :arg1 airplane
+-
+:root possible-01 :arg0 i :arg1 distinguish-01 :arg2 state/name :manner glance-01 :arg0 i :arg1 country/name
+:arg1 one :condition get-03 :arg2 lost :time date-entity :root value-02 :mod such :arg1 knowledge
+:root encounter-01 :arg0 i :mod great :quant many :arg1 person :arg1-of concern-01 :arg0 matter :mod consequence :mod great :quant many :mod this :poss life :time course
+:root live-01 :arg0 i :mod great :mod deal :location among :op1 grown-up
+:root see-01 :arg0 i :arg1 they :arg1-of close-10 :arg2 at-hand :arg2-of intimate-02 :arg1 i
+:root and :arg0 that :polarity - :op2 improve-01/much :arg1 thing :arg1-of opine-01 :arg0 i :topic they
+-
+:arg0 i :root try-01 :arg0 i :arg1 find-out-03 :arg1 understand-01 :mode interrogative :mod this :arg0 person :arg1-of true-01
+:root contrast-01 :domain that :arg1 hat :op1 he :arg0 or :op2 she :arg2 say-01 :time always
+:root talk-01 :arg0 i :arg1 or :op1 boa :mod constrictor :mod primeval :op2 forest :op3 star :mod that :arg2 person :time ever :polarity -
+:arg1 i :arg0 i :root bring-01 :arg3 down :poss he :arg2 level
+:arg0 i :root talk-01 :arg1 and :op1 bridge :op2 golf :op3 politics :op4 necktie :arg2 he
+-
+:root chapter :mod 2
+:root cause-01 :arg1 live-01 :arg0 i :poss i :arg1 life :manner alone :duration until :op1 have-06 :arg0 i :mod plane :arg1 accident :location desert/name :quant temporal-quantity :op1 now :time before
+:root break-01 :arg1 something :location engine :poss i
+-
+-
+:root sleep-01 :arg0 i :location sand :time date-entity :ord ordinal-entity :location relative-position :mod any :op1 place :arg1-of inhabit-01 :arg0 human :quant distance-quantity :direction away
+:root isolate-01/more :arg1 i :compared-to person :arg1-of shipwreck-01 :arg0-of sail-01 :location raft :part middle :location ocean
+:root cause-01 :arg1 possible-01 :arg0 you :arg1 imagine-01 :time sunrise :mod little :mod odd :arg0 voice :time-of wake-01 :arg1 i :arg1 amaze-01 :arg1 i
+:arg1 draw-01 :mode imperative :polite + :arg0 you :arg1 sheep :arg2 i :root say-01 :arg0 it
+:root string-entity
+:root draw-01 :arg0 you :arg1 sheep :arg2 i :mode imperative
+:root jump-03 :arg0 i :mod thunderstruck :arg1-of complete-02 :destination foot :part-of i
+:arg0 i :root blink-01 :part-of i :arg1 eye :arg1-of hard-04
+:root look-01 :arg0 i :mod all :direction around :op1 i :manner careful
+:root and :arg0 i :op2 see-01 :arg1 person :mod extraordinary/most :mod small :arg1-of stand-01 :arg2 there :arg2-of serious-01/great :arg0-of examine-01 :arg1 i
+:root possible-01 :location here :arg0 you :arg1 see-01 :arg1 portrait :arg1-of good-02/most :arg1-of make-01 :arg0 i :time late/more :arg1-of possible-01 :topic he
+:root contrast-01 :arg2 charm-01 :arg0 picture :arg1-of draw-01 :arg0 i :degree much/very :quant less :mod certain :poss picture :compared-to model
+:root contrast-01 :arg1 i :polarity - :arg2 fault-01 :arg2 that
+:root discourage-01 :arg0 grown-up :arg1 i :arg2 career :topic person :arg0-of paint-02 :poss i :arg0-of cause-01 :arg1 learn-01 :polarity - :arg0 i :arg0 i :arg1 draw-01 :arg1 anything :time ever :arg2-of except-01 :op1 boa :direction from :op1 inside :arg1 and :op2 boa :direction from :op1 inside :arg1 i :time age-01 :arg2 temporal-quantity
+:arg1 thing :arg1-of appear-01 :manner sudden :mod this :root stare-01 :arg0 i :manner start-03/fair :part-of i :arg0 eye :arg1-of cause-01 :arg0 astonish-01 :arg1 i :arg1 eye :manner out-06 :part-of i :arg2 head :time now
+:arg0 you :root remember-01 :mode imperative :arg1 crash-01 :arg1 i :location desert :location relative-position :mod any :arg1-of inhabit-01 :op1 region :quant distance-quantity :direction away
+:root contrast-01 :arg2 seem-01 :op1 stray-01 :poss i :mod little :arg0 man :arg1 among :op1 sand :polarity - :manner certain :polarity - :arg1 and :op2 faint-01 :poss i :mod little :arg0 man :arg1-of cause-01 :arg0 or :op1 fatigue-01 :op2 hunger-01 :op3 thirst-01 :op4 fear-01 :polarity -
+:arg0 nothing :topic he :root suggest-01 :arg1 child :arg1-of lose-02 :part middle :location desert :location relative-position :op1 thing :arg1-of inhabit-01 :arg0 human :mod any :quant distance-quantity :direction away
+:arg1 contrast-01 :arg2 be-located-at-91 :mode interrogative :arg1 you :arg2 here :arg1-of cause-01 :arg0 amr-unknown :arg0 i :root say-01 :arg2 he :time possible-01 :arg0 i :arg1 speak-01 :time at-last
+:root and :op2 repeat-01 :arg0 he :arg1 draw-01 :mode imperative :polite + :arg0 you :arg1 sheep :arg2 i :arg0 he :purpose answer-01 :arg1-of slow-05/very :arg0 he :conj-as-if speak-01 :arg1 matter :mod great :mod consequence
+:root dare-01 :arg0 one :arg2 disobey-01 :arg0 one :polarity - :time overpower-01/too :arg0 mystery
+:root take-01 :location relative-position :mod any :op1 place :arg1-of inhabit-01 :arg0 human :quant distance-quantity :direction away :arg0 i :arg1-of endanger-01 :arg0 die-01 :arg1 i :quant 1 :quant sheet :op1 paper :arg1 and :poss i :mod fountain :op2 pen :poss i :arg2 pocket :concession possible-01 :arg1 seem-01 :arg2 i :arg1 absurd
+:root contrast-01 :time then :arg0 i :op1 remember-01 :arg1 and :op1 geography :op2 history :op3 arithmetic :op4 grammar :arg1 concentrate-01 :arg2 study-01 :arg0 i :arg2 and :arg0 i :op2 tell-01 :mod little :arg2 chap :mod also :mod little :manner cross :arg0 i :polarity - :arg1 know-03 :arg1 draw-01 :arg0 i
+:arg0 he :root answer-01 :arg1 i :polarity - :arg2 matter-01 :arg1 that
+:root draw-01 :arg0 you :arg1 sheep :arg2 i :mode imperative
+:root contrast-01 :arg0 i :polarity - :time ever :arg2 draw-01 :arg1 sheep
+:root cause-01 :arg1 draw-01 :arg0 i :quant 1 :arg1 picture :arg1-of include-91 :quant 2 :arg2 picture :arg0 i :arg1-of draw-01 :time often/so :arg2 he
+:mod constrictor :root boa :direction from :op1 outside
+-
+:arg0 i :polarity - :root want-01 :arg1 elephant :location inside :op1 boa :mod constrictor
+:domain boa :mod constrictor :mod dangerous :op1 creature :root and :domain elephant :op2 cumbersome/very
+:domain everything :root small/very :location live-01 :arg0 i
+:arg0 i :root need-01 :arg1 sheep
+:root draw-01 :arg0 you :arg1 sheep :arg2 i :mode imperative
+:root cause-01 :arg0 i :arg1 draw-01 :time then
+:arg0 he :op1 look-01 :arg1 it :manner careful :root and :arg1 no :arg0 he :op2 say-01 :time then
+:time already :root sick-05/very :mod this :arg1 sheep
+:root make-01 :arg0 you :arg1 another :arg3 i :mode imperative
+:root cause-01 :arg0 i :arg1 make-01 :mod another :arg1 picture :arg1-of draw-01 :arg0 i
+:root smile-01 :arg1 i :arg0 person/have-rel-role-91 :arg2 friend :manner gentle :manner indulgent
+:arg0 you :arg1 see-01 :domain this :polarity - :arg1 sheep :root say-01 :arg0 he
+:domain this :root ram
+:arg0 it :root have-03 :arg1 horn
+:root cause-01 :arg1 do-02 :arg0 i :arg1 picture :arg1-of draw-01 :arg0 i :frequency 1 :mod again :mod over :time then
+:root contrast-01 :mod too :arg1-of resemble-01 :arg2 other :arg1 reject-01 :arg1 it
+:domain one :mod this :root old/too
+:arg0 i :root want-01 :arg1 sheep :arg0-of live-01 :arg1-of long-03
+:arg1 patient-01 :arg1 i :time by :mod this :op1 time :root exhaust-01 :arg1-of cause-01 :arg1 i :arg0 hurry-01 :arg0 i :arg2 start-01 :arg0 i :arg1 disassemble-01 :arg1 engine :poss i
+:root cause-01 :arg0 i :arg1 toss-out-02 :mod this :arg1 picture :arg1-of draw-01 :arg0 i :direction off
+:root and :arg0 i :op2 explain-01 :arg1 it
+:root box :poss he :domain this :mod only
+:root be-located-at-91 :arg1 sheep :arg1-of ask-01 :arg0 you :arg2 inside
+-
+:arg0 you :root think-01 :mode interrogative :arg1 obligate-01 :mod this :arg0 sheep :arg2 have-03 :mod great :quant deal :arg1 grass
+:root cause-01 :arg0 amr-unknown
+:root cause-01 :domain everything :location live-01 :arg0 i :arg0 small/very
+:mod enough :arg1-of sure-02 :arg0 grass :root benefit-01 :arg1 he
+:arg0 i :root say-01
+:arg0 i :root give-01 :arg2 you :mod small/very :arg1 sheep
+-
+:root sleep-01 :arg0 he
+:root and :op2 acquaint-01 :arg1 i :mod little :arg2 prince :manner that
+:root chapter :mod 3
+:root take-10 :arg1 temporal-quantity :arg0 i :arg1 learn-01 :arg1 place :arg1 he :arg3-of come-01
+:root seem-01 :mod little :arg0 prince :arg0-of question-01 :arg2 i :quant many/so :polarity - :time ever :arg1 hear-01 :arg1 one :arg0 i :arg1-of ask-01 :arg2 prince
+:arg0 word :arg1-of drop-06 :arg1-of chance-02 :root reveal-01 :arg2 i :manner little-by-little :arg1 everything
+:domain amr-unknown :mod that :arg1 object :arg0 he :root ask-01 :arg2 i :time see-01 :arg0 he :arg1-of draw-01 :polarity - :arg0 i :arg1-of cause-01 :degree too/much :arg0 complicate-01 :arg2 i :arg1 airplane :poss i :ord ordinal-entity
+:domain that :polarity - :root object
+:root fly-01 :arg1 it
+:domain it :root airplane
+:poss i :root airplane :domain it
+:root and :arg0 i :op2 pride-01 :arg0 he :arg2 learn-01 :arg1 possible-01 :arg1 fly-01 :arg1 i
+:time then :arg0 he :root cry-out-03 :arg1 string-entity
+:root drop-01 :arg1 you :arg3 sky :direction down :mode interrogative
+:root yes
+:arg0 i :root answer-01 :manner modest
+:root oh :mode expressive
+:domain that :root funny
+:root and :mod little :arg0 prince :op2 break-in-17 :mod lovely :quant peal :arg1 laugh-01 :arg1 i :degree much/very :arg0-of irritate-01
+:arg0 i :root like-02 :manner serious-01 :arg1 take-04 :poss i :arg1 misfortune
+:time then :arg0 he :root add-01 :arg1 cause-01 :arg1 come-01 :arg1 you :arg3 sky :mod too
+:poss you :root planet :domain amr-unknown
+:mod that :time moment :arg0 i :op1 catch-03 :arg1 gleam :domain present-02 :arg1 he :arg1-of penetrate-01 :arg1-of possible-01 :polarity - :location mystery :consist-of light :root and :arg0 i :op2 demand-01 :arg1 come-01 :mode interrogative :arg1 you :mod another :arg3 planet :manner abrupt
+:root contrast-01 :arg0 he :polarity - :arg2 reply-01
+:op1 toss-01 :arg0 he :part-of he :arg1 head :manner gentle :manner take-away-05 :polarity - :arg0 he :part-of he :arg1 eye :poss i :direction plane :root and :arg1 possible-01 :polarity - :arg1 you :manner plane :arg1 come-01 :arg3 away :extent far/very :op2 say-01 :arg0 he
+:root and :arg0 he :op2 sink-01 :arg4 reverie :arg1-of long-03
+:root bury-01 :arg0 he :arg1 he :arg0 he :arg2 contemplate-01 :poss he :arg1 treasure :arg0 he :time take-out-11 :arg1 sheep :poss he :source pocket :poss i :time then
+:root possible-01 :arg0 you :arg1 imagine-01 :arg0 confidence/half :mod other :topic planet :poss he :arg1 arouse-01 :arg1 curious-01 :arg1 i
+:root cause-01 :arg0 i :mod great :arg1 effort-01 :arg0 i :arg1 find-out-03 :arg1 information :quant more :mod this :topic subject
+:root say-01 :arg1 you :arg1 come-01 :arg3 amr-unknown :poss i :mod little :arg2 man
+:arg0 you :root live-01 :domain amr-unknown :arg1-of speak-01 :arg0 you :location place
+:arg0 you :root want-01 :arg0 you :arg1 take-01 :poss you :arg1 sheep :arg3 amr-unknown
+:time after :mod reflect-02 :op1 silent :arg0 he :root answer-01 :arg1 thing :arg1-of good-02/so :topic box :arg0 you :arg1-of give-01 :arg2 he :domain possible-01 :arg1 box :arg0 he :arg1 use-01 :poss he :arg2 house :time date-entity
+:domain that :root so
+-
+:root contrast-01 :arg2 seem-01 :mod this :arg0 offer :arg1 shock-01 :mod little :arg1 prince :arg0-of say-01 :arg0 prince :arg1 tie-01 :mode imperative :arg1 he
+:domain idea :root queer
+:root contrast-01 :arg2 tie-01 :polarity - :arg0 you :arg1 he :condition-of thing
+:arg0 he :op1 wander-01 :arg1 somewhere :arg1 and :arg1 he :op2 get-03 :arg2 lost :root say-01 :arg0 i
+-
+:root anywhere
+:root ahead :arg1-of straight-04 :compared-to he
+:polarity - :arg1 matter-01 :arg1 that :root say-01 :mod little :arg0 prince :manner earnest-01 :time then
+:domain everything :location live-01 :arg0 i :root small/so
+:root and :arg0 he :op2 add-01 :quant hint :manner sad-02 :arg1-of possible-01 :polarity - :arg0 somebody :arg1 go-02 :arg4 far/very :direction ahead :arg1-of straight-04 :compared-to somebody

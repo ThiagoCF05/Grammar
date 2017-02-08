@@ -25,7 +25,8 @@ class RuleProducer(object):
 
         self.processed, self.errors, self.rules_processed, self.invalid_rules = 0, 0, 0, 0
 
-        self.grammar = SynchG(initial_rules=[], substitution_rules=[], adjoining_rules=[], lexicons=[])
+        self.grammar = SynchG(initial_rules=[], substitution_rules=[], adjoining_rules=[], lexicons=[], linearizations=[])
+        self.gold = []
 
     def print_report(self):
         print 'AMRs processed: ', self.processed
@@ -45,9 +46,11 @@ class RuleProducer(object):
     def align_tree(self, amr, info, alignments):
         # print amr['sentence']
         # print amr['amr'], '\n\n'
-        inducer = TAGSynchAligner(text=amr['sentence'], amr=amr['amr'], info=info, alignments=alignments)
+        inducer = TAGSynchAligner(text=amr['sentence'], amr=amr['amr'].lower(), info=info, alignments=alignments)
         alignments = inducer.run()
-        return alignments
+
+        linearizations = inducer.linearization()
+        return alignments, linearizations
 
     def extract_lexicons(self, alignments):
         for lexicon in alignments.lexicons:
@@ -136,7 +139,11 @@ class RuleProducer(object):
             alignments, info = self.align_amr(amr)
 
             try:
-                alignments = self.align_tree(amr=amr, alignments=alignments, info=info)
+                alignments, linearizations = self.align_tree(amr=amr, alignments=alignments, info=info)
+
+                self.gold.append(linearizations[0])
+                self.grammar.linearizations.append(linearizations[1])
+
                 self.extract_rules(alignments)
                 self.extract_lexicons(alignments)
             except:
@@ -251,6 +258,18 @@ class RuleProducer(object):
         write(self.grammar.substitution_rules, fnames['substitution'])
         write(self.grammar.adjoining_rules, fnames['adjoining'])
 
+    def write_linearizations(self, fgold, flinear):
+        fl = open(flinear, 'w')
+        fg = open(fgold, 'w')
+        for i, linearization in enumerate(self.grammar.linearizations):
+            fg.write(' '.join(self.gold[i]).encode('utf-8'))
+            fg.write('\n')
+
+            fl.write(' '.join(linearization))
+            fl.write('\n')
+        fl.close()
+        fg.close()
+
     def run(self):
         for dir in self.dirs:
             if 'prince' in dir:
@@ -276,27 +295,30 @@ if __name__ == '__main__':
 
     aligner = AMRAligner(verb2noun, noun2verb, verb2actor, actor2verb, sub2word, freq_table, proc)
 
-    # dirs = ['/home/tcastrof/amr/data/prince/train']
-    #
-    # frules = {
-    #     'initial': prop.initial_rules,
-    #     'substitution': prop.substitution_rules,
-    #     'adjoining': prop.adjoining_rules
-    # }
-    #
-    # flexicons = prop.lexicons
+    dirs = ['/home/tcastrof/amr/data/prince/train']
 
-    dirs = ['../data/TEST/train']
     frules = {
-        'initial': '../data/TEST/rules/initial.json',
-        'substitution': '../data/TEST/rules/substitution.json',
-        'adjoining': '../data/TEST/rules/adjoining.json'
+        'initial': prop.initial_rules,
+        'substitution': prop.substitution_rules,
+        'adjoining': prop.adjoining_rules
     }
 
-    flexicons = '../data/TEST/lexicon/lexicon.json'
+    # flexicons = prop.lexicons
 
-    producer = RuleProducer(aligner=aligner, dirs=dirs, isAligned=False)
+    # dirs = ['../data/prince/train']
+    # frules = {
+    #     'initial': '../data/prince/rules/initial.json',
+    #     'substitution': '../data/prince/rules/substitution.json',
+    #     'adjoining': '../data/prince/rules/adjoining.json'
+    # }
+
+    flexicons = '/home/tcastrof/amr/data/prince/lexicon/lexicon.json'
+    flinear = '/home/tcastrof/amr/data/prince/parallel/train.de'
+    fgold = '/home/tcastrof/amr/data/prince/parallel/train.en'
+
+    producer = RuleProducer(aligner=aligner, dirs=dirs, isAligned=True)
 
     producer.run()
-    producer.write_rules(frules)
-    producer.write_lexicons(flexicons)
+    # producer.write_rules(frules)
+    # producer.write_lexicons(flexicons)
+    producer.write_linearizations(fgold, flinear)

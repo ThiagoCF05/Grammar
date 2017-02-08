@@ -472,12 +472,16 @@ class AMRAligner(object):
                     self.alignments.count = self.alignments.count + 1
 
         # Label coreferences
-        # self.match_coreferences_patterns()
+        if not isAligned:
+            self.match_coreferences_patterns()
 
         # Classify unlabeled nodes by frequency in the training alignments
         for node in self.amr.nodes:
             if self.amr.nodes[node].status != 'labeled':
-                rule = self.match_frequency_patterns(node)
+                if isAligned:
+                    rule = self.match_frequency_patterns(node)
+                else:
+                    rule = self.create_rule(node)
                 self.alignments.erg_rules[self.alignments.count] = rule
                 self.alignments.count = self.alignments.count + 1
 

@@ -29,7 +29,7 @@ class SynchRule(object):
                 self.tree_rules.append(i)
 
 class SynchG(object):
-    def __init__(self, rules={}, start='', initial_rules=[], substitution_rules=[], adjoining_rules=[], lexicons=[]):
+    def __init__(self, rules={}, start='', initial_rules=[], substitution_rules=[], adjoining_rules=[], lexicons=[], linearizations=[]):
         self.rules = rules
         self.start = start
         self.count = 0
@@ -37,3 +37,4 @@ class SynchG(object):
         self.substitution_rules = substitution_rules
         self.adjoining_rules = adjoining_rules
         self.lexicons = lexicons
+        self.linearizations = linearizations

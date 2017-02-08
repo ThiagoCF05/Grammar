@@ -970,90 +970,6 @@
         "head": "even",
         "pos": "RB",
         "w_t": "even",
-        "w_tm1": "''"
-    },
-    {
-        "edge": ":mod",
-        "head": "even",
-        "pos": "RB",
-        "w_t": "even",
-        "w_tm1": "''"
-    },
-    {
-        "edge": ":root",
-        "head": "flower",
-        "pos": "NNS",
-        "w_t": "flowers",
-        "w_tm1": "even"
-    },
-    {
-        "edge": ":arg0-of",
-        "head": "have-03",
-        "pos": "VBP",
-        "w_t": "have",
-        "w_tm1": "that"
-    },
-    {
-        "edge": ":arg1",
-        "head": "thorn",
-        "pos": "NNS",
-        "w_t": "thorns",
-        "w_tm1": "have"
-    },
-    {
-        "edge": ":arg1",
-        "head": "thorn",
-        "pos": "NNS",
-        "w_t": "thorns",
-        "w_tm1": "have"
-    },
-    {
-        "edge": ":arg0-of",
-        "head": "have-03",
-        "pos": "VBP",
-        "w_t": "have",
-        "w_tm1": "that"
-    },
-    {
-        "edge": ":root",
-        "head": "flower",
-        "pos": "''",
-        "w_t": "''",
-        "w_tm1": "*"
-    },
-    {
-        "edge": ":root",
-        "head": "flower",
-        "pos": "NNS",
-        "w_t": "flowers",
-        "w_tm1": "even"
-    },
-    {
-        "edge": ":root",
-        "head": "flower",
-        "pos": "WDT",
-        "w_t": "that",
-        "w_tm1": "flower"
-    },
-    {
-        "edge": ":root",
-        "head": "flower",
-        "pos": ".",
-        "w_t": "?",
-        "w_tm1": "thorn"
-    },
-    {
-        "edge": ":root",
-        "head": "flower",
-        "pos": "''",
-        "w_t": "''",
-        "w_tm1": "?"
-    },
-    {
-        "edge": ":mod",
-        "head": "even",
-        "pos": "RB",
-        "w_t": "even",
         "w_tm1": ","
     },
     {
@@ -2597,6 +2513,13 @@
         "w_tm1": "''"
     },
     {
+        "edge": ":mode",
+        "head": "expressive",
+        "pos": ".",
+        "w_t": "!",
+        "w_tm1": "oh"
+    },
+    {
         "edge": ":root",
         "head": "oh",
         "pos": "''",
@@ -2609,13 +2532,6 @@
         "pos": "UH",
         "w_t": "oh",
         "w_tm1": "''"
-    },
-    {
-        "edge": ":root",
-        "head": "oh",
-        "pos": ".",
-        "w_t": "!",
-        "w_tm1": "oh"
     },
     {
         "edge": ":root",
@@ -3738,18 +3654,18 @@
         "w_tm1": ","
     },
     {
+        "edge": ":mode",
+        "head": "expressive",
+        "pos": ".",
+        "w_t": "!",
+        "w_tm1": "no"
+    },
+    {
         "edge": ":root",
         "head": "no",
         "pos": ",",
         "w_t": ",",
         "w_tm1": "oh"
-    },
-    {
-        "edge": ":root",
-        "head": "no",
-        "pos": ".",
-        "w_t": "!",
-        "w_tm1": "no"
     },
     {
         "edge": ":root",
@@ -4172,8 +4088,8 @@
         "w_tm1": "i"
     },
     {
-        "edge": ":arg0-of",
-        "head": "have-03",
+        "edge": ":mode",
+        "head": "interrogative",
         "pos": ".",
         "w_t": "!",
         "w_tm1": "consequence"
@@ -7763,18 +7679,18 @@
         "w_tm1": "and"
     },
     {
+        "edge": ":mode",
+        "head": "expressive",
+        "pos": ".",
+        "w_t": "!",
+        "w_tm1": "oh"
+    },
+    {
         "edge": ":root",
         "head": "and",
         "pos": "CC",
         "w_t": "and",
         "w_tm1": "*"
-    },
-    {
-        "edge": ":root",
-        "head": "and",
-        "pos": ".",
-        "w_t": "!",
-        "w_tm1": "oh"
     },
     {
         "edge": ":arg0",
@@ -13482,6 +13398,13 @@
         "w_tm1": "she"
     },
     {
+        "edge": ":mode",
+        "head": "expressive",
+        "pos": ".",
+        "w_t": "!",
+        "w_tm1": "ah"
+    },
+    {
         "edge": ":root",
         "head": "and",
         "pos": "CC",
@@ -13501,13 +13424,6 @@
         "pos": ",",
         "w_t": ",",
         "w_tm1": "precision"
-    },
-    {
-        "edge": ":root",
-        "head": "and",
-        "pos": ".",
-        "w_t": "!",
-        "w_tm1": "ah"
     },
     {
         "edge": ":arg1",
@@ -13846,18 +13762,18 @@
         "w_tm1": ":"
     },
     {
+        "edge": ":mode",
+        "head": "expressive",
+        "pos": ".",
+        "w_t": "!",
+        "w_tm1": "oh"
+    },
+    {
         "edge": ":root",
         "head": "contrast-01",
         "pos": "CC",
         "w_t": "but",
         "w_tm1": "*"
-    },
-    {
-        "edge": ":root",
-        "head": "contrast-01",
-        "pos": ".",
-        "w_t": "!",
-        "w_tm1": "oh"
     },
     {
         "edge": ":degree",
@@ -14609,6 +14525,13 @@
         "w_tm1": "later"
     },
     {
+        "edge": ":mode",
+        "head": "imperative",
+        "pos": "IN",
+        "w_t": "if",
+        "w_tm1": "''"
+    },
+    {
         "edge": ":arg0",
         "head": "you",
         "pos": "PRP",
@@ -14642,6 +14565,20 @@
         "pos": "NN",
         "w_t": "kindness",
         "w_tm1": "the"
+    },
+    {
+        "edge": ":mode",
+        "head": "imperative",
+        "pos": "TO",
+        "w_t": "to",
+        "w_tm1": "kindness"
+    },
+    {
+        "edge": ":mode",
+        "head": "imperative",
+        "pos": "TO",
+        "w_t": "to",
+        "w_tm1": "kindness"
     },
     {
         "edge": ":arg1",
@@ -14695,13 +14632,6 @@
     {
         "edge": ":arg1-of",
         "head": "kind-01",
-        "pos": "TO",
-        "w_t": "to",
-        "w_tm1": "kindness"
-    },
-    {
-        "edge": ":arg1-of",
-        "head": "kind-01",
         "pos": ":",
         "w_t": "-",
         "w_tm1": "-"
@@ -14726,13 +14656,6 @@
         "pos": "''",
         "w_t": "''",
         "w_tm1": "*"
-    },
-    {
-        "edge": ":arg1-of",
-        "head": "kind-01",
-        "pos": "IN",
-        "w_t": "if",
-        "w_tm1": "''"
     },
     {
         "edge": ":arg1-of",
@@ -15526,6 +15449,13 @@
         "w_tm1": "thorn"
     },
     {
+        "edge": ":mode",
+        "head": "imperative",
+        "pos": "VB",
+        "w_t": "let",
+        "w_tm1": "''"
+    },
+    {
         "edge": ":arg1",
         "head": "tiger",
         "pos": "NNS",
@@ -15547,8 +15477,8 @@
         "w_tm1": "the"
     },
     {
-        "edge": ":arg1",
-        "head": "tiger",
+        "edge": ":mode",
+        "head": "imperative",
         "pos": "VB",
         "w_t": "let",
         "w_tm1": "''"
@@ -15603,6 +15533,13 @@
         "w_tm1": "tiger"
     },
     {
+        "edge": ":mode",
+        "head": "imperative",
+        "pos": ".",
+        "w_t": "!",
+        "w_tm1": "claw"
+    },
+    {
         "edge": ":root",
         "head": "say-01",
         "pos": ":",
@@ -15615,13 +15552,6 @@
         "pos": "''",
         "w_t": "''",
         "w_tm1": ":"
-    },
-    {
-        "edge": ":root",
-        "head": "say-01",
-        "pos": ".",
-        "w_t": "!",
-        "w_tm1": "claw"
     },
     {
         "edge": ":root",
@@ -16359,15 +16289,15 @@
         "w_tm1": "screen"
     },
     {
-        "edge": ":beneficiary",
-        "head": "coref",
-        "pos": "IN",
-        "w_t": "for",
-        "w_tm1": "screen"
+        "edge": ":mode",
+        "head": "interrogative",
+        "pos": "PRP",
+        "w_t": "me",
+        "w_tm1": "for"
     },
     {
-        "edge": ":beneficiary",
-        "head": "coref",
+        "edge": ":mode",
+        "head": "interrogative",
         "pos": "PRP",
         "w_t": "me",
         "w_tm1": "for"
@@ -16394,8 +16324,8 @@
         "w_tm1": "i"
     },
     {
-        "edge": ":root",
-        "head": "suppose-01",
+        "edge": ":mode",
+        "head": "interrogative",
         "pos": ".",
         "w_t": "?",
         "w_tm1": "i"
@@ -25683,8 +25613,8 @@
         "w_tm1": "now"
     },
     {
-        "edge": ":root",
-        "head": "go-02",
+        "edge": ":mode",
+        "head": "imperative",
         "pos": ".",
         "w_t": "!",
         "w_tm1": "go"
@@ -26593,6 +26523,13 @@
         "w_tm1": "''"
     },
     {
+        "edge": ":mode",
+        "head": "expressive",
+        "pos": ".",
+        "w_t": "!",
+        "w_tm1": "ah"
+    },
+    {
         "edge": ":root",
         "head": "ah",
         "pos": "''",
@@ -26605,13 +26542,6 @@
         "pos": "RB",
         "w_t": "ah",
         "w_tm1": "''"
-    },
-    {
-        "edge": ":root",
-        "head": "ah",
-        "pos": ".",
-        "w_t": "!",
-        "w_tm1": "ah"
     },
     {
         "edge": ":arg1",
@@ -27244,22 +27174,22 @@
         "w_tm1": ","
     },
     {
-        "edge": ":purpose",
-        "head": "see-01",
-        "pos": "RB",
-        "w_t": "so",
-        "w_tm1": ","
-    },
-    {
-        "edge": ":purpose",
-        "head": "see-01",
+        "edge": ":mode",
+        "head": "imperative",
         "pos": "IN",
         "w_t": "that",
         "w_tm1": "so"
     },
     {
-        "edge": ":purpose",
-        "head": "see-01",
+        "edge": ":mode",
+        "head": "imperative",
+        "pos": "IN",
+        "w_t": "that",
+        "w_tm1": "so"
+    },
+    {
+        "edge": ":mode",
+        "head": "imperative",
         "pos": "FW",
         "w_t": "i",
         "w_tm1": "that"
@@ -29043,46 +28973,11 @@
         "w_tm1": "come"
     },
     {
-        "edge": ":root",
-        "head": "come-01",
+        "edge": ":mode",
+        "head": "imperative",
         "pos": ".",
         "w_t": "!",
         "w_tm1": "now"
-    },
-    {
-        "edge": ":root",
-        "head": "yawn-01",
-        "pos": "NN",
-        "w_t": "yawn",
-        "w_tm1": "*"
-    },
-    {
-        "edge": ":root",
-        "head": "yawn-01",
-        "pos": "NN",
-        "w_t": "yawn",
-        "w_tm1": "*"
-    },
-    {
-        "edge": ":mod",
-        "head": "again",
-        "pos": "RB",
-        "w_t": "again",
-        "w_tm1": "yawn"
-    },
-    {
-        "edge": ":mod",
-        "head": "again",
-        "pos": "RB",
-        "w_t": "again",
-        "w_tm1": "yawn"
-    },
-    {
-        "edge": ":root",
-        "head": "yawn-01",
-        "pos": ".",
-        "w_t": "!",
-        "w_tm1": "again"
     },
     {
         "edge": ":arg2",
@@ -29358,6 +29253,13 @@
         "w_tm1": "''"
     },
     {
+        "edge": ":mode",
+        "head": "expressive",
+        "pos": ".",
+        "w_t": "!",
+        "w_tm1": "hum"
+    },
+    {
         "edge": ":root",
         "head": "hum",
         "pos": "''",
@@ -29372,13 +29274,6 @@
         "w_tm1": "''"
     },
     {
-        "edge": ":root",
-        "head": "hum",
-        "pos": ".",
-        "w_t": "!",
-        "w_tm1": "hum"
-    },
-    {
         "edge": ":arg2",
         "head": "hum",
         "pos": "NN",
@@ -29386,25 +29281,11 @@
         "w_tm1": "*"
     },
     {
-        "edge": ":arg2",
-        "head": "hum",
-        "pos": "NN",
-        "w_t": "hum",
-        "w_tm1": "*"
-    },
-    {
-        "edge": ":arg2",
-        "head": "hum",
+        "edge": ":mode",
+        "head": "expressive",
         "pos": ".",
         "w_t": "!",
         "w_tm1": "hum"
-    },
-    {
-        "edge": ":arg2",
-        "head": "hum",
-        "pos": "''",
-        "w_t": "''",
-        "w_tm1": "!"
     },
     {
         "edge": ":root",
@@ -29447,6 +29328,13 @@
         "pos": ".",
         "w_t": ".",
         "w_tm1": "king"
+    },
+    {
+        "edge": ":root",
+        "head": "reply-01",
+        "pos": "''",
+        "w_t": "''",
+        "w_tm1": "!"
     },
     {
         "edge": ":mod",
@@ -35259,6 +35147,13 @@
         "w_tm1": "."
     },
     {
+        "edge": ":mode",
+        "head": "interrogative",
+        "pos": "RB",
+        "w_t": "then",
+        "w_tm1": "''"
+    },
+    {
         "edge": ":poss",
         "head": "coref",
         "pos": "PRP$",
@@ -35280,32 +35175,11 @@
         "w_tm1": "my"
     },
     {
-        "edge": ":arg1",
-        "head": "sunset",
-        "pos": "''",
-        "w_t": "''",
-        "w_tm1": "*"
-    },
-    {
-        "edge": ":arg1",
-        "head": "sunset",
-        "pos": "RB",
-        "w_t": "then",
-        "w_tm1": "''"
-    },
-    {
-        "edge": ":arg1",
-        "head": "sunset",
+        "edge": ":mode",
+        "head": "interrogative",
         "pos": ".",
         "w_t": "?",
         "w_tm1": "sunset"
-    },
-    {
-        "edge": ":arg1",
-        "head": "sunset",
-        "pos": "''",
-        "w_t": "''",
-        "w_tm1": "?"
     },
     {
         "edge": ":mod",
@@ -35488,6 +35362,20 @@
         "pos": ".",
         "w_t": ".",
         "w_tm1": "it"
+    },
+    {
+        "edge": ":root",
+        "head": "remind-01",
+        "pos": "''",
+        "w_t": "''",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":root",
+        "head": "remind-01",
+        "pos": "''",
+        "w_t": "''",
+        "w_tm1": "?"
     },
     {
         "edge": ":arg0",
@@ -35910,6 +35798,13 @@
         "w_tm1": "''"
     },
     {
+        "edge": ":mode",
+        "head": "expressive",
+        "pos": ".",
+        "w_t": "!",
+        "w_tm1": "hum"
+    },
+    {
         "edge": ":root",
         "head": "hum",
         "pos": "''",
@@ -35924,13 +35819,6 @@
         "w_tm1": "''"
     },
     {
-        "edge": ":root",
-        "head": "hum",
-        "pos": ".",
-        "w_t": "!",
-        "w_tm1": "hum"
-    },
-    {
         "edge": ":arg2",
         "head": "hum",
         "pos": "NN",
@@ -35938,25 +35826,11 @@
         "w_tm1": "*"
     },
     {
-        "edge": ":arg2",
-        "head": "hum",
-        "pos": "NN",
-        "w_t": "hum",
-        "w_tm1": "*"
-    },
-    {
-        "edge": ":arg2",
-        "head": "hum",
+        "edge": ":mode",
+        "head": "expressive",
         "pos": ".",
         "w_t": "!",
         "w_tm1": "hum"
-    },
-    {
-        "edge": ":arg2",
-        "head": "hum",
-        "pos": "''",
-        "w_t": "''",
-        "w_tm1": "!"
     },
     {
         "edge": ":op1",
@@ -36121,10 +35995,24 @@
     },
     {
         "edge": ":root",
+        "head": "and",
+        "pos": "''",
+        "w_t": "''",
+        "w_tm1": "!"
+    },
+    {
+        "edge": ":root",
         "head": "hum",
         "pos": "NN",
         "w_t": "hum",
         "w_tm1": "''"
+    },
+    {
+        "edge": ":mode",
+        "head": "expressive",
+        "pos": ".",
+        "w_t": "!",
+        "w_tm1": "hum"
     },
     {
         "edge": ":root",
@@ -36143,6 +36031,13 @@
     {
         "edge": ":root",
         "head": "hum",
+        "pos": "NN",
+        "w_t": "hum",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":mode",
+        "head": "expressive",
         "pos": ".",
         "w_t": "!",
         "w_tm1": "hum"
@@ -36153,20 +36048,6 @@
         "pos": "NN",
         "w_t": "hum",
         "w_tm1": "*"
-    },
-    {
-        "edge": ":root",
-        "head": "hum",
-        "pos": "NN",
-        "w_t": "hum",
-        "w_tm1": "*"
-    },
-    {
-        "edge": ":root",
-        "head": "hum",
-        "pos": ".",
-        "w_t": "!",
-        "w_tm1": "hum"
     },
     {
         "edge": ":arg1",
@@ -37191,6 +37072,13 @@
         "w_tm1": "subject"
     },
     {
+        "edge": ":mode",
+        "head": "imperative",
+        "pos": "VBP",
+        "w_t": "do",
+        "w_tm1": "''"
+    },
+    {
         "edge": ":polarity",
         "head": "-",
         "pos": "RB",
@@ -37210,13 +37098,6 @@
         "pos": "VB",
         "w_t": "go",
         "w_tm1": "not"
-    },
-    {
-        "edge": ":root",
-        "head": "go-02",
-        "pos": "VBP",
-        "w_t": "do",
-        "w_tm1": "''"
     },
     {
         "edge": ":root",
@@ -39249,6 +39130,13 @@
         "w_tm1": "''"
     },
     {
+        "edge": ":mode",
+        "head": "expressive",
+        "pos": ".",
+        "w_t": "!",
+        "w_tm1": "hum"
+    },
+    {
         "edge": ":root",
         "head": "hum",
         "pos": "''",
@@ -39263,13 +39151,6 @@
         "w_tm1": "''"
     },
     {
-        "edge": ":root",
-        "head": "hum",
-        "pos": ".",
-        "w_t": "!",
-        "w_tm1": "hum"
-    },
-    {
         "edge": ":arg1",
         "head": "hum",
         "pos": "NN",
@@ -39277,25 +39158,11 @@
         "w_tm1": "*"
     },
     {
-        "edge": ":arg1",
-        "head": "hum",
-        "pos": "NN",
-        "w_t": "hum",
-        "w_tm1": "*"
-    },
-    {
-        "edge": ":arg1",
-        "head": "hum",
+        "edge": ":mode",
+        "head": "expressive",
         "pos": ".",
         "w_t": "!",
         "w_tm1": "hum"
-    },
-    {
-        "edge": ":arg1",
-        "head": "hum",
-        "pos": "''",
-        "w_t": "''",
-        "w_tm1": "!"
     },
     {
         "edge": ":root",
@@ -39338,6 +39205,13 @@
         "pos": ".",
         "w_t": ".",
         "w_tm1": "king"
+    },
+    {
+        "edge": ":root",
+        "head": "say-01",
+        "pos": "''",
+        "w_t": "''",
+        "w_tm1": "!"
     },
     {
         "edge": ":arg0",
@@ -42105,6 +41979,13 @@
         "w_tm1": "''"
     },
     {
+        "edge": ":mode",
+        "head": "expressive",
+        "pos": ".",
+        "w_t": "!",
+        "w_tm1": "ah"
+    },
+    {
         "edge": ":root",
         "head": "ah",
         "pos": "''",
@@ -42121,13 +42002,6 @@
     {
         "edge": ":root",
         "head": "ah",
-        "pos": ".",
-        "w_t": "!",
-        "w_tm1": "ah"
-    },
-    {
-        "edge": ":root",
-        "head": "ah",
         "pos": "RB",
         "w_t": "ah",
         "w_tm1": "*"
@@ -42140,8 +42014,8 @@
         "w_tm1": "*"
     },
     {
-        "edge": ":root",
-        "head": "ah",
+        "edge": ":mode",
+        "head": "expressive",
         "pos": ".",
         "w_t": "!",
         "w_tm1": "ah"
@@ -44646,6 +44520,13 @@
         "w_tm1": "praise"
     },
     {
+        "edge": ":mode",
+        "head": "interrogative",
+        "pos": "VBP",
+        "w_t": "do",
+        "w_tm1": "''"
+    },
+    {
         "edge": ":arg1-of",
         "head": "real-04",
         "pos": "RB",
@@ -44702,29 +44583,36 @@
         "w_tm1": "do"
     },
     {
-        "edge": ":arg1",
-        "head": "admire-01",
+        "edge": ":mode",
+        "head": "interrogative",
         "pos": "VBP",
         "w_t": "do",
         "w_tm1": "''"
     },
     {
-        "edge": ":arg1",
-        "head": "admire-01",
-        "pos": "''",
-        "w_t": "''",
-        "w_tm1": "*"
-    },
-    {
-        "edge": ":arg1",
-        "head": "admire-01",
+        "edge": ":mode",
+        "head": "interrogative",
         "pos": ".",
         "w_t": "?",
         "w_tm1": "much"
     },
     {
-        "edge": ":arg1",
-        "head": "admire-01",
+        "edge": ":mode",
+        "head": "interrogative",
+        "pos": "''",
+        "w_t": "''",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":mode",
+        "head": "interrogative",
+        "pos": ".",
+        "w_t": "?",
+        "w_tm1": "much"
+    },
+    {
+        "edge": ":mode",
+        "head": "interrogative",
         "pos": "''",
         "w_t": "''",
         "w_tm1": "?"
@@ -45311,6 +45199,13 @@
         "w_tm1": "!"
     },
     {
+        "edge": ":mode",
+        "head": "imperative",
+        "pos": "VB",
+        "w_t": "do",
+        "w_tm1": "''"
+    },
+    {
         "edge": ":arg2",
         "head": "i",
         "pos": "PRP",
@@ -45344,13 +45239,6 @@
         "pos": "NN",
         "w_t": "kindness",
         "w_tm1": "this"
-    },
-    {
-        "edge": ":root",
-        "head": "kind-01",
-        "pos": "VB",
-        "w_t": "do",
-        "w_tm1": "''"
     },
     {
         "edge": ":root",
@@ -49119,18 +49007,18 @@
         "w_tm1": "*"
     },
     {
+        "edge": ":mode",
+        "head": "expressive",
+        "pos": ".",
+        "w_t": "!",
+        "w_tm1": "phew"
+    },
+    {
         "edge": ":root",
         "head": "phew",
         "pos": "NN",
         "w_t": "phew",
         "w_tm1": "*"
-    },
-    {
-        "edge": ":root",
-        "head": "phew",
-        "pos": ".",
-        "w_t": "!",
-        "w_tm1": "phew"
     },
     {
         "edge": ":arg2",
@@ -52626,6 +52514,13 @@
         "w_tm1": "''"
     },
     {
+        "edge": ":mode",
+        "head": "expressive",
+        "pos": ".",
+        "w_t": "!",
+        "w_tm1": "ah"
+    },
+    {
         "edge": ":root",
         "head": "ah",
         "pos": "''",
@@ -52638,13 +52533,6 @@
         "pos": "RB",
         "w_t": "ah",
         "w_tm1": "''"
-    },
-    {
-        "edge": ":root",
-        "head": "ah",
-        "pos": ".",
-        "w_t": "!",
-        "w_tm1": "ah"
     },
     {
         "edge": ":arg0",
@@ -55391,18 +55279,18 @@
         "w_tm1": "that"
     },
     {
-        "edge": ":root",
-        "head": "all",
+        "edge": ":mode",
+        "head": "interrogative",
         "pos": "DT",
-        "w_t": "all",
-        "w_tm1": "that"
+        "w_t": "that",
+        "w_tm1": "all"
     },
     {
         "edge": ":root",
         "head": "all",
         "pos": "DT",
-        "w_t": "that",
-        "w_tm1": "all"
+        "w_t": "all",
+        "w_tm1": "that"
     },
     {
         "edge": ":arg1-of",
@@ -55433,18 +55321,18 @@
         "w_tm1": "''"
     },
     {
+        "edge": ":mode",
+        "head": "interrogative",
+        "pos": ".",
+        "w_t": "?",
+        "w_tm1": "necessary"
+    },
+    {
         "edge": ":root",
         "head": "all",
         "pos": "''",
         "w_t": "''",
         "w_tm1": "*"
-    },
-    {
-        "edge": ":root",
-        "head": "all",
-        "pos": ".",
-        "w_t": "?",
-        "w_tm1": "necessary"
     },
     {
         "edge": ":root",
@@ -71638,18 +71526,18 @@
         "w_tm1": "''"
     },
     {
+        "edge": ":mode",
+        "head": "expressive",
+        "pos": ".",
+        "w_t": "!",
+        "w_tm1": "ah"
+    },
+    {
         "edge": ":root",
         "head": "ah",
         "pos": "RB",
         "w_t": "ah",
         "w_tm1": "''"
-    },
-    {
-        "edge": ":root",
-        "head": "ah",
-        "pos": ".",
-        "w_t": "!",
-        "w_tm1": "ah"
     },
     {
         "edge": ":root",
@@ -72191,18 +72079,18 @@
         "w_tm1": "you"
     },
     {
+        "edge": ":mode",
+        "head": "expressive",
+        "pos": ".",
+        "w_t": "!",
+        "w_tm1": "geographer"
+    },
+    {
         "edge": ":root",
         "head": "contrast-01",
         "pos": "''",
         "w_t": "''",
         "w_tm1": "*"
-    },
-    {
-        "edge": ":root",
-        "head": "contrast-01",
-        "pos": ".",
-        "w_t": "!",
-        "w_tm1": "geographer"
     },
     {
         "edge": ":root",
@@ -75446,25 +75334,25 @@
         "w_tm1": "you"
     },
     {
-        "edge": ":beneficiary",
-        "head": "i",
-        "pos": "PRP",
-        "w_t": "me",
-        "w_tm1": "to"
-    },
-    {
-        "edge": ":beneficiary",
-        "head": "i",
-        "pos": "PRP",
-        "w_t": "me",
-        "w_tm1": "to"
-    },
-    {
-        "edge": ":beneficiary",
-        "head": "i",
+        "edge": ":mode",
+        "head": "imperative",
         "pos": "TO",
         "w_t": "to",
         "w_tm1": "planet"
+    },
+    {
+        "edge": ":beneficiary",
+        "head": "i",
+        "pos": "PRP",
+        "w_t": "me",
+        "w_tm1": "to"
+    },
+    {
+        "edge": ":beneficiary",
+        "head": "i",
+        "pos": "PRP",
+        "w_t": "me",
+        "w_tm1": "to"
     },
     {
         "edge": ":root",
@@ -75474,8 +75362,8 @@
         "w_tm1": "shall"
     },
     {
-        "edge": ":root",
-        "head": "describe-01",
+        "edge": ":mode",
+        "head": "imperative",
         "pos": ".",
         "w_t": "!",
         "w_tm1": "i"
@@ -86275,6 +86163,13 @@
         "w_tm1": "''"
     },
     {
+        "edge": ":mode",
+        "head": "expressive",
+        "pos": ".",
+        "w_t": "!",
+        "w_tm1": "ah"
+    },
+    {
         "edge": ":root",
         "head": "ah",
         "pos": "''",
@@ -86287,13 +86182,6 @@
         "pos": "RB",
         "w_t": "ah",
         "w_tm1": "''"
-    },
-    {
-        "edge": ":root",
-        "head": "ah",
-        "pos": ".",
-        "w_t": "!",
-        "w_tm1": "ah"
     },
     {
         "edge": ":root",
@@ -90237,18 +90125,18 @@
         "w_tm1": "''"
     },
     {
+        "edge": ":mode",
+        "head": "expressive",
+        "pos": ".",
+        "w_t": "!",
+        "w_tm1": "oh"
+    },
+    {
         "edge": ":root",
         "head": "oh",
         "pos": "''",
         "w_t": "''",
         "w_tm1": "*"
-    },
-    {
-        "edge": ":root",
-        "head": "oh",
-        "pos": ".",
-        "w_t": "!",
-        "w_tm1": "oh"
     },
     {
         "edge": ":arg1",
@@ -98819,6 +98707,13 @@
         "w_tm1": "''"
     },
     {
+        "edge": ":mode",
+        "head": "expressive",
+        "pos": ".",
+        "w_t": "!",
+        "w_tm1": "ah"
+    },
+    {
         "edge": ":root",
         "head": "ah",
         "pos": "''",
@@ -98831,13 +98726,6 @@
         "pos": "RB",
         "w_t": "ah",
         "w_tm1": "''"
-    },
-    {
-        "edge": ":root",
-        "head": "ah",
-        "pos": ".",
-        "w_t": "!",
-        "w_tm1": "ah"
     },
     {
         "edge": ":polite",
@@ -102123,6 +102011,13 @@
         "w_tm1": "be"
     },
     {
+        "edge": ":mode",
+        "head": "expressive",
+        "pos": ".",
+        "w_t": "!",
+        "w_tm1": "earth"
+    },
+    {
         "edge": ":polarity",
         "head": "-",
         "pos": "''",
@@ -102135,13 +102030,6 @@
         "pos": ",",
         "w_t": ",",
         "w_tm1": "oh"
-    },
-    {
-        "edge": ":polarity",
-        "head": "-",
-        "pos": ".",
-        "w_t": "!",
-        "w_tm1": "earth"
     },
     {
         "edge": ":polarity",
@@ -104580,8 +104468,8 @@
         "w_tm1": "*"
     },
     {
-        "edge": ":root",
-        "head": "think-01",
+        "edge": ":mode",
+        "head": "imperative",
         "pos": ".",
         "w_t": "!",
         "w_tm1": "i"
@@ -105063,43 +104951,43 @@
         "w_tm1": "-"
     },
     {
-        "edge": ":arg1",
-        "head": "tame-01",
-        "pos": "JJ",
-        "w_t": "tame",
-        "w_tm1": "-"
-    },
-    {
-        "edge": ":arg1",
-        "head": "tame-01",
+        "edge": ":mode",
+        "head": "imperative",
         "pos": "PRP",
         "w_t": "me",
         "w_tm1": "tame"
     },
     {
-        "edge": ":arg1",
-        "head": "tame-01",
+        "edge": ":mode",
+        "head": "imperative",
+        "pos": "PRP",
+        "w_t": "me",
+        "w_tm1": "tame"
+    },
+    {
+        "edge": ":polite",
+        "head": "+",
         "pos": ":",
         "w_t": "-",
         "w_tm1": "-"
     },
     {
-        "edge": ":arg1",
-        "head": "tame-01",
-        "pos": "''",
-        "w_t": "''",
-        "w_tm1": "*"
-    },
-    {
-        "edge": ":arg1",
-        "head": "tame-01",
+        "edge": ":mode",
+        "head": "imperative",
         "pos": ".",
         "w_t": "!",
         "w_tm1": "i"
     },
     {
-        "edge": ":arg1",
-        "head": "tame-01",
+        "edge": ":polite",
+        "head": "+",
+        "pos": "''",
+        "w_t": "''",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":polite",
+        "head": "+",
         "pos": "''",
         "w_t": "''",
         "w_tm1": "!"
@@ -124145,50 +124033,15 @@
         "w_tm1": "word"
     },
     {
-        "edge": ":arg0",
-        "head": "you",
-        "pos": "PRP",
-        "w_t": "you",
-        "w_tm1": "then"
-    },
-    {
-        "edge": ":arg0",
-        "head": "you",
-        "pos": "PRP",
-        "w_t": "you",
-        "w_tm1": "then"
-    },
-    {
-        "edge": ":arg1",
-        "head": "thirst-01",
-        "pos": "JJ",
-        "w_t": "thirsty",
-        "w_tm1": "be"
-    },
-    {
-        "edge": ":arg1",
-        "head": "thirst-01",
-        "pos": "JJ",
-        "w_t": "thirsty",
-        "w_tm1": "be"
-    },
-    {
-        "edge": ":mod",
-        "head": "too",
+        "edge": ":mode",
+        "head": "interrogative",
         "pos": "RB",
-        "w_t": "too",
-        "w_tm1": ","
+        "w_t": "then",
+        "w_tm1": "''"
     },
     {
-        "edge": ":mod",
-        "head": "too",
-        "pos": "RB",
-        "w_t": "too",
-        "w_tm1": ","
-    },
-    {
-        "edge": ":arg0",
-        "head": "you",
+        "edge": ":mode",
+        "head": "interrogative",
         "pos": "RB",
         "w_t": "then",
         "w_tm1": "''"
@@ -124196,16 +124049,51 @@
     {
         "edge": ":arg0",
         "head": "you",
-        "pos": "VBP",
-        "w_t": "are",
-        "w_tm1": "you"
+        "pos": "PRP",
+        "w_t": "you",
+        "w_tm1": "then"
     },
     {
         "edge": ":arg0",
         "head": "you",
-        "pos": ",",
-        "w_t": ",",
-        "w_tm1": "thirsty"
+        "pos": "PRP",
+        "w_t": "you",
+        "w_tm1": "then"
+    },
+    {
+        "edge": ":arg1",
+        "head": "thirst-01",
+        "pos": "JJ",
+        "w_t": "thirsty",
+        "w_tm1": "be"
+    },
+    {
+        "edge": ":arg1",
+        "head": "thirst-01",
+        "pos": "JJ",
+        "w_t": "thirsty",
+        "w_tm1": "be"
+    },
+    {
+        "edge": ":mod",
+        "head": "too",
+        "pos": "RB",
+        "w_t": "too",
+        "w_tm1": ","
+    },
+    {
+        "edge": ":mod",
+        "head": "too",
+        "pos": "RB",
+        "w_t": "too",
+        "w_tm1": ","
+    },
+    {
+        "edge": ":mode",
+        "head": "interrogative",
+        "pos": ".",
+        "w_t": "?",
+        "w_tm1": "too"
     },
     {
         "edge": ":root",
@@ -124224,9 +124112,16 @@
     {
         "edge": ":root",
         "head": "come-01",
-        "pos": ".",
-        "w_t": "?",
-        "w_tm1": "too"
+        "pos": "VBP",
+        "w_t": "are",
+        "w_tm1": "you"
+    },
+    {
+        "edge": ":root",
+        "head": "come-01",
+        "pos": ",",
+        "w_t": ",",
+        "w_tm1": "thirsty"
     },
     {
         "edge": ":root",
@@ -136563,6 +136458,13 @@
         "w_tm1": "''"
     },
     {
+        "edge": ":mode",
+        "head": "expressive",
+        "pos": ".",
+        "w_t": "!",
+        "w_tm1": "oh"
+    },
+    {
         "edge": ":root",
         "head": "oh",
         "pos": "''",
@@ -136575,13 +136477,6 @@
         "pos": "UH",
         "w_t": "oh",
         "w_tm1": "''"
-    },
-    {
-        "edge": ":root",
-        "head": "oh",
-        "pos": ".",
-        "w_t": "!",
-        "w_tm1": "oh"
     },
     {
         "edge": ":root",
@@ -142436,6 +142331,13 @@
         "w_tm1": "be"
     },
     {
+        "edge": ":mode",
+        "head": "interrogative",
+        "pos": "IN",
+        "w_t": "that",
+        "w_tm1": "sure"
+    },
+    {
         "edge": ":arg1",
         "head": "it",
         "pos": "PRP",
@@ -142513,13 +142415,6 @@
         "w_tm1": "it"
     },
     {
-        "edge": ":arg1",
-        "head": "suffer-01",
-        "pos": "IN",
-        "w_t": "that",
-        "w_tm1": "sure"
-    },
-    {
         "edge": ":root",
         "head": "sure-02",
         "pos": "JJ",
@@ -142534,8 +142429,8 @@
         "w_tm1": "you"
     },
     {
-        "edge": ":root",
-        "head": "sure-02",
+        "edge": ":mode",
+        "head": "interrogative",
         "pos": ".",
         "w_t": "?",
         "w_tm1": "long"
@@ -151557,95 +151452,102 @@
         "w_tm1": "again"
     },
     {
-        "edge": ":mod",
-        "head": "dear",
-        "pos": "RB",
-        "w_t": "dear",
-        "w_tm1": ","
-    },
-    {
-        "edge": ":mod",
-        "head": "dear",
-        "pos": "RB",
-        "w_t": "dear",
-        "w_tm1": ","
-    },
-    {
-        "edge": ":mod",
-        "head": "little",
-        "pos": "JJ",
-        "w_t": "little",
-        "w_tm1": "dear"
-    },
-    {
-        "edge": ":mod",
-        "head": "little",
-        "pos": "JJ",
-        "w_t": "little",
-        "w_tm1": "dear"
-    },
-    {
-        "edge": ":op2",
-        "head": "prince",
-        "pos": "NN",
-        "w_t": "prince",
-        "w_tm1": "little"
-    },
-    {
-        "edge": ":op2",
-        "head": "prince",
-        "pos": "NN",
-        "w_t": "prince",
-        "w_tm1": "little"
-    },
-    {
-        "edge": ":op2",
-        "head": "prince",
-        "pos": "JJ",
-        "w_t": "little",
-        "w_tm1": ","
-    },
-    {
-        "edge": ":op2",
-        "head": "prince",
-        "pos": "NN",
-        "w_t": "prince",
-        "w_tm1": "little"
-    },
-    {
-        "edge": ":op2",
-        "head": "prince",
-        "pos": ",",
-        "w_t": ",",
-        "w_tm1": "prince"
-    },
-    {
-        "edge": ":op2",
-        "head": "prince",
-        "pos": "''",
-        "w_t": "''",
-        "w_tm1": "*"
-    },
-    {
-        "edge": ":op2",
-        "head": "prince",
+        "edge": ":mode",
+        "head": "expressive",
         "pos": "RB",
         "w_t": "ah",
         "w_tm1": "''"
     },
     {
-        "edge": ":op2",
-        "head": "prince",
-        "pos": ",",
-        "w_t": ",",
-        "w_tm1": "ah"
+        "edge": ":mode",
+        "head": "expressive",
+        "pos": "RB",
+        "w_t": "ah",
+        "w_tm1": "''"
+    },
+    {
+        "edge": ":mod",
+        "head": "dear",
+        "pos": "RB",
+        "w_t": "dear",
+        "w_tm1": ","
+    },
+    {
+        "edge": ":mod",
+        "head": "dear",
+        "pos": "RB",
+        "w_t": "dear",
+        "w_tm1": ","
+    },
+    {
+        "edge": ":mod",
+        "head": "little",
+        "pos": "JJ",
+        "w_t": "little",
+        "w_tm1": "dear"
+    },
+    {
+        "edge": ":mod",
+        "head": "little",
+        "pos": "JJ",
+        "w_t": "little",
+        "w_tm1": "dear"
     },
     {
         "edge": ":op2",
         "head": "prince",
+        "pos": "NN",
+        "w_t": "prince",
+        "w_tm1": "little"
+    },
+    {
+        "edge": ":op2",
+        "head": "prince",
+        "pos": "NN",
+        "w_t": "prince",
+        "w_tm1": "little"
+    },
+    {
+        "edge": ":op2",
+        "head": "prince",
+        "pos": "JJ",
+        "w_t": "little",
+        "w_tm1": ","
+    },
+    {
+        "edge": ":op2",
+        "head": "prince",
+        "pos": "NN",
+        "w_t": "prince",
+        "w_tm1": "little"
+    },
+    {
+        "edge": ":op2",
+        "head": "prince",
+        "pos": ",",
+        "w_t": ",",
+        "w_tm1": "prince"
+    },
+    {
+        "edge": ":mode",
+        "head": "expressive",
         "pos": ".",
         "w_t": "!",
         "w_tm1": "prince"
+    },
+    {
+        "edge": ":root",
+        "head": "and",
+        "pos": "''",
+        "w_t": "''",
+        "w_tm1": "*"
+    },
+    {
+        "edge": ":root",
+        "head": "and",
+        "pos": ",",
+        "w_t": ",",
+        "w_tm1": "ah"
     },
     {
         "edge": ":arg0",
@@ -155820,6 +155722,13 @@
         "w_tm1": "that"
     },
     {
+        "edge": ":mode",
+        "head": "imperative",
+        "pos": "VB",
+        "w_t": "do",
+        "w_tm1": "*"
+    },
+    {
         "edge": ":polarity",
         "head": "-",
         "pos": "RB",
@@ -155881,13 +155790,6 @@
         "pos": "VB",
         "w_t": "come",
         "w_tm1": "not"
-    },
-    {
-        "edge": ":root",
-        "head": "come-01",
-        "pos": "VB",
-        "w_t": "do",
-        "w_tm1": "*"
     },
     {
         "edge": ":root",
@@ -157367,8 +157269,8 @@
         "w_tm1": ":"
     },
     {
-        "edge": ":root",
-        "head": "say-01",
+        "edge": ":mode",
+        "head": "expressive",
         "pos": ".",
         "w_t": "!",
         "w_tm1": "ah"
@@ -165718,25 +165620,25 @@
         "w_tm1": "*"
     },
     {
-        "edge": ":arg1",
-        "head": "it",
-        "pos": "PRP",
-        "w_t": "it",
-        "w_tm1": "at"
-    },
-    {
-        "edge": ":arg1",
-        "head": "it",
-        "pos": "PRP",
-        "w_t": "it",
-        "w_tm1": "at"
-    },
-    {
-        "edge": ":arg1",
-        "head": "it",
+        "edge": ":mode",
+        "head": "imperative",
         "pos": "IN",
         "w_t": "at",
         "w_tm1": "look"
+    },
+    {
+        "edge": ":arg1",
+        "head": "it",
+        "pos": "PRP",
+        "w_t": "it",
+        "w_tm1": "at"
+    },
+    {
+        "edge": ":arg1",
+        "head": "it",
+        "pos": "PRP",
+        "w_t": "it",
+        "w_tm1": "at"
     },
     {
         "edge": ":manner",
@@ -165758,6 +165660,13 @@
         "pos": "RB",
         "w_t": "so",
         "w_tm1": "carefully"
+    },
+    {
+        "edge": ":mode",
+        "head": "imperative",
+        "pos": "IN",
+        "w_t": "that",
+        "w_tm1": "so"
     },
     {
         "edge": ":arg0",
@@ -165863,13 +165772,6 @@
         "pos": "VB",
         "w_t": "look",
         "w_tm1": "*"
-    },
-    {
-        "edge": ":root",
-        "head": "look-01",
-        "pos": "IN",
-        "w_t": "that",
-        "w_tm1": "so"
     },
     {
         "edge": ":arg0",
@@ -166642,6 +166544,13 @@
         "w_tm1": "i"
     },
     {
+        "edge": ":mode",
+        "head": "imperative",
+        "pos": "IN",
+        "w_t": "that",
+        "w_tm1": "word"
+    },
+    {
         "edge": ":arg1",
         "head": "he",
         "pos": "PRP",
@@ -166689,13 +166598,6 @@
         "pos": "VBZ",
         "w_t": "has",
         "w_tm1": "he"
-    },
-    {
-        "edge": ":arg1",
-        "head": "come-01",
-        "pos": "IN",
-        "w_t": "that",
-        "w_tm1": "word"
     },
     {
         "edge": ":root",

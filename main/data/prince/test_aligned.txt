@@ -1,0 +1,2191 @@
+# AMR release; corpus: lpp; section: training; number of AMRs: 1274 
+
+#
+# ::snt chapter 4 .
+#
+#
+(c / chapter~e.0 
+	 :mod 4~e.1)
+
+#
+# ::snt i had thus learned a second fact of great importance : this was that the planet the little prince came from was scarcely any larger than a house !
+#
+#
+(c2 / cause-01~e.0 
+	 :arg1 (l / learn-01~e.3 
+		 :arg0 (i / i~e.0) 
+		 :arg1 (f / fact~e.6 
+			 :ord~e.11 (o / ordinal-entity~e.5 
+				 :value 2~e.2) 
+			 :mod (i2 / important~e.9 
+				 :degree (g / great~e.8)) 
+			 :domain~e.13 (l2 / large~e.24 
+				 :degree (m / more~e.20 
+					 :mod (a / any~e.23 
+						 :degree (s2 / scarce~e.22))) 
+				 :compared-to~e.25 (h / house~e.27) 
+				 :domain~e.13 (p / planet~e.15 
+					 :arg3-of~e.28 (c / come-01~e.19 
+						 :arg1 (p2 / prince~e.18 
+							 :mod (l3 / little~e.17))))))))
+
+#
+# ::snt but that did not really surprise me much .
+#
+#
+(c / contrast-01~e.0 
+	 :arg2 (s / surprise-01~e.5 
+		 :polarity~e.3 -~e.2 
+		 :arg0 (t / that~e.1) 
+		 :arg1 (i / i~e.6) 
+		 :degree (m / much~e.7) 
+		 :arg1-of (r / real-04~e.4)))
+
+#
+# ::snt i knew very well that in addition to the great planets -- such as the earth , jupiter , mars , venus -- to which we have given names , there are also hundreds of others , some of which are so small that one has a hard time seeing them through the telescope .
+#
+#
+(k / know-01~e.1 
+	 :arg0 (i / i~e.0) 
+	 :arg1 (e / exist-01~e.6 
+		 :arg1 (a2 / and~e.49 
+			 :op1 (p / planet~e.10 
+				 :mod (g / great~e.9) 
+				 :example~e.27 (p2 / planet 
+					 :wiki~e.4 earth~e.15 
+					 :name (n / name 
+						 :op1 earth~e.15)) 
+				 :example~e.27 (p3 / planet 
+					 :wiki~e.7 jupiter~e.17 
+					 :name (n2 / name 
+						 :op1 jupiter~e.17)) 
+				 :example~e.27 (p4 / planet 
+					 :wiki~e.23 mars~e.19 
+					 :name (n3 / name 
+						 :op1 mars~e.19)) 
+				 :example~e.27 (p5 / planet 
+					 :wiki~e.5 venus~e.21 
+					 :name (n4 / name 
+						 :op1 venus~e.21)) 
+				 :arg1-of~e.30 (n5 / name-01~e.28 
+					 :arg0 (w3 / we~e.25))) 
+			 :op2 (p7 / planet~e.10 
+				 :arg2-of~e.45 (i2 / include-91~e.44 
+					 :arg1 (p6 / planet~e.10 
+						 :mod (s2 / small~e.42 
+							 :degree (s3 / so~e.41) 
+							 :arg0-of~e.48 (c / cause-01~e.41 
+								 :arg1 (d / difficult~e.47 
+									 :domain~e.43 (s4 / see-01~e.50 
+										 :arg1 p6 
+										 :instrument~e.51 (t / telescope~e.53))))))) 
+				 :mod (o / other~e.35) 
+				 :quant (m / multiple~e.37 
+					 :op1 100~e.33) 
+				 :mod (a / also~e.32)))) 
+	 :mod (w / well~e.3 
+		 :degree (v / very~e.2)))
+
+#
+# ::snt when an astronomer discovers one of these he does not give it a name , but only a number .
+#
+#
+(g / give-01~e.10 
+	 :arg0 (a / astronomer~e.2) 
+	 :arg1 (n2 / number~e.18) 
+	 :arg2 (t / thing~e.7 
+		 :quant 1~e.12 
+		 :arg1-of (i / include-91~e.4 
+			 :arg2 (t2 / this~e.6))) 
+	 :mod (o2 / only~e.16) 
+	 :time~e.0 (d / discover-01~e.3 
+		 :arg0 a 
+		 :arg1 t) 
+	 :arg1-of~e.11 (i2 / instead-of-91~e.15 
+		 :arg2 (n3 / name-01~e.13 
+			 :arg0 a 
+			 :arg1 t)))
+
+#
+# ::snt he might call it , for example , " asteroid 325 . "
+#
+#
+(p / possible-01~e.1 
+	 :arg1 (c / call-01~e.2 
+		 :arg0 (h / he~e.0) 
+		 :arg1 (i / it~e.3) 
+		 :arg2 (n2 / name~e.10 
+			 :op1 asteroid~e.9 
+			 :op2 325~e.10) 
+		 :arg0-of~e.5 (e / exemplify-01~e.6)))
+
+#
+# ::snt i have serious reason to believe that the planet from which the little prince came is the asteroid known as b-612 .
+#
+#
+(c / cause-01~e.0 
+	 :arg0 (r / reason~e.3 
+		 :arg1-of (s / serious-02~e.2)) 
+	 :arg1 (b / believe-01~e.5 
+		 :arg0 (i / i~e.0) 
+		 :arg1 (c2 / come-01~e.14 
+			 :arg1 (p2 / prince~e.13 
+				 :mod (l / little~e.12)) 
+			 :arg3~e.9 (a / asteroid 
+				 :wiki~e.4 -~e.1 
+				 :name (n4 / name 
+					 :op1 b-612~e.20) 
+				 :domain~e.6 (p / planet~e.8)))))
+
+#
+# ::snt this asteroid has only once been seen through the telescope .
+#
+#
+(s / see-01~e.3 
+	 :arg1 (a / asteroid~e.1 
+		 :mod (t / this~e.0)) 
+	 :instrument~e.6 (t2 / telescope~e.9) 
+	 :arg1-of (h / have-frequency-91~e.2 
+		 :arg2 1~e.4 
+		 :mod (o / only~e.3)))
+
+#
+# ::snt that was by a turkish astronomer , in 1909 .
+#
+#
+(s / see-01~e.3 
+	 :arg0 (a / astronomer~e.5 
+		 :mod (c / country 
+			 :wiki~e.0 turkey~e.4 
+			 :name (n / name 
+				 :op1 turkey~e.4))) 
+	 :time~e.7 (d / date-entity 
+		 :year 1909~e.8))
+
+#
+# ::snt on making his discovery , the astronomer had presented it to the international astronomical congress , in a great demonstration .
+#
+#
+(p / present-01~e.8 
+	 :arg0 (a / astronomer~e.6) 
+	 :arg1 (i / it~e.9) 
+	 :arg2 (o / organization 
+		 :wiki~e.10 international_astronautical_congress~e.1 
+		 :name (n / name 
+			 :op1 international~e.12 
+			 :op2 astronomical~e.13 
+			 :op3 congress~e.14)) 
+	 :manner~e.0 (d2 / demonstrate-01~e.19 
+		 :arg0 a 
+		 :mod (g / great~e.18)) 
+	 :time~e.16 (d3 / discover-01~e.3 
+		 :arg0 (a / astronomer~e.6)))
+
+#
+# ::snt but he was in turkish costume , and so nobody would believe what he said .
+#
+#
+(c4 / contrast-01~e.0 
+	 :arg2 (c / costume-01~e.5 
+		 :arg1 (h / he~e.1) 
+		 :manner~e.8 (c2 / country 
+			 :wiki~e.3 turkey~e.4 
+			 :name (n / name 
+				 :op1 turkey~e.4)) 
+		 :arg0-of~e.7 (c3 / cause-01~e.8 
+			 :arg1 (b2 / believe-01~e.11 
+				 :arg0 (s / somebody~e.9 
+					 :polarity~e.12 -) 
+				 :arg1 (t / thing~e.13 
+					 :arg1-of~e.14 (s2 / say-01~e.14 
+						 :arg0 h))))))
+
+#
+# ::snt grown - ups are like that ...
+#
+#
+(r / resemble-01~e.4 
+	 :arg1 (g / grown-up~e.0) 
+	 :arg2 (t / that~e.5))
+
+#
+# ::snt fortunately , however , for the reputation of asteroid b-612 , a turkish dictator made a law that his subjects , under pain of death , should change to european costume .
+#
+#
+(c5 / contrast-01~e.2 
+	 :arg2 (m / make-01~e.14 
+		 :arg0 (p3 / person~e.15 
+			 :arg0-of~e.28 (h / have-org-role-91~e.28 
+				 :arg1 (c / country 
+					 :wiki~e.17 turkey~e.12 
+					 :name (n / name 
+						 :op1 turkey~e.12)) 
+				 :arg2 (d / dictator~e.13))) 
+		 :arg1 (l / law~e.16 
+			 :topic~e.14 (c2 / change-01~e.27 
+				 :arg0 (s / subject~e.19 
+					 :poss~e.18 p3) 
+				 :arg3~e.8 (c3 / costume~e.30 
+					 :mod (c4 / continent 
+						 :wiki~e.28 europe~e.29 
+						 :name (n2 / name 
+							 :op1 europe~e.29))) 
+				 :manner~e.14 (t / threaten-01~e.4 
+					 :arg0 d 
+					 :arg1 (p / penalize-01~e.22 
+						 :arg1 s 
+						 :topic~e.23 (d2 / die-01~e.26 
+							 :arg1 s)) 
+					 :arg2 s))) 
+		 :arg2-of~e.24 (f / fortunate-01~e.0 
+			 :arg1 (r / reputation~e.6 
+				 :poss~e.7 (p2 / planet 
+					 :wiki~e.17 - 
+					 :name (n3 / name 
+						 :op1 asteroid~e.8 
+						 :op2 b-612~e.9))))))
+
+#
+# ::snt so in 1920 the astronomer gave his demonstration all over again , dressed with impressive style and elegance .
+#
+#
+(c / cause-01~e.0 
+	 :arg1 (d4 / demonstrate-01~e.7 
+		 :arg0 (a / astronomer~e.4 
+			 :arg1-of~e.9 (d2 / dress-01~e.12 
+				 :arg2 (a4 / and~e.16 
+					 :op1 (s / style~e.15) 
+					 :op2 (e / elegance~e.17) 
+					 :arg0-of (i / impress-01~e.14)))) 
+		 :time~e.1 (d3 / date-entity 
+			 :year 1920~e.2) 
+		 :mod (a3 / again~e.10 
+			 :mod (a2 / all-over~e.8))))
+
+#
+# ::snt and this time everybody accepted his report .
+#
+#
+(a / and~e.0 
+	 :op2 (a2 / accept-01~e.4 
+		 :arg0 (e / everybody~e.3) 
+		 :arg1 (t3 / thing~e.6 
+			 :arg1-of~e.6 (r / report-01~e.6 
+				 :arg0 (h2 / he~e.5))) 
+		 :time (t / time~e.2 
+			 :mod (t2 / this~e.1))))
+
+#
+# ::snt if i have told you these details about the asteroid , and made a note of its number for you , it is on account of the grown - ups and their ways .
+#
+#
+(a / account-01~e.24 
+	 :arg1 (a3 / and~e.11 
+		 :op1 (t / tell-01~e.7 
+			 :arg0 (i / i~e.1) 
+			 :arg1 (d / detail~e.6 
+				 :mod (t2 / this~e.5) 
+				 :topic~e.12 (a4 / asteroid~e.9)) 
+			 :arg2 (y / you~e.4)) 
+		 :op2 (n3 / note-01~e.14 
+			 :arg0 i 
+			 :arg1 (n4 / number~e.17 
+				 :poss~e.16 a4) 
+			 :arg2 y)) 
+	 :arg2 (a2 / and~e.30 
+		 :op1 (g / grown-up~e.27) 
+		 :op2 (w / way~e.32 
+			 :poss~e.31 g)) 
+	 :condition~e.0 (a3 / and~e.11 
+		 :op1 (t / tell-01~e.7 
+			 :arg0 (i / i~e.1) 
+			 :arg1 (d / detail~e.6 
+				 :mod (t2 / this~e.5) 
+				 :topic~e.12 (a4 / asteroid~e.9)) 
+			 :arg2 (y / you~e.4)) 
+		 :op2 (n3 / note-01~e.14 
+			 :arg0 i 
+			 :arg1 (n4 / number~e.17 
+				 :poss~e.16 a4) 
+			 :arg2 y)))
+
+#
+# ::snt when you tell them that you have made a new friend , they never ask you any questions about essential matters .
+#
+#
+(q2 / question-01~e.17 
+	 :polarity~e.13 - 
+	 :arg0 (t2 / they~e.12) 
+	 :arg1 (m / matter~e.20 
+		 :mod (e / essential~e.19)) 
+	 :arg2 (y / you~e.5) 
+	 :time~e.0 (t3 / tell-01~e.2 
+		 :arg0 y 
+		 :arg1 (m2 / make-01~e.7 
+			 :arg0 y 
+			 :arg1 (h / have-rel-role-91~e.6 
+				 :arg0 (p / person~e.14) 
+				 :arg1 y 
+				 :arg2 (f / friend~e.10) 
+				 :arg1-of (n / new-01~e.9))) 
+		 :arg2 (t / they~e.12)) 
+	 :time~e.0 (e2 / ever~e.13) 
+	 :mod (a2 / any~e.16))
+
+#
+# ::snt they never say to you , " what does his voice sound like ?
+#
+#
+(s / say-01~e.2 
+	 :arg0 (t / they~e.0) 
+	 :arg1 (s2 / sound-01~e.11 
+		 :arg1 (v / voice~e.10 
+			 :poss~e.9 (h / he~e.9)) 
+		 :arg2 (a2 / amr-unknown~e.8)) 
+	 :arg2 (y / you~e.4) 
+	 :time (e / ever~e.1) 
+	 :polarity~e.12 -~e.3)
+
+#
+# ::snt what games does he love best ?
+#
+#
+(l / love-01~e.4 
+	 :arg0 (h / he~e.3) 
+	 :arg1 (a2 / amr-unknown~e.2 
+		 :domain~e.0 (g2 / game~e.1)) 
+	 :degree (g / good~e.0 
+		 :degree (m / most~e.5)))
+
+#
+# ::snt does he collect butterflies ? "
+#
+#
+(c / collect-01~e.2 
+	 :arg0 (h / he~e.1) 
+	 :arg1 (b / butterfly~e.3) 
+	 :mode~e.0 interrogative~e.4)
+
+#
+# ::snt instead , they demand : " how old is he ?
+#
+#
+(d / demand-01~e.3 
+	 :arg0 (t / they~e.2) 
+	 :arg1 (a2 / age-01~e.7 
+		 :arg1 (h2 / he~e.6) 
+		 :arg2 (a3 / amr-unknown~e.10)) 
+	 :arg1-of (i2 / instead-of-91~e.0))
+
+#
+# ::snt how many brothers has he ?
+#
+#
+(h / have-rel-role-91~e.3 
+	 :arg0 (p / person~e.0 
+		 :quant (a / amr-unknown~e.5)) 
+	 :arg1 (h2 / he~e.4) 
+	 :arg2 (b / brother~e.2))
+
+#
+# ::snt how much does he weigh ?
+#
+#
+(w / weigh-01~e.4 
+	 :arg1 (h / he~e.3) 
+	 :arg3~e.1 (a / amr-unknown~e.2))
+
+#
+# ::snt how much money does his father make ? "
+#
+#
+(m / make-05~e.6 
+	 :arg0 (p / person~e.0 
+		 :arg0-of~e.2 (h2 / have-rel-role-91~e.1 
+			 :arg1 (h / he~e.4) 
+			 :arg2 (f / father~e.5))) 
+	 :arg1 (m2 / monetary-quantity 
+		 :quant (a / amr-unknown~e.3)))
+
+#
+# ::snt only from these figures do they think they have learned anything about him .
+#
+#
+(t / think-01~e.6 
+	 :arg0 (t2 / they~e.5) 
+	 :arg1 (l / learn-01~e.9 
+		 :arg0 t2 
+		 :arg1 (a / anything~e.10 
+			 :topic~e.11 (h / he~e.12)) 
+		 :source~e.1 (f / figure~e.3 
+			 :mod (t3 / this~e.2 
+				 :mod (o / only~e.0)))))
+
+#
+# ::snt if you were to say to the grown - ups : " i saw a beautiful house made of rosy brick , with geraniums in the windows and doves on the roof , " they would not be able to get any idea of that house at all .
+#
+#
+(p / possible-01~e.38 
+	 :polarity~e.36 -~e.39 
+	 :arg1 (g / get-01~e.40 
+		 :arg0 (g2 / grown-up~e.7) 
+		 :arg1 (i / idea~e.42 
+			 :mod (a / any~e.41) 
+			 :mod (a2 / at~e.46 
+				 :mod (a3 / all~e.47)) 
+			 :topic~e.17 (h2 / house~e.45 
+				 :arg1-of (m / make-01~e.17 
+					 :arg2 (b / brick~e.20 
+						 :mod (r / rosy~e.19))) 
+				 :accompanier~e.22 (a4 / and~e.27 
+					 :op1 (g3 / geranium~e.23 
+						 :location~e.29 (w / window~e.26)) 
+					 :op2 (d / dove~e.28 
+						 :location~e.29 (r2 / roof~e.31))) 
+				 :arg1-of (b2 / beautiful-02~e.15)))) 
+	 :condition~e.0 (s / say-01~e.4 
+		 :arg0 (y / you~e.1) 
+		 :arg1 (s2 / see-01~e.13 
+			 :arg0 y 
+			 :arg1 (h2 / house~e.45 
+				 :arg1-of (m / make-01~e.17 
+					 :arg2 (b / brick~e.20 
+						 :mod (r / rosy~e.19))) 
+				 :accompanier~e.22 (a4 / and~e.27 
+					 :op1 (g3 / geranium~e.23 
+						 :location~e.29 (w / window~e.26)) 
+					 :op2 (d / dove~e.28 
+						 :location~e.29 (r2 / roof~e.31))) 
+				 :arg1-of (b2 / beautiful-02~e.15))) 
+		 :arg2 (g2 / grown-up~e.7)))
+
+#
+# ::snt you would have to say to them : " i saw a house that cost $ 20,000 . "
+#
+#
+(o / obligate-01~e.2 
+	 :arg1 (y / you~e.0) 
+	 :arg2 (s / say-01~e.4 
+		 :arg0 (y / you~e.0) 
+		 :arg1 (s2 / see-01~e.10 
+			 :arg0 y 
+			 :arg1 (h / house~e.12 
+				 :arg1-of~e.13 (c / cost-01~e.14 
+					 :arg2 (m / monetary-quantity 
+						 :unit (d / dollar~e.15) 
+						 :quant 20000~e.16)))) 
+		 :arg2 (t / they~e.6)))
+
+#
+# ::snt then they would exclaim : " oh , what a pretty house that is ! "
+#
+#
+(e / exclaim-01~e.3 
+	 :arg0 (t / they~e.1) 
+	 :arg1 (p2 / pretty~e.10 
+		 :domain~e.8 (h2 / house~e.11 
+			 :mod (t4 / that~e.12))) 
+	 :time~e.14 (t3 / then~e.0))
+
+#
+# ::snt just so , you might say to them : " the proof that the little prince existed is that he was charming , that he laughed , and that he was looking for a sheep .
+#
+#
+(p / possible-01~e.4 
+	 :arg1 (s2 / say-01~e.5 
+		 :arg0 (y / you~e.3) 
+		 :arg1 (p2 / prove-01~e.11 
+			 :arg0 (a / and~e.27 
+				 :op1 (c / charming~e.21 
+					 :domain~e.18 (h / he~e.29)) 
+				 :op2 (l / laugh-01~e.25 
+					 :arg0 h) 
+				 :op3 (l2 / look-01~e.31 
+					 :arg0 h 
+					 :arg1 (s3 / sheep~e.34))) 
+			 :arg1 (e / exist-01~e.16 
+				 :arg1 (p3 / prince~e.15 
+					 :mod (l3 / little~e.14)))) 
+		 :arg2 (t / they~e.7) 
+		 :manner~e.6 (j / just-so~e.0)))
+
+#
+# ::snt if anybody wants a sheep , that is a proof that he exists . "
+#
+#
+(p / prove-01~e.9 
+	 :arg0 (w / want-01~e.2 
+		 :arg0 (a / anybody~e.1) 
+		 :arg1 (s / sheep~e.4)) 
+	 :arg1 (e / exist-01~e.12 
+		 :arg1 a))
+
+#
+# ::snt and what good would it do to tell them that ?
+#
+#
+(a / and~e.0 
+	 :op2 (d / do-02~e.5 
+		 :arg0 (t / tell-01~e.7 
+			 :arg1 (t3 / that~e.9) 
+			 :arg2 (t2 / they~e.8)) 
+		 :arg1 (g / good-04~e.2 
+			 :arg2 t2 
+			 :quant (a2 / amr-unknown~e.1))))
+
+#
+# ::snt they would shrug their shoulders , and treat you like a child .
+#
+#
+(a / and~e.6 
+	 :op1 (s / shrug-01~e.2 
+		 :arg0 (t / they~e.0) 
+		 :arg1 (s2 / shoulder~e.4 
+			 :poss~e.3 t)) 
+	 :op2 (t2 / treat-01~e.7 
+		 :arg0 t 
+		 :arg1 (y / you~e.8) 
+		 :arg2 (c / child~e.11)))
+
+#
+# ::snt but if you said to them : " the planet he came from is asteroid b-612 , " then they would be convinced , and leave you in peace from their questions .
+#
+#
+(c3 / contrast-01~e.0 
+	 :arg2 (a / and~e.24 
+		 :op1 (c / convince-01~e.22 
+			 :arg1 (t / they~e.19)) 
+		 :op2 (l / leave-14~e.25 
+			 :arg0 t 
+			 :arg1 (p2 / peace~e.28 
+				 :topic~e.30 (q2 / question-01~e.31 
+					 :polarity~e.9 - 
+					 :arg0 t) 
+				 :domain~e.29 (y / you~e.2))) 
+		 :condition~e.1 (s / say-01~e.3 
+			 :arg0 (y / you~e.2) 
+			 :arg1 (c2 / come-01~e.11 
+				 :arg1 (h / he~e.10) 
+				 :arg3~e.12 (p / planet 
+					 :wiki~e.4 -~e.4 
+					 :name (n / name 
+						 :op1 asteroid~e.14 
+						 :op2 b-612~e.15))) 
+			 :arg2 t)))
+
+#
+# ::snt they are like that .
+#
+#
+(r / resemble-01~e.2 
+	 :arg1 (t / they~e.0) 
+	 :arg2 (t2 / that~e.3))
+
+#
+# ::snt one must not hold it against them .
+#
+#
+(o / obligate-01~e.1 
+	 :arg1 (o2 / one~e.0) 
+	 :arg2 (h / hold-01~e.3 
+		 :polarity~e.2 -~e.2 
+		 :arg0 o2 
+		 :arg1 (i / it~e.4) 
+		 :arg2 (a / against~e.5 
+			 :op1 (t / they~e.6))))
+
+#
+# ::snt children should always show great forbearance toward grown - up people .
+#
+#
+(r / recommend-01~e.1 
+	 :arg1 (s / show-01~e.3 
+		 :arg0 (c / child~e.0) 
+		 :arg1 (f / forbearance~e.5 
+			 :mod (g / great~e.4)) 
+		 :arg2 (g2 / grown-up~e.7) 
+		 :time~e.6 (a / always~e.2)))
+
+#
+# ::snt but certainly , for us who understand life , figures are a matter of indifference .
+#
+#
+(c2 / contrast-01~e.0 
+	 :arg2 (c / certain~e.1 
+		 :domain~e.12 (i2 / indifferent-01~e.14 
+			 :arg1 (w2 / we~e.4 
+				 :arg0-of~e.3 (u / understand-01~e.6 
+					 :arg1 (l / life~e.7))) 
+			 :arg2 (f2 / figure~e.9))))
+
+#
+# ::snt i should have liked to begin this story in the fashion of the fairy - tales .
+#
+#
+(l / like-02~e.3 
+	 :arg0 (i / i~e.0) 
+	 :arg1 (b / begin-01~e.5 
+		 :arg0 i 
+		 :arg1 (s / story~e.7 
+			 :mod (t / this~e.6)) 
+		 :manner~e.4 (f / fashion~e.10 
+			 :mod (t2 / tale~e.15 
+				 :mod (f2 / fairy~e.13)))))
+
+#
+# ::snt i should have like to say : " once upon a time there was a little prince who lived on a planet that was scarcely any bigger than himself , and who had need of a sheep ... "
+#
+#
+(l / like-02~e.3 
+	 :arg0 (i / i~e.0) 
+	 :arg1 (s / say-01~e.5 
+		 :arg0 i 
+		 :arg1 (p / prince~e.16 
+			 :mod (l2 / little~e.15) 
+			 :arg0-of~e.28 (l3 / live-01~e.18 
+				 :location~e.22 (p2 / planet~e.21 
+					 :mod (b / big~e.26 
+						 :degree (m / more~e.9 
+							 :quant (s2 / scarce~e.24)) 
+						 :compared-to~e.27 p))) 
+			 :arg0-of~e.28 (n / need-01~e.33 
+				 :arg1 (s3 / sheep~e.36)) 
+			 :time (o / once-upon-a-time~e.8))))
+
+#
+# ::snt to those who understand life , that would have given a much greater air of truth to my story .
+#
+#
+(g / give-01~e.9 
+	 :arg0 (t / that~e.6) 
+	 :arg1 (t3 / truth~e.15 
+		 :quant (a / air~e.13 
+			 :mod (g2 / great~e.12 
+				 :degree~e.0 (m / more~e.11 
+					 :degree (m2 / much~e.11))))) 
+	 :arg2 (s / story~e.18 
+		 :poss~e.17 (i / i~e.8)) 
+	 :beneficiary~e.1 (p / person~e.10 
+		 :arg0-of~e.3 (u / understand-01~e.3 
+			 :arg1 (l / life~e.4))))
+
+#
+# ::snt for i do not want any one to read my book carelessly .
+#
+#
+(c / cause-01~e.0 
+	 :arg0 (w / want-01~e.4 
+		 :arg0 (i / i~e.1) 
+		 :arg1 (r / read-01~e.8 
+			 :arg0 (a / anyone~e.6) 
+			 :arg1 (b / book~e.10 
+				 :poss~e.9 i) 
+			 :manner~e.7 (c2 / careless~e.11)) 
+		 :polarity~e.5 -~e.3))
+
+#
+# ::snt i have suffered too much grief in setting down these memories .
+#
+#
+(s / suffer-01~e.2 
+	 :arg0 (i / i~e.0) 
+	 :arg1 (g / grief~e.5 
+		 :quant (m / much~e.4 
+			 :degree (t / too~e.3))) 
+	 :time~e.6 (s2 / set-down-09~e.8 
+		 :arg0 i 
+		 :arg1 (m2 / memory~e.10 
+			 :mod (t2 / this~e.9))))
+
+#
+# ::snt six years have already passed since my friend went away from me , with his sheep .
+#
+#
+(g / go-02~e.8 
+	 :arg0 (p / person~e.6 
+		 :arg0-of~e.2 (h / have-rel-role-91~e.2 
+			 :arg1 (i / i~e.11) 
+			 :arg2 (f / friend~e.7))) 
+	 :direction~e.0 (a / away~e.9 
+		 :op1 i) 
+	 :accompanier~e.13 (s / sheep~e.15 
+		 :poss~e.14 p) 
+	 :time (b / before~e.4 
+		 :op1 (n / now~e.5) 
+		 :quant (t / temporal-quantity 
+			 :quant 6~e.10 
+			 :unit (y / year~e.1))) 
+	 :time (a3 / already~e.3))
+
+#
+# ::snt if i try to describe him here , it is to make sure that i shall not forget him .
+#
+#
+(e / ensure-01~e.18 
+	 :arg1 (f / forget-01~e.17 
+		 :arg0 (i / i~e.1) 
+		 :arg1 (h3 / he~e.15) 
+		 :polarity~e.16 -~e.16) 
+	 :condition~e.0 (t / try-01~e.2 
+		 :arg0 (i / i~e.1) 
+		 :arg1 (d / describe-01~e.4 
+			 :arg0 i 
+			 :arg1 (h / he~e.5) 
+			 :location~e.11 (h2 / here~e.6))))
+
+#
+# ::snt to forget a friend is sad .
+#
+#
+(s / sad-02~e.5 
+	 :arg0 (f3 / forget-01~e.1 
+		 :arg1 (p / person~e.2 
+			 :arg0-of~e.0 (h / have-rel-role-91~e.0 
+				 :arg2 (f / friend~e.3)))))
+
+#
+# ::snt not every one has had a friend .
+#
+#
+(h / have-03~e.3 
+	 :polarity~e.0 -~e.2 
+	 :arg0 (e / everyone~e.1) 
+	 :arg1 (p / person~e.5 
+		 :arg0-of~e.4 (h2 / have-rel-role-91~e.3 
+			 :arg1 e 
+			 :arg2 (f / friend~e.6))))
+
+#
+# ::snt and if i forget him , i may become like the grown - ups who are no longer interested in anything but figures ...
+#
+#
+(a / and~e.0 
+	 :op2 (p / possible-01~e.13 
+		 :arg1 (r / resemble-01~e.9 
+			 :arg1 (i / i~e.6) 
+			 :arg2 (g / grown-up~e.11 
+				 :arg1-of (i2 / interest-01~e.18 
+					 :polarity~e.16 -~e.16 
+					 :arg2 (a2 / anything~e.20 
+						 :arg2-of~e.8 (e / except-01~e.17 
+							 :arg1 (f / figure~e.22)))))) 
+		 :condition~e.1 (f2 / forget-01~e.3 
+			 :arg0 i 
+			 :arg1 (h / he~e.4))))
+
+#
+# ::snt it is for that purpose , again , that i have bought a box of paints and some pencils .
+#
+#
+(b / buy-01~e.11 
+	 :arg0 (i / i~e.9) 
+	 :arg1 (a / and~e.16 
+		 :op1 (p / paint~e.15 
+			 :location~e.6 (b2 / box~e.13)) 
+		 :op2 (p2 / pencil~e.18 
+			 :quant (s / some~e.17))) 
+	 :purpose~e.4 (t2 / that~e.8))
+
+#
+# ::snt it is hard to take up drawing again at my age , when i have never made any pictures except those of the boa constrictor from the outside and the boa constrictor from the inside , since i was six .
+#
+#
+(h / hard-02~e.2 
+	 :arg1 (t / take-up-31~e.4 
+		 :arg0 (i / i~e.13 
+			 :age~e.14 (t4 / temporal-quantity 
+				 :duration-of~e.20 (m / make-01~e.16 
+					 :polarity~e.15 -~e.16 
+					 :arg1 (p / picture~e.18 
+						 :mod (a5 / any~e.17) 
+						 :arg2-of~e.25 (e2 / except-01~e.19 
+							 :arg1 (a6 / and~e.28 
+								 :op1 (p2 / picture~e.18 
+									 :topic~e.16 (b / boa~e.23 
+										 :mod (c2 / constrictor~e.24) 
+										 :direction~e.39 (f / from~e.32 
+											 :op1 (o / outside~e.27)))) 
+								 :op2 (p3 / picture~e.18 
+									 :topic~e.16 (b2 / boa~e.30 
+										 :mod (c3 / constrictor~e.31) 
+										 :direction~e.8 (f2 / from~e.32 
+											 :op1 (i2 / inside~e.34))))))) 
+					 :time~e.12 (e / ever~e.15) 
+					 :time~e.12 (s / since~e.36 
+						 :op1 (a3 / age-01~e.10 
+							 :arg1 i 
+							 :arg2 (t6 / temporal-quantity 
+								 :quant 6~e.5 
+								 :unit (y2 / year~e.5))))))) 
+		 :arg1 (d / draw-01~e.6) 
+		 :mod (a / again~e.7)) 
+	 :arg1-of (c / cause-01~e.9))
+
+#
+# ::snt i shall certainly try to make my portraits as true to life as possible .
+#
+#
+(t / try-01~e.3 
+	 :arg0 (i / i~e.0) 
+	 :arg1 (m / make-02~e.5 
+		 :arg0 i 
+		 :arg1 (t2 / true-02~e.9 
+			 :arg1 (p / portrait~e.7 
+				 :topic~e.1 i) 
+			 :arg2 (l / life~e.11) 
+			 :degree (m2 / most~e.8) 
+			 :compared-to~e.12 (p2 / possible-01~e.13))) 
+	 :mod (c / certain~e.2))
+
+#
+# ::snt but i am not at all sure of success .
+#
+#
+(c / contrast-01~e.0 
+	 :arg2 (s / sure-02~e.6 
+		 :polarity~e.3 -~e.3 
+		 :arg0 (i / i~e.1) 
+		 :degree (a / at~e.4 
+			 :op1 (a2 / all~e.5)) 
+		 :arg1-of (s2 / succeed-01~e.8 
+			 :arg0 i)))
+
+#
+# ::snt one drawing goes along all right , and another has no resemblance to its subject .
+#
+#
+(a / and~e.7 
+	 :op1 (g / go-06~e.5 
+		 :arg1 (p2 / picture~e.9 
+			 :quant 1 
+			 :arg1-of (d / draw-01~e.1)) 
+		 :arg2 (a2 / along~e.3) 
+		 :mod (a3 / all-right~e.2)) 
+	 :op2 (r2 / resemble-01~e.11 
+		 :polarity~e.10 -~e.0 
+		 :arg1 (p / picture~e.9 
+			 :arg1-of (d2 / draw-01~e.1) 
+			 :mod (a4 / another~e.8)) 
+		 :arg2 (s / subject~e.14 
+			 :poss~e.13 p)))
+
+#
+# ::snt i make some errors , too , in the little prince 's height : in one place he is too tall and in another too short .
+#
+#
+(e / err-01~e.3 
+	 :arg0 (i / i~e.0) 
+	 :topic~e.12 (h / high-02~e.11 
+		 :arg1 (p / prince~e.10 
+			 :mod (l / little~e.9))) 
+	 :mod (t / too~e.5) 
+	 :example~e.0 (a / and~e.21 
+		 :op1 (t2 / tall~e.20 
+			 :domain~e.17 p 
+			 :degree (t3 / too~e.24) 
+			 :location~e.1 (p2 / place~e.16 
+				 :mod (o / one~e.15))) 
+		 :op2 (s / short-07~e.25 
+			 :arg1 p 
+			 :degree (t4 / too~e.19) 
+			 :location~e.1 (p3 / place~e.16 
+				 :mod (a2 / another~e.23)))) 
+	 :mod (s2 / some~e.2))
+
+#
+# ::snt and i feel some doubts about the color of his costume .
+#
+#
+(a / and~e.0 
+	 :op2 (f / feel-01~e.2 
+		 :arg0 (i / i~e.1) 
+		 :arg1 (d / doubt-01~e.4 
+			 :arg0 i 
+			 :arg1 (c / color~e.7 
+				 :poss~e.8 (c2 / costume~e.10 
+					 :poss~e.8 (h / he~e.9))) 
+			 :quant (s / some~e.3))))
+
+#
+# ::snt so i fumble along as best i can , now good , now bad , and i hope generally fair - to - middling .
+#
+#
+(c / cause-01~e.0 
+	 :arg1 (f / fumble-01~e.2 
+		 :arg0 (i / i~e.1) 
+		 :arg1 (a / along~e.3) 
+		 :manner~e.0 (g / good-03~e.10 
+			 :degree (m / most~e.5) 
+			 :example~e.16 (g2 / good-03~e.10 
+				 :time (n / now~e.9)) 
+			 :example~e.16 (b / bad-02~e.13 
+				 :time (n2 / now~e.12)) 
+			 :example~e.16 (f2 / fair-04~e.19 
+				 :arg1-of (g3 / general-02~e.18) 
+				 :arg1-of (h / hope-01~e.17 
+					 :arg0 i) 
+				 :prep-to~e.21 (m2 / middling~e.23)) 
+			 :compared-to~e.4 (p / possible-01~e.7))))
+
+#
+# ::snt in certain more important details i shall make mistakes , also .
+#
+#
+(m2 / mistake-02~e.8 
+	 :arg0 (i / i~e.5) 
+	 :arg1 (d / detail~e.4 
+		 :mod (i2 / important~e.3 
+			 :degree~e.7 (m3 / more~e.2)) 
+		 :mod (c / certain~e.1)) 
+	 :mod (a / also~e.10))
+
+#
+# ::snt but that is something that will not be my fault .
+#
+#
+(c / contrast-01~e.0 
+	 :arg2 (f2 / fault-01~e.9 
+		 :arg1 (i / i~e.8) 
+		 :arg2 (s2 / something~e.3 
+			 :mod (t2 / that~e.4)) 
+		 :polarity~e.5 -~e.6))
+
+#
+# ::snt my friend never explained anything to me .
+#
+#
+(e / explain-01~e.3 
+	 :polarity~e.2 -~e.5 
+	 :arg0 (p / person~e.0 
+		 :arg0-of~e.5 (h / have-rel-role-91~e.5 
+			 :arg1 (i / i~e.6) 
+			 :arg2 (f / friend~e.1))) 
+	 :arg1 (a / anything~e.4) 
+	 :arg2 (i / i~e.6) 
+	 :time (e2 / ever~e.2))
+
+#
+# ::snt he thought , perhaps , that i was like himself .
+#
+#
+(t / think-01~e.1 
+	 :arg0 (h / he~e.0) 
+	 :arg1 (r / resemble-01~e.8 
+		 :arg1 (i / i~e.6) 
+		 :arg2 h) 
+	 :mod (p / perhaps~e.9))
+
+#
+# ::snt but i , alas , do not know how to see sheep through the walls of boxes .
+#
+#
+(c / contrast-01~e.0 
+	 :arg2 (k / know-01~e.7 
+		 :polarity~e.6 -~e.6 
+		 :arg0 (i / i~e.1) 
+		 :arg1 (t2 / thing 
+			 :manner-of~e.8 (s / see-01~e.10 
+				 :arg1 (s2 / sheep~e.11) 
+				 :path~e.16 (t / through~e.12 
+					 :op1 (w / wall~e.14 
+						 :consist-of~e.15 (b2 / box~e.16)))))) 
+	 :mod (a / alas~e.3))
+
+#
+# ::snt perhaps i am a little like the grown - ups .
+#
+#
+(r / resemble-01~e.5 
+	 :arg1 (i / i~e.1) 
+	 :arg2 (g / grown-up~e.7) 
+	 :mod (p / perhaps~e.0) 
+	 :quant (l / little~e.4))
+
+#
+# ::snt i have had to grow old .
+#
+#
+(o / obligate-01~e.2 
+	 :arg1 (i / i~e.1) 
+	 :arg2 (g / grow-02~e.4 
+		 :arg1 i 
+		 :arg2 (o2 / old~e.5)))
+
+#
+# ::snt chapter 5 .
+#
+#
+(c / chapter~e.0 
+	 :mod 5~e.1)
+
+#
+# ::snt as each day passed i would learn , in our talk , something about the little prince 's planet , his departure from it , his journey .
+#
+#
+(l / learn-01~e.6 
+	 :arg0 (i / i~e.4) 
+	 :arg1 (a / and~e.9 
+		 :op1 (s / something~e.12 
+			 :topic~e.13 (p2 / planet~e.18 
+				 :poss~e.25 (p3 / prince~e.16 
+					 :mod (l2 / little~e.15)))) 
+		 :op2 (d2 / depart-01~e.21 
+			 :arg0 p3 
+			 :arg1 p2) 
+		 :op3 (j / journey-01~e.26 
+			 :arg0 p3)) 
+	 :time~e.8 (p / pass-03~e.3 
+		 :arg1 (d / day~e.2 
+			 :mod (e / each~e.1))) 
+	 :source~e.22 (t / talk-01~e.10 
+		 :arg0 (w / we~e.23)))
+
+#
+# ::snt the information would come very slowly , as it might chance to fall from his thoughts .
+#
+#
+(c / come-01~e.3 
+	 :arg1 (i / information~e.1) 
+	 :arg1-of (s / slow-05~e.5 
+		 :degree (v / very~e.4)) 
+	 :time (f / fall-01~e.12 
+		 :arg1 i 
+		 :arg3~e.13 (t / thing~e.9 
+			 :arg1-of~e.15 (t2 / think-01~e.15 
+				 :arg0 (h / he~e.14))) 
+		 :arg1-of~e.8 (c2 / chance-01~e.10)))
+
+#
+# ::snt it was in this way that i heard , on the third day , about the catastrophe of the baobabs .
+#
+#
+(h / hear-01~e.7 
+	 :arg0 (i / i~e.6) 
+	 :arg1 (c / catastrophe~e.16 
+		 :poss~e.14 (b / baobab~e.19)) 
+	 :manner~e.9 (t / this~e.3) 
+	 :time~e.2 (d / day~e.12 
+		 :ord~e.0 (o / ordinal-entity~e.4 
+			 :value 3~e.11)))
+
+#
+# ::snt this time , once more , i had the sheep to thank for it .
+#
+#
+(o / obligate-01~e.7 
+	 :arg2 (t / thank-01~e.11 
+		 :arg0 (i / i~e.6) 
+		 :arg1 (s / sheep~e.9) 
+		 :arg2 (i2 / it~e.13)) 
+	 :time (t2 / time~e.1 
+		 :mod (t3 / this~e.0)) 
+	 :mod (a / again~e.4 
+		 :frequency~e.12 1~e.3))
+
+#
+# ::snt for the little prince asked me abruptly -- as if seized by a grave doubt -- " it is true , is n't it , that sheep eat little bushes ? "
+#
+#
+(a / ask-01~e.4 
+	 :arg0 (p / prince~e.3 
+		 :mod (l2 / little~e.2)) 
+	 :arg1 (t / true-01~e.19 
+		 :arg1 (e / eat-01~e.27 
+			 :arg0 (s / sheep~e.26) 
+			 :arg1 (b / bush~e.29 
+				 :mod (l / little~e.28))) 
+		 :arg1-of~e.17 (r / request-confirmation-91~e.22 
+			 :arg0 p 
+			 :arg2 (i2 / i~e.5))) 
+	 :arg2 (i2 / i~e.5) 
+	 :manner~e.11 (a2 / abrupt~e.6) 
+	 :conj-as-if~e.9 (s2 / seize-01~e.10 
+		 :arg0 (d / doubt-01~e.14 
+			 :arg0 p 
+			 :mod (g / grave~e.13)) 
+		 :arg1 p))
+
+#
+# ::snt " yes , that is true . "
+#
+#
+(t / true-01~e.5 
+	 :arg1 (t2 / that~e.3))
+
+#
+# ::snt " ah !
+#
+#
+(a / ah~e.1 
+	 :mode expressive~e.2)
+
+#
+# ::snt i am glad ! "
+#
+#
+(g / glad-02~e.2 
+	 :arg1 (i / i~e.0))
+
+#
+# ::snt i did not understand why it was so important that sheep should eat little bushes .
+#
+#
+(u / understand-01~e.3 
+	 :polarity~e.2 -~e.1 
+	 :arg0 (i / i~e.0) 
+	 :arg1 (i2 / important~e.8 
+		 :mod (s2 / so~e.7) 
+		 :domain~e.9 (r / recommend-01~e.11 
+			 :arg1 (e / eat-01~e.12 
+				 :arg0 (s / sheep~e.10) 
+				 :arg1 (b / bush~e.14 
+					 :mod (l / little~e.13)))) 
+		 :arg1-of (c / cause-01~e.4 
+			 :arg0 (a / amr-unknown~e.4))))
+
+#
+# ::snt but the little prince added : " then it follows that they also eat baobabs ? "
+#
+#
+(c / contrast-01~e.0 
+	 :arg1 (a / add-01~e.4 
+		 :arg0 (p / prince~e.3 
+			 :mod (l / little~e.2)) 
+		 :arg1 (f / follow-05~e.9 
+			 :mode~e.15 interrogative~e.7 
+			 :arg1 (e / eat-01~e.13 
+				 :arg0 (t / they~e.11) 
+				 :arg1 (b / baobab~e.14) 
+				 :mod (a2 / also~e.12)) 
+			 :arg1-of~e.10 (h / have-condition-91))))
+
+#
+# ::snt i pointed out to the little prince that baobabs were not little bushes , but , on the contrary , trees as big as castles ; and that even if he took a whole herd of elephants away with him , the herd would not eat up one single baobab .
+#
+#
+(p2 / point-out-02~e.1 
+	 :arg0 (i / i~e.0) 
+	 :arg1 (a / and~e.26 
+		 :op1 (t2 / tree~e.20 
+			 :mod (b5 / big~e.22 
+				 :compared-to~e.21 (c / castle~e.24) 
+				 :degree (e4 / equal~e.23)) 
+			 :domain~e.27 (b2 / baobab~e.8) 
+			 :arg1-of~e.7 (i2 / instead-of-91~e.14 
+				 :arg2 (b3 / bush~e.12 
+					 :mod (l3 / little~e.11) 
+					 :domain~e.7 b2))) 
+		 :op2 (e / eat-up-02~e.46 
+			 :polarity~e.44 -~e.10 
+			 :arg0 (h / herd~e.42 
+				 :consist-of~e.35 (e2 / elephant~e.36) 
+				 :mod (w / whole~e.33)) 
+			 :arg1 (b / baobab~e.49 
+				 :quant 1~e.32 
+				 :arg1-of (s / single-02~e.48)) 
+			 :concession~e.31 (e3 / even-if~e.28 
+				 :op1 (t / take-01~e.18 
+					 :arg0 (p / prince~e.6 
+						 :mod (l2 / little~e.5)) 
+					 :arg1 (h / herd~e.42 
+						 :consist-of~e.35 (e2 / elephant~e.36) 
+						 :mod (w / whole~e.33)) 
+					 :arg3~e.38 (a2 / away~e.37))))) 
+	 :beneficiary~e.7 (p / prince~e.6 
+		 :mod (l2 / little~e.5)))
+
+#
+# ::snt the idea of the herd of elephants made the little prince laugh .
+#
+#
+(m / make-02~e.7 
+	 :arg0 (i / idea~e.1 
+		 :topic~e.2 (h / herd~e.4 
+			 :consist-of~e.5 (e / elephant~e.6))) 
+	 :arg1 (l / laugh-01~e.11 
+		 :arg0 (p / prince~e.10 
+			 :mod (l2 / little~e.9))))
+
+#
+# ::snt " we would have to put them one on top of the other , " he said .
+#
+#
+(s / say-01~e.16 
+	 :arg0 (h / he~e.15) 
+	 :arg1 (o / obligate-01~e.9 
+		 :arg2 (s2 / stack-01~e.5 
+			 :arg0 (w / we~e.1) 
+			 :arg1 (t / they~e.6))))
+
+#
+# ::snt but he made a wise comment : " before they grow so big , the baobabs start out by being little . "
+#
+#
+(c2 / contrast-01~e.0 
+	 :arg2 (c / comment-01~e.5 
+		 :arg0 (h / he~e.1) 
+		 :arg1 (s / start-out-05~e.16 
+			 :arg0 (b2 / baobab~e.15) 
+			 :arg2 (l / little~e.20) 
+			 :time (b4 / before~e.8 
+				 :op1 (g / grow-02~e.10 
+					 :arg1 b2 
+					 :arg2 (b5 / big~e.12 
+						 :degree (s2 / so~e.11))))) 
+		 :manner~e.17 (w / wise~e.4)))
+
+#
+# ::snt " that is strictly correct , "
+#
+#
+(c / correct-02~e.4 
+	 :arg1 (t / that~e.1) 
+	 :mod (s / strict~e.3))
+
+#
+# ::snt i said .
+#
+#
+(s / say-01~e.1 
+	 :arg0 (i / i~e.0))
+
+#
+# ::snt " but why do you want the sheep to eat the little baobabs ? "
+#
+#
+(c / contrast-01~e.1 
+	 :arg2 (c2 / cause-01~e.2 
+		 :arg0 (a / amr-unknown~e.13) 
+		 :arg1 (w / want-01~e.5 
+			 :arg0 (y / you~e.4) 
+			 :arg1 (e / eat-01~e.9 
+				 :arg0 (s / sheep~e.7) 
+				 :arg1 (b / baobab~e.12 
+					 :mod (l / little~e.11))))))
+
+#
+# ::snt he answered me at once , " oh , come , come ! " , as if he were speaking of something that was self - evident .
+#
+#
+(a / answer-01~e.1 
+	 :arg0 (h / he~e.17) 
+	 :arg1 (i2 / i~e.2) 
+	 :arg2 (c / come-on-25~e.9) 
+	 :time~e.12 (i / immediate~e.24) 
+	 :conj-as-if~e.15 (s / speak-01~e.19 
+		 :arg0 h 
+		 :arg1 (s2 / something~e.21 
+			 :arg0-of (e / evidence-01~e.26 
+				 :arg1 s2))))
+
+#
+# ::snt and i was obliged to make a great mental effort to solve this problem , without any assistance .
+#
+#
+(a / and~e.0 
+	 :op1 (o / oblige-02~e.3 
+		 :arg2 (e / effort-01~e.9 
+			 :arg0 (i / i~e.1) 
+			 :arg1 (s / solve-01~e.11 
+				 :arg0 i 
+				 :arg1 (p / problem~e.13 
+					 :mod (t / this~e.12)) 
+				 :arg2-of~e.15 (a2 / assist-01~e.17 
+					 :polarity~e.16 -~e.5 
+					 :arg1 i)) 
+			 :manner~e.10 (m2 / mental~e.8) 
+			 :mod (g / great~e.7))))
+
+#
+# ::snt indeed , as i learned , there were on the planet where the little prince lived -- as on all planets -- good plants and bad plants .
+#
+#
+(b2 / be-located-at-91~e.6 
+	 :arg1 (a3 / and~e.24 
+		 :op1 (p / plant~e.23 
+			 :arg1-of (g / good-02~e.22)) 
+		 :op2 (p2 / plant~e.26 
+			 :arg1-of (b / bad-07~e.25)) 
+		 :mod (i / indeed~e.0)) 
+	 :arg2 (a / and~e.24 
+		 :op1 (p3 / planet~e.10 
+			 :location-of~e.18 (l / live-01~e.15 
+				 :arg0 (p4 / prince~e.14 
+					 :mod (l2 / little~e.13)))) 
+		 :op2 (p5 / planet~e.20 
+			 :mod (a2 / all~e.19))) 
+	 :arg1-of (l3 / learn-01~e.4 
+		 :arg0 (i2 / i~e.3)))
+
+#
+# ::snt in consequence , there were good seeds from good plants , and bad seeds from bad plants .
+#
+#
+(a / and~e.11 
+	 :op1 (s / seed~e.6 
+		 :arg1-of (g / good-02~e.5) 
+		 :source~e.7 (p / plant~e.9 
+			 :arg1-of (g2 / good-02~e.8))) 
+	 :op2 (s2 / seed~e.13 
+		 :arg1-of (b / bad-07~e.12) 
+		 :source~e.14 (p2 / plant~e.16 
+			 :arg1-of (b2 / bad-07~e.15))) 
+	 :arg1-of~e.1 (c2 / cause-01~e.3))
+
+#
+# ::snt but seeds are invisible .
+#
+#
+(c / contrast-01~e.0 
+	 :arg2 (p / possible-01~e.3 
+		 :polarity~e.3 - 
+		 :arg1 (s2 / see-01~e.0 
+			 :arg1 (s / seed~e.1))))
+
+#
+# ::snt they sleep deep in the heart of the earth 's darkness , until some one among them is seized with the desire to awaken .
+#
+#
+(s / sleep-01~e.1 
+	 :arg0 (t / they~e.16) 
+	 :location~e.15 (h / heart~e.5 
+		 :arg2-of~e.19 (d / deep-02~e.2) 
+		 :part-of~e.6 (d2 / darkness~e.10 
+			 :poss~e.6 (e / earth~e.8))) 
+	 :time~e.3 (u / until~e.12 
+		 :op1 (s2 / seize-01~e.18 
+			 :arg0 (d3 / desire-01~e.21 
+				 :arg1 (w / wake-01~e.23 
+					 :arg1 s)) 
+			 :arg1 (s3 / someone~e.13 
+				 :arg1-of (i / include-91~e.9 
+					 :arg2 t)))))
+
+#
+# ::snt then this little seed will stretch itself and begin -- timidly at first -- to push a charming little sprig inoffensively upward toward the sun .
+#
+#
+(a / and~e.7 
+	 :op1 (s / stretch-01~e.5 
+		 :arg0 (s2 / seed~e.3 
+			 :mod (l / little~e.2) 
+			 :mod (t2 / this~e.1)) 
+		 :arg1 s2) 
+	 :op2 (b / begin-01~e.8 
+		 :arg0 s2 
+		 :arg1 (p / push-01~e.15 
+			 :arg0 s2 
+			 :arg1 (s3 / sprig~e.19 
+				 :mod (l2 / little~e.18) 
+				 :arg0-of (c / charm-01~e.17)) 
+			 :arg2 (u / upward~e.21 
+				 :direction~e.11 (s4 / sun~e.24)) 
+			 :manner~e.14 (o / offensive~e.20 
+				 :polarity~e.6 -)) 
+		 :manner~e.14 (t3 / timid~e.10 
+			 :time (a2 / at-first~e.12))) 
+	 :time (t / then~e.0))
+
+#
+# ::snt if it is only a sprout of radish or the sprig of a rose - bush , one would let it grow wherever it might wish .
+#
+#
+(a / allow-01~e.19 
+	 :arg0 (o / one~e.17) 
+	 :arg1 (g / grow-01~e.21 
+		 :arg1 (i / it~e.1) 
+		 :location~e.22 (w2 / wish-01~e.25 
+			 :arg0 i 
+			 :arg1-of~e.23 (p / possible-01~e.24))) 
+	 :condition~e.0 (o2 / or~e.8 
+		 :op1 (s / sprout~e.5 
+			 :part-of~e.6 (r / radish~e.7)) 
+		 :op2 (s2 / sprig~e.10 
+			 :part-of~e.11 (b2 / bush~e.15 
+				 :mod (r2 / rose~e.13))) 
+		 :mod (o3 / only~e.3) 
+		 :domain~e.1 (i / it~e.1)))
+
+#
+# ::snt but when it is a bad plant , one must destroy it as soon as possible , the very first instant that one recognizes it .
+#
+#
+(c / contrast-01~e.0 
+	 :arg2 (o / obligate-01~e.9 
+		 :arg2 (d / destroy-01~e.10 
+			 :arg0 (o2 / one~e.22) 
+			 :arg1 (i2 / it~e.2) 
+			 :time (i / instant~e.20 
+				 :time-of~e.19 (r / recognize-01~e.23 
+					 :arg0 o2 
+					 :arg1 i2) 
+				 :ord~e.1 (o3 / ordinal-entity~e.21 
+					 :value 1~e.4 
+					 :degree (v / very~e.18))) 
+			 :time (s / soon~e.13 
+				 :degree (m / most~e.12) 
+				 :compared-to~e.14 (p2 / possible-01~e.15 
+					 :arg1 d))) 
+		 :condition~e.2 (p / plant~e.6 
+			 :arg1-of~e.11 (b / bad-07~e.5) 
+			 :domain~e.24 (i2 / it~e.2))))
+
+#
+# ::snt now there were some terrible seeds on the planet that was the home of the little prince ; and these were the seeds of the baobab .
+#
+#
+(b2 / be-located-at-91~e.1 
+	 :arg1 (s / seed~e.5 
+		 :arg1-of~e.9 (t / terrible-01~e.4) 
+		 :quant (s2 / some~e.3) 
+		 :poss~e.23 (b / baobab~e.25)) 
+	 :arg2 (p / planet~e.8 
+		 :location-of~e.6 (h / home~e.12 
+			 :poss~e.13 (p2 / prince~e.16 
+				 :mod (l / little~e.15)))) 
+	 :time (n / now~e.0))
+
+#
+# ::snt the soil of that planet was infested with them .
+#
+#
+(i / infest-01~e.6 
+	 :arg1 (s / soil~e.1 
+		 :poss~e.2 (p / planet~e.4 
+			 :mod (t2 / that~e.3))) 
+	 :arg2 (t / they~e.8))
+
+#
+# ::snt a baobab is something you will never , never be able to get rid of if you attend to it too late .
+#
+#
+(p / possible-01~e.10 
+	 :polarity~e.5 -~e.11 
+	 :arg1 (e / eliminate-01~e.13 
+		 :arg0 (y / you~e.4) 
+		 :arg1 (b / baobab~e.1) 
+		 :time (e2 / ever~e.8)) 
+	 :condition~e.15 (a / attend-02~e.17 
+		 :arg0 y 
+		 :arg1 b 
+		 :time (l / late~e.21 
+			 :degree~e.12 (t / too~e.20))))
+
+#
+# ::snt it spreads over the entire planet .
+#
+#
+(s / spread-01~e.1 
+	 :arg1 (i / it~e.0) 
+	 :arg2 (p / planet~e.5 
+		 :mod (e / entire~e.4)))
+
+#
+# ::snt it bores clear through it with its roots .
+#
+#
+(b / bore-01~e.1 
+	 :arg0 (i / it~e.0) 
+	 :arg2 (t2 / through~e.3 
+		 :op1 (i2 / it~e.4) 
+		 :mod (c / clear-03~e.2)) 
+	 :arg3~e.5 (r / root~e.7 
+		 :poss~e.6 i))
+
+#
+# ::snt and if the planet is too small , and the baobabs are too many , they split it in pieces ...
+#
+#
+(a / and~e.0 
+	 :op1 (s / split-01~e.16 
+		 :arg0 (b / baobab~e.10 
+			 :quant (m / many~e.13 
+				 :degree (t3 / too~e.12))) 
+		 :arg1 (p2 / planet~e.3) 
+		 :arg2 (p / piece~e.19) 
+		 :condition~e.1 (a2 / and~e.8 
+			 :op1 (s2 / small~e.6 
+				 :degree (t2 / too~e.5) 
+				 :domain~e.17 (p2 / planet~e.3)) 
+			 :op2 (b / baobab~e.10 
+				 :quant (m / many~e.13 
+					 :degree (t3 / too~e.12))))))
+
+#
+# ::snt " it is a question of discipline , " the little prince said to me later on .
+#
+#
+(s / say-01~e.12 
+	 :arg0 (p / prince~e.11 
+		 :mod (l / little~e.10)) 
+	 :arg1 (q / question~e.4 
+		 :topic~e.5 (d / discipline~e.6) 
+		 :domain~e.1 (i / it~e.1)) 
+	 :arg2 (i2 / i~e.14) 
+	 :time (l2 / late~e.15 
+		 :degree (m / more~e.15)))
+
+#
+# ::snt " when you 've finished your own toilet in the morning , then it is time to attend to the toilet of your planet , just so , with the greatest care .
+#
+#
+(a / attend-02~e.17 
+	 :arg0 (y2 / you~e.2) 
+	 :arg1 (t2 / toilet~e.7 
+		 :poss~e.21 (p / planet~e.23 
+			 :poss~e.22 (y / you~e.2)) 
+		 :arg1-of~e.15 (r / resemble-01~e.6 
+			 :arg2 (t / toilet~e.7 
+				 :poss~e.5 y))) 
+	 :manner~e.26 (c / care-04~e.31 
+		 :extent~e.22 (g / great~e.30 
+			 :degree (m2 / most~e.25))) 
+	 :time~e.8 (f / finish-01~e.4 
+		 :arg0 (y / you~e.2) 
+		 :arg1 (t / toilet~e.7 
+			 :poss~e.5 y) 
+		 :time~e.1 (d / date-entity 
+			 :dayperiod~e.3 (m / morning~e.10))))
+
+#
+# ::snt you must see to it that you pull up regularly all the baobabs , at the very first moment when they can be distinguished from the rosebushes which they resemble so closely in their earliest youth .
+#
+#
+(o2 / obligate-01~e.1 
+	 :arg1 (p / pull-01~e.7 
+		 :arg0 (y / you~e.6) 
+		 :arg1 (b / baobab~e.12 
+			 :mod (a / all~e.10)) 
+		 :arg1-of~e.4 (r / regular-02~e.9) 
+		 :time (m / moment~e.18 
+			 :ord~e.19 (o / ordinal-entity~e.5 
+				 :value 1 
+				 :degree (v / very~e.16)) 
+			 :time-of~e.17 (p2 / possible-01~e.21 
+				 :arg1 (d / distinguish-01~e.23 
+					 :arg1 b 
+					 :arg2 (r2 / rosebush~e.26 
+						 :arg2-of~e.24 (r3 / resemble-01~e.29 
+							 :arg1 b 
+							 :arg1-of~e.20 (c / close-10~e.31 
+								 :degree (s / so~e.30)) 
+							 :time~e.32 (e / early~e.34 
+								 :op1 (y2 / youth~e.35 
+									 :poss~e.33 b) 
+								 :degree (m2 / most)))))))))
+
+#
+# ::snt it is very tedious work , " the little prince added , " but very easy . "
+#
+#
+(a / add-01~e.10 
+	 :arg0 (p / prince~e.9 
+		 :mod (l / little~e.8)) 
+	 :arg1 (c / contrast-01~e.13 
+		 :arg1 (t / tedious~e.3 
+			 :degree (v / very~e.2) 
+			 :domain~e.0 (w / work-01~e.4)) 
+		 :arg2 (e / easy-05~e.15 
+			 :degree (v2 / very~e.14) 
+			 :arg1 w)))
+
+#
+# ::snt and one day he said to me : " you ought to make a beautiful drawing , so that the children where you live can see exactly how all this is .
+#
+#
+(a / and~e.0 
+	 :op1 (s / say-01~e.4 
+		 :arg0 (h / he~e.3) 
+		 :arg1 (r / recommend-01~e.9 
+			 :arg0 h 
+			 :arg1 (d3 / draw-01~e.15 
+				 :arg0 (i / i~e.6) 
+				 :arg1 (p2 / picture~e.6 
+					 :arg1-of~e.18 (b / beautiful-02~e.14)) 
+				 :purpose~e.10 (p / possible-01~e.24 
+					 :arg1 (s2 / see-01~e.25 
+						 :arg0 (c / child~e.20 
+							 :location~e.21 (l / live-01~e.23 
+								 :arg0 i)) 
+						 :arg1 (t / this~e.29 
+							 :mod (a2 / all~e.28)) 
+						 :manner~e.17 (e / exact~e.26)))) 
+			 :arg2 i) 
+		 :arg2 (i / i~e.6) 
+		 :time (d / day~e.2 
+			 :mod (o / one~e.1))))
+
+#
+# ::snt that would be very useful to them if they were to travel some day .
+#
+#
+(u / useful-05~e.4 
+	 :arg0 (t2 / they~e.6) 
+	 :arg1 (t / that~e.0) 
+	 :degree (v / very~e.3) 
+	 :condition~e.7 (t3 / travel-01~e.11 
+		 :arg0 t2 
+		 :time (d / day~e.13 
+			 :mod (s / some~e.12))))
+
+#
+# ::snt sometimes , " he added , " there is no harm in putting off a piece of work until another day .
+#
+#
+(a / add-01~e.4 
+	 :arg0 (h / he~e.3) 
+	 :arg1 (h2 / harm-01~e.10 
+		 :polarity~e.9 -~e.9 
+		 :arg0 (p / put-off-06~e.12 
+			 :arg1 (t / thing~e.13 
+				 :arg1-of~e.7 (w / work-01~e.17) 
+				 :quant (p3 / piece~e.15)) 
+			 :arg2 (d / day~e.20 
+				 :mod (a2 / another~e.19))) 
+		 :time~e.11 (s / sometimes~e.0)))
+
+#
+# ::snt but when it is a matter of baobabs , that always means a catastrophe .
+#
+#
+(c2 / contrast-01~e.0 
+	 :arg2 (m3 / mean-01~e.11 
+		 :arg1 (t / that~e.9) 
+		 :arg2 (c / catastrophe~e.13) 
+		 :time~e.1 (a / always~e.10) 
+		 :condition~e.2 (b / baobab~e.7)))
+
+#
+# ::snt i knew a planet that was inhabited by a lazy man .
+#
+#
+(k / know-02~e.1 
+	 :arg0 (i / i~e.0) 
+	 :arg1 (p / planet~e.3 
+		 :arg1-of~e.4 (i2 / inhabit-01~e.6 
+			 :arg0 (m / man~e.10 
+				 :mod (l / lazy~e.9)))))
+
+#
+# ::snt he neglected three little bushes ... "
+#
+#
+(n / neglect-01~e.1 
+	 :arg0 (h / he~e.0) 
+	 :arg1 (b / bush~e.4 
+		 :mod (l / little~e.3) 
+		 :quant 3~e.2))
+
+#
+# ::snt so , as the little prince described it to me , i have made a drawing of that planet .
+#
+#
+(d / draw-01~e.15 
+	 :arg0 (i / i~e.11) 
+	 :arg1 (p / planet~e.18 
+		 :mod (t / that~e.17)) 
+	 :manner~e.13 (d2 / describe-01~e.6 
+		 :arg0 (p2 / prince~e.5 
+			 :mod (l / little~e.4)) 
+		 :arg1 p 
+		 :beneficiary~e.2 i) 
+	 :arg1-of~e.7 (c / cause-01~e.0))
+
+#
+# ::snt i do not much like to take the tone of a moralist .
+#
+#
+(l / like-01~e.4 
+	 :polarity~e.2 -~e.2 
+	 :arg0 (i / i~e.0) 
+	 :arg1 (t / take-01~e.6 
+		 :arg0 i 
+		 :arg1 (t2 / tone~e.8 
+			 :poss~e.9 (m2 / moralist~e.11))) 
+	 :degree (m / much~e.3))
+
+#
+# ::snt but the danger of the baobabs is so little understood , and such considerable risks would be run by anyone who might get lost on an asteroid , that for once i am breaking through my reserve .
+#
+#
+(c2 / contrast-01~e.0 
+	 :arg2 (c3 / cause-01~e.7 
+		 :arg0 (a / and~e.11 
+			 :op1 (u / understand-01~e.9 
+				 :arg1 (d / danger~e.2 
+					 :poss~e.3 (b2 / baobab~e.5)) 
+				 :degree (l / little~e.8 
+					 :degree (s / so~e.7))) 
+			 :op2 (r / risk-01~e.14 
+				 :arg0 (a2 / anyone~e.19 
+					 :arg1-of~e.28 (l2 / lose-02~e.17 
+						 :location~e.24 (a3 / asteroid~e.26) 
+						 :arg1-of (p / possible-01~e.21))) 
+				 :degree~e.22 (c / considerable~e.13 
+					 :mod (s2 / such~e.12)))) 
+		 :arg1 (b3 / break-away-14~e.33 
+			 :arg0 (i / i~e.31) 
+			 :arg1 (r3 / reserve~e.36 
+				 :poss~e.35 i) 
+			 :mod (f / for-once~e.23))))
+
+#
+# ::snt " children , "
+#
+#
+(c2 / child~e.1)
+
+#
+# ::snt i say plainly , " watch out for the baobabs ! "
+#
+#
+(s / say-01~e.1 
+	 :arg0 (i / i~e.0) 
+	 :arg1 (w / watch-out-02~e.5 
+		 :mode imperative~e.10 
+		 :arg0 (y / you~e.7) 
+		 :arg1 (b / baobab~e.9)) 
+	 :manner~e.6 (p / plain~e.2))
+
+#
+# ::snt my friends , like myself , have been skirting this danger for a long time , without ever knowing it ; and so it is for them that i have worked so hard over this drawing .
+#
+#
+(c / cause-01~e.4 
+	 :arg0 (s / skirt-02~e.8 
+		 :arg0 (a / and~e.21 
+			 :op1 (p2 / person~e.0 
+				 :arg0-of~e.14 (h2 / have-rel-role-91~e.6 
+					 :arg1 (i / i~e.0) 
+					 :arg2 (f / friend~e.1))) 
+			 :op2 i) 
+		 :arg1 (d / danger~e.10 
+			 :mod (t / this~e.9)) 
+		 :arg1-of~e.19 (k / know-01~e.18 
+			 :polarity~e.3 -~e.11 
+			 :arg0 p2 
+			 :time (e / ever~e.17)) 
+		 :arg1-of~e.19 (l / long-03~e.13)) 
+	 :arg1 (w / work-01~e.30 
+		 :arg0 i 
+		 :arg1 (p / picture~e.33 
+			 :arg1-of (d2 / draw-01~e.35) 
+			 :mod (t3 / this~e.34)) 
+		 :arg1-of (h / hard-02~e.32 
+			 :degree (s2 / so~e.31)) 
+		 :beneficiary~e.33 p2))
+
+#
+# ::snt the lesson which i pass on by this means is worth all the trouble it has cost me .
+#
+#
+(w / worth-02~e.10 
+	 :arg1 (l / lesson~e.1 
+		 :arg1-of (p / pass-on-09~e.4 
+			 :arg0 (i / i~e.3) 
+			 :manner~e.8 (t2 / this~e.7))) 
+	 :arg2 (t / trouble~e.13 
+		 :arg2-of~e.15 (c / cost-01~e.16 
+			 :arg1 l 
+			 :arg3~e.17 i) 
+		 :mod (a / all~e.11)))
+
+#
+# ::snt perhaps you will ask me , " why are there no other drawing in this book as magnificent and impressive as this drawing of the baobabs ? "
+#
+#
+(p / possible-01~e.2 
+	 :arg1 (a / ask-01~e.3 
+		 :arg0 (y / you~e.1) 
+		 :arg1 (p2 / picture~e.4 
+			 :polarity~e.10 -~e.10 
+			 :arg1-of~e.9 (d / draw-01~e.12) 
+			 :mod (o / other~e.11) 
+			 :location~e.1 (b / book~e.15 
+				 :mod (t / this~e.14)) 
+			 :mod (m / magnificent~e.17 
+				 :degree (e / equal~e.16) 
+				 :compared-to~e.20 (p3 / picture~e.4 
+					 :arg1-of (d2 / draw-01~e.22) 
+					 :mod (t2 / this~e.21) 
+					 :topic~e.23 (b2 / baobab~e.25))) 
+			 :arg0-of (i / impress-01~e.19 
+				 :degree (e2 / equal~e.20) 
+				 :compared-to~e.20 p3) 
+			 :arg0-of (c / cause-01~e.7 
+				 :arg1 (a2 / amr-unknown~e.26))) 
+		 :arg2 (i2 / i~e.4)))
+
+#
+# ::snt the reply is simple .
+#
+#
+(s / simple-02~e.3 
+	 :arg1 (t / thing~e.1 
+		 :arg2-of~e.1 (r / reply-01~e.1)))
+
+#
+# ::snt i have tried .
+#
+#
+(t / try-01~e.2 
+	 :arg0 (i / i~e.0))
+
+#
+# ::snt but with the others i have not been successful .
+#
+#
+(c / contrast-01~e.0 
+	 :arg2 (s / succeed-01~e.8 
+		 :polarity~e.6 -~e.6 
+		 :arg0 (i / i~e.4) 
+		 :arg1 (o / other~e.3)))
+
+#
+# ::snt when i made the drawing of the baobabs i was carried beyond myself by the inspiring force of urgent necessity .
+#
+#
+(c / carry-01~e.10 
+	 :arg0 (f / force-01~e.16 
+		 :arg0 (n / necessity~e.19 
+			 :mod (u / urgent~e.18)) 
+		 :arg0-of (i2 / inspire-01~e.15)) 
+	 :arg1 (i / i~e.8) 
+	 :destination~e.12 (b / beyond~e.11 
+		 :op1 i) 
+	 :time~e.0 (d / draw-01~e.4 
+		 :arg0 i 
+		 :arg1 (b2 / baobab~e.7)))
+
+#
+# ::snt chapter 6 .
+#
+#
+(c / chapter~e.0 
+	 :mod 6~e.1)
+
+#
+# ::snt oh , little prince !
+#
+#
+(p / prince~e.3 
+	 :mod (l / little~e.2))
+
+#
+# ::snt bit by bit i came to understand the secrets of your sad little life ...
+#
+#
+(u / understand-01~e.6 
+	 :arg0 (i / i~e.3) 
+	 :arg1 (s / secret~e.8 
+		 :poss~e.9 (l / life~e.13 
+			 :poss~e.10 (y / you~e.4) 
+			 :mod (l2 / little~e.12) 
+			 :arg1-of (s2 / sad-02~e.11))) 
+	 :manner~e.1 (b / bit-by-bit~e.2))
+
+#
+# ::snt for a long time you had found your only entertainment in the quiet pleasure of looking at the sunset .
+#
+#
+(f / find-01~e.6 
+	 :arg0 (y / you~e.4) 
+	 :arg1 (e / entertain-01~e.9 
+		 :arg0 (l2 / look-01~e.15 
+			 :arg0 y 
+			 :arg1 (s / sunset~e.18) 
+			 :mod (p / pleasure~e.13 
+				 :arg1-of (q / quiet-04~e.12))) 
+		 :arg1 y 
+		 :mod (o / only~e.8)) 
+	 :arg1-of~e.7 (l / long-03~e.2))
+
+#
+# ::snt i learned that new detail on the morning of the fourth day , when you said to me : " i am very fond of sunsets .
+#
+#
+(l / learn-01~e.1 
+	 :arg0 (i / i~e.0) 
+	 :arg1 (d / detail~e.4 
+		 :arg1-of (n / new-01~e.3) 
+		 :mod (t / that~e.2)) 
+	 :time~e.13 (d3 / date-entity 
+		 :dayperiod~e.10 (m / morning~e.7) 
+		 :mod (d2 / day~e.11 
+			 :ord~e.13 (o / ordinal-entity~e.2 
+				 :value 4~e.17))) 
+	 :time~e.13 (s / say-01~e.15 
+		 :arg0 (y / you~e.14) 
+		 :arg1 (l2 / like-01~e.23 
+			 :arg0 y 
+			 :arg1 (s2 / sunset~e.25) 
+			 :degree (v / very~e.22)) 
+		 :arg2 i))
+
+#
+# ::snt come , let us go look at a sunset now . "
+#
+#
+(a / and~e.2 
+	 :op1 (c / come-01~e.0 
+		 :mode~e.2 imperative~e.3 
+		 :arg1 (y / you~e.6)) 
+	 :op2 (g / go-05~e.4 
+		 :mode~e.2 imperative~e.3 
+		 :arg0 (w / we~e.3) 
+		 :arg1 (l / look-01~e.5 
+			 :arg0 (w / we~e.3) 
+			 :arg1 (s / sunset~e.8) 
+			 :time (n / now~e.9))))
+
+#
+# ::snt " but we must wait , "
+#
+#
+(c / contrast-01~e.1 
+	 :arg2 (o / obligate-01~e.3 
+		 :arg2 (w2 / wait-01~e.4 
+			 :arg1 (w / we~e.2))))
+
+#
+# ::snt i said .
+#
+#
+(s / say-01~e.1 
+	 :arg0 (i / i~e.0))
+
+#
+# ::snt " wait ?
+#
+#
+(w / wait-01~e.1 
+	 :mode~e.2 interrogative~e.2)
+
+#
+# ::snt for what ? "
+#
+#
+(w / wait-01~e.0 
+	 :arg2 (a / amr-unknown~e.1))
+
+#
+# ::snt " for the sunset .
+#
+#
+(w / wait-01~e.1 
+	 :arg2 (s / sunset~e.3))
+
+#
+# ::snt we must wait until it is time . "
+#
+#
+(o / obligate-01~e.1 
+	 :arg2 (w2 / wait-01~e.2 
+		 :arg1 (w / we~e.0) 
+		 :duration~e.4 (u / until~e.3 
+			 :op1 (t / time~e.6))))
+
+#
+# ::snt at first you seemed to be very much surprised .
+#
+#
+(s / seem-01~e.3 
+	 :arg1 (s2 / surprise-01~e.8 
+		 :arg1 (y / you~e.2) 
+		 :degree (m / much~e.7 
+			 :degree~e.4 (v / very~e.6))) 
+	 :time (a / at-first~e.1))
+
+#
+# ::snt and then you laughed to yourself .
+#
+#
+(a / and~e.0 
+	 :op1 (l / laugh-01~e.3 
+		 :arg0 (y / you~e.2) 
+		 :arg2 y 
+		 :time~e.5 (t / then~e.1)))
+
+#
+# ::snt you said to me : " i am always thinking that i am at home ! "
+#
+#
+(s / say-01~e.1 
+	 :arg0 (y / you~e.0) 
+	 :arg1 (t / think-01~e.9 
+		 :arg0 y 
+		 :arg1 (b / be-located-at-91~e.15 
+			 :arg1 y 
+			 :arg2 (h / home~e.14)) 
+		 :time (a / always~e.8)) 
+	 :arg2 (i / i~e.6))
+
+#
+# ::snt just so .
+#
+#
+(s / so~e.1 
+	 :mod (j / just~e.0))
+
+#
+# ::snt everybody knows that when it is noon in the united states the sun is setting over france .
+#
+#
+(k / know-01~e.1 
+	 :arg0 (e / everybody~e.0) 
+	 :arg1 (s / set-11~e.14 
+		 :arg1 (s2 / sun~e.12) 
+		 :location~e.2 (c2 / country 
+			 :wiki~e.15 france~e.16 
+			 :name (n3 / name 
+				 :op1 france~e.16)) 
+		 :time (d / date-entity 
+			 :time~e.3 12:00~e.6 
+			 :location~e.2 (c / country 
+				 :wiki~e.7 united_states~e.9 
+				 :name (n2 / name 
+					 :op1 united~e.9 
+					 :op2 states~e.10)))))
+
+#
+# ::snt if you could fly to france in one minute , you could go straight into the sunset , right from noon .
+#
+#
+(p / possible-01~e.1 
+	 :arg1 (g / go-02~e.12 
+		 :arg0 (y / you~e.10) 
+		 :arg3~e.19 (d / date-entity 
+			 :time~e.6 12:00~e.20) 
+		 :arg4~e.18 (s / sunset~e.16) 
+		 :arg1-of (s2 / straight-04~e.13)) 
+	 :condition~e.0 (p2 / possible-01~e.10 
+		 :arg1 (f / fly-01~e.3 
+			 :arg1 (y / you~e.10) 
+			 :duration~e.11 (t / temporal-quantity 
+				 :quant 1~e.14 
+				 :unit (m / minute~e.8)) 
+			 :destination~e.2 (c / country 
+				 :wiki~e.4 france~e.5 
+				 :name (n / name 
+					 :op1 france~e.5)))))
+
+#
+# ::snt unfortunately , france is too far away for that .
+#
+#
+(f / fortunate-01~e.0 
+	 :polarity~e.0 -~e.7 
+	 :arg2 (b / be-located-at-91 
+		 :arg1 (c / country 
+			 :wiki~e.8 france~e.2 
+			 :name (n / name 
+				 :op1 france~e.2)) 
+		 :arg2 (a / away~e.6 
+			 :extent (f2 / far~e.5 
+				 :degree (t / too~e.4))) 
+		 :purpose~e.7 (t2 / that~e.8)))
+
+#
+# ::snt but on your tiny planet , my little prince , all you need do is move your chair a few steps .
+#
+#
+(s2 / say-01~e.1 
+	 :arg1 (c2 / contrast-01~e.0 
+		 :arg2 (o / obligate-01~e.1 
+			 :arg2 (m / move-01~e.15 
+				 :arg0 (p2 / prince~e.8 
+					 :mod (l / little~e.7) 
+					 :poss~e.6 (i / i~e.6)) 
+				 :arg1 (c / chair~e.17 
+					 :poss~e.16 p2) 
+				 :extent~e.12 (s / step~e.20 
+					 :quant (f / few~e.19)) 
+				 :mod (o2 / only~e.13)) 
+			 :location~e.11 (p / planet~e.4 
+				 :mod (t / tiny~e.3) 
+				 :poss~e.2 (p2 / prince~e.8 
+					 :mod (l / little~e.7) 
+					 :poss~e.6 (i / i~e.6))))) 
+	 :arg2 p2)
+
+#
+# ::snt you can see the day end and the twilight falling whenever you like ...
+#
+#
+(p / possible-01~e.1 
+	 :arg1 (s / see-01~e.2 
+		 :arg0 (y / you~e.0) 
+		 :arg1 (a / and~e.6 
+			 :op1 (e / end-01~e.5 
+				 :arg1 (d / day~e.4)) 
+			 :op2 (f / fall-04~e.9 
+				 :arg1 (t / twilight~e.8))) 
+		 :time~e.10 (l / like-02~e.12 
+			 :arg0 y 
+			 :arg1 s 
+			 :mod (a2 / any~e.10))))
+
+#
+# ::snt " one day , " you said to me , " i saw the sunset forty - four times ! "
+#
+#
+(s / say-01~e.6 
+	 :arg0 (y / you~e.5) 
+	 :arg1 (s2 / see-01~e.15 
+		 :frequency~e.12 44~e.17 
+		 :arg0 y 
+		 :arg1 (s3 / sunset~e.14) 
+		 :time~e.19 (d / day~e.2 
+			 :mod (o / one~e.1))) 
+	 :arg2 (i / i~e.11))
+
+#
+# ::snt and a little later you added : " you know -- one loves the sunset , when one is so sad ... "
+#
+#
+(a / and~e.0 
+	 :op1 (a2 / add-01~e.5 
+		 :arg0 (y / you~e.8) 
+		 :arg1 (l3 / love-01~e.12 
+			 :arg0 (o / one~e.17) 
+			 :arg1 (s / sunset~e.14) 
+			 :time~e.16 (s2 / sad-02~e.20 
+				 :arg1 o 
+				 :mod (s3 / so~e.19))) 
+		 :time (l / late~e.3 
+			 :degree (m / more~e.9 
+				 :quant (l2 / little~e.2)))))
+
+#
+# ::snt " were you so sad , then ? "
+#
+#
+(s / sad-02~e.4 
+	 :mode~e.7 interrogative~e.7 
+	 :arg1 (y / you~e.2) 
+	 :time (t / then~e.6) 
+	 :degree (s2 / so~e.3))
+
+#
+# ::snt i asked , " on the day of the forty - four sunsets ? "
+#
+#
+(a / ask-01~e.1 
+	 :arg0 (i / i~e.0) 
+	 :arg1 (b / be-temporally-at-91~e.4 
+		 :mode~e.13 interrogative~e.13 
+		 :arg2 (d / day~e.6 
+			 :arg0-of (h / have-03~e.9 
+				 :arg1 (s / sunset~e.12 
+					 :quant 44~e.11)))))
+
+#
+# ::snt but the little prince made no reply .
+#
+#
+(c / contrast-01~e.0 
+	 :arg2 (r / reply-01~e.6 
+		 :polarity~e.5 -~e.4 
+		 :arg0 (p / prince~e.3 
+			 :mod (l / little~e.2))))
+

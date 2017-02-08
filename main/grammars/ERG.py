@@ -4,10 +4,11 @@ import copy
 import re
 
 class AMREdge(object):
-    def __init__(self, name, node_id, isRule=False):
+    def __init__(self, name, node_id, isRule=False, tokens=[]):
         self.name = name
         self.node_id = node_id
         self.isRule = isRule
+        self.tokens = []
 
 class AMRNode(object):
     def __init__(self, id, name, parent, status, tokens):
@@ -47,6 +48,65 @@ class AMR(object):
                     self.edges[parent['node']][i].isRule = False
                     break
 
+    def linear_parse(self, amr):
+        self.edges['root'] = []
+
+        node_id, edge, node_tokens, edge_tokens = '', ':root', [], []
+        parent = 'root'
+        for instance in amr.replace('/', '').split():
+            closing = 0
+            for i in range(len(instance)):
+                if instance[-(i+1)] == ')':
+                    closing = closing + 1
+                else:
+                    break
+            if closing > 0:
+                instance = instance[:-closing]
+
+            if instance[0] == ':':
+                instance = instance.split('~e.')
+                edge = instance[0]
+                if len(instance) > 1:
+                    edge_tokens.extend(map(lambda x: int(x), instance[1].split(',')))
+            elif instance[0] == '(':
+                node_id = instance[1:]
+            else:
+                instance = instance.replace('\'', '').replace('\"', '').split('~e.')
+                name = instance[0]
+                if len(instance) > 1:
+                    node_tokens.extend(map(lambda x: int(x), instance[1].split(',')))
+                if node_id != '':
+                    node = AMRNode(id=node_id, name=name, parent={'node':parent, 'edge':edge}, status='unlabeled', tokens=sorted(list(set(node_tokens))))
+                    self.nodes[node_id] = node
+
+                    self.edges[node_id] = []
+                    _edge = AMREdge(name=edge, node_id=node_id, tokens=sorted(list(set(edge_tokens))))
+                    self.edges[parent].append(_edge)
+
+                    parent = node_id
+                else:
+                    if edge not in [':wiki']:
+                        _node = copy.copy(name)
+                        i, isCoref = 1, False
+                        while _node in self.nodes.keys():
+                            _node = name + '-coref' + str(i)
+                            isCoref = True
+                            i = i + 1
+                        if isCoref:
+                            name = self.nodes[name].name
+                        node = AMRNode(id=_node, name=name, parent={'node':parent, 'edge':edge}, status='unlabeled', tokens=sorted(list(set(node_tokens))))
+                        self.nodes[_node] = node
+
+                        self.edges[_node] = []
+
+                        _edge = AMREdge(name=edge, node_id=_node, tokens=sorted(list(set(edge_tokens))))
+                        self.edges[parent].append(_edge)
+                node_id, node_tokens, edge_tokens = '', [], []
+
+            for i in xrange(closing):
+                parent = self.nodes[parent].parent['node']
+        self.root = self.edges['root'][0].node_id
+
     def parse(self, amr):
         self.edges['root'] = []
 
@@ -75,7 +135,7 @@ class AMR(object):
                 if len(instance) > 1:
                     tokens.extend(map(lambda x: int(x), instance[1].split(',')))
                 if node_id != '':
-                    node = AMRNode(id=node_id, name=name, parent={'node':parent, 'edge':edge}, status='unlabeled', tokens=list(set(tokens)))
+                    node = AMRNode(id=node_id, name=name, parent={'node':parent, 'edge':edge}, status='unlabeled', tokens=sorted(list(set(tokens))))
                     self.nodes[node_id] = node
 
                     self.edges[node_id] = []
@@ -93,7 +153,7 @@ class AMR(object):
                             i = i + 1
                         if isCoref:
                             name = self.nodes[name].name
-                        node = AMRNode(id=_node, name=name, parent={'node':parent, 'edge':edge}, status='unlabeled', tokens=list(set(tokens)))
+                        node = AMRNode(id=_node, name=name, parent={'node':parent, 'edge':edge}, status='unlabeled', tokens=sorted(list(set(tokens))))
                         self.nodes[_node] = node
 
                         self.edges[_node] = []
@@ -116,7 +176,7 @@ class AMR(object):
                 else:
                     amr = amr + ' ' + 'c'
             elif 'coref' in root:
-                amr = amr + ' ' + 'coref'#root.split('-')[0]
+                amr = amr + ' ' + root.split('-')[0]
             else:
                 if self.nodes[root].name == head:
                     amr = amr + ' (XXX'
@@ -204,6 +264,7 @@ class ERGFactory(object):
                            rules={})
 
         node = self.amr.nodes[root]
+        rule.tokens.extend(node.tokens)
         rule.graph.nodes[root] = AMRNode(id=node.id, name=node.name, parent=node.parent, status=node.status, tokens=node.tokens)
 
         rule.graph.edges[root] = []
@@ -214,6 +275,7 @@ class ERGFactory(object):
                 rule.rules[root] = []
             rule.rules[root].append(edge)
 
+        rule.tokens = sorted(list(set(rule.tokens)))
         return rule
 
     def create_subgraph_rule(self, root, edges, tokens):
@@ -250,6 +312,10 @@ class ERGFactory(object):
                 rule.head = self.amr.nodes[root].name + '/' + aux[0]
 
                 rule.graph.root = root
+
+                indexes = self.amr.nodes[root].tokens
+                rule.tokens.extend(indexes)
+                rule.tokens = sorted(list(set(rule.tokens)))
 
                 rule.graph.nodes[root] = copy.copy(self.amr.nodes[root])
 
@@ -343,7 +409,7 @@ class ERGFactory(object):
                     self.erg.rules[rule_id].parent = _id
 
                     for edge in self.erg.rules[_id].rules[parent['node']]:
-                        if edge.name == parent['edge']:
+                        if edge.name == parent['edge'] and type(edge.node_id) == str:
                             edge.node_id = rule_id
                             break
                     break

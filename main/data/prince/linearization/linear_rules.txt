@@ -1,0 +1,4553 @@
+:root :mod
+:ord :root
+:poss :root
+:root :poss
+:mod :root
+:arg1-of :root
+:time :mod :time :arg0 :arg1 :root :arg2
+:arg1-of :manner :root :arg1
+:root :arg1 :arg0
+:root :arg1-of
+:root :arg1
+:mod :root
+:arg0 :condition :root :arg1
+:manner :arg2-of :conj-as-if :arg0 :root :arg1
+:root :mod
+:poss :root
+:arg1 :root :polarity
+:arg0 :root :arg1
+:root :arg1
+:root :location :arg0
+:root :arg1-of
+:root
+:root :arg1
+:mod :root :mode :arg0-of
+:root :arg1
+:mod :root :arg0-of
+:root :arg1 :arg2 :arg1-of
+:arg0 :polarity :root
+:root :arg1-of
+:poss :root
+:root :arg1-of
+:root :mod
+:root :arg2
+:root :arg1
+:time :arg0 :root :arg1
+:degree :root
+:arg2 :root :arg1
+:root :arg1
+:degree :root
+:root
+:arg1 :degree :root
+:quant :root
+:arg1 :arg0 :root
+:root :op1
+:root :degree
+:root :arg1
+:arg0 :root :arg1 :arg0-of
+:degree :root
+:arg2 :root
+:mod :purpose :root :arg1-of
+:arg1 :arg2 :root
+:root
+:root :arg1
+:arg0 :polarity :root :arg1 :time
+:root :op1
+:root
+:mod :root
+:root :arg1-of
+:mod :root
+:arg1 :root :arg0
+:root :op1
+:root :arg4
+:root :part-of
+:arg0 :root :arg2
+:arg1 :arg2 :polarity :root
+:ord :root :arg1-of :domain
+:arg0 :root :arg1 :mod :purpose
+:root :mode
+:root :arg2
+:root :arg1-of
+:arg1-of :root
+:polarity :root
+:time :arg0 :root :direction :manner :arg2 :arg1
+:mod :root
+:root :mod
+:domain :arg1-of :root
+:domain :root
+:arg1 :root
+:root
+:root :compared-to :degree
+:arg0 :root :arg2-of
+:arg0 :root :arg1
+:poss :root
+:domain :arg1-of :root
+:arg0 :polarity :root
+:mod :root
+:root
+:root :arg1 :mod :polarity
+:time :arg0 :root :arg1
+:root :mod
+:mod :arg0 :root :arg1
+:mod :root
+:arg0 :root
+:root :op1
+:arg0 :arg1-of :root :arg1
+:root :arg0
+:root :mode
+:mod :root
+:arg0 :root
+:root :quant
+:arg0 :polarity :root :arg1
+:arg0 :root :arg1 :arg2
+:root :arg4
+:root :part-of
+:ord :root :arg1-of
+:arg1 :degree :root :arg2
+:root :arg0-of
+:polarity :arg0 :root :arg1 :mode
+:root :arg1
+:root :mod
+:arg0 :root :arg1
+:root :arg1
+:root :arg0-of
+:poss :root
+:root :part-of
+:root :arg1 :location
+:arg1 :root
+:root :destination :location
+:root :arg0
+:mod :root
+:part-of :root :arg1-of
+:root :arg0-of :arg0-of :arg0-of
+:arg0 :root :arg1 :location
+:root :mod
+:root
+:mod :degree :root
+:mod :root :arg2
+:arg0 :root :arg1-of
+:arg0 :arg1 :degree :root
+:root :arg2
+:arg0 :root :manner :arg1
+:arg0 :root :arg1 :arg3
+:arg0 :root :arg2
+:domain :arg1-of :degree :root
+:poss :mod :root
+:arg0 :root :arg1 :location
+:root :part :mod
+:root :arg1-of
+:arg0 :root :arg1
+:root :location-of
+:arg0 :polarity :time :root :arg1
+:arg0 :polarity :time :root :arg1
+:arg0 :polarity :time :root :arg1
+:root :arg1
+:arg0 :polarity :time :root :arg1 :time :arg2-of
+:root
+:root :arg1
+:root :arg1
+:root
+:arg0 :root :arg1
+:root :snt1 :snt2
+:root :arg0-of
+:root :op1
+:op1 :root
+:root :arg2
+:mod :root
+:arg0 :root
+:time :arg0 :root :frequency :manner :arg1
+:mod :root :arg2
+:op1 :op2 :root
+:root :arg2
+:polarity :root
+:domain :root
+:arg0
+:root
+:mod :root
+:arg1 :time :root
+:arg0 :root :arg1 :duration
+:root :op1
+:duration :arg0 :arg1-of :root :arg1
+:root :op1
+:root :op1
+:arg1 :root :arg2
+:root :arg1
+:polarity :root :arg1 :arg0
+:root :arg0-of
+:root :arg1-of
+:quant :root :purpose
+:degree :root
+:arg1 :root
+:root :arg1
+:root :arg1
+:polarity :time :root
+:domain :polarity :root
+:root :arg0 :arg1
+:degree :root :compared-to
+:part :arg1-of :root
+:arg0 :polarity :arg1 :root
+:root :arg1-of
+:root :poss
+:poss :root
+:root :op1
+:root :arg0 :arg1
+:quant :arg1-of :root
+:arg0 :root :arg2
+:location :root
+:quant :root :mod :arg1-of :arg1-of
+:root :arg0 :arg1 :arg1-of
+:condition :root :mode
+:mod :root :arg0-of
+:root :location
+:root
+:polarity :root
+:root :mod
+:arg0 :root :arg1
+:part :root
+:root
+:root :arg1
+:root
+:root :mod :quant
+:root :op1
+:arg0
+:root :arg1
+:root :mod :quant :arg1-of :arg1-of
+:root :location
+:part-of :root
+:root :arg0 :arg1
+:root
+:root
+:arg1 :root :arg3 :arg2 :time
+:root
+:root :arg1
+:arg1 :root :arg2
+:root :arg1 :arg2
+:condition :time :arg1 :root
+:quant :root
+:poss :root
+:mod :poss :root
+:arg0 :root :arg1
+:root :arg0
+:domain :polarity :root
+:root :op1
+:arg0 :root :arg1
+:root :mod
+:root :polarity :arg1
+:arg0 :root :arg1
+:arg1 :root :arg0
+:poss :root
+:arg1 :root
+:arg1 :root :arg3
+:root :part-of
+:arg0 :root :arg1
+:poss :root
+:poss :root
+:root
+:poss :root
+:mod :root
+:time :op1 :op2 :root :op3 :op4
+:root
+:poss
+:op1 :op2
+:quant :root
+:arg2-of :root
+:root :arg1
+:mod :root :arg1-of
+:quant :root
+:op1 :root :op2
+:part-of :root
+:arg0 :root :arg1 :arg3
+:root
+:arg1 :polarity :root
+:root :arg1-of
+:root
+:arg0 :root :arg2 :arg1
+:arg0 :root :arg1 :arg2
+:root :arg1
+:root
+:arg2-of :root
+:root :op1
+:root
+:root :arg2
+:root :arg1-of
+:arg0 :root :arg2 :arg1
+:arg0 :root
+:arg0 :polarity :root :arg1
+:root :arg2
+:root :arg1-of
+:op1 :root :op2
+:root
+:arg0 :root :arg1
+:root :manner
+:frequency :root
+:op1 :op2 :root
+:root :manner :mod
+:arg0 :polarity :root :arg1
+:root :manner-of
+:root :location-of :location-of
+:root :arg1-of
+:root :arg1-of :arg1
+:domain :mod :root
+:degree :root
+:root :location-of
+:root :mod
+:root :degree
+:mod :root
+:arg2-of :root :arg1
+:arg0 :time :root :arg1
+:mod :root
+:root :poss
+:location :arg1 :time :degree :root
+:arg0 :root :arg1
+:snt1 :root :snt2 :snt3
+:polarity :arg1 :root
+:mod :quant :root :consist-of
+:root :polarity :arg1 :degree
+:op1 :root :op2
+:root :op1
+:time :root :manner
+:time :arg1 :root :location
+:mod :mod :root :arg1-of
+:mod :mod :root :location
+:mod :root
+:root :poss
+:degree :root
+:time :arg1 :root
+:op1 :root :op2
+:root :arg2
+:root :source
+:root :mod
+:source :arg1-of :root
+:mod :root
+:root :arg1-of
+:polarity :root :arg2
+:arg0 :root :arg1-of :arg1
+:root :arg1
+:arg1-of :root
+:domain :mod :root
+:op1 :root :op2
+:root :arg1
+:root
+:root :arg1
+:arg0 :time :root :arg1
+:root :arg2
+:root :arg2
+:ord :root :arg1
+:mod :root
+:arg0 :root
+:arg0 :time :root :arg1
+:root :arg2
+:mod :root :arg1-of
+:root :arg1-of :mod
+:root :manner
+:root :arg1
+:root
+:root :arg1
+:arg1 :polarity :root :arg0
+:poss :root :arg2-of :arg1-of
+:root
+:arg0 :root :arg1 :manner
+:root :degree
+:root :degree
+:poss :root
+:arg0 :root :arg1 :manner
+:poss :root
+:root :destination
+:root :arg2
+:mod :root
+:root :arg1-of :arg1-of
+:mod :root
+:arg0 :polarity :root :arg1
+:manner :root
+:root
+:degree :mod :root :arg1
+:arg0 :root :arg1
+:arg1 :root :arg2
+:mod :root
+:root :op1
+:arg1 :root :arg2
+:root :arg1 :mod
+:arg2-of :root
+:root :op1
+:mod :root
+:time :time :time :arg0 :manner :root
+:root :time :op1 :op2
+:root :op1
+:root :mod :mod :degree
+:root :arg1
+:root :mode
+:root :manner
+:arg0 :root
+:arg1 :degree :root
+:arg0 :root :arg1 :arg2
+:root
+:part-of :root :mod
+:arg1 :mod :root
+:root :polarity :arg1
+:root
+:root :arg2
+:root :mode
+:mod :root :arg0-of
+:root :arg1
+:arg0 :root :arg1
+:degree :root :arg1
+:polarity :root
+:arg1 :arg0 :root :manner
+:root :op2
+:arg1 :root :time
+:root :arg1-of
+:root :arg2
+:mod :root
+:arg1 :root :arg2
+:arg0 :root :arg1-of :arg1
+:domain :polarity :degree :root
+:root :arg1
+:op1 :root :op2
+:degree :root
+:root :mod
+:root :degree
+:arg1 :arg0 :root :time
+:root :purpose
+:root :degree
+:quant :root
+:root :arg1
+:root :arg1-of
+:arg0 :root
+:root
+:mode :arg0 :arg1-of :root :arg1
+:root :op1
+:arg0-of :root :arg0-of
+:arg0 :root :arg1
+:root :arg1
+:mod :root :arg1-of
+:arg1-of :root
+:arg1-of :root
+:root :arg1
+:arg1-of :arg0 :root :arg1
+:degree :root
+:mod :arg0 :root :arg1-of :arg1
+:degree :root
+:root :arg1 :arg2
+:root :arg1
+:arg2-of :poss :root
+:root :condition :mod
+:mode :arg1 :root :accompanier
+:mod :root
+:root :arg1
+:mod :root
+:time :arg0-of :time :arg0 :root :arg2 :arg1
+:root :part-of
+:part-of :quant :root
+:root :poss
+:arg1 :arg0 :root
+:mod :root
+:polarity :root :location
+:root :op2
+:mod :arg0 :polarity :root :arg1
+:arg2 :arg0 :root :manner
+:polarity :domain :root
+:polite :root :arg0 :arg1
+:arg1 :root :arg2
+:arg0 :root :arg1
+:polarity :degree :root :arg1
+:root :arg1
+:arg0 :polarity :root :arg1 :beneficiary :mode
+:arg0 :root :arg1
+:op1 :root :op2
+:mod :root
+:mod :root
+:root :arg1
+:arg1 :root :arg0
+:domain :arg1-of :root :beneficiary
+:domain :mod :root
+:degree :root
+:beneficiary :root :arg1
+:consist-of :root
+:time :arg0 :root :arg2
+:root :op1
+:arg0 :root :arg1
+:degree :root :location
+:root :arg0
+:arg1 :root
+:root :arg3-of
+:root :arg2
+:arg0 :root :time
+:root :mod
+:root :domain
+:arg1 :root :time-of
+:root :topic
+:arg0 :root :arg1
+:mod :root
+:root :polarity :arg1
+:root :mod
+:frequency :arg0 :root :purpose
+:root :arg0
+:root :op1 :op2
+:root :degree
+:root :arg1 :arg2
+:arg1-of :root
+:mod :root
+:root :arg1
+:root :mod
+:root
+:arg1 :root
+:root :arg2
+:root :arg0
+:arg0 :root :arg1 :time
+:root
+:time :arg0 :root :arg1 :degree :purpose
+:degree :root
+:root :arg0 :arg1 :arg1-of
+:root
+:arg1 :time :concession :arg1-of :root :arg2
+:root :arg1
+:root :arg2 :arg1-of
+:mod :root
+:root
+:mod :arg1-of :root :arg1-of
+:root
+:root :arg1
+:polarity :degree :root
+:arg1 :root :arg2 :arg0-of
+:root :mod
+:arg1 :arg0 :root :arg2 :time
+:mod :root
+:polarity :root :arg1
+:root :arg1
+:arg0 :polarity :time :root :arg1
+:root :arg1
+:op1 :root :op2
+:root :arg1
+:poss :root
+:arg0 :manner :root :arg1
+:root :arg1
+:mod :root
+:arg0 :root :arg1
+:root :poss
+:root :arg0
+:root :arg2
+:mod :poss :root
+:arg0 :polarity :root :manner
+:op1 :root :op2
+:root :arg1 :degree
+:root :arg1
+:arg0 :mod :root :arg1 :arg2
+:degree :root
+:mod :root :topic :arg0-of
+:part-of :root
+:root :op1
+:arg0 :root :arg1
+:polarity :root :arg1
+:root :arg1
+:manner-of :root
+:root :arg1
+:root :arg1
+:arg0 :arg3 :root
+:root :arg3 :polarity
+:op1 :op2 :root
+:op1 :root :op2
+:arg0 :root :arg1 :arg2
+:root :poss
+:root
+:arg1-of :root
+:arg0 :polarity :time :root :direction
+:root :op1
+:root :arg1
+:mod :root :arg1-of
+:root :op1
+:arg0 :root :arg1
+:root :arg2
+:poss :mod :mod :root
+:root :arg1
+:arg1 :degree :root :polarity
+:root :arg2
+:root :manner-of
+:root :arg1
+:root :arg1
+:domain :degree :root :compared-to
+:root :mod
+:arg0 :root :arg1
+:root
+:root :arg0
+:root :arg0
+:purpose :arg0 :root :arg1 :arg2
+:mod :root
+:root
+:poss :root
+:time :arg0 :arg1 :arg1-of :root
+:arg0 :manner :root :arg1
+:poss :arg0-of :root
+:op1 :root :op2
+:degree :root :purpose
+:root :arg1-of
+:root :arg1 :time
+:arg0 :root :arg1
+:root
+:quant :arg0-of :root
+:arg0 :mod :root :arg1
+:quant :root :mod
+:root :arg2
+:arg0 :polarity :root
+:arg0 :root :arg1
+:arg0 :root :arg1 :mod
+:mod :root
+:root :degree
+:condition :arg1 :root :arg1-of :manner
+:root :arg1-of
+:polarity :root
+:root :arg2
+:arg1 :root :arg1-of
+:root :location
+:root
+:root :poss
+:degree :root
+:location :domain :arg1-of :degree :root :compared-to
+:poss :root
+:arg0 :root :arg1
+:polarity :root
+:arg0 :quant :root :arg1
+:mod :root :arg0-of
+:mod :root :arg1
+:arg0 :mod :root :direction :arg1
+:ord :mod :root :part-of
+:arg0 :root :arg1
+:root
+:polarity :time :root :arg1
+:root :ord
+:root :arg2
+:mod :mod :root
+:domain :degree :root
+:time :root :arg1 :arg2
+:root :arg2
+:root
+:root :op1
+:root :op1 :op2
+:degree :root :arg2
+:poss :arg2-of :consist-of :root
+:root :arg2
+:time :arg0 :root :arg1
+:root
+:ord :root :arg1
+:arg1 :arg0 :root :arg2
+:root :arg2
+:arg0 :polarity :root
+:arg1 :arg0 :root :mod
+:arg0 :root
+:arg0 :root :arg1
+:arg1 :polarity :root :arg0
+:root :arg2
+:root
+:arg1 :arg0 :root :arg2 :time
+:arg0 :root :arg2 :arg1
+:root
+:root
+:root :arg1
+:root :arg1
+:arg1 :root :arg0
+:degree :root
+:consist-of :root :arg1-of
+:arg1 :root
+:root :arg1-of :arg0-of
+:arg1 :root :arg2
+:root :location
+:arg1 :arg1-of :root
+:arg0 :polarity :root :arg1
+:root
+:arg1 :arg0 :root :arg2
+:arg1 :root :arg2
+:duration :root
+:arg0 :polarity :root :arg1 :time
+:domain :polarity :root
+:root :arg2
+:domain :degree :root :compared-to
+:op1 :root :op2
+:consist-of :root
+:root
+:root :arg1
+:root :domain
+:root :arg1
+:arg0 :polarity :root :arg1 :time
+:root :arg2
+:op1 :op2
+:arg1 :polarity :root :compared-to
+:arg1 :root
+:arg1-of :mod :root
+:root :mod
+:poss :root
+:domain :root
+:root :arg2
+:root :arg2
+:quant :root
+:arg1 :root :arg2 :condition
+:root :arg2
+:root
+:root :arg1
+:root :arg1
+:op1 :root :op2
+:root :arg1
+:arg1 :degree :root
+:condition :root :arg1 :arg0
+:op1 :root :op2
+:root :polarity :arg0
+:op1 :op2
+:arg1 :arg0 :polarity :degree :root
+:mod :root :quant
+:location-of :extent :root
+:arg0 :root :arg1
+:part-of :root
+:manner :arg0 :root :arg1
+:part-of :quant :root
+:time :arg0 :root :arg1
+:polarity :root :compared-to
+:arg0 :root :arg1
+:root :direction
+:time :root :arg0 :mode
+:root
+:arg0 :root :arg1
+:arg0 :polarity :root :arg1
+:degree :root :arg0
+:domain :root
+:root :mod
+:root :op1 :op2 :op3 :op4 :op5 :op6
+:root :arg2
+:arg0 :root :arg1
+:root :location-of
+:root :arg2
+:arg0 :root :mod :arg2 :purpose
+:poss :root
+:root :arg1
+:root :arg0
+:root :arg2
+:ord :arg1-of
+:op1 :root :op2
+:root :arg2
+:arg1-of :root
+:mod :root
+:arg1 :root :arg2
+:root :arg1-of :mod
+:root :mode
+:arg1 :root :arg0 :time
+:root :location-of
+:root :arg1
+:mod :root :arg1-of
+:arg0 :root :arg1
+:manner :root :arg1
+:mod :root
+:root :polarity :time :time
+:arg0 :root :condition
+:arg0 :polarity :root :arg1
+:arg1 :root :beneficiary
+:domain :root
+:root :arg0 :arg1
+:mod :root
+:root :mode
+:root :arg1 :manner
+:root :arg0-of
+:root :arg2
+:arg1 :root :arg0
+:time :root :arg1
+:degree :root
+:concession :op1 :root :op2
+:extent :root
+:arg2 :root :arg1
+:poss :mod :mod :root
+:arg0 :root :location :arg1
+:root
+:mod :root
+:root
+:root :purpose
+:op1 :root :op2
+:root :arg0
+:root :manner
+:arg1 :root :arg3
+:root
+:arg1-of :root
+:root :arg2 :arg1
+:arg1 :arg0 :root :arg2
+:root :location
+:root
+:arg0 :root :arg2 :arg1
+:root :polarity :arg1
+:arg0 :root :arg1
+:polarity :root :arg1
+:mod :root
+:root
+:arg2 :root :arg0 :manner
+:degree :root
+:op1 :root :op2
+:arg1 :root :arg2
+:arg1-of :root
+:polarity :root
+:root :mod
+:arg1 :arg0 :root
+:root
+:arg0 :root :arg1 :arg2
+:root :arg0-of
+:root :op1
+:root :arg1 :time
+:arg0 :root :arg1
+:arg0 :arg1 :root
+:root :time :mode
+:root :mod :mode
+:arg2 :root
+:arg0 :root :arg1
+:root :polarity :time
+:arg1 :root :arg0
+:mod :root :arg1-of
+:time :arg1-of :root
+:root :mode
+:root :mode
+:arg2 :root :arg0
+:op2 :op1 :root
+:root :frequency
+:mod :arg0 :root :arg1 :arg2
+:frequency :root
+:op1 :root :op2
+:root :arg1
+:arg0 :root :degree
+:root
+:poss :root
+:arg0 :mod :root :arg1
+:arg1 :root
+:arg0 :root :polarity :arg1
+:root
+:domain :mod :root
+:degree :root
+:root :arg1
+:domain :arg1-of :root
+:arg1-of :arg0 :root :arg1
+:arg1 :root
+:arg2-of :root
+:root :arg0
+:root :arg2
+:root :polarity
+:root :arg2
+:mod :root
+:condition-of :arg1 :root :arg2 :arg1-of
+:root :arg0-of
+:arg0 :root :arg0-of :arg1
+:polarity :root
+:arg1 :root
+:arg1 :root
+:arg1 :time :manner :root :arg0
+:mod :root
+:root
+:op1 :root :op2
+:root :arg1
+:manner :root :arg1
+:root :part-of
+:root :arg2
+:arg2 :arg0 :root :arg1
+:consist-of :root
+:mod :root
+:arg0 :root
+:domain :root
+:root :arg1
+:arg0 :arg1-of :root :arg1
+:root
+:root
+:root :arg2
+:root :arg1-of
+:arg0 :root :arg1 :arg2
+:arg2 :root
+:arg2 :root :arg1
+:arg0 :root :arg1
+:root :arg2
+:root
+:root :arg1-of
+:arg2 :root :arg1
+:root
+:arg2 :root
+:mod :root
+:arg1 :root :arg0 :arg1-of
+:root :op1
+:op1 :op2 :root :op3
+:mod :root
+:arg0 :root :arg0-of
+:poss :root
+:mod :root
+:root :arg1
+:arg1 :root :arg0
+:root :op1
+:mod :root
+:mod :root
+:arg2 :arg0 :root
+:mod :root
+:root :op1
+:domain :root
+:op1 :root :op2
+:arg0 :root
+:domain :root
+:arg0 :root :arg1
+:arg1 :arg0 :root
+:mod :arg0 :root
+:arg0 :root :manner
+:arg0 :polarity :root :arg1
+:degree :root
+:mod :root
+:arg1 :arg0 :root
+:root :polarity :arg2 :range
+:range :root :arg2
+:root :time :polarity :arg1
+:root :domain :poss-of
+:poss :root
+:arg1-of :root :mod
+:op3 :op1 :root :op2
+:condition :root :arg1
+:arg1-of :root :arg1-of
+:arg0 :root :arg1 :manner
+:root
+:degree :root
+:root
+:root :op1 :op2
+:arg1 :root :arg2
+:root :arg0
+:root :arg0
+:arg1
+:poss :mod :root :arg1-of
+:poss :root
+:root
+:arg1-of :root :arg1
+:arg0 :root :arg1
+:arg1-of :arg0 :root :mod :arg1
+:root :arg1
+:root :arg1
+:root :arg1-of
+:root
+:root :arg1 :arg2
+:root :arg2
+:quant :root
+:root :arg1
+:mod :root
+:mod :root
+:op1 :root :op2 :op3
+:arg1 :root :arg2
+:root :arg2
+:root :op1 :op2
+:root :arg2
+:arg1-of :root
+:polarity :root :arg1
+:arg1 :arg0 :root
+:root :source :destination :manner
+:arg2-of :root :arg1-of
+:root :arg0-of
+:root
+:root :arg1-of
+:condition :root :arg1
+:arg2
+:root :op2
+:mod :root
+:arg1 :root :arg0 :arg1-of
+:root :arg1-of
+:arg1 :arg0 :root
+:arg1 :root :arg2
+:root
+:root :arg2 :arg1
+:root :mod
+:arg1-of :root
+:arg1 :root :mod :arg2
+:root :arg0 :arg2
+:root
+:condition :arg0 :root
+:root :arg2
+:root :arg0
+:arg0 :root :arg1
+:arg1 :root
+:root
+:root
+:arg2-of :root
+:root
+:root :arg0
+:polarity :time :root :arg1 :condition
+:mod :root
+:mode :poss :root
+:arg1 :arg0 :root :arg1-of :arg2
+:arg1-of :root
+:arg0 :root :arg1
+:poss :root
+:arg0 :root :arg2
+:root :mod
+:root :arg0-of
+:poss :root :domain
+:arg1-of :arg1 :root :arg2
+:root :arg2
+:root :arg0
+:arg1 :root :arg0
+:mod :root
+:root :arg1 :arg2
+:root :mode
+:op1 :root :op2
+:time :root :arg1
+:root :mode
+:root :mod
+:root :arg1
+:arg2 :root :arg0
+:root :op1
+:arg1-of :root
+:root :mode
+:root :mode
+:root :op1
+:arg1 :root :arg2
+:manner :arg1 :root
+:arg0 :root :arg1
+:degree :root
+:arg0 :root
+:mod :root
+:arg0 :root :arg1
+:root :arg1
+:time :root :arg1
+:arg1 :degree :root
+:root :op2
+:arg1 :arg0 :root :arg2
+:polarity :root :location :arg1
+:arg1-of :root
+:root :arg1
+:arg0 :root :arg1 :mod
+:poss :root
+:polarity :root :arg0
+:root :arg0-of
+:degree :root :arg2
+:arg1 :root :arg0
+:root :arg1
+:mode :polarity :root
+:arg0 :root :arg2
+:arg0 :root :arg1
+:root :topic
+:root :topic
+:location :root :arg1-of
+:arg0 :polarity :root :arg1
+:arg1 :arg0 :root :arg2
+:poss :root
+:arg0 :polarity :arg1-of :root :arg1
+:domain :degree :root
+:location :polarity :root :purpose
+:root :arg0
+:arg0 :root
+:root :arg2
+:quant :mod :root :arg1
+:mod :root :part-of
+:mod :root :arg0-of
+:arg1 :root :arg0
+:root :time
+:root :purpose
+:root :arg2
+:root :mod :arg1-of
+:location :root :mod
+:arg2 :arg0 :root
+:arg1 :root
+:arg0 :root
+:domain :mod :root
+:degree :root :compared-to
+:domain :degree :root :compared-to
+:degree :root
+:root :arg0
+:root :arg1
+:root :arg1-of
+:root :arg1
+:condition :domain :root :arg1-of
+:root :arg1
+:root :location
+:mod :root
+:arg1 :root :arg0
+:root :concession
+:root :location
+:arg0 :polarity :root :arg1
+:root :mod
+:root :mode
+:root :mode
+:arg1 :root :arg0
+:arg1 :root
+:location :mod :root
+:arg1-of :root :arg0-of
+:arg0 :root :arg1
+:root :poss
+:root :location
+:root :arg1
+:arg0 :root :arg1 :time
+:arg0 :root :arg1
+:root :arg1
+:mod :mod :root
+:frequency :arg0 :root :arg1 :arg3
+:root
+:poss :root
+:root :arg0 :arg1
+:arg0 :root
+:root :arg0
+:root :arg2
+:arg0 :root :arg1 :frequency :arg1-of
+:root :manner
+:quant :root
+:arg0 :root
+:domain :mod :root :arg1-of
+:root :arg1 :arg3
+:root
+:mod :root
+:root :arg0 :arg1
+:polarity :root :arg1
+:root :arg1
+:time :arg0 :root :arg1
+:poss :root
+:arg1 :root :arg0
+:root :arg2
+:time :root :arg1
+:root
+:root :arg1
+:mod :root :arg0-of
+:mod :root
+:arg0 :polarity :root :arg1
+:root :arg1-of
+:arg2 :root
+:poss :root
+:arg2 :arg0 :root
+:condition :root :arg1
+:arg0 :root :arg1
+:root :arg1-of
+:root :arg1
+:manner :root
+:root :op1
+:root :arg1
+:root :time
+:arg0 :root :arg1 :arg2
+:root :arg1
+:arg0 :root
+:root :arg2 :arg1
+:domain :root
+:arg0 :polarity :root
+:arg0
+:arg0 :root :duration
+:mod :root
+:arg0-of :root
+:root
+:time :arg0 :root :arg1
+:arg0 :root :arg2
+:arg1 :arg0 :root :manner
+:root :arg1
+:arg0 :root :arg1
+:domain :mod :root
+:root :arg1
+:domain :degree :root
+:root
+:mod :root
+:arg1 :arg0 :root :time
+:root :mod
+:arg1 :root :arg0
+:mod :root
+:ord :root
+:root :mode
+:root :mode
+:root
+:mod :root
+:arg1 :root
+:arg1 :direction :arg0 :root :time
+:ord :root :arg1
+:arg0-of :root
+:root :op1
+:time :root :arg1
+:domain :root :arg0-of
+:mod :mod :root
+:mod :root
+:root :arg0 :arg1
+:mod :root
+:arg1 :root :arg0
+:arg1-of :root
+:domain :mod :root :arg1-of
+:domain :root :purpose
+:mod :root
+:instrument :root
+:arg1 :arg0 :root
+:root :arg0 :arg1
+:arg1 :arg2
+:root :instrument :time
+:root :subevent-of
+:root
+:root :degree
+:arg2-of :arg1 :time :root :path
+:mod :root
+:root :arg1-of
+:mod :root
+:mod :root :arg0-of
+:arg1 :root :arg0
+:polarity :root :arg1
+:arg0 :root
+:arg2 :arg0 :time :root :arg1
+:root :part-of
+:mod :root
+:root :part-of :arg1-of
+:root :quant :part-of
+:root :arg1 :arg2
+:root :manner :arg1
+:root
+:mod :root
+:arg0 :root :arg1
+:part-of :root
+:poss :root
+:mod :root
+:root :instrument :manner
+:arg0 :root :arg1 :subevent-of
+:arg0 :degree :root :compared-to
+:mod :root
+:arg1 :arg0 :root
+:root :arg1
+:root :manner :arg1
+:arg0 :root :arg1 :mod
+:root
+:part-of :root
+:part-of :root :arg1-of
+:part-of :root :quant
+:root :arg1 :arg2
+:mod :root
+:root :instrument
+:arg0 :mod :root :arg1 :subevent-of
+:root :op1
+:duration :root
+:poss :root
+:mod :root
+:time :arg0 :root :arg1
+:arg1 :arg0 :root
+:arg1 :root :direction
+:arg0 :root :arg2 :arg1
+:root :arg1
+:arg0 :polarity :root :arg2
+:mod :root
+:root :concession
+:arg0 :polarity :time :root :arg1
+:mod :root
+:mode :root
+:arg1 :arg0 :root :arg2
+:mod :root
+:degree :root
+:root :arg1 :arg2
+:root :mod
+:manner :root
+:degree :root
+:mod :arg1-of :mod :arg1-of :root :location
+:arg1 :root :arg2
+:arg0 :root :arg1 :arg2
+:root :degree
+:root :degree
+:degree :root
+:root
+:root :arg2
+:domain :quant :root
+:root :location
+:mode :arg2 :arg1 :root
+:root :arg0 :arg1 :manner
+:degree :root
+:arg0 :root :arg1
+:arg0
+:part-of :root
+:root :arg1 :degree
+:root :degree
+:mod :root :arg0-of
+:root :arg0 :arg1
+:degree :root
+:arg1 :root :arg2
+:root :op2
+:mod :root
+:arg0 :root :direction
+:root :arg1
+:root
+:domain :mod :degree :root
+:arg1 :arg0 :root :time
+:root :mod
+:arg1 :root :arg0
+:root :arg0-of
+:mod :root
+:mod :root
+:root
+:arg2 :root :arg1
+:degree :root
+:domain :arg1-of :root
+:root :op1
+:root
+:root
+:arg1-of :mod :root
+:arg0-of :root :arg1-of :arg1-of
+:arg1 :arg0 :root :arg2
+:op1 :root :op2
+:arg1-of :root :arg1-of
+:root :location :manner
+:root
+:arg0-of :root
+:arg2 :root :manner :arg0
+:root :arg1 :arg0
+:arg1 :root :arg0
+:mod :root
+:arg0 :root
+:root :arg1
+:root :arg0
+:root
+:root :arg0-of
+:arg2 :arg0 :root
+:root :arg1
+:arg1 :root :arg0
+:mod :root :arg1-of
+:time :root :arg2
+:arg1 :arg0 :root
+:root :arg1
+:part-of :root
+:root :arg1
+:root :arg0-of :arg0-of
+:root
+:arg0-of :root
+:arg1 :root :arg0
+:root :arg1
+:mod :root :arg0-of
+:root :arg1
+:root :arg0
+:op1 :root :op2
+:root
+:arg0 :arg1 :root
+:domain :mod :root
+:root :manner
+:arg0-of :root
+:root
+:root :op2
+:arg0 :root :direction
+:mod :root :arg1-of
+:root
+:domain :mod :degree :root
+:arg1 :arg0 :root :time
+:degree :root
+:root :arg1
+:root :mod
+:ord :root
+:arg0 :root :arg1
+:root :arg1
+:root :arg1
+:mod :root
+:arg1 :degree :root :arg0-of
+:mod :root
+:polarity :time :root :arg1
+:degree :root
+:part-of :root
+:arg1-of :root
+:mod :root
+:arg1 :arg0 :root :arg2
+:poss :root
+:arg1 :root
+:op1 :root :op2
+:arg1 :root :arg2
+:op1 :root :op2
+:arg1 :root :arg2
+:op1 :root :op2
+:arg1 :root :arg2
+:arg1-of :root
+:op1 :root :op2
+:arg1 :root :arg2
+:op1 :root :op2
+:root :arg1 :arg2
+:arg0 :root :polarity :arg1
+:root :arg1 :mod
+:root :purpose
+:op1 :root :op2
+:root :arg1 :arg2
+:root :mode
+:arg2 :root :arg1
+:arg1 :root :arg0
+:mod :root
+:quant :root
+:arg1 :root :mod :arg2
+:root :op1 :op2
+:root :polarity :arg1
+:arg0 :root
+:degree :root
+:arg1 :root
+:arg1 :root :arg2
+:arg1 :root :arg0
+:root :mod
+:arg0 :polarity :root :arg2
+:op1 :root :op2
+:arg2 :root :arg1
+:quant :root
+:arg0 :root
+:root
+:mod :root :arg0-of
+:arg1 :root :arg0
+:polarity :time :time :time :root :arg1
+:root :arg1-of
+:root
+:root
+:part-of :root
+:arg0 :root :arg1
+:arg1 :time :arg1-of :root
+:root :mod :arg2
+:duration :root :arg1
+:mod :root
+:mod :mod :root
+:arg2 :root :arg1
+:ord :root
+:arg0 :root
+:root :arg1 :arg3
+:quant :op1 :root :time-of
+:root :arg1-of
+:op1 :root :op1
+:degree :root
+:quant :root
+:arg0 :root :arg1
+:arg0-of :root :arg1-of
+:arg0 :root
+:root :arg2
+:root :op1
+:root :arg0
+:quant :op1 :root
+:time :arg1 :root :domain :arg0
+:ord :root
+:arg0 :degree :root
+:polarity :root
+:arg0 :root :polarity :arg1
+:root
+:root :purpose
+:ord :root :domain
+:arg0 :root :arg1
+:quant :root
+:root :op1
+:root :arg1
+:polarity :root :arg1 :time
+:root :arg1
+:arg1 :root
+:root
+:arg0 :manner :root :arg1
+:root :op1
+:arg2 :root
+:root :op1
+:quant :root :arg1-of
+:arg1 :arg0 :root
+:arg0 :frequency :root
+:mod :mod :root :arg1-of :location
+:mod :root
+:mod :arg0-of :root
+:mod :root
+:arg0 :root :arg1
+:arg0 :manner :root
+:mod :root
+:mod :consist-of :root
+:arg1 :root :arg0
+:root :mod
+:polarity :root :purpose :duration
+:root :arg0
+:root :manner
+:root :mode
+:arg0 :root :arg2
+:root :op2
+:arg1 :root :arg0 :arg3
+:root :quant
+:arg2 :root
+:root :op1 :op2
+:root :arg0 :arg1
+:root :mod
+:root
+:root :op2
+:arg1 :root :arg0 :arg3
+:root :mod
+:arg0 :root :arg3 :arg1
+:arg0 :root :arg1
+:arg0 :root :arg1
+:root :arg2
+:arg0 :time :root :arg1
+:arg1 :arg2 :root
+:arg0 :polarity :root
+:root
+:domain :arg1-of :root
+:degree :root
+:root :op2
+:arg1 :root :arg0
+:root :arg2 :arg1
+:root :arg1
+:arg0 :root :arg1
+:root :arg1 :arg2
+:root
+:root :arg1
+:root :op2
+:arg1 :root :arg0
+:root :arg1
+:domain :root
+:arg0 :root :arg1
+:root :time
+:root :arg1 :condition
+:degree :root
+:root :poss :mod :arg0-of
+:arg2 :degree :root
+:arg0 :root
+:mod :root
+:mod :root
+:arg0 :root :arg1
+:arg0 :root :arg1-of
+:root :arg1
+:mod :degree :arg1-of
+:arg0 :mod :root
+:manner :root :arg1
+:arg0 :root :arg1
+:arg2 :arg0 :root :manner
+:arg0 :root :arg1
+:arg0 :polarity :root
+:root :arg1
+:root :arg0
+:arg0 :root :arg1 :arg1-of
+:root :arg2
+:ord :root :arg0-of
+:domain :root :mode :arg1-of
+:root
+:root :arg0-of
+:root :arg1
+:root :arg1
+:root
+:root :arg1
+:root :arg0-of
+:root :arg1
+:op2 :condition :root :op1
+:root :op1
+:root :arg1 :time
+:root
+:root :mod
+:root :arg1
+:root :arg1-of :arg1 :arg0
+:root :op1
+:root :arg1
+:root :mod
+:root :beneficiary
+:arg1 :arg0 :time :time :root
+:root
+:mod :root
+:arg1 :root :arg0
+:arg1 :root
+:root :op2
+:arg0 :root :arg2 :arg1
+:root :arg1
+:arg2 :root :arg0
+:op1 :root :op2
+:arg0 :root :arg1
+:root
+:domain :root
+:root :arg2
+:arg1-of :root :arg2
+:domain :root :arg1-of
+:root
+:root :mod
+:mod :root
+:arg1 :mod :polarity :root
+:arg1 :root :arg2
+:root :op1
+:root
+:part-of :root
+:condition :root :arg1
+:arg0 :root :arg1
+:op1 :root :op2
+:root :accompanier
+:consist-of :root
+:op1 :root :op2
+:arg1 :root :arg0
+:root :mod
+:root :accompanier
+:root
+:condition :root :arg1
+:root :polarity :arg1
+:root :arg2
+:arg0 :root :arg1 :arg2
+:root :arg1
+:root :arg2
+:arg0 :root :arg1 :arg2
+:arg1 :root :arg2
+:root :arg1 :arg2
+:root :quant-of
+:root :mod
+:root :poss
+:arg0 :root :arg1 :location
+:root :time :op2
+:mod :root
+:root :arg3
+:arg0 :root :arg1 :arg2
+:op1 :root :op2
+:root :op2
+:domain :root
+:arg1 :root :arg0
+:domain :root
+:mod :root
+:arg0 :root
+:arg1 :root :arg0
+:domain :degree :root
+:domain :mod :root
+:root :arg2
+:polarity :root
+:degree :root :arg2
+:topic :root :arg1-of
+:arg0 :root :arg1
+:poss :root
+:root :mod
+:mod :root
+:arg1 :arg0 :root :arg3 :arg2
+:root :arg1-of
+:root :arg1
+:arg3 :root
+:root :frequency
+:root
+:root
+:root :arg1-of :mod
+:arg1 :root :mod
+:arg0 :root
+:arg0
+:root :frequency :arg1-of
+:arg0 :polarity :root
+:arg0 :root :arg1
+:root :arg3
+:quant :root :arg1-of
+:root
+:arg1 :root :arg0
+:poss :root
+:arg1 :arg0 :root
+:op1 :root :op2
+:beneficiary :degree :root
+:poss :root
+:root :arg2
+:arg1 :polarity :root :arg0
+:polarity :root
+:arg1 :root :arg2
+:root :arg1
+:part-of :root
+:arg0 :root :arg1
+:root :op2
+:mod :root
+:arg0 :root :direction
+:root :arg0-of
+:root
+:arg1 :arg0 :root :arg1-of
+:root :time
+:root :arg1
+:domain :mod :degree :root
+:root :mod
+:ord :root
+:domain :degree :root
+:domain :root :compared-to :degree
+:op2 :op1 :root
+:mod :root
+:mod :root
+:root
+:extent :root :arg0 :arg1
+:arg1
+:mod :root
+:op2 :op1 :root :location
+:arg0 :root :arg1
+:root :arg0-of
+:root :arg0-of
+:root :arg1 :polarity
+:polarity :root :arg1
+:root :op1 :location
+:root :arg1
+:root :arg1
+:mod :root
+:op1 :root :op2
+:domain :root
+:root :arg1
+:root :mod
+:root :arg1
+:arg0 :root :arg1
+:domain :polarity :root :compared-to :degree
+:root :arg2
+:mod :root
+:root :arg0-of
+:root :op1 :op2 :op3 :op4
+:root :arg0
+:mod :arg1 :degree :root
+:arg0 :root
+:arg0 :root :arg3 :arg1
+:op1 :root :op2
+:quant :mod :root
+:root :arg2
+:root
+:poss :mod :root
+:poss :root
+:op1 :root :op2
+:root :arg1
+:time :arg0 :root :arg1 :arg2
+:root
+:domain :arg1-of :root
+:root :op2
+:root :arg0 :arg1
+:arg1 :root
+:degree :root
+:root :arg4
+:arg1
+
+:time :arg0 :manner :root
+:arg1-of :root
+:root :arg1 :arg0
+:poss :root
+:arg0 :mod :root :arg1
+:root :arg1
+:arg2 :root
+:root :arg0-of
+:arg0 :arg2 :root
+:arg1-of :root
+:root :arg2
+:arg0 :root :arg1
+:poss :root
+:root :arg2
+:arg1-of :root
+:root :op2
+:arg0 :root :arg1 :mod
+:poss :root
+:root :arg2
+:arg0 :mod :root :arg1 :mod
+:root :arg1 :arg0
+:root :arg1
+:arg2 :root
+:root :arg0-of
+:arg0 :arg2 :root
+:mod :root
+:arg1 :root :arg0
+:polarity :root
+:arg1
+:root :arg1-of
+:root
+:arg0 :arg1 :root
+:root :domain
+:arg1-of :root
+:root :op2
+:arg0 :root :arg1
+:poss :root
+:root :arg2
+:part-of :root
+:root :arg1-of
+:time :arg0 :root :arg1 :arg2
+:arg1-of :root
+:arg1-of :root
+:arg0 :root :arg1
+:time :arg1 :root
+:root :mod
+:op1 :root :op2
+:arg0 :root :arg1 :time
+:time :root :mod
+:op1 :root :op2
+:root :part-of :purpose
+:arg0 :root :arg1
+:root :part-of :purpose
+:root :op2
+:arg1 :root :time
+:root :op1
+:mod :root
+:arg1 :polarity :root
+:root :arg1
+:root :arg0-of
+:arg0 :arg1 :root
+:domain :root
+:op1 :root :op2
+:arg1 :polarity :root
+:degree :root
+:frequency :arg1 :root :manner
+:arg1 :root :arg0
+:mod :root
+:time :root
+:time :op1 :root :op2
+:arg3 :root
+:arg0 :polarity :time :root :arg1
+:arg1 :time :arg1-of :root :frequency
+:op1 :root :op2
+:root :arg1
+:frequency :arg1 :root :arg2
+:root
+:root :arg2
+:poss :root
+:domain :degree :root
+:arg1 :root :mod :arg2 :location
+:root :arg0
+:domain :polarity :root :degree
+:root :arg1
+:root :arg0-of
+:arg1 :arg0 :root
+:arg0 :root :mod
+:root :duration-of :arg1
+:arg1-of :root
+:root :op2
+:arg0 :root :arg1 :mod
+:poss :root
+:arg1-of :root :arg0-of :mod
+:root :arg2
+:arg0 :time :root :arg1
+:root :arg2-of
+:arg1 :root
+:root
+:mod :root
+:root :arg1
+:root
+:root :arg2
+:arg1 :root
+:root :arg1-of
+:root :arg0-of
+:op1 :root :op2
+:root :mod
+:root :time :manner
+:mod :root :direction :arg1
+:purpose-of :root
+:arg0 :root :arg1
+:root :arg1
+:root :arg1
+:root :arg1
+:arg0 :root :arg1
+:arg1 :root :time
+:root :arg1
+:root :purpose
+:mod :root
+:arg1
+:root
+:arg0 :arg1 :root
+:root
+:time :root :arg1
+:domain :op1 :root :op2 :time
+:root :arg0
+:root :arg1
+:root :arg1
+:poss :root
+:degree :root
+:arg0 :root :arg1
+:root :arg1
+:arg0 :root :arg1
+:quant :root
+:mod :root
+:domain :degree :root
+:arg0 :root :arg2
+:root :time :arg2
+:purpose :arg0 :root :arg1
+:degree :root
+:mod :root :arg1-of
+:root
+:arg1 :root
+:arg1 :root :arg2
+:root
+:root :arg1
+:time :arg0 :root :arg0-of
+:arg0 :polarity :root :arg1
+:degree :root
+:arg1
+
+:arg1 :root
+:arg0 :root :time :arg1
+:mod :root
+:quant :root
+:mod :root
+:arg1 :root :arg0
+:time :domain :root
+:arg1
+:root
+:arg0 :arg1 :root
+:polarity :root
+:arg1-of :root
+:root :op2
+:arg0 :root :arg1
+:poss :root
+:arg1 :root :arg0
+:mod :root
+:root :arg0-of
+:root :op1 :op2 :op3 :op4
+:root :extent :arg1
+:root :degree
+:root
+:mod :root
+:domain :mod :root
+:mod :root
+:root :arg0 :time :arg1
+:root :arg1
+:root :arg2
+:domain :mod :arg1-of
+:polarity :root :arg2 :arg1
+:root
+:root :mod
+:root :arg0
+:root
+:root :arg1
+:root :mod :arg1-of
+:arg0 :root :arg2
+:root :arg2
+:root :arg1-of :arg1
+:root :mod :arg1
+:root :mod
+:op1 :root :op2
+:arg0 :root :arg1
+:root :arg2
+:domain :arg2-of :mod :arg1-of :root
+:root :manner
+:root :mod
+:root :arg2
+:poss :root
+:domain :mod :degree :root
+:root :quant
+:polarity :root :poss :beneficiary
+:mod :root
+:root :arg2
+:root :arg1
+:frequency :arg1 :root :arg2
+:arg0 :polarity :root :arg2
+:mod :root
+:quant :root
+:root :arg3
+:root
+:arg1 :degree :root :arg0
+:root :mod
+:root :mod
+:root :op2 :op1
+:quant :domain :root
+:root :ord
+:mod :root
+:mod :root :arg0-of
+:arg1 :root :arg0
+:root :arg1
+:op1 :op2 :root
+:root :mode
+:root :mode
+:mod :root
+:arg1 :root
+:arg0 :root :arg1 :time
+:arg0-of :root
+:root :arg1
+:op1 :root :op2
+:mod :root
+:root :duration
+:arg1 :root :location
+:mod :root
+:mod :root
+:root :arg1
+:time :op1 :op2 :root
+:arg0 :root :quant
+:root
+:mod :root
+:arg1 :arg0 :root :arg2
+:domain :mod :mod :root
+:mod :root
+:arg1 :root :arg0
+:arg0 :root :arg1
+:domain :root
+:mod :root
+:arg1 :arg0 :root :arg2
+:arg1 :root :arg0
+:mod :root
+:domain :root
+:mod :op1 :op2 :op3 :op4 :root :op5
+:root :arg1
+:root :location-of
+:domain :root :arg0-of
+:arg0 :degree :root
+:mod :root
+:arg1 :root :arg0
+:root :arg1
+:arg1-of :root
+:arg0-of :time :root
+:root :op2
+:arg0 :root :direction :arg1
+:poss :root
+:root
+:root :arg1-of
+:arg0 :root :time
+:domain :mod :mod :root
+:degree :compared-to :root
+:degree :root :compared-to
+:arg1 :degree :root
+:poss :root
+:arg1 :arg0 :root
+:root :arg0 :arg1
+:mod :root
+:polarity :root :arg1
+:arg1 :root :arg0
+:root :arg2
+:root :mode
+:mod :root
+:arg1 :root
+:root :arg0 :arg1
+:mod :root
+:polarity :root :arg1
+:arg1 :root :arg0
+:root :arg2
+:root :op2
+:op1 :root :op2 :op3
+:root :polarity :arg1 :mod
+:arg0 :root :arg2 :arg1
+:root :arg2 :mode
+:domain :root
+:arg1 :arg0 :root
+:domain :polarity :arg0-of
+:root
+:root :arg1-of :arg0-of :location
+:root :poss
+:arg0 :root :polarity :arg1
+:domain :arg0-of :root
+:op1 :op2 :op3 :op6 :op4 :root :op5
+:root :arg1
+:root :purpose
+:root :polarity
+:purpose :root
+:root :arg1-of
+:domain :degree :root
+:root :path
+:degree :root
+:arg0 :polarity :root :arg1
+:poss :root
+:root :arg2
+:root :arg0-of
+:root :poss
+:arg0 :root :arg1 :location
+:arg0 :root :arg2
+:root :arg1-of :source
+:root :arg1
+:root
+:op1 :root :op2
+:mod :arg1-of :root :arg0-of
+:poss :arg1-of :root
+:root :arg1
+:arg1-of :root :poss
+:root :arg2
+:condition :arg0 :root :arg1
+:arg0-of :mod :root
+:root :op2
+:root :arg2
+:root :arg0
+:arg1-of :root
+:root :arg0-of
+:root :arg1
+:arg0 :root :condition-of
+:poss :root
+:root :arg1 :arg2
+:arg0-of :root
+:root :arg1
+:root :arg1-of
+:degree :root
+:arg0-of :root :arg0 :quant
+:arg1 :root :arg0
+:root :arg0
+:mod :root
+:arg1-of :root
+:arg0-of :arg0 :root :arg2
+:arg1-of :root
+:root
+:arg1
+:location :quant :root
+:root :location-of
+:root
+:root :quant :mod
+:time :arg0 :root :arg1
+:arg1-of :root :arg0-of
+:root
+:root :arg1-of
+:root :arg1
+:root :arg2
+:mod :root
+:arg1 :root :arg0
+:arg1 :root
+:arg1-of :root :poss
+:root :arg1
+:root
+:arg1 :root
+:arg1 :root
+:arg0-of :root
+:root :arg1-of
+:time :time :arg1 :root
+:root :arg1
+:arg0 :root :purpose
+:arg1 :degree :root
+:root :arg2
+:root
+:root :arg0-of
+:arg0 :root :arg2 :arg1
+:arg1 :root :direction
+:root :arg1-of :arg1
+:mod :root
+:mod :root
+:condition :arg0 :root :arg1
+:root :arg0
+:arg1 :manner :root :arg3
+:root :arg2
+:arg1 :root :arg3
+:root :extent
+:domain :arg0-of :root
+:source-of :root
+:arg0 :root :arg1 :mode :beneficiary
+:root :op2
+:root :op1
+:root :arg1 :arg0
+:poss :root
+:root
+:mod :root
+:arg0-of :root
+:arg1 :root :direction :time :instrument
+:root :arg0
+:root :arg1-of
+:root :arg0-of
+:root :arg1 :direction :instrument
+:root :op1
+:arg0 :root :arg1
+:root :op1
+:arg1 :root :time :time
+:arg1 :root :arg0 :manner
+:op1 :op2
+:arg0 :degree :polarity :root
+:mod :root
+:root :arg0
+:root :location-of
+:root
+:domain :degree :root
+:root :mod
+:arg0 :root :arg1
+:quant :root
+:arg0 :root
+:domain :root
+:op1 :root :op2
+:quant :root
+:root :arg2
+:arg0 :polarity :time :root
+:arg0 :polarity :time :root
+:arg1 :root :arg0
+:arg0 :root :mod :arg1
+:root :arg1-of
+:arg1 :root :arg0
+:arg0 :polarity :root :arg1
+:root :arg1-of
+:root :arg0
+:arg1-of :root
+:degree :root
+:arg1-of :root
+:arg1-of :root :domain :location
+:root :source-of
+:root :arg0
+:root
+:arg1 :root :arg0
+:arg0 :polarity :root :arg1 :arg1-of
+:root :arg1 :arg2
+:degree :root :arg1
+:domain :root :arg1-of :arg0-of
+:root :arg2
+:arg0 :root :arg1
+:mod :root
+:root :mod
+:arg1 :time :polarity :root :arg2
+:mod :root
+:arg1-of :arg0 :root :arg1
+:root :arg2-of
+:root
+:degree :root
+:degree :root
+:poss :root
+:arg1-of :arg0 :root :arg2
+:arg0 :root :arg1
+:mod :root
+:mod :root
+:root :arg2
+:arg2 :arg0 :root
+:root :arg1
+:root :arg1-of
+:mod :root
+:arg1 :root :arg2 :mod
+:root :arg1 :arg2
+:arg1 :arg2 :root :arg3
+:arg1 :root :arg0
+:root
+:domain :root
+:root :arg1-of
+:domain :root
+:root :arg2
+:arg1 :polarity :root
+:root :arg2
+:root :arg0
+:root :op1
+:root
+:root
+:mod :root :arg0-of
+:arg2 :root :arg1
+:arg1 :root :arg0
+:polarity :time :time :root :arg1
+:root :arg1-of
+:root :arg1-of
+:root
+:root :duration
+:root :arg0
+:root :arg1-of
+:arg1-of :root
+:root :arg1-of
+:arg1 :root :arg2
+:poss :root
+:arg1-of :root
+:root :arg0
+:arg1 :root :arg1-of
+:root :domain
+:op1 :root :op2
+:poss :root
+:domain :root
+:root :arg3
+:root :arg1
+:root :op1
+:mod :root
+:arg0 :root :arg1
+:arg2-of :quant :root
+:arg1
+:arg0 :root :arg1 :arg2
+:source-of :root
+:degree :root :domain
+:root :op2
+:domain :poss :ord :root :mod
+:frequency :root
+:root :arg2
+:arg0 :root :arg1 :mod
+:arg1 :arg0 :root
+:domain :root
+:arg0 :root :arg2
+:arg1 :root :time
+:root :arg0
+:arg0 :root :arg1
+:arg1-of :root
+:root :op2
+:poss :root
+:arg0 :root :direction
+:mod :root
+:root :op1 :op2
+:root :arg1
+:root :mod
+:arg1-of :ord :root
+:polarity :root
+:mod :root
+:domain :mod :root
+:arg2
+:arg2
+:quant :root
+:quant :root
+:root
+:op1 :op2 :root
+:op1 :root
+:op1 :op2 :root :op3 :op5 :mod
+:arg0 :root :location :arg1
+:quant :root
+:quant :arg0-of
+:root :quant
+:polarity :root :arg1-of :arg1
+:quant :mod :root
+:root :arg1-of
+:root :arg1
+:root :op1
+:arg0-of :root :quant
+:root :arg1
+:mod :root :consist-of
+:quant :root
+:root :op1
+:root :arg1 :arg2
+:root :topic
+:root :location :arg1 :purpose
+:root :location
+:time :arg2
+:root
+:root :arg1
+:arg0 :root
+:root :op1
+:degree :root
+:root :manner
+:condition :arg0 :root :arg1
+:mod :root
+:mod :root
+:root :subevent-of
+:root :arg2
+:root :arg0 :arg1-of
+:arg1 :root
+:root :arg0
+:op1 :root
+:time :root :arg1
+:arg1
+:source
+:root
+:op1 :root
+:time :root :arg0 :purpose
+:poss :root
+:root
+:root :arg1
+:root
+:root :op1 :op2
+:root :direction
+:time :root :purpose
+:root :op1
+:arg1
+:source
+:root :poss :part-of
+:time :degree :root :arg2
+:time :root :poss
+:time :root :poss
+:location :root
+:root :op1
+:root :arg1
+:root
+:root :op1
+:root :op1
+:location
+:arg0-of :location :root
+:root :poss
+:root :arg1
+:arg0-of :root :location
+:root
+:time :root
+:root :op2
+:root :arg1
+:root :arg1
+:time :arg0 :polarity :root :arg1
+:domain :root
+:mod :root :arg1-of
+:arg1-of :root
+:op1 :root :op2
+:poss :root :arg0-of
+:root :arg0
+:root :arg2
+:op1 :root :op2
+:frequency :root
+:root :arg2
+:root :arg2
+:arg0 :arg1-of :root :arg3-of
+:mod :mod :quant
+:root :arg1 :location
+:arg1-of :root :location
+:root :mod
+:root :op1
+:root :arg1
+:root :arg0 :arg1
+:root
+:root :arg0-of
+:polarity :root
+:arg0 :degree :root :arg1
+:root :arg1
+:root :arg1-of
+:topic :root :arg2
+:root :op2
+:root :source
+:arg2 :root
+:root :arg1 :arg2
+:polarity :root
+:topic :mod :root
+:root :arg0-of
+:arg0 :root :arg1
+:mod :root
+:arg0 :root :arg1
+:degree :root
+:poss :root
+:arg1-of :root :arg1-of :arg1-of
+:root :mod :mod :mod
+:op1 :root :op2
+:root
+:quant :arg0-of :arg2-of :mod
+:degree :root :manner
+:root :purpose
+:root :arg1
+:root :arg2
+:condition :root :arg1
+:root :manner :arg1-of
+:root :arg2
+:mod :root
+:arg1 :root :arg2
+:location :mod :root
+:mod :root
+:root :arg1
+:arg0 :arg1-of :polarity :root :arg1 :time
+:root :arg1
+:mod :root
+:root :arg1
+:arg0 :root :arg1
+:quant :root
+:root :arg0 :arg1
+:degree :root :compared-to
+:arg0 :root :arg1 :arg2
+:root
+:root :arg1
+:op1 :root :op2
+:arg2 :root
+:arg0 :root :arg1
+:root :arg2
+:mod :mod :root
+:poss :root
+:polarity :root :arg0 :arg1 :arg2
+:arg1 :root :polarity
+:root
+:arg0 :arg1-of :root :arg2
+:quant :root
+:polarity :root
+:degree :root
+:mod :root
+:time :arg1 :degree :root :arg0
+:root :arg4
+:root :op1
+:arg4 :root
+:arg0 :root :arg1 :time
+:root :mod
+:root :arg1
+:root :arg1 :path
+:arg0
+:root :arg2-of
+:root
+:root :mod
+:mod :root
+:arg1 :root :arg0 :manner
+:arg1-of :root
+:arg1 :root :arg0
+:arg1 :root :arg0
+:domain :root :arg4-of
+:root :direction
+:mod :root
+:domain :root
+:domain :root
+:arg0 :root
+:op1 :op2
+:root :mode
+:root :polarity :location
+:domain :root
+:polarity :root :location
+:domain :root
+:arg1 :root :arg0
+:op1 :root :op2
+:part-of :root
+:mod :root
+:arg1 :root :direction :arg2
+:root :arg1 :direction
+:mod :root
+:arg1 :arg1-of :root :time :arg0 :mod
+:arg1 :root :location :purpose
+:root :poss
+:arg1 :arg0 :root
+:root :arg1
+:mod :root
+:source :root
+:root :arg1
+:root :op1
+:root :arg1 :arg2
+:mod :root :direction
+:root :arg2
+:direction :root :domain :degree
+:arg1 :arg0 :root
+:arg1 :root
+:root :arg1 :arg2 :arg0
+:root :arg1
+:mod :root
+:arg1 :root :arg0
+:mod :root :arg0
+:arg1 :root :arg0
+:root :op2
+:domain :root
+:root :mod
+:mod :root
+:op2 :op1 :root
+:arg0 :time :root :arg1 :mod
+:root :arg1 :arg2
+:root :arg2
+:domain :degree :root
+:root :arg2
+:arg1 :arg0 :root
+:domain :mod :root
+:root :op1
+:mod :root
+:arg0 :root :arg1 :arg1-of
+:arg1 :arg0 :root :time
+:domain :mod :root
+:arg1 :polarity :root :compared-to
+:root :part-of
+:arg1 :degree :root :compared-to
+:arg1 :root :arg0
+:root :arg2
+:mod :root
+:arg0 :root
+:arg1 :degree :root
+:polarity :root
+:quant :root
+:arg0 :root :polarity :mod :arg1
+:root :polarity :mod :arg1
+:arg0 :root
+:root :arg1 :extent
+:root :degree :compared-to
+:mod :root
+:arg1 :root
+:arg1 :root :arg0
+:root :arg0
+:part-of :root
+:consist-of :root
+:mod :root
+:root :arg2
+:arg0 :root :arg2 :manner
+:root
+:root :op1
+:arg1 :root :arg2
+:root :mod :arg1-of
+:arg1 :arg0 :root :mod
+:root
+:root :arg3-of
+:op1 :root :op2
+:root :arg2
+:arg1 :root
+:op1 :root :op2
+:root
+:root :arg3
+:mod :root
+:arg0 :polarity :root
+:root :mod :consist-of
+:arg1 :root
+:arg0
+:arg1 :arg0 :root
+:degree :root :location
+:source-of :root
+:mod :root
+:root :arg2
+:arg0 :root :arg1 :time
+:degree :root :topic
+:root :arg1 :condition
+:root
+:arg0
+:root :mode
+:mod :root
+:arg1 :root :arg0
+:root :arg1 :mod
+:degree :root
+:root :arg2
+:purpose :arg0 :time :root :arg1
+:root :arg1
+:arg1 :root :arg0
+:root :mod
+:root :op2
+:domain :root
+:root :mod
+:root :mod
+:op1 :root :op2
+:arg0 :root :arg1
+:quant :root
+:root :mod :arg1
+:mod :root
+:domain :arg0-of :root :mod
+:root :arg1
+:quant :root
+:polarity :root
+:mod :root
+:arg1 :root :arg0
+:arg1-of :root
+:arg1 :root :arg0
+:arg1-of :root
+:arg1 :arg0 :root :manner
+:root :arg1 :arg2
+:mod :root
+:arg0 :root
+:arg0 :frequency :root :arg1
+:arg1 :arg0 :root
+:arg1 :root
+:quant :root
+:op1 :root :op2
+:arg0 :root :arg1
+:quant :op1 :root
+:root :op1
+:arg0 :root :arg1 :time
+:root :arg2
+:root :polarity
+:location :root :arg1
+:root :arg2
+:arg0 :time :root :arg1
+:root :arg1-of
+:arg0 :root :arg1 :direction
+:op1 :root :op2
+:domain :degree :root
+:arg0 :root :polarity :arg1
+:root :arg1
+:poss :root :arg1-of
+:mod :root
+:arg1 :root :arg0
+:arg1 :root :arg0
+:root :mod
+:root :op1
+:time :arg0 :root :arg1
+:arg1-of :root
+:mod :root
+:root :arg2
+:arg0 :root :time
+:mod :root :arg1-of
+:part-of :root
+:root :op1
+:domain :quant :root :arg1-of
+:root :op2
+:arg0 :root :arg1 :arg2
+:mod :root
+:op1 :root :op2
+:extent :root
+:quant :root
+:mod :root
+:compared-to :degree :root
+:source :root :manner :arg1
+:root :mod
+:root :arg1-of
+:root :arg1
+:arg0 :root :arg1
+:root :arg2
+:root :arg1
+:root :arg2
+:root :arg2-of
+:root :consist-of :arg1-of
+:arg0 :root :arg1
+:root :manner
+:arg1 :arg0 :root :manner
+:arg1-of :root
+:arg1 :root :arg0
+:arg1-of :root
+:root :domain
+:mod :root
+:arg2 :root :arg0
+:arg2 :root :arg0
+:root :domain
+:root :arg1 :arg2
+:degree :root
+:arg1 :arg0 :root
+:arg2 :root :arg0
+:domain :mod :root
+:degree :root
+:arg1 :arg0 :root
+:mod :root
+:op1 :root :op2 :op3
+:arg1 :root :degree
+:root
+:root
+:root :degree
+:degree :op1 :root :op2
+:root :op2
+:arg0 :root :arg1
+:polarity :root
+:root :arg2
+:arg0 :root
+:root :arg1-of
+:arg0 :root :arg1
+:root :arg1-of :mod
+:root :poss
+:root :arg0-of
+:location :arg0 :root :arg1
+:time :ord :root
+:root :mod
+:root :op1
+:root :arg2
+:mod :root
+:root :arg1-of
+:root :arg1-of :path
+:time :arg0 :time :root :arg1
+:root :op1 :op2 :op3
+:root :op2
+:arg0 :root :arg4
+:root :poss
+:mod :root
+:arg1 :arg0 :root
+:arg1-of :root
+:root :op1
+:root :location-of
+:arg1 :root :arg2
+:root :arg0
+:arg1 :root :arg0
+:arg1-of :root
+:mod :root
+:arg0 :root :arg1
+:poss :root
+:arg0 :root :arg1
+:root :mod
+:domain :root
+:root :mod
+:arg1 :arg0 :root
+:arg1 :arg0 :root
+:domain :root
+:root :op2
+:arg1 :root :arg0
+:poss :root
+:domain :root :location
+:root :mod
+:arg0 :root :arg1
+:root :op1
+:root :quant
+:mod :root
+:location :quant :root :arg1-of :location
+:degree :root
+:root :arg1
+:degree :root
+:root :arg1
+:degree :root :arg1
+:op1 :condition :op2 :root :op3
+:root :manner
+:root
+:root
+:root :arg1 :purpose
+:arg0 :root :arg1
+:root :polarity :purpose
+:condition :arg1-of :root :arg0 :arg1
+:root :op2 :arg1-of
+:root :arg0
+:root
+:root :arg1 :mod
+:root
+:root
+:root
+:root :arg1
+:root
+:arg1-of :root
+:mod :root :arg1
+:root :mod
+:mod :root
+:arg0 :root
+:root :compared-to
+:root :arg1
+:mod :root
+:root :arg1
+:root :arg0
+:arg1 :arg2
+:op1 :root :op2
+:mod :root :duration
+:degree :root
+:arg0 :polarity :root :arg1
+:root
+:arg1 :root
+:root :quant :mod
+:domain :mod :root
+:quant :root :arg1-of :arg2-of
+:mod :root
+:root :direction :arg4
+:op1 :root :op2
+:root
+:arg1 :root :direction :arg2
+:root :op2
+:root :mod
+:time :arg1 :root
+:arg1 :root :arg0
+:arg1-of :root
+:arg1-of :root
+:mod :root
+:root :time :arg1
+:arg2 :arg0 :root :manner :concession
+:root :direction
+:root :location
+:mod :root :location
+:arg1 :arg0 :root
+:root :op1
+:mod :root
+:op1 :root :op2
+:degree :root
+:mod :root
+:root :arg0 :arg1
+:arg2 :root
+:root :arg1
+:mod :root
+:arg1 :root :arg0
+:domain :root
+:mod :root
+:op1 :root :op2
+:root :arg3
+:arg1 :root :arg0
+:arg1 :mod :root
+:root :arg3
+:root :polarity :arg1
+:arg1 :arg0 :root
+:arg1 :polarity :root
+:root :mode
+:polite :root :arg0 :arg1
+:mod :root
+:arg1 :root :arg0
+:time :arg0 :root :arg1
+:root :arg2
+:root :arg1 :arg2
+:root :op1
+:mod :root
+:polarity :root
+:arg0 :root :location
+:arg1 :root :arg0
+:arg0 :root :arg1
+:mod :root
+:arg1 :root :arg0
+:root :arg1
+:root :arg1 :arg2
+:arg1 :root :arg0
+:op1 :root :op2
+:root
+:arg0 :root :arg1
+:arg0 :degree :root
+:arg0 :mod :root :arg1
+:arg0 :arg1 :mod :root
+:arg0 :root :arg1
+:mod :root
+:arg1 :root :arg0
+:root :arg2
+:arg0 :root :arg1
+:root :arg1 :arg2
+:degree :root
+:arg1 :frequency :root
+:arg1 :root :arg0
+:root :arg1
+:arg1 :root :arg2
+:root :arg1
+:arg1 :root :arg0
+:mod :root
+:domain :mod :arg1-of :mod :root
+:arg2 :mod :root
+:mod :root :quant :mod
+:polarity :root
+:root :mod
+:root :arg0 :arg1
+:root :op2
+:arg0 :polarity :root :arg1
+:root :op2
+:arg0 :polarity :root :arg1
+:root :mod :quant
+:arg2 :root
+:root :mod
+:domain :root :arg1-of
+:root :arg0 :arg1
+:polarity :root
+:root :arg2
+:mod :root
+:condition :arg0 :root :arg1
+:root :arg0 :arg1
+:root :arg0 :arg1
+:domain :root :location
+:root :mod
+:root :arg0 :arg1
+:domain :root :location
+:root :mod
+:arg0 :root :arg1
+:mod :root
+:arg1 :root :arg0
+:root
+:arg0 :root
+:arg0 :root :arg1
+:arg1 :root
+:arg1 :root :arg0
+:mod :root
+:location :arg0 :root :arg1
+:mod :root
+:op1 :op2
+:root :arg2
+:arg1 :polarity :root :arg2
+:root :mode
+:mod :root
+:root :arg0
+:op1 :root :op2
+:degree :root
+:arg1 :root
+:root :arg1
+:mod :root
+:root :arg2
+:root :mod
+:root :arg0-of :location
+:root :arg1
+:arg0 :root
+:arg1 :root
+:arg1 :root :arg0
+:arg1 :root :direction :arg4
+:root :poss
+:root :arg2
+:domain :degree :root
+:poss :root
+:arg1 :arg0 :root
+:op1 :op2
+:arg0 :root :arg1
+:arg0 :root
+:op1 :root :op2
+:mod :root
+:mod :root
+:arg1 :mod :root
+:arg1 :mod :root
+:root :op2
+:root :arg1
+:arg1 :degree :root
+:root :arg2
+:poss :root
+:condition :arg1 :root :arg2
+:root :arg0
+:root :arg2
+:root :arg1-of
+:arg0 :root :arg1
+:mod :root
+:root :mod
+:root :arg1
+:mod :root
+:arg0 :root :arg1 :manner :arg4 :arg5
+:root :op1
+:root
+:arg0 :root :arg2 :arg1-of :arg1
+:poss :root
+:root
+:arg1 :root
+:root :arg2
+:root :op2 :op3
+:mod :root :location
+:root
+:arg0 :root :arg1
+:mod :root
+:arg0 :polarity :root :arg1
+:arg1 :polarity :root :arg0
+:arg0 :arg1 :root :arg2
+:mod :root
+:root :op2
+:arg0 :root
+:root :mod
+:root :mod
+:arg0 :root :arg1
+:root :arg2
+:arg0 :root :arg1
+:root :mode
+:degree :root :arg1
+:arg0 :root :arg2 :direction :arg1
+:mod :root
+:root :mod
+:root :arg1
+:root :op2
+:arg0 :root :arg1
+:root :arg1
+:root :location
+:mod :root
+:arg0 :root :arg1 :arg1-of
+:arg1 :arg0 :root
+:polite :root :mode
+:degree :root
+:mod :root
+:arg2 :arg0 :root
+:root
+:arg1 :root :degree
+:root :arg2
+:arg0 :root :arg1
+:polarity :root
+:quant :root
+:root :arg2
+:op1 :root :op2
+:arg0 :arg1 :root
+:mod :root
+:root :arg2
+:root :arg0-of
+:arg1 :root
+:quant :root
+:root
+:arg1 :root :arg0
+:arg0 :mod :root :arg1
+:root :arg1-of
+:arg0 :root :polarity :arg1
+:root :arg1
+:duration-of :root
+:arg0 :root :arg1 :location
+:root :arg1-of
+:time :root
+:arg1 :root :polarity :arg2 :mod
+:root :arg2
+:location :arg0 :root :arg1 :arg0-of
+:polarity :root :arg1
+:root :location
+:root :arg1
+:root :arg2
+:condition :arg0 :root :arg1
+:root :arg1
+:arg1 :root :arg0
+:arg1 :root :purpose
+:root :arg2
+:mod :root
+:root :arg1
+:root :arg2
+:arg1 :degree :root
+:arg2 :root :arg0
+:time :arg1 :root :direction :location :example
+:quant :unit :root :op1
+:root :location
+:op1 :root :op2
+:root :part-of
+:root :part-of
+:arg0 :root :arg1 :source
+:root :arg1
+:arg2 :root :arg1
+:mod :root :arg2 :frequency
+:arg3 :root
+:arg1 :root :arg2
+:root :arg2
+:time :arg1 :root :direction
+:mod :root
+:mod :root
+:root :direction :time
+:root :degree :arg1
+:root :arg1-of
+:arg1 :root :arg0
+:root :arg0-of :arg1 :time
+:condition :time :arg0 :root :arg1
+:root
+:root
+:op1 :root :op2
+:arg0 :root :arg1 :time
+:root :degree
+:arg1 :root
+:time :time :op1 :root :op2
+:root :direction
+:arg1 :root
+:degree :root
+:arg0 :root :arg2 :arg1
+:root :arg2
+:root :arg1
+:root :time
+:condition :arg0 :polarity :time :root :arg1
+:part-of :root
+:arg1 :root :arg2
+:mod :root
+:root :arg1 :time
+:mod :root
+:arg1 :root :arg2
+:mod :root
+:root :arg1
+:arg1 :root :arg0
+:mod :root
+:domain :root
+:domain :mod :root :arg1-of
+:degree :root
+:arg1 :root :arg0
+:frequency :root
+:op1 :op2
+:arg1 :root :arg2
+:mod :root
+:domain :root :arg0-of
+:root
+:mod :root
+:root :arg1 :arg2
+:mod :root
+:mod :root
+:root :arg0-of
+:arg1 :root
+:arg0 :root
+:root :arg0-of :arg1-of
+:frequency :arg0 :root :arg2
+:source :root
+:root :arg4
+:root :arg1
+:domain :arg1-of :root :beneficiary
+:root :degree :compared-to
+:root :arg1
+:arg0 :extent :root
+:root :arg0
+:root :arg0 :time :arg1-of
+:root :arg0-of
+:condition :arg0 :polarity :quant :root :mod
+:mod :root
+:mod :root
+:root :arg2
+:arg1 :root :arg2
+:mod :root
+:mod :root
+:mod :root
+:root :arg1
+:arg0 :root :arg1
+:root :op1
+:root
+:root
+:time-of :root :arg1-of
+:arg1 :time :root :arg0
+:root :op1 :op2
+:arg2 :arg1 :root
+:mod :root
+:arg1 :root :arg0
+:arg1 :root :arg2
+:arg1 :mod :root
+:mod :root
+:root :arg1 :arg0
+:arg0 :polarity :time :root :arg1
+:root
+:domain :root
+:arg1 :root :arg0
+:root :arg2
+:mod :root
+:arg1 :root :arg0
+:time :arg0 :root
+:domain :root
+:arg1 :root :arg0
+:arg0 :root :arg2 :arg1 :mod
+:polarity :root
+:arg0 :root :arg1 :arg1-of
+:root
+:mod :root
+:root :arg0
+:arg1 :root :arg0
+:root :arg1
+:root :op1
+:root :arg0
+:root :mod :arg1
+:op1 :root :op2
+:time :arg0 :root :arg1
+:domain :root :location
+:root :poss
+:arg0 :root :time :arg1
+:root :extent
+:op1 :root :op2
+:time :root :direction :purpose :arg1
+:manner :root :arg1
+:root :arg1 :arg2
+:root :arg1
+:arg0 :root :direction :purpose
+:mod :root
+:root :mod :arg1
+:poss :root
+:arg1 :arg0 :root
+:arg1 :polarity :degree :root :arg2
+:time :domain :root
+:op1 :root :op2
+:root
+:arg0 :root :arg1
+:poss :root
+:root :ord
+:arg1 :root :arg2 :time
+:domain :mod :root :arg1-of
+:root :mod :quant
+:arg2 :root
+:arg0 :root :arg2
+:root :arg2
+:arg0 :root :arg1 :arg0-of
+:time :root :location
+:root :extent
+:root :arg1
+:root :op1
+:degree :root
+:arg1 :degree :root
+:arg1 :root :arg2
+:arg1 :root
+:root
+:arg1 :arg0 :root
+:root :polarity :arg1
+:arg1 :root :beneficiary
+:mod :root :arg0-of
+:root
+:arg0 :root :degree :arg1
+:poss :root :arg0-of
+:arg1-of :arg0 :root :arg1
+:root
+:root :op1
+:root :arg2
+:root
+:root :arg2
+:root :arg0 :purpose
+:time :root
+:frequency :root :arg1
+:op1 :root
+:root :arg1
+:root :op1 :op2 :op3
+:op1 :root :op2
+:op1 :op2 :op3 :op4 :op4
+:root :quant :arg1-of
+:arg2-of :root
+:root :arg2
+:root
+:consist-of :root
+:domain :degree :root :compared-to :arg1-of
+:beneficiary :root :arg1
+:root :time
+:root :arg2
+:mod :root
+:root :mod :quant :mod
+:root :op1
+:root :arg0
+:root :arg0
+:domain :poss :root
+:root :op1
+:arg0 :root :direction :purpose
+:root :arg1
+:arg1 :arg0 :root
+:arg1 :root :arg0
+:root :op1
+:root :arg1
+:instrument :arg0 :root :arg2-of
+:degree :root
+:root :arg1 :instrument
+:mod :root :arg1
+:domain :time :poss :root :arg1-of
+:root :op1 :op2
+:root :mod
+:arg1 :root
+:arg1-of :root
+:root :arg1 :instrument
+:mod :root
+:arg1 :arg0 :root :purpose
+:root :mod
+:degree :root
+:root :arg1
+:root :poss
+:root :arg1-of :arg0-of
+:arg0 :root :beneficiary
+:root :arg1-of
+:mod :root
+:arg1 :root :arg0 :purpose
+:root :poss
+:root :arg1-of :beneficiary
+:root
+:arg0 :root :arg1
+:arg1 :root :arg0
+:mod :root
+:root :arg2
+:polarity :root :arg1
+:arg1 :root :arg2
+:arg1 :root :arg2
+:root :arg1-of
+:root :extent :arg1
+:root
+:arg0 :root :arg1
+:poss :root
+:root :arg1-of
+:root :arg1
+:poss :root
+:mod :root
+:arg1 :purpose :arg0 :root
+:root :mod
+:mod :root
+:arg1 :root :arg0
+:arg1-of :root
+:mod :root
+:arg1 :root :arg0
+:arg1-of :root
+:arg1 :arg0 :root
+:arg0 :root :location :arg1
+:mod :root
+:root :quant
+:arg2 :root
+:arg1 :root :arg2
+:root :arg0-of
+:arg1 :root :arg0
+:root :op1 :op2
+:root :arg1
+:time :root
+:arg0 :root :arg5 :arg1
+:time :root
+:root :arg0-of
+:root :op2
+:poss :root
+:root :arg1-of
+:root :arg2
+:manner :root
+:arg0 :root :arg1 :time
+:root :direction :arg0-of
+:arg1-of :mod :root
+:arg1 :degree :root
+:mod :root
+:arg1 :root :arg0
+:arg0 :root :arg1
+:arg1 :root
+:polarity :arg0 :root :arg1
+:mod :root :arg0-of
+:arg1 :root :arg0
+:root :op2
+:ord :arg1-of :mod :root
+:manner :root
+:root :arg2
+:root :direction :direction :arg0
+:arg1 :root :direction :time
+:arg1 :root :arg0
+:mod :root
+:polarity :root
+:domain :arg1-of :root
+:arg1 :root :arg0
+:domain :root
+:arg1 :root :arg0
+:mod :root
+:arg1 :polarity :root :location-of
+:arg1 :time :root :location
+:arg1 :root :arg0
+:root :op2
+:arg0 :root :arg2 :arg1
+:arg1-of :root
+:root :ord :arg1-of :mod
+:manner :root
+:arg0 :root :arg1
+:root :arg0-of
+:arg1 :root :arg0
+:ord :root
+:mod :root
+:root :extent
+:arg0 :root :arg1
+:arg1 :root :arg0
+:op1 :root :op2
+:arg0 :root :location
+:root :polarity
+:condition :root
+:mod :root
+:arg0 :root :arg1
+:part-of :root
+:root :arg2
+:arg0
+:mod :root
+:arg0 :root :arg1
+:mod :root
+:arg1 :root :arg0
+:root
+:root :arg1-of
+:root :op2
+:arg0
+:root :arg2
+:mod :root
+:degree :root :arg1-of
+:poss :root
+:root :arg0 :source
+:root
+:arg0 :root :arg1
+:arg0 :arg1
+:condition :root
+:arg1 :arg0 :root
+:domain :root
+:root :mod
+:mod :root
+:arg1 :root :arg0
+:arg1-of :root
+:root :arg0-of
+:arg1 :root :arg0
+:arg1-of :root
+:root :arg1-of :purpose
+:root :arg1
+:domain :root :arg0-of
+:arg0 :root :arg1
+:arg0 :arg1 :root
+:arg1 :root
+:root :polarity :arg1
+:arg0 :root :mod :arg1
+:quant :root
+:root :arg1
+:arg1 :arg3 :root
+:root :arg1
+:arg1 :root :arg0
+:root :arg0
+:mod :root
+:arg1-of :arg0 :root :arg1
+:arg2 :root
+:root :arg0 :arg1
+:root :arg1
+:root :arg0-of
+:arg1 :root :arg0
+:arg1-of :root
+:root :arg1-of
+:arg1 :root :arg0
+:arg1-of :root
+:root :mod
+:instrument :arg0 :root :arg1
+:arg1 :root :arg2
+:root :op1
+:arg0 :root :arg2 :arg1
+:arg1 :arg0 :root
+:root :arg1-of
+:root
+:root :arg2
+:root
+:root :source-of
+:mod :root
+:root :arg0 :arg1
+:root :poss
+:destination :root
+:condition :arg0 :manner :root :direction
+:root :arg1
+:root :arg1-of
+:root :mod
+:ord :root :part-of
+:root :arg1
+:root
+:poss :root
+:root :arg0-of
+:poss :root :location
+:root :op1 :op2
+:root :arg1 :time
+:arg1 :time :root
+:root :op1
+:root :arg1-of
+:degree :root :condition
+:root :arg1-of
+:root :source-of
+:polarity :time :root :arg1
+:poss :root
+:root :op1 :op2 :op3
+:arg0 :degree :root :concession-of
+:root :op1
+:root :arg1
+:root
+:root :arg1
+:mod :root :poss
+:root :op1
+:root :purpose
+:mod :root
+:arg0 :root :arg1 :arg2
+:root :arg1
+:poss :root
+:root :direction :manner
+:root
+:arg0-of :root
+:mod :root
+:arg1 :arg0 :root :arg2
+:time :arg0 :root :arg1
+:poss :mod :mod :root
+:arg0 :arg2 :arg1 :root
+:domain :root
+:root :arg0
+:root :arg1-of :polarity
+:root :arg0
+:arg1 :time :root :arg1-of
+:root
+:root :arg0
+:root
+:op1 :root :op2
+:arg1 :time :root
+:root :concession :arg1
+:arg0 :polarity :root :arg1
+:root :arg0
+:root :op1
+:root :arg2
+:root :arg0
+:arg1 :degree :root :arg0
+:root :arg0-of
+:polarity :root :arg1
+:arg0 :root :arg1
+:arg0 :root
+:time :root :op1 :op2
+:arg0 :root
+:polarity :root
+:quant :root
+:arg1 :mod :arg0 :root
+:root :arg2
+:arg0 :root :arg1 :manner
+:root :mod
+:root
+:op1 :root :op2
+:arg1-of :root
+:root :arg1 :arg2
+:arg0 :root :arg1
+:arg0 :root :arg1
+:root
+:root :domain
+:mod :root
+:root :arg1 :manner :location
+:root :arg1
+:arg0 :root :arg1
+:time :op1 :root :op2
+:root
+:arg0 :root :arg1
+:arg1 :root
+:root :op1
+:root :arg0 :duration :manner
+:op1 :root :op2
+:root
+:degree :root
+:arg0 :root :arg1
+:root :arg2
+:root :arg1 :arg1-of
+:root :arg0
+:arg1 :root :manner :arg4
+:root :poss
+:mod :root
+:root
+:mode :arg0 :root
+:arg0 :mod :root :arg1
+:root :mod
+:arg0 :root
+:root :arg2
+:arg0 :root
+:arg0 :polarity :root :arg1
+:arg1 :mod :root :arg2
+:root :arg1
+:arg0 :mod :root :arg2 :arg1
+:mod :root
+:arg0 :polarity :root :arg1 :concession-of
+:root :arg1
+:root :arg1
+:arg0 :root :degree :arg1
+:polarity :root :arg1
+:degree :root
+:arg1 :root
+:arg1 :root
+:arg1 :root :location
+:root :op1
+:root :op2
+:root :arg0
+:arg1 :root :arg1-of
+:root :arg1-of
+:arg1-of :root
+:root :polarity
+:time :arg0 :root :mod :arg1
+:root :op1
+:duration :root
+:domain :root
+:arg0 :root :arg2
+:root :op2
+:root :op1
+:root :location
+:manner :arg0 :root :arg1
+:root :arg1
+:root :op1
+:root :consist-of :arg1-of :arg1-of
+:root :arg0
+:root :mod
+:arg1 :arg0 :root
+:mod :root
+:arg1 :root
+:root :op2
+:arg1 :root
+:arg0 :time :root :arg1
+:root :op1 :op2 :op3
+:root :location :consist-of
+:root :arg1
+:arg1 :root :location
+:arg1 :root
+:root
+:concession :op1 :root :op2
+:root :arg1
+:arg1 :root
+:root
+:root :arg1 :arg0
+:mod :root
+:arg1 :root :arg0
+:arg1 :root :arg0
+:mod :mod :root :arg0
+:root
+:op1 :root :op2
+:root :mod
+:root :mod
+:time :arg0 :root :location
+:arg0 :root :arg2 :arg1
+:arg1 :root :location
+:root :op1 :op2
+:root :arg1
+:root :arg1
+:root
+:root :arg1 :arg0 :mod :time
+:root :manner-of
+:root :arg2
+:mod :root
+:arg0 :root :arg1 :arg2
+:root :arg1
+:poss :root
+:arg0 :root :arg1 :location
+:part-of :root
+:mod :root
+:arg0 :root :arg2
+:op1 :op2 :op3
+:root
+:root :arg1 :arg0
+:arg1-of :root
+:root :arg1-of
+:polarity :root
+:arg0 :root :arg2
+:root :arg0
+:poss :root
+:arg1 :arg0 :root
+:root :part-of
+:root :arg2
+:frequency :root
+:mod :root
+:root :manner :mod
+:time :op1 :root :op2
+:arg1 :arg0 :root :arg3
+:root
+:op1 :root :op2
+:arg0 :root :arg1
+:arg1-of :root
+:root
+:root
+:degree :root
+:root :arg2 :arg1
+:mod :root
+:root :mod
+:domain :degree :root
+:root :arg2 :mod :arg1
+:root :location
+:location :root :mod :arg1
+:arg0 :root
+:op1 :op2 :op3 :root :arg1-of
+:root :arg0
+:op1 :root :op2
+:part-of :arg1-of :root
+:part-of :arg1-of :root
+:arg0 :root :arg1
+:root :arg1
+:part-of :root :consist-of :arg1-of
+:arg1-of :root
+:degree :root
+:root
+:root :arg1 :arg1-of
+:root :mod
+:root :arg1
+:root :mod :mod
+:root :arg2 :arg1-of :concession
+:location :root
+:root
+:part-of :root
+:poss :root
+:poss :mod :root
+:root :op1
+:root :arg2
+:root :op1
+:root :arg1-of :arg0 :arg2
+:arg1 :root :degree :manner
+:mod :root :arg0-of
+:time :arg0 :root :mod :arg1
+:root :arg1-of
+:root :arg2
+:root :op1
+:root :op2
+:domain :degree :root :mod
+:arg0 :root :arg1
+:mod :root :arg1
+:root :arg1-of
+:arg0 :root :arg1
+:root :arg1
+:root :arg1 :conj-as-if
+:arg1-of :root :arg0
+:root :op2
+:time :time :arg0 :root :arg1
+:root :mod :manner
+:root :mod
+:arg0 :root :path :manner
+:arg2 :root :arg1
+:polarity :root
+:mod :root
+:root :arg0 :arg1
+:root
+:mod :root
+:root :poss
+:root :arg1-of
+:time :op1 :root :op2 :op3
+:root
+:direction :root
+:root :op1 :op2
+:arg1 :root :arg2
+:root :op2
+:arg0 :root :arg1
+:arg1 :polarity :root :arg2
+:arg1 :root
+:polarity :root :arg2
+:root
+:root :arg4-of :arg1-of
+:root :arg2
+:domain :mod :root :arg1-of
+:root :location
+:root :arg1 :arg2
+:mod :root
+:root :location
+:op1 :root :op2
+:root
+:arg0 :root :arg1
+:location :polarity :root
+:root :arg2
+:domain :root
+:mod :root
+:arg0 :root :arg2
+:root :op1 :op2 :op3
+:root :example
+:arg1 :root :arg2
+:root
+:op1 :op2 :root :op3
+:arg0 :root
+:root :arg1 :arg2
+:root :arg1
+:root
+:root :op2
+:arg0 :time :root
+:arg0 :root :arg1-of
+:root :op1
+:arg2 :root
+:mod :root :arg1-of
+:root :arg0
+:mod :root
+:arg1 :root :arg0
+:arg0 :root
+:op1 :root :op2
+:root
+:arg0 :root :arg1
+:arg0 :root :instrument
+:arg0 :polarity :root :arg1
+:root :arg1 :arg2 :mode
+:arg0 :root
+:domain :degree :root :compared-to
+:op1 :root :op1
+:concession :root :arg2
+:root :arg1-of
+:arg0 :root :arg1 :arg1-of :destination
+:root :arg1-of
+:root
+:root :op1 :op2
+:root
+:root
+:root
+:root :part-of
+:op1 :root :op2
+:root :arg1
+:root :arg1
+:arg1 :mod :arg0 :root
+:arg1 :root :location
+:root :arg0
+:mod :root
+:root :arg1-of
+:mod :root
+:arg1 :root :arg0
+:arg0 :root :arg1
+:mod :root
+:root
+:root :arg2 :mode :arg1 :purpose
+:root :arg2
+:quant :root :arg1-of
+:root :op2
+:arg0 :root
+:arg0 :root :arg1
+:root :arg1-of
+:arg0 :root :arg1 :arg4
+:root :part-of
+:op1 :op2
+:arg1 :root
+:part-of :root
+:arg0 :root
+:root :mod :arg1-of :mod :arg1-of
+:arg1 :degree :root :compared-to
+:arg1 :mod :root :polarity :arg2
+:root :arg2-of :mod
+:mod :root
+:op1 :op2 :op3
+:root :arg0
+:root :arg0
+:arg1 :root
+:part-of :root
+:root :op1
+:root :location
+:arg1 :root
+:root :arg1-of
+:root :arg2
+:arg1 :root :arg2
+:root
+:root :poss
+:arg0 :root
+:root :arg1-of
+:op1 :op2 :op3 :root
+:root :domain :mod
+:arg0-of :root
+:root :domain
+:root :domain
+:time :root :arg0 :manner :arg1
+:root :arg0
+:op1 :root :op2
+:root :arg1-of
+:quant :root
+:polarity :root :arg1
+:root :location
+:mod :root
+:root :arg0 :arg1
+:arg0 :root :arg1 :location
+:root :arg0
+:root :arg1-of
+:root
+:arg0 :polarity :root :arg1
+:arg0 :root
+:root :arg1
+:root :arg2
+:arg1 :root :location
+:root :op1 :op2
+:arg1-of :root
+:arg0 :root
+:root :arg1-of
+:quant :root
+:arg1 :root
+:arg0 :root
+:root :op2
+:root :arg2
+:arg1 :root
+:mod :root
+:arg0 :root :arg1
+:root :arg1
+:arg0 :root :instrument
+:arg0 :root :arg1
+:arg0 :root :arg1-of
+:poss :root
+:root :arg1 :arg2 :time
+:arg1 :root
+:root :poss
+:root :op2
+:mod :root
+:arg0 :root :arg1 :mod
+:arg1 :root
+:root
+:root
+:root :arg2 :time :arg1 :arg0
+:root
+:frequency :root
+:root :op1
+:root :location :mod
+:root :arg1
+:arg1 :root :arg2
+:mod :root
+:arg1 :root :arg0 :manner :time
+:root :arg1-of
+:root :arg0
+:root :arg1-of :domain
+:poss :root
+:arg2-of :root
+:root :arg1
+:arg0 :root :arg1
+:mod :root
+:root :arg1-of :arg1-of :arg1-of
+:poss :root
+:arg0 :root :arg1 :arg2
+:op1 :root :op2
+:poss :root
+:arg0 :root :arg1
+:mod :root
+:root :arg1
+:root :time
+:arg0 :root :degree :arg1
+:root :mode
+:arg0 :degree :root :arg1
+:poss :root
+:part-of :root
+:poss :root
+:arg0 :root :degree :arg1
+:op1 :root :op2
+:degree :root
+:root :op2
+:arg0 :root :mod
+:mod :root
+:polarity :root :arg0
+:arg0 :root
+:root :mod
+:root :arg1
+:arg0 :root :arg1
+:part-of :root
+:part-of :root
+:op1 :root :op2
+:domain :root
+:arg0
+:arg1 :arg0 :root
+:arg0 :root
+:time :arg0 :instrument :root :arg1
+:root :op2
+:root :arg1 :arg2
+:part-of :root
+:time :arg1 :root
+:arg0 :root :arg1
+:root :arg0 :polarity
+:arg1-of :root
+:arg0 :root
+:root :arg1
+:arg0 :polarity :root :arg1
+:root :arg1
+:arg0 :root :arg2 :arg1-of :arg1
+:time :poss :root
+:root :op1
+:arg4 :root :direction
+:time :time :arg0 :root :arg1
+:root :degree :arg2
+:root :op2
+:arg1 :root
+:frequency :root
+:root
+:root :arg1-of
+:root
+:mod :arg1-of :arg0 :mod :root :arg1
+:root :op2
+:arg0 :root
+:arg1-of :degree :root
+:polarity :arg0 :root
+:arg2 :root
+:op1 :quant :root
+:mod :arg1-of :root
+:quant :root :op1
+:time :root :ord :arg1 :time
+:root :arg0 :arg1
+:root
+:root :arg2
+:root :location-of
+:arg1 :direction :root :arg4
+:root :arg0
+:mod :root
+:arg1 :root :mod
+:arg0 :root :manner :arg1
+:root :arg1
+:arg1 :root :arg0
+:root :degree
+:root :op2
+:frequency :root
+:mod :root
+:arg1 :root :mod
+:arg0 :polarity :time :root :arg1
+:arg1 :root :arg2
+:arg1 :root :arg1-of
+:root
+:root :arg2
+:degree :root
+:arg0 :root :arg2 :arg1
+:arg0 :root :arg1
+:root :arg2
+:root
+:time :arg1 :root :arg2
+:root :poss
+:root :arg4
+:arg1 :root :arg2
+:arg1 :root :arg2 :location
+:root :direction :time
+:root :arg1
+:arg1 :polarity :root
+:arg0 :root :arg1
+:arg0 :root :arg2 :condition
+:root :arg1
+:root
+:root :degree
+:root :mod
+:root :op1
+:location :arg1-of :consist-of :mod :root
+:root
+:root :arg1 :arg2
+:poss :mod :root :arg0-of
+:root :arg1
+:root :quant
+:part-of :root
+:root :location
+:direction :root
+:root :op1
+:arg0 :time :root :arg1
+:root :arg3 :time
+:location :root
+:root :op2
+:arg0 :root :arg1
+:arg0 :root :arg1
+:mod :arg0 :polarity :root
+:domain :mod :root
+:polarity :root
+:root :arg1
+:arg0 :root
+:mod :root
+:arg0 :root :arg2
+:arg1 :root :arg2
+:arg2-of :root
+:domain :polarity :root
+:arg0 :root :arg1
+:root :op1
+:root :direction
+:polarity :root
+:time :op1 :root :op2
+:polarity :arg0 :root :arg1
+:root :arg2
+:mod :root
+:arg0 :root :time :mod :arg2
+:poss :root
+:arg0 :root :arg1
+:arg1 :root :location
+:root :arg2
+:root
+:arg0 :root :arg1
+:root :arg1-of :arg1-of
+:root :arg2 :location
+:location-of :root :time
+:root :op2
+:arg1 :arg2
+:mod :root :arg1
+:quant :root :op1
+:arg1-of :root
+:arg0 :root :arg1
+:mod :root
+:time :arg0 :root :mod :arg1
+:root :op1
+:arg0 :root :mode :arg1
+:degree :root
+:arg1 :polarity :arg0 :root :arg1-of
+:op1 :root :op2
+:arg1 :root :arg2
+:part-of :root
+:arg1 :root
+:mod :polarity :root
+:arg1 :root :mod
+:time :root :arg0 :arg1
+:mod :root
+:arg1 :root :arg0
+:root :arg2
+:direction :root :op1
+:arg0 :root :arg1
+:op1 :root :op2
+:part-of :root
+:arg0 :root :arg1 :time :arg4
+:root :part-of
+:root :destination
+:arg1 :root
+:root :arg1
+:location :arg0-of :arg2-of :arg1-of :root
+:mod :root
+:root :op1
+:poss :root
+:root :arg1 :arg0
+:root :arg2 :arg1
+:arg0 :root :arg2
+:poss :root
+:poss :root
+:root
+:root :arg1
+:arg1-of :root :poss
+:arg0 :root
+:root :op1
+:root :op1
+:arg0 :root
+:op1 :root :op2
+:root :arg2
+:location :arg1-of :root :arg0-of
+:root :arg1-of :path :arg1-of
+:polarity :mod :root
+:root :arg1-of
+:arg3 :arg1-of :root
+:root :arg2
+:arg0 :root :arg1 :arg1-of
+:root :part-of
+:mod :root :location :arg1
+:part-of :root :arg1-of
+:snt1 :root :snt2
+:arg0 :root :arg1 :time
+:root :degree :compared-to
+:poss :mod :root
+:arg1 :root :arg2
+:arg0 :root
+:purpose :arg0 :root :arg2
+:arg1-of :consist-of :root
+:arg0 :root :arg1
+:root :arg0 :time
+:op1 :root :op2
+:root :arg1
+:arg0 :root :arg1
+:poss :root
+:quant :root :purpose
+:root :time :op2
+:arg2 :mod :root
+:arg1 :polarity :root :arg2
+:mod :root
+:op1 :root :op2
+:degree :root
+:arg0 :root :arg1 :manner
+:part-of :root
+:root :arg1 :arg2
+:root :op1
+:part-of :root
+:root :arg1-of
+:poss :root
+:arg0 :root :arg1
+:part-of :root
+:part-of :root :arg1-of
+:root :arg2
+:root :arg2
+:root :arg1-of :arg1-of
+:root
+:arg1
+:root :poss
+:arg1 :root :arg0
+:arg0 :root :arg1
+:root :arg1
+:root :topic
+:arg1 :arg0 :root
+:arg0 :root :arg4 :direction
+:time :root :arg1
+:manner :arg0 :root :arg1
+:arg1-of :root
+:arg1 :mod :root :purpose
+:root :op1
+:root
+:arg1 :root :degree
+:root :arg2-of
+:root :arg2 :arg1
+:root
+:arg0 :polarity :root :arg1
+:arg1 :root :arg2
+:root
+:root :arg0
+:root :arg1
+:mod :root :arg4 :time
+:op1 :op2
+:domain :degree :root
+:mod :root :domain
+:time :root :manner
+:quant :root
+:root :quant
+:arg0 :root :arg1-of :arg1
+:mod :root
+:root :arg2-of
+:root :part-of
+:mod :root :domain
+:op1 :root :op2
+:root :arg2
+:root :polarity
+:arg0 :root :arg1 :arg1-of :location :arg1-of
+:mod :root :arg1
+:root :arg2
+:mod :root :op1
+:mod :root
+:root :arg1-of
+:arg0 :arg2-of :root :arg1-of
+:root :degree
+:root :arg2
+:root :direction
+:arg0 :root :arg1
+:poss :root
+:root :op2
+:arg0 :root :arg1
+:poss :root
+:root :op2
+:arg0 :root :arg1
+:root :op2
+:arg0 :root :arg2 :arg1
+:arg1-of :root
+:arg1 :root :arg1-of
+:root :arg1
+:arg0 :root :arg1
+:arg1 :root :manner
+:mod :mod :root
+:arg0 :root :arg2 :arg1
+:root
+:arg0 :root :mod
+:root :arg2
+:arg0 :root :manner
+:arg0 :time :degree :root
+:mod :root
+:frequency :root
+:root :arg0
+:mod :arg0 :root :arg1
+:arg1-of :root
+:root
+:root :arg1
+:arg1-of :root
+:root :op2
+:root :arg1
+:polarity :time :root :arg1 :mod
+:arg0 :root :arg1
+:root :polarity :arg1
+:mod :root
+:root :arg1
+:source-of :root :location
+:beneficiary :arg1 :root :arg2
+:root :arg1-of
+:mod :root
+:root :arg1
+:arg0 :root :mod
+:root
+:arg0 :root :arg1
+:poss :root
+:root :location :arg4-of
+:root :time
+:mod :root :op1
+:root :arg2
+:quant :op1 :root
+:arg1 :root :location
+:time :duration :mod :root :arg1
+:arg0 :root :arg1 :arg2
+:mod :root
+:op1 :root :op2 :op3
+:mod :arg1-of :root :arg1
+:root :location
+:arg0 :root :arg1
+:arg2 :root :arg1
+:root :arg1
+:arg0 :polarity :root :arg1
+:root :arg2
+:poss :root
+:arg0 :root :arg2 :arg1-of :arg1
+:domain :root
+:root :arg1-of
+:root :polarity
+:arg0 :root
+:mod :root :arg1 :arg2
+:root :arg0-of
+:time :root
+:condition :arg1-of :root :arg1
+:root :arg0 :arg1
+:root :location
+:mod :root
+:location :root :arg0
+:arg0 :root
+:arg1 :mod :root :arg2
+:op1 :root :op2
+:root :arg0 :arg1
+:arg0 :root :arg2 :purpose
+:arg1 :root :arg2
+:root :arg1-of
+:root
+:arg0 :root :arg1
+:degree :root :arg1
+:arg0 :root
+:root :op2
+:time :arg0 :root :direction :arg1
+:arg0
+:degree :root
+:location :root :mod
+:root :arg1
+:poss :root
+:root :location-of
+:root :polarity :arg1
+:arg0 :root :arg2 :arg1
+:root
+:root :arg1-of
+:arg1 :root :arg2
+:root :degree
+:mod :root :arg2
+:poss :root :quant :arg1-of :beneficiary
+:root :arg2
+:root :op2
+:arg0 :root :arg1
+:root :location :arg0-of :mod
+:root :arg1
+:root :op1
+:arg0 :arg3 :root :arg1
+:arg0 :root :mod
+:mode :op2
+:mod :mod :root
+:root :arg1
+:arg0 :root :arg1
+:mod :root
+:arg1 :arg0 :root
+:mod :root
+:root :arg0 :arg1
+:arg1 :root :arg2
+:root :time-of
+:root :arg1
+:arg0 :root :arg1
+:arg0 :root :arg2
+:arg1 :root :arg2
+:arg0 :root :arg1
+:mod :root
+:root :arg1-of
+:arg1-of :root
+:polarity :root :arg3
+:arg0-of :root
+:arg1 :arg0 :root
+:domain :mod :mod :root :location
+:mod :root
+:root :arg0 :arg1
+:domain :root
+:root :arg0 :arg1
+:poss :root
+:domain :root
+:root :arg0 :arg1
+:domain :root
+:root :arg2
+:mod :root
+:mod :root
+:arg0 :root
+:arg0 :root :arg1 :arg1-of
+:root :polarity :arg2
+:root :mod
+:root :mod
+:root :arg1
+:arg0 :root :arg1
+:arg2 :root
+:location :arg0 :root
+:root :quant :arg1-of
+:root :arg2
+:location :arg0 :root
+:root :quant :arg1-of
+:root :arg1
+:root :op2
+:root :arg0-of
+:mod :root
+:arg1 :root :arg2 :time
+:arg0 :root
+:root :time :arg0 :arg1
+:root :mod
+:arg1-of :root
+:root :op2
+:arg0 :root :mod
+:root :op2
+:time :arg1 :root :arg2
+:arg0 :root
+:root :arg1
+:root :arg1-of :mod
+:root :arg1
+:arg0 :root :time :arg1 :arg2
+:root :accompanier
+:arg0 :root :arg1
+:arg2 :root
+:root :op1 :op2
+:arg0-of :root
+:root
+:arg0 :root :time
+:arg0 :time :root :arg1 :purpose
+:root :mod
+:manner :root :arg0 :arg1
+:root :direction :arg1
+:poss :root
+:op1 :root :op2
+:root
+:arg0 :time :root :arg1
+:op1 :op2 :root
+:root :arg1
+:time :root :arg2 :arg1 :arg0
+:arg0 :root
+:mod :root :arg0 :arg1
+:degree :root
+:root :op2
+:arg0 :root :mod
+:arg1 :root
+:arg0 :root :arg2 :arg1-of :arg1
+:root :arg1
+:arg2 :root
+:root :arg1
+:quant :arg0-of :mod :root
+:root :op2
+:arg0 :root :mod
+:time :arg1 :polarity :root
+:time :arg1-of :root :arg2
+:root
+:arg1-of :mod :root
+:arg1 :root :arg0
+:arg0 :polarity :root :arg1
+:arg0 :root
+:root :arg2
+:arg0 :root :arg1
+:root :arg2
+:arg0 :root :degree :arg1
+:arg1 :root :arg2
+:mode :polarity :root :purpose
+:root :arg1
+:arg1 :polarity :root :arg2
+:arg0 :polarity :root :arg1
+:root :arg2
+:arg1 :root
+:mod :root :arg0
+:arg0 :root :arg2 :arg1
+:root :arg1
+:arg0 :polarity :root :arg1
+:root :mod
+:mod :root
+:arg0 :root :arg1 :purpose
+:mod :root
+:mod :root
+:root :arg1
+:arg0 :polarity :root :arg1
+:root :arg2
+:root :ord
+:arg0 :root :polarity :arg1
+:purpose :root :arg1
+:quant :root :purpose
+:root :arg1
+:arg1 :root
+:root :arg1
+:arg0 :root :arg1
+:time :arg0 :polarity :root :arg1
+:poss :root
+:arg0 :root :source :manner
+:root :polarity
+:root :arg2
+:arg0 :root :arg1 :time
+:root :arg1-of :manner
+:root :mode
+:arg0 :root :arg2 :manner :arg1
+:root :location
+:root :op2
+:arg0 :root :arg1 :manner
+:root :arg2
+:arg1 :time :root
+:arg1-of :arg1 :root
+:arg0 :root
+:op1 :root :op2
+:root :arg1-of
+:arg2 :root :arg1
+:polarity :root
+:arg0 :root :arg1
+:arg0 :root :arg1
+:degree :root
+:arg0 :root :arg1 :arg3
+:mod :root
+:root :polarity :arg1
+:degree :root
+:arg0 :root :arg1
+:root :arg2
+:mod :arg1-of :root
+:arg1 :root :arg2
+:mod :root
+:polarity :root :arg0
+:arg0 :root :arg1
+:arg1 :degree :root
+:root :arg2
+:arg0 :mod :root :arg1
+:quant :root
+:arg1 :degree :root
+:root :mod
+:arg0 :root :arg1
+:root :arg1
+:mod :root
+:mod :root :domain
+:arg0-of :root
+:root :arg0
+:arg0 :root :direction :arg1 :purpose
+:mod :root
+:arg1-of :root
+:arg0 :root :arg1
+:arg0 :degree :root
+:op1 :root :op2
+:quant :mod :root
+:arg0 :root :arg1
+:arg0 :root :arg1
+:source-of :quant :root
+:root :arg1-of
+:root :op2
+:root :arg0
+:root :degree
+:root :mod
+:arg0 :root :arg1 :arg1-of
+:root
+:location :root
+:root :arg1
+:arg1 :root :mod
+:root :op2
+:root :arg0
+:root
+:arg1 :root :arg1-of
+:poss :root
+:time :arg0 :root :mod :arg1
+:arg0 :root :arg2
+:root :op2
+:arg1 :degree :root
+:domain :degree :root
+:arg0 :root :arg1 :purpose
+:root :arg2
+:polarity :root
+:quant :root :arg1-of
+:mod :root
+:root :arg0
+:root :degree
+:root :arg1-of
+:mod :root
+:polarity :root :arg1
+:arg1 :root :arg1-of
+:time :root :mod
+:time :root :arg2
+:root :mod :degree :arg0
+:snt1 :root :snt2
+:arg1 :root
+:root :polarity :arg1
+:arg1 :root
+:part-of :root
+:arg1 :root :arg2
+:root :arg1-of :arg1-of
+:root :arg2
+:arg1 :root :manner :duration
+:root
+:arg0 :polarity :root
+:root :arg1
+:degree :root :compared-to
+:arg1 :root :manner
+:mod :root
+:root :arg0
+:polarity :mod :root :arg1-of
+:root :mod
+:root :time :op2
+:arg1 :time :root
+:mod :root
+:arg0 :polarity :time :time :root :arg1
+:arg1 :mod :root :arg0
+:root :time
+:arg0 :root
+:root
+:root
+:root :arg0-of
+:arg1 :root :arg2
+:root
+:root
+:arg0 :root :arg2 :arg1
+:time :arg1 :root :degree
+:arg0 :root
+:root :arg1
+:polarity :root
+:root :arg2
+:poss :root
+:arg1 :root :arg2
+:polarity :root :arg1 :time
+:arg0 :root :arg1 :arg1-of
+:poss :root
+:root :arg0
+:op1 :root :op2
+:mod :root
+:polarity :mod :root
+:arg0 :root :arg1
+:time :root :arg1
+:arg1 :root :arg2
+:quant :mod :root
+:root :arg1
+:root :arg2
+:root :arg0 :arg1 :arg2
+:root :arg1
+:root :arg0-of
+:mod :root
+:consist-of :root
+:quant :mod :root :time
+:arg0 :root :arg1 :arg2
+:polarity :time :root :arg1
+:poss :root
+:root :location :mod
+:time :root :arg1
+:root :poss
+:arg0 :root :arg1
+:root :arg1
+:arg0 :root :arg1
+:arg1-of :arg2 :root
+:time :arg0 :root :arg1
+:op1 :root :op2
+:mod :poss :root
+:op1-of :poss :consist-of :root
+:degree :root
+:mod :root
+:arg0 :root :arg1 :time
+:root :arg4
+:location-of :root
+:root :arg1 :manner
+:time :arg1 :root
+:root :op2
+:mod :root
+:root :arg1
+:root :arg0
+:root :arg2
+:mod :root
+:time :arg0 :root :arg1
+:time :root :mod
+:root :mod
+:op1 :root :op2
+:root :mod
+:op1 :root :op2
+:arg0 :root :time :manner
+:consist-of :root
+:arg0 :root :arg1
+:root :mod
+:time :op1 :root :op2
+:root :op2
+:time :arg1 :root :arg2
+:mod :root
+:location :time :mod :root
+:arg0 :polarity :time :root
+:root :arg1-of
+:root :arg1-of
+:mod :root
+:op1 :root :op2
+:root :location :arg0 :arg1
+:polarity :root
+:root :arg1
+:root :location
+:root :arg1 :condition
+:arg3 :arg1 :root
+:root :mod :arg0-of
+:root :direction :arg1
+:root :arg0 :arg1
+:op1 :root :op2
+:arg0 :root :arg1
+:root :op2
+:arg1 :root
+:root :arg2
+:arg0 :root :arg1
+:root :op2
+:mod :root
+:root :mod
+:polarity :arg0 :time :root :arg1
+:arg1-of :root
+:degree :root
+:domain :mod :arg0-of :root
+:root :arg0 :arg1
+:compared-to :root :degree
+:root :compared-to :degree
+:arg1 :root :arg2
+:root :mod :purpose
+:poss :root
+:root :arg1
+:root :arg1-of
+:arg1 :root :arg2
+:root :location
+:location :op1 :root :op2
+:root
+:mod :root
+:arg1 :root :location
+:location :root
+:root :mode :arg1 :manner :arg0 :purpose
+:root :condition :arg1-of :arg0
+:root :time :arg4
+:root :mod
+:root :op2
+:root :arg0 :arg1
+:polite :polarity :root
+:mod :root
+:manner :root :op1
+:root :duration :location
+:time :root :arg1
+:mod :root
+:root :arg1
+:arg0 :root
+:mod :root :arg0-of :arg0-of :arg0-of
+:root :arg1
+:root :arg1
+:condition :polite :root :arg1
+:arg1 :root :arg4
+:root :mode :arg2 :arg1
+:root :arg1

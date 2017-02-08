@@ -201,6 +201,25 @@ class TAGSynchAligner(object):
                 if head > -1:
                     self.update_rule_tree(root, head)
 
+    def linearization(self):
+        rules = []
+        rules_control = []
+        for i, w in enumerate(self.info['tokens']):
+            rule = filter(lambda rule_id: i in self.alignments.erg_rules[rule_id].tokens, self.alignments.erg_rules)
+
+            if len(rule) > 0:
+                rule = self.alignments.erg_rules[rule[0]].name
+
+                if rule not in rules_control:
+                    rules_control.append(rule)
+                    edge_pos, head = rule.split('~')
+                    edge, pos = edge_pos.split('/')
+                    # rules.extend(rule.split('~'))
+                    rules.append(edge)
+                    rules.append(head)
+
+        return self.info['tokens'], rules
+
     def run(self):
         # Check if it is multi-sentence
         regex = re.compile('ROOT')
@@ -256,6 +275,6 @@ class TAGSynchAligner(object):
                 # Update tree parents with the new rule name
                 tag_parent_rule.rules.append(rule_name)
 
-            self.alignments.erg_rules[rule_id].tokens = map(lambda x: self.info['lemmas'][x], self.alignments.erg_rules[rule_id].tokens)
+            # self.alignments.erg_rules[rule_id].tokens = map(lambda x: self.info['lemmas'][x], self.alignments.erg_rules[rule_id].tokens)
 
         return self.alignments

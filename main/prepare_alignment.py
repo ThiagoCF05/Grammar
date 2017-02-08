@@ -7,8 +7,8 @@ import os
 import utils
 
 def prepare():
-    dirs = ['data/LDC2016E25/data/amrs/unsplit',
-            'data/LDC2016E33/data/amrs',
+    dirs = [#'data/LDC2016E25/data/amrs/unsplit',
+            #'data/LDC2016E33/data/amrs',
             'data/prince/train']
 
     amrs = []
@@ -67,7 +67,8 @@ def write(fnread, fnwrite):
     fwrite.close()
 
 if __name__ == '__main__':
-    fnread = '/home/tcastrof/amr/Aligner/AMR_Aligned.keep'
-    fwrite = 'data/TEST/train/training.txt'
+    fnread = 'data/prince/AMR_Aligned.keep'
+    fwrite = 'data/prince/test_aligned.txt'
 
     write(fnread=fnread, fnwrite=fwrite)
+    # prepare()
