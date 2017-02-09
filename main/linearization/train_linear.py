@@ -82,7 +82,7 @@ if __name__ == '__main__':
                          actor2verb=actor2verb,
                          sub2word=sub2word)
 
-    training = '../data/prince/training_aligned.txt'
+    training = '/home/tcastrof/amr/data/prince/training.txt'
 
     linear = TrainLinear(training_set=training, erg_factory=factory)
     l = linear.run()
@@ -90,7 +90,7 @@ if __name__ == '__main__':
     # write = '../data/prince/linearization/linear_rules.txt'
     # linear.write(l, write)
 
-    json_write = '../data/prince/linearization/freq.txt'
+    json_write = '/home/tcastrof/amr/data/prince/linearization/freq.json'
     l = map(lambda x: ' '.join(x), l)
     freq = nltk.FreqDist(l)
     json.dump(dict(freq), open(json_write,  'w'), sort_keys=True, indent=4, separators=(',', ': ') )

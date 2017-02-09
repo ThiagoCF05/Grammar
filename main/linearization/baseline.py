@@ -79,7 +79,7 @@ if __name__ == '__main__':
                          actor2verb=actor2verb,
                          sub2word=sub2word)
 
-    freq = json.load(open('../data/prince/linearization/freq.txt'))
+    freq = json.load(open('/home/tcastrof/amr/data/prince/linearization/freq.txt'))
     linear = BaseLinear(erg_factory=factory, freq=freq)
 
     fdev = '../data/prince/dev.txt'
@@ -95,7 +95,28 @@ if __name__ == '__main__':
         except:
             linearizations.append('-')
 
-    f = open('../data/prince/linearization/dev.baseline', 'w')
+    f = open('/home/tcastrof/amr/data/prince/linearization/dev.baseline', 'w')
+    for linear in linearizations:
+        f.write(linear)
+        f.write('\n')
+    f.close()
+
+    ################################################################################################################
+
+    ftest = '../data/prince/test.txt'
+
+    amrs = utils.parse_corpus(ftest, True)
+
+    linearizations = []
+    for amr in amrs:
+        try:
+            # l = reduce(lambda x,y: x+y, map(lambda x: x.split('~'), linear.process(amr['amr'].lower()).split()))
+            l = linear.process(amr['amr'].lower())
+            linearizations.append(' '.join(l))
+        except:
+            linearizations.append('-')
+
+    f = open('/home/tcastrof/amr/data/prince/linearization/test.baseline', 'w')
     for linear in linearizations:
         f.write(linear)
         f.write('\n')

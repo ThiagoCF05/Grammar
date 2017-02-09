@@ -53,6 +53,13 @@ class Linearizer(object):
         rank = self.ranking(linear)
         return rank[0][0]
 
+    def write(self, fname, linearizations):
+        f = open(fname, 'w')
+        for linear in linearizations:
+            f.write(linear)
+            f.write('\n')
+        f.close()
+
 if __name__ == '__main__':
     freq_table = json.load(open('../data/alignments/table.json'))
     verb2noun, noun2verb, verb2actor, actor2verb = utils.noun_verb('../data/morph-verbalization-v1.01.txt')
@@ -64,22 +71,66 @@ if __name__ == '__main__':
                          actor2verb=actor2verb,
                          sub2word=sub2word)
 
-    linear = Linearizer(erg_factory=factory, lm_path='../data/prince/linearization/lm.arpa')
+    lm2 = Linearizer(erg_factory=factory, lm_path='/home/tcastrof/amr/data/prince/linearization/lm2.arpa')
+    lm3 = Linearizer(erg_factory=factory, lm_path='/home/tcastrof/amr/data/prince/linearization/lm3.arpa')
+    lm4 = Linearizer(erg_factory=factory, lm_path='/home/tcastrof/amr/data/prince/linearization/lm4.arpa')
+    lm5 = Linearizer(erg_factory=factory, lm_path='/home/tcastrof/amr/data/prince/linearization/lm5.arpa')
 
-    fdev = '../data/prince/test.txt'
+    fdev = '../data/prince/dev.txt'
 
     amrs = utils.parse_corpus(fdev, True)
 
-    linearizations = []
+    linear2, linear3, linear4, linear5 = [], [], [], []
     for amr in amrs:
         try:
-            l = reduce(lambda x,y: x+y, map(lambda x: x.split('~'), linear.process(amr['amr'].lower()).split()))
-            linearizations.append(' '.join(l))
-        except:
-            linearizations.append('-')
+            l = reduce(lambda x,y: x+y, map(lambda x: x.split('~'), lm2.process(amr['amr'].lower()).split()))
+            linear2.append(' '.join(l))
 
-    f = open('../data/prince/linearization/test.eval', 'w')
-    for linear in linearizations:
-        f.write(linear)
-        f.write('\n')
-    f.close()
+            l = reduce(lambda x,y: x+y, map(lambda x: x.split('~'), lm3.process(amr['amr'].lower()).split()))
+            linear3.append(' '.join(l))
+
+            l = reduce(lambda x,y: x+y, map(lambda x: x.split('~'), lm4.process(amr['amr'].lower()).split()))
+            linear4.append(' '.join(l))
+
+            l = reduce(lambda x,y: x+y, map(lambda x: x.split('~'), lm5.process(amr['amr'].lower()).split()))
+            linear5.append(' '.join(l))
+        except:
+            linear2.append('-')
+            linear3.append('-')
+            linear4.append('-')
+            linear5.append('-')
+
+    lm2.write('/home/tcastrof/amr/data/prince/linearization/dev2.eval', linear2)
+    lm3.write('/home/tcastrof/amr/data/prince/linearization/dev3.eval', linear3)
+    lm4.write('/home/tcastrof/amr/data/prince/linearization/dev4.eval', linear4)
+    lm5.write('/home/tcastrof/amr/data/prince/linearization/dev5.eval', linear5)
+
+    ################################################################################################################
+    ftest = '../data/prince/test.txt'
+
+    amrs = utils.parse_corpus(ftest, True)
+
+    linear2, linear3, linear4, linear5 = [], [], [], []
+    for amr in amrs:
+        try:
+            l = reduce(lambda x,y: x+y, map(lambda x: x.split('~'), lm2.process(amr['amr'].lower()).split()))
+            linear2.append(' '.join(l))
+
+            l = reduce(lambda x,y: x+y, map(lambda x: x.split('~'), lm3.process(amr['amr'].lower()).split()))
+            linear3.append(' '.join(l))
+
+            l = reduce(lambda x,y: x+y, map(lambda x: x.split('~'), lm4.process(amr['amr'].lower()).split()))
+            linear4.append(' '.join(l))
+
+            l = reduce(lambda x,y: x+y, map(lambda x: x.split('~'), lm5.process(amr['amr'].lower()).split()))
+            linear5.append(' '.join(l))
+        except:
+            linear2.append('-')
+            linear3.append('-')
+            linear4.append('-')
+            linear5.append('-')
+
+    lm2.write('/home/tcastrof/amr/data/prince/linearization/test2.eval', linear2)
+    lm3.write('/home/tcastrof/amr/data/prince/linearization/test3.eval', linear3)
+    lm4.write('/home/tcastrof/amr/data/prince/linearization/test4.eval', linear4)
+    lm5.write('/home/tcastrof/amr/data/prince/linearization/test5.eval', linear5)
