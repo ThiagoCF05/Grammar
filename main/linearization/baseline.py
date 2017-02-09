@@ -1,5 +1,9 @@
 __author__ = 'thiagocastroferreira'
 
+from sys import path
+path.append('/home/tcastrof/amr/scp_repo')
+path.append('/home/tcastrof/amr/Grammar')
+path.append('../../')
 from main.grammars.ERG import ERGFactory
 
 import itertools
