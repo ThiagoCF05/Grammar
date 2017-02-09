@@ -82,7 +82,7 @@ if __name__ == '__main__':
                          actor2verb=actor2verb,
                          sub2word=sub2word)
 
-    training = '/home/tcastrof/amr/data/prince/training.txt'
+    training = '/home/tcastrof/amr/data/prince/train/training.txt'
 
     linear = TrainLinear(training_set=training, erg_factory=factory)
     l = linear.run()
