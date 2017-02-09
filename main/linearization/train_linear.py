@@ -20,9 +20,13 @@ class TrainLinear(object):
         linearizations = []
 
         for amr in self.training:
-            print amr['sentence']
-            alignments = self.erg_factory.create_erg(amr['amr'])
-            linearizations.extend(self.process(alignments))
+            try:
+                print amr['sentence']
+                alignments = self.erg_factory.create_erg(amr['amr'])
+                linearizations.extend(self.process(alignments))
+            except:
+                print 'error'
+            print 10 * '-'
         return linearizations
 
     def write(self, linearizations, fwrite):
