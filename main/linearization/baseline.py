@@ -79,7 +79,7 @@ if __name__ == '__main__':
                          actor2verb=actor2verb,
                          sub2word=sub2word)
 
-    freq = json.load(open('/home/tcastrof/amr/data/prince/linearization/freq.txt'))
+    freq = json.load(open('/home/tcastrof/amr/data/prince/linearization/freq.json'))
     linear = BaseLinear(erg_factory=factory, freq=freq)
 
     fdev = '../data/prince/dev.txt'
