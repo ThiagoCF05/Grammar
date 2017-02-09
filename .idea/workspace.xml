@@ -75,22 +75,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="baseline.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="baseline.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/linearization/baseline.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="41" />
+            <state relative-caret-position="-338">
+              <caret line="46" column="4" lean-forward="false" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_linear.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="test_linear.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/linearization/test_linear.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="5" selection-end-column="21" />
-              <folding />
+            <state relative-caret-position="292">
+              <caret line="97" column="16" lean-forward="true" selection-start-line="97" selection-start-column="16" selection-end-line="97" selection-end-column="16" />
+              <folding>
+                <element signature="e#711#1125#0" expanded="false" />
+                <element signature="e#1174#1584#0" expanded="false" />
+                <element signature="e#1638#1768#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -98,8 +102,8 @@
       <file leaf-file-name="train_linear.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/linearization/train_linear.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1125">
-              <caret line="75" column="19" lean-forward="true" selection-start-line="75" selection-start-column="19" selection-end-line="75" selection-end-column="19" />
+            <state relative-caret-position="112">
+              <caret line="49" column="8" lean-forward="true" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -1410,14 +1414,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/linearization/train_linear.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="75" column="19" lean-forward="true" selection-start-line="75" selection-start-column="19" selection-end-line="75" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/rule_production/RuleProducer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1530">
@@ -1456,19 +1452,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/linearization/test_linear.py">
+    <entry file="file://$PROJECT_DIR$/main/linearization/baseline.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="5" selection-end-column="21" />
+        <state relative-caret-position="-338">
+          <caret line="46" column="4" lean-forward="false" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/linearization/baseline.py">
+    <entry file="file://$PROJECT_DIR$/main/linearization/train_linear.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="41" />
+        <state relative-caret-position="112">
+          <caret line="49" column="8" lean-forward="true" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/linearization/test_linear.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="97" column="16" lean-forward="true" selection-start-line="97" selection-start-column="16" selection-end-line="97" selection-end-column="16" />
+          <folding>
+            <element signature="e#711#1125#0" expanded="false" />
+            <element signature="e#1174#1584#0" expanded="false" />
+            <element signature="e#1638#1768#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

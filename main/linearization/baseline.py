@@ -100,8 +100,8 @@ if __name__ == '__main__':
             linearizations.append('-')
 
     f = open('/home/tcastrof/amr/data/prince/linearization/dev.baseline', 'w')
-    for linear in linearizations:
-        f.write(linear)
+    for l in linearizations:
+        f.write(l)
         f.write('\n')
     f.close()
 
@@ -121,7 +121,7 @@ if __name__ == '__main__':
             linearizations.append('-')
 
     f = open('/home/tcastrof/amr/data/prince/linearization/test.baseline', 'w')
-    for linear in linearizations:
-        f.write(linear)
+    for l in linearizations:
+        f.write(l)
         f.write('\n')
     f.close()
