@@ -4,35 +4,36 @@ import os
 
 import xml.etree.ElementTree as ET
 
-def process_text(xml, data):
+def process_text(xml):
     root = ET.fromstring(xml)
 
     t = root.find('TEXT')
 
     headline = t.find('HEADLINE')
     text = str(headline.text).replace('\n', ' ').lower()
-    text = ' '.join(nltk.word_tokenize(text)) + '\n'
-    data = data + text
+    headline = ' '.join(nltk.word_tokenize(text)) + '\n'
 
     paragraphs = t.findall('P')
+    article = ''
     for paragraph in paragraphs:
         text = str(paragraph.text).replace('\n', ' ').lower()
         text = ' '.join(nltk.word_tokenize(text)) + '\n'
-        data = data + text
+        article = article + text
+    return headline, article
 
 def process(fname, data, ndoc, nerror):
-    print 'READ'
     f = gzip.open(fname)
     doc = f.read()
     f.close()
 
-    print 'PROCESS'
     xml = ''
     for line in doc.split('\n'):
         xml = xml + line + '\n'
         if line.strip() == '</DOC>':
             try:
-                data = process_text(xml, data)
+                headline, article = process_text(xml)
+                print headline
+                data = data + headline + article
                 xml = ''
                 ndoc = ndoc + 1
             except:
