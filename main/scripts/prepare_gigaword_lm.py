@@ -21,10 +21,12 @@ def process_text(xml, data):
         data = data + text
 
 def process(fname, data, ndoc, nerror):
+    print 'READ'
     f = gzip.open(fname)
     doc = f.read()
     f.close()
 
+    print 'PROCESS'
     xml = ''
     for line in doc.split('\n'):
         xml = xml + line + '\n'
