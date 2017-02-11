@@ -28,9 +28,9 @@ def process(fname, data, ndoc, nerror):
 
     _xml = ''
     for line in doc.split('\n'):
-        print line
         _xml = _xml + line + '\n'
         if line.strip() == '</DOC>':
+            print _xml
             try:
                 headline, article = process_text(_xml)
                 print headline
