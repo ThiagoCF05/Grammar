@@ -31,6 +31,7 @@ def process(fname, data, ndoc, nerror):
         if line.strip() == '</DOC>':
             try:
                 headline, article = process_text(_xml)
+                print headline
                 data = data + headline + article
                 _xml = ''
                 ndoc = ndoc + 1
