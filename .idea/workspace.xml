@@ -41,7 +41,7 @@
         <entry file="file://$PROJECT_DIR$/main/scripts/prepare_gigaword_lm.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="426">
-              <caret line="60" column="48" lean-forward="false" selection-start-line="60" selection-start-column="48" selection-end-line="60" selection-end-column="48" />
+              <caret line="60" column="48" lean-forward="false" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="48" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -1396,7 +1396,7 @@
     <entry file="file://$PROJECT_DIR$/main/scripts/prepare_gigaword_lm.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="426">
-          <caret line="60" column="48" lean-forward="false" selection-start-line="60" selection-start-column="48" selection-end-line="60" selection-end-column="48" />
+          <caret line="60" column="48" lean-forward="false" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="48" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>

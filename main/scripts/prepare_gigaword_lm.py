@@ -43,8 +43,8 @@ if __name__ == '__main__':
     dirs = [#'/roaming/tcastrof/gigaword/LDC2007T07/gigaword_eng_3a/data/afp_eng']
              # '/roaming/tcastrof/gigaword/LDC2007T07/gigaword_eng_3a/data/apw_eng',
             # '/roaming/tcastrof/gigaword/LDC2007T07/gigaword_eng_3a/data/cna_eng',
-            '/roaming/tcastrof/gigaword/LDC2007T07/gigaword_eng_3b/data/ltw_eng']
-            # '/roaming/tcastrof/gigaword/LDC2007T07/gigaword_eng_3b/data/nyt_eng',
+            # '/roaming/tcastrof/gigaword/LDC2007T07/gigaword_eng_3b/data/ltw_eng',
+            '/roaming/tcastrof/gigaword/LDC2007T07/gigaword_eng_3b/data/nyt_eng']
             # '/roaming/tcastrof/gigaword/LDC2007T07/gigaword_eng_3b/data/xin_eng']
 
     data, ndoc, nerror = '', 0, 0
@@ -58,7 +58,7 @@ if __name__ == '__main__':
 
             print '\nPROCESSED: ', ndoc, '/ ERRORS: ', nerror
 
-    fwrite = '/roaming/tcastrof/gigaword/ltw_eng.txt'
+    fwrite = '/roaming/tcastrof/gigaword/nyt_eng.txt'
     f = open(fwrite, 'w')
     f.write(data.encode('utf-8'))
     f.close()
