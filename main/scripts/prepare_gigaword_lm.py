@@ -5,15 +5,13 @@ import os
 import xml.etree.ElementTree as ET
 
 def process_text(_xml):
-    print _xml
     root = ET.fromstring(_xml)
 
-    t = root.find('TEXT')
-
-    headline = t.find('HEADLINE')
+    headline = root.find('HEADLINE')
     text = str(headline.text).replace('\n', ' ').lower()
     headline = ' '.join(nltk.word_tokenize(text)) + '\n'
 
+    t = root.find('TEXT')
     paragraphs = t.findall('P')
     article = ''
     for paragraph in paragraphs:
@@ -33,12 +31,11 @@ def process(fname, data, ndoc, nerror):
         if line.strip() == '</DOC>':
             try:
                 headline, article = process_text(_xml)
-                print headline
                 data = data + headline + article
                 _xml = ''
                 ndoc = ndoc + 1
             except:
-                print 'error'
+                _xml = ''
                 nerror = nerror + 1
     return data, ndoc, nerror
 
@@ -53,12 +50,15 @@ if __name__ == '__main__':
     data, ndoc, nerror = '', 0, 0
     for dir in dirs:
         for fname in os.listdir(dir):
-            print fname
-            data, ndoc, nerror =  process(os.path.join(dir, fname), data, ndoc, nerror)
+            try:
+                print fname
+                data, ndoc, nerror =  process(os.path.join(dir, fname), data, ndoc, nerror)
+            except:
+                print 'Initial error'
 
             print '\nPROCESSED: ', ndoc, '/ ERRORS: ', nerror
 
     fwrite = '/roaming/tcastrof/gigaword/training.txt'
     f = open(fwrite, 'w')
-    f.write(data)
+    f.write(data.encode('utf-8'))
     f.close()

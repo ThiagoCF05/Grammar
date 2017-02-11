@@ -1,9 +1,0 @@
-# AMR release (generated on Fri Jul 31, 2015 at 17:07:31)
-
-# ::id bolt12_07_4800.1 ::date 2012-12-19T12:53:14 ::annotator SDL-AMR-09 ::preferred
-# ::snt You can leave me .
-# ::save-date Wed Oct 30, 2013 ::file bolt12_07_4800_1.txt
-(p / permit-01
-   :ARG1 (l / leave-01
-   			:ARG0 (y / you)
-   			:ARG1 (i / i)))
