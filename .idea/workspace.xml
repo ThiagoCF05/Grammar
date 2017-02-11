@@ -40,8 +40,8 @@
       <file leaf-file-name="prepare_gigaword_lm.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/scripts/prepare_gigaword_lm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="42" column="23" lean-forward="false" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="23" />
+            <state relative-caret-position="87">
+              <caret line="23" column="22" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -1360,8 +1360,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/scripts/prepare_gigaword_lm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="42" column="23" lean-forward="false" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="23" />
+        <state relative-caret-position="87">
+          <caret line="23" column="22" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>

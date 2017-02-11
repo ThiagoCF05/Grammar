@@ -21,6 +21,7 @@ def process_text(xml, data):
         data = data + text
 
 def process(fname, data, ndoc, nerror):
+    print fname, '\r',
     f = gzip.open(fname)
     doc = f.read()
     f.close()
@@ -49,9 +50,9 @@ if __name__ == '__main__':
     data, ndoc, nerror = '', 0, 0
     for dir in dirs:
         for fname in os.listdir(dir):
-            data, ndoc, nerror =  process(fname, data, ndoc, nerror)
+            data, ndoc, nerror =  process(os.path.join(dir, fname), data, ndoc, nerror)
 
-            print 'PROCESSED: ', ndoc, '/ ERRORS: ', nerror
+            print '\nPROCESSED: ', ndoc, '/ ERRORS: ', nerror
 
     fwrite = '/roaming/tcastrof/gigaword/training.txt'
     f = open(fwrite, 'w')
