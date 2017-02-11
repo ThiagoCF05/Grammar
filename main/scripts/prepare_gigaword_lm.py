@@ -4,8 +4,8 @@ import os
 
 import xml.etree.ElementTree as ET
 
-def process_text(xml):
-    root = ET.fromstring(xml)
+def process_text(_xml):
+    root = ET.fromstring(_xml)
 
     t = root.find('TEXT')
 
@@ -26,20 +26,20 @@ def process(fname, data, ndoc, nerror):
     doc = f.read()
     f.close()
 
-    xml = ''
+    _xml = ''
     for line in doc.split('\n'):
-        xml = xml + line + '\n'
+        print line
+        _xml = _xml + line + '\n'
         if line.strip() == '</DOC>':
             try:
-                headline, article = process_text(xml)
+                headline, article = process_text(_xml)
                 print headline
                 data = data + headline + article
-                xml = ''
+                _xml = ''
                 ndoc = ndoc + 1
             except:
                 nerror = nerror + 1
     return data, ndoc, nerror
-
 
 if __name__ == '__main__':
     dirs = ['/roaming/tcastrof/gigaword/LDC2007T07/gigaword_eng_3a/data/afp_eng']
