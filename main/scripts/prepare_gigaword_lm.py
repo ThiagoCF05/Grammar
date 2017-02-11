@@ -58,7 +58,7 @@ if __name__ == '__main__':
 
             print '\nPROCESSED: ', ndoc, '/ ERRORS: ', nerror
 
-    fwrite = '/roaming/tcastrof/gigaword/cna_eng.txt'
+    fwrite = '/roaming/tcastrof/gigaword/ltw_eng.txt'
     f = open(fwrite, 'w')
     f.write(data.encode('utf-8'))
     f.close()
