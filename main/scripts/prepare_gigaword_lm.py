@@ -42,8 +42,8 @@ def process(fname, data, ndoc, nerror):
 if __name__ == '__main__':
     dirs = [#'/roaming/tcastrof/gigaword/LDC2007T07/gigaword_eng_3a/data/afp_eng']
              # '/roaming/tcastrof/gigaword/LDC2007T07/gigaword_eng_3a/data/apw_eng',
-            '/roaming/tcastrof/gigaword/LDC2007T07/gigaword_eng_3a/data/cna_eng']
-            # '/roaming/tcastrof/gigaword/LDC2007T07/gigaword_eng_3b/data/ltw_eng',
+            # '/roaming/tcastrof/gigaword/LDC2007T07/gigaword_eng_3a/data/cna_eng',
+            '/roaming/tcastrof/gigaword/LDC2007T07/gigaword_eng_3b/data/ltw_eng']
             # '/roaming/tcastrof/gigaword/LDC2007T07/gigaword_eng_3b/data/nyt_eng',
             # '/roaming/tcastrof/gigaword/LDC2007T07/gigaword_eng_3b/data/xin_eng']
 
