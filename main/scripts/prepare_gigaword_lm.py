@@ -5,6 +5,7 @@ import os
 import xml.etree.ElementTree as ET
 
 def process_text(_xml):
+    print _xml
     root = ET.fromstring(_xml)
 
     t = root.find('TEXT')
@@ -30,7 +31,6 @@ def process(fname, data, ndoc, nerror):
     for line in doc.split('\n'):
         _xml = _xml + line + '\n'
         if line.strip() == '</DOC>':
-            print _xml
             try:
                 headline, article = process_text(_xml)
                 print headline
@@ -38,6 +38,7 @@ def process(fname, data, ndoc, nerror):
                 _xml = ''
                 ndoc = ndoc + 1
             except:
+                print 'error'
                 nerror = nerror + 1
     return data, ndoc, nerror
 
