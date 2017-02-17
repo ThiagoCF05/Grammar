@@ -70,5 +70,5 @@ if __name__ == '__main__':
     fnread = 'data/prince/AMR_Aligned.keep'
     fwrite = 'data/prince/test_aligned.txt'
 
-    write(fnread=fnread, fnwrite=fwrite)
-    # prepare()
+    # write(fnread=fnread, fnwrite=fwrite)
+    prepare()
