@@ -11,6 +11,7 @@ import copy
 import re
 
 from main.aligners.Features import Lexicon
+import main.generator.REG as REG
 from main.grammars.TAG import Tree, TAGNode, TAGRule
 
 class TAGSynchAligner(object):
@@ -208,7 +209,8 @@ class TAGSynchAligner(object):
             rule = filter(lambda rule_id: i in self.alignments.erg_rules[rule_id].tokens, self.alignments.erg_rules)
 
             if len(rule) > 0:
-                rule = self.alignments.erg_rules[rule[0]].name
+                rule_id = rule[0]
+                rule = self.alignments.erg_rules[rule_id].name
 
                 if rule not in rules_control:
                     rules_control.append(rule)
@@ -216,6 +218,15 @@ class TAGSynchAligner(object):
                     edge, pos = edge_pos.split('/')
                     # rules.extend(rule.split('~'))
                     rules.append(edge)
+
+                    if 'name' in head:
+                        head = REG.proper_name(self.alignments.erg_rules[rule_id])
+                        head = '_'.join(head.split())
+                    elif head == 'date-entity':
+                        head = REG.date_entity(self.alignments.erg_rules[rule_id])
+                        head = '_'.join(head.split())
+                    elif head == 'have-org-role-91' or head == 'have-rel-role-91':
+                        head = REG.have_role(self.alignments.erg_rules[rule_id])
                     rules.append(head)
 
         return self.info['tokens'], rules

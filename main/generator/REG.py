@@ -12,6 +12,16 @@ def proper_name(rule):
     name = ' '.join(map(lambda x: x[1], names))
     return name.strip()
 
+def have_role(rule):
+    graph = rule.graph
+    name = ''
+    for node in graph.nodes:
+        parent = graph.nodes[node].parent
+        if parent['edge'] == ':arg2':
+            name = node
+            break
+    return name
+
 def date_entity(rule):
     graph = rule.graph
     day, month, year = '', '', ''

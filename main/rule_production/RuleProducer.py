@@ -311,8 +311,8 @@ if __name__ == '__main__':
     #     'substitution': '../data/prince/rules/substitution.json',
     #     'adjoining': '../data/prince/rules/adjoining.json'
     # }
+    # flexicons = '/home/tcastrof/amr/data/prince/lexicon/lexicon.json'
 
-    flexicons = '/home/tcastrof/amr/data/prince/lexicon/lexicon.json'
     flinear = '/home/tcastrof/amr/data/prince/parallel/train.de'
     fgold = '/home/tcastrof/amr/data/prince/parallel/train.en'
 
