@@ -1,27 +1,27 @@
 :root chapter :mod 4
 :arg0 i :ord ordinal-entity :arg1 learn-01 :arg1 fact :degree great :mod important :domain planet :mod little :arg1 prince :arg3-of come-01 :degree more :degree scarce :mod any :domain large :compared-to house
 :root contrast-01 :arg0 that :polarity - :arg1-of real-04 :arg2 surprise-01 :arg1 i :degree much
-:arg0 i :root know-01 :degree very :mod well :arg1 exist-01 :mod great :arg1 planet :example planet/name :example planet/name :example planet/name :arg0 we :arg1-of name-01 :mod also :op1 100 :mod other :quant multiple :degree so :mod small :domain see-01 :arg2-of include-91 :arg1 difficult :arg0-of cause-01 :arg1 and :instrument telescope
-:time discover-01 :arg0 astronomer :arg1-of include-91 :arg2 this :arg2 thing :root give-01 :arg1-of instead-of-91 :quant 1 :arg2 name-01 :mod only :arg1 number
-:arg0 he :root possible-01 :arg1 call-01 :arg1 it :arg0-of exemplify-01 :arg2 name/asteroid/325
-:root cause-01 :arg1-of serious-02 :arg0 reason :arg1 believe-01 :domain planet :arg3 asteroid/name :mod little :arg1 prince :arg1 come-01
+:arg0 i :root know-01 :degree very :mod well :arg1 exist-01 :mod great :arg1 planet :example earth :example jupiter :example mars :arg0 we :arg1-of  :mod also :op1 100 :mod other :quant multiple :degree so :mod small :domain see-01 :arg2-of include-91 :arg1 difficult :arg0-of cause-01 :arg1 and :instrument telescope
+:time discover-01 :arg0 astronomer :arg1-of include-91 :arg2 this :arg2 thing :root give-01 :arg1-of instead-of-91 :quant 1 :arg2  :mod only :arg1 number
+:arg0 he :root possible-01 :arg1 call-01 :arg1 it :arg0-of exemplify-01 :arg2 asteroid_325
+:root cause-01 :arg1-of serious-02 :arg0 reason :arg1 believe-01 :domain planet :arg3 b-612 :mod little :arg1 prince :arg1 come-01
 :mod this :arg1 asteroid :arg1-of have-frequency-91 :mod only :arg2 1 :instrument telescope
-:root see-01 :mod country/name :arg0 astronomer :time date-entity
-:manner demonstrate-01 :time discover-01 :arg0 astronomer :root present-01 :arg1 it :arg2 organization/name :mod great
-:root contrast-01 :arg1 he :manner country/name :arg2 costume-01 :arg0-of cause-01 :arg0 somebody :arg1 believe-01 :polarity - :arg1 thing :arg1-of say-01
+:root see-01 :mod turkey :arg0 astronomer :time 1909
+:manner demonstrate-01 :time discover-01 :arg0 astronomer :root present-01 :arg1 it :arg2 international_astronomical_congress :mod great
+:root contrast-01 :arg1 he :manner turkey :arg2 costume-01 :arg0-of cause-01 :arg0 somebody :arg1 believe-01 :polarity - :arg1 thing :arg1-of say-01
 :arg1 grown-up :root resemble-01 :arg2 that
-:arg2-of fortunate-01 :root contrast-01 :manner threaten-01 :arg1 reputation :poss planet/name :arg1 country/name :arg2 dictator :topic change-01 :arg0 person :arg1 law :poss person :arg0 subject :arg1 penalize-01 :topic die-01 :arg0-of have-org-role-91 :mod continent/name :arg3 costume
-:root cause-01 :time date-entity :arg0 astronomer :arg1 demonstrate-01 :mod all-over :arg1-of dress-01 :mod again :arg0-of impress-01 :op1 style :arg2 and :op2 elegance
+:arg2-of fortunate-01 :root contrast-01 :manner threaten-01 :arg1 reputation :poss asteroid_b-612 :arg1 turkey :arg2 dictator :topic change-01 :arg0 person :arg1 law :poss person :arg0 subject :arg1 penalize-01 :topic die-01 :arg0-of  :mod europe :arg3 costume
+:root cause-01 :time 1920 :arg0 astronomer :arg1 demonstrate-01 :mod all-over :arg1-of dress-01 :mod again :arg0-of impress-01 :op1 style :arg2 and :op2 elegance
 :root and :mod this :time time :arg0 everybody :op2 accept-01 :arg0 he :arg1 thing
 :condition and :arg0 i :arg2 you :mod this :arg1 detail :op1 tell-01 :topic asteroid :op2 note-01 :poss asteroid :arg1 number :root account-01 :op1 grown-up :arg2 and :poss grown-up :op2 way
-:time tell-01 :arg2 you :arg1 have-rel-role-91 :arg1 make-01 :arg1-of new-01 :arg2 friend :arg0 they :polarity - :arg0 person :mod any :root question-01 :mod essential :arg1 matter
+:time tell-01 :arg2 you :arg1  :arg1 make-01 :arg1-of new-01 :arg2 friend :arg0 they :polarity - :arg0 person :mod any :root question-01 :mod essential :arg1 matter
 :arg0 they :time ever :root say-01 :polarity - :arg2 you :arg2 amr-unknown :poss he :arg1 voice :arg1 sound-01
 :domain game :arg1 amr-unknown :arg0 he :root love-01 :degree most
 :mode interrogative :arg0 he :root collect-01 :arg1 butterfly
 :arg1-of instead-of-91 :arg0 they :root demand-01 :arg1 he :arg1 age-01 :arg2 amr-unknown
-:arg0 person :arg2 brother :root have-rel-role-91 :arg1 he :quant amr-unknown
+:arg0 person :arg2 brother :root  :arg1 he :quant amr-unknown
 :arg3 amr-unknown :arg1 he :root weigh-01
-:arg0 person :arg0-of have-rel-role-91 :arg1 monetary-quantity :arg1 he :arg2 father :root make-05
+:arg0 person :arg0-of  :arg1 monetary-quantity :arg1 he :arg2 father :root make-05
 :mod only :source figure :mod this :arg0 they :root think-01 :arg1 learn-01 :arg1 anything :topic he
 :condition say-01 :arg0 you :arg2 grown-up :arg1 see-01 :arg1-of beautiful-02 :arg1-of make-01 :mod rosy :arg2 brick :accompanier and :op1 geranium :location window :op2 dove :location roof :polarity - :root possible-01 :arg1 get-01 :mod any :arg1 idea :arg1 house :mod at :mod all
 :arg0 you :root obligate-01 :arg2 say-01 :arg2 they :arg1 see-01 :arg1 house :arg1-of cost-01 :arg2 monetary-quantity
@@ -30,7 +30,7 @@
 :arg0 anybody :arg0 want-01 :arg1 sheep :root prove-01 :arg1 exist-01
 :root and :quant amr-unknown :arg1 good-04 :op2 do-02 :arg0 tell-01 :arg2 they :arg1 that
 :arg0 they :op1 shrug-01 :poss they :arg1 shoulder :root and :op2 treat-01 :arg1 you :arg2 child
-:root contrast-01 :condition say-01 :arg0 you :polarity - :arg1 he :arg1 come-01 :arg3 planet/name :arg1 they :op1 convince-01 :arg2 and :op2 leave-14 :arg1 peace :topic question-01
+:root contrast-01 :condition say-01 :arg0 you :polarity - :arg1 he :arg1 come-01 :arg3 asteroid_b-612 :arg1 they :op1 convince-01 :arg2 and :op2 leave-14 :arg1 peace :topic question-01
 :arg1 they :root resemble-01 :arg2 that
 :arg1 one :root obligate-01 :polarity - :arg2 hold-01 :arg1 it :arg2 against :op1 they
 :arg0 child :root recommend-01 :time always :arg1 show-01 :mod great :arg1 forbearance :arg2 grown-up
@@ -40,10 +40,10 @@
 :degree more :beneficiary person :arg0-of understand-01 :arg1 life :arg0 that :poss i :root give-01 :mod great :quant air :arg1 truth :arg2 story
 :root cause-01 :arg0 i :polarity - :arg0 want-01 :arg0 anyone :manner careless :arg1 read-01 :poss i :arg1 book
 :arg0 i :root suffer-01 :degree too :quant much :arg1 grief :time set-down-09 :mod this :arg1 memory
-:direction away :quant temporal-quantity :arg0-of have-rel-role-91 :time already :time before :op1 now :arg0 person :arg2 friend :root go-02 :arg1 i :accompanier sheep :poss person
+:direction away :quant temporal-quantity :arg0-of  :time already :time before :op1 now :arg0 person :arg2 friend :root go-02 :arg1 i :accompanier sheep :poss person
 :condition try-01 :arg0 i :arg1 describe-01 :arg1 he :location here :arg1 he :polarity - :arg1 forget-01 :root ensure-01
-:arg0-of have-rel-role-91 :arg0 forget-01 :arg1 person :arg2 friend :root sad-02
-:polarity - :arg0 everyone :arg0-of have-rel-role-91 :arg1 person :arg2 friend
+:arg0-of  :arg0 forget-01 :arg1 person :arg2 friend :root sad-02
+:polarity - :arg0 everyone :arg0-of  :arg1 person :arg2 friend
 :root and :condition forget-01 :arg1 he :arg1 i :arg2-of except-01 :arg1 resemble-01 :arg2 grown-up :op2 possible-01 :polarity - :arg1-of interest-01 :arg2 anything :arg1 figure
 :purpose that :location box :arg0 i :root buy-01 :op1 paint :arg1 and :quant some :op2 pencil
 :root hard-02 :arg1 take-up-31 :arg2 temporal-quantity :arg1 draw-01 :mod again :direction from :arg1-of cause-01 :op1 age-01 :time ever :arg0 i :age temporal-quantity :polarity - :mod any :op1 picture :arg2-of except-01 :topic boa :mod constrictor :op1 outside :arg1 and :mod constrictor :op1 inside :time since :direction from
@@ -55,7 +55,7 @@
 :root cause-01 :arg0 i :arg1 fumble-01 :arg1 along :compared-to possible-01 :degree most :time now :example good-03 :time now :example bad-02 :arg1-of hope-01 :arg1-of general-02 :example fair-04 :prep-to middling
 :mod certain :degree more :mod important :arg1 detail :arg0 i :root mistake-02 :mod also
 :root contrast-01 :arg2 something :mod that :polarity - :arg1 i :arg2 fault-01
-:arg0 person :arg2 friend :polarity - :root explain-01 :arg1 anything :arg0-of have-rel-role-91 :arg2 i
+:arg0 person :arg2 friend :polarity - :root explain-01 :arg1 anything :arg0-of  :arg2 i
 :arg0 he :root think-01 :arg1 i :arg1 resemble-01 :mod perhaps
 :root contrast-01 :arg0 i :mod alas :polarity - :arg2 know-01 :manner-of see-01 :arg1 sheep :path through :op1 wall :consist-of box
 :mod perhaps :arg1 i :quant little :root resemble-01 :arg2 grown-up
@@ -94,7 +94,7 @@
 :arg0 it :root bore-01 :mod clear-03 :arg2 through :op1 it :arg3 root :poss it
 :root and :condition and :domain planet :degree too :op1 small :op2 baobab :quant many :op1 split-01 :arg2 piece
 :domain it :arg1 question :topic discipline :mod little :arg0 prince :root say-01 :arg2 i :degree more
-:time date-entity :arg0 you :time finish-01 :poss you :arg1-of resemble-01 :arg1 toilet :root attend-02 :poss planet :extent great :degree most :manner care-04
+:time  :arg0 you :time finish-01 :poss you :arg1-of resemble-01 :arg1 toilet :root attend-02 :poss planet :extent great :degree most :manner care-04
 :root obligate-01 :arg1-of regular-02 :ord ordinal-entity :arg0 you :arg1 pull-01 :mod all :arg1 baobab :time-of possible-01 :time moment :arg1-of close-10 :arg1 distinguish-01 :arg2-of resemble-01 :arg2 rosebush :degree so :time early/most :poss baobab :op1 youth
 :domain work-01 :degree very :arg1 tedious :mod little :arg0 prince :root add-01 :arg1 contrast-01 :arg2 easy-05
 :root and :mod one :time day :arg0 he :op1 say-01 :arg1 picture :arg1 recommend-01 :purpose possible-01 :arg1-of beautiful-02 :arg1 draw-01 :manner exact :arg0 child :location live-01 :arg1 see-01 :mod all :arg1 this
@@ -108,7 +108,7 @@
 :root contrast-01 :arg1 danger :poss baobab :degree so :degree little :op1 understand-01 :arg0 and :mod such :degree considerable :op2 risk-01 :arg1-of lose-02 :arg0 anyone :arg1-of possible-01 :mod for-once :location asteroid :arg0 i :arg1 break-away-14 :poss i :arg1 reserve
 :root child
 :arg0 i :root say-01 :manner plain :arg1 watch-out-02 :arg0 you :arg1 baobab :mode imperative
-:op1 person :arg2 friend :polarity - :root cause-01 :arg0-of have-rel-role-91 :arg0 skirt-02 :mod this :arg1 danger :arg1-of long-03 :time ever :arg1-of know-01 :arg0 and :arg1 work-01 :degree so :arg1-of hard-02 :beneficiary person :arg1-of draw-01
+:op1 person :arg2 friend :polarity - :root cause-01 :arg0-of  :arg0 skirt-02 :mod this :arg1 danger :arg1-of long-03 :time ever :arg1-of know-01 :arg0 and :arg1 work-01 :degree so :arg1-of hard-02 :beneficiary person :arg1-of draw-01
 :arg1 lesson :arg0 i :arg1-of pass-on-09 :manner this :root worth-02 :mod all :arg2 trouble :arg2-of cost-01 :arg3 i
 :location book :root possible-01 :arg1 ask-01 :arg1 picture :arg0-of cause-01 :arg1-of draw-01 :polarity - :mod other :mod this :degree equal :mod magnificent :arg0-of impress-01 :compared-to picture :arg1-of draw-01 :topic baobab :arg1 amr-unknown
 :arg2-of reply-01 :root simple-02
@@ -119,7 +119,7 @@
 :mod little :root prince
 :manner bit-by-bit :arg0 i :poss you :root understand-01 :arg1 secret :poss life :arg1-of sad-02 :mod little
 :arg1-of long-03 :arg0 you :root find-01 :mod only :arg1 entertain-01 :arg1-of quiet-04 :mod pleasure :arg0 look-01 :arg1 sunset
-:arg0 i :root learn-01 :ord ordinal-entity :arg1-of new-01 :arg1 detail :time date-entity :arg0 you :time say-01 :degree very :arg1 like-01 :arg1 sunset
+:arg0 i :root learn-01 :ord ordinal-entity :arg1-of new-01 :arg1 detail :time  :arg0 you :time say-01 :degree very :arg1 like-01 :arg1 sunset
 :op1 come-01 :root and :mode imperative :op2 go-05 :arg1 look-01 :arg1 you :arg1 sunset :time now
 :root contrast-01 :arg1 we :arg2 obligate-01 :arg2 wait-01
 :arg0 i :root say-01
@@ -131,9 +131,9 @@
 :root and :time then :arg0 you :op1 laugh-01
 :arg0 you :root say-01 :arg2 i :time always :arg1 think-01 :arg2 home :arg1 be-located-at-91
 :mod just :root so
-:arg0 everybody :root know-01 :location country/name :time date-entity :location country/name :arg1 sun :arg1 set-11
-:condition possible-01 :root possible-01 :destination country/name :arg1 fly-01 :arg3 date-entity :duration temporal-quantity :arg1 go-02 :arg1-of straight-04 :arg4 sunset
-:root fortunate-01 :arg1 country/name :degree too :extent far :arg2 away :purpose that
+:arg0 everybody :root know-01 :location france :time  :location united_states :arg1 sun :arg1 set-11
+:condition possible-01 :root possible-01 :destination france :arg1 fly-01 :arg3  :duration temporal-quantity :arg1 go-02 :arg1-of straight-04 :arg4 sunset
+:root fortunate-01 :arg1 france :degree too :extent far :arg2 away :purpose that
 :arg1 contrast-01 :root say-01 :poss prince :mod tiny :location planet :poss i :mod little :extent step :mod only :arg2 move-01 :poss prince :arg1 chair :quant few
 :arg0 you :root possible-01 :arg1 see-01 :arg1 day :op1 end-01 :arg1 and :arg1 twilight :op2 fall-04 :time like-02
 :mod one :time day :arg0 you :root say-01 :arg2 i :frequency 44 :arg1 sunset :arg1 see-01

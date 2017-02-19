@@ -265,7 +265,7 @@ class RuleProducer(object):
             fg.write(' '.join(self.gold[i]).encode('utf-8'))
             fg.write('\n')
 
-            fl.write(' '.join(linearization))
+            fl.write(' '.join(linearization).encode('utf-8'))
             fl.write('\n')
         fl.close()
         fg.close()
@@ -295,7 +295,7 @@ if __name__ == '__main__':
 
     aligner = AMRAligner(verb2noun, noun2verb, verb2actor, actor2verb, sub2word, freq_table, proc)
 
-    dirs = ['/home/tcastrof/amr/data/prince/train']
+    dirs = ['../data/prince/train']
 
     frules = {
         'initial': prop.initial_rules,
@@ -313,8 +313,11 @@ if __name__ == '__main__':
     # }
     # flexicons = '/home/tcastrof/amr/data/prince/lexicon/lexicon.json'
 
-    flinear = '/home/tcastrof/amr/data/prince/parallel/train.de'
-    fgold = '/home/tcastrof/amr/data/prince/parallel/train.en'
+    # flinear = '/home/tcastrof/amr/data/prince/parallel/train.de'
+    # fgold = '/home/tcastrof/amr/data/prince/parallel/train.en'
+
+    flinear = '../data/prince/parallel/test.de'
+    fgold = '../data/prince/parallel/test.en'
 
     producer = RuleProducer(aligner=aligner, dirs=dirs, isAligned=True)
 
