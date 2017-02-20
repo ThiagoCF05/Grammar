@@ -284,7 +284,7 @@ class RuleProducer(object):
             else:
                 isPrince = False
             files = os.listdir(dir)
-            for fname in files:
+            for fname in files[:1000]:
                 print fname, '\r',
                 amrs = utils.parse_corpus(fname=os.path.join(dir, fname), prince=isPrince)
 
