@@ -267,13 +267,13 @@ class RuleProducer(object):
             fg.write('\n')
 
 
-            w = ' '.join(linearization).encode('utf-8')
-            fl.write(w)
+            try:
+                w = ' '.join(linearization).encode('utf-8')
+                fl.write(w)
+            except:
+                fl.write('-')
             fl.write('\n')
 
-            print w
-            print g
-            print 10 * '*'
         fl.close()
         fg.close()
 
@@ -288,7 +288,7 @@ class RuleProducer(object):
                 print fname, '\r',
                 amrs = utils.parse_corpus(fname=os.path.join(dir, fname), prince=isPrince)
 
-                for amr in amrs[:100]:
+                for amr in amrs:
                     self.process(amr)
 
                     if (self.processed % 1000) == 0:
