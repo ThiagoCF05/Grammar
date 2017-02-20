@@ -284,11 +284,11 @@ class RuleProducer(object):
             else:
                 isPrince = False
             files = os.listdir(dir)
-            for fname in files[:100]:
+            for fname in files:
                 print fname, '\r',
                 amrs = utils.parse_corpus(fname=os.path.join(dir, fname), prince=isPrince)
 
-                for amr in amrs:
+                for amr in amrs[:100]:
                     self.process(amr)
 
                     if (self.processed % 1000) == 0:
