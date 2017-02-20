@@ -262,11 +262,18 @@ class RuleProducer(object):
         fl = open(flinear, 'w')
         fg = open(fgold, 'w')
         for i, linearization in enumerate(self.grammar.linearizations):
-            fg.write(' '.join(self.gold[i]).encode('utf-8'))
+            g = ' '.join(self.gold[i]).encode('utf-8')
+            fg.write(g)
             fg.write('\n')
 
-            fl.write(' '.join(linearization).encode('utf-8'))
+
+            w = ' '.join(linearization).encode('utf-8')
+            fl.write(w)
             fl.write('\n')
+
+            print w
+            print g
+            print 10 * '*'
         fl.close()
         fg.close()
 
